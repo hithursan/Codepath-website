@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift: Beginner to Master — 12 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>Swift: Beginner to Master</h1>
+        <p>Complete 12-Week Curriculum — From Swift Syntax & Optionals to Concurrency, Protocols & Production-Ready Apps</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>12-week, phase-based Swift curriculum</strong> designed to take a complete beginner to a professional-level Swift developer. The roadmap moves from <strong>syntax, variables, optionals, and collections</strong> through <strong>control flow, functions, structs, classes, and enums</strong>, into <strong>protocols, error handling, generics, and networking</strong>, all the way to <strong>modern concurrency, functional patterns, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics including syntax and primitive types, <strong>Phase 2</strong> covers control flow, functions, and core data structures, <strong>Phase 3</strong> covers intermediate and advanced core topics like OOP, error handling, and libraries, and <strong>Phase 4</strong> covers master-level concurrency, functional patterns, and architecture.</p>
+            <p>By Week 12, you will have built three complete, portfolio-ready applications and be confident building production-grade Swift applications from scratch.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 12 weeks &nbsp;|&nbsp; <strong>Stack:</strong> Swift 5.9+, Xcode, Swift Playgrounds &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic programming logic</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–3:</strong> Fundamentals, data types, optionals, and collections.</p>
+        </div>
+
+        <!--WEEK 1-->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Swift Environment, Syntax &amp; Primitive Types</h2>
+                <p>Set up your toolchain and learn Swift's basic syntax and built-in types.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Setting up your toolchain and learning Swift's basic syntax and built-in primitive types.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Xcode/Swift Playgrounds &amp; <code>print()</code></strong> — Swift code can be written and run instantly using Xcode Playgrounds, making experimentation fast and visual. The <code>print()</code> function is the simplest way to output values while learning.</li>
+                    <li><strong>Variables &amp; Constants (<code>var</code>, <code>let</code>)</strong> — <code>var</code> declares a mutable variable that can change later, while <code>let</code> declares an immutable constant whose value is fixed after assignment. Swift encourages using <code>let</code> by default for safer code.</li>
+                    <li><strong>Type Inference &amp; Type Annotation</strong> — Swift can automatically infer a variable's type from its initial value, reducing boilerplate. You can also explicitly annotate a type using a colon when clarity or specific typing is needed.</li>
+                    <li><strong>Primitive Types (<code>Int</code>, <code>Double</code>, <code>String</code>, <code>Bool</code>)</strong> — Swift's core primitive types represent whole numbers, decimal numbers, text, and true/false logic. These types are strongly enforced, preventing accidental mixing of incompatible data.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Everything in Swift is built on these primitives. Understanding the difference between <code>var</code> and <code>let</code>, and how type inference works, forms the mental model you will rely on every single week going forward.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// Constants and variables with type inference
+let name: String = "Swift Learner" // explicit annotation
+var age = 25                       // inferred as Int
+var isLearning = true              // inferred as Bool
+print("\(name) is \(age) years old. Learning: \(isLearning)")</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a Playground file. Declare constants for your name and favorite number, and a variable for your current mood (as a <code>String</code>). Print a sentence combining all three using <strong>string interpolation</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 2-->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Operators, Optionals &amp; Type Conversion</h2>
+                <p>Master Swift's operators and its signature safety feature: Optionals.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering Swift's operators and its signature safety feature — Optionals.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Arithmetic &amp; Comparison Operators</strong> — Swift supports the standard set of operators (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>==</code>, <code>&lt;</code>, <code>&gt;</code>) for numeric and logical operations. Unlike some languages, Swift checks for overflow by default and will trap on errors.</li>
+                    <li><strong>Optionals (<code>?</code>) — Handling the Absence of a Value</strong> — An Optional represents a value that might be present or might be <code>nil</code> (nothing), modeled with a trailing <code>?</code> on the type. This forces developers to explicitly handle missing data instead of crashing unexpectedly.</li>
+                    <li><strong>Optional Binding &amp; Unwrapping (<code>if let</code>, <code>guard let</code>)</strong> — Optional binding safely extracts the value inside an Optional only if it actually exists. <code>if let</code> and <code>guard let</code> are the idiomatic, crash-safe ways to unwrap Optionals.</li>
+                    <li><strong>Type Conversion (Explicit Casting)</strong> — Swift never converts between types automatically, so converting an <code>Int</code> to a <code>Double</code> requires an explicit initializer call. This strictness avoids silent, unintended data loss.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Optionals are Swift's most defining feature — they eliminate an entire class of null pointer crashes that plague other languages. Mastering <code>if let</code> and <code>guard let</code> is the single most important skill for writing safe Swift code.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>var score: Int? = 95          // Optional Int, may be nil
+if let safeScore = score {    // safely unwrap
+    let percentage = Double(safeScore) / 100.0 // explicit conversion
+    print("Score: \(percentage * 100)%")
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create an Optional <code>String?</code> representing a username that might be <code>nil</code>. Use <code>guard let</code> inside a small function to safely print a greeting, or print <strong>"No username found"</strong> if it's <code>nil</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 3 -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Collections: Arrays, Dictionaries &amp; Sets</h2>
+                <p>Learn Swift's core collection types used to group and organize data.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Learning Swift's core collection types used to group and organize related data.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Arrays (Ordered Collections)</strong> — An <code>Array</code> stores an ordered list of values of the same type, allowing duplicates. Arrays support adding, removing, and accessing elements by their numeric index.</li>
+                    <li><strong>Dictionaries (Key-Value Pairs)</strong> — A <code>Dictionary</code> stores unordered key-value pairs, allowing fast lookup of a value using its unique key. Keys must be unique and of a consistent, hashable type.</li>
+                    <li><strong>Sets (Unique, Unordered Collections)</strong> — A <code>Set</code> stores unique values with no defined order and no duplicates allowed. Sets are ideal for membership checks and operations like unions or intersections.</li>
+                    <li><strong>Tuples (Lightweight Grouped Values)</strong> — A tuple groups multiple values into a single compound value without creating a named type. Tuples are great for quickly returning or passing related values together.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Arrays, Dictionaries, and Sets are the backbone of data organization in every Swift application. Understanding when to use each collection type — and combining them with loops next week — unlocks the ability to build real, data-driven programs.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>var fruits = ["Apple", "Banana"]              // Array
+var prices = ["Apple": 1.5, "Banana": 0.5]    // Dictionary
+var uniqueIDs: Set = [101, 102, 103]          // Set
+let coordinate = (x: 10, y: 20)               // Tuple
+fruits.append("Mango")
+print(fruits, prices, uniqueIDs, coordinate)</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a small <strong>Shopping List</strong> program: create an <code>Array</code> of item names and a <code>Dictionary</code> mapping item name to price. Add two new items to each, then print the <strong>total cost</strong> of all items using a loop.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 4–6:</strong> Functions, modules, and core data structures.</p>
+        </div>
+
+        <!--WEEK 4-->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Control Flow: Conditionals &amp; Loops</h2>
+                <p>Direct your program's execution path using Swift's expressive control structures.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Directing your program's execution path using Swift's expressive control structures.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>if</code> / <code>else if</code> / <code>else</code> Statements</strong> — Conditional statements let your program branch its logic based on Boolean expressions. Swift's <code>if</code> doesn't require parentheses around the condition, keeping syntax clean.</li>
+                    <li><strong><code>switch</code> Statements &amp; Pattern Matching</strong> — Swift's <code>switch</code> is exceptionally powerful, supporting ranges, tuples, and value binding without needing a <code>break</code>. It must be exhaustive, ensuring every possible case is handled.</li>
+                    <li><strong><code>for-in</code> Loops</strong> — The <code>for-in</code> loop iterates over sequences like arrays, dictionaries, ranges, and strings. It's the primary way to repeat an action across a collection of values in Swift.</li>
+                    <li><strong><code>while</code> &amp; <code>repeat-while</code> Loops</strong> — A <code>while</code> loop repeats as long as a condition remains true, checked before each iteration. A <code>repeat-while</code> loop guarantees the body runs at least once before checking the condition.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Swift's <code>switch</code> with pattern matching is one of the most powerful control flow tools in any language. It eliminates entire chains of <code>if-else</code> statements and makes complex logic readable, safe, and exhaustive at compile time.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>for i in 1...5 {                  // closed range loop
+    switch i {
+    case 1, 2: print("low")
+    case 3...5: print("high: \(i)")
+    default: break
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a program that loops through numbers <strong>1–20</strong> using <code>for-in</code>, and uses <code>switch</code> with range pattern matching to print <strong>"Fizz"</strong> for multiples of 3, <strong>"Buzz"</strong> for multiples of 5, <strong>"FizzBuzz"</strong> for both, and the number otherwise.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 5 -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Functions &amp; Closures</h2>
+                <p>Structure logic into reusable functions and learn Swift's powerful closure syntax.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Structuring logic into reusable functions and learning Swift's powerful closure syntax.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Function Declaration &amp; Parameters</strong> — Functions are declared with <code>func</code>, specifying parameter names, types, and an optional return type. Swift supports parameter labels that make function calls read like natural language.</li>
+                    <li><strong>Default &amp; Variadic Parameters</strong> — A default parameter value lets you omit an argument when calling a function, falling back to a preset value. A variadic parameter (using <code>...</code>) accepts any number of values of the same type.</li>
+                    <li><strong>Multiple Return Values (Tuples)</strong> — Swift functions can return multiple values at once by bundling them into a tuple. This is useful for returning related results, such as a minimum and maximum, from a single function.</li>
+                    <li><strong>Closures (Anonymous Functions)</strong> — A closure is a self-contained block of functionality that can be passed around and executed later, similar to a lambda. Closures capture variables from their surrounding context, enabling powerful callback patterns.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Closures are everywhere in Swift — from <code>.map()</code> and <code>.filter()</code> to completion handlers and SwiftUI's view builders. The trailing closure syntax and shorthand argument names (<code>$0</code>, <code>$1</code>) are patterns you will read and write daily.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>func calculate(_ a: Int, _ b: Int, using operation: (Int, Int) -> Int) -> Int {
+    return operation(a, b) // closure passed as parameter
+}
+
+let result = calculate(5, 3) { $0 + $1 } // trailing closure syntax
+print(result)</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a variadic function <code>total(_ numbers: Int...) -&gt; Int</code> that sums any number of integers. Then write a <strong>closure stored in a variable</strong> that multiplies two numbers, and pass it into a function that uses it to compute a result.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 6-->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Structs, Classes &amp; Enums</h2>
+                <p>Model real-world data using Swift's value types and reference types.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Modeling real-world data using Swift's value types (structs) and reference types (classes).</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Structs (Value Types)</strong> — A <code>struct</code> groups related properties and methods into a single custom type, and is copied by value whenever assigned or passed. Structs are Swift's preferred way to model simple, independent data.</li>
+                    <li><strong>Classes (Reference Types) &amp; Inheritance</strong> — A <code>class</code> is similar to a struct but is passed by reference and supports inheritance, letting one class extend another's behavior. Classes are used when shared mutable state or object hierarchies are needed.</li>
+                    <li><strong>Properties &amp; Methods</strong> — Properties store data on a type, while methods define behavior or actions that type can perform. Computed properties can calculate a value on-the-fly instead of storing it directly.</li>
+                    <li><strong>Enums with Associated Values</strong> — An <code>enum</code> defines a fixed set of related values, such as directions or states, improving code safety and clarity. Swift enums can also attach associated data to each case, making them more powerful than simple constants.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The struct-vs-class distinction is one of the most important design decisions in Swift. Choosing value types by default leads to safer, more predictable code. Swift enums with associated values are among the most expressive features in any modern language.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>enum Direction { case north, south, east, west }
+
+struct Robot {
+    var name: String
+    var heading: Direction
+    func describe() -> String { "\(name) faces \(heading)" } // method
+}
+
+let bot = Robot(name: "R2", heading: .north)
+print(bot.describe())</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a <code>struct Rectangle</code> with <code>width</code> and <code>height</code> properties, plus a <strong>computed property</strong> <code>area</code>. Then create an <code>enum Shape</code> with cases <code>.rectangle</code> and <code>.circle</code>, each holding <strong>associated values</strong> for their dimensions.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 7–9:</strong> OOP, file handling, error handling, and libraries.</p>
+        </div>
+
+        <!-- WEEK 7 -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Protocols, Extensions &amp; Polymorphism</h2>
+                <p>Understand Swift's protocol-oriented programming approach to OOP.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding Swift's "protocol-oriented programming" approach to object-oriented design.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Protocols (Defining Contracts)</strong> — A protocol defines a blueprint of methods and properties that a type must implement, without providing the implementation itself. Any struct, class, or enum can conform to a protocol, enabling shared behavior across unrelated types.</li>
+                    <li><strong>Protocol Conformance &amp; Polymorphism</strong> — A function can accept a protocol type as a parameter, allowing it to work with any conforming type interchangeably. This achieves polymorphism without requiring a shared class hierarchy.</li>
+                    <li><strong>Extensions (Adding Functionality to Existing Types)</strong> — An extension adds new methods, computed properties, or protocol conformance to an existing type, even types you don't own like <code>Int</code> or <code>String</code>. This promotes clean, modular code organization.</li>
+                    <li><strong>Inheritance vs Composition</strong> — Inheritance shares behavior through a class hierarchy, while composition combines small, focused protocols and structs to build complex behavior. Swift favors composition through protocols for more flexible, decoupled designs.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Protocol-Oriented Programming is the foundation of Swift's design philosophy and the entire SwiftUI framework. Writing code against protocols instead of concrete types makes your code testable, modular, and far easier to change later.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>protocol Greetable { func greet() -> String }
+
+struct Person: Greetable {
+    let name: String
+    func greet() -> String { "Hello, I'm \(name)" } // protocol conformance
+}
+
+func sayHello(to entity: Greetable) { print(entity.greet()) }
+sayHello(to: Person(name: "Mia"))</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Define a <code>protocol Shape</code> with a computed property <code>area: Double</code>. Implement it for both a <code>Circle</code> struct and a <code>Square</code> struct, then write a function <code>printArea(of shape: Shape)</code> that works for <strong>either type</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Error Handling &amp; File I/O</h2>
+                <p>Write robust, production-grade code that anticipates and recovers from failure.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing robust, production-grade code that anticipates and recovers from failure.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>The <code>Error</code> Protocol &amp; Custom Errors</strong> — Swift models recoverable errors as values conforming to the <code>Error</code> protocol, often defined using an <code>enum</code>. This provides clear, typed information about what went wrong.</li>
+                    <li><strong><code>throws</code>, <code>try</code>, <code>try?</code>, <code>try!</code></strong> — A function marked <code>throws</code> can propagate an error to its caller, who must handle it using <code>try</code>. <code>try?</code> converts a thrown error into an Optional, while <code>try!</code> force-unwraps and crashes if an error occurs.</li>
+                    <li><strong><code>do-catch</code> Blocks</strong> — A <code>do-catch</code> block executes code that might throw an error and lets you handle specific error cases gracefully. This is Swift's primary structure for managing recoverable runtime failures.</li>
+                    <li><strong>Reading &amp; Writing Files (<code>FileManager</code>, <code>String</code> contents)</strong> — <code>FileManager</code> provides access to the filesystem for creating, reading, and deleting files and directories. Strings and Data can be written to and read from disk using simple, built-in initializers.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every production app deals with failure — network timeouts, missing files, corrupt data. Swift's typed error system forces you to think about failure paths at compile time, making your programs dramatically more reliable than unchecked exception systems.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>enum FileError: Error { case notFound }
+
+func readContent(path: String) throws -> String {
+    guard FileManager.default.fileExists(atPath: path) else {
+        throw FileError.notFound // throw a custom error
+    }
+    return try String(contentsOfFile: path, encoding: .utf8)
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a function that reads a text file's contents using <code>try</code> / <code>do-catch</code>, counts the number of words, and writes a summary string to a new file — handling the <strong>"file not found"</strong> case with a custom <code>Error</code> enum.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 9  -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Generics, Modules &amp; Popular Frameworks</h2>
+                <p>Write reusable, type-safe code and leverage Swift's package ecosystem.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing reusable, type-safe code and leveraging Swift's package ecosystem.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Generics (Type Parameters)</strong> — Generics let you write functions and types that work with any type while preserving full compile-time type safety. They eliminate code duplication that would otherwise require separate versions for each type.</li>
+                    <li><strong>Swift Package Manager (SPM)</strong> — Swift Package Manager handles building, testing, and managing external dependencies for Swift projects via a <code>Package.swift</code> manifest. It's Swift's built-in, official dependency management solution.</li>
+                    <li><strong><code>Codable</code> for JSON Encoding/Decoding</strong> — The <code>Codable</code> protocol allows structs and classes to automatically convert to and from JSON with minimal code. Combined with <code>JSONEncoder</code> / <code>JSONDecoder</code>, it's the standard way to handle structured data exchange.</li>
+                    <li><strong>Networking Basics with <code>URLSession</code></strong> — <code>URLSession</code> provides the tools to make HTTP requests and fetch data from web APIs directly within Swift. It's commonly paired with <code>Codable</code> to decode JSON responses into native Swift types.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>Codable</code> and <code>URLSession</code> are used in virtually every iOS and macOS app that touches the internet. Generics make your own types and functions as flexible as Swift's built-in collections. These are the tools of day-to-day professional Swift development.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>struct User: Codable { let name: String; let age: Int } // auto Codable
+
+func decodeUser(from json: Data) throws -> User {
+    return try JSONDecoder().decode(User.self, from: json) // generic decode
+}
+
+func makePair&lt;T&gt;(_ a: T, _ b: T) -> [T] { [a, b] } // generic function</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a <code>Codable</code> struct <code>Book</code> with <code>title</code> and <code>author</code> fields. <strong>Encode</strong> an instance to JSON using <code>JSONEncoder</code>, print the resulting JSON string, then <strong>decode</strong> it back into a <code>Book</code> instance and print it.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 10–12:</strong> Concurrency, functional patterns, and three complete capstone projects.</p>
+        </div>
+
+        <!--WEEK 10 -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Concurrency: async/await &amp; Tasks</h2>
+                <p>Harness Swift's modern structured concurrency model for responsive applications.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Harnessing Swift's modern structured concurrency model for responsive, non-blocking applications.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>async</code> Functions &amp; <code>await</code></strong> — An <code>async</code> function can pause execution while waiting for a long-running operation, without blocking the thread. The <code>await</code> keyword marks the point where execution suspends until the result is ready.</li>
+                    <li><strong><code>Task</code> — Launching Concurrent Work</strong> — A <code>Task</code> creates a new unit of asynchronous work that runs concurrently with the rest of your program. Tasks can be awaited, cancelled, or grouped together for coordinated execution.</li>
+                    <li><strong><code>async let</code> &amp; Structured Concurrency</strong> — <code>async let</code> runs multiple asynchronous operations in parallel and lets you await their combined results together. This structured approach ensures child tasks complete before their parent scope exits.</li>
+                    <li><strong>Actors — Safe Shared Mutable State</strong> — An <code>actor</code> is a reference type that automatically protects its internal state from simultaneous access by multiple tasks. This prevents data races without requiring manual locks.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Swift's structured concurrency model is one of the most innovative concurrency systems in any mainstream language. Understanding <code>async/await</code> and <code>actor</code> is mandatory for modern iOS development — virtually every network call and UI update uses these tools.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>func fetchData(id: Int) async -> String {
+    try? await Task.sleep(nanoseconds: 500_000_000) // simulate delay
+    return "Data for id \(id)"
+}
+
+Task {
+    async let first = fetchData(id: 1)
+    async let second = fetchData(id: 2)
+    print(await [first, second]) // wait for both concurrently
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write an <code>async</code> function that simulates fetching data from <strong>3 different "URLs"</strong> using <code>Task.sleep</code>. Use <code>async let</code> to run all three <strong>concurrently</strong>, then print all results together once they all complete.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 11-->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Generators, Decorators &amp; Functional Patterns</h2>
+                <p>Simulate advanced patterns from other languages using Swift's native features.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Simulating advanced patterns from other languages using Swift's native, idiomatic features.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>"Generators" via <code>AsyncStream</code> / Iterators</strong> — Swift doesn't have native generator syntax, but <code>AsyncStream</code> lets you lazily produce a sequence of asynchronous values over time, much like a generator. Custom <code>IteratorProtocol</code> conformance achieves similar lazy, on-demand value production synchronously.</li>
+                    <li><strong>"Decorators" via Function Wrapping &amp; Property Wrappers</strong> — Since Swift lacks Python-style decorators, the same effect is achieved by wrapping a function inside another to add behavior before and after a call. <code>@propertyWrapper</code> provides a more native Swift mechanism to inject reusable logic around property access.</li>
+                    <li><strong>Higher-Order Functions (<code>map</code>, <code>filter</code>, <code>reduce</code>)</strong> — <code>map</code>, <code>filter</code>, and <code>reduce</code> are built-in higher-order functions that transform, select, and combine elements in a collection respectively. They enable concise, expressive, declarative-style data processing.</li>
+                    <li><strong>Custom Property Wrappers</strong> — A <code>@propertyWrapper</code> lets you encapsulate reusable logic, like validation or clamping, around a property's getter and setter. This is a clean, native alternative to runtime decorators found in other languages.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>map</code>, <code>filter</code>, and <code>reduce</code> are used constantly in professional Swift. Property wrappers power SwiftUI's <code>@State</code>, <code>@Binding</code>, and <code>@Published</code> — understanding them reveals how the entire SwiftUI data-flow model works under the hood.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>@propertyWrapper
+struct Clamped {
+    private var value: Int
+    let range: ClosedRange&lt;Int&gt;
+    var wrappedValue: Int {
+        get { value }
+        set { value = min(max(newValue, range.lowerBound), range.upperBound) }
+    }
+    init(wrappedValue: Int, _ range: ClosedRange&lt;Int&gt;) {
+        self.range = range
+        self.value = min(max(wrappedValue, range.lowerBound), range.upperBound)
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a <strong>"decorator" function</strong> <code>withLogging(_ f: @escaping () -&gt; Void) -&gt; () -&gt; Void</code> that wraps any function and prints <strong>"start"/"end"</strong> messages around its execution. Then use <code>map</code>, <code>filter</code>, and <code>reduce</code> together to process an array of numbers into a single summary value.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 12-->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Capstone Week: Three Mini Projects (Beginner → Master)</h2>
+                <p>Apply everything learned across the entire curriculum in three complete, real-world projects.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Consolidating everything learned into three progressively advanced, portfolio-ready projects.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — CLI Task Manager (Beginner)</h3>
+                <p>A command-line to-do list app using arrays, structs, and file I/O to persist tasks between runs. This project reinforces fundamentals: structs, collections, loops, and basic file handling.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Swift Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Add, list, delete tasks</td>
+                            <td><code>Array</code> of <code>struct Task</code> with mutations</td>
+                        </tr>
+                        <tr>
+                            <td>Persist tasks between runs</td>
+                            <td>File I/O with <code>FileManager</code> + <code>Codable</code></td>
+                        </tr>
+                        <tr>
+                            <td>Mark tasks complete</td>
+                            <td><code>Bool</code> property + <code>mutating</code> method</td>
+                        </tr>
+                        <tr>
+                            <td>CLI menu loop</td>
+                            <td><code>while</code> loop + <code>switch</code> pattern matching</td>
+                        </tr>
+                        <tr>
+                            <td>Error handling on save/load</td>
+                            <td><code>do-catch</code> with custom <code>Error</code> enum</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A fully functional CLI Task Manager with add/list/delete/complete operations, JSON-based persistence to disk, and proper error handling. Build and run from the terminal on Days 1–2.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — Weather App with Codable &amp; URLSession (Intermediate)</h3>
+                <p>A small app that fetches live weather data from a public API, decodes it using <code>Codable</code>, and displays formatted results. Reinforces protocols, error handling, and Swift's networking and JSON tools.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Swift Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Live API data fetch</td>
+                            <td><code>URLSession.shared.data(from:)</code> with <code>async/await</code></td>
+                        </tr>
+                        <tr>
+                            <td>JSON decoding</td>
+                            <td><code>Codable</code> structs + <code>JSONDecoder</code></td>
+                        </tr>
+                        <tr>
+                            <td>Error handling</td>
+                            <td>Custom <code>NetworkError</code> enum + <code>do-catch</code></td>
+                        </tr>
+                        <tr>
+                            <td>Formatted output</td>
+                            <td>Computed properties + <code>String</code> interpolation</td>
+                        </tr>
+                        <tr>
+                            <td>Protocol-driven design</td>
+                            <td><code>WeatherServiceProtocol</code> for testability</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A working Weather App that fetches real data from a public weather API, decodes it with <code>Codable</code>, and prints a clean formatted forecast — with full error handling for network failures. Build on Days 3–4.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Concurrent News Aggregator (Master)</h3>
+                <p>A tool that concurrently fetches data from multiple API endpoints using <code>async/await</code> and <code>TaskGroup</code>, aggregating results safely. Ties together concurrency, generics, error handling, and clean architecture.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Swift Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Concurrent multi-source fetch</td>
+                            <td><code>withTaskGroup</code> structured concurrency</td>
+                        </tr>
+                        <tr>
+                            <td>Safe result aggregation</td>
+                            <td><code>actor</code> for thread-safe result collection</td>
+                        </tr>
+                        <tr>
+                            <td>Generic fetch function</td>
+                            <td>Generic <code>fetch&lt;T: Codable&gt;</code> function</td>
+                        </tr>
+                        <tr>
+                            <td>Timeout and error handling</td>
+                            <td><code>Task.checkCancellation()</code> + <code>do-catch</code></td>
+                        </tr>
+                        <tr>
+                            <td>Final report printing</td>
+                            <td><code>reduce</code> + <code>map</code> for formatted summary</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Code Example</h3>
+                <pre><code>struct Source { let url: String }
+
+func fetch(_ source: Source) async -> String {
+    "fetched: \(source.url)" // simulated network fetch
+}
+
+Task {
+    let sources = [Source(url: "a.com"), Source(url: "b.com")]
+    let results = await withTaskGroup(of: String.self) { group in
+        for s in sources { group.addTask { await fetch(s) } }
+        return await group.reduce(into: []) { $0.append($1) }
+    }
+    print(results)
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A Concurrent News Aggregator that fetches from 5–10 mock endpoints simultaneously using <code>TaskGroup</code>, collects results safely via an <code>actor</code>, handles errors and timeouts gracefully, and prints a final aggregated report. Build on Days 5–7. This is the capstone that demonstrates mastery of the entire Swift curriculum.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–3</td>
+                        <td>Absolute Basics</td>
+                        <td>Write Swift programs using primitives, optionals, and all three core collection types</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>4–6</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Structure programs with loops, functions, closures, structs, classes, and enums</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>7–9</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Apply protocol-oriented design, handle errors robustly, use generics, and work with JSON and networking</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>10–12</td>
+                        <td>Master Level Concepts</td>
+                        <td>Write concurrent code with async/await and TaskGroup, apply functional patterns, and complete three production-quality projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Xcode (developer.apple.com/xcode)</td>
+                        <td>Primary IDE for Swift development and Playgrounds</td>
+                    </tr>
+                    <tr>
+                        <td>Swift Playgrounds (iPad / Mac)</td>
+                        <td>Rapid experimentation and early learning</td>
+                    </tr>
+                    <tr>
+                        <td>Swift.org Documentation</td>
+                        <td>Official language reference and API docs</td>
+                    </tr>
+                    <tr>
+                        <td>Swift Package Index (swiftpackageindex.com)</td>
+                        <td>Discovering and evaluating Swift packages</td>
+                    </tr>
+                    <tr>
+                        <td>Hacking with Swift (hackingwithswift.com)</td>
+                        <td>Practical tutorials and 100 Days of Swift course</td>
+                    </tr>
+                    <tr>
+                        <td>Swift by Sundell (swiftbysundell.com)</td>
+                        <td>Advanced articles on Swift patterns and architecture</td>
+                    </tr>
+                    <tr>
+                        <td>WWDC Videos (developer.apple.com/videos)</td>
+                        <td>Official deep-dives on Swift concurrency and SwiftUI</td>
+                    </tr>
+                    <tr>
+                        <td>Swift Evolution (github.com/apple/swift-evolution)</td>
+                        <td>Understand why Swift features were designed the way they were</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Complete each week's task before moving on — building small programs reinforces concepts far more than reading alone.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — your commit history shows consistent progress to future employers.</li>
+                    <li>Use <strong>Xcode Playgrounds</strong> for weekly experiments, then move to full <code>.swift</code> files once you start Phases 3 and 4.</li>
+                    <li>By Week 12, you should have three complete, runnable projects and the confidence to build any Swift application — CLI, iOS, or server-side — from scratch.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

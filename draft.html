@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dart: Beginner to Master — 16 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>Dart: Beginner to Master</h1>
+        <p>Complete 16-Week Curriculum — From Dart Syntax & Null Safety to Generics, Streams, Isolates & Production Applications</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#week16">W16</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>16-week, phase-based Dart curriculum</strong> designed to take a complete beginner to a professional-level Dart developer. The roadmap moves from <strong>syntax, variables, data types, and null safety</strong> through <strong>control flow, functions, loops, and collections</strong>, into <strong>OOP, error handling, async programming, and libraries</strong>, all the way to <strong>generics, generators, streams, isolates, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics including syntax and the type system, <strong>Phase 2</strong> covers control flow, functions, and advanced collections, <strong>Phase 3</strong> covers intermediate and advanced core topics like OOP, error handling, and packages, and <strong>Phase 4</strong> covers master-level generics, generators, concurrency, and production projects.</p>
+            <p>By Week 16, you will have built three complete, portfolio-ready applications and be confident building production-grade Dart applications — including Flutter apps and server-side services.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 16 weeks &nbsp;|&nbsp; <strong>Stack:</strong> Dart 3+, DartPad, pub.dev &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic programming logic</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–4:</strong> Fundamentals, data types, null safety, and collections intro.</p>
+        </div>
+
+        <!-- WEEK 1-->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Setting Up &amp; First Steps</h2>
+                <p>Environment setup, basic syntax, and program structure.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Setting up your environment, understanding basic syntax, and writing your first Dart programs.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Installing Dart &amp; DartPad</strong> — Dart can be installed via the Dart SDK or used instantly online through DartPad. This removes setup friction so you can start writing code immediately without any local installation.</li>
+                    <li><strong>Variables &amp; <code>var</code></strong> — Variables store data that a program can reference and manipulate later. The <code>var</code> keyword lets Dart infer the type automatically from the assigned value, keeping code concise without sacrificing type safety.</li>
+                    <li><strong>Comments &amp; Print Statements</strong> — Comments document code without affecting execution, using <code>//</code> for single lines or <code>/* */</code> for blocks. The <code>print()</code> function outputs values to the console for debugging and learning.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every Dart program — from a simple script to a full Flutter application — starts with a <code>main()</code> function and uses <code>print()</code> for output. Understanding <code>var</code> and type inference from Day 1 establishes the mental model that Dart is both type-safe and concise — you don't have to choose one or the other.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// The entry point of every Dart application
+void main() {
+  print('Hello, Dart World!'); // Prints text to console
+}
+
+void main() {
+  var name = 'Alice'; // Inferred as String
+  var age = 25;       // Inferred as int
+  print('$name is $age years old');
+}
+
+void main() {
+  // This is a single-line comment
+  /* This is a
+     multi-line comment */
+  print('Comments help readability'); // inline comment
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Install the Dart SDK (or open DartPad), then write a program that prints your <strong>name</strong>, <strong>age</strong>, and <strong>favorite programming language</strong> on three separate lines using string interpolation.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 2  -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Data Types &amp; Type System</h2>
+                <p>Understanding Dart's static type system and primitive types.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding Dart's static type system and all primitive data types.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>int</code> and <code>double</code></strong> — <code>int</code> represents whole numbers while <code>double</code> represents decimal/floating-point numbers. Dart enforces these types strictly, preventing accidental mixing without explicit conversion.</li>
+                    <li><strong><code>String</code> &amp; <code>Boolean</code></strong> — <code>String</code> holds text data and supports interpolation using <code>$</code>, while <code>bool</code> holds only <code>true</code> or <code>false</code>. Both are foundational for logic and display in nearly every program you will ever write.</li>
+                    <li><strong>Type Safety with <code>final</code> and <code>const</code></strong> — <code>final</code> creates a variable that can be set only once at runtime, while <code>const</code> is a compile-time constant. Both improve safety by preventing accidental reassignment of values that should never change.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Dart's sound type system is what makes Flutter apps so reliable — type errors are caught at compile time, not at runtime in front of users. Understanding the distinction between <code>var</code> (inferred, mutable), <code>final</code> (set once), and <code>const</code> (compile-time fixed) is essential before moving to any real Dart programming.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>void main() {
+  int wholeNumber = 42;
+  double decimalNumber = 3.14;
+  print(wholeNumber + decimalNumber); // Auto-promotes to double
+}
+
+void main() {
+  String city = 'Colombo';
+  bool isCapital = false;
+  print('$city is capital: $isCapital');
+}
+
+void main() {
+  final currentYear = 2026; // set once, runtime
+  const pi = 3.14159;       // fixed at compile time
+  print('$currentYear, $pi');
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a program declaring one variable of each type (<code>int</code>, <code>double</code>, <code>String</code>, <code>bool</code>) and print a <strong>formatted sentence</strong> combining all four using string interpolation.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--   WEEK 3  -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Operators &amp; Expressions</h2>
+                <p>Performing operations and building expressions in Dart.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Performing arithmetic, comparison, and logical operations, and building safe expressions using null-aware operators.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Arithmetic Operators</strong> — Arithmetic operators (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>~/</code>) perform mathematical calculations on numeric values. The <code>~/</code> operator performs integer (floor) division — a unique and useful Dart feature.</li>
+                    <li><strong>Comparison &amp; Logical Operators</strong> — Comparison operators (<code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>) evaluate relationships between values and return booleans. Logical operators (<code>&amp;&amp;</code>, <code>||</code>, <code>!</code>) combine multiple boolean expressions for complex conditions.</li>
+                    <li><strong>Assignment &amp; Null-aware Operators</strong> — Compound assignment operators (<code>+=</code>, <code>-=</code>) shorten value updates, while null-aware operators (<code>??</code>, <code>??=</code>) safely handle null values. These are essential for Dart's strong null-safety model.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The null-aware operators (<code>??</code> and <code>??=</code>) are among Dart's most used features — they appear constantly in Flutter code for providing default values and safely accessing potentially-null properties. Mastering them now prevents dozens of null-safety errors in future weeks.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>void main() {
+  int a = 17, b = 5;
+  print(a / b);  // 3.4 (double division)
+  print(a ~/ b); // 3 (integer division)
+  print(a % b);  // 2 (remainder)
+}
+
+void main() {
+  int age = 20;
+  bool canVote = age >= 18 && age < 120;
+  print('Can vote: $canVote');
+}
+
+void main() {
+  String? nickname; // nullable String
+  nickname ??= 'Guest'; // assign only if null
+  print(nickname);
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a simple <strong>BMI Calculator</strong> using arithmetic operators, then use a logical operator to print whether the result is <strong>"Healthy"</strong> or <strong>"Not Healthy"</strong> based on standard BMI ranges.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 4   -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Null Safety &amp; Collections Intro</h2>
+                <p>Dart's sound null safety and basic collection types.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering Dart's sound null safety system and working with the three core collection types.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Nullable Types (<code>?</code>)</strong> — By default, variables in Dart cannot be null unless explicitly marked with <code>?</code>. This compile-time check prevents the common "null reference" runtime crashes seen in other languages — Dart's most celebrated safety feature.</li>
+                    <li><strong>Lists Basics</strong> — A <code>List</code> is an ordered collection of items, similar to arrays in other languages. Dart lists are generic, meaning you specify the type of elements they hold for full type safety.</li>
+                    <li><strong>Maps Basics</strong> — A <code>Map</code> stores data as key-value pairs, allowing fast lookups by a unique key. Maps are ideal for representing structured data like JSON objects or configuration settings.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Dart's sound null safety is what makes it different from most languages — the compiler guarantees that a non-nullable variable can never be null, eliminating an entire class of runtime crashes. Lists and Maps are used in virtually every Dart and Flutter program — learning them here unlocks all future collection work.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>void main() {
+  String? middleName; // can be null
+  middleName = null;  // valid
+  print(middleName ?? 'No middle name');
+}
+
+void main() {
+  List&lt;String&gt; fruits = ['Apple', 'Banana', 'Mango'];
+  fruits.add('Orange');
+  print(fruits); // [Apple, Banana, Mango, Orange]
+}
+
+void main() {
+  Map&lt;String, int&gt; ages = {'Alice': 25, 'Bob': 30};
+  ages['Charlie'] = 28;
+  print(ages);
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a small <strong>contact book</strong> using a <code>Map&lt;String, String&gt;</code> where keys are names and values are phone numbers. Add three entries and print them all. Handle the case where a contact might not exist using the null-aware operator.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ========== PHASE 2 ========== -->
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 5–8:</strong> Functions, modules, and advanced data structures.</p>
+        </div>
+
+        <!--  WEEK 5 -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Conditional Logic</h2>
+                <p>Decision-making constructs in Dart.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Directing program execution using Dart's expressive conditional and decision-making constructs.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>if</code> / <code>else if</code> / <code>else</code></strong> — Conditional statements allow a program to execute different code blocks based on whether conditions are true or false. Chaining <code>else if</code> lets you test multiple conditions sequentially in a clean, readable structure.</li>
+                    <li><strong><code>switch</code> Statements</strong> — The <code>switch</code> statement compares a single value against multiple possible cases, offering a cleaner alternative to long <code>if-else</code> chains. Dart's enhanced switch also supports pattern matching in newer versions.</li>
+                    <li><strong>Ternary &amp; Conditional Expressions</strong> — The ternary operator (<code>condition ? a : b</code>) provides a compact way to write simple if-else logic in a single line. It is especially useful for assigning values based on conditions without verbose blocks.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Dart 3 introduced exhaustive pattern matching in <code>switch</code> expressions — one of the most powerful features added to any language in recent years. Starting with the basics here prepares you for the advanced switch patterns used throughout modern Dart and Flutter code.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>void main() {
+  int score = 75;
+  if (score >= 90) {
+    print('A grade');
+  } else if (score >= 70) {
+    print('B grade');
+  } else {
+    print('C grade');
+  }
+}
+
+void main() {
+  String day = 'Mon';
+  switch (day) {
+    case 'Mon':
+      print('Start of week');
+      break;
+    default:
+      print('Another day');
+  }
+}
+
+void main() {
+  int temp = 30;
+  String status = temp > 25 ? 'Hot' : 'Cool';
+  print(status);
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a <strong>grading program</strong> that takes a numeric score and uses <code>if-else</code> to print a letter grade, then rewrite the same logic using <code>switch</code> on a grade-range category. Compare the readability of both approaches.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 6 -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Loops &amp; Iteration</h2>
+                <p>Repeating actions efficiently in Dart.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Repeating actions efficiently using Dart's full range of loop constructs and iteration patterns.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>for</code> Loop</strong> — The <code>for</code> loop repeats a block of code a specific number of times, controlled by an initializer, condition, and increment. It is most useful when the number of iterations is known in advance.</li>
+                    <li><strong><code>while</code> &amp; <code>do-while</code> Loops</strong> — A <code>while</code> loop repeats as long as a condition remains true, checking before each iteration. A <code>do-while</code> loop guarantees at least one execution since it checks the condition afterward.</li>
+                    <li><strong><code>for-in</code> &amp; <code>forEach</code></strong> — The <code>for-in</code> loop iterates directly over collection elements without needing an index. The <code>forEach</code> method achieves the same result using a functional callback style — cleaner and more expressive.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The <code>for-in</code> loop and <code>forEach</code> are the most common iteration patterns in real Dart and Flutter code. Understanding when to use each — and the difference between a statement-based loop and a functional callback — is a mark of idiomatic Dart style.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>void main() {
+  for (int i = 1; i &lt;= 5; i++) {
+    print('Count: $i');
+  }
+}
+
+void main() {
+  int n = 0;
+  do {
+    print('n is $n');
+    n++;
+  } while (n &lt; 3);
+}
+
+void main() {
+  var colors = ['Red', 'Green', 'Blue'];
+  for (var color in colors) {
+    print(color);
+  }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a program that prints the <strong>multiplication table (1–10)</strong> for a number stored as a variable, using a <code>for</code> loop. Then rewrite the same output using <code>forEach</code> on a generated list.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 7  -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Functions</h2>
+                <p>Reusable, modular blocks of logic in Dart.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing clean, reusable, and modular logic using Dart's flexible function system.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Function Declaration &amp; Parameters</strong> — Functions encapsulate reusable logic and can accept input through parameters. Dart supports positional, named, and optional parameters for flexible function signatures that read like natural language.</li>
+                    <li><strong>Arrow Functions</strong> — Arrow functions (<code>=&gt;</code>) provide concise syntax for functions that contain a single expression. They are widely used for short utility functions and callbacks throughout Dart and Flutter code.</li>
+                    <li><strong>Anonymous Functions &amp; Closures</strong> — Anonymous functions have no name and are often passed directly as arguments to other functions. Closures capture variables from their surrounding scope, allowing state to persist across calls.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Dart's named parameters (<code>{}</code>) with default values are used everywhere in Flutter — almost every widget constructor uses named parameters. Understanding closures is essential for working with callbacks, event handlers, and the functional collection methods you will use in Week 8 and beyond.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// Named optional parameter with default value
+int add(int a, int b, {int bonus = 0}) {
+  return a + b + bonus;
+}
+void main() => print(add(3, 4, bonus: 2));
+
+// Arrow function
+int square(int x) => x * x;
+void main() {
+  print(square(6)); // 36
+}
+
+// Closure
+Function makeMultiplier(int factor) {
+  return (int x) => x * factor; // closure captures 'factor'
+}
+void main() => print(makeMultiplier(3)(5)); // 15</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a function <code>calculateDiscount(price, {percent = 10})</code> with a default named parameter, and test it with both default and custom discount values. Then write an arrow function version of the same logic.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Collections Deep Dive</h2>
+                <p>Advanced manipulation of Lists, Sets, and Maps.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Advanced manipulation of Lists, Sets, and Maps using functional methods and modern collection syntax.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Sets</strong> — A <code>Set</code> is an unordered collection that automatically eliminates duplicate values. It is ideal for tasks requiring uniqueness checks, like tracking distinct tags, visited URLs, or unique IDs.</li>
+                    <li><strong>Collection Methods: <code>map</code>, <code>where</code>, <code>reduce</code></strong> — <code>map</code> transforms each element, <code>where</code> filters elements by condition, and <code>reduce</code> combines elements into a single value. These functional methods replace many manual loop patterns with cleaner, chainable expressions.</li>
+                    <li><strong>Spread &amp; Collection-if/for</strong> — The spread operator (<code>...</code>) inserts all elements of one collection into another. Collection-if and collection-for allow conditional or generated elements directly inside literals — a powerful feature unique to Dart.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Collection-if and collection-for are used constantly in Flutter's widget trees — they allow you to conditionally include or generate widgets directly in a list literal. The <code>where</code>/<code>map</code>/<code>reduce</code> chain is the functional programming pattern that replaces most verbose loop logic in professional Dart code.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>void main() {
+  Set&lt;int&gt; uniqueNumbers = {1, 2, 2, 3, 3, 3};
+  uniqueNumbers.add(4);
+  print(uniqueNumbers); // {1, 2, 3, 4}
+}
+
+void main() {
+  var nums = [1, 2, 3, 4, 5];
+  var evens = nums.where((n) => n % 2 == 0).toList();
+  print(evens); // [2, 4]
+}
+
+void main() {
+  var base = [1, 2, 3];
+  var extended = [...base, 4, if (base.isNotEmpty) 5];
+  print(extended); // [1, 2, 3, 4, 5]
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Given a <code>List&lt;int&gt;</code> of mixed numbers, use <code>where</code>, <code>map</code>, and <code>reduce</code> to filter even numbers, double them, and then sum the results — <strong>all in one chained expression</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 9–12:</strong> OOP, file handling, error handling, and libraries.</p>
+        </div>
+
+        <!-- WEEK 9  -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Object-Oriented Programming I</h2>
+                <p>Classes, objects, and constructors in Dart.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding classes, objects, constructors, and property encapsulation — the foundation of Dart's OOP model.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Classes &amp; Objects</strong> — A class is a blueprint defining properties and behaviors, while an object is a specific instance created from that blueprint. This is the foundation of organizing code around real-world entities in a structured, maintainable way.</li>
+                    <li><strong>Named &amp; Factory Constructors</strong> — Named constructors allow a class to offer multiple ways to create instances with different initialization logic. Factory constructors can return existing instances or subtypes instead of always creating new objects.</li>
+                    <li><strong>Getters &amp; Setters</strong> — Getters and setters control how a property's value is read or written, enabling validation or computed values. They allow encapsulation while keeping clean, field-like access syntax from the outside.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> In Flutter, every UI component is a class. Understanding Dart classes, constructors, and getters is the direct prerequisite for building Flutter widgets. Factory constructors are used extensively in Flutter — <code>TextStyle.lerp()</code>, <code>Color.fromARGB()</code>, and many more all follow this pattern.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>class Car {
+  String brand;
+  Car(this.brand); // constructor shorthand
+  void honk() => print('$brand says beep!');
+}
+void main() => Car('Toyota').honk();
+
+class Point {
+  double x, y;
+  Point(this.x, this.y);
+  Point.origin() : x = 0, y = 0; // named constructor
+}
+void main() => print(Point.origin().x);
+
+class Circle {
+  double radius;
+  Circle(this.radius);
+  double get area => 3.14 * radius * radius; // computed getter
+}
+void main() => print(Circle(2).area);</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <code>BankAccount</code> class with a <strong>private balance field</strong>, a getter to view it, and methods <code>deposit()</code> and <code>withdraw()</code> that validate amounts before modifying the balance. Add a named constructor <code>BankAccount.withBonus()</code> that starts with extra funds.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 10  -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Object-Oriented Programming II</h2>
+                <p>Inheritance, polymorphism, abstraction, and mixins.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering inheritance, polymorphism, abstract classes, and Dart's powerful mixin system.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Inheritance with <code>extends</code></strong> — Inheritance allows a class to acquire the properties and methods of another class, promoting code reuse. The <code>super</code> keyword is used to access the parent class's constructor or members from within a subclass.</li>
+                    <li><strong>Abstract Classes &amp; Interfaces</strong> — Abstract classes define a contract that subclasses must implement, and cannot be instantiated directly. Dart uses <code>implements</code> for interface-like behavior, enforcing structural contracts on classes without requiring a shared parent.</li>
+                    <li><strong>Mixins</strong> — Mixins allow a class to reuse code from multiple sources without traditional multiple inheritance. They are added using the <code>with</code> keyword and are useful for sharing behavior across unrelated classes cleanly and safely.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Mixins are one of Dart's most distinctive and powerful features — Flutter uses them extensively (e.g., <code>TickerProviderStateMixin</code>, <code>AutomaticKeepAliveClientMixin</code>). Understanding when to use inheritance versus a mixin versus an interface is a mark of a professional Dart developer.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>class Animal {
+  void speak() => print('Some sound');
+}
+class Dog extends Animal {
+  @override
+  void speak() => print('Woof!'); // method overriding
+}
+void main() => Dog().speak();
+
+abstract class Shape {
+  double area(); // must be implemented by subclasses
+}
+class Square extends Shape {
+  double side;
+  Square(this.side);
+  @override
+  double area() => side * side;
+}
+
+mixin Logger {
+  void log(String msg) => print('LOG: $msg');
+}
+class Service with Logger {}
+void main() => Service().log('Started');</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create an abstract <code>Employee</code> class with an abstract <code>calculateSalary()</code> method, then implement two subclasses (<code>Manager</code>, <code>Developer</code>) with different salary logic. Add a <code>Logger</code> mixin that both classes use to log each salary calculation.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 11  -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Error Handling &amp; Async Basics</h2>
+                <p>Managing failures and asynchronous code in Dart.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Managing failures gracefully and writing non-blocking asynchronous code using Futures and async/await.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>try</code> / <code>catch</code> / <code>finally</code></strong> — <code>try-catch</code> blocks let a program gracefully handle runtime errors instead of crashing. The <code>finally</code> block always executes regardless of whether an exception occurred, making it ideal for cleanup operations like closing files or connections.</li>
+                    <li><strong>Custom Exceptions</strong> — Custom exception classes let you define meaningful, domain-specific error types beyond Dart's built-ins. They typically implement the <code>Exception</code> interface for clarity and provide structured information about what went wrong.</li>
+                    <li><strong>Futures &amp; <code>async</code>/<code>await</code></strong> — A <code>Future</code> represents a value that will be available at some point in the future, typically from an asynchronous operation like a network call. The <code>async</code>/<code>await</code> keywords let you write asynchronous code that reads like synchronous code.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every Flutter app uses <code>async</code>/<code>await</code> — for API calls, database reads, file operations, and more. Understanding <code>Future</code> and custom exceptions is the direct prerequisite for all real-world Dart development. Without this week, the next four weeks of content will not make sense.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>void main() {
+  try {
+    int result = 10 ~/ 0; // throws exception
+  } catch (e) {
+    print('Error caught: $e');
+  } finally {
+    print('Cleanup done');
+  }
+}
+
+class InsufficientFundsException implements Exception {
+  String message = 'Not enough balance';
+}
+void main() {
+  try {
+    throw InsufficientFundsException();
+  } catch (e) {
+    print(e);
+  }
+}
+
+Future&lt;String&gt; fetchData() async {
+  await Future.delayed(Duration(seconds: 1));
+  return 'Data loaded';
+}
+void main() async {
+  print(await fetchData());
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a function <code>withdrawMoney(balance, amount)</code> that throws a custom exception when funds are insufficient, and call it inside a <code>try-catch</code> block to print a friendly error message. Add a <code>finally</code> block that always logs the transaction attempt.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 12 -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Libraries, Packages &amp; File I/O</h2>
+                <p>Modular code organization and external interaction in Dart.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Organizing code with imports, leveraging the pub.dev package ecosystem, and reading and writing files with dart:io.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Imports &amp; Library Structure</strong> — The <code>import</code> keyword brings in code from Dart's core libraries, packages, or your own files. Prefixing imports (<code>as</code>) helps avoid naming conflicts between libraries when two libraries export the same name.</li>
+                    <li><strong>Using pub.dev Packages</strong> — <code>pub.dev</code> is Dart's official package repository, hosting reusable libraries for common tasks like HTTP requests or JSON parsing. Packages are declared in <code>pubspec.yaml</code> and fetched via <code>dart pub get</code>.</li>
+                    <li><strong>File Reading &amp; Writing (<code>dart:io</code>)</strong> — The <code>dart:io</code> library provides classes like <code>File</code> for reading from and writing to the filesystem. This is essential for command-line tools and server-side applications that need to persist data between runs.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The <code>pub.dev</code> ecosystem is what makes Dart practical for real projects — the <code>http</code>, <code>dio</code>, and <code>json_serializable</code> packages are used in virtually every Flutter app. Understanding <code>pubspec.yaml</code> and package versioning is a required skill for any professional Dart or Flutter developer.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import 'dart:math' as math;
+void main() {
+  print(math.sqrt(16)); // 4.0
+}
+
+// pubspec.yaml
+// dependencies:
+//   http: ^1.2.0
+import 'package:http/http.dart' as http;
+// Usage: await http.get(Uri.parse('https://api.example.com'));
+
+import 'dart:io';
+void main() async {
+  final file = File('notes.txt');
+  await file.writeAsString('Hello, file!');
+  print(await file.readAsString());
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a small command-line app that writes a list of <strong>"to-do" items</strong> to a text file, then reads and prints them back to the console. Handle the case where the file doesn't exist yet using proper error handling.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ========== PHASE 4 ========== -->
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 13–16:</strong> Generics, generators, concurrency, and three complete capstone projects.</p>
+        </div>
+
+        <!--  WEEK 13  -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Generics &amp; Advanced Functions</h2>
+                <p>Writing flexible, type-safe, reusable code in Dart.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing flexible, type-safe, and reusable code using generics, type constraints, and higher-order functions.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Generics (<code>&lt;T&gt;</code>)</strong> — Generics allow classes and functions to operate on multiple types while preserving type safety. This avoids code duplication that would otherwise require writing separate versions for each type.</li>
+                    <li><strong>Generic Constraints (<code>extends</code>)</strong> — Generic type parameters can be constrained using <code>extends</code> to restrict which types are valid. This ensures the generic type supports the operations your code relies on inside the generic body.</li>
+                    <li><strong>Higher-Order Functions</strong> — Higher-order functions accept other functions as parameters or return them as results. This pattern enables powerful abstractions like custom sorting, filtering, event callbacks, and middleware pipelines.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Generics are everywhere in Dart's standard library — <code>List&lt;T&gt;</code>, <code>Map&lt;K, V&gt;</code>, <code>Future&lt;T&gt;</code>, <code>Stream&lt;T&gt;</code>. Understanding how to write your own generic classes and functions makes you capable of building reusable libraries and frameworks, not just consuming them.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>class Box&lt;T&gt; {
+  T value;
+  Box(this.value);
+}
+void main() {
+  Box&lt;int&gt; intBox = Box&lt;int&gt;(42);
+  print(intBox.value);
+}
+
+T findMax&lt;T extends num&gt;(T a, T b) => a > b ? a : b;
+void main() => print(findMax&lt;double&gt;(3.5, 7.2));
+
+void repeat(int times, void Function(int) action) {
+  for (int i = 0; i &lt; times; i++) action(i);
+}
+void main() => repeat(3, (i) => print('Run $i'));</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a generic <code>Stack&lt;T&gt;</code> class with <code>push()</code>, <code>pop()</code>, and <code>peek()</code> methods, then test it using both <code>int</code> and <code>String</code> types. Add a generic constraint version <code>MinStack&lt;T extends num&gt;</code> that also tracks the current minimum value.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 14  -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Generators &amp; Iterables</h2>
+                <p>Lazy evaluation and custom sequences in Dart.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Building lazy, memory-efficient sequences using synchronous and asynchronous generators and custom iterables.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Synchronous Generators (<code>sync*</code>)</strong> — A <code>sync*</code> function returns an <code>Iterable</code> lazily using the <code>yield</code> keyword instead of building a full list upfront. This is memory-efficient for large or infinite sequences.</li>
+                    <li><strong>Asynchronous Generators (<code>async*</code>)</strong> — An <code>async*</code> function returns a <code>Stream</code> lazily, emitting values over time using <code>yield</code>. This is ideal for representing ongoing data sources like sensor readings, live feeds, or paginated API responses.</li>
+                    <li><strong>Custom Iterables &amp; Iterators</strong> — Implementing the <code>Iterable</code> and <code>Iterator</code> interfaces lets your custom classes work seamlessly with <code>for-in</code> loops and collection methods — useful for building domain-specific collection types.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>async*</code> generators that return <code>Stream</code> are the exact foundation of Flutter's reactive programming model — used in BLoC pattern, StreamBuilder widgets, and real-time data flows. Understanding generators here makes the Stream deep-dive in Week 15 immediately intuitive.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>Iterable&lt;int&gt; countTo(int n) sync* {
+  for (int i = 1; i &lt;= n; i++) yield i;
+}
+void main() => print(countTo(5).toList());
+
+Stream&lt;int&gt; tick(int n) async* {
+  for (int i = 1; i &lt;= n; i++) {
+    await Future.delayed(Duration(milliseconds: 200));
+    yield i;
+  }
+}
+
+class Evens extends Iterable&lt;int&gt; {
+  final int max;
+  Evens(this.max);
+  @override
+  Iterator&lt;int&gt; get iterator =>
+      [for (var i = 0; i &lt;= max; i += 2) i].iterator;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a <code>sync*</code> generator function <code>fibonacci(n)</code> that lazily yields the first <code>n</code> Fibonacci numbers, and print the result as a list. Then write an <code>async*</code> version that emits one number every 100ms and collect them into a list using <code>await for</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 15 -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Concurrency: Streams &amp; Isolates</h2>
+                <p>Handling parallelism and reactive data flows in Dart.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Handling true parallelism with Isolates and building reactive data pipelines using Streams and StreamControllers.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Streams Deep Dive</strong> — A <code>Stream</code> is a sequence of asynchronous events that can be listened to over time, similar to a Future but for multiple values. Streams are central to handling things like user input, WebSockets, or file watchers.</li>
+                    <li><strong>StreamControllers &amp; Broadcast Streams</strong> — A <code>StreamController</code> lets you manually create and manage a stream, pushing events into it programmatically. Broadcast streams allow multiple listeners to subscribe to the same event source simultaneously.</li>
+                    <li><strong>Isolates for True Parallelism</strong> — Dart uses isolates instead of threads to achieve true parallel execution, since each isolate has its own memory and event loop. <code>Isolate.spawn()</code> runs separate code paths concurrently without shared-memory race conditions.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Flutter uses Isolates for heavy computation — image processing, JSON parsing of large payloads, and machine learning inference all run in separate Isolates to keep the UI thread smooth. Broadcast streams power real-time features in Flutter apps including chat, live scores, and notifications.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>void main() {
+  Stream&lt;int&gt; numberStream = Stream.fromIterable([1, 2, 3]);
+  numberStream.listen((n) => print('Received: $n'));
+}
+
+import 'dart:async';
+void main() {
+  final controller = StreamController&lt;String&gt;.broadcast();
+  controller.stream.listen((msg) => print('Got: $msg'));
+  controller.add('Hello listeners!');
+}
+
+import 'dart:isolate';
+void heavyTask(SendPort sendPort) {
+  sendPort.send('Computation done');
+}
+void main() async {
+  final receivePort = ReceivePort();
+  await Isolate.spawn(heavyTask, receivePort.sendPort);
+  receivePort.listen((msg) => print(msg));
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a simple <strong>stream-based stopwatch</strong> that emits the elapsed seconds every second using <code>Stream.periodic</code>, and stop it after 5 ticks. Then spawn an Isolate to compute the sum of all numbers from 1 to 1,000,000 and return the result to the main isolate via <code>SendPort</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 16  -->
+
+        <div class="rm-card" id="week16">
+            <div class="rm-card-header">
+                <h2>Week 16 — Capstone Week: Three Mini Projects (Beginner → Master)</h2>
+                <p>Apply everything learned across the entire curriculum in three complete, real-world projects.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Consolidating all concepts from the entire 16-week curriculum into three progressively complex, portfolio-ready projects.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — Console To-Do List (Beginner)</h3>
+                <p>A command-line task manager using variables, lists, loops, and functions to manage an in-memory task list. Reinforces core syntax and basic program flow without any external dependencies.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Dart Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Add and list tasks</td>
+                            <td><code>List&lt;String&gt;</code> with <code>forEach</code></td>
+                        </tr>
+                        <tr>
+                            <td>Remove completed tasks</td>
+                            <td><code>where</code> filter + list reassignment</td>
+                        </tr>
+                        <tr>
+                            <td>Interactive menu loop</td>
+                            <td><code>while</code> loop + <code>switch</code> on user input</td>
+                        </tr>
+                        <tr>
+                            <td>Input reading</td>
+                            <td><code>stdin.readLineSync()</code> from <code>dart:io</code></td>
+                        </tr>
+                        <tr>
+                            <td>Modular structure</td>
+                            <td>Separate functions for each operation</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>List&lt;String&gt; todos = [];
+
+void addTodo(String task) => todos.add(task);
+
+void main() {
+  addTodo('Learn Dart');
+  todos.forEach(print);
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A fully functional CLI To-Do app with add, list, complete, and delete operations. All operations run in a loop until the user chooses to exit. Build on <strong>Days 1–2</strong>.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — File-Based Contact Manager (Intermediate)</h3>
+                <p>A contact manager that uses OOP, file I/O, and error handling to persist data to a JSON file on disk. Introduces serialization concepts and structured error recovery.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Dart Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Contact data model</td>
+                            <td><code>class Contact</code> with <code>toJson()</code> / <code>fromJson()</code></td>
+                        </tr>
+                        <tr>
+                            <td>JSON persistence</td>
+                            <td><code>dart:convert</code> + <code>dart:io</code> File I/O</td>
+                        </tr>
+                        <tr>
+                            <td>Error handling</td>
+                            <td>Custom <code>ContactNotFoundException</code></td>
+                        </tr>
+                        <tr>
+                            <td>Search contacts</td>
+                            <td><code>where</code> + <code>firstWhere</code> on list</td>
+                        </tr>
+                        <tr>
+                            <td>Async file operations</td>
+                            <td><code>async</code>/<code>await</code> with <code>File</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>import 'dart:convert';
+import 'dart:io';
+
+class Contact {
+  String name;
+  Contact(this.name);
+  Map&lt;String, dynamic&gt; toJson() => {'name': name};
+}
+
+void saveContacts(List&lt;Contact&gt; list) =>
+    File('contacts.json').writeAsStringSync(jsonEncode(list));</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A working Contact Manager with add, search, update, and delete operations persisted to a JSON file. Full error handling for file-not-found and contact-not-found cases. Build on <strong>Days 3–4</strong>.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Async Weather Dashboard with Streams (Master)</h3>
+                <p>A capstone project combining generics, async/await, streams, and package usage (<code>http</code>) to fetch and continuously refresh weather data — demonstrating real-world architecture with services, models, and reactive data updates.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Dart Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Live data fetching</td>
+                            <td><code>http</code> package + <code>async</code>/<code>await</code></td>
+                        </tr>
+                        <tr>
+                            <td>JSON deserialization</td>
+                            <td>Generic <code>fromJson&lt;T&gt;</code> factory pattern</td>
+                        </tr>
+                        <tr>
+                            <td>Continuous data refresh</td>
+                            <td><code>async*</code> generator + <code>Stream.periodic</code></td>
+                        </tr>
+                        <tr>
+                            <td>Multiple city feeds</td>
+                            <td><code>StreamController.broadcast()</code></td>
+                        </tr>
+                        <tr>
+                            <td>Error handling</td>
+                            <td>Custom <code>WeatherServiceException</code> + <code>try-catch</code></td>
+                        </tr>
+                        <tr>
+                            <td>Heavy computation offloading</td>
+                            <td><code>Isolate.spawn()</code> for data processing</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>Stream&lt;String&gt; weatherUpdates() async* {
+  while (true) {
+    await Future.delayed(Duration(seconds: 10));
+    yield 'Fetched latest weather data...';
+  }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A complete async weather dashboard that continuously fetches data using a <code>Stream</code>, decodes JSON into typed model classes using generics, handles network errors gracefully, and offloads heavy data processing to an Isolate. Build on <strong>Days 5–7</strong>. This is the capstone demonstrating mastery of the entire Dart curriculum.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–4</td>
+                        <td>Absolute Basics</td>
+                        <td>Write Dart programs using types, null safety, operators, and the core collection types</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>5–8</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Structure programs with conditionals, loops, functions, closures, and advanced collection transformations</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>9–12</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Design class hierarchies with OOP and mixins, handle errors robustly, use async/await, and work with packages and file I/O</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>13–16</td>
+                        <td>Master Level Concepts</td>
+                        <td>Write type-safe generic code, build lazy generators, handle concurrency with Streams and Isolates, and complete three production projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool / Resource</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DartPad (dartpad.dev)</td>
+                        <td>Online Dart environment — zero setup required</td>
+                    </tr>
+                    <tr>
+                        <td>dart.dev/guides</td>
+                        <td>Official Dart language tour and API reference</td>
+                    </tr>
+                    <tr>
+                        <td>pub.dev</td>
+                        <td>Official Dart and Flutter package repository</td>
+                    </tr>
+                    <tr>
+                        <td>Dart Apprentice (raywenderlich.com)</td>
+                        <td>Comprehensive beginner-to-intermediate Dart book</td>
+                    </tr>
+                    <tr>
+                        <td>Flutter &amp; Dart (Udemy — Maximilian Schwarzmüller)</td>
+                        <td>Practical Dart in real Flutter applications</td>
+                    </tr>
+                    <tr>
+                        <td>Effective Dart (dart.dev/effective-dart)</td>
+                        <td>Official style, usage, and design guidelines</td>
+                    </tr>
+                    <tr>
+                        <td>Dart DevTools</td>
+                        <td>Debugging, profiling, and performance analysis</td>
+                    </tr>
+                    <tr>
+                        <td>r/dartlang (Reddit)</td>
+                        <td>Community questions and Dart ecosystem news</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Complete each week's task before moving on — building small programs reinforces concepts far more than reading alone.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — your commit history shows consistent progress to future employers and collaborators.</li>
+                    <li>Use <strong>DartPad</strong> for early weeks experiments, then switch to a local Dart SDK project from Phase 3 onward for file I/O and package support.</li>
+                    <li>After completing Week 16, explore <strong>Flutter</strong> (Dart's UI framework) or server-side Dart with <strong>Shelf</strong> and <strong>Serverpod</strong> to apply these skills in real-world applications.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

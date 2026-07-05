@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React: Beginner to Master — 16 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>React: Beginner to Master</h1>
+        <p>Complete 16-Week Curriculum — From JSX Basics to Full-Stack Next.js Production Applications</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#week16">W16</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>16-week, phase-based React curriculum</strong> designed to take a complete beginner to a professional-level React developer. The roadmap moves from <strong>JSX, props, state, and forms</strong> through <strong>hooks, data fetching, routing, and global state management</strong>, into <strong>performance optimization, testing, and TypeScript</strong>, all the way to <strong>advanced patterns, Next.js full-stack development, CI/CD, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics and core React concepts, <strong>Phase 2</strong> covers hooks, side effects, data fetching, and routing, <strong>Phase 3</strong> covers intermediate and advanced core topics, and <strong>Phase 4</strong> covers master-level patterns, architecture, and full-stack development.</p>
+            <p>By Week 16, you will have built three complete, portfolio-ready applications and be confident building production-grade React and Next.js applications from scratch.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 16 weeks &nbsp;|&nbsp; <strong>Stack:</strong> React 18+, Vite, Node.js &nbsp;|&nbsp; <strong>Prerequisites:</strong> JavaScript ES6+ basics</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–4:</strong> JSX, props, state, forms, and core React concepts.</p>
+        </div>
+
+        <!--WEEK 1 -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Setting Up &amp; Your First React App</h2>
+                <p>Understand what React is, how it works in the browser, and write your very first component.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding what React is, how it works in the browser, and writing your very first component.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What is React &amp; Why Use It?</strong> — React is a JavaScript library built by Meta for creating fast, interactive UIs using reusable components. It uses a Virtual DOM to efficiently update only the parts of the page that change.</li>
+                    <li><strong>Setting Up a React Project with Vite</strong> — Vite is a modern, fast build tool that replaces the older Create React App. Running <code>npm create vite@latest</code> scaffolds a ready-to-use React project in seconds with hot module replacement.</li>
+                    <li><strong>JSX — JavaScript + HTML Syntax</strong> — JSX is a syntax extension that lets you write HTML-like code directly inside JavaScript files. Babel compiles JSX down to <code>React.createElement()</code> calls before the browser sees it.</li>
+                    <li><strong>Your First Functional Component</strong> — A React component is simply a JavaScript function that returns JSX. Components must start with a capital letter so React can tell them apart from regular HTML tags.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Everything in React is a component. Understanding the mental model of "UI as a function of data" from Week 1 makes every subsequent concept — props, state, hooks — feel logical rather than arbitrary.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// index.jsx — entry point
+import ReactDOM from 'react-dom/client';
+import App from './App';
+ReactDOM.createRoot(document.getElementById('root')).render(&lt;App /&gt;);
+
+// A component is just a function that returns JSX
+function WelcomeCard() {
+    return (
+        &lt;div&gt;
+            &lt;h2&gt;My First Component&lt;/h2&gt;
+            &lt;p&gt;React components are reusable building blocks.&lt;/p&gt;
+        &lt;/div&gt;
+    );
+}
+export default WelcomeCard;</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Personal Bio Card</strong> app. Create an <code>App.jsx</code> that renders a <code>&lt;BioCard /&gt;</code> component displaying your name, a short bio, and a list of 3 hobbies. Style it with basic inline styles or a CSS file.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 2-->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Props, Component Composition &amp; Lists</h2>
+                <p>Pass data into components using props and render dynamic lists from arrays.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Passing data into components using props and rendering dynamic lists.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Props — Passing Data to Components</strong> — Props are how you pass data from a parent component down to a child. They make components dynamic and reusable — like function arguments for your UI.</li>
+                    <li><strong>Destructuring Props</strong> — Instead of referencing <code>props.name</code> repeatedly, you can destructure props directly in the function signature for cleaner, more readable code — the standard pattern used by professional React developers.</li>
+                    <li><strong>Rendering Lists with <code>.map()</code></strong> — React uses JavaScript's <code>.map()</code> array method to transform data into JSX elements. Every item rendered in a list must have a unique <code>key</code> prop to help React track items efficiently.</li>
+                    <li><strong>Component Composition &amp; <code>children</code> Prop</strong> — The special <code>children</code> prop lets a parent component render whatever is placed between its opening and closing tags, enabling reusable wrapper components.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Props and composition are the fundamental mechanism for building React UIs from small, reusable pieces. Almost every real React application is built by composing many simple components together.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// Destructuring props in the parameter list
+function ProductCard({ title, price, inStock }) {
+    return (
+        &lt;div&gt;
+            &lt;h3&gt;{title}&lt;/h3&gt;
+            &lt;p&gt;${price} — {inStock ? "In Stock" : "Sold Out"}&lt;/p&gt;
+        &lt;/div&gt;
+    );
+}
+
+// Rendering a list with .map() and key prop
+const fruits = ["Apple", "Banana", "Cherry"];
+function FruitList() {
+    return (
+        &lt;ul&gt;
+            {fruits.map((fruit) =&gt; (
+                &lt;li key={fruit}&gt;{fruit}&lt;/li&gt;
+            ))}
+        &lt;/ul&gt;
+    );
+}
+
+// children prop for wrapper components
+function Card({ children }) {
+    return &lt;div style={{ border: "1px solid #ccc", padding: "1rem" }}&gt;{children}&lt;/div&gt;;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Team Directory</strong> app. Define an array of 5 team members with name, role, and avatar URL. Map over the array to render a <code>&lt;TeamMemberCard /&gt;</code> component for each person. The card component must accept all fields as props.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 3-->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — State &amp; Event Handling</h2>
+                <p>Make components interactive using <code>useState</code> and respond to user events.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Making components interactive using <code>useState</code> and responding to user events.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>The <code>useState</code> Hook</strong> — <code>useState</code> adds reactive data to a component. When state changes, React automatically re-renders the component with the new value — you never touch the DOM directly.</li>
+                    <li><strong>Handling Events (<code>onClick</code>, <code>onChange</code>)</strong> — React handles events using camelCase props like <code>onClick</code> and <code>onChange</code>. You pass a function reference — not a function call — to the event prop.</li>
+                    <li><strong>Conditional Rendering</strong> — React uses plain JavaScript for conditional UI: the ternary operator <code>? :</code> for inline choices, or the <code>&amp;&amp;</code> short-circuit operator to render something only when a condition is true.</li>
+                    <li><strong>Updating State Based on Previous State</strong> — When new state depends on old state, always use the functional update form of <code>setState</code>. This ensures you always get the latest value and avoids subtle bugs in rapid updates.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> State is what makes React applications interactive. Understanding the functional update form and the distinction between props (external data) and state (internal data) is essential before moving to more complex hooks.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import { useState } from 'react';
+
+function Counter() {
+    const [count, setCount] = useState(0);
+    // Always use functional update when new state depends on old state
+    const increment = () =&gt; setCount((prev) =&gt; prev + 1);
+    return &lt;button onClick={increment}&gt;Count: {count}&lt;/button&gt;;
+}
+
+function AuthStatus({ isLoggedIn }) {
+    return (
+        &lt;div&gt;
+            {isLoggedIn ? &lt;p&gt;Welcome back!&lt;/p&gt; : &lt;p&gt;Please log in.&lt;/p&gt;}
+            {isLoggedIn &amp;&amp; &lt;button&gt;Log Out&lt;/button&gt;}
+        &lt;/div&gt;
+    );
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Simple Quiz App</strong> with 3 multiple-choice questions. Track the current question index and score using <code>useState</code>. Show the score on a results screen after the final question. Implement a "Restart" button.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 4-->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Forms, Controlled Components &amp; Lifting State</h2>
+                <p>Build forms the React way and share state between sibling components.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Building forms the React way and sharing state between sibling components.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Controlled Components &amp; Forms</strong> — In React, form inputs are "controlled" by tying their value to a state variable. React is always the single source of truth for the form's data, making validation and submission straightforward.</li>
+                    <li><strong>Handling Form Submission</strong> — Attach an <code>onSubmit</code> handler to <code>&lt;form&gt;</code> and call <code>e.preventDefault()</code> to stop the default page-reload behavior. Then you have full control over what happens with the form data.</li>
+                    <li><strong>Lifting State Up</strong> — When two sibling components need to share data, move that state up to their nearest common parent. The parent holds the state and passes it down via props — a core React data-flow pattern.</li>
+                    <li><strong>Multi-field Form with a Single State Object</strong> — Use a single state object for all form fields instead of separate <code>useState</code> calls. Use the spread operator to merge updates without overwriting other fields.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Forms are in almost every real application — login, signup, checkout, settings. Controlled components and lifting state are the patterns that make React data flow predictable and debuggable.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import { useState } from 'react';
+
+// Multi-field form with single state object
+function SignupForm() {
+    const [form, setForm] = useState({ username: "", password: "" });
+    const handleChange = (e) =&gt; setForm({ ...form, [e.target.name]: e.target.value });
+    const handleSubmit = (e) =&gt; { e.preventDefault(); console.log(form); };
+    return (
+        &lt;form onSubmit={handleSubmit}&gt;
+            &lt;input name="username" value={form.username} onChange={handleChange} /&gt;
+            &lt;input name="password" type="password" value={form.password} onChange={handleChange} /&gt;
+            &lt;button type="submit"&gt;Sign Up&lt;/button&gt;
+        &lt;/form&gt;
+    );
+}
+
+// Lifting state up
+function Parent() {
+    const [text, setText] = useState("");
+    return (
+        &lt;&gt;
+            &lt;InputChild onType={setText} /&gt;
+            &lt;DisplayChild text={text} /&gt;
+        &lt;/&gt;
+    );
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Budget Tracker</strong> app. Create a form with "description" and "amount" fields. On submission, add the item to a rendered list below. Show the total sum. Implement a "Delete" button on each item.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 5–8:</strong> Hooks, side effects, data fetching, and client-side routing.</p>
+        </div>
+
+        <!-- WEEK 5-->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — The <code>useEffect</code> Hook &amp; Side Effects</h2>
+                <p>Run code in response to component lifecycle events like mounting and state changes.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Running code in response to component lifecycle events like mounting and state changes.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What is a Side Effect?</strong> — A side effect is anything that reaches outside the React component — fetching data, updating the document title, setting up timers, or subscribing to events. <code>useEffect</code> is the designated place for all side effects.</li>
+                    <li><strong>The Dependency Array</strong> — The second argument to <code>useEffect</code> controls when the effect re-runs. Empty array <code>[]</code> means run once on mount; a list means re-run when any listed value changes; no array means run after every render.</li>
+                    <li><strong>Cleanup Functions in <code>useEffect</code></strong> — When your effect sets up something persistent like an event listener or interval, return a cleanup function from <code>useEffect</code>. React calls this when the component unmounts or before the effect runs again.</li>
+                    <li><strong>Fetching Data with <code>useEffect</code></strong> — The most common use of <code>useEffect</code> is fetching data from an API when a component first loads. Always handle loading and error states for a good user experience.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Nearly every real React app fetches data. Understanding the dependency array and cleanup functions prevents two of the most common React bugs: infinite re-render loops and memory leaks from uncleared timers and event listeners.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import { useEffect, useState } from 'react';
+
+function Timer() {
+    const [seconds, setSeconds] = useState(0);
+    useEffect(() =&gt; {
+        const interval = setInterval(() =&gt; setSeconds((s) =&gt; s + 1), 1000);
+        return () =&gt; clearInterval(interval); // Cleanup prevents memory leaks
+    }, []); // [] = run once on mount only
+    return &lt;p&gt;Elapsed: {seconds}s&lt;/p&gt;;
+}
+
+function UserFetcher() {
+    const [user, setUser] = useState(null);
+    useEffect(() =&gt; {
+        fetch("https://jsonplaceholder.typicode.com/users/1")
+            .then((res) =&gt; res.json())
+            .then((data) =&gt; setUser(data));
+    }, []);
+    return &lt;div&gt;{user ? &lt;p&gt;{user.name}&lt;/p&gt; : &lt;p&gt;Loading...&lt;/p&gt;}&lt;/div&gt;;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>GitHub User Profile Viewer</strong>. Create an input where users type a GitHub username. On submission, fetch <code>https://api.github.com/users/{username}</code> and display the user's avatar, name, bio, and follower count. Show a loading spinner and an error message for invalid usernames.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 6-->
+
+            <div class="rm-card-header">
+                <h2>Week 6 — Advanced Hooks: <code>useRef</code>, <code>useCallback</code>, <code>useMemo</code></h2>
+                <p>Optimize performance and access DOM nodes directly without triggering re-renders.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Performance optimization and accessing DOM nodes directly without triggering re-renders.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>useRef</code> — Persistent Values &amp; DOM Access</strong> — <code>useRef</code> returns a mutable object whose <code>.current</code> property persists across re-renders without causing a re-render when changed. Most commonly used to get a direct reference to a DOM element.</li>
+                    <li><strong><code>useMemo</code> — Memoizing Expensive Calculations</strong> — <code>useMemo</code> caches the result of an expensive computation and only recalculates it when its dependencies change. Use it when a calculation is slow and does not need to run on every render.</li>
+                    <li><strong><code>useCallback</code> — Memoizing Functions</strong> — <code>useCallback</code> returns a memoized version of a callback function that only changes if its dependencies change. It prevents child components from re-rendering unnecessarily when a parent re-renders.</li>
+                    <li><strong><code>useRef</code> for Tracking Previous Values</strong> — Beyond DOM access, <code>useRef</code> can store any value you want to persist between renders. A common pattern is using it to track the previous value of a prop or state variable.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>useMemo</code> and <code>useCallback</code> are the most misunderstood hooks — beginners either never use them or use them everywhere unnecessarily. Knowing when each hook is actually needed is a mark of a senior React developer.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import { useRef, useMemo, useCallback, useState } from 'react';
+
+function FocusInput() {
+    const inputRef = useRef(null);
+    return (
+        &lt;&gt;
+            &lt;input ref={inputRef} placeholder="Click button to focus" /&gt;
+            &lt;button onClick={() =&gt; inputRef.current.focus()}&gt;Focus&lt;/button&gt;
+        &lt;/&gt;
+    );
+}
+
+function ExpensiveList({ items }) {
+    const filtered = useMemo(
+        () =&gt; items.filter((item) =&gt; item.active),
+        [items]
+    );
+    return &lt;ul&gt;{filtered.map((i) =&gt; &lt;li key={i.id}&gt;{i.name}&lt;/li&gt;)}&lt;/ul&gt;;
+}
+
+function Parent() {
+    const [count, setCount] = useState(0);
+    const handleClick = useCallback(() =&gt; setCount((c) =&gt; c + 1), []);
+    return &lt;ChildButton onClick={handleClick} /&gt;;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Search-and-Filter Table</strong> with 20+ rows of mock data (name, age, city). Use <code>useMemo</code> to memoize the filtered results based on a search input. Ensure the filter only recomputes when the search term or data changes.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 7 -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Custom Hooks &amp; Context API</h2>
+                <p>Extract reusable logic into custom hooks and share global state without prop drilling.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Extracting reusable logic into custom hooks and sharing global state without prop drilling.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Building Custom Hooks</strong> — A custom hook is a JavaScript function whose name starts with <code>use</code> that calls other hooks internally. They let you extract and reuse stateful logic across multiple components, eliminating code duplication.</li>
+                    <li><strong>The Context API — <code>createContext</code> &amp; <code>useContext</code></strong> — The Context API solves prop drilling — passing props through many layers of components. You create a Context, wrap your tree in a Provider, and any descendant can read the value directly.</li>
+                    <li><strong>Creating a Context Provider Component</strong> — The standard pattern wraps <code>createContext</code> and a Provider component in a single file, keeping all context logic in one place and making the component tree clean and readable.</li>
+                    <li><strong><code>useLocalStorage</code> Custom Hook Pattern</strong> — A <code>useLocalStorage</code> custom hook syncs state with the browser's Local Storage automatically — a great example of combining standard hooks with browser APIs into a clean, reusable abstraction.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Custom hooks are the most important tool for code reuse in React. Context is the built-in solution for shared state. Together they eliminate prop drilling and duplicated logic from any size application.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import { useState, useEffect, createContext, useContext } from 'react';
+
+// Custom useFetch hook
+function useFetch(url) {
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    useEffect(() =&gt; {
+        fetch(url).then((r) =&gt; r.json()).then((d) =&gt; { setData(d); setLoading(false); });
+    }, [url]);
+    return { data, loading };
+}
+
+// Auth context pattern
+const AuthContext = createContext(null);
+export function AuthProvider({ children }) {
+    const [user, setUser] = useState(null);
+    return &lt;AuthContext.Provider value={{ user, setUser }}&gt;{children}&lt;/AuthContext.Provider&gt;;
+}
+export const useAuth = () =&gt; useContext(AuthContext);
+
+// useLocalStorage custom hook
+function useLocalStorage(key, initial) {
+    const [value, setValue] = useState(() =&gt; {
+        const stored = localStorage.getItem(key);
+        return stored ? JSON.parse(stored) : initial;
+    });
+    const set = (v) =&gt; { setValue(v); localStorage.setItem(key, JSON.stringify(v)); };
+    return [value, set];
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Theme Switcher</strong> app. Implement a <code>ThemeContext</code> with light and dark modes. Create a <code>useTheme</code> custom hook. Apply the theme across multiple nested components (Navbar, Sidebar, Content). Persist the theme choice using <code>useLocalStorage</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — React Router &amp; Client-Side Navigation</h2>
+                <p>Build multi-page single-page applications with React Router v6.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Building multi-page single-page applications with React Router v6.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Setting Up React Router v6</strong> — React Router v6 is the standard library for client-side navigation. You wrap your app in <code>&lt;BrowserRouter&gt;</code>, define routes with <code>&lt;Routes&gt;</code> and <code>&lt;Route&gt;</code>, and React renders the matching component without reloading.</li>
+                    <li><strong><code>&lt;Link&gt;</code> &amp; <code>&lt;NavLink&gt;</code> for Navigation</strong> — Never use <code>&lt;a href&gt;</code> for internal navigation — it causes a full page reload. Use React Router's <code>&lt;Link&gt;</code> instead. <code>&lt;NavLink&gt;</code> automatically adds an active class to the currently active link.</li>
+                    <li><strong>URL Parameters with <code>useParams</code></strong> — React Router lets you define dynamic URL segments using a colon (<code>:paramName</code>). The <code>useParams</code> hook reads those segments in the rendered component, perfect for detail pages.</li>
+                    <li><strong>Programmatic Navigation with <code>useNavigate</code></strong> — The <code>useNavigate</code> hook gives you a function to navigate programmatically — for example, redirecting a user to a dashboard after a successful login.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Almost every real React application has multiple pages. React Router is the universal standard for this, and URL parameters are used in virtually every app that displays individual items or user profiles.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import { BrowserRouter, Routes, Route, Link, NavLink, useParams, useNavigate } from 'react-router-dom';
+
+function App() {
+    return (
+        &lt;BrowserRouter&gt;
+            &lt;Routes&gt;
+                &lt;Route path="/" element={&lt;Home /&gt;} /&gt;
+                &lt;Route path="/user/:id" element={&lt;UserProfile /&gt;} /&gt;
+            &lt;/Routes&gt;
+        &lt;/BrowserRouter&gt;
+    );
+}
+
+function UserProfile() {
+    const { id } = useParams();
+    return &lt;h1&gt;Viewing profile for user #{id}&lt;/h1&gt;;
+}
+
+function LoginButton() {
+    const navigate = useNavigate();
+    return &lt;button onClick={() =&gt; navigate("/dashboard")}&gt;Log In&lt;/button&gt;;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Blog App</strong> with 4 routes: <code>/</code> (list of all posts), <code>/post/:id</code> (single post detail), <code>/about</code>, and a <code>/404</code> catch-all not-found page. Fetch post data from the JSONPlaceholder API. Add a Navbar with <code>&lt;NavLink&gt;</code> highlighting.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 9–12:</strong> Redux, performance optimization, testing, and TypeScript with React.</p>
+        </div>
+
+        <!--  WEEK 9  -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Global State Management with Redux Toolkit</h2>
+                <p>Manage complex, application-wide state with Redux Toolkit — the modern standard.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Managing complex, application-wide state with Redux Toolkit (RTK), the modern standard.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>The Redux Data Flow (Store, Slice, Dispatch)</strong> — Redux enforces strict unidirectional data flow: the store holds all global state, actions describe what happened, reducers specify how state changes, and dispatch sends actions to the store.</li>
+                    <li><strong>Creating a Slice with <code>createSlice</code></strong> — <code>createSlice</code> automatically generates action creators and action types from your reducer functions, eliminating massive amounts of boilerplate code.</li>
+                    <li><strong>Reading State with <code>useSelector</code></strong> — <code>useSelector</code> is the React-Redux hook for reading data from the store. It subscribes to the store and automatically re-renders the component when the selected state changes.</li>
+                    <li><strong>Async Actions with <code>createAsyncThunk</code></strong> — <code>createAsyncThunk</code> handles async operations like API calls in Redux, automatically dispatching <code>pending</code>, <code>fulfilled</code>, and <code>rejected</code> action types for loading/success/error states.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Once an app has more than a few pieces of shared state, Context alone becomes unwieldy. Redux Toolkit is the industry standard for predictable global state and is used in most large-scale React applications.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import { configureStore, createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { useSelector, useDispatch } from 'react-redux';
+
+const counterSlice = createSlice({
+    name: 'counter',
+    initialState: { value: 0 },
+    reducers: {
+        increment: (state) =&gt; { state.value += 1; },
+        decrement: (state) =&gt; { state.value -= 1; },
+    },
+});
+export const { increment, decrement } = counterSlice.actions;
+
+export const store = configureStore({
+    reducer: { counter: counterSlice.reducer },
+});
+
+function CounterDisplay() {
+    const count = useSelector((state) =&gt; state.counter.value);
+    const dispatch = useDispatch();
+    return &lt;button onClick={() =&gt; dispatch(increment())}&gt;Count: {count}&lt;/button&gt;;
+}
+
+export const fetchUser = createAsyncThunk("user/fetch", async (id) =&gt; {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+    return res.json();
+});</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Shopping Cart</strong> using Redux Toolkit. Implement a product listing page and a cart. Slices needed: <code>productsSlice</code> (fetch from API) and <code>cartSlice</code> (add, remove, update quantity). Display item count in the Navbar and a cart total on the cart page.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 10-->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Performance Optimization &amp; Code Splitting</h2>
+                <p>Make React apps fast at scale with memoization, lazy loading, and profiling.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Making React apps fast at scale with memoization, lazy loading, and profiling.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>React.memo</code> — Preventing Unnecessary Re-renders</strong> — <code>React.memo</code> wraps a component and prevents it from re-rendering if its props have not changed. A simple win for components rendered many times in a list.</li>
+                    <li><strong>Lazy Loading with <code>React.lazy</code> &amp; <code>Suspense</code></strong> — <code>React.lazy</code> and <code>Suspense</code> split your app into separate chunks that load on demand. Each page only loads when the user navigates to it, drastically improving initial load time.</li>
+                    <li><strong>Code Splitting by Route</strong> — The most impactful place to apply lazy loading is on route components. Wrapping each page in <code>React.lazy</code> ensures users only download the JavaScript for the page they are currently visiting.</li>
+                    <li><strong>Using the React DevTools Profiler</strong> — The React DevTools Profiler records your app's render activity, showing which components re-render, how long they take, and why — the essential tool for finding performance bottlenecks.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A slow React app is a bad user experience. Route-based code splitting alone can cut initial JavaScript bundle size by 50-80% for large applications. Profiling before optimizing prevents wasted effort.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import { memo, lazy, Suspense, Profiler } from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+const LeaderboardItem = memo(function LeaderboardItem({ name, score }) {
+    return &lt;li&gt;{name}: {score} pts&lt;/li&gt;;
+});
+
+const Home      = lazy(() =&gt; import('./pages/Home'));
+const Dashboard = lazy(() =&gt; import('./pages/Dashboard'));
+
+function App() {
+    return (
+        &lt;Suspense fallback={&lt;div&gt;Loading page...&lt;/div&gt;}&gt;
+            &lt;Routes&gt;
+                &lt;Route path="/" element={&lt;Home /&gt;} /&gt;
+                &lt;Route path="/dash" element={&lt;Dashboard /&gt;} /&gt;
+            &lt;/Routes&gt;
+        &lt;/Suspense&gt;
+    );
+}
+
+function onRender(id, phase, actualDuration) {
+    console.log(`${id} took ${actualDuration.toFixed(2)}ms (${phase})`);
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Audit and optimize Week 8's Blog App. Apply <code>React.lazy</code> to all page components. Wrap the post list item with <code>React.memo</code>. Use the React DevTools Profiler to measure before and after render times. Document your findings in a <code>PERFORMANCE.md</code> file.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 11-->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Testing React with Vitest &amp; React Testing Library</h2>
+                <p>Write unit and integration tests for React components with industry-standard tools.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing unit and integration tests for React components with industry-standard tools.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Testing Philosophy: RTL Queries</strong> — React Testing Library encourages testing components the way a user would interact with them — by querying elements through accessible roles and text, not by implementation details like class names or state variables.</li>
+                    <li><strong>Simulating User Interactions with <code>userEvent</code></strong> — <code>@testing-library/user-event</code> simulates real browser interactions like typing and clicking. This is more accurate than <code>fireEvent</code> because it mirrors actual user behavior.</li>
+                    <li><strong>Testing Async Components (API Calls)</strong> — When testing components that fetch data, mock the API call and wait for the async result with RTL's <code>findBy</code> queries, which automatically wait for elements to appear.</li>
+                    <li><strong>Testing Custom Hooks with <code>renderHook</code></strong> — RTL's <code>renderHook</code> utility lets you test custom hooks in isolation without embedding them in a real component — perfect for testing <code>useFetch</code>, <code>useLocalStorage</code>, and other reusable hooks.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Tests prevent regressions — breaking something that used to work. React Testing Library's "test from the user's perspective" philosophy produces tests that give you confidence your app actually works, not just that your implementation details haven't changed.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { renderHook, act } from '@testing-library/react';
+
+test('renders the welcome message', () =&gt; {
+    render(&lt;WelcomeMessage name="Alice" /&gt;);
+    expect(screen.getByText("Hello, Alice!")).toBeInTheDocument();
+});
+
+test('increments count on button click', async () =&gt; {
+    render(&lt;Counter /&gt;);
+    const button = screen.getByRole('button', { name: /increment/i });
+    await userEvent.click(button);
+    expect(screen.getByText("Count: 1")).toBeInTheDocument();
+});
+
+test('useCounter increments correctly', () =&gt; {
+    const { result } = renderHook(() =&gt; useCounter());
+    expect(result.current.count).toBe(0);
+    act(() =&gt; result.current.increment());
+    expect(result.current.count).toBe(1);
+});</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a full test suite for Week 9's Shopping Cart app covering: rendering the product list, adding an item to the cart (interaction test), verifying the cart total updates correctly, and a mocked API fetch test for loading products. Aim for 80%+ coverage.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 12-->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — TypeScript with React</h2>
+                <p>Add static types to React components, props, and hooks for safer, more maintainable code.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Adding static types to React components, props, and hooks for safer, more maintainable code.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Typing Component Props with Interfaces</strong> — TypeScript interfaces define the shape of your component's props, providing autocomplete and compile-time errors when you pass the wrong data type — eliminating an entire class of runtime bugs.</li>
+                    <li><strong>Typing <code>useState</code> &amp; <code>useRef</code></strong> — TypeScript can often infer types from initial values, but for complex types like objects or null-initialized values, provide the generic type parameter explicitly to avoid the type becoming too broad.</li>
+                    <li><strong>Typing Event Handlers</strong> — React's event system has specific TypeScript types for each kind of event. Using the correct event type like <code>React.ChangeEvent&lt;HTMLInputElement&gt;</code> gives full type safety and autocomplete on the event object.</li>
+                    <li><strong>Generic Components</strong> — TypeScript generics let you create components that work with any data type while remaining fully type-safe. The pattern for building reusable list, table, and select components in typed React apps.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> TypeScript has become the standard for large React codebases. Typed props, typed event handlers, and generic components catch bugs at compile time that would only surface as runtime errors in production.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>interface UserCardProps {
+    name: string;
+    age: number;
+    isAdmin?: boolean;
+}
+
+function UserCard({ name, age, isAdmin = false }: UserCardProps) {
+    return &lt;p&gt;{name} ({age}){isAdmin &amp;&amp; " — Admin"}&lt;/p&gt;;
+}
+
+import { useState, useRef } from 'react';
+interface User { id: number; name: string; }
+function UserManager() {
+    const [user, setUser] = useState&lt;User | null&gt;(null);
+    const inputRef = useRef&lt;HTMLInputElement&gt;(null);
+    return &lt;input ref={inputRef} /&gt;;
+}
+
+const handleChange = (e: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt; {
+    setQuery(e.target.value);
+};
+
+interface ListProps&lt;T&gt; {
+    items: T[];
+    renderItem: (item: T) =&gt; React.ReactNode;
+}
+function List&lt;T&gt;({ items, renderItem }: ListProps&lt;T&gt;) {
+    return &lt;ul&gt;{items.map((item, i) =&gt; &lt;li key={i}&gt;{renderItem(item)}&lt;/li&gt;)}&lt;/ul&gt;;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Migrate Week 7's Theme Switcher app to TypeScript. Type all component props, context values, and custom hook return types. Add a <code>User</code> interface used in the Auth context. Resolve all TypeScript errors — the goal is zero <code>any</code> types.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 13–16:</strong> Advanced patterns, Next.js full-stack, architecture, CI/CD, and three complete projects.</p>
+        </div>
+
+        <!--WEEK 13 -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Advanced Patterns: Compound Components, Render Props &amp; HOCs</h2>
+                <p>Master advanced React design patterns used in production-level component libraries.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering advanced React design patterns used in production-level component libraries.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Compound Component Pattern</strong> — Lets you build flexible, expressive components that share implicit state internally while giving the consumer full control over layout. Libraries like Radix UI and Reach UI are built on this pattern.</li>
+                    <li><strong>Render Props Pattern</strong> — Passing a function as a prop that a component calls to determine what to render. This was the primary way to share stateful logic before hooks and is still used in libraries like Formik and React Final Form.</li>
+                    <li><strong>Higher-Order Components (HOCs)</strong> — A function that takes a component and returns a new, enhanced component. HOCs add cross-cutting concerns like auth checks, logging, or analytics without modifying the original component.</li>
+                    <li><strong>The <code>useReducer</code> Hook for Complex State</strong> — The built-in React alternative to <code>useState</code> for complex state logic. It works like Redux — you dispatch actions and a pure reducer computes the next state — making state transitions predictable and testable.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> These patterns appear throughout major React component libraries. Understanding Compound Components is essential for using (and building) headless UI libraries like Radix UI. <code>useReducer</code> is the go-to for state machines and complex form logic.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// Compound Component Pattern
+const AccordionContext = React.createContext();
+function Accordion({ children }) {
+    const [open, setOpen] = React.useState(null);
+    return &lt;AccordionContext.Provider value={{ open, setOpen }}&gt;{children}&lt;/AccordionContext.Provider&gt;;
+}
+Accordion.Item = function Item({ id, title, children }) {
+    const { open, setOpen } = React.useContext(AccordionContext);
+    return &lt;div&gt;&lt;button onClick={() =&gt; setOpen(id)}&gt;{title}&lt;/button&gt;{open === id &amp;&amp; children}&lt;/div&gt;;
+};
+
+// useReducer for complex state
+function reducer(state, action) {
+    switch (action.type) {
+        case "increment": return { count: state.count + 1 };
+        case "reset":     return { count: 0 };
+        default: throw new Error("Unknown action");
+    }
+}
+function Counter() {
+    const [state, dispatch] = React.useReducer(reducer, { count: 0 });
+    return &lt;button onClick={() =&gt; dispatch({ type: "increment" })}&gt;Count: {state.count}&lt;/button&gt;;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a reusable <code>&lt;Tabs /&gt;</code> component using the Compound Component pattern. The API should be: <code>&lt;Tabs&gt;&lt;Tabs.List&gt;&lt;Tabs.Tab id="a"&gt;Tab A&lt;/Tabs.Tab&gt;&lt;/Tabs.List&gt;&lt;Tabs.Panel id="a"&gt;Content A&lt;/Tabs.Panel&gt;&lt;/Tabs&gt;</code>. The active tab state should live in the parent Tabs component and be shared via context.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 14-->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Full-Stack Integration: Next.js, APIs &amp; Authentication</h2>
+                <p>Move beyond client-only React into full-stack development with Next.js App Router.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Moving beyond client-only React into full-stack development with Next.js App Router.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Next.js App Router &amp; Server Components</strong> — Next.js 14+ introduces React Server Components (RSCs) — components that run only on the server and can directly access databases and APIs without any client-side JavaScript.</li>
+                    <li><strong>Client vs Server Components</strong> — All components are Server Components by default in the App Router. You opt into client-side rendering with the <code>"use client"</code> directive — and only when you need interactivity, browser APIs, or React hooks.</li>
+                    <li><strong>API Routes in Next.js</strong> — Next.js lets you build backend API endpoints inside the same project using Route Handlers, eliminating the need for a separate Express server for many use cases.</li>
+                    <li><strong>Authentication with NextAuth.js</strong> — NextAuth.js (Auth.js v5) provides drop-in authentication for Next.js apps, supporting OAuth providers (GitHub, Google), email/password, and database sessions.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> React Server Components fundamentally change what is possible in React. Data fetching becomes as simple as <code>async/await</code> with zero client-side JavaScript, making apps faster and simpler than anything previously possible.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// app/users/page.tsx — Server Component (runs on server only)
+async function UsersPage() {
+    const users = await fetch("https://jsonplaceholder.typicode.com/users").then(r =&gt; r.json());
+    return &lt;ul&gt;{users.map((u) =&gt; &lt;li key={u.id}&gt;{u.name}&lt;/li&gt;)}&lt;/ul&gt;;
+}
+
+// Client Component — opt in with "use client"
+"use client";
+import { useState } from 'react';
+function LikeButton({ initialCount }) {
+    const [likes, setLikes] = useState(initialCount);
+    return &lt;button onClick={() =&gt; setLikes(l =&gt; l + 1)}&gt;❤️ {likes}&lt;/button&gt;;
+}
+
+// app/api/users/route.ts — API Route Handler
+import { NextResponse } from 'next/server';
+export async function GET() {
+    const users = [{ id: 1, name: "Alice" }, { id: 2, name: "Bob" }];
+    return NextResponse.json(users);
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Full-Stack Notes App</strong> with Next.js. Implement GitHub OAuth login with NextAuth. Create API routes for CRUD operations on notes. Protect note routes so only logged-in users can access them. Deploy to Vercel.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 15-->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Real-World Architecture, Monorepos &amp; CI/CD</h2>
+                <p>Structure large React codebases, manage complexity, and automate deployments.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Structuring large React codebases, managing complexity, and automating deployments.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Feature-Based Folder Structure</strong> — Organizing files by type (<code>/components</code>, <code>/hooks</code>) breaks down as apps grow. The industry standard for large apps is organizing by feature/domain, keeping all related files co-located and reducing cross-feature coupling.</li>
+                    <li><strong>Absolute Imports &amp; Path Aliases</strong> — Configuring path aliases turns unreadable relative imports into clean, absolute ones like <code>'@/components/Button'</code>. Configured in <code>tsconfig.json</code> and <code>vite.config.ts</code>.</li>
+                    <li><strong>Environment Variables &amp; <code>.env</code> Files</strong> — React apps need API keys and configuration that differs between development and production. Vite exposes env variables prefixed with <code>VITE_</code> to your client-side code via <code>import.meta.env</code>.</li>
+                    <li><strong>GitHub Actions CI/CD Pipeline</strong> — A CI/CD pipeline automatically runs tests and deploys your app on every push. This GitHub Actions workflow runs tests on pull requests and deploys on every push to main.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A well-structured codebase scales. A poorly structured one becomes unmaintainable. CI/CD pipelines catch broken builds before they reach users. These practices separate hobby projects from production-grade software.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// Feature-based structure
+// src/
+// ├── features/
+// │   ├── auth/
+// │   │   ├── AuthContext.tsx
+// │   │   ├── LoginForm.tsx
+// │   │   ├── useAuth.ts
+// │   │   └── auth.test.tsx
+// │   └── cart/
+// │       ├── CartSlice.ts
+// │       └── CartPage.tsx
+// └── shared/
+//     └── Button.tsx
+
+// tsconfig.json path aliases
+// "paths": { "@/*": ["./src/*"] }
+
+// Access env vars in React code
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
+
+// .github/workflows/ci.yml
+// on: [push, pull_request]
+// jobs:
+//   test:
+//     runs-on: ubuntu-latest
+//     steps:
+//       - uses: actions/checkout@v3
+//       - run: npm ci
+//       - run: npm test
+//       - run: npm run build</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Refactor Week 9's Shopping Cart app into a feature-based folder structure. Set up path aliases. Add a GitHub Actions workflow that runs <code>npm test</code> and <code>npm run build</code> on every pull request. Configure separate <code>.env.development</code> and <code>.env.production</code> files.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 16-->
+
+        <div class="rm-card" id="week16">
+            <div class="rm-card-header">
+                <h2>Week 16 — Capstone Mini Projects (Beginner → Master)</h2>
+                <p>Apply everything learned across the entire curriculum in three complete, real-world projects.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Applying everything learned across the entire 16-week curriculum in three complete, real-world portfolio projects.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — Markdown Note-Taking App (Beginner–Intermediate)</h3>
+                <p>A note-taking application where users write Markdown and see a live preview side-by-side. Covers <code>useState</code>, controlled components, a Markdown parsing library, and <code>useLocalStorage</code> persistence.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>React Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Create, edit, delete notes</td>
+                            <td>State management with <code>useState</code></td>
+                        </tr>
+                        <tr>
+                            <td>Local Storage persistence</td>
+                            <td><code>useLocalStorage</code> custom hook</td>
+                        </tr>
+                        <tr>
+                            <td>Live Markdown-to-HTML preview</td>
+                            <td><code>react-markdown</code> library integration</td>
+                        </tr>
+                        <tr>
+                            <td>Search/filter notes by title</td>
+                            <td><code>useMemo</code> for memoized filtering</td>
+                        </tr>
+                        <tr>
+                            <td>Sidebar navigation between notes</td>
+                            <td>Lifting state + component composition</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A fully functional Markdown note-taking app with CRUD operations, live preview, search functionality, and Local Storage persistence. Deploy to Vercel or Netlify with a clean README.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — Real-Time Dashboard (Intermediate–Advanced)</h3>
+                <p>A live data dashboard that polls an API every 5 seconds and visualizes data with charts. Covers <code>useEffect</code>, <code>useCallback</code>, <code>useMemo</code>, Redux Toolkit for caching, <code>recharts</code> for visualization, and performance optimization.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>React Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Live-updating line chart</td>
+                            <td><code>useEffect</code> with polling + <code>recharts</code></td>
+                        </tr>
+                        <tr>
+                            <td>Date range filter</td>
+                            <td><code>useMemo</code> for memoized data slicing</td>
+                        </tr>
+                        <tr>
+                            <td>API data caching</td>
+                            <td>Redux Toolkit RTK Query</td>
+                        </tr>
+                        <tr>
+                            <td>Skeleton loading states</td>
+                            <td>Conditional rendering during fetches</td>
+                        </tr>
+                        <tr>
+                            <td>Performance optimization</td>
+                            <td><code>React.memo</code> + <code>useCallback</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A real-time data dashboard with live-updating charts, date range filtering, memoized calculations, RTK Query-based caching, and skeleton loading states. Deploy live with a performance audit documented.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Full-Stack E-Commerce Platform (Advanced–Master)</h3>
+                <p>A production-ready e-commerce SPA with Next.js App Router, covering the complete full-stack React experience from UI to database to deployment.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>React/Next.js Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Product catalog</td>
+                            <td>Server-side data fetching with React Server Components</td>
+                        </tr>
+                        <tr>
+                            <td>Shopping cart</td>
+                            <td>Client component with Zustand or Redux</td>
+                        </tr>
+                        <tr>
+                            <td>Checkout form with validation</td>
+                            <td>React Hook Form + Zod</td>
+                        </tr>
+                        <tr>
+                            <td>GitHub/Google OAuth login</td>
+                            <td>NextAuth.js authentication</td>
+                        </tr>
+                        <tr>
+                            <td>Order history page</td>
+                            <td>Protected routes + Prisma/SQLite database</td>
+                        </tr>
+                        <tr>
+                            <td>Production deployment</td>
+                            <td>Vercel with environment variables + CI/CD</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A complete, production-deployed e-commerce platform with OAuth authentication, server-side data fetching, a shopping cart, checkout with validation, order history, and a CI/CD pipeline. This is the capstone that demonstrates mastery of the entire React curriculum.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–4</td>
+                        <td>Absolute Basics</td>
+                        <td>Build interactive UIs using JSX, props, state, events, forms, and component composition</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>5–8</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Fetch API data with useEffect, optimize with advanced hooks, build custom hooks, and navigate with React Router</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>9–12</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Manage global state with Redux Toolkit, optimize performance, write component tests, and add TypeScript</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>13–16</td>
+                        <td>Master Level Concepts</td>
+                        <td>Apply advanced patterns, build full-stack Next.js apps, implement CI/CD, and complete three portfolio projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Vite (vitejs.dev)</td>
+                        <td>Project scaffolding and development server</td>
+                    </tr>
+                    <tr>
+                        <td>React DevTools</td>
+                        <td>Component inspection and performance profiling</td>
+                    </tr>
+                    <tr>
+                        <td>Redux DevTools</td>
+                        <td>Global state debugging and time-travel</td>
+                    </tr>
+                    <tr>
+                        <td>React Router v6 Docs</td>
+                        <td>Routing reference and API documentation</td>
+                    </tr>
+                    <tr>
+                        <td>Redux Toolkit Docs</td>
+                        <td>State management reference</td>
+                    </tr>
+                    <tr>
+                        <td>Next.js Docs (nextjs.org/docs)</td>
+                        <td>Full-stack React with App Router</td>
+                    </tr>
+                    <tr>
+                        <td>Testing Library (testing-library.com)</td>
+                        <td>Component and hook testing</td>
+                    </tr>
+                    <tr>
+                        <td>TypeScript Handbook</td>
+                        <td>Type system reference for React + TS</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Complete each week's task before moving on — building projects reinforces concepts far better than reading alone.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — your commit history is visible proof of consistent progress.</li>
+                    <li>Test your components in the <strong>React DevTools</strong> from Week 1 onward — get comfortable with the tool before you need it for debugging.</li>
+                    <li>By Week 16, you should have three complete, deployed projects and the confidence to build any React application from scratch.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+                <div class="logo1">
+                    <h3>CodePath</h3>
+                    <p>Learn. Practice. Master</p>
+                </div>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroPython: Beginner to Master — 12 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>MicroPython: Beginner to Master</h1>
+        <p>Complete 12-Week Curriculum — From Firmware Flashing to Concurrent IoT Dashboards &amp; MQTT Systems</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>12-week, project-driven MicroPython curriculum</strong> designed to take a complete beginner to a professional-level embedded IoT developer. The roadmap moves from <strong>firmware flashing, the REPL, primitive types, and GPIO basics</strong> through <strong>control flow, functions, PWM, OOP, and I2C/SPI sensor communication</strong>, into <strong>inheritance, error handling, file storage, Wi-Fi, and MQTT networking</strong>, all the way to <strong>async concurrency with uasyncio, generators, decorators, and three complete capstone IoT projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics and hardware fundamentals, <strong>Phase 2</strong> covers control flow, functions, and sensor protocols, <strong>Phase 3</strong> covers intermediate and advanced core topics including OOP and networking, and <strong>Phase 4</strong> covers master-level concurrency, functional patterns, and full IoT system projects.</p>
+            <p>By Week 12, you will have built three complete, hardware-running IoT applications and be confident designing production-grade MicroPython embedded systems from scratch.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 12 weeks &nbsp;|&nbsp; <strong>Hardware:</strong> ESP32 / Raspberry Pi Pico &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic Python syntax (no embedded experience needed)</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–3:</strong> Firmware setup, syntax, primitive types, GPIO basics, and collections.</p>
+        </div>
+
+        <!--WEEK 1-->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — MicroPython Environment, Syntax &amp; Primitive Types</h2>
+                <p>Set up your board and toolchain, and learn MicroPython's basic syntax and core data types.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Setting up your board and toolchain, and learning MicroPython's basic syntax and core data types.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Flashing Firmware &amp; the REPL</strong> — MicroPython runs as firmware flashed onto a microcontroller (like an ESP32 or Raspberry Pi Pico), turning it into a tiny Python interpreter. The REPL (Read-Eval-Print Loop) lets you type Python commands directly into the board and see results instantly — your first live hardware interaction.</li>
+                    <li><strong>Tools: Thonny / <code>mpremote</code> / <code>ampy</code></strong> — Thonny is a beginner-friendly IDE with built-in MicroPython support for uploading and running scripts. <code>mpremote</code> and <code>ampy</code> are command-line tools for copying files to a board and interacting with its REPL from a terminal.</li>
+                    <li><strong>Variables &amp; Type Inference</strong> — MicroPython is dynamically typed, meaning a variable's type is determined automatically from the value assigned to it. Unlike full Python, MicroPython is optimized to use far less memory — a critical consideration on constrained hardware with only kilobytes of RAM.</li>
+                    <li><strong>Primitive Types (<code>int</code>, <code>float</code>, <code>str</code>, <code>bool</code>)</strong> — MicroPython supports the same core primitive types as standard Python: whole numbers, decimals, text, and true/false values. These types behave almost identically to CPython, easing the transition for Python developers moving to embedded development.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The firmware + REPL setup is your entire development environment for embedded work — if this is broken, nothing else works. Understanding that MicroPython is memory-constrained from Day 1 shapes every design decision you will make for the rest of the curriculum.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># Basic variables and types on a microcontroller
+name       = "MicroPython"   # string
+pin_count  = 30              # integer
+voltage    = 3.3             # float
+is_powered = True            # boolean
+
+print(name, pin_count, voltage, is_powered)
+# MicroPython 30 3.3 True
+
+# Type checking
+print(type(voltage))         # &lt;class 'float'&gt;
+print(type(is_powered))      # &lt;class 'bool'&gt;</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Flash MicroPython firmware onto your board (ESP32 or Pico) and connect via Thonny. Use the REPL to declare variables for board name, pin count, and operating voltage. Print them in one formatted string using an f-string. Then upload a <code>main.py</code> script that runs automatically on boot and prints "Board ready!" to confirm your toolchain is working end-to-end.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 2 -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Operators, Constants &amp; GPIO Basics</h2>
+                <p>Master Python operators and take your first steps controlling real hardware via GPIO.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering Python operators and taking your first steps controlling real hardware via GPIO.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Arithmetic &amp; Comparison Operators</strong> — MicroPython supports standard operators (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>==</code>, <code>&lt;</code>, <code>&gt;</code>) identical to desktop Python. These are essential for calculations like sensor value scaling, threshold comparisons, and duty cycle computation.</li>
+                    <li><strong>The <code>machine</code> Module &amp; <code>Pin</code> Class</strong> — The <code>machine</code> module is MicroPython's gateway to hardware control, providing classes like <code>Pin</code> to configure GPIO pins as inputs or outputs. This is the foundation for everything from blinking LEDs to reading button states and controlling motors.</li>
+                    <li><strong>Digital Output — Blinking an LED</strong> — Setting a <code>Pin</code> to <code>OUT</code> mode lets you drive it <code>HIGH</code> or <code>LOW</code>, directly controlling components like LEDs. Combined with <code>time.sleep()</code>, this produces the classic "blink" pattern used to test any new board setup.</li>
+                    <li><strong>Constants &amp; Naming Conventions</strong> — While MicroPython has no true <code>const</code> keyword for general code, uppercase naming convention signals an unchanging value, and the <code>micropython.const()</code> function optimizes integer constants for memory. This is especially important for fixed pin numbers used throughout a script.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The blinking LED is the "Hello, World!" of embedded development — it proves your board, wiring, and code path all work together. The <code>machine.Pin</code> class is used in virtually every MicroPython project ever written, and understanding <code>HIGH</code>/<code>LOW</code>, input/output modes, and pull resistors is foundational to all hardware control.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>from machine import Pin
+import time
+from micropython import const
+
+LED_PIN = const(2)       # Memory-optimized constant — GPIO 2
+
+led = Pin(LED_PIN, Pin.OUT)   # Configure GPIO 2 as a digital output
+
+for _ in range(5):
+    led.value(1)          # Drive pin HIGH → LED on
+    time.sleep(0.5)
+    led.value(0)          # Drive pin LOW  → LED off
+    time.sleep(0.5)
+
+# Arithmetic for blink speed calculation
+base_delay = 1.0
+fast_delay = base_delay / 4   # 0.25 seconds — arithmetic operator in action
+print(f"Fast delay: {fast_delay}s")</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Wire an LED (or use the onboard LED) to a GPIO pin. Write a script that blinks it 5 times at normal speed, then changes the blink speed using a variable you compute with arithmetic operators (e.g., divide the delay by 2 for "fast mode"). Use <code>micropython.const()</code> for the pin number. Verify the speed change is visible on the hardware.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 3 -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Collections: Lists, Tuples &amp; Dictionaries</h2>
+                <p>Learn Python's core data structures, essential for organizing sensor readings and device configuration data.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Learning Python's core data structures, essential for organizing sensor readings and configuration data on constrained hardware.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Lists (Ordered, Mutable Collections)</strong> — A <code>list</code> stores an ordered sequence of values that can be changed, added to, or removed from after creation. Lists are commonly used to store sequences of sensor readings over time, buffering data before processing or transmitting it.</li>
+                    <li><strong>Tuples (Ordered, Immutable Collections)</strong> — A <code>tuple</code> is like a list but cannot be modified after creation, making it useful for fixed groupings like RGB color values or pin configuration pairs. Their immutability also makes them slightly more memory-efficient on constrained devices.</li>
+                    <li><strong>Dictionaries (Key-Value Pairs)</strong> — A <code>dict</code> stores data as key-value pairs, ideal for representing configuration settings or labeled sensor data. Dictionaries allow fast lookups by a meaningful name instead of a numeric index, making code far more readable.</li>
+                    <li><strong>Reading Analog Input (<code>ADC</code>)</strong> — The <code>machine.ADC</code> class reads analog voltage levels from a pin (0–65535 range on most boards), commonly used for sensors like potentiometers, light-dependent resistors, or thermistors. Readings are typically stored in a list or dictionary for later processing.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Real sensor applications always involve collections — you never take one reading, you take many and process them. Understanding when to use a list (ordered stream of readings) vs a dictionary (labeled configuration) vs a tuple (fixed hardware constants like pin pairs) is a fundamental embedded design skill.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>from machine import ADC, Pin
+
+sensor   = ADC(Pin(34))              # Analog input on GPIO 34
+readings = []                         # List: mutable, ordered readings buffer
+
+# Tuple: immutable pin pair — won't change after definition
+I2C_PINS = (21, 22)                   # (SDA, SCL)
+
+# Take 5 readings and store in list
+for _ in range(5):
+    readings.append(sensor.read_u16())  # 0–65535 range
+
+# Dictionary: labeled summary data
+summary = {
+    "sensor": "LDR",
+    "unit":   "raw",
+    "min":    min(readings),
+    "max":    max(readings),
+    "avg":    sum(readings) // len(readings)
+}
+print(summary)</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Connect a potentiometer or light sensor to an analog pin. Take 5 readings in a loop, storing them in a <code>list</code>. Compute min, max, and average from the list, then store those results in a <code>dict</code> with labeled keys. Define the sensor's pin number and name as a <code>tuple</code> constant. Print the full summary dictionary to the REPL.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 4–6:</strong> Conditionals, loops, functions, PWM, classes, and I2C/SPI sensor protocols.</p>
+        </div>
+
+        <!--WEEK 4-->
+    
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Control Flow: Conditionals &amp; Loops</h2>
+                <p>Direct your program's logic and create reactive hardware behavior using conditionals and the embedded main loop.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Directing your program's logic and creating reactive hardware behavior.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>if</code> / <code>elif</code> / <code>else</code> Statements</strong> — Conditional statements let your program make decisions based on sensor readings or button states. MicroPython uses identical conditional syntax to standard Python, including indentation-based blocks — no braces, no special embedded syntax.</li>
+                    <li><strong><code>for</code> Loops &amp; <code>range()</code></strong> — A <code>for</code> loop iterates over a sequence or a <code>range()</code> of numbers, perfect for repeating an action a fixed number of times like blinking an LED N times or taking N sensor readings. This is one of the most common patterns in embedded scripts.</li>
+                    <li><strong><code>while</code> Loops for Continuous Operation</strong> — A <code>while True:</code> loop runs indefinitely — this is the standard pattern for a microcontroller's "main loop" that continuously checks sensors and responds to inputs. This mirrors how embedded devices operate: they run forever until powered off.</li>
+                    <li><strong>Reading Digital Input — Buttons</strong> — Configuring a <code>Pin</code> as <code>IN</code> with a pull-up or pull-down resistor lets you detect button presses by reading <code>HIGH</code>/<code>LOW</code> states. Combining this with <code>if</code> statements creates simple, responsive interactive behavior.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The <code>while True:</code> main loop is the heartbeat of every embedded application — it never stops. Understanding the difference between polling (checking repeatedly in a loop) and interrupts (covered in Week 10) is the foundation of all embedded responsiveness design.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>from machine import Pin
+import time
+
+button = Pin(0, Pin.IN, Pin.PULL_UP)   # Input with internal pull-up resistor
+led    = Pin(2, Pin.OUT)
+
+# Standard embedded main loop — runs forever
+while True:
+    if button.value() == 0:            # Pressed = LOW (pull-up inverts logic)
+        led.value(1)
+        print("Button pressed — LED on!")
+    else:
+        led.value(0)
+    time.sleep(0.1)                    # Debounce delay
+
+# for loop: blink N times (used outside main loop for startup sequence)
+for i in range(5):
+    led.value(1); time.sleep(0.2)
+    led.value(0); time.sleep(0.2)</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Wire a button to a GPIO pin with a pull-up resistor. Write a <code>while True</code> main loop that lights an LED only while the button is held down, using <code>if</code>/<code>else</code> to control the LED state. Add a startup sequence using a <code>for</code> loop that blinks the LED 3 times before entering the main loop — a common embedded "ready" indicator pattern.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 5 -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Functions, Modules &amp; PWM</h2>
+                <p>Organize code into reusable functions, split logic across files, and control component intensity with PWM.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Organizing code into reusable functions, splitting logic across module files, and controlling component intensity with PWM.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Function Declaration &amp; Parameters</strong> — Functions group reusable logic under a name, accepting parameters and optionally returning a value using <code>def</code>. Breaking hardware logic into functions like <code>blink_led()</code> or <code>read_sensor()</code> makes scripts far easier to read, test, and maintain.</li>
+                    <li><strong>Default Arguments &amp; Multiple Return Values</strong> — A function parameter can have a default value, letting you omit it for common cases. Python functions can also return multiple values at once using comma-separated returns (packed as a tuple), useful for returning both a sensor value and a status flag.</li>
+                    <li><strong>Creating &amp; Importing Custom Modules (<code>.py</code> files)</strong> — Code can be split across multiple <code>.py</code> files uploaded to the board, then imported with <code>import filename</code>. This separates reusable logic (like sensor drivers or LED utilities) from your main application script, keeping code organized as projects grow.</li>
+                    <li><strong>PWM (Pulse Width Modulation)</strong> — <code>machine.PWM</code> rapidly switches a pin on and off to simulate variable voltage, used to dim LEDs or control motor and servo speed. The <code>duty_u16()</code> value (0–65535) controls the effective power level delivered to the component.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> PWM is used in virtually every non-trivial embedded project — LED dimming, servo control, motor speed, buzzer tones. Custom modules are how professional embedded projects stay maintainable: a <code>sensors.py</code>, a <code>network_utils.py</code>, and a clean <code>main.py</code> that imports them both.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># led_utils.py — custom module uploaded to board
+from machine import Pin, PWM
+import time
+
+def fade(pin_num, steps=50, delay=0.02):
+    """Smoothly fades an LED from off to full brightness."""
+    pwm = PWM(Pin(pin_num))
+    pwm.freq(1000)
+    for i in range(steps):
+        pwm.duty_u16(int(65535 * i / steps))
+        time.sleep(delay)
+    return pwm                # Return PWM object for further control
+
+def set_brightness(pin_num, level=32767):
+    """Set LED brightness. level: 0 (off) to 65535 (full)."""
+    pwm = PWM(Pin(pin_num))
+    pwm.freq(1000)
+    pwm.duty_u16(level)
+    return pwm
+
+# main.py — imports the module
+import led_utils
+led_utils.fade(5)             # Smooth fade using default steps
+led_utils.set_brightness(5, level=50000)</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a separate module file <code>led_utils.py</code> containing a <code>fade(pin_num, steps)</code> function using PWM that smoothly fades an LED from off to full brightness, and a <code>pulse(pin_num, cycles)</code> function that fades in and out N times. Import it into <code>main.py</code> and call both functions. Verify the smooth fade is visible — no jumps or flickers.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 6-->
+        
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Custom Data Structures &amp; I2C/SPI Sensors</h2>
+                <p>Model structured sensor data with classes and communicate with external sensors over I2C and SPI protocols.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Modeling structured sensor data and communicating with external sensors over standard hardware protocols.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Classes &amp; Objects (Intro to OOP)</strong> — A <code>class</code> bundles related data (attributes) and behavior (methods) into a single reusable blueprint, used to model real-world things like a "TemperatureSensor." Creating an instance of a class produces an object you can interact with through its methods.</li>
+                    <li><strong>The <code>__init__</code> Constructor</strong> — The <code>__init__</code> method runs automatically when a new object is created, typically used to set up initial attribute values like pin numbers and protocol objects. This ensures every object starts in a valid, ready-to-use hardware state.</li>
+                    <li><strong>I2C Communication</strong> — I2C is a two-wire communication protocol (<code>SDA</code>/<code>SCL</code>) allowing a microcontroller to talk to multiple sensors on the same bus using unique 7-bit device addresses. MicroPython's <code>machine.I2C</code> class handles all the low-level signaling, letting you focus on reading data.</li>
+                    <li><strong>SPI Communication</strong> — SPI is a faster, four-wire protocol commonly used for displays and high-speed sensors, using separate MOSI/MISO data lines and a chip-select pin to address individual devices. MicroPython's <code>machine.SPI</code> class provides a simple interface for reading and writing SPI devices.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> I2C is the most common sensor protocol in the embedded world — the BMP280 pressure sensor, SSD1306 OLED display, MPU6050 accelerometer, and dozens more all use I2C. Wrapping sensor communication in a class (rather than raw I2C calls scattered throughout main.py) is the first step toward maintainable embedded software architecture.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>from machine import I2C, Pin, SPI
+
+class TempSensor:
+    """Wraps I2C communication with a temperature sensor."""
+    def __init__(self, sda=21, scl=22, bus=0):
+        self.i2c = I2C(bus, sda=Pin(sda), scl=Pin(scl), freq=400000)
+        self.addr = self._find_device()
+
+    def _find_device(self):
+        devices = self.i2c.scan()
+        if not devices:
+            raise OSError("No I2C device found!")
+        return devices[0]
+
+    def read_raw(self):
+        """Read 2 bytes from the sensor register."""
+        return self.i2c.readfrom(self.addr, 2)
+
+    def temperature(self):
+        raw = self.read_raw()
+        return (raw[0] << 8 | raw[1]) * 0.0625   # Example conversion
+
+sensor = TempSensor(sda=21, scl=22)
+print("Devices found:", sensor.i2c.scan())
+print("Temperature:", sensor.temperature(), "°C")</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Wire an I2C sensor (e.g., BMP280, SHT31, or similar) to your board. Write a <code>Sensor</code> class with an <code>__init__</code> that sets up I2C, a <code>scan()</code> method that returns detected device addresses, and a <code>read()</code> method that returns a real value. Instantiate the class and print 5 readings in a loop with a 1-second delay between each.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 7–9:</strong> OOP inheritance, error handling, file storage, Wi-Fi networking, and MQTT.</p>
+        </div>
+
+        <!--WEEK 7 -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Object-Oriented Programming &amp; Inheritance</h2>
+                <p>Build sophisticated, reusable hardware abstractions using full OOP principles including inheritance and polymorphism.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Building more sophisticated, reusable hardware abstractions using full OOP principles.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Inheritance &amp; Subclasses</strong> — Inheritance lets a new class reuse and extend the behavior of an existing class, avoiding duplicated code. For example, an <code>RGBLed</code> class could inherit from a base <code>Led</code> class and add color-mixing methods, reusing all the GPIO setup logic without rewriting it.</li>
+                    <li><strong>Method Overriding</strong> — A subclass can redefine (override) a method from its parent class to provide specialized behavior while keeping the same method name. This allows different sensor types to share a common interface (<code>read()</code>) but return values in their own format.</li>
+                    <li><strong>Encapsulation &amp; Properties</strong> — Encapsulation hides an object's internal details behind methods, exposing only what is necessary through a clean interface. The <code>@property</code> decorator lets you access a method like a simple attribute, transparently adding validation or unit conversion logic.</li>
+                    <li><strong>Polymorphism with Hardware Abstractions</strong> — Polymorphism allows different classes (e.g., different sensor types) to be used interchangeably as long as they share a common method name like <code>read()</code>. This makes it easy to write generic code that works with any compatible sensor in a list, regardless of the underlying hardware.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Polymorphism is what makes embedded sensor code truly scalable — you can loop over a list of different sensor objects and call <code>sensor.read()</code> on all of them without knowing or caring what hardware each one represents. This is the architecture behind every professional sensor framework and driver library.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>from machine import Pin, ADC
+
+class Sensor:
+    """Base class — defines the shared interface for all sensors."""
+    def __init__(self, name):
+        self.name = name
+
+    def read(self):
+        raise NotImplementedError("Subclasses must implement read()")
+
+    def __repr__(self):
+        return f"{self.name}: {self.read()}"
+
+class LightSensor(Sensor):
+    def __init__(self, pin):
+        super().__init__("LightSensor")
+        self.adc = ADC(Pin(pin))
+
+    def read(self):                        # Overrides base read()
+        return self.adc.read_u16()
+
+class DigitalSensor(Sensor):
+    def __init__(self, pin):
+        super().__init__("DigitalSensor")
+        self.pin = Pin(pin, Pin.IN, Pin.PULL_UP)
+
+    def read(self):                        # Different override
+        return self.pin.value()
+
+# Polymorphism: same call on different objects
+sensors = [LightSensor(34), DigitalSensor(0)]
+for s in sensors:
+    print(s.name, "→", s.read())          # Works for both!</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a base class <code>Actuator</code> with an <code>activate()</code> method. Create two subclasses, <code>Led</code> and <code>Buzzer</code>, each overriding <code>activate()</code> with their own GPIO logic (LED turns on, Buzzer produces a tone using PWM). Store both in a list and loop through it calling <code>activate()</code> on each — demonstrating polymorphism. Use a <code>@property</code> to expose the LED's current state.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 8  -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Error Handling &amp; File Storage</h2>
+                <p>Write robust embedded code that handles hardware failures gracefully and persists data to flash storage.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing robust embedded code that handles failures gracefully and persists data to the board's onboard flash storage.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>try</code> / <code>except</code> / <code>finally</code></strong> — A <code>try</code> block lets you attempt code that might fail, while <code>except</code> catches and handles specific errors without crashing the device. <code>finally</code> ensures cleanup code (like turning off a motor or releasing a bus) always runs, regardless of whether an error occurred.</li>
+                    <li><strong>Custom Exceptions</strong> — You can define your own exception classes by inheriting from <code>Exception</code>, allowing you to <code>raise</code> and catch domain-specific errors like <code>SensorTimeoutError</code> or <code>StorageFullError</code>. This makes debugging hardware issues far clearer than catching generic <code>Exception</code> messages.</li>
+                    <li><strong>The <code>os</code> Module &amp; Onboard Flash Storage</strong> — MicroPython boards have a small onboard filesystem accessible via the <code>os</code> module, letting you list, create, and delete files just like a computer filesystem. This is commonly used to store configuration files, firmware parameters, or logged sensor data that survives reboots.</li>
+                    <li><strong>Reading &amp; Writing Files</strong> — Standard Python file operations (<code>open()</code>, <code>.write()</code>, <code>.read()</code>) work identically in MicroPython, letting scripts persist data across reboots. This is essential for standalone data-logging applications where no USB connection is available.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Embedded devices run unattended — if a sensor fails or storage fills up and your code crashes, nobody is there to restart it. Robust <code>try/except</code> error handling is what separates a weekend prototype from a device you can deploy in the field and trust to keep running for months.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import os
+
+class SensorTimeoutError(Exception):
+    """Raised when a sensor fails to respond within the timeout."""
+    pass
+
+def log_reading(value, filename="data.csv"):
+    """Append a sensor reading to CSV file with error handling."""
+    try:
+        with open(filename, "a") as f:      # 'a' = append mode (preserve history)
+            f.write(f"{value}\n")
+    except OSError as e:
+        if e.args[0] == 28:                  # errno 28 = ENOSPC (storage full)
+            print("Storage full! Deleting oldest log...")
+            os.remove(filename)
+        else:
+            raise                            # Re-raise unexpected OS errors
+    finally:
+        print("Write attempt completed.")   # Always runs, even on error
+
+# Check available filesystem space
+stat = os.statvfs("/")
+free_kb = (stat[0] * stat[3]) // 1024
+print(f"Free storage: {free_kb} KB")
+
+# Read back and print file contents
+try:
+    with open("data.csv", "r") as f:
+        print(f.read())
+except OSError:
+    print("No data file found yet.")</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a data-logging script that reads a sensor (real or simulated) every 2 seconds and appends each reading to <code>data.csv</code> on the board's flash storage. Wrap all file operations in <code>try</code>/<code>except</code> blocks to handle storage-full errors gracefully. Define a custom <code>SensorTimeoutError</code> exception. After 10 readings, read the file back and print all logged values to the REPL.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 9  -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Networking, Libraries &amp; MQTT</h2>
+                <p>Connect your device to Wi-Fi and the wider Internet of Things ecosystem using HTTP and MQTT.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Connecting your device to Wi-Fi and the wider Internet of Things ecosystem.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Wi-Fi Connectivity (<code>network</code> Module)</strong> — The <code>network</code> module lets a board like the ESP32 connect to a Wi-Fi network as a station (<code>STA_IF</code>) or create its own access point (<code>AP_IF</code>). This is the gateway to all internet-connected MicroPython projects — without it, your device is an island.</li>
+                    <li><strong>Making HTTP Requests (<code>urequests</code>)</strong> — The <code>urequests</code> library (a lightweight version of Python's <code>requests</code>) lets your device send HTTP GET/POST requests to web APIs. This enables devices to fetch live data like weather forecasts or send sensor readings to a cloud dashboard.</li>
+                    <li><strong>MQTT for IoT Messaging</strong> — MQTT is a lightweight publish-subscribe messaging protocol ideal for low-power IoT devices, using a central "broker" to route messages between devices. The <code>umqtt.simple</code> library provides an easy MicroPython client for publishing sensor data and subscribing to remote control commands.</li>
+                    <li><strong>JSON Parsing (<code>ujson</code>)</strong> — The <code>ujson</code> module encodes Python objects into JSON strings and decodes JSON strings back into Python objects, just like CPython's <code>json</code> module. This is essential for exchanging structured data with web APIs, MQTT brokers, and cloud platforms.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Wi-Fi + MQTT transforms a standalone sensor into an IoT node that can send data to dashboards, receive remote commands, and integrate with other devices — the foundation of every smart home, industrial monitoring, and environmental sensing system built on MicroPython.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import network, time, ujson
+import urequests
+from umqtt.simple import MQTTClient
+
+# Connect to Wi-Fi
+wlan = network.WLAN(network.STA_IF)
+wlan.active(True)
+wlan.connect("MyWiFi", "password123")
+while not wlan.isconnected():
+    time.sleep(0.5)
+print("Connected:", wlan.ifconfig())    # ('192.168.1.x', ...)
+
+# HTTP GET — fetch data from a public API
+response = urequests.get("http://api.example.com/temperature")
+data = ujson.loads(response.text)
+print("Temperature:", data["temp"])
+response.close()                         # Free memory — critical on MCU!
+
+# MQTT publish sensor reading
+client = MQTTClient("esp32_01", "broker.hivemq.com")
+client.connect()
+payload = ujson.dumps({"temp": 24.5, "humidity": 60})
+client.publish(b"sensors/living_room", payload.encode())
+client.disconnect()</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Connect your board to Wi-Fi using the <code>network</code> module. Use <code>urequests</code> to fetch data from a public JSON API (like <code>wttr.in</code> for weather or <code>api.coindesk.com</code> for Bitcoin price), parse it with <code>ujson</code>, and print one specific value. Then publish a simulated sensor reading to a public MQTT broker (e.g., <code>broker.hivemq.com</code>) using <code>umqtt.simple</code> and verify it arrives using an MQTT client app on your phone.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 10–12:</strong> Async concurrency with uasyncio, hardware interrupts, generators, decorators, and three complete capstone IoT projects.</p>
+        </div>
+
+        <!--  WEEK 10-->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Concurrency: <code>uasyncio</code> &amp; Interrupts</h2>
+                <p>Handle multiple tasks simultaneously on a single-core constrained device using async/await and hardware interrupts.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Handling multiple tasks "simultaneously" on a single-core constrained device.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>uasyncio</code> &amp; <code>async</code>/<code>await</code></strong> — <code>uasyncio</code> is MicroPython's asynchronous I/O library, letting you write non-blocking code using <code>async def</code> and <code>await</code>, similar to CPython's <code>asyncio</code>. This allows a device to "wait" for a sensor or network response without freezing every other task in the program.</li>
+                    <li><strong>Creating &amp; Scheduling Tasks</strong> — <code>asyncio.create_task()</code> schedules a coroutine to run concurrently alongside others, all managed by a single event loop. This lets one board blink an LED, read a sensor, and maintain an MQTT connection simultaneously without true multithreading.</li>
+                    <li><strong>Hardware Interrupts (<code>Pin.irq</code>)</strong> — An interrupt instantly calls a handler function when a hardware event occurs (like a button press or sensor signal), without needing to constantly poll the pin in a loop. This is far more efficient and responsive than checking pin state repeatedly in a <code>while True</code> loop.</li>
+                    <li><strong>Timers (<code>machine.Timer</code>)</strong> — <code>machine.Timer</code> triggers a function at precise, regular intervals completely independent of your main program loop, useful for tasks like periodic sensor sampling or watchdog resets. Hardware timers run with high precision, unaffected by any blocking code elsewhere in your program.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A real IoT device must do many things at once — blink a status LED, sample sensors, maintain a network connection, and respond instantly to button presses. <code>uasyncio</code> is how professional MicroPython applications achieve this without needing a full RTOS. Hardware interrupts are the only way to guarantee a response within microseconds regardless of what the main code is doing.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import uasyncio as asyncio
+from machine import Pin, Timer
+
+led1   = Pin(2, Pin.OUT)
+button = Pin(0, Pin.IN, Pin.PULL_UP)
+
+# Interrupt handler — called INSTANTLY on button press (not in event loop)
+def button_isr(pin):
+    print("Button event! (from interrupt)")  # Keep ISRs SHORT!
+
+button.irq(trigger=Pin.IRQ_FALLING, handler=button_isr)
+
+# Async task 1: blink LED every 0.5s without blocking
+async def blink(pin, delay):
+    while True:
+        pin.value(not pin.value())
+        await asyncio.sleep(delay)     # Yields control to other tasks
+
+# Async task 2: print sensor reading every 2s
+async def read_sensor():
+    while True:
+        print("Sensor:", 42)           # Replace with real read()
+        await asyncio.sleep(2)
+
+# Main: run both tasks concurrently
+async def main():
+    asyncio.create_task(blink(led1, 0.5))
+    asyncio.create_task(read_sensor())
+    await asyncio.sleep(30)            # Run for 30 seconds
+
+asyncio.run(main())</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a <code>uasyncio</code> program with two concurrent tasks: one blinking an LED every 0.5 seconds, another printing a sensor reading (real or simulated) every 2 seconds. Add a hardware interrupt on a button pin that immediately logs "Button event!" to the console the instant it is pressed — independent of the async event loop timing. Verify all three run simultaneously without blocking each other.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 11-->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Generators, Decorators &amp; Functional Patterns</h2>
+                <p>Apply advanced Python patterns to write more elegant, memory-efficient embedded code.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Applying advanced Python patterns to write more elegant, memory-efficient embedded code.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Generators (<code>yield</code>)</strong> — A generator function uses <code>yield</code> instead of <code>return</code> to produce a sequence of values lazily, one at a time, without storing them all in memory simultaneously. This is extremely valuable on memory-constrained microcontrollers for streaming sensor data, reading files line by line, or producing infinite sequences.</li>
+                    <li><strong>Decorators (Function Wrapping)</strong> — A decorator wraps a function to add extra behavior (like timing, logging, or retry logic) without modifying the original function's code. They are written using the <code>@decorator_name</code> syntax placed directly above a function definition and are a cornerstone of professional Python code organization.</li>
+                    <li><strong>Context Managers (<code>with</code> statement)</strong> — A context manager (using <code>__enter__</code>/<code>__exit__</code>) ensures setup and cleanup code always runs correctly — like properly releasing an I2C bus lock or closing a file — even if an exception occurs inside the <code>with</code> block. This is the professional standard for managing hardware resources safely.</li>
+                    <li><strong>Lambda Functions &amp; Functional Patterns</strong> — A <code>lambda</code> defines a small, anonymous, single-expression function inline, useful for short callbacks like sort keys or interrupt handlers. Combined with <code>map()</code> and <code>filter()</code>, lambdas support concise functional-style data processing on sensor reading lists.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Generators are the memory-efficient streaming solution on a device with 256KB of RAM — you never load a full dataset at once, you generate values on demand. Decorators are how you add logging, timing, and retry logic to sensor reads without cluttering your business logic — a technique used in every professional embedded Python codebase.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import time
+
+# Generator: yields sensor values lazily — no list allocation!
+def sensor_stream(n, base=20.0):
+    for i in range(n):
+        yield base + (i * 0.1)     # Simulated reading; real: yield sensor.read()
+
+# Decorator: adds timing to any function
+def timed(func):
+    def wrapper(*args, **kwargs):
+        start = time.ticks_ms()
+        result = func(*args, **kwargs)
+        elapsed = time.ticks_diff(time.ticks_ms(), start)
+        print(f"{func.__name__} took {elapsed}ms")
+        return result
+    return wrapper
+
+@timed
+def process_readings(stream):
+    """Consumes a generator and returns min/max."""
+    readings = list(stream)                # Materialize lazily when needed
+    return min(readings), max(readings)
+
+# Lambda with filter: keep only "hot" readings above threshold
+readings = [20.1, 22.3, 19.8, 25.6, 30.1]
+hot = list(filter(lambda x: x > 24.0, readings))
+print("Hot readings:", hot)              # [25.6, 30.1]
+
+# Use the generator and decorated function
+stream = sensor_stream(10)
+lo, hi = process_readings(stream)
+print(f"Min: {lo}, Max: {hi}")</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a generator function <code>sensor_stream(n)</code> that yields <code>n</code> simulated sensor readings one at a time (to simulate memory-efficient streaming). Write a <code>@timed</code> decorator that prints how long a function takes to run using <code>time.ticks_ms()</code>. Apply <code>@timed</code> to a function that consumes the generator and computes min/max. Use <code>filter()</code> and a lambda to extract only readings above a threshold value.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 12-->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Capstone Week: Three Mini Projects (Beginner → Master)</h2>
+                <p>Consolidate everything learned into three progressively advanced, real-world embedded IoT projects.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Consolidating everything learned into three progressively complex, portfolio-ready embedded IoT projects.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — Smart LED Alarm (Beginner–Intermediate)</h3>
+                <p>A simple device using a button, LED, and buzzer that triggers an alert sequence when motion or a button press is detected. Reinforces GPIO basics, conditionals, loops, and modular functions from Phases 1 and 2.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>MicroPython Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Button detection</td>
+                            <td><code>Pin(IN, PULL_UP)</code> + <code>if</code>/<code>else</code></td>
+                        </tr>
+                        <tr>
+                            <td>LED alert sequence</td>
+                            <td><code>for</code> loop + <code>Pin(OUT)</code></td>
+                        </tr>
+                        <tr>
+                            <td>Buzzer tone via PWM</td>
+                            <td><code>machine.PWM</code> + <code>duty_u16()</code></td>
+                        </tr>
+                        <tr>
+                            <td>Configurable alert pattern</td>
+                            <td>Functions with default parameters</td>
+                        </tr>
+                        <tr>
+                            <td>Reusable LED/Buzzer logic</td>
+                            <td>Custom module file import</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A fully working Smart LED Alarm: button press triggers a configurable LED blink + buzzer sequence using PWM tones, with all logic organized in a reusable module. Build and test on real hardware. Push code to GitHub with a wiring diagram in the README and a short video or photo of it running.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — Data-Logging Weather Station (Intermediate–Advanced)</h3>
+                <p>A device that reads temperature/humidity from an I2C sensor, logs readings to flash storage as CSV, and exposes a small built-in web server to view the latest data. Reinforces OOP sensor classes, file handling, error handling, and Wi-Fi networking from Phases 2 and 3.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>MicroPython Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>I2C sensor reading</td>
+                            <td>OOP <code>Sensor</code> class + <code>machine.I2C</code></td>
+                        </tr>
+                        <tr>
+                            <td>CSV file logging</td>
+                            <td><code>open()</code> append mode + <code>os</code> module</td>
+                        </tr>
+                        <tr>
+                            <td>Graceful storage-full handling</td>
+                            <td><code>try</code>/<code>except OSError</code> + custom exception</td>
+                        </tr>
+                        <tr>
+                            <td>Wi-Fi connection</td>
+                            <td><code>network.WLAN(STA_IF)</code></td>
+                        </tr>
+                        <tr>
+                            <td>Tiny HTTP web server</td>
+                            <td><code>socket</code> module serving latest readings</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A fully working weather station that logs real I2C sensor readings to <code>data.csv</code> every 10 seconds, handles storage errors gracefully, and serves the 5 most recent readings as a plain-text or simple HTML page accessible from any browser on the same Wi-Fi network. Push to GitHub with setup instructions.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Concurrent IoT Dashboard with MQTT (Advanced–Master)</h3>
+                <p>A device that concurrently reads multiple sensors using <code>uasyncio</code>, publishes readings to an MQTT broker in real time, and responds to remote commands received over the same broker. Ties together concurrency, networking, JSON, error handling, and clean modular architecture.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>MicroPython Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Multiple concurrent sensor tasks</td>
+                            <td><code>uasyncio.create_task()</code> per sensor</td>
+                        </tr>
+                        <tr>
+                            <td>MQTT publish sensor readings</td>
+                            <td><code>umqtt.simple</code> + <code>ujson.dumps()</code></td>
+                        </tr>
+                        <tr>
+                            <td>MQTT subscribe remote commands</td>
+                            <td><code>client.set_callback()</code> + message handler</td>
+                        </tr>
+                        <tr>
+                            <td>Remote LED toggle</td>
+                            <td>MQTT command → GPIO <code>Pin.value()</code></td>
+                        </tr>
+                        <tr>
+                            <td>Wi-Fi/MQTT reconnection handling</td>
+                            <td><code>try</code>/<code>except</code> + <code>@timed</code> decorator</td>
+                        </tr>
+                        <tr>
+                            <td>Generator-based sensor stream</td>
+                            <td><code>yield</code> generator + <code>filter()</code> lambda</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Code Example</h3>
+                <pre><code>import uasyncio as asyncio
+import ujson
+from umqtt.simple import MQTTClient
+from machine import Pin
+
+led = Pin(2, Pin.OUT)
+
+def on_command(topic, msg):
+    """MQTT subscription callback — handles remote commands."""
+    cmd = ujson.loads(msg)
+    if cmd.get("action") == "toggle_led":
+        led.value(not led.value())
+        print("LED toggled via MQTT!")
+
+async def publish_sensor(client, topic, interval=5):
+    """Async task: publish sensor reading every interval seconds."""
+    while True:
+        payload = ujson.dumps({"temp": 24.5, "humidity": 60})
+        try:
+            client.publish(topic, payload.encode())
+        except Exception as e:
+            print("MQTT publish failed:", e)
+        await asyncio.sleep(interval)
+
+async def mqtt_loop(client):
+    """Async task: check for incoming MQTT messages."""
+    while True:
+        client.check_msg()             # Non-blocking MQTT poll
+        await asyncio.sleep(0.1)
+
+async def main():
+    client = MQTTClient("esp32_01", "broker.hivemq.com")
+    client.set_callback(on_command)
+    client.connect()
+    client.subscribe(b"device/esp32_01/commands")
+    asyncio.create_task(publish_sensor(client, b"sensors/temp"))
+    asyncio.create_task(mqtt_loop(client))
+    await asyncio.sleep(3600)          # Run for 1 hour
+
+asyncio.run(main())</code></pre>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A production-grade concurrent IoT dashboard node: multiple <code>uasyncio</code> sensor tasks publish JSON readings to MQTT every 5 seconds, a subscription handler responds to remote LED toggle commands in real time, Wi-Fi/MQTT reconnection is handled gracefully, and a generator-based sensor stream filters anomalous readings before publishing. This is the capstone that demonstrates mastery of the complete MicroPython curriculum. Push all three projects to a single public GitHub repository with individual READMEs, wiring diagrams, and demo videos or photos.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–3</td>
+                        <td>Absolute Basics</td>
+                        <td>Flash firmware, use the REPL, control GPIO, and organize sensor data using lists, tuples, and dictionaries</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>4–6</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Write reactive hardware loops, modular functions with PWM, and communicate with I2C/SPI sensors using OOP classes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>7–9</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Apply full OOP inheritance and polymorphism, handle hardware errors gracefully, persist data to flash, and connect to Wi-Fi, HTTP APIs, and MQTT brokers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>10–12</td>
+                        <td>Master Level Concepts</td>
+                        <td>Run concurrent async tasks with uasyncio, respond to hardware interrupts, use generators and decorators for efficient embedded code, and complete three production-grade IoT projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool / Resource</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Thonny IDE (thonny.org)</td>
+                        <td>Beginner-friendly IDE with built-in MicroPython support</td>
+                    </tr>
+                    <tr>
+                        <td><code>mpremote</code> (pip install mpremote)</td>
+                        <td>Command-line tool for file transfer and REPL access</td>
+                    </tr>
+                    <tr>
+                        <td>MicroPython Docs (docs.micropython.org)</td>
+                        <td>Official reference for all modules and hardware APIs</td>
+                    </tr>
+                    <tr>
+                        <td>ESP32 MicroPython firmware (micropython.org/download)</td>
+                        <td>Official firmware binaries for flashing your board</td>
+                    </tr>
+                    <tr>
+                        <td>HiveMQ Public Broker (broker.hivemq.com)</td>
+                        <td>Free public MQTT broker for testing IoT publish/subscribe</td>
+                    </tr>
+                    <tr>
+                        <td>MQTT Explorer (mqtt-explorer.com)</td>
+                        <td>Desktop MQTT client to monitor topics and messages visually</td>
+                    </tr>
+                    <tr>
+                        <td>Wokwi Simulator (wokwi.com)</td>
+                        <td>Browser-based ESP32/Pico simulator — no hardware needed to start</td>
+                    </tr>
+                    <tr>
+                        <td>Awesome MicroPython (github.com/mcauser/awesome-micropython)</td>
+                        <td>Curated list of MicroPython libraries, drivers, and projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Complete each week's task on <strong>real hardware</strong> before moving on — simulator results and real hardware results can differ, and embedded development is a hands-on discipline above all else.</li>
+                    <li>Start with <strong>Wokwi.com</strong> if you do not yet have hardware — it simulates an ESP32 with GPIO, I2C, and UART in the browser, letting you begin coding from Day 1.</li>
+                    <li>Keep your <code>main.py</code> short — put all logic in separate modules (<code>sensors.py</code>, <code>network.py</code>, <code>led_utils.py</code>) and import them. This is the professional pattern for MicroPython project organization.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> with a wiring diagram — embedded portfolio projects with clear hardware documentation stand out far more than software-only projects to employers in IoT and embedded roles.</li>
+                    <li>By Week 12, you should have three complete, hardware-running, documented IoT projects and the confidence to design any MicroPython embedded system from scratch.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

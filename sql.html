@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL: Beginner to Master — 16 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>SQL: Beginner to Master</h1>
+        <p>Complete 16-Week Curriculum — From SELECT * FROM to Recursive CTEs, Triggers & Transaction Concurrency Control</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#week16">W16</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>16-week, project-driven SQL curriculum</strong> designed to take a complete beginner to a professional-level database engineer. The roadmap moves from <strong>SELECT, data types, filtering, and sorting</strong> through <strong>joins, aggregations, subqueries, CASE logic, and data modification</strong>, into <strong>relational schema design, data import/export, transactions, stored procedures, and indexing</strong>, all the way to <strong>triggers, recursive CTEs, window functions, transaction isolation levels, and three complete capstone projects</strong>.</p>
+            <p>SQL is a declarative query language with its own powerful equivalents for common programming concepts: <strong>OOP → schema design &amp; relational modeling</strong>, <strong>File Handling → data import/export</strong>, <strong>Decorators → triggers</strong>, <strong>Generators → recursive CTEs &amp; window functions</strong>, <strong>Concurrency → transactions &amp; locking</strong>. All examples use standard ANSI SQL (PostgreSQL-flavored).</p>
+            <p>By Week 16, you will have built three complete, portfolio-ready database systems and be confident designing and querying production-grade relational databases.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 16 weeks &nbsp;|&nbsp; <strong>Stack:</strong> PostgreSQL (ANSI SQL) &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic computer literacy</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–4:</strong> Fundamentals, data types, filtering, and sorting.</p>
+        </div>
+
+        <!--WEEK 1-->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Introduction to Databases &amp; SELECT</h2>
+                <p>Understanding relational databases and retrieving your first data.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding relational databases and writing your first data retrieval queries with SELECT.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Relational Database Concepts</strong> — A relational database organizes data into tables made of rows and columns, where each row represents one record. Tables can be related to one another through shared key values, forming the foundation of all structured data storage.</li>
+                    <li><strong>The <code>SELECT</code> Statement</strong> — <code>SELECT</code> is the foundational command for retrieving data from one or more columns in a table. It is the most frequently used statement in all of SQL — virtually every interaction with a database involves SELECT in some form.</li>
+                    <li><strong><code>FROM</code> and Column Selection</strong> — <code>FROM</code> specifies which table to query, while listing specific column names (instead of <code>*</code>) controls exactly what data is returned. Selecting only needed columns improves performance and readability in production queries.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every SQL query — no matter how complex — is built on the SELECT...FROM foundation. Understanding that SQL is declarative (you describe what you want, not how to get it) from Week 1 establishes the correct mental model for all subsequent weeks. The habit of selecting specific columns instead of <code>SELECT *</code> is a professional best practice that prevents performance issues in large tables.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- Retrieve only the name and email columns from the customers table
+SELECT customer_name, email
+FROM customers;
+
+-- Select all columns (use sparingly in production)
+SELECT *
+FROM employees;
+
+-- Add an alias for clarity
+SELECT first_name AS "First Name", salary AS "Annual Salary"
+FROM employees;</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Using a sample <code>employees</code> table, write a query that selects only the <code>first_name</code>, <code>last_name</code>, and <code>salary</code> columns. Then write a second query using column aliases to rename the output headers to <strong>"First Name"</strong>, <strong>"Last Name"</strong>, and <strong>"Annual Salary"</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 2-->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Data Types &amp; Table Creation</h2>
+                <p>Defining the structure and types of data a table can hold.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Defining the structure and types of data a table can hold using CREATE TABLE and understanding SQL's core data types.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Common Data Types (<code>INT</code>, <code>VARCHAR</code>, <code>DATE</code>, <code>BOOLEAN</code>)</strong> — SQL data types define what kind of value a column can store, such as whole numbers, text, dates, or true/false flags. Choosing the right type ensures data integrity and efficient storage — using VARCHAR(255) for a phone number wastes space; using INT for a name causes errors.</li>
+                    <li><strong><code>CREATE TABLE</code></strong> — <code>CREATE TABLE</code> defines a new table's structure, listing each column's name and data type. This is the first step in designing any database — the schema definition that all future data must conform to.</li>
+                    <li><strong>Primary Keys</strong> — A <code>PRIMARY KEY</code> uniquely identifies each row in a table and cannot contain duplicate or <code>NULL</code> values. It is essential for maintaining data integrity and enabling relationships between tables in subsequent weeks.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A poorly designed table structure — wrong data types, missing primary keys, columns that are too wide or too narrow — causes problems that are expensive to fix after data has been loaded. The choices made in CREATE TABLE ripple through every query, index, and foreign key constraint that references that table. Getting schema design right from the start is the most cost-effective database decision you can make.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- Create a table to store book records with a unique ID
+CREATE TABLE books (
+    book_id     INT PRIMARY KEY,
+    title       VARCHAR(100) NOT NULL,
+    published_date DATE,
+    price       DECIMAL(10, 2),
+    in_stock    BOOLEAN DEFAULT TRUE
+);
+
+-- Create with auto-incrementing primary key (PostgreSQL)
+CREATE TABLE customers (
+    customer_id SERIAL PRIMARY KEY,
+    email       VARCHAR(255) UNIQUE NOT NULL,
+    created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Design and create a <code>students</code> table with columns for <code>student_id</code> (primary key), <code>full_name</code> (NOT NULL), <code>birth_date</code>, and <code>is_active</code> (boolean with a default of TRUE). Then insert 3 sample rows and verify the data with a SELECT query.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 3-->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Filtering Data with WHERE</h2>
+                <p>Narrowing down results based on conditions.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Narrowing down query results based on conditions using the WHERE clause and logical operators.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>The <code>WHERE</code> Clause</strong> — <code>WHERE</code> filters rows so only those matching a specified condition are returned. It is applied before grouping or sorting occurs — understanding its position in the SQL execution order prevents common mistakes.</li>
+                    <li><strong>Comparison Operators (<code>=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>BETWEEN</code>)</strong> — These operators compare column values against given criteria, such as finding salaries above a threshold or dates within a range. <code>BETWEEN</code> is a convenient shorthand for inclusive range checks that improves query readability.</li>
+                    <li><strong>Logical Operators (<code>AND</code>, <code>OR</code>, <code>NOT</code>)</strong> — Logical operators combine multiple conditions in a <code>WHERE</code> clause to build more precise filters. <code>NOT</code> inverts a condition's result — and operator precedence (AND evaluates before OR) must be understood to avoid logical bugs.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The WHERE clause is the primary mechanism for query selectivity — a query without WHERE reads every row in the table (a full table scan). In a table with millions of rows, a properly filtered WHERE clause is the difference between a query that runs in milliseconds and one that times out. Understanding operator precedence (AND before OR) prevents silent logic bugs that return wrong data without any error.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- Find all active employees earning more than 50000
+SELECT first_name, salary
+FROM employees
+WHERE salary > 50000 AND is_active = TRUE;
+
+-- Use BETWEEN for inclusive range checks
+SELECT *
+FROM orders
+WHERE order_date BETWEEN '2024-01-01' AND '2024-12-31';
+
+-- Combine conditions — parentheses clarify precedence
+SELECT *
+FROM products
+WHERE (category = 'Electronics' OR category = 'Books')
+  AND price < 100;
+
+-- Use IN as shorthand for multiple OR conditions
+SELECT *
+FROM employees
+WHERE department IN ('Sales', 'Marketing', 'HR');</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Query the <code>students</code> table for all students born between 2000-01-01 and 2005-12-31 who are currently active (<code>is_active = TRUE</code>). Write a second query using <code>IN</code> to find students with specific IDs, and a third using <code>NOT</code> to find students who are NOT active.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 4-->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Sorting, Limiting &amp; Null Handling</h2>
+                <p>Controlling result order, size, and handling missing data.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Controlling result ordering, limiting result set size for pagination, and correctly handling NULL values.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>ORDER BY</code></strong> — <code>ORDER BY</code> sorts query results by one or more columns, either ascending (<code>ASC</code>, default) or descending (<code>DESC</code>). It can sort by multiple columns to break ties — the second column in ORDER BY only applies when the first column's values are equal.</li>
+                    <li><strong><code>LIMIT</code> and <code>OFFSET</code></strong> — <code>LIMIT</code> restricts the number of rows returned, while <code>OFFSET</code> skips a number of rows before starting to return results. Together they enable pagination of large result sets — a fundamental requirement for any user-facing application.</li>
+                    <li><strong><code>NULL</code> and <code>IS NULL</code></strong> — <code>NULL</code> represents missing or unknown data and cannot be compared using <code>=</code>; instead, <code>IS NULL</code>/<code>IS NOT NULL</code> must be used. Understanding NULL behavior — that NULL = NULL evaluates to NULL, not TRUE — prevents subtle filtering bugs that silently exclude data.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> NULL is SQL's most confusing feature — any comparison with NULL returns NULL (not true or false), which means rows with NULL values are silently excluded from WHERE clauses that use = or !=. This is a real production bug that affects reporting accuracy. The LIMIT/OFFSET pagination pattern is used in virtually every web application that displays lists of data to users.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- Get the 5 most recently published books, skipping the first 2
+SELECT title, published_date
+FROM books
+ORDER BY published_date DESC
+LIMIT 5 OFFSET 2;
+
+-- Sort by multiple columns — department first, then salary descending
+SELECT first_name, department, salary
+FROM employees
+ORDER BY department ASC, salary DESC;
+
+-- Find rows with NULL values — must use IS NULL, not = NULL
+SELECT *
+FROM students
+WHERE birth_date IS NULL;
+
+-- Handle NULLs in output with COALESCE
+SELECT full_name, COALESCE(email, 'No email on file') AS contact
+FROM students;</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a query that lists all students with a missing (<code>NULL</code>) <code>birth_date</code>, sorted alphabetically by <code>full_name</code>. Write a second pagination query that returns the second page of results (rows 11–20) from the employees table, ordered by salary descending. Use <code>COALESCE</code> to display a default value for any NULL field.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 5–8:</strong> Functions, modules, and data structures.</p>
+        </div>
+
+        <!-- WEEK 5  -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Aggregate Functions &amp; GROUP BY</h2>
+                <p>Summarizing data across many rows.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Summarizing data across many rows using aggregate functions, grouping results with GROUP BY, and filtering groups with HAVING.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Aggregate Functions (<code>COUNT</code>, <code>SUM</code>, <code>AVG</code>, <code>MAX</code>, <code>MIN</code>)</strong> — Aggregate functions compute a single summary value (like a total or average) from a set of rows. They are essential for reporting and analytics — the foundation of every dashboard, report, and business intelligence query.</li>
+                    <li><strong><code>GROUP BY</code></strong> — <code>GROUP BY</code> splits rows into groups sharing the same column value, allowing aggregate functions to be calculated per group. It is commonly paired with aggregates to answer questions like "total sales per region" or "average salary per department."</li>
+                    <li><strong><code>HAVING</code> vs <code>WHERE</code></strong> — <code>HAVING</code> filters groups after aggregation has occurred, while <code>WHERE</code> filters individual rows before grouping. This distinction is critical: you cannot use an aggregate function like <code>COUNT(*)</code> in a WHERE clause — it must go in HAVING.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The WHERE vs HAVING distinction — that HAVING filters after aggregation and WHERE filters before — is one of the most commonly tested SQL concepts in technical interviews. Understanding the SQL execution order (FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY) explains why aggregate functions appear in HAVING but not WHERE, resolving one of the most confusing aspects of SQL for beginners.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- Find departments with more than 10 employees
+SELECT department, COUNT(*) AS employee_count
+FROM employees
+GROUP BY department
+HAVING COUNT(*) > 10;
+
+-- Average salary per department, highest first
+SELECT department, AVG(salary) AS avg_salary
+FROM employees
+GROUP BY department
+ORDER BY avg_salary DESC;
+
+-- Multiple aggregates in one query
+SELECT
+    department,
+    COUNT(*)        AS headcount,
+    MIN(salary)     AS min_salary,
+    MAX(salary)     AS max_salary,
+    ROUND(AVG(salary), 2) AS avg_salary
+FROM employees
+GROUP BY department;</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a query that shows the average salary per department, ordered from highest to lowest average. Then write a second query using <code>HAVING</code> to show only departments where the total salary bill exceeds $500,000. Add <code>COUNT(*)</code>, <code>MIN</code>, and <code>MAX</code> to the output for a complete department summary.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 6-->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Joins: Combining Tables</h2>
+                <p>Querying related data spread across multiple tables.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Querying related data spread across multiple tables using all types of joins — the most essential skill in relational database querying.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>INNER JOIN</code></strong> — <code>INNER JOIN</code> returns only rows that have matching values in both joined tables. It is the most common type of join for combining related data — but silently excludes rows with no match in either table, which can cause data to disappear from reports.</li>
+                    <li><strong><code>LEFT JOIN</code> / <code>RIGHT JOIN</code></strong> — <code>LEFT JOIN</code> returns all rows from the left table plus matched rows from the right (with NULLs where unmatched), while <code>RIGHT JOIN</code> does the reverse. These are vital for finding unmatched or optional relationships — like employees with no department, or products with no orders.</li>
+                    <li><strong><code>FULL OUTER JOIN</code> &amp; Self Joins</strong> — <code>FULL OUTER JOIN</code> returns all rows from both tables, matched where possible. A self join joins a table to itself, useful for hierarchical data like employee-manager relationships where both the employee and manager are in the same table.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Joins are the defining capability of relational databases — the reason why data is split across multiple tables instead of stored in one giant flat table. Choosing the wrong join type (INNER when you need LEFT) silently drops data from your results without any error. Understanding when each join type applies is the most important practical SQL skill for day-to-day data work.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- INNER JOIN: only orders with matching customer records
+SELECT orders.order_id, customers.customer_name
+FROM orders
+INNER JOIN customers ON orders.customer_id = customers.customer_id;
+
+-- LEFT JOIN: all employees, even those with no department
+SELECT e.first_name, d.department_name
+FROM employees e
+LEFT JOIN departments d ON e.department_id = d.department_id;
+
+-- Self JOIN: employee with their manager's name
+SELECT e.first_name AS employee,
+       m.first_name AS manager
+FROM employees e
+LEFT JOIN employees m ON e.manager_id = m.employee_id;
+
+-- FULL OUTER JOIN: all employees and all departments, matched where possible
+SELECT e.first_name, d.department_name
+FROM employees e
+FULL OUTER JOIN departments d ON e.department_id = d.department_id;</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Using <code>employees</code> and <code>departments</code> tables, write a <code>LEFT JOIN</code> query that lists every employee along with their department name, including employees with no department assigned (showing NULL for department). Then write a self JOIN to display each employee alongside their manager's name.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 7-->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Functions, Subqueries &amp; CASE Logic</h2>
+                <p>Computing derived values and conditional logic within queries.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Computing derived values with scalar functions, nesting queries as subqueries, and implementing conditional logic with CASE expressions.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Scalar &amp; String Functions</strong> — Functions like <code>UPPER</code>, <code>CONCAT</code>, <code>ROUND</code>, and <code>LENGTH</code> transform individual values during a query. They allow data formatting and computation without changing the underlying stored data — essential for presenting clean output.</li>
+                    <li><strong>Subqueries</strong> — A subquery is a query nested inside another query, used to filter or compute values dynamically. They can appear in <code>WHERE</code> (correlated subqueries), <code>FROM</code> (inline views), or <code>SELECT</code> clauses — each with different performance implications.</li>
+                    <li><strong><code>CASE</code> Expressions</strong> — <code>CASE</code> provides if-else style conditional logic directly within a SQL query, returning different values based on conditions. It's SQL's equivalent of a switch statement and is used constantly in reporting to categorize data on the fly.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Subqueries and CASE expressions are what make SQL truly powerful for analytics. The ability to write a query whose WHERE condition is itself the result of another query — or to dynamically categorize rows into labels based on their values — eliminates the need for complex application-layer post-processing. These patterns appear in virtually every real-world reporting query.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- Label employees as 'Senior' or 'Junior' based on salary
+SELECT first_name,
+       CASE
+           WHEN salary >= 70000 THEN 'Senior'
+           WHEN salary >= 50000 THEN 'Mid-level'
+           ELSE 'Junior'
+       END AS level
+FROM employees
+WHERE salary > (SELECT AVG(salary) FROM employees);
+
+-- Subquery in FROM clause (inline view)
+SELECT dept_averages.department, dept_averages.avg_sal
+FROM (
+    SELECT department, AVG(salary) AS avg_sal
+    FROM employees
+    GROUP BY department
+) AS dept_averages
+WHERE dept_averages.avg_sal > 60000;
+
+-- String functions
+SELECT UPPER(first_name), CONCAT(first_name, ' ', last_name) AS full_name,
+       LENGTH(email) AS email_length
+FROM employees;</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a query using a <code>CASE</code> expression to categorize books as <strong>"New"</strong> (published after 2020) or <strong>"Classic"</strong> (published before 2020), then count how many fall into each category. Add a subquery in the WHERE clause to filter only books priced above the average book price.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 8-->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Modifying Data: INSERT, UPDATE, DELETE</h2>
+                <p>Changing the data stored in tables, not just reading it.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Safely changing the data stored in tables using INSERT, UPDATE, and DELETE — the write side of SQL.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>INSERT INTO</code></strong> — <code>INSERT INTO</code> adds new rows of data into a table, either with explicit values or from the result of another query (<code>INSERT INTO ... SELECT</code>). The SELECT-based form is extremely powerful for copying or transforming data between tables.</li>
+                    <li><strong><code>UPDATE</code></strong> — <code>UPDATE</code> modifies existing rows in a table, and must almost always be paired with a <code>WHERE</code> clause to avoid accidentally updating every row. The professional practice is to always test the <code>WHERE</code> condition with a <code>SELECT</code> query first before running the UPDATE.</li>
+                    <li><strong><code>DELETE</code></strong> — <code>DELETE</code> removes rows from a table that match a given condition, and like <code>UPDATE</code>, requires careful use of <code>WHERE</code>. A <code>DELETE</code> without a <code>WHERE</code> clause removes all rows — unlike <code>TRUNCATE</code>, it's logged and can be rolled back inside a transaction.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> UPDATE and DELETE without a WHERE clause are among the most dangerous operations in SQL — they silently affect every row in the table. The professional practice of always running a SELECT with the same WHERE clause first, then wrapping UPDATE/DELETE in a transaction so it can be rolled back if wrong, is what prevents production data loss. This habit distinguishes professional database developers from beginners.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- INSERT with explicit values
+INSERT INTO students (student_id, full_name, birth_date)
+VALUES (101, 'Asha Perera', '2001-03-15');
+
+-- INSERT from a SELECT query — copy rows between tables
+INSERT INTO archived_orders
+SELECT * FROM orders WHERE order_date < '2020-01-01';
+
+-- UPDATE — always check WHERE with SELECT first!
+-- Step 1: SELECT first to verify the target rows
+SELECT * FROM students WHERE student_id = 101;
+-- Step 2: Then UPDATE
+UPDATE students
+SET grade_points = grade_points * 1.1,
+    is_active = FALSE
+WHERE student_id = 101;
+
+-- DELETE — wrapped in a transaction for safety
+BEGIN;
+DELETE FROM students WHERE student_id = 101 AND is_active = FALSE;
+-- ROLLBACK; -- undo if wrong
+COMMIT;</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Insert 3 new rows into your <code>students</code> table. Update one student's <code>is_active</code> status to FALSE — but first write the SELECT query to verify you're targeting the right row. Then delete a row using its <code>student_id</code>, wrapped in a transaction that you first ROLLBACK to verify the delete, then COMMIT.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 9–12:</strong> Schema design, data import/export, error handling, and libraries.</p>
+        </div>
+
+        <!-- WEEK 9-->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Relational Modeling: SQL's "OOP" Equivalent</h2>
+                <p>Designing well-structured, related table schemas — SQL's version of object modeling.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Designing well-structured, normalized, related table schemas — SQL's version of object modeling and encapsulation.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Foreign Keys &amp; Relationships</strong> — A <code>FOREIGN KEY</code> links a column in one table to the primary key of another, enforcing referential integrity between related entities. This is how SQL models real-world "has-a" and "belongs-to" relationships — the relational equivalent of object composition and association.</li>
+                    <li><strong>Normalization (1NF–3NF)</strong> — Normalization is the process of organizing tables to reduce data redundancy and avoid update anomalies, following a series of normal forms (1NF, 2NF, 3NF). It's the relational-database parallel to clean, non-duplicated class design — each fact lives in exactly one place.</li>
+                    <li><strong>Views — Reusable "Abstractions"</strong> — A <code>VIEW</code> is a saved, virtual table defined by a query, letting you encapsulate complex joins and logic behind a simple, reusable interface. This mirrors how an OOP class encapsulates implementation details behind a clean public interface — callers see the view, not the complexity behind it.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Poor database normalization is the most common cause of long-term database maintenance problems — data stored in multiple places drifts out of sync, UPDATE anomalies corrupt data silently, and INSERT anomalies prevent valid data from being entered. Understanding 1NF, 2NF, and 3NF is the database equivalent of SOLID principles in software engineering — the foundation of maintainable, scalable systems.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- Foreign key linking orders to customers
+CREATE TABLE orders (
+    order_id    INT PRIMARY KEY,
+    customer_id INT NOT NULL REFERENCES customers(customer_id)
+                ON DELETE CASCADE,      -- delete orders when customer deleted
+    order_date  DATE DEFAULT CURRENT_DATE
+);
+
+-- Many-to-many junction table: books and authors
+CREATE TABLE book_authors (
+    book_id   INT REFERENCES books(book_id),
+    author_id INT REFERENCES authors(author_id),
+    PRIMARY KEY (book_id, author_id)    -- composite primary key
+);
+
+-- View encapsulating a complex join
+CREATE VIEW active_customer_orders AS
+    SELECT o.order_id, c.customer_name, o.order_date
+    FROM orders o
+    JOIN customers c ON o.customer_id = c.customer_id
+    WHERE c.is_active = TRUE;
+
+-- Query the view as if it were a simple table
+SELECT * FROM active_customer_orders WHERE order_date > '2024-01-01';</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Design a normalized 3-table schema (<code>authors</code>, <code>books</code>, <code>book_authors</code>) to represent a many-to-many relationship between books and authors. Create all three tables with proper primary and foreign keys. Then create a <code>VIEW</code> that lists each book with its author names concatenated, and query the view to show books with more than one author.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 10-->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Data Import, Export &amp; "File Handling"</h2>
+                <p>Moving data into and out of the database — SQL's equivalent of file I/O.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Moving data into and out of the database efficiently — SQL's equivalent of file I/O operations.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>COPY</code> / <code>BULK INSERT</code></strong> — <code>COPY</code> (PostgreSQL) or <code>BULK INSERT</code> (SQL Server) efficiently loads data from an external file like a CSV directly into a table. This is far faster than inserting rows one at a time — loading millions of rows that would take hours with INSERT takes seconds with COPY.</li>
+                    <li><strong>Exporting Query Results</strong> — Query results can be exported to a CSV or file using <code>COPY ... TO</code> or client tool export features, letting you share or archive data outside the database. This is the reverse operation of importing — the standard way to extract data for reporting tools, spreadsheets, and data pipelines.</li>
+                    <li><strong>Backup &amp; Restore (<code>pg_dump</code> / <code>mysqldump</code>)</strong> — Database backup tools export an entire database's schema and data into a portable file, which can later be restored. This is critical for disaster recovery and migrating between environments — a skill required in any production database role.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> In the real world, data rarely starts in a database — it comes from CSV exports, legacy systems, external APIs, and third-party tools. The ability to efficiently import and export data using COPY/BULK INSERT is what makes SQL the universal data interchange layer. A data engineer who cannot load CSV data into a database or extract query results to a file is limited to only greenfield data work.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- Import data from a CSV file into the students table (PostgreSQL)
+COPY students(student_id, full_name, birth_date)
+FROM '/data/students.csv'
+DELIMITER ',' CSV HEADER;
+
+-- Export query results to a CSV file
+COPY (
+    SELECT student_id, full_name, birth_date
+    FROM students
+    WHERE is_active = TRUE
+    ORDER BY full_name
+)
+TO '/exports/active_students.csv'
+DELIMITER ',' CSV HEADER;
+
+-- Backup a database from the terminal
+-- pg_dump mydb > mydb_backup.sql
+-- pg_dump -Fc mydb > mydb_backup.dump  (compressed format)
+
+-- Restore from backup
+-- psql mydb < mydb_backup.sql
+-- pg_restore -d mydb mydb_backup.dump</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a CSV file with 5 sample product rows (product_id, name, price, category), import it into a new <code>products</code> table using <code>COPY</code>. Then export the result of a filtered query (only products priced above $50) back to a new CSV file. Document the backup command you would use to back up the entire database.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 11-->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Error Handling &amp; Transactions</h2>
+                <p>Writing safe, atomic, and fault-tolerant database operations.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing safe, atomic, and fault-tolerant database operations using transactions and constraint-based validation.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Transactions (<code>BEGIN</code>, <code>COMMIT</code>, <code>ROLLBACK</code>)</strong> — A transaction groups multiple statements into a single all-or-nothing unit of work; <code>COMMIT</code> saves the changes, while <code>ROLLBACK</code> undoes them. This guarantees data consistency even if an error occurs mid-operation — the classic example is a bank transfer that must debit one account and credit another atomically.</li>
+                    <li><strong><code>TRY/CATCH</code> or Exception Blocks</strong> — Many SQL dialects (like T-SQL's <code>TRY/CATCH</code> or PL/pgSQL's <code>EXCEPTION</code>) let you catch and handle runtime errors gracefully inside stored procedures. This is SQL's direct equivalent of error handling in general-purpose languages — catching division-by-zero or constraint violations without crashing the entire script.</li>
+                    <li><strong>Constraints as Validation</strong> — <code>CHECK</code>, <code>UNIQUE</code>, and <code>NOT NULL</code> constraints proactively prevent invalid data from ever being inserted, acting as a first line of defense against bad data. This shifts error prevention to the schema level itself — the data is validated by the database, not just by application code that might be bypassed.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> ACID (Atomicity, Consistency, Isolation, Durability) — the properties that transactions provide — is what makes relational databases trustworthy for financial and critical systems. Without transactions, a bank transfer that crashes halfway through would debit one account without crediting the other, losing money permanently. Database constraints as the last line of data validation prevents bad data from entering even when application-layer validation is bypassed.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- Safely transfer funds between two accounts as one atomic transaction
+BEGIN;
+UPDATE accounts SET balance = balance - 100 WHERE account_id = 1;
+UPDATE accounts SET balance = balance + 100 WHERE account_id = 2;
+-- If anything fails between BEGIN and COMMIT, ROLLBACK undoes both
+COMMIT;
+
+-- Add constraints to prevent invalid data at the schema level
+ALTER TABLE products
+ADD CONSTRAINT chk_positive_price CHECK (price > 0),
+ADD CONSTRAINT chk_valid_category CHECK (category IN ('Electronics', 'Books', 'Clothing'));
+
+-- PL/pgSQL exception handling inside a function
+DO $$
+BEGIN
+    UPDATE accounts SET balance = balance - 500 WHERE account_id = 1;
+    IF NOT FOUND THEN
+        RAISE EXCEPTION 'Account % not found', 1;
+    END IF;
+EXCEPTION
+    WHEN OTHERS THEN
+        RAISE NOTICE 'Error: %', SQLERRM;
+        ROLLBACK;
+END;
+$$;</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a transaction that deducts inventory <code>quantity</code> for a sale and inserts a new row into a <code>sales</code> table. Wrap it so that if the inventory would go negative (check with a SELECT after the deduct), the entire transaction <code>ROLLBACK</code>s. Add a <code>CHECK</code> constraint to the inventory table ensuring quantity can never be stored as negative.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 12 -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Stored Procedures, Indexes &amp; "Libraries"</h2>
+                <p>Reusable server-side logic and performance optimization.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Building reusable server-side logic with stored procedures and functions, and dramatically improving query performance with indexes.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Stored Procedures &amp; Functions</strong> — A stored procedure is a saved, reusable block of SQL logic (with parameters) that can be invoked by name, similar to calling a function in a programming library. This reduces repeated code, centralizes business logic in the database, and allows permission-controlled access to data without exposing the underlying tables.</li>
+                    <li><strong>Indexes</strong> — An <code>INDEX</code> creates a fast lookup structure for a column, dramatically speeding up searches and joins at the cost of extra storage and slightly slower writes. Choosing the right indexes — on columns used in WHERE, JOIN ON, and ORDER BY — is one of the highest-impact performance skills in all of SQL.</li>
+                    <li><strong>Extensions &amp; Built-in Function Libraries</strong> — Databases ship with rich built-in function "libraries" (date/time, JSON, full-text search, mathematical functions) and support extensions (like PostgreSQL's <code>pgcrypto</code> or <code>PostGIS</code>) for specialized capabilities. Knowing what's available prevents reinventing functionality in application code.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A missing index on a foreign key column can turn a 1-millisecond join into a 10-second full table scan as the table grows. Adding a single index to the right column has saved more queries from performance problems than any amount of query rewriting. Understanding the trade-off — indexes speed reads but slow writes — is essential for making correct indexing decisions in both OLTP and analytical workloads.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- Create an index on a frequently filtered column
+CREATE INDEX idx_orders_customer ON orders(customer_id);
+CREATE INDEX idx_employees_dept_salary ON employees(department, salary);
+
+-- Create a stored procedure (PostgreSQL)
+CREATE OR REPLACE PROCEDURE get_customer_orders(IN cust_id INT)
+LANGUAGE SQL
+AS $$
+    SELECT o.order_id, o.order_date, p.product_name
+    FROM orders o
+    JOIN order_items oi ON o.order_id = oi.order_id
+    JOIN products p ON oi.product_id = p.product_id
+    WHERE o.customer_id = cust_id
+    ORDER BY o.order_date DESC;
+$$;
+
+-- Call the stored procedure
+CALL get_customer_orders(42);
+
+-- Create a reusable function returning a value
+CREATE OR REPLACE FUNCTION calculate_discount(price DECIMAL, pct INT)
+RETURNS DECIMAL AS $$
+    SELECT price * (1 - pct::DECIMAL / 100);
+$$ LANGUAGE SQL IMMUTABLE;</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create an index on a frequently filtered column in your <code>employees</code> table (e.g., <code>department</code>). Write and call a stored procedure that returns all employees in a given department with their salaries. Write a scalar function <code>calculate_annual_salary(monthly_salary)</code> and use it in a SELECT query across all employees.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 13–16:</strong> Triggers, recursive CTEs, window functions, concurrency, and three complete capstone projects.</p>
+        </div>
+
+        <!--  WEEK 13  -->
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Triggers: SQL's "Decorator" Pattern</h2>
+                <p>Automatically wrapping extra behavior around data changes.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Automatically executing extra behavior before or after data changes using triggers — SQL's equivalent of the decorator pattern.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Triggers (<code>BEFORE</code>/<code>AFTER</code> INSERT/UPDATE/DELETE)</strong> — A trigger is a block of logic that automatically executes before or after a row is inserted, updated, or deleted, "decorating" the base operation with extra behavior. This is the closest SQL equivalent to a Python decorator wrapping a function call — the original operation proceeds, but with extra behavior automatically added around it.</li>
+                    <li><strong>Audit Logging with Triggers</strong> — A common trigger pattern records every change to a table into a separate audit/history table, automatically and transparently. This provides full traceability — who changed what, when, and what the old value was — without modifying application code at all.</li>
+                    <li><strong><code>NEW</code> and <code>OLD</code> Row References</strong> — Inside a trigger, <code>NEW</code> refers to the row's incoming values (after the change) and <code>OLD</code> to its previous values (before the change), letting you compare, log, or validate changes. This is what makes triggers able to detect what specifically changed about a row.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Triggers implement cross-cutting concerns at the database level — audit logging, enforcing complex business rules, maintaining derived columns — without requiring every application that touches the database to implement the same logic. A trigger on the employees table that logs salary changes fires regardless of whether the change came from the web app, a mobile app, a data migration script, or a manual admin query — guaranteed, transparent enforcement.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- Create an audit table to store salary change history
+CREATE TABLE employee_salary_audit (
+    audit_id     SERIAL PRIMARY KEY,
+    employee_id  INT,
+    old_salary   DECIMAL,
+    new_salary   DECIMAL,
+    changed_at   TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    changed_by   VARCHAR(100) DEFAULT CURRENT_USER
+);
+
+-- Trigger function that records the change
+CREATE OR REPLACE FUNCTION record_salary_audit()
+RETURNS TRIGGER AS $$
+BEGIN
+    INSERT INTO employee_salary_audit(employee_id, old_salary, new_salary)
+    VALUES (OLD.employee_id, OLD.salary, NEW.salary);
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+-- Attach the trigger to the employees table
+CREATE TRIGGER log_salary_change
+AFTER UPDATE OF salary ON employees
+FOR EACH ROW
+WHEN (OLD.salary IS DISTINCT FROM NEW.salary)   -- only fire when salary actually changes
+EXECUTE FUNCTION record_salary_audit();</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create an <code>employee_audit</code> table and a trigger that automatically inserts a row into it whenever an employee's <code>salary</code> is updated, recording the <strong>old value</strong>, <strong>new value</strong>, the timestamp, and the database user who made the change. Test by updating a salary and querying the audit table to verify the record was captured.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 14-->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Recursive CTEs &amp; Window Functions: SQL's "Generators"</h2>
+                <p>Lazily computing sequences and performing row-by-row sequential analysis.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Computing sequences and hierarchical data with recursive CTEs, and performing advanced row-level analytics with window functions.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Recursive CTEs (<code>WITH RECURSIVE</code>)</strong> — A recursive Common Table Expression repeatedly references itself to build up a result set step by step, ideal for hierarchical data like org charts, file system trees, or generating number sequences. This mirrors how a generator yields a sequence of values one step at a time — each iteration builds on the previous.</li>
+                    <li><strong>Window Functions (<code>ROW_NUMBER</code>, <code>RANK</code>, <code>LAG</code>/<code>LEAD</code>)</strong> — Window functions compute a value across a "window" of related rows without collapsing them into a single result, unlike GROUP BY. They enable row-by-row sequential analysis — ranking, comparing to the previous row, computing running totals — that is impossible with simple aggregates.</li>
+                    <li><strong>Cursors</strong> — A cursor allows row-by-row, imperative-style iteration through a query result inside a stored procedure, similar to manually pulling values from a generator. They're powerful for complex row-by-row logic but should be used sparingly in favor of set-based operations for performance.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Window functions are the most powerful analytical tool in modern SQL — they enable calculations like "what was this month's revenue compared to last month," "rank each product within its category," and "compute a running total" that would otherwise require complex self-joins or application-layer post-processing. Recursive CTEs unlock tree and graph traversal directly in SQL, making hierarchical data (org charts, bill of materials, category trees) queryable without writing recursive application code.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- Recursive CTE: generate numbers 1 through 10
+WITH RECURSIVE counter(n) AS (
+    SELECT 1                             -- anchor: starting value
+    UNION ALL
+    SELECT n + 1 FROM counter WHERE n < 10  -- recursive step
+)
+SELECT n FROM counter;
+
+-- Recursive CTE: traverse an employee management hierarchy
+WITH RECURSIVE management_chain AS (
+    SELECT employee_id, first_name, manager_id, 0 AS depth
+    FROM employees WHERE employee_id = 42   -- start from one employee
+    UNION ALL
+    SELECT e.employee_id, e.first_name, e.manager_id, mc.depth + 1
+    FROM employees e
+    JOIN management_chain mc ON e.employee_id = mc.manager_id
+)
+SELECT * FROM management_chain;
+
+-- Window functions: rank, running total, compare to previous row
+SELECT
+    first_name, department, salary,
+    RANK() OVER (PARTITION BY department ORDER BY salary DESC) AS dept_rank,
+    SUM(salary) OVER (ORDER BY salary) AS running_total,
+    LAG(salary) OVER (ORDER BY salary) AS prev_salary
+FROM employees;</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a recursive CTE that returns the full management chain for a given employee (using a self-referencing <code>manager_id</code> column), showing each level of the hierarchy with a depth counter. Then use <code>RANK()</code> to rank employees by salary within each department, and <code>LAG()</code> to show each employee's salary difference from the previous employee in their department.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 15-->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Transactions, Isolation Levels &amp; Concurrency</h2>
+                <p>Safely handling many simultaneous database users.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Safely handling many simultaneous database users using isolation levels, explicit locking, and understanding concurrency anomalies.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Concurrency Problems (Dirty Reads, Lost Updates)</strong> — When multiple transactions run simultaneously without coordination, problems like dirty reads (reading another transaction's uncommitted data) or lost updates (one transaction overwriting another's changes without knowing) can occur. Understanding these failure modes is essential before tuning concurrency settings.</li>
+                    <li><strong>Isolation Levels</strong> — Isolation levels (<code>READ COMMITTED</code>, <code>REPEATABLE READ</code>, <code>SERIALIZABLE</code>) control how strictly transactions are isolated from each other's in-progress changes, trading off consistency against performance. Choosing the right level depends on the application's tolerance for anomalies — most applications use READ COMMITTED, while financial systems require SERIALIZABLE.</li>
+                    <li><strong>Locking (<code>FOR UPDATE</code>)</strong> — Explicit row-level locking, such as <code>SELECT ... FOR UPDATE</code>, prevents other transactions from modifying a row until the current transaction completes. This is SQL's direct mechanism for safe concurrent writes, analogous to a mutex in application code — and it's required whenever you read-then-write a value based on its current state.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The "lost update" problem — two concurrent transactions both reading a value, both computing a new value based on it, and both writing back — means one update silently overwrites the other without any error. This is the most common concurrency bug in web applications, causing incorrect inventory counts, double-bookings, and financial discrepancies. <code>SELECT ... FOR UPDATE</code> is the correct fix, and understanding why requires the foundational knowledge of isolation levels covered this week.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- Set the isolation level for a session
+SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+
+-- The "lost update" pattern — UNSAFE without locking:
+-- Session 1: SELECT quantity FROM inventory WHERE product_id = 5;  → 10
+-- Session 2: SELECT quantity FROM inventory WHERE product_id = 5;  → 10
+-- Session 1: UPDATE inventory SET quantity = 9 WHERE product_id = 5;
+-- Session 2: UPDATE inventory SET quantity = 9 WHERE product_id = 5;
+-- Result: quantity = 9, but TWO items were sold — should be 8!
+
+-- SAFE version: lock the row before reading to compute the update
+BEGIN;
+SELECT quantity FROM inventory
+WHERE product_id = 5
+FOR UPDATE;                          -- Row is now locked — other transactions wait
+
+UPDATE inventory
+SET quantity = quantity - 1
+WHERE product_id = 5;
+COMMIT;                               -- Lock released — next transaction can proceed
+
+-- Check current isolation level
+SHOW TRANSACTION ISOLATION LEVEL;</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Simulate a <strong>"lost update"</strong> by opening two concurrent database sessions, both reading and then updating the same inventory row without locking, and observe the incorrect result. Then fix it using <code>SELECT ... FOR UPDATE</code> in both sessions and confirm the result is now correct. Change the isolation level to SERIALIZABLE and document the behavioral difference.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 16-->
+
+        <div class="rm-card" id="week16">
+            <div class="rm-card-header">
+                <h2>Week 16 — Capstone: Three Progressive Mini Projects</h2>
+                <p>Synthesizing every concept learned into three complete, real database systems.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Synthesising every concept learned across all 16 weeks into three progressively complex, real database systems.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — Personal Library Tracker (Beginner)</h3>
+                <p>A normalized schema tracking books, authors, and loans — reinforcing Phases 1–2: schema basics, filtering, joins, and aggregation.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>SQL Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Schema design</td>
+                            <td><code>CREATE TABLE</code> for <code>books</code>, <code>authors</code>, <code>loans</code></td>
+                        </tr>
+                        <tr>
+                            <td>Data retrieval</td>
+                            <td><code>SELECT</code> with <code>JOIN</code> across all three tables</td>
+                        </tr>
+                        <tr>
+                            <td>Overdue tracking</td>
+                            <td><code>WHERE</code> with date comparison + <code>IS NULL</code> for unreturned loans</td>
+                        </tr>
+                        <tr>
+                            <td>Statistics</td>
+                            <td><code>GROUP BY</code> + <code>COUNT</code>/<code>AVG</code> for borrowing summaries</td>
+                        </tr>
+                        <tr>
+                            <td>Reusable reporting</td>
+                            <td><code>VIEW</code> for overdue books report</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A complete schema with CREATE TABLE scripts, INSERT statements loading sample data, JOIN queries showing books with authors and loan status, aggregate queries showing most borrowed books, and a VIEW for overdue loans. Document with an ER diagram and README. Build on <strong>Days 1–2</strong>.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — E-Commerce Order System (Intermediate)</h3>
+                <p>A multi-table schema with foreign keys, views, stored procedures, and transactions to safely place orders and update inventory atomically.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>SQL Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Normalized schema</td>
+                            <td><code>customers</code>, <code>products</code>, <code>orders</code>, <code>order_items</code> with foreign keys</td>
+                        </tr>
+                        <tr>
+                            <td>Order placement</td>
+                            <td>Transaction wrapping INSERT + inventory UPDATE atomically</td>
+                        </tr>
+                        <tr>
+                            <td>Inventory guard</td>
+                            <td>CHECK constraint + ROLLBACK when stock goes negative</td>
+                        </tr>
+                        <tr>
+                            <td>Reusable logic</td>
+                            <td>Stored procedure <code>place_order(customer_id, product_id, qty)</code></td>
+                        </tr>
+                        <tr>
+                            <td>Reporting</td>
+                            <td>VIEW for revenue per customer + indexes for performance</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A complete e-commerce database with schema, a <code>place_order</code> stored procedure that atomically updates inventory and creates the order, a CHECK constraint preventing negative inventory, indexes on all foreign keys, and reporting views. Build on <strong>Days 3–4</strong>.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Sales Analytics Dashboard Backend (Master)</h3>
+                <p>A reporting database backend using window functions, recursive CTEs, triggers, and isolation levels to power an analytics dashboard.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>SQL Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Running monthly totals</td>
+                            <td>Window function: <code>SUM() OVER (ORDER BY month)</code></td>
+                        </tr>
+                        <tr>
+                            <td>Product rankings</td>
+                            <td><code>RANK() OVER (PARTITION BY category ORDER BY revenue DESC)</code></td>
+                        </tr>
+                        <tr>
+                            <td>Category hierarchy</td>
+                            <td>Recursive CTE traversing a category tree for roll-up totals</td>
+                        </tr>
+                        <tr>
+                            <td>Audit trail</td>
+                            <td>Trigger logging all price changes to a <code>price_audit</code> table</td>
+                        </tr>
+                        <tr>
+                            <td>Concurrency safety</td>
+                            <td>REPEATABLE READ isolation for consistent dashboard snapshots</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>-- Running monthly revenue total using a window function
+SELECT order_month,
+       SUM(revenue) AS monthly_revenue,
+       SUM(SUM(revenue)) OVER (ORDER BY order_month) AS running_total
+FROM monthly_sales
+GROUP BY order_month
+ORDER BY order_month;</code></pre>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A complete analytics backend with: window function queries for running totals and rankings, a recursive CTE for the category hierarchy roll-up, a trigger automatically logging price changes to an audit table, and a documented decision on isolation level for the reporting queries. All queries wrapped in a <code>dashboard_queries.sql</code> file with comments explaining each technique. Build on <strong>Days 5–7</strong>. This is the capstone demonstrating mastery of the entire SQL curriculum.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–4</td>
+                        <td>Absolute Basics</td>
+                        <td>Write SELECT queries with filtering, sorting, pagination, and correct NULL handling</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>5–8</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Write joins, aggregations with GROUP BY/HAVING, subqueries, CASE expressions, and all data modification statements</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>9–12</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Design normalized schemas with foreign keys, import/export data, write ACID-compliant transactions, build stored procedures, and create performance-improving indexes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>13–16</td>
+                        <td>Master Level Concepts</td>
+                        <td>Build trigger-driven audit systems, compute hierarchies and sequences with recursive CTEs, perform row-level analytics with window functions, implement concurrency-safe locking, and complete three production database projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool / Resource</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PostgreSQL (postgresql.org)</td>
+                        <td>Primary database engine — most standards-compliant, best for learning</td>
+                    </tr>
+                    <tr>
+                        <td>pgAdmin / DBeaver</td>
+                        <td>GUI database clients for running queries and exploring schemas</td>
+                    </tr>
+                    <tr>
+                        <td>PostgreSQL Official Docs (postgresql.org/docs)</td>
+                        <td>Authoritative reference for all SQL features and functions</td>
+                    </tr>
+                    <tr>
+                        <td>SQLZoo (sqlzoo.net)</td>
+                        <td>Interactive SQL exercises from beginner to advanced</td>
+                    </tr>
+                    <tr>
+                        <td>Mode SQL Tutorial (mode.com/sql-tutorial)</td>
+                        <td>Practical SQL for data analysis with real datasets</td>
+                    </tr>
+                    <tr>
+                        <td>Use The Index, Luke (use-the-index-luke.com)</td>
+                        <td>Deep guide to SQL indexing and performance optimization</td>
+                    </tr>
+                    <tr>
+                        <td>explain.dalibo.com</td>
+                        <td>Visual PostgreSQL query plan analyzer — see how queries execute</td>
+                    </tr>
+                    <tr>
+                        <td>dbdiagram.io</td>
+                        <td>Free online ER diagram tool for documenting database schemas</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Always test UPDATE and DELETE statements with a <strong>SELECT query first</strong> using the same WHERE clause — verify you're targeting the right rows before making changes you may not be able to reverse.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — include the <code>CREATE TABLE</code> scripts, sample INSERT data, and all queries in a <code>.sql</code> file so anyone can reproduce your work.</li>
+                    <li>Use <strong><code>EXPLAIN ANALYZE</code></strong> on slow queries from Week 12 onward — understanding the query plan is the professional skill that separates SQL writers from SQL engineers.</li>
+                    <li>By Week 16, you should have three complete, documented database systems and the confidence to design, query, optimize, and maintain production-grade relational databases for any domain.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

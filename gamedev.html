@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Game Development - 15 Week Roadmap</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>3D Game Development with Unity &amp; C#</h1>
+        <p>Complete 15-Week Beginner-to-Advanced Roadmap — Build Real 3D Games from Scratch</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#capstone">Capstone</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Roadmap</h2>
+            <p>This roadmap takes a complete beginner to a confident, portfolio-ready Unity 3D game developer in <strong>15 weeks of full-time study</strong> (~35–40 hours/week). It is structured in five phases.</p>
+            <p><strong>Unity</strong> is the world's most widely used real-time 3D development engine, powering games across PC, console, mobile, VR, and web platforms. Notable games built with Unity include Hollow Knight, Cuphead, Hearthstone, Monument Valley, and Cities: Skylines.</p>
+            <p><strong>C#</strong> (pronounced "C-sharp") is Unity's primary scripting language. Skills you build in C# transfer directly to other domains including desktop app development (.NET), backend development (ASP.NET), and mobile development.</p>
+            <p><strong>Engine:</strong> Unity (LTS version) &nbsp;|&nbsp; <strong>Language:</strong> C# &nbsp;|&nbsp; <strong>Duration:</strong> 15 Weeks (Full-Time) &nbsp;|&nbsp; <strong>Focus:</strong> 3D Games (First-Person, Third-Person, Open World)</p>
+
+            <h3>5 Phases Overview</h3>
+            <ul>
+                <li><strong>Phase 1 (Weeks 1–2):</strong> C# programming fundamentals and Unity editor orientation.</li>
+                <li><strong>Phase 2 (Weeks 3–6):</strong> Core 3D mechanics — movement, physics, cameras, lighting, materials, and basic AI.</li>
+                <li><strong>Phase 3 (Weeks 7–10):</strong> Intermediate systems — UI, audio, scene management, animation, raycasting, and inventory.</li>
+                <li><strong>Phase 4 (Weeks 11–13):</strong> Advanced topics — procedural generation, save/load systems, shader basics, and performance optimization.</li>
+                <li><strong>Phase 5 (Weeks 14–15):</strong> Capstone game build, polish, WebGL publishing, and portfolio/interview preparation.</li>
+            </ul>
+
+            <p>By Week 15, you will have built approximately <strong>13 mini-projects</strong> and one complete, playable, published 3D capstone game — <strong>"EchoWaste,"</strong> a third-person survival exploration game set in a ruined open world.</p>
+        </div>
+
+
+        <!-- WEEK 1 -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — C# Programming Fundamentals</h2>
+                <p>Learn enough C# to read, understand, and write basic Unity scripts — becoming comfortable with variables, methods, conditions, loops, and classes.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>C# and .NET ecosystem</strong> — What C# is, how Unity uses it (Mono runtime), <code>Console.WriteLine()</code> vs Unity's <code>Debug.Log()</code>.</li>
+                    <li><strong>Variables and data types</strong> — Value types (<code>int</code>, <code>float</code>, <code>bool</code>, <code>char</code>), reference type <code>string</code>, <code>var</code> keyword, <code>const</code>/<code>readonly</code>, camelCase vs PascalCase.</li>
+                    <li><strong>Operators</strong> — Arithmetic, comparison (<code>==</code>, <code>!=</code>), logical (<code>&amp;&amp;</code>, <code>||</code>, <code>!</code>), compound assignment.</li>
+                    <li><strong>Control flow</strong> — <code>if</code>/<code>else if</code>/<code>else</code>, <code>switch</code>/<code>case</code>, ternary <code>? :</code>.</li>
+                    <li><strong>Loops</strong> — <code>for</code>, <code>while</code>/<code>do-while</code>, <code>foreach</code>, <code>break</code>/<code>continue</code>.</li>
+                    <li><strong>Methods (functions)</strong> — Defining, calling, parameters, return types, <code>void</code>, overloading.</li>
+                    <li><strong>OOP basics</strong> — Classes, objects, fields, properties (<code>get</code>/<code>set</code>), constructors, <code>public</code>/<code>private</code>/<code>protected</code>, static vs instance.</li>
+                    <li><strong>Collections</strong> — Arrays, <code>List&lt;T&gt;</code>, <code>Dictionary&lt;TKey, TValue&gt;</code>.</li>
+                    <li><strong>Inheritance &amp; polymorphism intro</strong> — Base/derived classes with <code>:</code>, <code>override</code>/<code>virtual</code>; why this matters (all scripts inherit from <code>MonoBehaviour</code>).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every Unity script is a C# class. Without understanding variables, methods, classes, and collections, you cannot read Unity documentation, understand tutorials, or fix your own bugs. Week 1 is the most important week in the roadmap — weaknesses here compound into every subsequent week.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>C# setup + variables + data types + operators; write 10 small expressions and log results.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Control flow — <code>if</code>/<code>else</code>/<code>switch</code>; build a "stat check" program.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Loops — <code>for</code>, <code>while</code>, <code>foreach</code>; loop that generates 10 random enemy names.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Methods — define 5 methods (damage calculator, level-up, health clamp); call them.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Classes — build <code>Player</code> class with health/mana/speed fields and <code>TakeDamage()</code>/<code>Heal()</code>/<code>LevelUp()</code> methods.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Collections — <code>List&lt;string&gt;</code> inventory, <code>Dictionary&lt;string, int&gt;</code> for quantities, array for hotbar.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Inheritance — <code>Enemy</code> base class; <code>Zombie</code>/<code>Skeleton</code> overriding <code>Attack()</code>; review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build a C# console "RPG Stat System" — <code>Character</code> class with name/health/attack/defense; methods <code>Attack(Character target)</code>, <code>Heal(int amount)</code>, <code>IsAlive()</code>.</li>
+                    <li>Build an <code>Inventory</code> class using <code>Dictionary&lt;string, int&gt;</code> — add/remove/display items.</li>
+                    <li>Build a <code>GameTimer</code> class that counts down from 60 and logs "Time's up!".</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A C# Console <strong>"Turn-Based Combat Simulator"</strong> — two <code>Character</code> objects (Player and Enemy) take turns attacking until one's health reaches zero; damage randomized within min/max range based on attack stat; console logs each turn; winner announced — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Confusing <code>=</code> (assignment) with <code>==</code> (comparison) — causes silent logic bugs.</li>
+                        <li>Forgetting <code>new</code> when creating objects and collections.</li>
+                        <li>Making all fields <code>public</code> by default — start with <code>private</code> and expose only what's needed.</li>
+                        <li>Skipping OOP because "it seems abstract" — this bites hard in Week 3.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Read every conditional out loud: "if health equals-equals zero" vs "health equals zero."</li>
+                        <li>Every <code>List</code>, <code>Dictionary</code>, custom class needs <code>new</code>.</li>
+                        <li>Default rule: fields are <code>private</code>. If Inspector needs to see it, use <code>[SerializeField] private</code>.</li>
+                        <li>Do the <code>Player</code>/<code>Enemy</code>/<code>Inventory</code> exercises — abstract concepts become concrete.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Microsoft C# Documentation — "C# Fundamentals" (learn.microsoft.com/dotnet/csharp)</li>
+                    <li>freeCodeCamp — "C# Tutorial for Beginners" (YouTube)</li>
+                    <li>Brackeys — "How to program in C#" playlist (YouTube, archived but available)</li>
+                    <li>Unity Learn — "Unity Essentials" pathway (learn.unity.com)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35–38 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 2  -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Unity Editor Deep Dive &amp; First 3D Scripts</h2>
+                <p>Navigate Unity's editor fluently, understand how GameObjects and components work, and write your first working 3D gameplay scripts.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Unity Editor layout</strong> — Scene view (3D navigation: right-click+WASD, F focus, alt+drag orbit), Game view, Hierarchy, Inspector, Project, Console.</li>
+                    <li><strong>GameObjects &amp; components</strong> — Creating GameObjects, adding/removing components, Transform (position/rotation/scale), parent-child.</li>
+                    <li><strong>First C# script</strong> — Creating a script, <code>MonoBehaviour</code> base class, <code>Start()</code> vs <code>Awake()</code>, <code>Update()</code>, <code>Debug.Log</code>/<code>LogWarning</code>/<code>LogError</code>.</li>
+                    <li><strong>Component access</strong> — <code>GetComponent&lt;T&gt;()</code>, caching in <code>Awake()</code>, <code>[SerializeField]</code> for private fields in Inspector.</li>
+                    <li><strong>Input System (Legacy intro)</strong> — <code>Input.GetKey/GetKeyDown</code>, <code>Input.GetAxis</code>, <code>Input.GetMouseButton</code>. (New Input System introduced in Week 4.)</li>
+                    <li><strong>3D Transform in code</strong> — <code>transform.position</code>, <code>Translate()</code>, <code>rotation</code>/<code>Quaternion</code> basics, <code>Rotate()</code>, <code>LookAt()</code>, <code>Vector3</code> (forward/up/right).</li>
+                    <li><strong>Time &amp; frame-rate independence</strong> — <code>Time.deltaTime</code>, <code>Time.time</code>, <code>Time.timeScale</code>.</li>
+                    <li><strong>Prefabs &amp; Instantiation</strong> — Creating prefabs, <code>Instantiate(prefab, position, rotation)</code>, <code>Destroy(gameObject, delay)</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The Unity editor is your primary tool for 13 more weeks. The <code>Update()</code> loop, <code>GetComponent&lt;T&gt;()</code>, <code>[SerializeField]</code>, <code>Transform</code>, <code>Vector3</code>, and <code>Time.deltaTime</code> are patterns you'll type thousands of times. Getting these automatic now means Week 3 can focus entirely on 3D mechanics.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Editor layout tour + navigation practice (fly mode, orbit, focus) + panel familiarity.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Create 5 GameObjects; experiment with Transform in Inspector; build a simple scene.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>First script — <code>MonoBehaviour</code>, <code>Start()</code>, <code>Update()</code>, <code>Debug.Log()</code>; attach to cube.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>[SerializeField]</code> + <code>GetComponent&lt;T&gt;()</code> + <code>Input.GetAxis</code> — move cube with arrow keys.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td><code>transform.Translate</code> + <code>Time.deltaTime</code> — smooth movement in all 3 axes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td><code>transform.Rotate</code> rotating object; <code>transform.LookAt()</code> turret facing player.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Prefabs + <code>Instantiate</code>/<code>Destroy</code> — spawn prefab on spacebar, destroy after 3s + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Make a sphere orbit around a cube using <code>transform.RotateAround()</code>.</li>
+                    <li>Build a "floating" script — GameObject bobs up/down using <code>Mathf.Sin(Time.time)</code>.</li>
+                    <li>Create a Prefab spawner instantiating random prefab from <code>List&lt;GameObject&gt;</code> every 2s using <code>InvokeRepeating()</code>.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"3D Object Showcase"</strong> scene — platform with 5 GameObjects each with unique script behavior: rotating cube, orbiting sphere, floating gem, bouncing ball (<code>Mathf.PingPong</code>), color-changing capsule (<code>Mathf.Sin</code> lerp between two colors) — well-organized hierarchy, <code>[SerializeField]</code> for parameters, pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Moving objects by setting <code>transform.position</code> directly without <code>Time.deltaTime</code> — frame-rate-dependent speed.</li>
+                        <li>Calling <code>GetComponent&lt;T&gt;()</code> inside <code>Update()</code> — very expensive.</li>
+                        <li>Script names with spaces or starting with numbers — must match class name exactly.</li>
+                        <li>Confusing Scene view (editing) with Game view (runtime) — edits during Play mode are lost.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Law of <code>Time.deltaTime</code>: If value changes per frame, multiply by <code>Time.deltaTime</code>.</li>
+                        <li>Rule: <code>GetComponent&lt;T&gt;()</code> goes in <code>Awake()</code> or <code>Start()</code>, stored in private field.</li>
+                        <li>Script file name = Class name. Both match exactly, including capitalization.</li>
+                        <li>Never edit Inspector values while in Play mode — always exit Play first.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Unity Learn — "Unity Essentials" and "Junior Programmer" pathways</li>
+                    <li>Brackeys — "How to make a Video Game in Unity" series (YouTube)</li>
+                    <li>Unity official documentation (docs.unity3d.com)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36–40 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 3  -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — 3D Physics: Rigidbody, Colliders &amp; Triggers</h2>
+                <p>Build physically realistic 3D interactions using Unity's physics engine — gravity, collisions, forces, and trigger zones.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Rigidbody</strong> — Mass/Drag/Angular Drag, <code>useGravity</code>, constraints, <code>AddForce()</code>, <code>velocity</code>, <code>MovePosition()</code>, <code>isKinematic</code>.</li>
+                    <li><strong>Colliders</strong> — BoxCollider, SphereCollider, CapsuleCollider, MeshCollider (never on moving objects — expensive); Physics Materials (bounciness/friction).</li>
+                    <li><strong>Collision callbacks</strong> — <code>OnCollisionEnter/Stay/Exit</code>; accessing <code>collision.gameObject</code>, <code>collision.contacts</code>, <code>relativeVelocity</code>.</li>
+                    <li><strong>Trigger colliders</strong> — <code>Is Trigger</code> checkbox; <code>OnTriggerEnter/Stay/Exit</code>; uses: collectibles, checkpoints, trap zones.</li>
+                    <li><strong>Tags &amp; Layers in physics</strong> — <code>other.CompareTag("Player")</code> (more efficient than <code>==</code>); Physics Layer Collision Matrix.</li>
+                    <li><strong><code>FixedUpdate()</code> vs <code>Update()</code></strong> — ALL physics in <code>FixedUpdate()</code>; <code>Time.fixedDeltaTime</code>.</li>
+                    <li><strong>Raycasting basics</strong> — <code>Physics.Raycast</code>, <code>Debug.DrawRay()</code> for visualization; uses: ground detection, shooting, mouse-over.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Physics is the backbone of every 3D game. Character grounding, object pickup, bullet collision, death triggers, and area effects all rely on this week's systems. <code>OnTriggerEnter</code> and <code>Raycast</code> together account for a large proportion of all gameplay interactions in Unity 3D games.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Rigidbody — add to cube; experiment with mass/drag; <code>AddForce</code> on spacebar.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Collider shapes — compare Box/Sphere/Capsule/Mesh; Physics Material (bouncy ball).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>OnCollisionEnter</code> — change color when hitting floor; destroy on high-impact.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Trigger zones — <code>[SerializeField]</code> area logging "Player entered"; healing zone.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Tags + Layer Collision Matrix — only Player triggers zone, not enemies.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td><code>FixedUpdate</code> physics vs <code>Update</code> — observe jitter with framerate cap.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Raycasting — ray from camera center detecting what it points at + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build a "pinball-style" ramp scene using Physics Materials, forces, collision callbacks.</li>
+                    <li>Create "lava floor" trigger that kills any GameObject tagged "Player".</li>
+                    <li>Use Raycast from player downward to detect if grounded.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Physics Obstacle Course"</strong> — 3D course with: rolling ball controlled by <code>AddForce</code>, bounce pads (physics material + trigger), teleport zone (trigger that moves ball), destructible wall (objects destroyed on high-velocity collision), finish line trigger logging time — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Putting physics code in <code>Update()</code> instead of <code>FixedUpdate()</code> — jittery physics.</li>
+                        <li>Adding Rigidbody + MeshCollider to complex moving object — extremely expensive.</li>
+                        <li>Using <code>other.tag == "Player"</code> instead of <code>other.CompareTag("Player")</code>.</li>
+                        <li>Forgetting <code>Is Trigger</code> on trigger collider — actual physical collision instead.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Absolute rule: Rigidbody + physics in <code>FixedUpdate()</code>. Rendering + input in <code>Update()</code>.</li>
+                        <li>Moving objects use primitive colliders (Box/Sphere/Capsule), never MeshCollider.</li>
+                        <li>Always use <code>CompareTag()</code> for tag comparison.</li>
+                        <li>If <code>OnTriggerEnter</code> isn't firing: check <code>Is Trigger</code> enabled and at least one object has Rigidbody.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Unity official Physics documentation</li>
+                    <li>Brackeys — "PHYSICS in Unity" (YouTube)</li>
+                    <li>GameDevBeginner.com — Raycast tutorial series</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 37–40 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 4  -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — 3D Character Controller: Movement, Camera &amp; New Input System</h2>
+                <p>Build a complete, polished 3D player character with smooth movement and a functional third-person or first-person camera using Unity's Character Controller and New Input System.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>New Input System</strong> — Install via Package Manager; Input Actions asset; Action Maps/Actions/Bindings; <code>PlayerInput</code> component; <code>InputAction.ReadValue&lt;Vector2&gt;()</code>; why over Legacy.</li>
+                    <li><strong>CharacterController component</strong> — <code>controller.Move(velocity * Time.deltaTime)</code>, <code>isGrounded</code>, Slope Limit, Step Offset; trade-offs vs Rigidbody.</li>
+                    <li><strong>Third-Person Movement</strong> — Reading input → world-space direction; movement relative to camera; character rotation with <code>Quaternion.LookRotation</code>; manual gravity (CharacterController doesn't apply).</li>
+                    <li><strong>Jumping</strong> — Jump input detection; upward velocity + gravity over time; coyote time intro.</li>
+                    <li><strong>Camera Systems (Cinemachine)</strong> — Install via Package Manager; <code>CinemachineVirtualCamera</code>; Third-Person Follow; <code>CinemachineFreeLook</code>; first-person camera child of player.</li>
+                    <li><strong>Mouse look</strong> — Reading mouse delta; horizontal player rotation (Y axis); vertical camera rotation (X axis) with clamping; <code>Cursor.lockState = CursorLockMode.Locked</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Player movement and camera feel are the first things every player experiences. A character that feels responsive and a camera that doesn't fight the player are the difference between a playable game and an unplayable prototype. Cinemachine is Unity's professional, production-ready camera system.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>New Input System setup — install, Input Actions asset, bind WASD + jump.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>CharacterController — attach to capsule; basic WASD movement without gravity.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Add manual gravity — <code>velocity.y -= gravity * Time.deltaTime</code>; test <code>isGrounded</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Movement direction relative to camera; character rotation to face movement smoothly.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Jump implementation — jump on button press only when grounded; tweak feel.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Cinemachine — install; set up <code>CinemachineFreeLook</code> following player.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Polish — smooth rotation, cursor lock, camera collision + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Add sprint (hold Shift to move faster, reduce FOV slightly with Cinemachine Brain).</li>
+                    <li>Add crouch (CharacterController center Y offset + reduced speed).</li>
+                    <li>Build simple obstacle course; time how long character takes to navigate.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"3D Character Movement Demo"</strong> — polished capsule that walks, runs (sprint), jumps, and crouches on varied terrain with ramps/platforms/gaps; <code>CinemachineFreeLook</code> third-person camera; smooth rotation to face movement; all input via New Input System; all parameters via <code>[SerializeField]</code> — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using Legacy Input System in new projects — always use New Input System.</li>
+                        <li>Not implementing manual gravity with CharacterController (character floats).</li>
+                        <li>Putting camera inside player object without Cinemachine — gimbal lock and clipping.</li>
+                        <li>Rotating on all axes instead of only Y for horizontal (character tips over).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>CharacterController requires manual gravity: <code>velocity.y += Physics.gravity.y * Time.deltaTime</code>.</li>
+                        <li>Cinemachine handles camera collisions/smoothing that manual cameras get wrong — use it.</li>
+                        <li>Horizontal rotation: only Y axis. Vertical look: only camera's X axis.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Unity Learn — "3D Game Kit" and "Starter Assets — Third Person Character Controller"</li>
+                    <li>Brackeys — "THIRD PERSON MOVEMENT in Unity" (YouTube)</li>
+                    <li>Unity official New Input System documentation</li>
+                    <li>Cinemachine documentation</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–44 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 5  -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — 3D Environments: Terrain, Lighting &amp; Materials</h2>
+                <p>Build believable 3D game worlds using Unity's Terrain system, global lighting, and physically-based materials.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Unity Terrain</strong> — Create terrain; tools (Raise/Lower, Smooth, Paint Holes); height maps; texture painting (multiple layers); details (grass, rocks); trees (SpeedTree, mesh); settings.</li>
+                    <li><strong>ProBuilder (intro)</strong> — Install via Package Manager; build simple geometry without Blender; UVs and textures; when to use vs Terrain vs imported meshes.</li>
+                    <li><strong>Lighting in Unity 3D</strong> — Light types (Directional, Point, Spot, Area); intensity/color/range/shadows; Global Illumination concept; baked vs real-time vs mixed; Light Probes; Reflection Probes; Ambient light; Skybox.</li>
+                    <li><strong>Lighting baking</strong> — <code>Window → Rendering → Lighting</code>; marking objects static; baking process; why baked is critical for performance.</li>
+                    <li><strong>Materials &amp; Shaders</strong> — Material = link between Mesh and Shader; Unity Standard Shader (Albedo, Metallic, Smoothness, Normal Map, Height Map, Emission); PBR; Standard Specular vs Metallic setup.</li>
+                    <li><strong>Skybox</strong> — Assigning skybox material; 6-sided vs procedural; free HDRI from Poly Haven.</li>
+                    <li><strong>Fog</strong> — Exponential vs linear; using for mood and performance.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A beautiful, well-lit 3D environment turns a grey tech demo into a game world players want to explore. Lighting and materials account for the majority of a game's visual quality — a well-lit scene with basic meshes looks better than a poorly lit scene with high-detail models.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Terrain creation + height sculpting; build valley, hill, cliff formation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Terrain texture painting (3 layers: grass, dirt, rock); trees and grass details.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>ProBuilder — build ruined stone building or bunker interior on terrain.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Lighting — Directional (sun), 3 Point Lights (interior), Skybox; adjust for time-of-day.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Static objects + baked lightmaps; bake scene; compare before/after.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Materials — create 5 materials (stone, metal, wood, glass, ground) using PBR; apply.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Reflection Probes + Light Probes + Fog + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Day-to-night lighting switch — script adjusting Directional Light rotation/color over time.</li>
+                    <li>Create scene with 3 moods using only lighting: forest at dawn, cave interior, city at night.</li>
+                    <li>Import free HDRI skybox from Poly Haven; set up with Reflection Probe.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"3D Game Environment"</strong> — complete outdoor terrain scene (~500x500 units) with varied height, 3 texture layers, trees and grass, ProBuilder ruined structure, correctly baked lighting with Directional sun, fog effect, at least 5 custom materials — Week 4 character controller dropped in for exploration — pushed to GitHub with screenshots.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using real-time shadows on every light — severe performance cost.</li>
+                        <li>Not marking objects as Static before baking — bake has no effect.</li>
+                        <li>Painting terrain at maximum resolution — crashes or long bake times.</li>
+                        <li>Ignoring Light Probes — dynamic objects look unlit in baked scenes.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Rule: static geometry → baked lighting. Moving objects → real-time + Light Probes.</li>
+                        <li>Before baking, select all environment objects and enable Static.</li>
+                        <li>Lower resolution lightmaps during dev (32/64); 512/1024 only for final builds.</li>
+                        <li>Place Light Probe Group around player's movement area — essential for baked scenes.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Unity Learn — "Environment Creation" pathway</li>
+                    <li>Poly Haven (polyhaven.com) — free CC0 HDRI textures, materials, models</li>
+                    <li>Brackeys — "How to make GOOD Looking Environments in Unity" (YouTube)</li>
+                    <li>Unity Asset Store — "Starter Assets" and free terrain packs</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 6   -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Basic AI: NavMesh, Pathfinding &amp; Enemy Behaviour</h2>
+                <p>Build enemies and NPCs that navigate the 3D world intelligently using Unity's NavMesh system and implement state-based AI behaviour.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>NavMesh</strong> — Walkable surface representation; bake via <code>Window → AI → Navigation → Bake</code>; static marking; areas and costs; <code>NavMeshObstacle</code> for moving blockers.</li>
+                    <li><strong>NavMeshAgent</strong> — <code>SetDestination(Vector3)</code>; <code>remainingDistance</code>, <code>stoppingDistance</code>; <code>speed</code>, <code>acceleration</code>, <code>angularSpeed</code>; <code>isStopped</code>.</li>
+                    <li><strong>State Machine</strong> — States: Idle, Patrol, Chase, Attack, Dead; <code>enum EnemyState</code>; <code>switch</code> for transitions; distance checks with <code>Vector3.Distance</code>.</li>
+                    <li><strong>Patrol</strong> — Waypoint system (<code>List&lt;Transform&gt;</code>); cycling waypoints; waiting with <code>WaitForSeconds</code> coroutine.</li>
+                    <li><strong>Detection &amp; Chase</strong> — <code>Physics.OverlapSphere</code> detection radius; line-of-sight Raycast; chase by setting destination every frame.</li>
+                    <li><strong>Attack</strong> — Range check with <code>Vector3.Distance</code>; cooldown using <code>Time.time</code>; <code>player.GetComponent&lt;Health&gt;().TakeDamage(damage)</code>.</li>
+                    <li><strong>Coroutines</strong> — <code>IEnumerator</code> + <code>StartCoroutine()</code>; <code>yield return new WaitForSeconds()</code>, <code>yield return null</code>; uses: attack anims, timed events, spawn delays.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Enemies are in almost every 3D game. NavMesh-based pathfinding is the standard Unity approach used in professional games. The state machine pattern scales to complex AI in later projects — it's the foundation of every enemy AI system regardless of game genre.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>NavMesh bake on flat terrain + 1 corridor; <code>NavMeshAgent</code> moving to static target.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Waypoint patrol with <code>List&lt;Transform&gt;</code>; coroutine wait at each point.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>OverlapSphere</code> detection; transition to Chase when player detected.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Line-of-sight Raycast — enemy only chases if no wall between.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Attack state — stop within attack range; deal damage on cooldown.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Full state machine: Idle → Patrol → Chase → Attack → Dead.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td><code>NavMeshObstacle</code> on a door + enemy re-bake + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build flanking enemy that runs to a different side of player before attacking.</li>
+                    <li>Build "scared" enemy that runs away when health is low.</li>
+                    <li>Build multiple enemy types with different speeds/ranges/damage using base <code>Enemy</code> class.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>An <strong>"Enemy AI Arena"</strong> — walled arena with NavMesh baked, 3 enemy types (Patrol Guard, Aggressive Chaser, Ranged Shooter), Week 4 character as player, enemies with Health system (<code>TakeDamage()</code>), simple kill counter UI — enemies respawn after 5s with <code>Instantiate</code>/<code>Destroy</code> + coroutine — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Baking NavMesh before marking objects as static — walkable surface generates incorrectly.</li>
+                        <li>Calling <code>agent.SetDestination()</code> every frame when destination rarely changes.</li>
+                        <li>Not stopping NavMeshAgent before destroying enemy — NavMesh error in console.</li>
+                        <li>State machine growing into unreadable if/else chain — use <code>switch</code>.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>NavMesh workflow: mark static → bake → add NavMeshAgent → set destination → test.</li>
+                        <li>Call <code>SetDestination</code> on a 0.2s timer (<code>InvokeRepeating</code>) rather than every frame.</li>
+                        <li>Before destroying enemy: <code>agent.isStopped = true; agent.enabled = false;</code> then <code>Destroy()</code>.</li>
+                        <li>Enum state machine with <code>switch</code> — each case handles one state cleanly.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Unity official NavMesh documentation</li>
+                    <li>Brackeys — "ENEMY AI in Unity" (YouTube)</li>
+                    <li>Unity Learn — "Beginner Gameplay Scripting" pathways</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 7   -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — User Interface: HUD, Menus &amp; Health Systems</h2>
+                <p>Build a complete game UI — HUD, main menu, pause menu, and game over screen — and connect them to real gameplay systems.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Unity UI (Canvas)</strong> — Canvas render modes (Screen Space Overlay/Camera, World Space); RectTransform (anchoring, pivot); Canvas Scaler for multi-resolution.</li>
+                    <li><strong>Core UI elements</strong> — <code>Text (TMP)</code>, <code>Image</code> (sliced for health bars), <code>Button</code> (onClick), <code>Slider</code>, <code>Panel</code>.</li>
+                    <li><strong>TextMeshPro</strong> — Why over legacy Text (sharper); Install TMP Essentials; <code>TMP_Text</code> type; runtime update.</li>
+                    <li><strong>Health System</strong> — <code>Health</code> component with <code>currentHealth</code>, <code>maxHealth</code>, <code>TakeDamage()</code>, <code>Heal()</code>, <code>Die()</code>; <code>UnityEvent</code> for loose coupling to UI; screen flash on damage.</li>
+                    <li><strong>HUD elements</strong> — Health bar, stamina bar, ammo count (TMP), crosshair, minimap (Render Texture from second camera).</li>
+                    <li><strong>Main Menu scene</strong> — Separate scene; <code>SceneManager.LoadScene</code>; Play/Settings/Quit; <code>Application.Quit()</code>.</li>
+                    <li><strong>Pause Menu</strong> — <code>Time.timeScale = 0</code>; resume/settings/main menu; Escape key toggle; unpause with <code>Time.timeScale = 1</code>.</li>
+                    <li><strong>Game Over / Win Screen</strong> — Detection + overlay panel; restart with <code>SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex)</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> UI connects the player to the game. A game without a health bar, pause menu, or main menu is an incomplete experience. <code>SceneManager.LoadScene</code> is the gateway to multi-scene game structure — the foundation of every project from this week onward.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Canvas + Canvas Scaler + RectTransform anchoring + TextMeshPro setup.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Health component (<code>TakeDamage</code>, <code>Heal</code>, <code>Die</code>) + Slider health bar via <code>UnityEvent</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Full HUD — health bar, stamina bar, ammo count TMP, centered crosshair.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Main Menu scene — Play/Quit buttons, <code>SceneManager.LoadScene</code>, background image.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Pause Menu — Escape toggle, <code>Time.timeScale</code>, resume/quit.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Game Over screen — death detection → overlay → restart/main menu.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Minimap (Render Texture) + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Add damage number popup (world-space canvas, floats up + fades using coroutine).</li>
+                    <li>Build settings menu with volume slider connected to <code>AudioListener.volume</code>.</li>
+                    <li>Build animated health bar smoothly lerping to new value with <code>Mathf.Lerp</code>.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Complete Game UI Demo"</strong> — integrating Week 4 character + Week 6 enemy arena with: full HUD (health, stamina, ammo, crosshair), Main Menu scene with Play/Quit, Pause Menu (Escape), Game Over triggered by death, Win triggered by killing all enemies — proper multi-scene project with <code>SceneManager</code> — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Building UI without Canvas Scaler — breaks on different resolutions.</li>
+                        <li>Using legacy <code>Text</code> instead of TextMeshPro — blurry text.</li>
+                        <li>Updating UI text in <code>Update()</code> every frame with same value.</li>
+                        <li>Not using <code>Time.timeScale = 0</code> for pausing — game continues behind menu.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>First thing on any Canvas: Canvas Scaler → "Scale with Screen Size" → reference 1920x1080.</li>
+                        <li>Use <code>TMP_Text</code> everywhere — install TMP Essentials when prompted.</li>
+                        <li>Update UI in response to events, not by polling every frame.</li>
+                        <li><code>Time.timeScale = 0</code> pauses physics + Update. Never forget to restore to 1.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Unity Learn — "UI Design with Unity" pathway</li>
+                    <li>Brackeys — "MAIN MENU in Unity" and "HEALTH BAR in Unity" (YouTube)</li>
+                    <li>TextMeshPro official documentation</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–40 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Audio: Sound Effects, Music &amp; 3D Spatial Audio</h2>
+                <p>Implement a complete audio system — background music, spatial 3D sound effects, audio management, and dynamic audio triggers.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Unity Audio basics</strong> — <code>AudioSource</code> (volume, pitch, loop, spatial blend); <code>AudioListener</code> (Unity's "ear", on Main Camera); <code>AudioClip</code> (.wav/.mp3/.ogg); <code>Play()</code>/<code>Stop()</code>/<code>PlayOneShot()</code>.</li>
+                    <li><strong>2D vs 3D audio (<code>spatialBlend</code>)</strong> — 0 = 2D (music, UI); 1 = 3D (in-world); <code>minDistance</code>/<code>maxDistance</code>; rolloff modes.</li>
+                    <li><strong>Audio Manager (Singleton)</strong> — Singleton pattern; <code>DontDestroyOnLoad(gameObject)</code>; <code>AudioManager.Instance.PlaySFX(clip)</code>; music crossfade coroutine.</li>
+                    <li><strong>Procedural &amp; adaptive audio</strong> — Pitch variation for repeated sounds; volume variation; audio trigger zones.</li>
+                    <li><strong>Footsteps system</strong> — Raycast downward for surface; different clips per surface (grass/stone/wood/metal); step timer based on movement speed.</li>
+                    <li><strong>Reverb zones</strong> — <code>AudioReverbZone</code> for natural reverb (cave echo, room reverb).</li>
+                    <li><strong>Mixer &amp; categories</strong> — <code>Audio Mixer</code> asset; groups (Master/Music/SFX/Voice); routing AudioSources; volume control with <code>mixer.SetFloat()</code>; save with <code>PlayerPrefs</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Audio is the single most underrated element of game feel. A game with great audio and mediocre visuals consistently feels better than the reverse. 3D spatial audio is uniquely powerful in first-person and third-person games — the sound of footsteps approaching from behind, distant gunfire, and echoing caves all use this week's systems.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td><code>AudioSource</code> on fireplace — loop ambient fire; spatial 3D blend test.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td><code>PlayOneShot</code> for non-looping SFX (button click, jump, landing).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Audio Manager Singleton — <code>DontDestroyOnLoad</code> + <code>PlaySFX()</code>/<code>PlayMusic()</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Music crossfade coroutine — fade out current, fade in new on scene load.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Footstep system — Raycast surface detection + multiple clips + step timer.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Audio Mixer — Master/Music/SFX groups + settings menu volume + <code>PlayerPrefs</code> save.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Reverb zone in cave/tunnel + random pitch variation + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build audio "zone system" — trigger areas crossfading between outdoor and indoor ambience.</li>
+                    <li>Add pitch-varied footsteps to Week 4 character based on surface detection.</li>
+                    <li>Add heartbeat SFX that gets louder and faster as player health decreases.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Integrate full audio into existing prototype (Weeks 4–7) — background music with crossfade between menu/gameplay, spatial 3D SFX for enemy footsteps/attacks, player footsteps on multiple surfaces, heartbeat SFX tied to health, Audio Mixer groups with settings menu volume slider saved via <code>PlayerPrefs</code> — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>audioSource.Play()</code> for short SFX — cuts off previous sound.</li>
+                        <li>Setting <code>spatialBlend = 1</code> on background music — sounds quieter on one side.</li>
+                        <li>Audio Manager getting duplicated on scene reload (missing singleton check).</li>
+                        <li>Not setting min/max distance on 3D audio — sound audible across entire level.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Short SFX: <code>PlayOneShot()</code>. Looping: <code>audioSource.loop = true; Play()</code>.</li>
+                        <li>Music: <code>spatialBlend = 0</code> always. In-world: <code>spatialBlend = 1</code> with min/max distance.</li>
+                        <li>Singleton check: <code>if (Instance != null &amp;&amp; Instance != this) { Destroy(gameObject); return; }</code>.</li>
+                        <li>Every 3D AudioSource: set <code>maxDistance</code> to logical hearing range.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>freesound.org — free Creative Commons sound effects</li>
+                    <li>Pixabay.com/music — free music tracks</li>
+                    <li>Unity Learn — "Audio in Unity" section</li>
+                    <li>Brackeys — "SOUND MANAGER in Unity" (YouTube)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36–38 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 9  -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Animation: Animator, Blend Trees &amp; Rigged Characters</h2>
+                <p>Bring 3D characters to life with animation — walking, running, jumping, attacking — using Unity's Animator Controller and imported character rigs.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Importing characters</strong> — FBX format; free rigged characters from Mixamo (Adobe, free account); import settings (Humanoid rig, Avatar, Apply Root Motion).</li>
+                    <li><strong>Animator Controller</strong> — States = animation clips; transitions; conditions; parameters (<code>Float</code>, <code>Int</code>, <code>Bool</code>, <code>Trigger</code>); Has Exit Time; setting via scripts (<code>SetFloat</code>, <code>SetBool</code>, <code>SetTrigger</code>).</li>
+                    <li><strong>Blend Trees</strong> — 1D (single float, e.g., speed: idle/walk/run); 2D (two axes, e.g., strafe + forward); Locomotion Blend Tree for player.</li>
+                    <li><strong>Animation Layers</strong> — Base Layer (full body); Upper body layer for shooting while walking; weights and Avatar Masks.</li>
+                    <li><strong>Root Motion vs Script-Driven</strong> — Root motion moves character via animation; script-driven moves via code with animation playing in place; when to use each.</li>
+                    <li><strong>Animation Events</strong> — Trigger code at specific frame; uses: footstep sounds, attack hit detection, VFX spawning.</li>
+                    <li><strong>IK (Inverse Kinematics intro)</strong> — <code>OnAnimatorIK()</code>; <code>animator.SetIKPosition()</code> for foot placement on uneven terrain.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A character that glides across the ground or T-poses is immediately immersion-breaking. Animation is what makes characters feel alive. Blend Trees for locomotion and Animation Events for gameplay-triggered VFX/sound are used in virtually every 3D character in every commercial Unity game.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Download character from Mixamo; import to Unity with Humanoid rig; test in scene.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Animator Controller — Idle and Walk states; transition with Bool parameter.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>1D Blend Tree — Idle/Walk/Run based on <code>Speed</code> float from <code>velocity.magnitude</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Jump Trigger — any state → Jump → Idle; sync with <code>isGrounded</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Attack animation — trigger from mouse click; Animation Event at hit frame calls <code>DealDamage()</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Upper Body layer + Avatar Mask — shoot while walking (legs animate, upper body overlays).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>IK intro — foot IK on sloped terrain + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build 2D Blend Tree for strafing character (left/right while facing forward).</li>
+                    <li>Add Death animation triggered by Health=0, destroy GameObject after clip ends.</li>
+                    <li>Create enemy with complete Animator Controller (Idle/Walk/Attack/Death).</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Replace Week 4 capsule with Mixamo character — complete Locomotion Blend Tree (Idle/Walk/Run), Jump, Attack animations; footstep Animation Events; upper body layer for aiming; enemy also fully animated (Idle/Walk/Attack/Death) — integrated with Week 6 enemy AI and Week 7 HUD — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Not setting Rig to Humanoid on import — Blend Trees and Avatars only work with Humanoid.</li>
+                        <li>Leaving "Has Exit Time" on attack/jump transitions — character finishes idle before jumping.</li>
+                        <li>Using Root Motion with <code>CharacterController</code> — character moves twice.</li>
+                        <li>Setting animator parameters in <code>Update()</code> without caching Animator reference.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always set Rig to Humanoid on import settings of any character.</li>
+                        <li>For jump/attack/death: turn OFF "Has Exit Time"; condition-based only.</li>
+                        <li>With <code>CharacterController</code>: set "Apply Root Motion" to false; move via script.</li>
+                        <li>Cache Animator in <code>Awake()</code>: <code>animator = GetComponent&lt;Animator&gt;();</code>.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Mixamo (mixamo.com) — free rigged characters and animations</li>
+                    <li>Unity Learn — "Getting Started with Animation" pathway</li>
+                    <li>Brackeys — "ANIMATIONS in Unity" (YouTube)</li>
+                    <li>Unity Animation documentation</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–44 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 10  -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Raycasting, Interaction &amp; Inventory System</h2>
+                <p>Build an interactive 3D world — players examine, pick up, use objects via raycasting — and implement a fully functional inventory system.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Advanced Raycasting</strong> — <code>Physics.Raycast</code> with <code>LayerMask</code>; <code>Physics.SphereCast</code>; <code>Physics.OverlapSphere</code>; mouse-to-world with <code>Camera.main.ScreenPointToRay</code>; <code>RaycastAll()</code>.</li>
+                    <li><strong>Interaction system (interface-based)</strong> — <code>IInteractable</code> interface with <code>Interact()</code> method; any interactable implements it; clean decoupled design; "Press E to Pick Up" prompt UI.</li>
+                    <li><strong>Pickup system</strong> — <code>ItemPickup : MonoBehaviour, IInteractable</code>; on <code>Interact()</code>: add to inventory, destroy/disable; different item types via inheritance or ScriptableObjects.</li>
+                    <li><strong>ScriptableObjects for item data</strong> — <code>ItemData : ScriptableObject</code> defines name/icon/description/weight; lives as project asset; easy to edit; create instances in Editor.</li>
+                    <li><strong>Inventory system</strong> — <code>Inventory</code> class with <code>List&lt;ItemData&gt; items</code>; <code>AddItem()</code>, <code>RemoveItem()</code>, <code>HasItem()</code>, <code>UseItem()</code>; stack-based with <code>Dictionary&lt;ItemData, int&gt;</code>.</li>
+                    <li><strong>Inventory UI</strong> — Panel toggled with Tab; dynamic slot generation via <code>Instantiate(slotPrefab)</code> in GridLayoutGroup; <code>ItemSlot</code> script for icon and quantity; tooltip on hover.</li>
+                    <li><strong>Using items</strong> — Health potion → <code>player.health.Heal(amount)</code> → remove; key item → <code>inventory.HasItem(keyItem)</code> to unlock door.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Interactive objects and inventory systems appear in the majority of 3D games — RPGs, survival, shooters (ammo pickup), puzzle games. The <code>IInteractable</code> interface pattern avoids spaghetti code. ScriptableObjects for item data is a Unity best practice that scales to large item databases.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Raycasting with LayerMask on "Interactable" layer; <code>Debug.DrawRay</code> to visualize.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td><code>IInteractable</code> interface + interaction prompt UI ("Press E to interact").</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>ItemPickup</code> implementing <code>IInteractable</code>; picking up disables world object.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>ItemData</code> ScriptableObject — create 5 item assets (potion, key, sword, shield, torch).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td><code>Inventory</code> class with <code>List&lt;ItemData&gt;</code> + add/remove/has methods.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Inventory UI panel — Tab toggle, GridLayoutGroup, instantiated <code>ItemSlot</code> prefabs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Item use (health potion) + key-to-door interaction + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build interactable door that only opens if player has matching key in inventory.</li>
+                    <li>Add item tooltips that appear when hovering inventory slot.</li>
+                    <li>Build chest that opens (animation), reveals items, adds to inventory on interaction.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Dungeon Exploration"</strong> mini-game — ProBuilder dungeon corridor with 10 pickups (health potions, 2 keys, weapon), 2 locked doors (require key), a chest, enemy guarding exit; full inventory UI (Tab); item use (health potion heals player) — all built on Weeks 4–9 systems — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Not using LayerMask on interaction Raycast — hits invisible colliders, triggers, UI.</li>
+                        <li>Storing item data on pickup GameObject instead of ScriptableObjects — doesn't scale.</li>
+                        <li>Hard-coding inventory slot count instead of generating dynamically — breaks when count changes.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Every interaction Raycast should have specific LayerMask set to only "Interactable" layer.</li>
+                        <li>Item data belongs in ScriptableObject assets — not on MonoBehaviours in scene.</li>
+                        <li>Generate slots dynamically: clear container, then <code>Instantiate(slotPrefab)</code> for each item.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Unity Learn — "Scriptable Objects Introduction"</li>
+                    <li>Brackeys — "INVENTORY SYSTEM in Unity" (YouTube)</li>
+                    <li>Jason Weimann — "IInteractable Interface Tutorial" (YouTube)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–44 hours</p>
+            </div>
+        </div>
+
+        <!--  WEEK 11 -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Procedural Generation &amp; Open World Techniques</h2>
+                <p>Generate game content algorithmically — terrain, object placement, dungeons — and learn streaming and LOD techniques for open-world performance.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Procedural terrain with Perlin Noise</strong> — <code>Mathf.PerlinNoise(x, y)</code>; generating height map; applying to procedural Mesh; <code>Terrain.SetHeights()</code> at runtime; octaves, lacunarity, persistence.</li>
+                    <li><strong>Procedural object scatter</strong> — Placing trees/rocks/props based on terrain height and slope; rejection sampling; Poisson Disk Sampling intro.</li>
+                    <li><strong>Procedural dungeon generation</strong> — Binary Space Partitioning (BSP); room-and-corridor generation using <code>List&lt;Rect&gt;</code>; instantiating room prefabs connected by corridors.</li>
+                    <li><strong>Level of Detail (LOD)</strong> — <code>LOD Group</code> component; switching between high/medium/low-poly based on camera distance; creating LOD levels manually.</li>
+                    <li><strong>Occlusion Culling</strong> — Not rendering objects hidden behind others; setup via <code>Window → Rendering → Occlusion Culling → Bake</code>; Occlusion Areas.</li>
+                    <li><strong>Chunk-based world loading</strong> — Dividing world into chunks; loading/unloading based on player position; <code>Additive</code> scene loading with <code>SceneManager.LoadSceneAsync()</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Procedural generation is what makes open-world, roguelike, and survival games feel different every time. LOD and Occlusion Culling are not optional extras — they're required for any open-world scene to run at playable framerates. This week gives you techniques used in games like Minecraft (procedural terrain), No Man's Sky (procedural everything), and Subnautica (chunk loading).</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Perlin Noise 2D — generate texture showing noise as grey pixels; adjust scale/octaves.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Apply Perlin to generate terrain heights: <code>Terrain.SetHeights()</code> with noise array.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Procedural mesh generation — flat plane from vertices/triangles; apply Perlin for height.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Procedural object scatter — place 200 trees/rocks based on height threshold and slope.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>BSP dungeon generator — create <code>Room</code> objects, connect with corridors, instantiate prefabs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>LOD Group — create 3 LOD levels for tree mesh; observe draw call reduction.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Occlusion Culling bake + additive chunk loading intro + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build runtime terrain re-generator: button generates new terrain with random seed each press.</li>
+                    <li>Add biome-based texture painting (height &lt; X = sand, X–Y = grass, above Y = snow).</li>
+                    <li>Add seed system to dungeon generator so same seed produces same dungeon.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Procedural Open World"</strong> demo — 512x512 unit world generated at runtime using Perlin with 3 octaves; biome-based texture painting; procedurally scattered trees/rocks/ruins; LOD applied to all large assets; Occlusion Culling baked; Week 4 character drops in for exploration; frame rate monitored with Profiler — pushed to GitHub with Profiler screenshots.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Generating procedural terrain without seeding — regeneration produces uncontrolled results.</li>
+                        <li>Not using LOD on procedurally scattered objects — 200 high-poly trees tanks framerate.</li>
+                        <li>Building procedural dungeons without boundary check — rooms overlap or go outside area.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always expose <code>seed</code> variable and use <code>Random.InitState(seed)</code> before generation.</li>
+                        <li>Any object placed in large numbers (trees, rocks, grass) needs LOD Group.</li>
+                        <li>Room boundary check: before placing, verify no intersection using <code>Rect.Overlaps()</code>.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Sebastian Lague — "Procedural Terrain Generation" playlist (YouTube)</li>
+                    <li>Unity official Procedural Mesh documentation</li>
+                    <li>Brackeys — "PROCEDURAL GRID" (YouTube)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–44 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 12   -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Save/Load System, PlayerPrefs &amp; Game Data Management</h2>
+                <p>Implement a robust save and load system that persists player progress, world state, and settings across game sessions.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>PlayerPrefs</strong> — <code>GetInt/SetInt</code>, <code>GetFloat/SetFloat</code>, <code>GetString/SetString</code>; <code>Save()</code>; good for simple settings (volume, quality, keybindings); NOT for complex state.</li>
+                    <li><strong>JSON Serialization</strong> — <code>JsonUtility.ToJson(object)</code>; <code>JsonUtility.FromJson&lt;T&gt;(json)</code>; <code>[System.Serializable]</code> required; Newtonsoft.Json (Json.NET) for advanced cases.</li>
+                    <li><strong>File I/O for save data</strong> — <code>Application.persistentDataPath</code> (correct cross-platform path); <code>File.WriteAllText/ReadAllText</code>; <code>File.Exists</code>.</li>
+                    <li><strong>Save Data architecture</strong> — <code>SaveData</code> serializable container; <code>SaveManager</code> Singleton with <code>Save()</code>, <code>Load()</code>, <code>DeleteSave()</code>; multiple save slots.</li>
+                    <li><strong>Saving complex data</strong> — <code>Vector3</code> (native support); <code>List&lt;string&gt;</code> inventory; enemy states with <code>Dictionary&lt;string, bool&gt;</code> (needs Json.NET); <code>[System.NonSerialized]</code> to exclude.</li>
+                    <li><strong>Loading &amp; applying</strong> — Restore position/health/inventory on scene load; "Saveable" interface pattern with <code>GetSaveData()</code>/<code>ApplySaveData()</code>.</li>
+                    <li><strong>Auto-save &amp; checkpoints</strong> — Checkpoint trigger zones; auto-save on timer using coroutines.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Without a save system, no game can be played in sessions. This week's skills separate a demo from a real game product. JSON serialization and <code>Application.persistentDataPath</code> are the professional approach used in published Unity games — not <code>PlayerPrefs</code> for everything.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td><code>PlayerPrefs</code> for volume, graphics quality, key bindings — these stay in PlayerPrefs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td><code>[System.Serializable]</code> + <code>JsonUtility.ToJson</code> — serialize Player class to JSON and log.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>File I/O — write JSON to <code>persistentDataPath</code>; read back; verify file exists before loading.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>SaveData</code> class capturing: position, health, inventory list, enemies defeated.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td><code>SaveManager</code> Singleton with <code>Save()</code> and <code>Load()</code>; call on button press / scene start.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Multiple save slots (3 files) with slot selection UI.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Checkpoint trigger auto-save + corrupt file error handling + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Save and restore which doors are open and which chests looted using <code>Dictionary&lt;string, bool&gt;</code>.</li>
+                    <li>Build "Load Game" menu showing all 3 save slots with last-saved timestamp and player level.</li>
+                    <li>Add "Are you sure?" confirmation before deleting a save.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Persistent World Demo"</strong> — Week 10 dungeon with complete save/load: position/health/inventory saved to JSON; chests looted and doors unlocked saved via unique IDs; 3 save slots accessible from Main Menu; checkpoint triggers that auto-save; corrupt/missing file handled gracefully with "No save found" — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using PlayerPrefs for inventory and world state — it's a simple key store, not structured data.</li>
+                        <li>Not using <code>Application.persistentDataPath</code> — hardcoded paths break in builds.</li>
+                        <li>Forgetting <code>[System.Serializable]</code> — JsonUtility silently serializes empty <code>{}</code>.</li>
+                        <li>Not wrapping <code>Load()</code> in try/catch — one corrupt file crashes startup.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li><code>PlayerPrefs</code> = settings only. Game state = JSON files in <code>persistentDataPath</code>.</li>
+                        <li>Always use <code>Application.persistentDataPath</code> — never hardcode paths.</li>
+                        <li>Every class you serialize needs <code>[System.Serializable]</code>.</li>
+                        <li>Always <code>try { Load(); } catch (Exception e) { Debug.LogError(e); CreateNewSave(); }</code>.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Unity official <code>JsonUtility</code> documentation</li>
+                    <li>Brackeys — "SAVE &amp; LOAD SYSTEM in Unity" (YouTube)</li>
+                    <li>Thomas Brush — "How to Save Your Game" (YouTube)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36–38 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 13  -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Shaders, VFX &amp; Performance Profiling</h2>
+                <p>Add visual polish through shader effects and particle systems, and learn how to profile and optimize Unity 3D games to maintain target framerates.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Shader Graph (URP intro)</strong> — Install via "3D URP" project template; nodes, properties, master stack; simple effects (color tint, UV scrolling, dissolve); vertex displacement.</li>
+                    <li><strong>VFX (Particle System)</strong> — Built-in Particle System vs VFX Graph (CPU vs GPU); emission, shape, lifetime, velocity, size/color over lifetime; common VFX: explosion, fire, smoke, sparkle, dust, blood.</li>
+                    <li><strong>Post-Processing (URP Volume)</strong> — <code>Volume</code> + <code>Volume Profile</code>; Bloom, Color Grading, Depth of Field, Vignette, Chromatic Aberration; global vs local volume.</li>
+                    <li><strong>Unity Profiler</strong> — CPU Usage chart; GPU Usage; Memory section (allocations, GC pressure); Frame Debugger for every draw call.</li>
+                    <li><strong>Performance Optimization</strong> — Draw call batching (Static, Dynamic, GPU Instancing); Object pooling; <code>StringBuilder</code> vs string concat; <code>WaitForSeconds</code> cached in coroutines; culling distance.</li>
+                    <li><strong>Object Pooling</strong> — <code>ObjectPool&lt;T&gt;</code> (Unity 2021+ built-in); manual pool with <code>Queue&lt;GameObject&gt;</code> + GetFromPool/ReturnToPool; pooling bullets, enemies, particles.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A game that runs at 15fps is unplayable regardless of how good it looks. This week teaches you to measure performance (Profiler) and fix it (batching, pooling, LOD, occlusion). Shader Graph and Post-Processing add the visual quality jump that makes screenshots look like a real commercial game.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>URP project setup + Post-Processing Volume (Bloom, Color Grading, Vignette).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Shader Graph — dissolve effect (clip by noise + <code>_DissolveAmount</code>); apply to enemy death.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Shader Graph — UV scrolling water/lava; vertex displacement for grass wave.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Particle System — fire + smoke + explosion; apply to environment and enemy death.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Profiler + Frame Debugger — profile Week 11 world; identify 3 bottlenecks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Apply fixes: static batching on environment, GPU Instancing on trees, LOD tuning.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Object Pool for bullet projectiles + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build rain particle system attached to camera following player.</li>
+                    <li>Create "damage flash" dissolve shader that plays on enemy hit.</li>
+                    <li>Reduce a scene from 500+ draw calls to under 100 using batching and LOD.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Visual Polish &amp; Performance"</strong> pass on Week 11 open world — URP with Post-Processing (Bloom, Color Grading, Depth of Field), dissolve death effect, fire particles at campfire, rain particles, static batching on terrain objects, GPU Instancing on scattered props, Object Pool for ranged enemy projectiles, Profiler comparison screenshot (before vs after) — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Not using URP when learning Shader Graph (only works in URP or HDRP).</li>
+                        <li>Creating 1000 bullets with <code>Instantiate</code> per second — causes massive GC spikes.</li>
+                        <li>Using string concatenation in <code>Update()</code> — generates garbage every frame.</li>
+                        <li>Adding every Post-Processing effect at maximum strength — overblown, unreadable image.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Shader Graph needs URP or HDRP — use "3D (URP)" template for any Shader Graph project.</li>
+                        <li>Any object created frequently at runtime: Object Pool, not Instantiate/Destroy.</li>
+                        <li>Use <code>$"Score: {score}"</code> or <code>StringBuilder</code>, not <code>+</code> concatenation in <code>Update()</code>.</li>
+                        <li>Post-processing: use restraint — Bloom at 0.2 looks cinematic; 1.0 looks broken.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Sebastian Lague — "Coding Adventure: Rendering" (YouTube)</li>
+                    <li>Unity Learn — "Introduction to Shader Graph" pathway</li>
+                    <li>Brackeys — "POST PROCESSING in Unity" (YouTube)</li>
+                    <li>Unity Object Pool documentation</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–44 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 14  -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Capstone Game Build: "EchoWaste"</h2>
+                <p>Build the complete capstone — "EchoWaste," a third-person survival exploration game — combining all skills from Weeks 1–13 into one polished, playable, publishable experience.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Systems to Build (Combining All Previous Weeks)</h3>
+                <ul>
+                    <li>Procedurally generated open world terrain (Week 11)</li>
+                    <li>Third-person animated character with sprint/jump (Weeks 4 + 9)</li>
+                    <li>Enemy AI (patrol, chase, attack, death) (Week 6)</li>
+                    <li>Physics-based hazards and collectibles (Week 3)</li>
+                    <li>Full inventory system with pickups (Week 10)</li>
+                    <li>Health system with UI HUD (Week 7)</li>
+                    <li>Audio Manager + spatial SFX + footsteps (Week 8)</li>
+                    <li>Save/Load system with 3 slots (Week 12)</li>
+                    <li>URP Post-Processing + particle VFX + dissolve shader (Week 13)</li>
+                    <li>Main Menu + Pause Menu + Game Over screen (Week 7)</li>
+                    <li>Performance: Object Pooling + LOD + Occlusion Culling (Weeks 11 + 13)</li>
+                </ul>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The capstone is the tangible output of 13 weeks of learning — the portfolio piece, the talking point in interviews, and the demonstration of end-to-end 3D game development competence.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Project setup (URP) + Main Menu scene + procedural terrain generation with seed.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Player character (Mixamo + Animator Blend Tree + CharacterController + New Input).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Enemy AI (3 types: Scavenger melee, Crawler ranged, Stalker detection-based).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Inventory + pickup items (food/health, weapon parts, key items) + interaction.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>HUD + Pause + Game Over + Win condition (reach Beacon in center of map).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Audio (music, SFX, spatial enemies, footsteps on 3 surfaces) + Save/Load.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Post-Processing + particle VFX + performance pass (LOD, batching, pool) + commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-info">
+                    <p><strong>Full Capstone Description:</strong> See the dedicated Capstone section below for the complete specification, features, tech stack, and deliverables.</p>
+                </div>
+
+                <p><strong>Estimated Study Hours:</strong> 45–50 hours (the heaviest build week)</p>
+            </div>
+        </div>
+
+
+        <!--   WEEK 15  -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Polish, WebGL Build &amp; Portfolio Preparation</h2>
+                <p>Polish EchoWaste to a presentable standard, publish it to itch.io as a WebGL game, and prepare a complete developer portfolio.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Game feel polish</strong> — Camera shake using Cinemachine impulse on hit/explosion; screen flash on damage; hit stop (freeze frames 0.05s on enemy hit); juice (particle burst on pickup, sound pitch variation, UI bounce animations).</li>
+                    <li><strong>Bug fixing &amp; playtesting</strong> — Systematic playtesting: write checklist of every system, test deliberately; common edge cases: falling through terrain, enemies stuck, inventory overflow.</li>
+                    <li><strong>WebGL Build</strong> — Switch Platform to WebGL; settings (memory size, Gzip compression, template); Build and Run; common WebGL issues (autoplay policy, missing textures, long loads).</li>
+                    <li><strong>Publishing to itch.io</strong> — Project page creation (title, description, screenshots, tags); uploading WebGL build; embed player setup; compelling "About this game" description.</li>
+                    <li><strong>Portfolio &amp; documentation</strong> — GitHub repo with detailed README (what it is, systems built, tech stack, screenshots, play link); portfolio website or itch.io developer profile; 2–3 minute gameplay trailer (OBS Studio free); postmortem.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Polish, publishing, and portfolio convert 14 weeks of building into actual presentation/viva/job success. The game exists; this week makes sure it's playable by anyone with a link, and the work is visible and credible.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Camera shake + hit stop + screen flash + pickup burst particles — game feel polish.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Full playtesting — test every system on checklist; fix 5 most critical bugs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>WebGL build — platform switch, compression, test locally; fix WebGL-specific issues.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Publish to itch.io — page setup, screenshots, description, tags, embed.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>GitHub README — write documentation; record gameplay trailer (OBS).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Portfolio write-up + postmortem + review of full 15-week journey.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Final commit + itch.io link sharing + community feedback (Unity subreddit / itch.io).</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-tip">
+                    <h3>Key Tips for This Week</h3>
+                    <ul>
+                        <li>Test the published WebGL build by sending the link to a friend — fresh-eyes feedback catches issues you missed.</li>
+                        <li>Practice the gameplay trailer voiceover/captions until it feels natural — record multiple takes.</li>
+                        <li>Keep the postmortem honest — "what didn't work" is as valuable as "what did" in a portfolio.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>OBS Studio (obsproject.com) — free screen recording</li>
+                    <li>itch.io — free game publishing platform</li>
+                    <li>Make a README (makeareadme.com) — best practices guide</li>
+                    <li>Your own compiled notes from Weeks 1–14</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35–38 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-card" id="capstone">
+            <div class="rm-card-header">
+                <h2>🏆 Final Capstone Project</h2>
+                <p>The complete 3D survival exploration game that ties together every concept from all 15 weeks.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <div class="rm-project">
+                    <h4>EchoWaste — Third-Person Survival Exploration</h4>
+                    <p>EchoWaste is a third-person survival exploration game set in a procedurally generated ruined open world. The player wakes up alone in a post-collapse wasteland and must find the Beacon — a signal source at the center of the map — while gathering supplies, avoiding or fighting enemies, and managing health.</p>
+
+                    <h4>Core Gameplay Loop</h4>
+                    <p><strong>Explore → Find items → Survive enemies → Reach the Beacon → Win</strong></p>
+
+                    <h4>World Features</h4>
+                    <ul>
+                        <li>Procedurally generated 512x512 terrain using Perlin Noise with biome zones (wasteland, forest, ruins).</li>
+                        <li>Procedurally scattered props (rusted cars, collapsed walls, dead trees, campfires).</li>
+                        <li>3 ProBuilder-built ruins used as enemy bases and item caches.</li>
+                        <li>Dynamic day/night cycle (Directional Light rotation + lighting color change over time).</li>
+                    </ul>
+
+                    <h4>Player Features</h4>
+                    <ul>
+                        <li>Mixamo-rigged third-person character with full Animator Blend Tree (Idle/Walk/Run/Jump/Attack/Death).</li>
+                        <li>Sprint, jump, and melee attack.</li>
+                        <li>Health and Stamina system with full HUD.</li>
+                        <li>Inventory (8 slots): food (heals), scrap (crafting material), keys, weapons.</li>
+                        <li>Footstep system (3 surfaces: wasteland dust, stone, metal).</li>
+                    </ul>
+
+                    <h4>Enemies (3 Types)</h4>
+                    <ul>
+                        <li><strong>Scavenger</strong> — melee, patrols in packs, chases and attacks at close range.</li>
+                        <li><strong>Crawler</strong> — low, fast, ranged spit attack using an Object Pool.</li>
+                        <li><strong>Stalker</strong> — intelligent, uses line-of-sight detection, flanks the player.</li>
+                    </ul>
+
+                    <h4>Progression &amp; Systems</h4>
+                    <ul>
+                        <li>Save/Load — 3 slots with JSON persistence; auto-save at campfire triggers.</li>
+                        <li>Main Menu (New Game / Load / Settings / Quit).</li>
+                        <li>Pause Menu (Resume / Save / Quit to Main Menu).</li>
+                        <li>Game Over (health = 0) and Win (reach the Beacon) screens.</li>
+                    </ul>
+
+                    <h4>Visuals &amp; Audio</h4>
+                    <ul>
+                        <li>URP with Post-Processing (Bloom, Color Grading, Vignette).</li>
+                        <li>Dissolve death shader on enemies.</li>
+                        <li>Particle VFX: campfire, enemy death explosion, pickup sparkle, Crawler spit.</li>
+                        <li>Audio Manager with spatial 3D SFX, ambient wasteland sounds, dynamic music system.</li>
+                    </ul>
+
+                    <h4>Technical</h4>
+                    <ul>
+                        <li>Performance: LOD on all large assets, Occlusion Culling, Static Batching, Object Pool for Crawler projectiles.</li>
+                        <li>WebGL build published on itch.io.</li>
+                        <li>Complete GitHub repository with README and gameplay screenshots.</li>
+                        <li>2–3 minute gameplay trailer recorded with OBS Studio.</li>
+                    </ul>
+
+                    <h4>Tech Stack Summary</h4>
+                    <p>Unity LTS · C# · Cinemachine · New Input System · NavMesh · TextMeshPro · URP · Shader Graph · Particle System · Audio Mixer · Mixamo · ProBuilder · JSON Serialization · Object Pooling · LOD Groups · Occlusion Culling · EAS-style WebGL build · itch.io</p>
+
+                    <h4>Deliverables</h4>
+                    <ul>
+                        <li>Playable WebGL game on itch.io (shareable link, plays in any browser)</li>
+                        <li>Complete GitHub repository with professional README</li>
+                        <li>Screenshots of major scenes and gameplay</li>
+                        <li>2–3 minute gameplay trailer video (OBS)</li>
+                        <li>Postmortem document (what worked, what didn't, what learned)</li>
+                        <li>Portfolio profile listing all 13 mini-projects + EchoWaste</li>
+                    </ul>
+                </div>
+
+                <div class="rm-highlight">
+                    <p><strong>Important:</strong> EchoWaste is <em>not</em> built only in Weeks 14–15 — it is the consolidation of skills built throughout Weeks 1–13. Each week's mini project directly contributes to the capstone. Week 14 is the focused build week; Week 15 is polish, publishing, and presentation prep.</p>
+                </div>
+
+                <h3>Total Roadmap At a Glance</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Weeks</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Foundations</strong></td>
+                            <td>1–2</td>
+                            <td>C#, Unity Editor, Transform, Input</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. Core 3D Mechanics</strong></td>
+                            <td>3–6</td>
+                            <td>Physics, Character, Environment, AI</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Intermediate Systems</strong></td>
+                            <td>7–10</td>
+                            <td>UI, Audio, Animation, Interaction</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4. Advanced</strong></td>
+                            <td>11–13</td>
+                            <td>Procedural Gen, Save/Load, Shaders, Performance</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5. Capstone</strong></td>
+                            <td>14–15</td>
+                            <td>EchoWaste game build, Polish, Publish, Portfolio</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Total estimated study hours:</strong> ~580–630 hours over 15 weeks (~39–42 hrs/week average)</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+                <div class="logo1">
+                    <h3>CodePath</h3>
+                    <p>Learn. Practice. Master</p>
+                </div>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+
+</body>
+</html>

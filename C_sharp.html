@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C#: Beginner to Master — 15 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>C#: Beginner to Master</h1>
+        <p>Complete 15-Week Curriculum — From Console Basics to Full-Stack ASP.NET Core & SignalR Production Applications</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>15-week, phase-based C# curriculum</strong> designed to take a complete beginner to a professional-level .NET developer. The roadmap moves from <strong>environment setup, types, variables, and operators</strong> through <strong>control flow, collections, LINQ, and modern data types</strong>, into <strong>OOP, generics, file I/O, error handling, and dependency injection</strong>, all the way to <strong>async/await, reflection, high-performance spans, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics and the .NET ecosystem, <strong>Phase 2</strong> covers control flow, collections, LINQ, and modern C# data types, <strong>Phase 3</strong> covers object-oriented programming, generics, file I/O, and dependency injection, and <strong>Phase 4</strong> covers master-level async programming, reflection, performance optimization, and full production applications.</p>
+            <p>By Week 15, you will have built three complete, portfolio-ready applications and be confident building production-grade C# and ASP.NET Core applications from scratch.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 15 weeks &nbsp;|&nbsp; <strong>Stack:</strong> C# 12+, .NET 8+, ASP.NET Core &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic programming logic</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–3:</strong> Setup, core types, variables, operators, strings, and nullability.</p>
+        </div>
+
+        <!-- WEEK 1 -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Introduction to C# &amp; Environment Setup</h2>
+                <p>Understand what C# is, how the .NET ecosystem works, and write your first working program.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding what C# is, how the .NET ecosystem works, and writing your first working program.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What is C# &amp; the .NET Ecosystem?</strong> — C# is a modern, strongly typed, object-oriented language developed by Microsoft that runs on the .NET runtime, enabling cross-platform applications on Windows, macOS, and Linux. It is used for web APIs, desktop apps, game development (Unity), cloud services, and enterprise software at scale.</li>
+                    <li><strong>Installing .NET SDK &amp; Creating a Project</strong> — The .NET SDK includes the compiler, runtime, and CLI tools — install it from dotnet.microsoft.com and use <code>dotnet new console</code> to scaffold a project instantly. Visual Studio, VS Code with the C# extension, or JetBrains Rider are the three most popular IDEs for C# development.</li>
+                    <li><strong>Program Structure — Namespaces, Classes &amp; the Main Method</strong> — Traditional C# programs are organized into namespaces (logical groupings) and classes (code containers). Every executable program has a <code>Main</code> method as its entry point; modern C# 9+ allows top-level statements to omit this ceremony.</li>
+                    <li><strong>Console I/O &amp; String Interpolation</strong> — <code>Console.WriteLine</code> outputs text; <code>Console.ReadLine</code> reads a line of user input as a string. String interpolation (<code>$"..."</code>) embeds expressions directly inside string literals — cleaner and faster than concatenation or <code>String.Format</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> C# runs on the .NET runtime which powers millions of enterprise applications. Understanding the project structure and tooling from day one builds the mental model needed for every concept that follows — from simple console apps to full ASP.NET Core APIs.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// C# entry point — top-level statements (C# 9+, no class/Main boilerplate)
+using System;
+
+Console.WriteLine("Hello, C#!");
+Console.WriteLine($".NET Version: {Environment.Version}");
+
+// Traditional structure — still valid and widely used
+namespace MyApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter your name: ");
+            string name = Console.ReadLine()!;
+            int year = DateTime.Now.Year;
+            Console.WriteLine($"Hello, {name}! It is {year}.");
+        }
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a console app that asks the user for their <strong>name</strong> and <strong>birth year</strong>, calculates their age, and prints a personalised greeting using string interpolation. Run it with <code>dotnet run</code> and observe the output.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--   WEEK 2  -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Data Types, Variables &amp; Operators</h2>
+                <p>Learn C#'s type system, declare variables correctly, and perform computations with operators.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Learning C#'s type system, declaring variables correctly, and performing computations with operators.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Value Types vs. Reference Types</strong> — Value types (like <code>int</code>, <code>double</code>, <code>bool</code>, <code>struct</code>) store data directly in memory on the stack; reference types (like <code>string</code>, arrays, classes) store a reference to heap-allocated data. Understanding this distinction prevents subtle bugs when copying and comparing values.</li>
+                    <li><strong><code>var</code>, <code>const</code>, and <code>readonly</code></strong> — <code>var</code> lets the compiler infer the type from the right-hand side — the code is still statically typed. <code>const</code> declares a compile-time constant that can never change; <code>readonly</code> declares a field that can only be set in the constructor or at declaration.</li>
+                    <li><strong>Arithmetic, Comparison &amp; Logical Operators</strong> — C# supports the standard arithmetic (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>), comparison (<code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>), and logical (<code>&amp;&amp;</code>, <code>||</code>, <code>!</code>) operators. Integer division truncates; use a <code>double</code> operand or explicit cast to get floating-point results.</li>
+                    <li><strong>Type Casting &amp; Type Conversion</strong> — Implicit conversion happens automatically when no data is lost (e.g., <code>int</code> → <code>double</code>). Explicit casts (<code>(int)value</code>) truncate; <code>Convert</code> class methods and <code>Parse</code>/<code>TryParse</code> handle string-to-type conversions safely.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> C# is a strongly typed language — every variable has a type and the compiler enforces it. Understanding value vs. reference types prevents entire categories of bugs around unexpected mutation and null reference exceptions that trip up beginners.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>int    age    = 30;           // value type — stored on stack
+double price  = 19.99;        // value type — 64-bit float
+bool   active = true;         // value type
+string name   = "Alice";      // reference type — heap allocated
+
+var count = 42;               // inferred as int — still strongly typed
+const double Pi = 3.14159;    // compile-time constant — cannot reassign
+
+int a = 17, b = 5;
+Console.WriteLine(a + b);         // 22
+Console.WriteLine(a / b);         // 3 — integer division (truncated)
+Console.WriteLine((double)a / b); // 3.4 — cast to float first
+
+double d = 9.99;
+int truncated = (int)d;                         // 9 (truncated)
+bool ok = int.TryParse("abc", out int result);  // safe — returns false</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a console app that acts as a <strong>simple unit converter</strong>. Ask the user to enter a temperature in Celsius, convert it to Fahrenheit and Kelvin using the correct formulas, and display all three values formatted to 2 decimal places using <code>$"{'{'}value:F2{'}'}"</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 3   -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Strings, Nullability &amp; DateTime</h2>
+                <p>Master string manipulation, handle null values safely, and work with dates and times.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering string manipulation, handling null values safely, and working with dates and times.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>String Methods &amp; Verbatim / Raw Strings</strong> — <code>string</code> in C# is an immutable reference type with a rich set of built-in methods for searching, slicing, replacing, and formatting. Use verbatim strings (<code>@"..."</code>) for paths and raw string literals (<code>"""..."""</code> — C# 11+) for multi-line JSON or SQL without escape characters.</li>
+                    <li><strong>Nullable Value Types &amp; the Null-Coalescing Operator</strong> — Adding <code>?</code> to a value type (<code>int?</code>, <code>double?</code>) allows it to hold <code>null</code> — useful for optional data from databases or user input. The null-coalescing operator (<code>??</code>) provides a fallback value, and <code>?.</code> safely chains member access without null reference exceptions.</li>
+                    <li><strong>Nullable Reference Types (C# 8+) &amp; <code>!</code> Operator</strong> — Enabling <code>&lt;Nullable&gt;enable&lt;/Nullable&gt;</code> in the project file makes the compiler warn whenever a reference type could be null and you haven't checked. The null-forgiving operator (<code>!</code>) suppresses the warning when you know a value is not null.</li>
+                    <li><strong>DateTime, TimeSpan &amp; DateOnly / TimeOnly</strong> — <code>DateTime</code> represents a specific point in time; <code>TimeSpan</code> represents a duration. C# 6 added <code>DateOnly</code> and <code>TimeOnly</code> for scenarios where you only need a date or a time, without the risk of timezone confusion from full <code>DateTime</code> values.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Null reference exceptions are the most common runtime crash in C# applications. C# 8's nullable reference types give the compiler the power to catch these at compile time. Mastering nullability from Week 3 prevents an entire class of production bugs.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>string s = "  Hello, World!  ";
+Console.WriteLine(s.Trim().ToUpper());       // "HELLO, WORLD!"
+Console.WriteLine(s.Replace("World", "C#")); // "  Hello, C#!  "
+string path = @"C:\Users\Alice\Documents";   // verbatim — no escape needed
+
+int? score = null;
+int display = score ?? 0;          // 0 — fallback when null
+score = 95;
+Console.WriteLine(score.Value);    // 95
+
+string? name = null;
+Console.WriteLine(name?.ToUpper() ?? "Anonymous");  // "Anonymous"
+
+DateTime now      = DateTime.Now;
+DateTime birthday = new DateTime(1995, 6, 15);
+TimeSpan age      = now - birthday;
+Console.WriteLine($"Days old: {(int)age.TotalDays}");
+DateOnly today    = DateOnly.FromDateTime(now);
+Console.WriteLine(today.ToString("yyyy-MM-dd"));</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"name card generator"</strong> console app. Accept a full name and a birthdate from the user, validate input with <code>TryParse</code>, calculate their exact age in years, and print a formatted card using string methods: trim whitespace, title-case the name, and display a welcome message.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 4–7:</strong> Methods, collections, LINQ, and modern C# data types.</p>
+        </div>
+
+        <!-- WEEK 4   -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Control Flow &amp; Methods</h2>
+                <p>Direct program logic with conditionals and loops, and encapsulate behaviour in well-typed methods.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Directing program logic with conditionals and loops, and encapsulating behaviour in well-typed methods.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>if / else if / else &amp; switch Expressions</strong> — Standard <code>if</code>/<code>else</code> handles conditional branching; the <code>switch</code> expression (C# 8+) provides a concise, pattern-matching alternative that returns a value directly. Switch expressions are exhaustive — the compiler warns if a case is missing.</li>
+                    <li><strong>Loops — for, while, foreach, do-while</strong> — <code>for</code> loops are best when the iteration count is known; <code>foreach</code> iterates collections cleanly without index management; <code>while</code> runs while a condition is true; <code>do-while</code> guarantees at least one execution. Use <code>break</code> and <code>continue</code> to control loop flow.</li>
+                    <li><strong>Methods — Parameters, Return Types &amp; Overloading</strong> — Methods encapsulate reusable logic. C# supports optional parameters (with defaults), named arguments (for clarity at call sites), <code>out</code>/<code>ref</code> parameters (for multiple return values), and method overloading (same name, different signatures).</li>
+                    <li><strong>Expression-Bodied Members &amp; Local Functions</strong> — Expression-bodied members (<code>=&gt;</code>) collapse single-expression methods/properties to one line — reducing noise without sacrificing readability. Local functions are methods defined inside another method, keeping helper logic private to its scope.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The <code>switch</code> expression is one of the most impactful modern C# features — it replaces verbose if-else chains with exhaustive, readable pattern matching. Local functions and expression-bodied members are patterns seen constantly in professional .NET codebases.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>int score = 82;
+string grade = score switch
+{
+    >= 90 => "A",
+    >= 80 => "B",
+    >= 70 => "C",
+    >= 60 => "D",
+    _     => "F"    // _ is the discard / default case
+};
+Console.WriteLine($"Grade: {grade}");   // Grade: B
+
+int[] numbers = { 1, 2, 3, 4, 5 };
+int sum = 0;
+foreach (int n in numbers)
+{
+    if (n % 2 == 0) continue;  // skip even numbers
+    sum += n;
+}
+Console.WriteLine($"Odd sum: {sum}");   // 9 (1+3+5)
+
+static int Factorial(int n)
+{
+    if (n &lt; 0) throw new ArgumentException("n must be non-negative");
+    return Compute(n);
+    int Compute(int x) => x &lt;= 1 ? 1 : x * Compute(x - 1);  // local function
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a <strong>console calculator app</strong> with a main menu loop. Support <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, and <code>%</code>. Implement each operation as a separate overloaded <code>Calculate</code> method. Use a <code>switch</code> expression to dispatch the operation, handle division by zero, and loop until the user types <code>exit</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 5  -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Collections: Arrays, Lists, Dictionaries &amp; Sets</h2>
+                <p>Store, organise, and retrieve data efficiently using C#'s core generic collection types.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Storing, organising, and retrieving data efficiently using C#'s core generic collection types.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Arrays — Single &amp; Multi-Dimensional</strong> — Arrays are fixed-size, zero-indexed, contiguous memory blocks. Single-dimensional arrays are the most common; jagged arrays (<code>int[][]</code>) are arrays of arrays with varying lengths; rectangular arrays (<code>int[,]</code>) model true matrices.</li>
+                    <li><strong><code>List&lt;T&gt;</code> — Dynamic Collections</strong> — <code>List&lt;T&gt;</code> is the most frequently used collection in C# — a dynamically sized array backed by a generic type. It supports <code>Add</code>, <code>Remove</code>, <code>Insert</code>, <code>Contains</code>, sorting, searching, and direct index access. Prefer it over raw arrays when size is not known upfront.</li>
+                    <li><strong><code>Dictionary&lt;TKey, TValue&gt;</code> &amp; <code>HashSet&lt;T&gt;</code></strong> — <code>Dictionary&lt;TKey, TValue&gt;</code> stores key-value pairs with O(1) average lookup — ideal for caches, indexes, and frequency maps. <code>HashSet&lt;T&gt;</code> stores unique values with O(1) add/lookup/contains — ideal for deduplication and membership tests.</li>
+                    <li><strong>Stack, Queue &amp; LinkedList</strong> — <code>Stack&lt;T&gt;</code> follows LIFO (Last In, First Out) — use it for undo history, expression parsing, and depth-first traversal. <code>Queue&lt;T&gt;</code> follows FIFO (First In, First Out) — use it for task queues, breadth-first traversal, and rate limiters.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Choosing the right collection type is one of the most impactful decisions in a C# program. A <code>HashSet</code> instead of a <code>List</code> for membership testing changes O(n) lookups to O(1). A <code>Dictionary</code> eliminates nested loops. These choices define the performance ceiling of your application.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>int[] primes = { 2, 3, 5, 7, 11 };
+Console.WriteLine(primes.Length);   // 5
+
+var fruits = new List&lt;string&gt; { "Apple", "Banana", "Cherry" };
+fruits.Add("Date");
+fruits.Remove("Banana");
+fruits.Sort();
+
+var wordCount = new Dictionary&lt;string, int&gt;();
+string[] words = { "apple", "banana", "apple", "cherry", "banana", "apple" };
+foreach (var word in words)
+    wordCount[word] = wordCount.GetValueOrDefault(word, 0) + 1;
+// { apple: 3, banana: 2, cherry: 1 }
+
+var stack = new Stack&lt;string&gt;();
+stack.Push("first"); stack.Push("second"); stack.Push("third");
+Console.WriteLine(stack.Pop());     // "third" — LIFO
+
+var queue = new Queue&lt;int&gt;();
+queue.Enqueue(1); queue.Enqueue(2); queue.Enqueue(3);
+Console.WriteLine(queue.Dequeue()); // 1 — FIFO</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>contact book console app</strong>. Store contacts as <code>Dictionary&lt;string, string&gt;</code> (name → phone). Support commands: <code>add</code>, <code>find</code>, <code>delete</code>, <code>list</code>. Use a <code>HashSet&lt;string&gt;</code> to track duplicate phone numbers and warn the user. Store everything in a <code>List&lt;string&gt;</code> command history that prints on exit.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 6   -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — LINQ (Language Integrated Query)</h2>
+                <p>Query, filter, transform, and aggregate collections elegantly using LINQ's method and query syntax.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Querying, filtering, transforming, and aggregating collections elegantly using LINQ's method and query syntax.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>LINQ Basics — Where, Select, OrderBy</strong> — LINQ brings SQL-like querying directly into C# via extension methods on <code>IEnumerable&lt;T&gt;</code>. <code>Where</code> filters, <code>Select</code> projects/transforms, and <code>OrderBy</code>/<code>OrderByDescending</code> sorts — all composable and lazily evaluated.</li>
+                    <li><strong>Aggregation — Count, Sum, Min, Max, Average</strong> — LINQ aggregation methods collapse a sequence into a single value. They're efficient, expressive, and composable with filter and projection operations — replacing verbose <code>foreach</code> loops with a single readable statement.</li>
+                    <li><strong>GroupBy, Distinct &amp; Join</strong> — <code>GroupBy</code> clusters elements by a key — like SQL <code>GROUP BY</code>. <code>Distinct</code> removes duplicates. <code>Join</code> correlates two sequences by a shared key — the in-memory equivalent of a SQL INNER JOIN.</li>
+                    <li><strong>LINQ Query Syntax &amp; Deferred Execution</strong> — LINQ queries using the <code>from...where...select</code> query syntax look like embedded SQL. Crucially, LINQ is lazily evaluated — the query is not executed until the result is enumerated by <code>foreach</code>, <code>ToList()</code>, <code>ToArray()</code>, etc.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> LINQ is one of C#'s most powerful and distinctive features. Mastering it transforms 20-line <code>foreach</code> loops into 3-line LINQ chains. Deferred execution is a subtle concept that once understood prevents performance traps in large data pipelines.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>var numbers = new[] { 5, 3, 8, 1, 9, 2, 7 };
+
+var result = numbers
+    .Where(n => n > 4)           // filter: keep only > 4
+    .OrderBy(n => n)             // sort ascending
+    .Select(n => $"[{n}]");      // transform to string
+
+Console.WriteLine(string.Join(", ", result));  // [5], [7], [8], [9]
+
+var scores = new[] { 85, 92, 78, 96, 60, 71 };
+Console.WriteLine(scores.Count(s => s >= 80)); // 3
+Console.WriteLine(scores.Average());           // 80.33
+Console.WriteLine(scores.Max());               // 96
+
+// LINQ query syntax — deferred execution
+int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+var evenSquares = from n in nums
+                  where n % 2 == 0
+                  select n * n;
+foreach (var sq in evenSquares)   // query executes HERE
+    Console.Write($"{sq} ");       // 4 16 36 64 100</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Given a hardcoded list of 10 <code>Product</code> objects (<code>{'{'}Name, Category, Price, InStock{'}'}</code>), write LINQ queries to: (1) find all in-stock products under $50 sorted by price, (2) group by category and show count and average price per group, (3) return the top 3 most expensive products using <code>OrderByDescending</code> + <code>Take(3)</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 7  -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Tuples, Records, Pattern Matching &amp; Structs</h2>
+                <p>Use modern C# data types to write expressive, immutable, and pattern-matched code.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Using modern C# data types to write expressive, immutable, and pattern-matched code.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Tuples &amp; Value Tuples</strong> — Value tuples (<code>(T1, T2, ...)</code>) are lightweight containers for grouping multiple values without a full class. Name your tuple elements for readability; destructuring with <code>var (x, y) = tuple</code> unpacks values cleanly. They're ideal for quick multi-value returns.</li>
+                    <li><strong>Records — Immutable Data Classes</strong> — Records (C# 9+) are reference types optimised for immutable data. They auto-generate constructor, equality (by value, not reference), <code>ToString()</code>, and <code>Deconstruct</code> — making them perfect for DTOs, domain events, and value objects.</li>
+                    <li><strong>Pattern Matching — is, switch, Property &amp; Positional Patterns</strong> — Pattern matching extends <code>switch</code> and <code>is</code> to test types, deconstruct values, and check properties simultaneously. It's the idiomatic way to handle discriminated unions and hierarchies in modern C#.</li>
+                    <li><strong>Structs &amp; readonly Structs</strong> — <code>struct</code> is a value type — copies are made on assignment rather than sharing a reference. Use <code>readonly struct</code> for small, immutable data (coordinates, colours) to avoid defensive copies and improve performance in hot paths.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Records and pattern matching are the most significant additions to C# in years. Records make immutable data modelling trivial. Pattern matching with property patterns eliminates entire classes of null checks and type-testing boilerplate seen in older C# codebases.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// Named tuple return — no class needed
+static (string Name, int Age) GetUser() => ("Alice", 30);
+var (name, age) = GetUser();
+Console.WriteLine($"{name} — {age}");   // Alice — 30
+
+// Records — value equality, immutable, with-expression
+record Person(string FirstName, string LastName, int Age);
+var alice  = new Person("Alice", "Smith", 30);
+var alice2 = alice with { Age = 31 };   // non-destructive mutation
+Console.WriteLine(alice == alice2);      // False — value equality
+
+// Pattern matching
+object[] items = { 42, "hello", 3.14, true };
+foreach (var item in items)
+{
+    string desc = item switch {
+        int n when n > 0 => $"positive int: {n}",
+        string s         => $"string of length {s.Length}",
+        double d         => $"double: {d:F2}",
+        _                => "something else"
+    };
+    Console.WriteLine(desc);
+}
+
+// readonly struct
+readonly struct Point(double X, double Y)
+{
+    public double Distance => Math.Sqrt(X * X + Y * Y);
+}
+var p = new Point(3, 4);
+Console.WriteLine(p.Distance);   // 5.0</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Model a simple <strong>e-commerce order system</strong> using records: <code>record Product(string Name, decimal Price)</code>, <code>record OrderLine(Product Product, int Qty)</code>, <code>record Order(int Id, IReadOnlyList&lt;OrderLine&gt; Lines)</code>. Compute total price using LINQ, and use a <code>switch</code> expression with property patterns to assign free shipping if the order total exceeds $100.</p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 8–11:</strong> OOP, generics, file I/O, error handling, and dependency injection.</p>
+        </div>
+
+
+        <!--  WEEK 8  -->
+
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Object-Oriented Programming in Depth</h2>
+                <p>Master C#'s full OOP feature set — inheritance, polymorphism, abstract classes, and interfaces.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering C#'s full OOP feature set — inheritance, polymorphism, abstract classes, and interfaces.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Classes, Properties &amp; Constructors</strong> — C# classes encapsulate data (fields/properties) and behaviour (methods). Properties combine field access with get/set logic; auto-properties (<code>{ get; set; }</code>) eliminate boilerplate. Use <code>required</code> (C# 11) to enforce mandatory property initialisation.</li>
+                    <li><strong>Inheritance &amp; Method Overriding</strong> — C# supports single class inheritance via <code>: BaseClass</code>. Mark methods <code>virtual</code> in the base class and use <code>override</code> in derived classes. <code>sealed</code> prevents further inheritance or overriding, which also enables JIT performance optimisations.</li>
+                    <li><strong>Interfaces &amp; Explicit Implementation</strong> — An interface is a pure contract — no implementation, only signatures. A class can implement multiple interfaces. Explicit interface implementation hides the method unless the object is cast to the interface type, avoiding naming conflicts.</li>
+                    <li><strong>Abstract Classes &amp; the Template Method Pattern</strong> — <code>abstract</code> classes can have both implemented and abstract members. They cannot be instantiated directly. The Template Method pattern uses an abstract base to define an algorithm's skeleton, with derived classes filling in specific steps.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> OOP is the foundational paradigm of C# and .NET. Understanding the distinction between interfaces (contracts) and abstract classes (partial implementations) is critical for designing systems that are extensible, testable, and compliant with SOLID principles.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>class Employee
+{
+    public required string Name { get; init; }
+    public decimal Salary       { get; private set; }
+    public void GiveRaise(decimal pct) => Salary *= 1 + pct / 100;
+}
+var emp = new Employee { Name = "Alice", Salary = 50000 };
+
+class Animal       { public virtual  string Sound() => "..."; }
+class Dog : Animal { public override string Sound() => "Woof"; }
+class Cat : Animal { public override string Sound() => "Meow"; }
+
+Animal[] zoo = { new Dog(), new Cat(), new Animal() };
+foreach (var a in zoo)
+    Console.WriteLine(a.Sound());  // Woof / Meow / ...  (polymorphism)
+
+interface IShape { double Area(); }
+class Circle(double radius) : IShape
+{
+    public double Area() => Math.PI * radius * radius;
+}
+
+abstract class Report
+{
+    public void Generate() { FetchData(); FormatData(); Print(); }
+    protected abstract void FetchData();
+    protected abstract void FormatData();
+    protected void Print() => Console.WriteLine("Printing report...");
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Design a <strong><code>Shape</code> class hierarchy</strong>: abstract base <code>Shape</code> with abstract <code>Area()</code> and <code>Perimeter()</code>. Concrete classes: <code>Circle</code>, <code>Rectangle</code>, <code>Triangle</code>. All implement <code>IComparable&lt;Shape&gt;</code> comparing by area. Store a <code>List&lt;Shape&gt;</code>, sort it, and print a formatted table using LINQ and string formatting.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 9    -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Generics, Delegates &amp; Events</h2>
+                <p>Write reusable type-safe code with generics, pass behaviour with delegates, and implement the observer pattern with events.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing reusable type-safe code with generics, passing behaviour with delegates, and implementing the observer pattern with events.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Generic Classes &amp; Constraints</strong> — Generic classes accept type parameters, producing type-safe reusable containers and algorithms. Constraints (<code>where T : class</code>, <code>where T : new()</code>, <code>where T : IComparable</code>) limit which types are valid and unlock specific member access inside the generic body.</li>
+                    <li><strong>Delegates — <code>Func</code>, <code>Action</code> &amp; <code>Predicate</code></strong> — A delegate is a type-safe function pointer. <code>Func&lt;T, TResult&gt;</code> wraps a method that returns a value; <code>Action&lt;T&gt;</code> wraps a void method; <code>Predicate&lt;T&gt;</code> is shorthand for <code>Func&lt;T, bool&gt;</code>. Lambda expressions create delegates inline.</li>
+                    <li><strong>Events &amp; the Observer Pattern</strong> — Events are multicast delegates that implement the observer pattern. A class declares an event, subscribers attach handlers with <code>+=</code>, and the publisher raises the event with <code>Invoke</code>. This decouples the sender from its listeners.</li>
+                    <li><strong>Covariance &amp; Contravariance in Generics</strong> — Covariant type parameters (<code>out T</code>) allow assigning <code>IEnumerable&lt;Dog&gt;</code> to <code>IEnumerable&lt;Animal&gt;</code>. Contravariant parameters (<code>in T</code>) allow the reverse — enabling flexible, type-safe polymorphism across generic interfaces.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Delegates and events are the backbone of every .NET UI framework, game engine (Unity), and messaging system. Understanding them unlocks the ability to write truly decoupled, extensible systems — and to understand how LINQ itself works under the hood.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>class Repository&lt;T&gt; where T : class, new()
+{
+    private readonly List&lt;T&gt; _store = new();
+    public void Add(T item) => _store.Add(item);
+    public IReadOnlyList&lt;T&gt; GetAll() => _store.AsReadOnly();
+}
+
+Func&lt;int, int, int&gt; add    = (a, b) => a + b;
+Action&lt;string&gt;       log    = msg   => Console.WriteLine($"[LOG] {msg}");
+Predicate&lt;int&gt;       isEven = n     => n % 2 == 0;
+
+log($"3 + 4 = {add(3, 4)}");    // [LOG] 3 + 4 = 7
+Console.WriteLine(isEven(6));   // True
+
+class Button
+{
+    public event EventHandler&lt;string&gt;? Clicked;
+    public void Click(string label) => Clicked?.Invoke(this, label);
+}
+var btn = new Button();
+btn.Clicked += (sender, label) => Console.WriteLine($"Button '{label}' clicked!");
+btn.Click("Submit");  // Button 'Submit' clicked!</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a generic <strong><code>EventBus&lt;TEvent&gt;</code></strong> class: <code>Subscribe(Action&lt;TEvent&gt;)</code> registers a listener, <code>Unsubscribe(Action&lt;TEvent&gt;)</code> removes it, and <code>Publish(TEvent)</code> notifies all listeners. Define <code>OrderPlaced</code>, <code>PaymentProcessed</code>, and <code>OrderShipped</code> event records. Wire them through the bus and log each transition.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 10-->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — File I/O, Serialisation &amp; Configuration</h2>
+                <p>Read and write files, serialise objects to JSON/CSV, and load typed application configuration.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Reading and writing files, serialising objects to JSON/CSV, and loading typed application configuration.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>File &amp; Directory I/O (<code>System.IO</code>)</strong> — <code>File</code> and <code>Directory</code> static classes provide synchronous file operations; <code>StreamReader</code> / <code>StreamWriter</code> handle large files efficiently by processing line by line. Always wrap in <code>using</code> blocks to guarantee stream disposal.</li>
+                    <li><strong>JSON Serialisation with <code>System.Text.Json</code></strong> — <code>System.Text.Json</code> (built into .NET) serialises objects to JSON strings and deserialises JSON back to strongly typed objects. Use <code>JsonSerializerOptions</code> for indentation, camelCase naming, and ignoring null values.</li>
+                    <li><strong>Working with CSV using CsvHelper</strong> — CsvHelper (popular NuGet package) maps CSV rows to typed objects and vice versa, handling edge cases like quoted fields, custom delimiters, and header mapping. It is far safer than manual <code>string.Split</code> parsing.</li>
+                    <li><strong><code>IConfiguration</code> &amp; appsettings.json</strong> — The <code>Microsoft.Extensions.Configuration</code> package loads settings from <code>appsettings.json</code>, environment variables, and command-line arguments in a unified, typed API. <code>Bind&lt;T&gt;</code> maps a JSON section to a strongly typed options class.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every real application reads from and writes to external storage. JSON is the universal data interchange format. Understanding <code>System.Text.Json</code> and how to configure applications without hardcoding values are essential skills for building professional .NET applications.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// Async file I/O
+await File.WriteAllLinesAsync("log.txt", new[] { "Line 1", "Line 2", "Line 3" });
+await foreach (var line in File.ReadLinesAsync("log.txt"))
+    Console.WriteLine(line);
+
+// JSON serialisation
+using System.Text.Json;
+record Product(string Name, decimal Price, int Stock);
+
+var p    = new Product("Widget", 9.99m, 100);
+string json = JsonSerializer.Serialize(p,
+    new JsonSerializerOptions { WriteIndented = true });
+var p2 = JsonSerializer.Deserialize&lt;Product&gt;(json);
+Console.WriteLine(p2?.Name);    // Widget
+
+// Configuration
+var config = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json")
+    .AddEnvironmentVariables()
+    .Build();
+string appName = config["App:Name"]!;  // colon-separated path</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a typed <strong><code>CsvLogger&lt;T&gt;</code></strong> class: it writes <code>T</code> instances to a CSV file on <code>Log(T entry)</code> and reads them back with <code>ReadAll(): List&lt;T&gt;</code>. Use CsvHelper for serialisation. Log 10 mock <code>{'{'} Timestamp, Level, Message {'}'}</code> entries, read them back, and filter to <code>ERROR</code> level using LINQ.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 11  -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Error Handling, Logging &amp; Dependency Injection</h2>
+                <p>Handle exceptions robustly, add structured logging with Serilog, and wire dependencies with the built-in DI container.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Handling exceptions robustly, adding structured logging with Serilog, and wiring dependencies with the built-in DI container.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Exception Handling — try, catch, finally, when</strong> — <code>try</code>/<code>catch</code>/<code>finally</code> is the foundation of C# error handling. Catch specific exception types from most-specific to least-specific. <code>when</code> filters add conditions to catch clauses without unwinding the stack. <code>finally</code> always runs — use it for cleanup.</li>
+                    <li><strong>Custom Exceptions &amp; Exception Hierarchy</strong> — Create custom exception classes by inheriting from <code>Exception</code>. Add extra context properties so callers get structured, actionable error information rather than generic messages.</li>
+                    <li><strong>Structured Logging with Serilog</strong> — Serilog writes structured log events (not just text strings) that can be queried by log level, timestamp, or custom properties. Sinks route logs to console, files, databases, or cloud platforms like Seq and Application Insights.</li>
+                    <li><strong>Dependency Injection with <code>Microsoft.Extensions.DependencyInjection</code></strong> — .NET's built-in DI container registers services with three lifetimes: <code>Transient</code> (new instance every time), <code>Scoped</code> (once per request), and <code>Singleton</code> (one instance for the app lifetime). Constructor injection then receives the correct implementation automatically.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> DI is the architectural foundation of every ASP.NET Core application. Serilog structured logging is the industry standard for .NET observability. Mastering these two together is the difference between a toy app and a production-ready service.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>try {
+    int result = Divide(10, 0);
+} catch (DivideByZeroException ex) when (ex.Message.Contains("zero")) {
+    Console.WriteLine("Caught: divide by zero");
+} finally {
+    Console.WriteLine("Cleanup complete");   // always runs
+}
+
+class InsufficientFundsException(decimal requested, decimal available)
+    : Exception($"Requested {requested:C} but only {available:C} available")
+{
+    public decimal Requested => requested;
+    public decimal Available => available;
+}
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .WriteTo.Console()
+    .WriteTo.File("logs/app.log", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+Log.Information("User {UserId} logged in at {Time}", 42, DateTime.UtcNow);
+
+var services = new ServiceCollection()
+    .AddTransient&lt;IEmailService, SmtpEmailService&gt;()
+    .AddSingleton&lt;IConfigService, ConfigService&gt;()
+    .BuildServiceProvider();</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Wire a <strong>3-layer app with DI</strong>: <code>IUserRepository</code> → <code>UserService</code> → <code>UserController</code>. Register all three in the container with appropriate lifetimes. Add Serilog to log every service method call with structured data. Throw and catch a custom <code>UserNotFoundException</code> and log it at <code>Error</code> level.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 12–15:</strong> Async/await, reflection, high-performance spans, and three complete production projects.</p>
+        </div>
+
+        <!--WEEK 12 -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Asynchronous Programming</h2>
+                <p>Master async/await, concurrent task orchestration, cancellation, and the async streaming pattern.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering <code>async</code>/<code>await</code>, concurrent task orchestration, cancellation, and the async streaming pattern.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>async</code> / <code>await</code> &amp; the Task-Based Async Pattern</strong> — <code>async</code> methods return <code>Task</code> or <code>Task&lt;T&gt;</code> and allow <code>await</code> to suspend execution without blocking the thread. This keeps I/O-bound operations — HTTP calls, file reads, database queries — non-blocking, enabling high throughput server apps.</li>
+                    <li><strong>Concurrent Tasks — <code>Task.WhenAll</code> &amp; <code>Task.WhenAny</code></strong> — <code>Task.WhenAll</code> runs multiple tasks concurrently and waits for all to complete — far faster than awaiting them sequentially. <code>Task.WhenAny</code> returns as soon as the first task finishes, enabling timeout patterns and speculative execution.</li>
+                    <li><strong>CancellationToken — Cooperative Cancellation</strong> — <code>CancellationToken</code> is passed through the async call chain so any layer can observe and react to cancellation. Always accept and pass <code>CancellationToken</code> in library and service code — it's the .NET convention for cooperative cancellation.</li>
+                    <li><strong>Async Streams — <code>IAsyncEnumerable&lt;T&gt;</code></strong> — <code>async</code> generator methods using <code>yield return</code> inside an <code>async</code> method produce <code>IAsyncEnumerable&lt;T&gt;</code> — a stream of values where each element is awaited individually. Consume with <code>await foreach</code> without buffering the entire result in memory.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Async/await is not optional in modern .NET — it is fundamental to ASP.NET Core performance. A single blocking call in a high-traffic server can cascade into thread pool exhaustion. Understanding <code>Task.WhenAll</code> vs sequential await is one of the highest-impact performance decisions in server-side C#.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>async Task&lt;string&gt; FetchTitleAsync(string url)
+{
+    using var http = new HttpClient();
+    string html = await http.GetStringAsync(url);
+    int start = html.IndexOf("&lt;title&gt;") + 7;
+    int end   = html.IndexOf("&lt;/title&gt;");
+    return html[start..end];
+}
+
+async Task&lt;int[]&gt; FetchAllScoresAsync(int[] userIds)
+{
+    var tasks = userIds.Select(id => FetchScoreAsync(id));
+    return await Task.WhenAll(tasks);  // concurrent — not sequential
+}
+
+async Task&lt;string&gt; DownloadAsync(string url, CancellationToken ct)
+{
+    using var http = new HttpClient();
+    ct.ThrowIfCancellationRequested();
+    return await http.GetStringAsync(url, ct);
+}
+
+async IAsyncEnumerable&lt;int&gt; GenerateAsync(int count)
+{
+    for (int i = 0; i &lt; count; i++)
+    {
+        await Task.Delay(100);
+        yield return i * i;
+    }
+}
+await foreach (var value in GenerateAsync(5))
+    Console.WriteLine(value);   // 0, 1, 4, 9, 16</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build an async <strong>WebCrawler</strong> that takes a list of URLs, fetches each page concurrently using <code>Task.WhenAll</code>, extracts the <code>&lt;title&gt;</code> tag, supports a 3-second timeout via <code>CancellationTokenSource</code>, and streams results to the console as they complete using <code>IAsyncEnumerable&lt;T&gt;</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 13  -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Reflection, Attributes &amp; Source Generators</h2>
+                <p>Inspect types at runtime with reflection, annotate code with custom attributes, and generate code at compile time.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Inspecting types at runtime with reflection, annotating code with custom attributes, and generating code at compile time with Source Generators.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Custom Attributes</strong> — Attributes annotate code elements with declarative metadata that can be read at runtime by tools, frameworks, or your own code. Define custom attributes by inheriting from <code>Attribute</code> and target them with <code>[AttributeUsage]</code>.</li>
+                    <li><strong>Reflection — Inspecting Types at Runtime</strong> — <code>System.Reflection</code> lets you inspect assemblies, types, properties, methods, and attributes at runtime. It powers serialisers, ORMs, test frameworks, and DI containers — though it has a performance cost and should be cached.</li>
+                    <li><strong>Expression Trees</strong> — Expression trees represent code as data — an in-memory abstract syntax tree that can be inspected, compiled, and executed at runtime. They power LINQ-to-SQL, AutoMapper, and fast compiled property accessors.</li>
+                    <li><strong>Source Generators (Roslyn)</strong> — Source Generators run at compile time and produce new C# source files based on your code. They're the zero-overhead, AOT-friendly alternative to runtime reflection — used by <code>System.Text.Json</code>, <code>RegexGenerator</code>, and logging source generators.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Reflection powers the frameworks you use every day — Entity Framework, AutoMapper, xUnit, and the DI container itself. Understanding how it works makes you a better consumer of these tools. Source Generators are the future of zero-cost abstractions in .NET.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>[AttributeUsage(AttributeTargets.Property)]
+class ValidateRangeAttribute(double min, double max) : Attribute
+{
+    public double Min => min;
+    public double Max => max;
+}
+
+class Temperature { [ValidateRange(-273.15, 1_000_000)] public double Value { get; set; } }
+
+// Reflection — read attributes at runtime
+using System.Reflection;
+Type type = typeof(Temperature);
+foreach (var prop in type.GetProperties())
+{
+    var attr = prop.GetCustomAttribute&lt;ValidateRangeAttribute&gt;();
+    if (attr is not null)
+        Console.WriteLine($"{prop.Name}: [{attr.Min}, {attr.Max}]");
+}
+
+// Expression tree — build code as data
+using System.Linq.Expressions;
+ParameterExpression x    = Expression.Parameter(typeof(int), "x");
+BinaryExpression    body = Expression.Multiply(x, x);
+var square = Expression.Lambda&lt;Func&lt;int, int&gt;&gt;(body, x).Compile();
+Console.WriteLine(square(7));   // 49</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>mini validation framework</strong> using reflection and custom attributes: define <code>[Required]</code>, <code>[MinLength(n)]</code>, and <code>[Range(min, max)]</code> attributes. Write a <code>Validator.Validate&lt;T&gt;(T obj)</code> method that iterates properties via reflection, reads attributes, and returns a <code>List&lt;string&gt;</code> of validation error messages. Test with a <code>UserRegistrationDto</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 14 -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Performance, Spans &amp; Modern C# Features</h2>
+                <p>Write high-performance C# using Span&lt;T&gt;, memory pooling, and the latest language features.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing high-performance C# using <code>Span&lt;T&gt;</code>, memory pooling, and the latest C# 12/13 language features.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>Span&lt;T&gt;</code> &amp; <code>Memory&lt;T&gt;</code> — Zero-Allocation Slicing</strong> — <code>Span&lt;T&gt;</code> is a stack-allocated view over a contiguous block of memory — array, stack memory, or native memory. Slicing with <code>Span&lt;T&gt;</code> avoids heap allocations, making it critical for high-throughput parsers and data pipelines.</li>
+                    <li><strong><code>ArrayPool&lt;T&gt;</code> &amp; <code>MemoryPool&lt;T&gt;</code> — Reducing GC Pressure</strong> — <code>ArrayPool&lt;T&gt;.Shared</code> rents pre-allocated arrays from a pool and returns them after use, dramatically reducing garbage collector pressure in hot paths. Always return rented arrays in a <code>finally</code> block.</li>
+                    <li><strong>C# 12 / 13 Modern Features — Primary Constructors, Collection Expressions</strong> — Primary constructors (C# 12) eliminate constructor boilerplate for dependency injection and simple classes. Collection expressions (<code>[1, 2, 3]</code>) provide a unified syntax for initialising any collection type.</li>
+                    <li><strong>Benchmarking with BenchmarkDotNet</strong> — BenchmarkDotNet is the standard .NET library for micro-benchmarking. It handles warmup, statistical analysis, and GC pressure measurement — giving you reliable, reproducible performance numbers before and after optimisations.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>Span&lt;T&gt;</code> is the secret behind ASP.NET Core's industry-leading performance benchmarks. Understanding zero-allocation patterns separates .NET developers who write fast code from those who assume the runtime will handle it. BenchmarkDotNet proves your optimisations actually work.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// Span — zero-allocation CSV parsing
+string csv = "Alice,30,Engineer";
+ReadOnlySpan&lt;char&gt; span = csv.AsSpan();
+int comma1 = span.IndexOf(',');
+ReadOnlySpan&lt;char&gt; name = span[..comma1];  // "Alice" — no allocation
+Console.WriteLine(name.ToString());         // Alice
+
+// ArrayPool — reduce GC pressure
+using System.Buffers;
+byte[] buffer = ArrayPool&lt;byte&gt;.Shared.Rent(4096);
+try {
+    int bytesRead = stream.Read(buffer, 0, buffer.Length);
+    Process(buffer.AsSpan(0, bytesRead));
+} finally {
+    ArrayPool&lt;byte&gt;.Shared.Return(buffer);  // always return!
+}
+
+// C# 12 primary constructor
+class OrderService(IOrderRepository repo, ILogger&lt;OrderService&gt; logger)
+{
+    public async Task&lt;Order[]&gt; GetActiveAsync()
+    {
+        logger.LogInformation("Fetching active orders");
+        return [.. await repo.GetAllAsync().Where(o => o.IsActive)];
+    }
+}
+
+// BenchmarkDotNet
+[MemoryDiagnoser]
+public class StringBenchmarks
+{
+    [Benchmark] public string Concat()      => "Hello" + ", " + "World!";
+    [Benchmark] public string Interpolate() => $"Hello, World!";
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a <strong>high-performance CSV line parser</strong> using <code>Span&lt;char&gt;</code> that splits a <code>ReadOnlySpan&lt;char&gt;</code> by commas without allocating any strings until the final result is needed. Benchmark it against a naive <code>string.Split</code> version using BenchmarkDotNet. Profile allocations with the <code>[MemoryDiagnoser]</code> attribute.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 15  -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Capstone Mini Projects (Beginner → Master)</h2>
+                <p>Apply everything learned across the entire curriculum in three complete, real-world projects.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Applying everything learned across the entire 15-week curriculum in three complete, real-world portfolio projects.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — Personal Finance CLI Tracker (Beginner–Intermediate)</h3>
+                <p>A fully typed, file-persisted command-line personal finance tracker. Covers <code>record</code> types, LINQ aggregation, JSON serialisation, custom exceptions, switch expressions with property patterns, and typed configuration.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>C# Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Transaction data model</td>
+                            <td><code>record Transaction(DateOnly, decimal, string, string)</code></td>
+                        </tr>
+                        <tr>
+                            <td>Spending summary by category</td>
+                            <td>LINQ <code>GroupBy</code>, <code>Sum</code>, <code>OrderByDescending</code></td>
+                        </tr>
+                        <tr>
+                            <td>JSON persistence</td>
+                            <td><code>System.Text.Json</code> serialisation to file</td>
+                        </tr>
+                        <tr>
+                            <td>Budget exceeded warning</td>
+                            <td>Custom <code>BudgetExceededException</code></td>
+                        </tr>
+                        <tr>
+                            <td>Category classification</td>
+                            <td><code>switch</code> expression with property patterns</td>
+                        </tr>
+                        <tr>
+                            <td>Budget limits per category</td>
+                            <td><code>IConfiguration</code> + <code>appsettings.json</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A CLI app supporting commands: <code>add</code>, <code>list</code>, <code>summary</code>, <code>export-csv</code>, and <code>import-json</code>. All data persists to <code>transactions.json</code>. Display a monthly spending summary table with a warning when any category exceeds its configured budget.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — Async REST API with ASP.NET Core (Intermediate–Advanced)</h3>
+                <p>A production-ready REST API for a task management system using ASP.NET Core Minimal APIs, Entity Framework Core, full DI wiring, async/await throughout, and structured logging with Serilog.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>C# Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Typed route handlers</td>
+                            <td>ASP.NET Core Minimal APIs</td>
+                        </tr>
+                        <tr>
+                            <td>Database persistence</td>
+                            <td>Entity Framework Core + SQLite (code-first)</td>
+                        </tr>
+                        <tr>
+                            <td>Dependency injection</td>
+                            <td>Full DI container wiring, constructor injection</td>
+                        </tr>
+                        <tr>
+                            <td>Request cancellation</td>
+                            <td><code>CancellationToken</code> on all endpoint handlers</td>
+                        </tr>
+                        <tr>
+                            <td>Request validation</td>
+                            <td>FluentValidation for DTO validation</td>
+                        </tr>
+                        <tr>
+                            <td>Structured logging</td>
+                            <td>Serilog with request enrichment</td>
+                        </tr>
+                        <tr>
+                            <td>Error propagation</td>
+                            <td><code>Result&lt;T, Error&gt;</code> pattern + global exception middleware</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A complete REST API with CRUD endpoints for <code>Tasks</code> and <code>Projects</code>, pagination, filtering, and sorting. Includes an OpenAPI/Swagger UI, a health check endpoint, integration tests using <code>WebApplicationFactory&lt;T&gt;</code>, and a GitHub Actions CI pipeline.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Real-Time SignalR Chat with Background Services (Advanced–Master)</h3>
+                <p>A real-time multi-room chat application using SignalR, hosted services, <code>IAsyncEnumerable&lt;T&gt;</code> streaming, and a full DI-wired architecture — the most advanced project in the curriculum.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>C# Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Real-time messaging</td>
+                            <td>SignalR Hub with typed hub clients</td>
+                        </tr>
+                        <tr>
+                            <td>Message history on join</td>
+                            <td><code>IAsyncEnumerable&lt;T&gt;</code> streaming</td>
+                        </tr>
+                        <tr>
+                            <td>Message archiving</td>
+                            <td><code>IHostedService</code> + <code>BackgroundService</code></td>
+                        </tr>
+                        <tr>
+                            <td>Lock-free message queue</td>
+                            <td><code>Channel&lt;T&gt;</code> producer-consumer</td>
+                        </tr>
+                        <tr>
+                            <td>Online presence tracking</td>
+                            <td><code>MemoryCache</code> / <code>IDistributedCache</code></td>
+                        </tr>
+                        <tr>
+                            <td>Performance profiling</td>
+                            <td>BenchmarkDotNet for message dispatch pipeline</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A full-stack real-time chat server (ASP.NET Core + SignalR) with: multi-room support, message history streaming on join via <code>IAsyncEnumerable&lt;T&gt;</code>, a background <code>MessageArchiveWorker</code> that persists in-memory messages to SQLite every 30 seconds using <code>Channel&lt;T&gt;</code> for zero-lock message queuing, and a simple HTML/JS client consuming the SignalR hub.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–3</td>
+                        <td>Absolute Basics</td>
+                        <td>Write working C# programs using types, operators, string manipulation, nullability, and DateTime</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>4–7</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Direct program logic with switch expressions, write clean LINQ queries, and use modern data types like records and pattern matching</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>8–11</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Design OOP hierarchies, write generic and event-driven code, handle file I/O, and wire multi-layer apps with DI and Serilog</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>12–15</td>
+                        <td>Master Level Concepts</td>
+                        <td>Write fully async code with cancellation, use reflection and source generators, apply Span for zero-allocation performance, and complete three production projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Resource</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>docs.microsoft.com/dotnet</td>
+                        <td>Official docs for every language and library feature</td>
+                    </tr>
+                    <tr>
+                        <td>C# in Depth — Jon Skeet</td>
+                        <td>Deep language mastery reference book</td>
+                    </tr>
+                    <tr>
+                        <td>Andrew Lock — andrewlock.net</td>
+                        <td>ASP.NET Core internals and advanced patterns</td>
+                    </tr>
+                    <tr>
+                        <td>Nick Chapsas (YouTube)</td>
+                        <td>Modern .NET patterns and performance deep dives</td>
+                    </tr>
+                    <tr>
+                        <td>Pluralsight / Dometrain</td>
+                        <td>Structured video learning for all C# topics</td>
+                    </tr>
+                    <tr>
+                        <td>dotnet/runtime GitHub</td>
+                        <td>How the BCL (Base Class Library) is implemented</td>
+                    </tr>
+                    <tr>
+                        <td>BenchmarkDotNet Docs</td>
+                        <td>Performance profiling and micro-benchmarking</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Complete each week's task before moving on — building projects reinforces concepts far better than reading alone.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — your commit history is visible proof of consistent progress.</li>
+                    <li>Use the <strong>.NET CLI</strong> (<code>dotnet run</code>, <code>dotnet test</code>) from Week 1 — get comfortable with the tooling before you need it for complex projects.</li>
+                    <li>Allocate <strong>3–5 hours per week</strong> for study and practice — the full curriculum spans approximately 4 months.</li>
+                    <li>By Week 15, you should have three complete, deployed projects and the confidence to build any C# or ASP.NET Core application from scratch.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <!--  FOOTER -->
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

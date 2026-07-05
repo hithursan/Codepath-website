@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lua: Beginner to Master — 15 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>Lua: Beginner to Master</h1>
+        <p>Complete 15-Week Curriculum — From Tables & Closures to Metatables, Coroutines & Embedded Game Scripting</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>15-week, phase-based Lua curriculum</strong> designed to take a complete beginner to a professional-level Lua developer. The roadmap moves from <strong>syntax, types, variables, and operators</strong> through <strong>control flow, functions, tables as data structures, and modules</strong>, into <strong>OOP with metatables, error handling, file I/O, and LuaRocks libraries</strong>, all the way to <strong>coroutines, advanced metaprogramming, performance optimization, the C API, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics including Lua's unique dynamic typing and table system, <strong>Phase 2</strong> covers control flow, advanced functions, and modules, <strong>Phase 3</strong> covers intermediate and advanced core topics like OOP, error handling, and real-world libraries, and <strong>Phase 4</strong> covers master-level coroutines, metaprogramming, performance, and production projects.</p>
+            <p>By Week 15, you will have built three complete, portfolio-ready applications and be confident building production-grade Lua programs across game engines, embedded systems, and scripting domains.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 15 weeks &nbsp;|&nbsp; <strong>Stack:</strong> Lua 5.4, LuaRocks, LuaJIT &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic programming logic</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–3:</strong> Setup, core types, variables, and operators.</p>
+        </div>
+
+        <!--WEEK 1-->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Introduction to Lua &amp; Environment Setup</h2>
+                <p>Understand what Lua is, where it's used, and write your first working script.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding what Lua is, where it is used in the real world, and writing your very first working Lua script.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What is Lua &amp; Why Use It?</strong> — Lua is a lightweight, fast, embeddable scripting language designed to be integrated into applications written in C and other languages. It powers game engines (Roblox, World of Warcraft addons, Love2D), embedded systems, Neovim configuration, and Redis scripting due to its tiny footprint and speed.</li>
+                    <li><strong>Installing Lua &amp; Running Scripts</strong> — Lua can be installed via package managers (<code>brew install lua</code>, <code>apt install lua5.4</code>) or built from source at lua.org. Scripts run with the <code>lua</code> interpreter directly from the command line, or interactively through the Lua REPL for quick experimentation.</li>
+                    <li><strong>Lua Syntax Basics — Statements, Comments &amp; Blocks</strong> — Lua statements don't require semicolons (though they're allowed as optional separators). Single-line comments use <code>--</code>; multi-line comments use <code>--[[ ... ]]</code>. Blocks of code are delimited by keywords like <code>do...end</code>, not braces or indentation.</li>
+                    <li><strong>Variables &amp; Dynamic Typing</strong> — Lua variables require no type declaration — the type is determined dynamically by the value assigned. Variables are global by default unless declared with <code>local</code>, which is considered best practice to avoid polluting the global namespace.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Lua's defining characteristic — being embeddable in C applications — is what puts it inside World of Warcraft, Roblox, Redis, Nginx, and Neovim. Understanding this from Week 1 gives every subsequent concept a clear purpose. The <code>local</code> vs global variable distinction is not stylistic — it is a performance and correctness concern that affects every line of real Lua code.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- Lua's classic "Hello World" — no semicolons required
+print("Hello, Lua!")
+print("Lua version: " .. _VERSION)   -- .. is string concatenation
+
+-- Single-line comment
+--[[
+  This is a multi-line comment
+  spanning several lines
+]]
+do
+  local message = "Blocks group statements"
+  print(message)
+end   -- message is no longer visible here
+
+local name = "Alice"      -- local variable, recommended
+local age = 30
+global_score = 100        -- global variable (avoid in real code)
+print(name, age, global_score)</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Install Lua and confirm it runs with <code>lua -v</code>. Write a script that declares your name and favorite number as <strong>local variables</strong>, then prints a sentence combining both using string concatenation (<code>..</code>). Run it from the command line with <code>lua myscript.lua</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 2  -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Data Types, Operators &amp; Strings</h2>
+                <p>Learn Lua's eight core types, perform calculations with operators, and manipulate strings.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Learning Lua's eight core types, performing calculations with operators, and manipulating strings with the standard library.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Lua's Core Types (nil, boolean, number, string, table, function)</strong> — Lua has eight basic types, but the six you'll use daily are <code>nil</code> (absence of value), <code>boolean</code>, <code>number</code> (Lua 5.3+ distinguishes integers and floats internally), <code>string</code>, <code>table</code> (Lua's only data structure), and <code>function</code>. Use the built-in <code>type()</code> function to inspect any value's type at runtime.</li>
+                    <li><strong>Arithmetic, Relational &amp; Logical Operators</strong> — Lua supports standard arithmetic (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>^</code> for exponent, <code>//</code> for floor division), relational (<code>==</code>, <code>~=</code>, <code>&lt;</code>, <code>&gt;</code>), and logical (<code>and</code>, <code>or</code>, <code>not</code>) operators — note Lua uses <code>~=</code> for "not equal" instead of <code>!=</code>.</li>
+                    <li><strong>Truthiness — <code>nil</code>, <code>false</code> and Everything Else</strong> — In Lua, only <code>nil</code> and <code>false</code> are considered "falsy" — every other value, including <code>0</code> and empty string <code>""</code>, is "truthy." This differs from many languages and is a common source of bugs for newcomers from JavaScript or Python.</li>
+                    <li><strong>String Manipulation Basics</strong> — Strings are immutable in Lua and support concatenation with <code>..</code>, length with <code>#</code>, and a rich standard library (<code>string.upper</code>, <code>string.sub</code>, <code>string.format</code>) for formatting and manipulation. Long strings use <code>[[...]]</code> to avoid escaping.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Lua's truthiness rule — that <code>0</code> and <code>""</code> are truthy — trips up virtually every developer coming from C, JavaScript, or Python. Getting this wrong causes silent logic bugs that are extremely difficult to track down. The <code>~=</code> not-equal operator is another Lua-specific quirk you must internalize before writing any conditional logic.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>print(type(nil))        -- nil
+print(type(true))       -- boolean
+print(type(42))         -- number
+print(type("hello"))    -- string
+print(type({}))         -- table
+print(type(print))      -- function
+
+local a, b = 17, 5
+print(a / b)     -- 3.4   — always produces a float
+print(a // b)    -- 3     — floor division
+print(a % b)     -- 2     — modulo
+print(a ~= b)    -- true  — not equal (not !=)
+
+if 0 then print("0 is truthy in Lua!") end        -- this WILL print
+if "" then print("empty string is truthy too!") end -- this WILL print
+
+local s = "Hello, Lua!"
+print(#s)                          -- 12
+print(string.upper(s))             -- HELLO, LUA!
+print(s:sub(1, 5))                 -- Hello
+print(string.format("Score: %d%%", 95))  -- Score: 95%</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a simple <strong>temperature converter</strong> script. Declare a Celsius value as a local number, convert it to Fahrenheit, and print a formatted message using <code>string.format</code>. Use <code>type()</code> to print the type of each variable you declare, and demonstrate at least one truthy/falsy comparison with <code>if</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 3 -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Tables Basics &amp; The Nil Trap</h2>
+                <p>Understand Lua's single, powerful data structure and learn to avoid common nil-related pitfalls.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding Lua's single, powerful data structure — the table — and learning to avoid common nil-related pitfalls.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Tables as Arrays (Sequences)</strong> — When tables use sequential integer keys starting at 1, they behave like arrays — called "sequences" in Lua terminology. Indexing starts at 1 (not 0), which is a critical difference from most other programming languages.</li>
+                    <li><strong>Tables as Dictionaries (Key-Value Maps)</strong> — Tables can also use string (or any non-nil value) keys to behave like a dictionary or hash map. Dot notation (<code>t.key</code>) and bracket notation (<code>t["key"]</code>) are equivalent ways to access string keys.</li>
+                    <li><strong>Mixed Tables &amp; Table Constructors</strong> — A single table can mix array-style and dictionary-style entries simultaneously, since Lua tables are fundamentally just associative arrays under the hood. Table constructors (<code>{ }</code>) are the idiomatic way to build complex nested structures in one expression.</li>
+                    <li><strong>Assigning <code>nil</code> &amp; The Nil Trap</strong> — Setting a table key to <code>nil</code> effectively removes it from the table — there is no real distinction between "absent" and "set to nil." This means <code>#table</code> (the length operator) becomes unreliable on tables with holes — a classic Lua gotcha.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The table is Lua's only composite data structure — it replaces arrays, dictionaries, sets, objects, modules, and namespaces all at once. Understanding the nil trap and why <code>#t</code> becomes unreliable on sparse tables is the most important Lua-specific knowledge for avoiding runtime bugs in real programs.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>local fruits = {"apple", "banana", "cherry"}
+print(fruits[1])         -- "apple" — indexing starts at 1!
+print(#fruits)            -- 3
+fruits[4] = "date"
+print(#fruits)             -- 4
+
+local person = { name = "Alice", age = 30 }
+print(person.name)            -- "Alice" — dot notation
+print(person["age"])          -- 30 — bracket notation
+print(person.missing)         -- nil — no error, just nil
+
+local config = {
+  "first item",          -- index [1]
+  width = 800,           -- key "width"
+  nested = { a = 1 }    -- nested table
+}
+print(config[1], config.width, config.nested.a)
+
+local t = {1, 2, 3, 4, 5}
+t[3] = nil                     -- creates a "hole"
+print(#t)                       -- undefined behavior! could be 2 or 5
+for k, v in pairs(t) do print(k, v) end  -- safe iteration</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a simple <strong>"student record" table</strong> mixing array-style entries (a list of grades) with dictionary-style keys (<code>name</code>, <code>id</code>). Remove one grade by setting it to <code>nil</code>, then demonstrate why using <code>#grades</code> afterward is unreliable. Use <code>pairs()</code> to safely print all remaining entries.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 4–7:</strong> Functions, tables as data structures, and modules.</p>
+        </div>
+
+        <!--WEEK 4 -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Control Flow &amp; Functions</h2>
+                <p>Direct program execution with Lua's control structures and define reusable functions.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Directing program execution with Lua's control structures and defining reusable functions with multiple return values.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Conditionals — <code>if</code>, <code>elseif</code>, <code>else</code></strong> — Lua's <code>if</code> statement requires <code>then</code> and is terminated with <code>end</code> — there are no braces. <code>elseif</code> (a single keyword, not <code>else if</code>) chains additional conditions cleanly without nested blocks.</li>
+                    <li><strong>Loops — <code>while</code>, <code>repeat...until</code>, Numeric <code>for</code></strong> — <code>while</code> loops run while a condition holds; <code>repeat...until</code> is Lua's do-while equivalent, always running at least once with the condition checked after the body. The numeric <code>for</code> loop (<code>for i = start, stop, step do</code>) is the idiomatic way to iterate a known range.</li>
+                    <li><strong>Generic <code>for</code> with <code>pairs</code> and <code>ipairs</code></strong> — The generic <code>for</code> loop with <code>ipairs</code> iterates array-style tables in order, stopping at the first <code>nil</code>. <code>pairs</code> iterates every key-value pair in any table (unordered), making it the safe choice for dictionary-style or sparse tables.</li>
+                    <li><strong>Functions — Declaration, Parameters &amp; Multiple Returns</strong> — Functions are first-class values in Lua, declared with <code>function name(params) ... end</code>. Uniquely, Lua functions can return multiple values in a single <code>return</code> statement — a feature used extensively throughout the standard library.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Multiple return values from a single function is one of Lua's most distinctive and practical features — it eliminates the need for output parameters, result structs, or exceptions just to return a status alongside a value. The <code>ipairs</code> vs <code>pairs</code> distinction is critical: using <code>ipairs</code> on a sparse table silently stops early, causing hard-to-debug logic errors.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>local score = 82
+if score >= 90 then
+  print("Grade: A")
+elseif score >= 80 then
+  print("Grade: B")
+else
+  print("Grade: F")
+end
+
+local i = 1
+while i <= 3 do print("while: " .. i); i = i + 1 end
+
+local j = 1
+repeat print("repeat: " .. j); j = j + 1 until j > 3
+
+for k = 10, 1, -2 do print("for: " .. k) end   -- 10, 8, 6, 4, 2
+
+local fruits = {"apple", "banana", "cherry"}
+for index, value in ipairs(fruits) do print(index, value) end
+
+local function divmod(a, b)
+  return a // b, a % b          -- multiple return values
+end
+local quotient, remainder = divmod(17, 5)
+print(quotient, remainder)       -- 3  2</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a <strong>FizzBuzz</strong> program for numbers 1–30 using a numeric <code>for</code> loop and <code>if</code>/<code>elseif</code>. Then write a <code>function minMax(numbers)</code> that takes an array-style table and returns both the minimum and maximum value using a single <code>return</code> statement with multiple values, iterating with <code>ipairs</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 5-->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Functions in Depth &amp; Variadic Arguments</h2>
+                <p>Master advanced function features — default-like patterns, varargs, closures, and recursion.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering advanced function features including variadic arguments, default parameter patterns, closures, and tail-call optimization.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Variadic Functions (<code>...</code>)</strong> — Lua functions can accept a variable number of arguments using <code>...</code> (the vararg expression). Inside the function, <code>{...}</code> packs all extra arguments into a table, and <code>select('#', ...)</code> returns the count of varargs passed.</li>
+                    <li><strong>Default Argument Patterns</strong> — Lua has no native default parameter syntax, but the idiomatic pattern uses the <code>or</code> operator: if an argument is <code>nil</code> (not passed), the <code>or</code> falls through to the default value. This works cleanly because <code>nil</code> is falsy.</li>
+                    <li><strong>Closures — Functions That Capture State</strong> — A closure is a function that "remembers" variables from its enclosing scope even after that scope has finished executing. Lua's first-class functions and lexical scoping make closures simple and powerful — used for counters, iterators, and callbacks.</li>
+                    <li><strong>Recursion &amp; Tail Calls</strong> — Lua functions can call themselves recursively to solve problems naturally expressed in terms of smaller subproblems. Lua guarantees proper tail-call optimisation, meaning tail-recursive functions run in constant stack space — unlike most scripting languages.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Closures are the foundation of Lua's OOP system (Week 8), its module pattern (Week 7), and its coroutine-based generators (Week 12). The <code>param = param or default</code> idiom appears in virtually every Lua codebase. Tail-call optimization is Lua's answer to deep recursion — understanding it unlocks functional programming patterns without stack overflow risk.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>local function sum(...)
+  local total = 0
+  for _, value in ipairs({...}) do
+    total = total + value
+  end
+  return total
+end
+print(sum(1, 2, 3, 4, 5))    -- 15
+
+local function greet(name, greeting)
+  greeting = greeting or "Hello"     -- idiomatic default value
+  return greeting .. ", " .. name .. "!"
+end
+print(greet("Alice"))              -- Hello, Alice!
+print(greet("Bob", "Hi"))           -- Hi, Bob!
+
+local function makeCounter()
+  local count = 0                      -- captured by closure
+  return function()
+    count = count + 1
+    return count
+  end
+end
+local counter = makeCounter()
+print(counter(), counter(), counter())  -- 1  2  3
+
+local function factorial(n, acc)
+  acc = acc or 1
+  if n <= 1 then return acc end
+  return factorial(n - 1, n * acc)   -- tail call
+end
+print(factorial(10))   -- 3628800</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a variadic <code>function average(...)</code> that computes the mean of any number of arguments. Build a <code>makeAccumulator()</code> closure factory that returns a function adding a number to a running total each call. Write a tail-recursive <code>function sumRange(n, acc)</code> that sums integers from 1 to n.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 6 -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Tables as Data Structures</h2>
+                <p>Use tables to implement classic data structures — stacks, queues, sets, and sorting.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Using tables to implement classic data structures — stacks, queues, sets — and sorting with custom comparators.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Implementing a Stack with Tables</strong> — A stack (LIFO) is trivially implemented using a table's array part with <code>table.insert</code> and <code>table.remove</code> operating on the end of the sequence — both are O(1) operations when applied to the last index.</li>
+                    <li><strong>Implementing a Queue with Tables</strong> — A queue (FIFO) can be implemented with <code>table.insert</code> at the end and <code>table.remove(t, 1)</code> at the front. For performance-critical queues, a head/tail index pattern avoids the O(n) shifting cost of removing from position 1.</li>
+                    <li><strong>Sets Using Tables as Hash Maps</strong> — Lua has no built-in set type, but tables are commonly used as sets by mapping each element to <code>true</code> as the value — giving O(1) membership testing via simple key lookup, far faster than scanning an array.</li>
+                    <li><strong>Sorting Tables with <code>table.sort</code></strong> — <code>table.sort</code> sorts a sequence in place using the default <code>&lt;</code> comparison, or a custom comparator function for complex sorting logic — such as sorting objects by a specific field or in descending order.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The set pattern — <code>set[value] = true</code> — is one of the most used Lua idioms in game scripting. Checking membership in an array requires O(n) scanning; checking in a table-as-set is O(1). This performance difference is what separates Lua code that runs at 60fps from code that drops frames in a game loop.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>local stack = {}
+table.insert(stack, "first")
+table.insert(stack, "second")
+table.insert(stack, "third")
+print(table.remove(stack))    -- "third" — pop last
+print(#stack)                 -- 2
+
+local queue = {}
+table.insert(queue, "first")
+table.insert(queue, "second")
+print(table.remove(queue, 1)) -- "first" — dequeue from front
+
+local function makeSet(list)
+  local set = {}
+  for _, value in ipairs(list) do set[value] = true end
+  return set
+end
+local fruitSet = makeSet({"apple", "banana", "cherry"})
+print(fruitSet["banana"])    -- true — O(1) membership test
+print(fruitSet["mango"])     -- nil — not in set
+
+local numbers = {5, 3, 8, 1, 9, 2}
+table.sort(numbers)
+print(table.concat(numbers, ", "))           -- 1, 2, 3, 5, 8, 9
+table.sort(numbers, function(a, b) return a > b end)
+print(table.concat(numbers, ", "))           -- 9, 8, 5, 3, 2, 1</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Implement a <code>Queue</code> with <code>enqueue</code> and <code>dequeue</code> functions using a <strong>head/tail index pattern</strong> (no shifting). Build a deduplication function <code>unique(list)</code> using the set pattern. Sort a table of <code>{name, score}</code> pairs by score descending using a custom comparator.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 7 -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Modules, Scope &amp; String Patterns</h2>
+                <p>Organise code into reusable modules, master scoping rules, and use Lua's lightweight pattern-matching system.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Organizing code into reusable modules, mastering scope rules, and using Lua's lightweight pattern-matching system for text processing.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Creating Modules with <code>require</code></strong> — A Lua module is simply a <code>.lua</code> file that returns a table of public functions and values. <code>require</code> loads and caches the module (running it only once even if required multiple times), making modules the standard way to organise multi-file Lua projects.</li>
+                    <li><strong>Scope Rules — Local vs Global, Blocks &amp; Shadowing</strong> — Variables declared with <code>local</code> are scoped to the enclosing block and are not visible outside it. Lua allows shadowing — declaring a new <code>local</code> with the same name as an outer variable temporarily hides the outer one within the inner scope.</li>
+                    <li><strong>String Patterns — Lua's Lightweight Regex</strong> — Lua doesn't use full regular expressions but provides "patterns" — a simpler, faster matching syntax via <code>string.match</code>, <code>string.find</code>, and <code>string.gmatch</code>. Common classes include <code>%d</code> (digit), <code>%a</code> (letter), <code>%s</code> (whitespace), and <code>+</code>/<code>*</code> for repetition.</li>
+                    <li><strong><code>string.gsub</code> for Find-and-Replace</strong> — <code>string.gsub</code> performs pattern-based substitution, optionally limited to a maximum number of replacements, and returns both the resulting string and the count of substitutions made — useful for sanitising and transforming text data.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The module pattern — a file that returns a table — is how every real multi-file Lua project is organized. Lua's pattern system is intentionally simpler than full regex, making it faster and more embeddable. Knowing when <code>%d+</code> is sufficient versus when you need a full regex library is the mark of a practical Lua developer.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- File: mathutils.lua
+local M = {}
+function M.square(x) return x * x end
+function M.cube(x) return x * x * x end
+return M
+
+-- File: main.lua
+-- local mathutils = require("mathutils")
+-- print(mathutils.square(5))   -- 25
+
+local x = 10
+do
+  local x = 20         -- shadows the outer x
+  print(x)               -- 20
+end
+print(x)                 -- 10 — outer x unaffected
+
+local text = "Order #4521 placed on 2026-06-30"
+local orderId = string.match(text, "#(%d+)")
+print(orderId)                          -- "4521"
+
+for word in string.gmatch("one two three", "%a+") do
+  print(word)                            -- one / two / three
+end
+
+local sentence = "The cat sat on the mat"
+local result, count = string.gsub(sentence, "at", "og")
+print(result)    -- "The cog sog on the mog"
+print(count)      -- 3</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a <code>stringutils.lua</code> module exporting <code>trim(s)</code>, <code>split(s, delimiter)</code>, and <code>titleCase(s)</code> functions using string patterns. Write a <code>main.lua</code> that requires the module and processes a CSV-like string (<code>"alice,30,engineer"</code>) by splitting it with <code>gmatch</code>, then prints each field. Demonstrate variable shadowing with a nested-block example.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 8–11:</strong> OOP, file I/O, error handling, and libraries.</p>
+        </div>
+
+        <!-- WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Object-Oriented Programming with Metatables</h2>
+                <p>Implement OOP patterns in Lua using tables and metatables — Lua has no built-in class system, so you build one.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Implementing OOP patterns from scratch using Lua's metatable system — Lua's most powerful and distinctive feature.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Metatables &amp; the <code>__index</code> Metamethod</strong> — A metatable is a table that controls another table's behavior for operations like indexing, arithmetic, and comparison. The <code>__index</code> metamethod, set via <code>setmetatable</code>, is the foundation of Lua's "fake" inheritance — when a key is missing, Lua looks it up in the metatable instead.</li>
+                    <li><strong>Simulating Classes &amp; Constructors</strong> — By convention, a Lua "class" is a table holding shared methods, with a constructor function that creates instances and links them via <code>setmetatable</code>. The colon syntax (<code>function Class:method()</code>) is sugar for an implicit <code>self</code> first parameter.</li>
+                    <li><strong>Operator Overloading with Metamethods</strong> — Metamethods like <code>__add</code>, <code>__eq</code>, <code>__lt</code>, <code>__tostring</code>, and <code>__call</code> let custom tables respond to operators (<code>+</code>, <code>==</code>, <code>&lt;</code>) and built-in functions (<code>tostring</code>, calling the table like a function) — enabling expressive custom types.</li>
+                    <li><strong>Encapsulation Patterns — Private State with Closures</strong> — Lua has no <code>private</code> keyword, but true encapsulation can be achieved using closures: state captured in a constructor's local scope is inaccessible from outside, only reachable through methods the constructor explicitly returns.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every major Lua-powered game engine — Roblox, Love2D, World of Warcraft's addon system — uses metatable-based OOP. Understanding how <code>__index</code> chains create inheritance, and how <code>setmetatable</code> links instances to their "class" table, is the prerequisite for reading and contributing to any real Lua game codebase.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>local Animal = { sound = "..." }
+Animal.__index = Animal
+
+local function newAnimal(name)
+  local self = setmetatable({}, Animal)
+  self.name = name
+  return self
+end
+function Animal:speak() return self.name .. " says " .. self.sound end
+
+local Dog = setmetatable({}, { __index = Animal })
+Dog.__index = Dog
+Dog.sound = "Woof"
+function Dog.new(name)
+  return setmetatable({ name = name }, Dog)
+end
+local rex = Dog.new("Rex")
+print(rex:speak())   -- Rex says Woof
+
+local Vector = {}
+Vector.__index = Vector
+Vector.__add = function(a, b)
+  return setmetatable({x = a.x + b.x, y = a.y + b.y}, Vector)
+end
+Vector.__tostring = function(v)
+  return string.format("(%d, %d)", v.x, v.y)
+end
+local v1 = setmetatable({x = 1, y = 2}, Vector)
+local v2 = setmetatable({x = 3, y = 4}, Vector)
+print(tostring(v1 + v2))   -- (4, 6)</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <code>Shape</code> "class" hierarchy using metatables: base <code>Shape</code> with a <code>__tostring</code> metamethod, and <code>Circle</code>/<code>Rectangle</code> "subclasses" using <code>__index</code> chaining that override an <code>area()</code> method. Implement <code>__eq</code> so two shapes compare equal if their areas match. Separately, build a closure-based <code>Stack</code> with <strong>true private internal state</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 9 -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Error Handling &amp; Defensive Programming</h2>
+                <p>Handle errors gracefully using Lua's protected call mechanism and write robust, defensive code.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Handling errors gracefully using Lua's protected call mechanism and writing robust, defensive code that fails fast with clear messages.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>error()</code> and <code>assert()</code></strong> — <code>error(message)</code> raises a Lua error, unwinding the call stack until caught. <code>assert(condition, message)</code> is shorthand that raises an error if the condition is falsy — the idiomatic way to validate function preconditions.</li>
+                    <li><strong><code>pcall</code> and <code>xpcall</code> — Protected Calls</strong> — <code>pcall(function, ...)</code> calls a function in "protected mode," catching any error and returning <code>false, errorMessage</code> instead of crashing the program. <code>xpcall</code> additionally accepts a custom error handler function, useful for attaching stack traces via <code>debug.traceback</code>.</li>
+                    <li><strong>Custom Error Objects</strong> — Beyond simple string errors, <code>error()</code> can raise any Lua value — including a table — allowing structured error objects with error codes, context, and metadata, which calling code can inspect after a <code>pcall</code> catches them.</li>
+                    <li><strong>Defensive Programming — Type Checking &amp; Guard Clauses</strong> — Because Lua is dynamically typed with no compile-time checks, defensive functions validate their inputs explicitly at the start (guard clauses) to fail fast with clear errors rather than producing confusing downstream bugs.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Lua's error model — raise any value, catch with <code>pcall</code> — is both simpler and more flexible than exception hierarchies in Java or Python. Game engines use <code>pcall</code> to sandbox untrusted mod scripts: if a mod's Lua code crashes, <code>pcall</code> catches it and keeps the game running. This is a real production pattern you will use immediately.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>local function withdraw(balance, amount)
+  assert(type(amount) == "number", "amount must be a number")
+  assert(amount <= balance, "insufficient funds")
+  return balance - amount
+end
+print(withdraw(100, 50))  -- 50
+
+local function risky(x)
+  if x < 0 then error("negative input not allowed") end
+  return math.sqrt(x)
+end
+local success, result = pcall(risky, -4)
+if success then print("Result: " .. result)
+else print("Caught error: " .. result) end
+
+local function validateAge(age)
+  if age < 0 or age > 120 then
+    error({ code = "INVALID_AGE", message = "Age out of range", value = age })
+  end
+  return age
+end
+local ok, err = pcall(validateAge, -5)
+if not ok then print(err.code .. ": " .. err.message) end
+
+local function safeDivide(a, b)
+  if type(a) ~= "number" or type(b) ~= "number" then
+    return nil, "both arguments must be numbers"
+  end
+  if b == 0 then return nil, "division by zero" end
+  return a / b
+end
+local result, err = safeDivide(10, 0)
+print(result, err)   -- nil  division by zero</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <code>BankAccount</code> table-based object where <code>withdraw</code> and <code>deposit</code> use <code>assert</code> for input validation. Wrap all external calls in <code>pcall</code>, printing user-friendly error messages on failure. Add a <strong>custom structured error object</strong> for the "insufficient funds" case including the requested and available amounts.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 10  -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — File I/O &amp; Standard Library Deep Dive</h2>
+                <p>Read and write files, and master Lua's essential standard library modules.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Reading and writing files with Lua's I/O library and mastering the essential standard library modules used in every real Lua project.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>File I/O — Reading Files</strong> — <code>io.open(filename, mode)</code> opens a file and returns a file handle (or <code>nil</code> plus an error message on failure). <code>file:read("*a")</code> reads the entire file, <code>file:lines()</code> iterates line by line — always close files with <code>file:close()</code>.</li>
+                    <li><strong>File I/O — Writing Files</strong> — Writing uses mode <code>"w"</code> (overwrite) or <code>"a"</code> (append). <code>file:write(...)</code> accepts multiple string/number arguments written sequentially. Wrapping file operations in <code>pcall</code> guards against permission or disk errors.</li>
+                    <li><strong>The <code>os</code> Library — System Interaction</strong> — The <code>os</code> library provides system-level utilities: <code>os.time()</code> returns the current Unix timestamp, <code>os.date()</code> formats dates, <code>os.clock()</code> measures CPU time for benchmarking, and <code>os.getenv()</code> reads environment variables.</li>
+                    <li><strong>The <code>table</code> and <code>math</code> Libraries</strong> — The <code>table</code> library provides <code>table.insert</code>, <code>table.remove</code>, <code>table.concat</code>, and <code>table.sort</code> for sequence manipulation. The <code>math</code> library provides <code>math.floor</code>, <code>math.ceil</code>, <code>math.random</code>, and trigonometric functions for numeric computation.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> File I/O and the <code>os</code> library are what make Lua useful for CLI tools, game save systems, and configuration management. The pattern of checking <code>if not file then error(...) end</code> immediately after <code>io.open</code> — combined with <code>pcall</code> from Week 9 — is the production-standard way to handle all file operations in real Lua codebases.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>local file, err = io.open("data.txt", "r")
+if not file then error("Could not open file: " .. err) end
+for line in file:lines() do print(line) end
+file:close()
+
+local file = io.open("output.txt", "w")
+file:write("Line 1\n")
+file:write("Line 2\n", "Line 3\n")
+file:close()
+
+local appendFile = io.open("output.txt", "a")
+appendFile:write("Appended line\n")
+appendFile:close()
+
+print(os.date("%Y-%m-%d %H:%M:%S"))
+local startTime = os.clock()
+for i = 1, 1000000 do end
+print(string.format("Elapsed: %.4f seconds", os.clock() - startTime))
+
+math.randomseed(os.time())
+print(math.random(1, 100))
+print(math.floor(3.7), math.ceil(3.2))   -- 3  4
+local nums = {5, 2, 8}
+print(table.concat(nums, ", "))            -- "5, 2, 8"</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <code>Logger</code> module that writes timestamped log entries (using <code>os.date</code>) to a file in append mode, with a <code>Logger.log(level, message)</code> function. Write a separate <code>LogReader</code> that reads the file back and uses <code>string.match</code> to parse and filter entries by log level. Benchmark the logging operation using <code>os.clock()</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 11 -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Working with Real-World Lua (LuaRocks, JSON, Embedding)</h2>
+                <p>Use third-party libraries via LuaRocks, parse structured data, and understand how Lua is embedded in real applications.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Using third-party libraries via LuaRocks, parsing JSON structured data, and understanding how Lua is embedded in real-world applications.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>LuaRocks — Lua's Package Manager</strong> — LuaRocks is Lua's standard package manager, used to install and manage third-party libraries ("rocks") such as JSON parsers, HTTP clients, and testing frameworks. Installed rocks are loaded with the standard <code>require</code> function.</li>
+                    <li><strong>JSON Encoding &amp; Decoding</strong> — Since Lua has no built-in JSON support, libraries like <code>dkjson</code> or <code>cjson</code> provide <code>encode</code>/<code>decode</code> functions that convert between Lua tables and JSON strings — essential for APIs, config files, and game save data.</li>
+                    <li><strong>Lua in Game Engines — Roblox &amp; Love2D Patterns</strong> — Game engines embed Lua as a scripting layer over a C/C++ core, exposing engine-specific global tables and callback functions. Love2D defines <code>love.load</code>, <code>love.update(dt)</code>, and <code>love.draw</code> as lifecycle hooks the engine calls automatically.</li>
+                    <li><strong>Embedding Lua in C Applications (Conceptual Overview)</strong> — Lua's defining feature is its small, clean C API for embedding — a host application creates a <code>lua_State</code>, loads scripts, and exchanges data via a virtual stack. This explains why Lua dominates game scripting, configuration, and extensible application plugins.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> JSON is the universal data exchange format — without it, Lua cannot communicate with web APIs, read modern config files, or implement save-game systems that load correctly after a game update changes the format. Understanding how Love2D's lifecycle callbacks work is the direct prerequisite for the master project in Week 15.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- Terminal: luarocks install dkjson
+local json = require("dkjson")
+print(type(json.encode))   -- "function"
+
+local data = { name = "Alice", age = 30, tags = {"admin", "active"} }
+local jsonString = json.encode(data, { indent = true })
+print(jsonString)
+local decoded = json.decode(jsonString)
+print(decoded.name)   -- "Alice"
+
+-- Love2D game loop pattern (requires Love2D framework)
+function love.load()
+  player = { x = 100, y = 100, speed = 200 }
+end
+function love.update(dt)
+  if love.keyboard.isDown("right") then
+    player.x = player.x + player.speed * dt
+  end
+end
+function love.draw()
+  love.graphics.rectangle("fill", player.x, player.y, 32, 32)
+end</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Install <code>dkjson</code> via LuaRocks. Write a script that builds a Lua table representing a small game character (<code>name</code>, <code>hp</code>, <code>inventory</code> list), encodes it to JSON, writes it to a file, then reads and decodes it back into a Lua table on the next run — implementing simple <strong>save-game functionality</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 12–15:</strong> Coroutines, advanced metatables, performance, C API, and three complete capstone projects.</p>
+        </div>
+
+        <!-- WEEK 12-->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Coroutines: Lua's Cooperative Concurrency</h2>
+                <p>Master Lua's unique coroutine system for cooperative multitasking, generators, and asynchronous-style patterns.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering Lua's unique coroutine system for cooperative multitasking, generators, and task scheduling in game engines.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Creating &amp; Resuming Coroutines</strong> — <code>coroutine.create(function)</code> wraps a function as a coroutine — a separate thread of execution that runs cooperatively, not preemptively. <code>coroutine.resume</code> starts or continues it; the coroutine runs until it finishes, errors, or yields.</li>
+                    <li><strong><code>coroutine.yield</code> — Pausing Execution</strong> — <code>coroutine.yield(...)</code> pauses the coroutine at exactly that point, returning control and any yielded values back to the caller. The next <code>resume</code> call continues execution right where <code>yield</code> left off — this is the foundation of generators and cooperative scheduling.</li>
+                    <li><strong>Building Generators &amp; Iterators with Coroutines</strong> — Coroutines naturally implement generator-style iterators using <code>coroutine.wrap</code>, which returns a plain function instead of a thread object — calling it resumes the coroutine and returns its yielded value directly, perfect for <code>for</code> loops.</li>
+                    <li><strong>Cooperative Task Scheduling</strong> — Because Lua coroutines yield control explicitly (cooperative, not preemptive), they're ideal for building simple task schedulers — common in game engines for managing multiple "simultaneous" scripted behaviors without real OS threads.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Coroutines are how Roblox scripts run "simultaneously" — each NPC, cutscene, and tween is a coroutine yielding control back to the engine's scheduler each frame. Understanding how <code>yield</code> and <code>resume</code> pass values bidirectionally makes coroutine-based generators and schedulers completely demystified instead of magical.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>local co = coroutine.create(function(a)
+  print("Started with: " .. a)
+  local b = coroutine.yield(a + 1)
+  print("Resumed with: " .. b)
+end)
+print(coroutine.resume(co, 10))    -- Started with: 10  → true  11
+print(coroutine.resume(co, 99))    -- Resumed with: 99  → true
+
+local function counter()
+  for i = 1, 3 do coroutine.yield(i) end
+  return "done"
+end
+local co2 = coroutine.create(counter)
+while coroutine.status(co2) ~= "dead" do
+  print(coroutine.resume(co2))     -- true 1 / true 2 / true 3 / true done
+end
+
+local function range(n)
+  return coroutine.wrap(function()
+    for i = 1, n do coroutine.yield(i) end
+  end)
+end
+for value in range(5) do print(value) end   -- 1 2 3 4 5</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a generator using <code>coroutine.wrap</code> that lazily produces an infinite sequence of Fibonacci numbers, consumed in a <code>for</code> loop that takes only the first 15 values. Build a simple <strong>cooperative task scheduler</strong> that manages 3 coroutine "tasks," stepping through them round-robin until all are <code>"dead"</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 13-->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Advanced Metatables &amp; Metaprogramming</h2>
+                <p>Push Lua's metatable system to its limits — proxies, read-only tables, and dynamic dispatch.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Pushing Lua's metatable system to its limits with write interception, callable tables, weak references, and sandboxing proxies.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>__newindex</code> — Intercepting Assignment</strong> — While <code>__index</code> intercepts reads of missing keys, <code>__newindex</code> intercepts writes to missing keys — enabling read-only tables, validation on assignment, and automatic logging of all mutations to an object.</li>
+                    <li><strong><code>__call</code> — Making Tables Callable</strong> — The <code>__call</code> metamethod allows a table to be invoked like a function using normal call syntax <code>table(...)</code>. This is used to build "functor" objects — stateful callable objects, common in factory and command patterns.</li>
+                    <li><strong>Weak Tables &amp; Garbage Collection Hints</strong> — Weak tables (set via <code>__mode = "k"</code>, <code>"v"</code>, or <code>"kv"</code> in the metatable) allow the garbage collector to reclaim entries whose keys/values are otherwise unreferenced — essential for building caches that don't leak memory.</li>
+                    <li><strong>Proxy Tables &amp; Sandboxing Concepts</strong> — Combining <code>__index</code>, <code>__newindex</code>, and a separate hidden storage table builds proxy objects that fully control access to underlying data — the technique used to build secure sandboxes that restrict what untrusted scripts can read or modify.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The sandboxing pattern — proxy tables with <code>__index</code>/<code>__newindex</code> controlling access — is literally how game engines isolate mod scripts from game internals. Weak tables are the solution to cache memory leaks in long-running game servers. These are not academic techniques — they are the tools that make production Lua systems robust and secure.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>local readOnly = {}
+local proxy = setmetatable({}, {
+  __index = readOnly,
+  __newindex = function(t, k, v)
+    error("Attempt to modify read-only table")
+  end
+})
+readOnly.value = 42
+print(proxy.value)    -- 42
+
+local Multiplier = {}
+Multiplier.__call = function(self, x) return x * self.factor end
+local double = setmetatable({ factor = 2 }, Multiplier)
+print(double(21))    -- 42 — calling a table like a function
+
+local cache = setmetatable({}, { __mode = "k" })  -- weak keys
+local function memoize(fn)
+  return function(x)
+    if cache[x] == nil then cache[x] = fn(x) end
+    return cache[x]
+  end
+end
+local fastSquare = memoize(function(x) return x * x end)
+print(fastSquare(5))   -- 25 (cached after first call)</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a read-only "config" table using <code>__newindex</code> that throws an error on any modification attempt. Build a <strong>memoization utility</strong> using weak tables for a recursive Fibonacci function and benchmark it against a non-memoized version using <code>os.clock()</code>. Create a logging proxy using <code>__index</code>/<code>__newindex</code> that tracks every read/write to a "game state" table.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 14-->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Performance, the C API &amp; Embedding Lua</h2>
+                <p>Optimise Lua code for performance and understand how Lua integrates with host applications via its C API.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Optimizing Lua code for performance and understanding how Lua integrates with host applications via its C API and LuaJIT.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Performance Profiling &amp; Common Bottlenecks</strong> — Lua performance issues typically stem from excessive table creation in loops, unnecessary global variable access (slower than local), and string concatenation in loops (creates many intermediate strings). <code>os.clock()</code> and manual instrumentation are the primary profiling tools.</li>
+                    <li><strong>Locals vs Globals — Performance Implications</strong> — Accessing a <code>local</code> variable is a fast, direct register/stack access; accessing a global requires a table lookup in <code>_G</code> every single time. Caching frequently used globals (like <code>math.floor</code>) as locals inside hot loops yields measurable speedups.</li>
+                    <li><strong>LuaJIT — Just-In-Time Compilation</strong> — LuaJIT is a high-performance alternative implementation of Lua that compiles hot code paths to native machine code at runtime, often running 10–50x faster than standard Lua for compute-heavy workloads. It's widely used in performance-critical game engines.</li>
+                    <li><strong>The Lua C API — Embedding Conceptual Deep Dive</strong> — The C API revolves around a virtual stack shared between C and Lua: C code pushes/pops values, calls Lua functions, and registers C functions callable from Lua. Understanding this stack-based model explains how every embedding — games, Redis, Nginx/OpenResty — actually works under the hood.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> In a game loop running at 60fps, Lua code has approximately 16 milliseconds per frame. Understanding that global lookups are table accesses and string concatenation in loops is quadratic — and knowing how to fix both — is the difference between a smooth game and one that stutters. LuaJIT adoption is widespread enough that understanding it is a professional requirement.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>-- BAD: string concatenation in a loop — O(n²)
+local s = ""
+for i = 1, 1000 do s = s .. i end
+
+-- GOOD: build table and concat once — O(n)
+local parts = {}
+for i = 1, 1000 do parts[i] = tostring(i) end
+local result = table.concat(parts)
+
+-- Cache global as local before hot loop
+local floor = math.floor
+local sum = 0
+for i = 1, 1000000 do
+  sum = sum + floor(i / 2)  -- fast local access
+end
+
+-- LuaJIT is largely compatible with standard Lua 5.1
+-- Run with: luajit script.lua
+-- LuaJIT FFI: ffi.cdef[[ int printf(const char *fmt, ...); ]]
+
+-- C API conceptual: this Lua function is callable from a C host
+function on_player_damage(playerId, amount)
+  print(string.format("Player %d took %d damage", playerId, amount))
+end</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write two versions of a function that builds a large string from 100,000 numbers: one using naive <code>..</code> concatenation in a loop, one using <code>table.concat</code>. <strong>Benchmark both with <code>os.clock()</code></strong> and document the performance difference. Research and write a short comparison of standard Lua vs LuaJIT for a CPU-bound numeric workload.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 15  -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Capstone Week: Three Master Projects</h2>
+                <p>Apply everything learned across the entire curriculum in three complete, production-quality projects.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Synthesising all four phases into three complete, production-quality Lua projects spanning CLI tools, game engines, and advanced engine architecture.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — CLI Inventory Manager (Beginner → Intermediate)</h3>
+                <p>A fully featured command-line inventory management script with persistent storage, module organization, and pattern-based command parsing.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Lua Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Item data model</td>
+                            <td>Tables as both arrays (item list) and dictionaries (lookup by ID)</td>
+                        </tr>
+                        <tr>
+                            <td>Multi-file organization</td>
+                            <td>Separate <code>inventory.lua</code>, <code>storage.lua</code>, <code>cli.lua</code> modules</td>
+                        </tr>
+                        <tr>
+                            <td>Persistent storage</td>
+                            <td>File I/O with custom serialization format</td>
+                        </tr>
+                        <tr>
+                            <td>Safe operations</td>
+                            <td><code>pcall</code>-wrapped operations with custom error objects</td>
+                        </tr>
+                        <tr>
+                            <td>Command parsing</td>
+                            <td>String patterns for parsing CLI command input</td>
+                        </tr>
+                        <tr>
+                            <td>Sorted output</td>
+                            <td><code>table.sort</code> by name, quantity, or price</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>local Inventory = {}
+Inventory.__index = Inventory
+
+function Inventory.new() return setmetatable({ items = {} }, Inventory) end
+function Inventory:addItem(id, name, qty, price)
+  self.items[id] = { name = name, qty = qty, price = price }
+end
+function Inventory:totalValue()
+  local total = 0
+  for _, item in pairs(self.items) do
+    total = total + item.qty * item.price
+  end
+  return total
+end
+return Inventory</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A CLI app supporting <code>add</code>, <code>remove</code>, <code>list</code>, <code>update</code>, and <code>value</code> commands. Inventory persists to a file between runs using a custom serialisation function. All operations are wrapped in <code>pcall</code> with friendly error messages. Build on <strong>Days 1–2</strong>.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — Text Adventure Game Engine (Intermediate → Advanced)</h3>
+                <p>A data-driven text adventure game engine demonstrating OOP, coroutines, metaprogramming, and free-text command parsing.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Lua Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Room, Player, Item classes</td>
+                            <td>Metatable-based OOP with inheritance chains</td>
+                        </tr>
+                        <tr>
+                            <td>Game loop</td>
+                            <td>Coroutine yielding control between input cycles</td>
+                        </tr>
+                        <tr>
+                            <td>Command dispatch</td>
+                            <td><code>__call</code> metamethod for callable verb handlers</td>
+                        </tr>
+                        <tr>
+                            <td>World data loading</td>
+                            <td>JSON-based room/world data via LuaRocks library</td>
+                        </tr>
+                        <tr>
+                            <td>Player inventory</td>
+                            <td>Closures for encapsulated private inventory state</td>
+                        </tr>
+                        <tr>
+                            <td>Command parsing</td>
+                            <td>String patterns for "go north", "take key" style input</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>local Commands = {}
+local GoCommand = setmetatable({}, {
+  __call = function(self, world, direction)
+    local nextRoom = world.currentRoom.exits[direction]
+    if nextRoom then
+      world.currentRoom = nextRoom
+      print(nextRoom.description)
+    else
+      print("You can't go that way.")
+    end
+  end
+})
+Commands["go"] = GoCommand
+
+local verb, arg = string.match(input, "(%a+)%s*(.*)")
+if Commands[verb] then Commands[verb](world, arg) end</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A playable text adventure with at least 5 interconnected rooms, an inventory system, and a parser supporting verb-noun commands. The game loop runs as a coroutine, yielding for player input each turn. World data (rooms, items, exits) loads from an external JSON file. Build on <strong>Days 3–4</strong>.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Mini Game Framework with Embedded Scripting Hooks (Advanced → Master)</h3>
+                <p>A Love2D-based mini game framework demonstrating advanced metatables, coroutine-based animation sequencing, object pooling, and a sandboxed mod system.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Lua Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Entity-component system</td>
+                            <td>Metatables for <code>Entity</code> + closures for private component state</td>
+                        </tr>
+                        <tr>
+                            <td>Animation sequencing</td>
+                            <td>Coroutine-based tween system (<code>waitFrames</code>, <code>tweenTo</code>)</td>
+                        </tr>
+                        <tr>
+                            <td>Sandboxed mod loading</td>
+                            <td>Proxy tables with <code>__index</code>/<code>__newindex</code> to restrict mod access</td>
+                        </tr>
+                        <tr>
+                            <td>Object pooling</td>
+                            <td>Weak-table-based pool for frequently spawned entities</td>
+                        </tr>
+                        <tr>
+                            <td>Event system</td>
+                            <td>Closure-based pub/sub pattern connecting game systems</td>
+                        </tr>
+                        <tr>
+                            <td>Performance</td>
+                            <td>LuaJIT FFI exploration for collision detection subsystem</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>-- Coroutine-driven tween system — real-world game engine pattern
+local function tweenTo(entity, targetX, targetY, duration)
+  return coroutine.wrap(function()
+    local startX, startY, elapsed = entity.x, entity.y, 0
+    while elapsed < duration do
+      local t = elapsed / duration
+      entity.x = startX + (targetX - startX) * t
+      entity.y = startY + (targetY - startY) * t
+      elapsed = elapsed + coroutine.yield()  -- yields dt each frame
+    end
+    entity.x, entity.y = targetX, targetY
+  end)
+end</code></pre>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A playable Love2D mini-game with: an entity-component system, coroutine-driven animations/tweens, object pooling for projectiles using weak tables, a sandboxed mod-loading system that lets external <code>.lua</code> files safely add new enemy types, and a custom event bus connecting game systems (collision → damage → score). Build on <strong>Days 5–7</strong>. This is the capstone demonstrating mastery of the entire Lua curriculum.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–3</td>
+                        <td>Absolute Basics</td>
+                        <td>Write clean Lua using local scoping, tables as arrays and dictionaries, and all core operators including Lua's unique truthiness rules</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>4–7</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Structure programs with loops, multiple-return functions, closures, varargs, table-based data structures, modules, and string patterns</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>8–11</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Build OOP systems with metatables, handle errors with pcall and structured objects, perform file I/O, and use LuaRocks packages including JSON</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>12–15</td>
+                        <td>Master Level Concepts</td>
+                        <td>Write cooperative concurrent code with coroutines, apply advanced metaprogramming (proxies, weak tables, sandboxing), optimize for performance, and complete three production projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool / Resource</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>lua.org/manual/5.4</td>
+                        <td>Official authoritative language specification</td>
+                    </tr>
+                    <tr>
+                        <td>Programming in Lua (PIL) — Roberto Ierusalimschy</td>
+                        <td>Written by Lua's creator — the definitive guide</td>
+                    </tr>
+                    <tr>
+                        <td>lua-users.org/wiki</td>
+                        <td>Community patterns, gotchas, and recipes</td>
+                    </tr>
+                    <tr>
+                        <td>Love2D Documentation (love2d.org/wiki)</td>
+                        <td>Game development with Lua — full API reference</td>
+                    </tr>
+                    <tr>
+                        <td>LuaJIT Documentation (luajit.org)</td>
+                        <td>High-performance Lua and FFI reference</td>
+                    </tr>
+                    <tr>
+                        <td>Roblox Developer Hub</td>
+                        <td>Lua in the Roblox game engine context</td>
+                    </tr>
+                    <tr>
+                        <td>LuaRocks (luarocks.org)</td>
+                        <td>Discovering and installing third-party libraries</td>
+                    </tr>
+                    <tr>
+                        <td>ZeroBrane Studio</td>
+                        <td>Lua-specific IDE with integrated debugger</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Complete each week's task before moving on — building real programs in Lua reinforces its unique patterns (1-based indexing, tables-as-everything, <code>local</code> by default) far more than reading alone.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — your commit history shows consistent progress and your projects demonstrate real Lua competence to game studios and employers.</li>
+                    <li>Test your truthiness assumptions constantly — Lua's <code>0</code> and <code>""</code> being truthy will catch you off guard multiple times. When in doubt, add an explicit <code>~= nil</code> check.</li>
+                    <li>By Week 15, you should have three complete, runnable projects and the confidence to read and contribute to real Lua codebases in game engines, embedded systems, and scripting contexts.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

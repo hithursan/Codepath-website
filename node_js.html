@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js: Beginner to Master — 16 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>Node.js: Beginner to Master</h1>
+        <p>Complete 16-Week Curriculum — From the Node.js Runtime & npm to Worker Threads, Docker & Production Deployment</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#week16">W16</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>16-week, phase-based Node.js curriculum</strong> designed to take a complete beginner to a professional-level Node.js developer. The roadmap moves from <strong>the Node.js runtime, variables, npm, and data structures</strong> through <strong>functions, closures, async/await, and core built-in modules</strong>, into <strong>OOP, Express.js, MongoDB, authentication, and error handling</strong>, all the way to <strong>generators, Worker Threads, clustering, testing, Docker, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers the Node.js runtime and absolute JavaScript basics, <strong>Phase 2</strong> covers control flow, functions, modules, and asynchronous programming, <strong>Phase 3</strong> covers OOP, Express.js, MongoDB, and authentication, and <strong>Phase 4</strong> covers master-level concurrency, testing, deployment, and full project work.</p>
+            <p>By Week 16, you will have built three complete, portfolio-ready applications and be confident building production-grade Node.js applications from scratch.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 16 weeks &nbsp;|&nbsp; <strong>Stack:</strong> Node.js 20+ (LTS), npm, Express, MongoDB &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic JavaScript knowledge</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–4:</strong> The Node.js runtime, variables, npm, packages, and core data structures.</p>
+        </div>
+
+        <!--WEEK 1-->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Environment Setup &amp; The Node.js Runtime</h2>
+                <p>Understanding what Node.js is, installing it, and running your first scripts outside the browser.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding what Node.js is, installing it, and running your first scripts outside the browser.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What is Node.js &amp; Why It Matters</strong> — Node.js is a JavaScript runtime built on Chrome's V8 engine that lets you run JavaScript outside the browser — on servers, in CLI tools, and in build scripts. Its non-blocking, event-driven architecture makes it exceptionally efficient at handling many concurrent connections.</li>
+                    <li><strong>Installing Node.js &amp; Using NVM</strong> — NVM (Node Version Manager) lets you install and switch between multiple Node.js versions on the same machine — essential because different projects often require different Node versions.</li>
+                    <li><strong>The REPL &amp; Running Scripts</strong> — The Node REPL (Read-Eval-Print Loop) is an interactive shell for testing JavaScript snippets instantly, accessed by typing <code>node</code> with no filename. For real programs, you save code in <code>.js</code> files and execute them with <code>node filename.js</code>.</li>
+                    <li><strong>Global Objects: <code>process</code>, <code>__dirname</code>, <code>__filename</code></strong> — Node.js provides special global variables not found in browsers. <code>process</code> gives you info about the current running program, while <code>__dirname</code> and <code>__filename</code> give you absolute paths to the current file and folder.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Node.js is not just a language — it's a runtime with a completely different model from browser JavaScript. Understanding the event-driven, non-blocking architecture from Day 1 is the mental foundation that makes every subsequent concept — async/await, streams, HTTP servers — feel logical rather than arbitrary.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// hello.js — Run with: node hello.js
+// Unlike browser JS, Node.js has no `window` or `document`
+console.log("Hello from Node.js!");
+console.log("Node version:", process.version);
+console.log("Current directory:", process.cwd());
+
+// info.js — Node-specific globals
+console.log(__dirname);                          // Absolute path to this file's folder
+console.log(__filename);                         // Absolute path to this file itself
+console.log(process.argv);                       // Array of command-line arguments
+console.log(process.env.NODE_ENV || "development"); // Environment variable</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"System Info CLI Tool."</strong> Create <code>sysinfo.js</code> that logs: the Node.js version, the current working directory, the operating system platform (use the built-in <code>os</code> module's <code>os.platform()</code> and <code>os.totalmem()</code>), and any command-line arguments passed to the script. Run it with <code>node sysinfo.js arg1 arg2</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 2 -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Variables, Data Types &amp; Operators</h2>
+                <p>Mastering JavaScript's variable declarations, primitive types, and operators within the Node.js context.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering JavaScript's variable declarations, primitive types, and operators within the Node.js context.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>let</code>, <code>const</code> &amp; <code>var</code></strong> — Modern JavaScript uses <code>const</code> for values that never get reassigned and <code>let</code> for variables that will change. <code>var</code> is the legacy keyword with confusing function-scoping rules and should be avoided in new code.</li>
+                    <li><strong>Primitive Data Types</strong> — JavaScript has seven primitive types: <code>string</code>, <code>number</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>, <code>bigint</code>, and <code>symbol</code>. Unlike many languages, JavaScript uses a single <code>number</code> type for both integers and decimals.</li>
+                    <li><strong>Template Literals</strong> — Template literals (backtick strings) allow embedding expressions directly inside strings using <code>${'{}'}</code> syntax, eliminating clunky string concatenation. They also natively support multi-line strings without escape characters.</li>
+                    <li><strong>Operators (Comparison, Logical, Nullish Coalescing)</strong> — JavaScript distinguishes between loose equality (<code>==</code>, which type-converts) and strict equality (<code>===</code>, which doesn't) — always prefer <code>===</code>. The nullish coalescing operator (<code>??</code>) provides a fallback only for <code>null</code>/<code>undefined</code>, unlike <code>||</code> which also triggers on falsy values like <code>0</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The <code>??</code> vs <code>||</code> distinction is one of the most common sources of subtle bugs in Node.js APIs — returning <code>0</code> or an empty string that gets incorrectly treated as "missing." Understanding strict equality and the nullish coalescing operator prevents these bugs from day one.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>const appName = "MyApp";   // Cannot be reassigned
+let userCount = 0;          // Can be reassigned
+userCount = userCount + 1;  // Valid: 1
+
+const name      = "Node.js";        // string
+const version   = 20;               // number
+const isStable  = true;             // boolean
+const notSet    = undefined;        // undefined
+const empty     = null;             // null — intentional absence
+const bigNumber = 123456789012345n; // bigint
+
+const user  = "Alice";
+const score = 95;
+const message = `Hello, ${user}! Your score is ${score}/100.`;
+console.log(message);
+
+const userInput = 0;
+console.log(userInput || 10);  // 10 — || treats 0 as falsy (bug!)
+console.log(userInput ?? 10);  // 0  — ?? only falls back on null/undefined</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"User Profile Validator."</strong> Create variables for a user's name, age, email, and <code>isVerified</code> status using appropriate <code>const</code>/<code>let</code>. Write a template literal that generates a formatted summary string. Use <code>??</code> to provide default values for any potentially missing fields (simulate one as <code>undefined</code>).</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 3-->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — npm, Packages &amp; Project Structure</h2>
+                <p>Initializing Node.js projects, managing dependencies with npm, and understanding the module ecosystem.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Initializing Node.js projects, managing dependencies with npm, and understanding the module ecosystem.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>npm init</code> &amp; <code>package.json</code></strong> — Every Node.js project starts with a <code>package.json</code> file, which tracks the project's metadata, dependencies, and scripts. <code>npm init -y</code> generates this file instantly with sensible defaults, ready for customization.</li>
+                    <li><strong>Installing &amp; Managing Packages</strong> — <code>npm install</code> downloads packages from the npm registry into <code>node_modules</code> and records them in <code>package.json</code>. The <code>--save-dev</code> flag marks a package as a development-only dependency (like testing tools).</li>
+                    <li><strong>CommonJS vs ES Modules</strong> — Node.js supports two module systems: the original CommonJS (<code>require</code>/<code>module.exports</code>) and modern ES Modules (<code>import</code>/<code>export</code>, set via <code>"type": "module"</code> in <code>package.json</code>). ES Modules are now the recommended standard for new projects.</li>
+                    <li><strong><code>package.json</code> Scripts</strong> — The <code>scripts</code> section of <code>package.json</code> defines shortcuts for common commands like starting the server or running tests. You execute them with <code>npm run &lt;script-name&gt;</code> or just <code>npm start</code>/<code>npm test</code> for those two special names.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> npm is the world's largest software registry with over 2 million packages. Understanding the difference between CommonJS and ES Modules — and when to use each — prevents hours of confusing import errors. Mastering <code>package.json</code> scripts is the foundation of every Node.js developer's workflow.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// Terminal setup
+// npm init -y              → Creates package.json
+// npm install express       → Production dependency
+// npm install --save-dev nodemon → Dev-only dependency
+
+// math.mjs — ES Module syntax
+export function add(a, b) { return a + b; }
+export default function multiply(a, b) { return a * b; }
+
+// app.mjs — importing
+import multiply, { add } from './math.mjs';
+console.log(add(2, 3), multiply(2, 3)); // 5 6</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Bootstrap a <strong>"Greeting CLI Tool" as an npm package.</strong> Run <code>npm init -y</code>, install <code>chalk</code> (for colored terminal output) as a dependency, and <code>nodemon</code> as a dev dependency. Create an <code>index.js</code> that prints a colorful greeting using <code>chalk</code>. Add <code>start</code> and <code>dev</code> scripts to <code>package.json</code> and verify both work.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 4-->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Arrays, Objects &amp; JSON</h2>
+                <p>Working with JavaScript's core data structures and the JSON format that powers nearly all Node.js APIs.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Working with JavaScript's core data structures and the JSON format that powers nearly all Node.js APIs.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Arrays &amp; Common Array Methods</strong> — Arrays store ordered lists of values and come with powerful built-in methods. <code>.map()</code> transforms each element, <code>.filter()</code> selects matching elements, and <code>.reduce()</code> collapses an array into a single value — these three are the backbone of functional JS.</li>
+                    <li><strong>Objects &amp; Object Destructuring</strong> — Objects store key-value pairs representing structured data, similar to a dictionary or hash map. Destructuring lets you extract multiple properties into individual variables in a single concise line.</li>
+                    <li><strong>The Spread Operator</strong> — The spread operator (<code>...</code>) expands an array or object into individual elements. It's the standard way to copy arrays/objects, merge them together, or pass array elements as individual function arguments.</li>
+                    <li><strong>JSON: <code>JSON.stringify</code> &amp; <code>JSON.parse</code></strong> — JSON (JavaScript Object Notation) is the universal data format for APIs and config files. <code>JSON.stringify()</code> converts a JS object into a JSON string for storage/transmission, and <code>JSON.parse()</code> converts it back into a usable object.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>.map()</code>, <code>.filter()</code>, and <code>.reduce()</code> are the three most important array methods in JavaScript — virtually every Express route handler and database query result is processed with them. JSON is the wire format of every REST API you will ever build or consume.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>const prices = [10, 25, 5, 40, 15];
+const taxed   = prices.map(p => p * 1.08);
+const cheap   = prices.filter(p => p &lt; 20);
+const total   = prices.reduce((sum, p) => sum + p, 0);
+console.log(taxed, cheap, total);
+
+const user = { name: "Bob", age: 32, role: "admin", email: "bob@app.com" };
+const { name, role } = user;         // destructuring
+const { name: n, ...rest } = user;   // rest pattern
+
+const base    = { theme: "dark", lang: "en" };
+const updated = { ...base, lang: "fr" };  // spread + override
+
+const settings   = { theme: "dark", notifications: true };
+const jsonString = JSON.stringify(settings, null, 2);
+const parsedBack = JSON.parse(jsonString);
+console.log(parsedBack.theme); // "dark"</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build an <strong>"Inventory JSON Processor."</strong> Create an array of 6 product objects (name, price, quantity, category). Use <code>.filter()</code> to find products with quantity below 5 (low stock). Use <code>.map()</code> to calculate total value per product (price × quantity). Use <code>.reduce()</code> to compute the grand total inventory value. Write the final report to console as pretty-printed JSON via <code>JSON.stringify</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 5–8:</strong> Functions, closures, modules, async programming, and built-in Node.js modules.</p>
+        </div>
+
+        <!--WEEK 5-->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Functions &amp; Scope</h2>
+                <p>Mastering function declarations, arrow functions, closures, and the rules of variable scope.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering function declarations, arrow functions, closures, and the rules of variable scope.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Function Declarations vs Arrow Functions</strong> — Function declarations are hoisted (usable before their definition in the file) and have their own <code>this</code> binding. Arrow functions are more concise and inherit <code>this</code> from their surrounding scope — making them ideal for callbacks.</li>
+                    <li><strong>Default Parameters &amp; Rest Parameters</strong> — Default parameters provide a fallback value when an argument is omitted, avoiding manual <code>undefined</code> checks. Rest parameters (<code>...args</code>) collect any number of extra arguments into a real array.</li>
+                    <li><strong>Closures</strong> — A closure is a function that "remembers" the variables from the scope it was created in, even after that outer function has finished executing. Closures are the foundation of private state, factory functions, and the module pattern.</li>
+                    <li><strong>Variable Scope (Block, Function, Global)</strong> — JavaScript has three scope levels: global (accessible everywhere), function (accessible within a function), and block (accessible within <code>{}</code>, introduced by <code>let</code>/<code>const</code>). Understanding scope prevents accidental variable leaks and naming collisions.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Closures are the foundation of nearly every advanced Node.js pattern — middleware functions, event handlers, factory functions, and the module pattern all rely on closures. Understanding lexical scope is what separates developers who write predictable Node.js code from those who guess and debug.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// Function declaration — hoisted, has its own `this`
+function add(a, b) { return a + b; }
+
+// Arrow function — concise, lexical `this`
+const multiply = (a, b) => a * b;
+
+// Default and rest parameters
+function greet(name = "Guest", greeting = "Hello") {
+    return `${greeting}, ${name}!`;
+}
+function sumAll(...numbers) {
+    return numbers.reduce((sum, n) => sum + n, 0);
+}
+console.log(greet());              // "Hello, Guest!"
+console.log(sumAll(1, 2, 3, 4));   // 10
+
+// Closure — private state
+function createCounter() {
+    let count = 0;
+    return {
+        increment: () => ++count,
+        getCount:  () => count,
+    };
+}
+const counter = createCounter();
+counter.increment();
+counter.increment();
+console.log(counter.getCount()); // 2</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"Bank Account Simulator" using closures.</strong> Write a <code>createAccount(initialBalance)</code> factory function that returns an object with <code>deposit(amount)</code>, <code>withdraw(amount)</code> (rejecting if insufficient funds), and <code>getBalance()</code> methods. The balance variable must be completely private — inaccessible from outside the closure.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 6-->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Modules, the Event Loop &amp; Asynchronous Basics</h2>
+                <p>Organizing code into modules and understanding Node's single-threaded, non-blocking execution model.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Organizing code into modules and understanding Node's single-threaded, non-blocking execution model.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Creating &amp; Importing Custom Modules</strong> — Splitting code into separate files (modules) improves organization and reusability. Each file is its own module scope — you explicitly choose what to <code>export</code> and what to <code>import</code> elsewhere.</li>
+                    <li><strong>The Event Loop &amp; Non-Blocking I/O</strong> — Node.js runs JavaScript on a single thread but handles I/O operations (file reads, network calls) asynchronously via the Event Loop, delegating slow work to the system and resuming your code when it completes. This is why Node.js can handle thousands of concurrent connections efficiently.</li>
+                    <li><strong>Callbacks</strong> — A callback is a function passed as an argument to be executed later, often after an asynchronous operation completes. While foundational to Node.js, deeply nested callbacks ("callback hell") are why Promises and async/await were introduced.</li>
+                    <li><strong>Promises</strong> — A Promise represents the eventual result of an asynchronous operation — it can be <code>pending</code>, <code>fulfilled</code>, or <code>rejected</code>. Promises let you chain <code>.then()</code> for success and <code>.catch()</code> for errors, avoiding deeply nested callbacks.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The Event Loop is the single most important concept in Node.js — it's the reason Node can serve thousands of simultaneous requests on one thread. Not understanding it leads to accidentally blocking the loop with synchronous CPU work, making your entire server unresponsive.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// Custom module
+export function formatCurrency(amount) {
+    return `$${amount.toFixed(2)}`;
+}
+export const TAX_RATE = 0.08;
+
+import { formatCurrency } from './utils.js';
+console.log(formatCurrency(19.999)); // "$20.00"
+
+// Event Loop — async always deferred
+console.log("1: Start");
+setTimeout(() => console.log("3: Timeout callback"), 0);
+console.log("2: End");
+// Output: 1 → 2 → 3 (sync always runs first)
+
+// Promise pattern
+function fetchUserData(id) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (id > 0) resolve({ id, name: "Alice" });
+            else reject(new Error("Invalid user ID"));
+        }, 500);
+    });
+}
+fetchUserData(1)
+    .then(user => console.log("Got user:", user))
+    .catch(err => console.error("Failed:", err.message));</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"Delayed Math Operations" module.</strong> Create <code>mathAsync.js</code> exporting Promise-returning functions: <code>addAsync(a, b)</code>, <code>divideAsync(a, b)</code> (rejects on division by zero), each resolving after a 300ms simulated delay. In <code>app.js</code>, import and chain these operations with <code>.then()</code>/<code>.catch()</code> to compute <code>(5 + 3) / 2</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 7 -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Async/Await &amp; Error Handling</h2>
+                <p>Writing clean asynchronous code with async/await syntax and handling errors robustly.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing clean asynchronous code with async/await syntax and handling errors robustly.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>async</code>/<code>await</code> Syntax</strong> — The <code>async</code>/<code>await</code> keywords let you write asynchronous code that looks synchronous, dramatically improving readability over chained <code>.then()</code> calls. Any function marked <code>async</code> automatically returns a Promise, and <code>await</code> pauses execution until that Promise resolves.</li>
+                    <li><strong><code>try</code>/<code>catch</code> with Async Code</strong> — When using <code>await</code>, errors from rejected Promises are caught using standard <code>try</code>/<code>catch</code> blocks — exactly like synchronous error handling. This is far cleaner than chaining multiple <code>.catch()</code> calls.</li>
+                    <li><strong><code>Promise.all</code> &amp; <code>Promise.allSettled</code></strong> — <code>Promise.all()</code> runs multiple async operations concurrently and waits for all to succeed (rejecting immediately if any fails). <code>Promise.allSettled()</code> waits for all to finish regardless of success or failure, giving you a status report for each.</li>
+                    <li><strong>Custom Error Classes</strong> — Extending the built-in <code>Error</code> class lets you create domain-specific error types carrying extra context (like an HTTP status code). This makes error handling in larger apps far more precise and informative.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>Promise.allSettled</code> vs <code>Promise.all</code> is one of the most impactful API choices in concurrent Node.js code. <code>Promise.all</code> short-circuits on the first failure — great for dependent operations, catastrophic for independent ones. Custom error classes are what separate professional APIs from ones that return vague <code>"Something went wrong"</code> messages.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// async/await — reads like synchronous code
+async function runSequence() {
+    console.log("Starting...");
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    console.log("1 second passed!");
+    return "Done";
+}
+runSequence().then(result => console.log(result));
+
+// try/catch with async
+async function run() {
+    try {
+        const result = await fetchData(true); // throws
+        console.log(result);
+    } catch (err) {
+        console.error("Caught error:", err.message);
+    }
+}
+
+// Promise.allSettled — never short-circuits
+const fetchA = Promise.resolve("Result A");
+const fetchC = Promise.reject(new Error("Failed C"));
+Promise.allSettled([fetchA, fetchC]).then(console.log);
+
+// Custom error class
+class ValidationError extends Error {
+    constructor(message, field) {
+        super(message);
+        this.name  = "ValidationError";
+        this.field = field;
+    }
+}
+throw new ValidationError("Email is required", "email");</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"Multi-Source Data Aggregator."</strong> Write 3 async functions simulating API calls (<code>getWeather()</code>, <code>getNews()</code>, <code>getStocks()</code>) each resolving after a random delay (200–800ms). Use <code>Promise.allSettled()</code> to fetch all three concurrently. Log a summary showing which succeeded and which failed, using a custom <code>FetchError</code> class for simulated failures.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 8-->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Built-in Modules: File System, Path &amp; OS</h2>
+                <p>Interacting with the file system and operating system using Node's core built-in modules.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Interacting with the file system and operating system using Node's core built-in modules.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>The <code>fs</code> Module (Async &amp; Promise-based)</strong> — The <code>fs</code> (File System) module reads and writes files. The modern <code>fs/promises</code> API provides Promise-based versions of every method, making file operations work seamlessly with <code>async</code>/<code>await</code> instead of callbacks.</li>
+                    <li><strong>The <code>path</code> Module</strong> — The <code>path</code> module provides utilities for working with file and directory paths in a way that's safe across operating systems (Windows uses <code>\</code>, Unix uses <code>/</code>). Always use <code>path.join()</code> instead of manually concatenating path strings.</li>
+                    <li><strong>The <code>os</code> Module</strong> — The <code>os</code> module provides information about the operating system the Node.js process is running on — CPU architecture, available memory, home directory, and more. It's commonly used for system diagnostics and platform-specific logic.</li>
+                    <li><strong>Streams for Large Files</strong> — Streams let you process data piece-by-piece instead of loading an entire file into memory — essential for handling large files efficiently. A <code>ReadStream</code> reads chunks, and <code>.pipe()</code> sends them directly to a destination like a write stream or HTTP response.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Streams are one of Node.js's most powerful and misunderstood features. Loading a 1GB file with <code>readFile</code> crashes your server with an out-of-memory error; streaming it with <code>createReadStream</code> handles it in constant memory. This distinction becomes critical in production file upload/download APIs.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import { readFile, writeFile } from 'node:fs/promises';
+import path from 'node:path';
+import os from 'node:os';
+import { createReadStream, createWriteStream } from 'node:fs';
+
+// fs/promises — works with async/await
+async function processFile() {
+    await writeFile('notes.txt', 'Hello, Node.js file system!');
+    const content = await readFile('notes.txt', 'utf-8');
+    console.log("File content:", content);
+}
+
+// path — OS-safe path building
+const filePath = path.join(__dirname, 'data', 'users.json');
+console.log(path.extname(filePath));   // ".json"
+console.log(path.basename(filePath));  // "users.json"
+
+// os — system information
+console.log("Platform:", os.platform());
+console.log("CPU cores:", os.cpus().length);
+console.log("Free memory (MB):", Math.round(os.freemem() / 1024 / 1024));
+
+// Streams — memory-efficient for huge files
+const readStream  = createReadStream('large-input.txt');
+const writeStream = createWriteStream('large-output.txt');
+readStream.pipe(writeStream);
+readStream.on('end', () => console.log("File copy complete!"));</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"Directory Analyzer CLI Tool."</strong> Using <code>fs/promises</code> and <code>path</code>, write a script that takes a folder path as a command-line argument, reads all files in it, and reports: total file count, total combined size (in KB), and the largest file's name. Use <code>os.platform()</code> to display which OS the script is running on in the final report.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 9–12:</strong> OOP, Express.js, MongoDB, authentication, and robust error handling.</p>
+        </div>
+
+        <!--WEEK 9-->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Object-Oriented JavaScript &amp; Building an HTTP Server</h2>
+                <p>Modeling data with ES6 classes and building a raw HTTP server with Node's built-in <code>http</code> module.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Modeling data with ES6 classes and building a raw HTTP server with Node's built-in <code>http</code> module.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>ES6 Classes &amp; Constructors</strong> — JavaScript classes provide clean, familiar syntax for object-oriented programming, though they're syntactic sugar over JS's underlying prototype system. The <code>constructor</code> method initializes new instances with their starting properties.</li>
+                    <li><strong>Inheritance with <code>extends</code> &amp; <code>super</code></strong> — The <code>extends</code> keyword lets a class inherit properties and methods from a parent class. <code>super()</code> calls the parent's constructor, and <code>super.methodName()</code> calls the parent's version of an overridden method.</li>
+                    <li><strong>Building a Server with the <code>http</code> Module</strong> — Before frameworks like Express existed, Node.js's built-in <code>http</code> module was used to build servers directly. Understanding this raw API helps you appreciate what frameworks abstract away — handling requests, setting headers, and sending responses.</li>
+                    <li><strong>Private Class Fields &amp; Getters/Setters</strong> — Modern JavaScript classes support truly private fields using the <code>#</code> prefix — these are completely inaccessible from outside the class. Getters and setters let you define computed properties that look like regular property access.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Building an HTTP server with the raw <code>http</code> module before learning Express reveals exactly what Express is abstracting — routing, body parsing, header management. Developers who understand the raw layer debug Express issues 10x faster than those who only know the framework.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import http from 'node:http';
+
+// ES6 class
+class User {
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+        this.createdAt = new Date();
+    }
+    getSummary() { return `${this.name} (${this.email})`; }
+}
+
+// Inheritance
+class Animal {
+    constructor(name) { this.name = name; }
+    speak() { return `${this.name} makes a sound.`; }
+}
+class Dog extends Animal {
+    speak() { return `${super.speak()} Specifically, ${this.name} barks!`; }
+}
+
+// Private fields
+class BankAccount {
+    #balance;
+    constructor(initial) { this.#balance = initial; }
+    get balance() { return `$${this.#balance.toFixed(2)}`; }
+    deposit(amount) { this.#balance += amount; }
+}
+
+// Raw HTTP server
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end(`You requested: ${req.url} via ${req.method}`);
+});
+server.listen(3000, () => console.log("Server running on port 3000"));</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"Raw HTTP Task Server."</strong> Using only the <code>http</code> module (no Express yet), create a server that responds differently based on <code>req.url</code>: <code>/</code> returns a welcome message, <code>/tasks</code> returns a hardcoded JSON array of tasks (set <code>Content-Type: application/json</code>), and any other route returns a 404 JSON error. Model each task as an instance of a <code>Task</code> class with <code>id</code>, <code>title</code>, and <code>done</code> properties.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 10 -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Express.js Fundamentals</h2>
+                <p>Building structured REST APIs rapidly using the Express.js framework — Node's most popular web framework.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Building structured REST APIs rapidly using the Express.js framework — Node's most popular web framework.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Setting Up Express &amp; Basic Routing</strong> — Express dramatically simplifies server creation compared to the raw <code>http</code> module, providing clean routing methods (<code>.get()</code>, <code>.post()</code>, etc.) mapped directly to HTTP verbs and URL paths.</li>
+                    <li><strong>Route Parameters &amp; Query Strings</strong> — Express makes extracting dynamic URL segments (<code>:id</code>) and query string parameters (<code>?key=value</code>) trivial via <code>req.params</code> and <code>req.query</code>. These are the two primary ways clients pass data through a GET request's URL.</li>
+                    <li><strong>Middleware (<code>express.json()</code> &amp; Custom Middleware)</strong> — Middleware functions run between the incoming request and the final route handler, used for parsing request bodies, logging, authentication, and more. <code>express.json()</code> is built-in middleware that parses JSON request bodies into <code>req.body</code>.</li>
+                    <li><strong>Handling POST, PUT, DELETE Requests</strong> — A REST API exposes different HTTP verbs for different operations on the same resource: <code>GET</code> to read, <code>POST</code> to create, <code>PUT</code>/<code>PATCH</code> to update, and <code>DELETE</code> to remove. Express maps each verb to its own handler method on the same path.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Express middleware is one of the most powerful concepts in the Node.js ecosystem — it's how logging, authentication, rate limiting, body parsing, and CORS all work. Understanding the request-response cycle and how <code>next()</code> passes control through the middleware chain is essential for every Express application.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import express from 'express';
+const app = express();
+app.use(express.json());
+
+// Custom logging middleware
+app.use((req, res, next) => {
+    console.log(`${req.method} ${req.url}`);
+    next(); // Must call next() to continue
+});
+
+// Route with params and query string
+app.get('/users/:id', (req, res) => {
+    const { id } = req.params;
+    const { include } = req.query;
+    res.json({ userId: id, including: include });
+});
+
+// POST — create
+let tasks = [{ id: 1, title: "Learn Express" }];
+app.post('/tasks', (req, res) => {
+    const task = { id: tasks.length + 1, ...req.body };
+    tasks.push(task);
+    res.status(201).json(task);
+});
+
+// DELETE — remove
+app.delete('/tasks/:id', (req, res) => {
+    tasks = tasks.filter(t => t.id !== Number(req.params.id));
+    res.status(204).send();
+});
+
+app.listen(3000, () => console.log("Express server on port 3000"));</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a full <strong>"Task Manager REST API" with Express.</strong> Implement all 5 RESTful routes: <code>GET /tasks</code> (list all), <code>GET /tasks/:id</code> (single), <code>POST /tasks</code> (create), <code>PUT /tasks/:id</code> (update), <code>DELETE /tasks/:id</code> (delete). Add a logging middleware that records the method, URL, and timestamp of every request. Store tasks in an in-memory array. Test all routes with Postman or <code>curl</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 11 -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Databases: MongoDB with Mongoose</h2>
+                <p>Persisting application data in MongoDB using Mongoose's schema-based modeling.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Persisting application data in MongoDB using Mongoose's schema-based modeling and ODM API.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Connecting to MongoDB with Mongoose</strong> — Mongoose is an Object Data Modeling (ODM) library that provides schema validation and a clean API for interacting with MongoDB. The connection is established once at app startup, typically using a connection string from an environment variable.</li>
+                    <li><strong>Defining Schemas &amp; Models</strong> — A Mongoose Schema defines the shape, types, and validation rules for documents in a collection. A Model is then compiled from the schema and provides the actual interface for querying and saving documents to MongoDB.</li>
+                    <li><strong>CRUD Operations with Mongoose</strong> — Mongoose Models expose intuitive methods for all CRUD operations: <code>.create()</code> to insert, <code>.find()</code>/<code>.findById()</code> to read, <code>.findByIdAndUpdate()</code> to update, and <code>.findByIdAndDelete()</code> to remove documents.</li>
+                    <li><strong>Mongoose Relationships (Population)</strong> — Mongoose models relationships between collections using references (<code>ObjectId</code>). The <code>.populate()</code> method automatically replaces a referenced ID with the full document it points to, similar to a SQL JOIN.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Moving from an in-memory array to MongoDB is the single biggest architectural step in Node.js development. Mongoose's <code>.populate()</code> for relationships and schema-level validation for data integrity are two features that prevent entire categories of bugs that plague raw MongoDB users.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import mongoose from 'mongoose';
+
+async function connectDB() {
+    await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/myapp');
+    console.log("MongoDB connected!");
+}
+
+// Schema with validation
+const userSchema = new mongoose.Schema({
+    name:  { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    age:   { type: Number, min: 0, default: 18 },
+});
+const User = mongoose.model('User', userSchema);
+
+// CRUD operations
+const newUser  = await User.create({ name: "Alice", email: "alice@app.com" });
+const allUsers = await User.find();
+const oneUser  = await User.findById(newUser._id);
+await User.findByIdAndUpdate(newUser._id, { age: 30 });
+await User.findByIdAndDelete(newUser._id);
+
+// Population — relationship between collections
+const postSchema = new mongoose.Schema({
+    title:  String,
+    author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+});
+const posts = await Post.find().populate('author');
+console.log(posts[0].author.name); // Full User document, not just an ID</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Migrate Week 10's Task Manager API to MongoDB. Define a <code>Task</code> Mongoose schema (title, description, completed, priority, createdAt). Replace the in-memory array with real database calls in every route. Add a <code>User</code> model and link tasks to users via a <code>createdBy</code> reference field, populating it on the <code>GET /tasks</code> route.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 12-->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Authentication, Validation &amp; Robust Error Handling</h2>
+                <p>Securing APIs with JWT authentication, validating input, and implementing centralized error handling.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Securing APIs with JWT authentication, validating input, and implementing centralized error handling.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Password Hashing with bcrypt</strong> — Never store plain-text passwords. <code>bcrypt</code> hashes passwords with a computationally expensive algorithm, making them effectively impossible to reverse even if your database is compromised. <code>bcrypt.compare()</code> safely verifies a login attempt against the stored hash.</li>
+                    <li><strong>JWT Authentication</strong> — JSON Web Tokens (JWT) are signed tokens issued after login, containing user info that the server can verify without a database lookup on every request. The client sends the token in the <code>Authorization</code> header on subsequent requests.</li>
+                    <li><strong>Auth Middleware &amp; Protected Routes</strong> — Authentication middleware intercepts requests, verifies the JWT from the <code>Authorization</code> header, and either attaches the decoded user to <code>req.user</code> or rejects the request with a 401 status. This pattern protects routes without repeating auth logic everywhere.</li>
+                    <li><strong>Centralized Error Handling with Express</strong> — Express supports a special 4-argument error-handling middleware that catches errors from anywhere in the app, ensuring consistent error responses. Placing it last (after all routes) lets you call <code>next(error)</code> from any route handler to delegate error formatting.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Authentication and authorization are the most security-critical parts of any API. Storing plain-text passwords, using weak JWT secrets, or forgetting to protect routes are the vulnerabilities that make the OWASP Top 10. Getting these patterns right from the start is non-negotiable for production applications.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+
+// Password hashing — never store plain text
+const hashedPassword = await bcrypt.hash(plainPassword, 10);
+const isValid = await bcrypt.compare(plainPassword, storedHash);
+
+// Issue JWT on login
+const token = jwt.sign(
+    { userId: "abc123", role: "admin" },
+    process.env.JWT_SECRET,
+    { expiresIn: "1h" }
+);
+
+// Auth middleware
+function authMiddleware(req, res, next) {
+    const token = req.headers.authorization?.split(' ')[1];
+    if (!token) return res.status(401).json({ error: "No token provided" });
+    try {
+        req.user = jwt.verify(token, process.env.JWT_SECRET);
+        next();
+    } catch {
+        res.status(401).json({ error: "Invalid or expired token" });
+    }
+}
+
+// Centralized error handler — 4 params, registered LAST
+function errorHandler(err, req, res, next) {
+    console.error(err.stack);
+    const status = err.statusCode || 500;
+    res.status(status).json({ error: err.message || "Internal Server Error" });
+}
+// app.use(errorHandler);</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Add full authentication to the Task Manager API. Build <code>POST /auth/register</code> (hash password, save user) and <code>POST /auth/login</code> (verify password, issue JWT). Protect all <code>/tasks</code> routes with <code>authMiddleware</code>, scoping tasks to <code>req.user.userId</code>. Add input validation using <code>express-validator</code>. Implement centralized error handling for all routes.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 13–16:</strong> Generators, Worker Threads, clustering, testing, Docker, and three complete production projects.</p>
+        </div>
+
+        <!--WEEK 13 -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Generators, Iterators &amp; Advanced Async Patterns</h2>
+                <p>Mastering generator functions, custom iterators, and advanced asynchronous control flow.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering generator functions, custom iterators, and advanced asynchronous control flow patterns.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Generator Functions</strong> — A generator function (marked with <code>function*</code>) can pause its execution at <code>yield</code> points and resume later, producing a sequence of values lazily — one at a time — instead of computing them all upfront. This is invaluable for working with large or infinite sequences.</li>
+                    <li><strong>Custom Iterators with <code>Symbol.iterator</code></strong> — Any object can become "iterable" (usable in <code>for...of</code> loops and spread syntax) by implementing the <code>Symbol.iterator</code> method. This is how built-in types like Array and Map support iteration, and you can add the same capability to your own classes.</li>
+                    <li><strong>Async Generators &amp; <code>for await...of</code></strong> — Async generators combine generators with Promises, allowing you to yield values that arrive asynchronously over time — perfect for paginated API results or streaming data sources. The <code>for await...of</code> loop consumes them naturally.</li>
+                    <li><strong>The <code>EventEmitter</code> Pattern</strong> — <code>EventEmitter</code> is Node's built-in implementation of the observer pattern — objects can emit named events, and other parts of your code can subscribe to react to them. It's the foundation underlying streams, HTTP servers, and countless Node.js APIs.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Async generators are the cleanest solution to paginated API consumption and data streaming — yielding each page as it arrives rather than buffering everything in memory. <code>EventEmitter</code> is the backbone of Node.js itself — every stream, HTTP server, and TCP socket is an EventEmitter under the hood.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// Generator function
+function* numberSequence() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+const gen = numberSequence();
+console.log(gen.next()); // { value: 1, done: false }
+console.log([...numberSequence()]); // [1, 2, 3]
+
+// Custom iterator
+class Range {
+    constructor(start, end) { this.start = start; this.end = end; }
+    [Symbol.iterator]() {
+        let current = this.start, end = this.end;
+        return { next: () => current &lt;= end
+            ? { value: current++, done: false }
+            : { value: undefined, done: true } };
+    }
+}
+console.log([...new Range(1, 5)]); // [1, 2, 3, 4, 5]
+
+// Async generator + for await
+async function* fetchPages(totalPages) {
+    for (let page = 1; page &lt;= totalPages; page++) {
+        await new Promise(r => setTimeout(r, 200));
+        yield { page, data: `Results for page ${page}` };
+    }
+}
+for await (const result of fetchPages(3)) {
+    console.log(result);
+}
+
+// EventEmitter
+import { EventEmitter } from 'node:events';
+class OrderSystem extends EventEmitter {}
+const orders = new OrderSystem();
+orders.on('orderPlaced', (order) => console.log(`New order: ${order.id}`));
+orders.emit('orderPlaced', { id: 101, total: 49.99 });</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"Paginated Data Stream Simulator."</strong> Write an async generator <code>fetchUsersInBatches(totalUsers, batchSize)</code> that yields batches of mock user objects with a simulated delay between each batch. Consume it with <code>for await...of</code>, printing progress. Separately, build an <code>EventEmitter</code>-based <code>OrderTracker</code> class that emits <code>'created'</code>, <code>'shipped'</code>, and <code>'delivered'</code> events, with at least 2 listeners per event.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 14-->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Worker Threads, Clustering &amp; Concurrency</h2>
+                <p>Scaling CPU-bound and high-traffic Node.js applications using parallelism and multi-core architectures.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Scaling CPU-bound and high-traffic Node.js applications using parallelism and multi-core architectures.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Understanding Concurrency vs Parallelism in Node.js</strong> — Node.js is single-threaded for JavaScript execution but achieves concurrency through its event loop and parallelism through Worker Threads or Clustering. Understanding this distinction is critical for knowing when to reach for these advanced tools.</li>
+                    <li><strong>Worker Threads for CPU-Bound Tasks</strong> — Worker Threads let you run JavaScript on separate threads, ideal for CPU-intensive tasks (image processing, complex calculations) that would otherwise block the main event loop. Each worker runs independently and communicates via message passing.</li>
+                    <li><strong>Clustering for Multi-Core HTTP Servers</strong> — The <code>cluster</code> module lets a Node.js app spawn multiple worker processes (one per CPU core) that all share the same server port, dramatically increasing the number of requests your app can handle concurrently in production.</li>
+                    <li><strong>Rate Limiting &amp; Backpressure</strong> — Backpressure occurs when data is produced faster than it can be consumed — critical to manage in streams and high-throughput APIs to prevent memory exhaustion. Rate limiting middleware protects your API from being overwhelmed by too many requests from a single client.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A single CPU-intensive synchronous operation — like parsing a huge CSV or computing a complex report — can freeze your entire Node.js server for seconds, dropping every concurrent request. Worker Threads solve this at the code level; Clustering solves it at the process level. Both are essential tools for production Node.js services.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// worker.js — runs on a separate thread
+import { parentPort, workerData } from 'node:worker_threads';
+function fib(n) { return n &lt;= 1 ? n : fib(n - 1) + fib(n - 2); }
+parentPort.postMessage(fib(workerData.n));
+
+// main.js — spawns the worker
+import { Worker } from 'node:worker_threads';
+const worker = new Worker('./worker.js', { workerData: { n: 40 } });
+worker.on('message', (result) => console.log("Fibonacci result:", result));
+
+// Clustering — one worker process per CPU core
+import cluster from 'node:cluster';
+import os from 'node:os';
+if (cluster.isPrimary) {
+    const cpuCount = os.cpus().length;
+    for (let i = 0; i &lt; cpuCount; i++) cluster.fork();
+    console.log(`Primary spawned ${cpuCount} workers`);
+}
+
+// Rate limiting
+import rateLimit from 'express-rate-limit';
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100,
+    message: { error: "Too many requests, please try again later." },
+});
+// app.use(limiter);</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"Parallel Image Metadata Processor."</strong> Simulate a CPU-heavy task (e.g., a synchronous prime-number calculator) and offload it to a Worker Thread pool of 4 workers, processing 20 "jobs" in parallel and logging completion times. Separately, set up <code>cluster</code> to run your Week 12 Task Manager API across all available CPU cores, and add <code>express-rate-limit</code> to the <code>/auth/login</code> route to prevent brute-force attacks.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 15 -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Testing, Logging, Deployment &amp; DevOps</h2>
+                <p>Writing automated tests, structured logging, containerizing with Docker, and deploying to production.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing automated tests, adding structured logging, containerizing with Docker, and deploying to production.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Unit &amp; Integration Testing with Vitest</strong> — Automated tests verify your code behaves correctly and prevent regressions as your app grows. Unit tests check individual functions in isolation, while integration tests verify that multiple parts (like API routes and a database) work together correctly.</li>
+                    <li><strong>Testing Express APIs with Supertest</strong> — Supertest lets you send simulated HTTP requests directly to your Express app in tests, without needing to actually start a server on a port. This makes API integration testing fast and reliable.</li>
+                    <li><strong>Structured Logging with Pino</strong> — Production applications need structured, leveled logging (info, warn, error) written to files or external services — <code>console.log</code> alone doesn't scale. Pino produces fast, structured JSON output that works with log aggregation tools.</li>
+                    <li><strong>Containerizing with Docker</strong> — Docker packages your Node.js app and all its dependencies into a portable container that runs identically on any machine — solving the classic "it works on my machine" problem. A <code>Dockerfile</code> defines the steps to build your app's image.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Without tests, every deployment is a gamble. Without structured logging, production debugging is guesswork. Without Docker, deployment is a manual, error-prone process. These three practices — testing, logging, containerization — are what separate a hobby project from a production service that other engineers can operate confidently.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// Vitest unit test
+import { describe, it, expect } from 'vitest';
+import { sum } from './math.js';
+describe('sum function', () => {
+    it('adds two positive numbers', () => {
+        expect(sum(2, 3)).toBe(5);
+    });
+});
+
+// Supertest integration test
+import request from 'supertest';
+import app from './app.js';
+describe('GET /health', () => {
+    it('returns 200 and status ok', async () => {
+        const res = await request(app).get('/health');
+        expect(res.status).toBe(200);
+        expect(res.body).toEqual({ status: 'ok' });
+    });
+});
+
+// Pino structured logging
+import pino from 'pino';
+const logger = pino();
+logger.info("Server started successfully");
+logger.warn({ userId: 42 }, "Unauthorized action attempted");
+logger.error({ err: new Error("DB lost") }, "Critical failure");</code></pre>
+
+                <h3>Dockerfile</h3>
+                <pre><code># Dockerfile
+FROM node:20-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --omit=dev
+COPY . .
+EXPOSE 3000
+CMD ["node", "index.js"]
+
+# Build and run
+# docker build -t my-node-app .
+# docker run -p 3000:3000 my-node-app</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Add full testing, logging, and containerization to the Task Manager API. Write Vitest + Supertest integration tests covering all CRUD routes and the auth flow (aim for 15+ test cases). Replace all <code>console.log</code> calls with Pino structured logging. Write a <code>Dockerfile</code> and a <code>docker-compose.yml</code> that runs both the Node app and a MongoDB container together. Verify the full stack runs with <code>docker compose up</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 16-->
+
+        <div class="rm-card" id="week16">
+            <div class="rm-card-header">
+                <h2>Week 16 — Capstone Mini Projects (Beginner → Master)</h2>
+                <p>Apply everything learned across the entire curriculum in three complete, production-style applications.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Applying everything learned across the entire 16-week curriculum in three complete, real-world portfolio projects.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — CLI Expense Tracker (Beginner–Intermediate)</h3>
+                <p>A command-line application for tracking personal expenses, persisted to a local JSON file. Reinforces Phase 1–2 fundamentals: modules, the file system, arrays/objects, async/await, and custom error classes.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Node.js Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CLI commands (add, list, delete, summary)</td>
+                            <td><code>process.argv</code> parsing + <code>switch</code> dispatch</td>
+                        </tr>
+                        <tr>
+                            <td>JSON file persistence</td>
+                            <td><code>fs/promises</code> read/write with <code>async</code>/<code>await</code></td>
+                        </tr>
+                        <tr>
+                            <td>Spending summary by category</td>
+                            <td>Array <code>.reduce()</code> + <code>.filter()</code> + <code>.map()</code></td>
+                        </tr>
+                        <tr>
+                            <td>Colorful terminal output</td>
+                            <td><code>chalk</code> npm package</td>
+                        </tr>
+                        <tr>
+                            <td>Input validation</td>
+                            <td>Custom <code>ExpenseError</code> class</td>
+                        </tr>
+                        <tr>
+                            <td>ES Module structure</td>
+                            <td>Custom modules with named exports</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A CLI app supporting commands: <code>add</code>, <code>list</code>, <code>delete</code>, <code>summary</code>. All expenses persist to <code>expenses.json</code> between runs. The <code>summary</code> command groups expenses by category and computes totals. Input validation rejects negative amounts and missing categories. Deploy with a clean <code>README.md</code>.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — Real-Time Chat API with WebSockets (Intermediate–Advanced)</h3>
+                <p>A backend service powering a real-time chat application, combining REST endpoints for history with WebSocket connections for live messaging. Reinforces Phase 3 skills deeply.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Node.js Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>User auth (register/login)</td>
+                            <td>bcrypt + JWT + auth middleware</td>
+                        </tr>
+                        <tr>
+                            <td>Chat room history (REST)</td>
+                            <td>Express + MongoDB + Mongoose population</td>
+                        </tr>
+                        <tr>
+                            <td>Real-time messaging</td>
+                            <td>Socket.io WebSocket server + event broadcasting</td>
+                        </tr>
+                        <tr>
+                            <td>Message spam protection</td>
+                            <td><code>express-rate-limit</code> on message sends</td>
+                        </tr>
+                        <tr>
+                            <td>Structured logging</td>
+                            <td>Pino throughout all routes and socket handlers</td>
+                        </tr>
+                        <tr>
+                            <td>Centralized error handling</td>
+                            <td>4-argument Express error middleware</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A complete real-time chat backend with JWT-authenticated REST endpoints for room history and real-time WebSocket broadcasting with <code>socket.io</code>. MongoDB models for <code>User</code>, <code>Room</code>, and <code>Message</code> with population. Rate limiting on message sends, centralized error handling, and Pino structured logging throughout.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Scalable Job Processing Platform (Advanced–Master)</h3>
+                <p>A production-grade backend system that accepts heavy background jobs, processes them in parallel using a worker queue, and exposes real-time status via REST and WebSockets — the architecture used in real SaaS platforms.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Node.js Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Job submission &amp; status API</td>
+                            <td>Express REST — POST/GET with pagination</td>
+                        </tr>
+                        <tr>
+                            <td>Parallel job processing</td>
+                            <td>Worker Threads pool + in-memory job queue</td>
+                        </tr>
+                        <tr>
+                            <td>Progress events</td>
+                            <td><code>EventEmitter</code> from workers → WebSocket push</td>
+                        </tr>
+                        <tr>
+                            <td>Role-based access control</td>
+                            <td>JWT auth + admin/user role checking middleware</td>
+                        </tr>
+                        <tr>
+                            <td>Full test suite</td>
+                            <td>Vitest + Supertest — unit + integration tests</td>
+                        </tr>
+                        <tr>
+                            <td>Production deployment</td>
+                            <td>Docker + docker-compose (Node + MongoDB + Redis)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A production-grade job processing platform: Express API for job submission and status, Worker Threads pool for parallel execution, WebSocket push notifications on status changes, JWT authentication with role-based access control, comprehensive Vitest + Supertest test suite, Dockerized with <code>docker-compose</code> (Node + MongoDB + Redis), structured Pino logging, and a health-check endpoint. Deploy to Render, Railway, or a VPS with environment-based configuration.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–4</td>
+                        <td>Absolute Basics</td>
+                        <td>Run Node.js programs, manage packages with npm, work with arrays/objects/JSON, and understand the runtime environment</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>5–8</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Write closures and modules, understand the Event Loop, handle async operations with Promises and async/await, and use fs/path/os</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>9–12</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Build Express REST APIs, persist data with MongoDB and Mongoose, implement JWT authentication, and handle errors centrally</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>13–16</td>
+                        <td>Master Level Concepts</td>
+                        <td>Use generators, Worker Threads, and clustering for concurrency, write comprehensive tests, containerize with Docker, and complete three production projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Resource</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nodejs.org/docs</td>
+                        <td>Official Node.js core API reference</td>
+                    </tr>
+                    <tr>
+                        <td>NVM (github.com/nvm-sh/nvm)</td>
+                        <td>Node version management across projects</td>
+                    </tr>
+                    <tr>
+                        <td>expressjs.com</td>
+                        <td>Express.js web framework documentation</td>
+                    </tr>
+                    <tr>
+                        <td>mongoosejs.com</td>
+                        <td>Mongoose ODM reference and guides</td>
+                    </tr>
+                    <tr>
+                        <td>Postman</td>
+                        <td>API testing and development environment</td>
+                    </tr>
+                    <tr>
+                        <td>Vitest (vitest.dev)</td>
+                        <td>Modern, fast testing framework for Node.js</td>
+                    </tr>
+                    <tr>
+                        <td>Pino (getpino.io)</td>
+                        <td>High-performance structured JSON logging</td>
+                    </tr>
+                    <tr>
+                        <td>Docker Docs (docs.docker.com)</td>
+                        <td>Containerization and deployment reference</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Complete each week's task before moving on — building projects reinforces concepts far better than reading alone.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — your commit history is visible proof of consistent progress.</li>
+                    <li>Test every async function with <code>console.log</code> to verify execution order — the Event Loop surprises every developer at least once.</li>
+                    <li>Use <code>nodemon</code> from Week 3 onward so your server restarts automatically on file changes — it saves hours of development time.</li>
+                    <li>By Week 16, you should have three complete, deployed projects and the confidence to build any Node.js CLI tool, REST API, or real-time service from scratch.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

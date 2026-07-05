@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP: Beginner to Master — 16 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>PHP: Beginner to Master</h1>
+        <p>Complete 16-Week Curriculum — From PHP Syntax &amp; Forms to OOP, PDO, Composer &amp; Production REST APIs</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#week16">W16</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>16-week, phase-based PHP curriculum</strong> designed to take a complete beginner to a professional-level PHP developer. The roadmap moves from <strong>PHP environment setup, syntax, variables, and operators</strong> through <strong>conditionals, loops, functions, forms, sessions, and file uploads</strong>, into <strong>object-oriented PHP, file I/O, PDO, and Composer</strong>, all the way to <strong>advanced patterns, REST APIs, security, testing, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics and PHP fundamentals, <strong>Phase 2</strong> covers control flow, functions, forms, and sessions, <strong>Phase 3</strong> covers OOP, file I/O, error handling, and PDO/MySQL, and <strong>Phase 4</strong> covers master-level patterns, REST APIs, security, and full production applications.</p>
+            <p>By Week 16, you will have built three complete, portfolio-ready applications and be confident building production-grade PHP applications from scratch.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 16 weeks &nbsp;|&nbsp; <strong>Stack:</strong> PHP 8.2+, MySQL, Composer, Apache/Nginx &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic HTML &amp; programming logic</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–4:</strong> PHP environment, syntax, strings, numbers, arrays, and the type system.</p>
+        </div>
+
+        <!--WEEK 1-->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Environment Setup &amp; PHP Fundamentals</h2>
+                <p>Installing PHP, understanding how it runs on a server, and writing your very first PHP scripts.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Installing PHP, understanding how it runs on a server, and writing your very first PHP scripts.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What is PHP &amp; How It Works</strong> — PHP (Hypertext Preprocessor) is a server-side scripting language that runs on a web server and generates HTML sent to the browser. Unlike JavaScript, PHP code is never visible to the end user — only its output is.</li>
+                    <li><strong>Setting Up a Local Environment (XAMPP / Laragon)</strong> — XAMPP and Laragon bundle Apache, PHP, and MySQL into a single installer, giving you a full local server environment in minutes. Place your <code>.php</code> files in the <code>htdocs</code> (XAMPP) or <code>www</code> (Laragon) folder and access them via <code>http://localhost</code>.</li>
+                    <li><strong>Variables &amp; Data Types</strong> — PHP variables always start with a <code>$</code> sign and are loosely typed — you don't declare the type; PHP infers it from the assigned value. PHP 8+ supports named types for stricter code, but the dynamic default remains fully valid.</li>
+                    <li><strong><code>echo</code>, <code>print</code>, &amp; <code>var_dump</code></strong> — <code>echo</code> and <code>print</code> both output text to the browser, but <code>echo</code> is faster and can accept multiple comma-separated values. <code>var_dump()</code> is your debugging best friend — it reveals a variable's type and value simultaneously.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> PHP is the language behind WordPress, Laravel, and a huge portion of the web. Understanding the server-side execution model — PHP runs on the server and sends only output to the browser — is the foundational mental model that makes every subsequent topic logical.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>&lt;?php
+// PHP code lives between &lt;?php and ?&gt; tags
+echo "Hello, World!";
+
+$name    = "Alice";   // string
+$age     = 28;        // integer
+$height  = 5.6;       // float
+$isAdmin = true;      // boolean
+$nothing = null;      // null
+
+// var_dump() shows the value AND its type
+var_dump($age);  // int(28)
+
+$product = "Laptop";
+$price   = 999.99;
+echo "Product: ", $product, " — $", $price, "&lt;br&gt;";
+?&gt;
+&lt;p&gt;This is plain HTML after the PHP block.&lt;/p&gt;</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"Personal Info Page."</strong> Create <code>index.php</code> that declares variables for your name, age, occupation, and favourite programming language. Display them in a formatted HTML page using <code>echo</code>. Use <code>var_dump()</code> on at least two variables in a commented debug block at the bottom.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 2-->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Strings, Numbers &amp; Operators</h2>
+                <p>Manipulating text and numbers using PHP's rich library of built-in string and math functions.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Manipulating text and numbers using PHP's rich library of built-in string and math functions.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>String Functions</strong> — PHP ships with over 100 built-in string functions. The most essential ones are <code>strlen()</code> (length), <code>strtolower()</code>/<code>strtoupper()</code> (case), <code>str_replace()</code> (find and replace), <code>trim()</code> (whitespace removal), and <code>substr()</code> (extract a portion).</li>
+                    <li><strong>String Interpolation &amp; Heredoc</strong> — PHP supports embedding variables directly inside double-quoted strings — the variable is replaced with its value at runtime. For long blocks of text, the Heredoc (<code>&lt;&lt;&lt;</code>) syntax avoids messy quote escaping.</li>
+                    <li><strong>Arithmetic &amp; Assignment Operators</strong> — PHP supports all standard arithmetic operators (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>**</code>) plus shorthand assignment operators like <code>+=</code> and <code>-=</code>. The integer division operator <code>intdiv()</code> and modulo <code>%</code> are especially useful for pagination and grid layouts.</li>
+                    <li><strong>Math Functions</strong> — PHP's Math functions cover everything from rounding to trigonometry. The most commonly used in web development are <code>round()</code>, <code>ceil()</code>, <code>floor()</code>, <code>abs()</code>, <code>max()</code>, <code>min()</code>, and <code>rand()</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> String manipulation is constant in PHP — sanitizing user input, formatting output, building HTML responses. Mastering the core string functions and the difference between single-quoted (literal) and double-quoted (interpolated) strings prevents an entire category of beginner bugs.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>&lt;?php
+$sentence = "  Hello, PHP World!  ";
+echo strlen(trim($sentence));            // 19
+echo strtoupper($sentence);
+echo str_replace("PHP", "8", $sentence);
+echo substr(trim($sentence), 0, 5);     // "Hello"
+
+$name = "Bob";
+$role = "developer";
+echo "Welcome, $name! You are a $role.&lt;br&gt;";
+
+echo &lt;&lt;&lt;HTML
+    &lt;h1&gt;Hello, {$name}!&lt;/h1&gt;
+    &lt;p&gt;Your role is: {$role}&lt;/p&gt;
+HTML;
+
+$a = 10; $b = 3;
+echo $a % $b;        // 1
+echo $a ** $b;       // 1000
+echo intdiv($a, $b); // 3
+
+echo round(4.567, 2); // 4.57
+echo ceil(4.1);        // 5
+echo max(3, 7, 1, 9); // 9
+echo rand(1, 100);</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"String &amp; Number Utility Page."</strong> Accept a sentence via a hardcoded variable. Display: its word count (<code>str_word_count()</code>), character count (<code>strlen()</code>), reversed version (<code>strrev()</code>), title-cased version (<code>ucwords()</code>), and a random "lucky number" between 1 and 1000. Format output as a clean HTML table.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 3 -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Arrays</h2>
+                <p>Storing and manipulating collections of data using PHP's versatile indexed and associative arrays.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Storing and manipulating collections of data using PHP's versatile indexed and associative arrays.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Indexed Arrays</strong> — An indexed array stores values in sequential numeric positions starting at 0. You can create them with square bracket syntax <code>[]</code> or the <code>array()</code> function and access any element by its numeric index.</li>
+                    <li><strong>Associative Arrays</strong> — Associative arrays use named string keys instead of numeric indexes, making them ideal for representing structured records like a user profile or product. They behave like dictionaries or hash maps in other languages.</li>
+                    <li><strong>Array Functions</strong> — PHP provides dozens of powerful array functions. Essential ones include <code>array_push()</code>, <code>array_pop()</code>, <code>array_merge()</code>, <code>array_slice()</code>, <code>in_array()</code>, <code>array_search()</code>, <code>sort()</code>, and <code>array_map()</code>.</li>
+                    <li><strong>Multidimensional Arrays</strong> — A multidimensional array is an array where each element is itself an array — perfect for representing tables of data like a list of users, products, or database rows before a real database is introduced.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Arrays are the most-used data structure in PHP — every database query result, form submission, and JSON response is processed as an array. Mastering <code>foreach</code>, <code>array_map</code>, <code>array_filter</code>, and associative arrays is non-negotiable for real PHP work.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>&lt;?php
+$fruits = ["Apple", "Banana", "Cherry", "Date"];
+echo $fruits[0];           // "Apple"
+echo count($fruits);       // 4
+$fruits[] = "Elderberry";
+
+$user = [
+    "name"  =&gt; "Alice",
+    "age"   =&gt; 28,
+    "email" =&gt; "alice@example.com",
+];
+echo $user["name"];
+$user["role"] = "admin";
+
+$numbers = [5, 2, 8, 1, 9, 3];
+sort($numbers);
+$evens   = array_filter($numbers, fn($n) =&gt; $n % 2 === 0);
+$doubled = array_map(fn($n) =&gt; $n * 2, $numbers);
+echo implode(", ", $doubled);
+
+$students = [
+    ["name" =&gt; "Alice", "grade" =&gt; 92],
+    ["name" =&gt; "Bob",   "grade" =&gt; 85],
+    ["name" =&gt; "Carol", "grade" =&gt; 97],
+];
+echo $students[2]["name"];   // "Carol"</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"Student Report Card"</strong> page. Define a multidimensional array of 5 students with fields: name, subject, score. Loop through the array and render an HTML table. Calculate and display the class average at the bottom. Sort the students by score (highest first) using <code>usort()</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 4 -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Type System, Type Casting &amp; Constants</h2>
+                <p>Understanding PHP's type juggling, explicit type casting, strict types, and defining constants.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding PHP's type juggling, explicit type casting, strict types, and defining constants.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Type Juggling &amp; <code>strict_types</code></strong> — PHP automatically converts types when performing operations (e.g., <code>"5" + 3</code> becomes <code>8</code>). Adding <code>declare(strict_types=1)</code> at the top of a file disables this juggling and enforces strict type matching for function arguments.</li>
+                    <li><strong>Type Casting</strong> — You can explicitly cast a value to a different type using cast operators: <code>(int)</code>, <code>(float)</code>, <code>(string)</code>, <code>(bool)</code>, and <code>(array)</code>. This is safer than relying on PHP's automatic juggling.</li>
+                    <li><strong>Constants with <code>define()</code> and <code>const</code></strong> — Constants hold values that never change during script execution — like application version numbers, tax rates, or API endpoint URLs. Unlike variables, they have no <code>$</code> prefix and are globally accessible anywhere in the script.</li>
+                    <li><strong>Type Declaration Functions (<code>is_*</code> &amp; <code>gettype</code>)</strong> — PHP provides a family of <code>is_*</code> functions to check a variable's type at runtime without triggering errors. <code>gettype()</code> returns the type as a string, and <code>intval()</code>, <code>floatval()</code>, and <code>strval()</code> are safer alternatives to casting.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> PHP's type juggling is famous for producing surprising results (<code>"0" == false</code>, <code>"abc" == 0</code> in older versions). Enabling <code>strict_types=1</code> and using strict comparison (<code>===</code>) from the start prevents an entire category of subtle bugs that have plagued PHP codebases for decades.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>&lt;?php
+declare(strict_types=1);
+
+var_dump("5" + 3);     // int(8)
+var_dump("5" . 3);     // string("53")
+var_dump(0 === false); // bool(false)
+
+$price   = "29.99 USD";
+$amount  = (float) $price;
+$rounded = (int) $amount;
+$text    = (string) 42;
+$flag    = (bool) "";
+
+define("APP_VERSION", "2.1.0");
+define("TAX_RATE", 0.08);
+const MAX_UPLOAD_SIZE = 5242880;
+
+echo APP_VERSION;
+
+$values = [42, "hello", 3.14, true, null, []];
+foreach ($values as $v) {
+    echo gettype($v) . ": ";
+    echo is_numeric($v) ? "numeric" : "not numeric";
+    echo "&lt;br&gt;";
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"Shopping Cart Price Calculator."</strong> Define constants for <code>TAX_RATE</code> (0.08) and <code>SHIPPING_FEE</code> (5.99). Create an array of cart items (name + price as strings, simulating form input). Cast prices to floats, compute subtotal, tax, shipping, and grand total. Display a formatted receipt with <code>number_format()</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 5–8:</strong> Conditionals, loops, functions, superglobals, forms, sessions, and file uploads.</p>
+        </div>
+
+        <!-- WEEK 5 -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Conditionals &amp; Loops</h2>
+                <p>Controlling program execution flow using if/else statements, match, and all loop types.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Controlling program execution flow using if/else statements, match, and all loop types.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>if</code>, <code>elseif</code>, <code>else</code> &amp; the Ternary Operator</strong> — PHP's conditional statements work exactly like most C-family languages. The ternary operator <code>? :</code> provides a compact one-line alternative, and the null coalescing operator <code>??</code> (PHP 7+) is perfect for handling missing values.</li>
+                    <li><strong><code>match</code> Expression (PHP 8+)</strong> — The <code>match</code> expression is PHP 8's cleaner, stricter replacement for <code>switch</code>. It uses strict comparison (no type juggling), each arm returns a value directly, and it throws an <code>UnhandledMatchError</code> if no arm matches (unlike <code>switch</code> which silently falls through).</li>
+                    <li><strong><code>for</code>, <code>while</code>, and <code>do...while</code> Loops</strong> — <code>for</code> loops are best when you know the iteration count in advance. <code>while</code> loops run as long as a condition is true. <code>do...while</code> always executes at least once before checking the condition — useful for menus and input validation.</li>
+                    <li><strong><code>foreach</code> Loop</strong> — <code>foreach</code> is PHP's most-used loop, designed specifically for iterating over arrays and objects. You can iterate over just values, or destructure both key and value in every iteration using the <code>=&gt;</code> syntax.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> PHP 8's <code>match</code> expression is a major upgrade over <code>switch</code> — strict comparison, no fall-through bugs, and it returns a value directly. <code>foreach</code> with key destructuring is the most-used pattern in real PHP code for processing arrays and database results.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>&lt;?php
+$score = 78;
+if ($score &gt;= 90)      echo "A";
+elseif ($score &gt;= 80)  echo "B";
+elseif ($score &gt;= 70)  echo "C";
+else                   echo "F";
+
+$username = $_GET["user"] ?? "Guest";
+
+$status  = 404;
+$message = match($status) {
+    200, 201 =&gt; "Success",
+    301, 302 =&gt; "Redirect",
+    404      =&gt; "Not Found",
+    500      =&gt; "Server Error",
+    default  =&gt; "Unknown Status",
+};
+echo $message;
+
+for ($i = 1; $i &lt;= 5; $i++) echo "$i ";
+
+$cart = ["Apple" =&gt; 1.20, "Banana" =&gt; 0.50, "Cherry" =&gt; 2.99];
+$total = 0;
+foreach ($cart as $item =&gt; $price) {
+    echo "$item: \$$price&lt;br&gt;";
+    $total += $price;
+}
+echo "Total: \$" . number_format($total, 2);</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"FizzBuzz Multiplication Table."</strong> Loop from 1 to 100: print "Fizz" for multiples of 3, "Buzz" for 5, "FizzBuzz" for both, otherwise the number. Then render a 10×10 HTML multiplication table using nested <code>for</code> loops with alternating row background colours via the modulo operator.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 6-->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Functions</h2>
+                <p>Defining reusable, type-safe functions with default arguments, variadic parameters, and return types.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Defining reusable, type-safe functions with default arguments, variadic parameters, and return types.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Defining Functions &amp; Return Types</strong> — Functions in PHP are defined with the <code>function</code> keyword. PHP 7+ allows you to declare parameter types and return types with a colon — this makes your functions self-documenting and catches type errors early.</li>
+                    <li><strong>Default &amp; Named Arguments (PHP 8+)</strong> — Default parameter values make arguments optional by providing a fallback. PHP 8's named arguments let you pass values by their parameter name rather than position, making function calls with many optional parameters far more readable.</li>
+                    <li><strong>Variadic Functions (<code>...$args</code>)</strong> — Variadic functions accept any number of arguments by prefixing the last parameter with <code>...</code>. The arguments are collected into an array, letting you write functions like <code>sum()</code> or <code>log()</code> that work with any quantity of inputs.</li>
+                    <li><strong>Arrow Functions &amp; Closures</strong> — Anonymous functions (closures) are functions without a name, stored in variables or passed as arguments. PHP 7.4's arrow functions (<code>fn() =&gt;</code>) are a short-syntax closure that automatically capture variables from the outer scope.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Typed function signatures with PHP 8's named arguments produce self-documenting, IDE-friendly code that catches errors at the boundary. Arrow functions are essential for clean <code>array_map</code>/<code>array_filter</code> chains — the functional style now standard in modern PHP.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>&lt;?php
+function calculateArea(float $width, float $height): float {
+    return $width * $height;
+}
+echo calculateArea(5.5, 3.0);
+
+function greet(string $name, string $greeting = "Hello", bool $shout = false): string {
+    $msg = "$greeting, $name!";
+    return $shout ? strtoupper($msg) : $msg;
+}
+echo greet(name: "Bob", shout: true);
+
+function sum(string $label, int ...$numbers): string {
+    $total = array_sum($numbers);
+    return "$label: $total";
+}
+echo sum("Score", 10, 20, 5, 15);
+
+$multiplier = 3;
+$triple = fn(int $n): int =&gt; $n * $multiplier;
+$tripled = array_map($triple, [1, 2, 3, 4, 5]);
+echo implode(", ", $tripled);</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"Mini Math Library."</strong> Create a PHP file with typed functions: <code>average(float ...$nums)</code>, <code>median(array $nums)</code>, <code>clamp(float $val, float $min, float $max)</code>, and <code>percentage(float $part, float $total): string</code>. Test each function with at least 3 calls and display the results in an HTML definition list.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 7-->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Superglobals, Forms &amp; Input Handling</h2>
+                <p>Processing HTML form submissions securely using <code>$_GET</code>, <code>$_POST</code>, and input sanitization.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Processing HTML form submissions securely using <code>$_GET</code>, <code>$_POST</code>, and input sanitization.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>$_GET</code> &amp; Query Strings</strong> — <code>$_GET</code> is a superglobal array populated with data from the URL query string (everything after <code>?</code>). It's appropriate for non-sensitive data like search queries, filters, and pagination, but never for passwords or personal information.</li>
+                    <li><strong><code>$_POST</code> &amp; Form Handling</strong> — <code>$_POST</code> holds data submitted via an HTML form with <code>method="POST"</code>. POST data is not visible in the URL and is slightly more secure for sensitive data, though HTTPS is required for true security.</li>
+                    <li><strong>Input Validation &amp; Sanitization</strong> — Sanitization cleans input (removing dangerous characters); validation checks that input meets your rules (correct format, required fields). PHP's <code>filter_var()</code> function handles both tasks cleanly for common cases.</li>
+                    <li><strong><code>$_SERVER</code> &amp; Request Information</strong> — The <code>$_SERVER</code> superglobal contains information about the web server and the current HTTP request — including the request method, client IP, script path, and HTTP headers. It's essential for routing and security checks.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Unsanitized user input is the #1 source of vulnerabilities in PHP applications — XSS, SQL injection, and CSRF all start here. Mastering <code>htmlspecialchars()</code>, <code>filter_var()</code>, and the validation-before-use pattern is non-negotiable for any production PHP code.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>&lt;?php
+$query = htmlspecialchars($_GET["query"] ?? "");
+$page  = (int) ($_GET["page"] ?? 1);
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $name  = trim($_POST["name"] ?? "");
+    $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+    echo "Name: $name | Email: $email";
+}
+
+$rawEmail = "  USER@Example.COM  ";
+$email    = filter_var(trim($rawEmail), FILTER_SANITIZE_EMAIL);
+$isValid  = filter_var($email, FILTER_VALIDATE_EMAIL);
+echo $isValid ? "Valid: $email" : "Invalid email";
+
+echo $_SERVER["REQUEST_METHOD"];
+echo $_SERVER["REMOTE_ADDR"];
+echo $_SERVER["HTTP_USER_AGENT"];</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"Contact Form"</strong> with full validation. Create a two-file app: <code>contact.html</code> (form with name, email, subject, message fields) and <code>process.php</code> (validates every field, sanitizes inputs, and either displays a formatted summary on success or re-displays the form with inline error messages on failure).</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 8-->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Sessions, Cookies &amp; File Uploads</h2>
+                <p>Persisting user data across requests with sessions and cookies, and safely handling file uploads.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Persisting user data across requests with sessions and cookies, and safely handling file uploads.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Sessions</strong> — HTTP is stateless — every request is independent. PHP Sessions solve this by storing data on the server and giving the browser a session ID cookie. All pages in the same session can read and write to the same <code>$_SESSION</code> array.</li>
+                    <li><strong>Cookies</strong> — Cookies store small amounts of data in the browser. They persist across browser sessions (unlike PHP sessions, which expire when the browser closes by default). Never store sensitive data in cookies — they're readable by the browser.</li>
+                    <li><strong>File Uploads with <code>$_FILES</code></strong> — PHP handles file uploads via the <code>$_FILES</code> superglobal. You must validate the file type, size, and use <code>move_uploaded_file()</code> to move it from the temporary directory to your target location safely.</li>
+                    <li><strong>Session-Based Authentication Pattern</strong> — The most common use of sessions is implementing a login system. After verifying credentials, you set a session variable to mark the user as authenticated, and every protected page checks for that variable before rendering.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Sessions are the foundation of every login system, shopping cart, and personalized PHP application on the web. Mishandled file uploads are a top vulnerability — accepting any file without type/size validation can let attackers execute arbitrary PHP on your server.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>&lt;?php
+session_start();
+
+$_SESSION["username"] = "Alice";
+$_SESSION["role"]     = "admin";
+echo "Logged in as: " . ($_SESSION["username"] ?? "Guest");
+
+$expires = time() + (7 * 24 * 60 * 60);
+setcookie("theme", "dark", $expires, "/");
+$theme = $_COOKIE["theme"] ?? "light";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["photo"])) {
+    $file    = $_FILES["photo"];
+    $allowed = ["image/jpeg", "image/png", "image/webp"];
+    if (in_array($file["type"], $allowed) && $file["size"] &lt; 2_000_000) {
+        move_uploaded_file($file["tmp_name"], "uploads/" . basename($file["name"]));
+        echo "Upload successful!";
+    }
+}
+
+function requireLogin(): void {
+    if (empty($_SESSION["user_id"])) {
+        header("Location: /login.php");
+        exit;
+    }
+}
+requireLogin();</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"Simple Login System."</strong> Create <code>login.php</code> (form + validation, sets session on success), <code>dashboard.php</code> (protected page using <code>requireLogin()</code>, shows username + a "last login" timestamp stored in session), and <code>logout.php</code> (destroys session, redirects to login). Store users in a hardcoded array — no database yet.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 9–12:</strong> Object-oriented PHP, file handling, error handling, and databases with PDO/MySQL.</p>
+        </div>
+
+        <!--WEEK 9 -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Object-Oriented PHP: Classes &amp; Objects</h2>
+                <p>Modeling real-world entities with classes, properties, methods, visibility modifiers, and constructors.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Modeling real-world entities with classes, properties, methods, visibility modifiers, and constructors.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Classes, Properties &amp; Methods</strong> — A class is a blueprint for creating objects — it defines the properties (data) and methods (behavior) that every object of that type will have. In PHP 8+, constructor property promotion lets you declare and assign properties in a single line.</li>
+                    <li><strong>Visibility: <code>public</code>, <code>protected</code>, <code>private</code></strong> — Visibility modifiers control access to class members. <code>public</code> is accessible anywhere, <code>private</code> only within the same class, and <code>protected</code> within the class and its subclasses. This encapsulation protects an object's internal state from outside interference.</li>
+                    <li><strong>Inheritance &amp; <code>parent::</code></strong> — Inheritance lets a child class extend a parent class, reusing its properties and methods while adding or overriding behaviour. The <code>parent::</code> keyword calls the parent class's version of a method, commonly used in <code>__construct()</code> to chain initialisation.</li>
+                    <li><strong>Static Methods &amp; Properties</strong> — Static members belong to the class itself, not to any specific instance. They're accessed with <code>::</code> and are ideal for utility/helper methods, counters, or factory patterns where you don't need (or want) to instantiate an object.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> PHP 8's constructor property promotion eliminates massive amounts of boilerplate. Combined with strict visibility and typed properties, modern PHP OOP is now as clean and safe as Java or C# — a far cry from the messy PHP 5 era.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>&lt;?php
+class Product {
+    public function __construct(
+        private string $name,
+        private float  $price,
+        private int    $stock = 0,
+    ) {}
+
+    public function getLabel(): string {
+        return "{$this-&gt;name} — \${$this-&gt;price}";
+    }
+}
+$p = new Product("Laptop", 999.99, 10);
+echo $p-&gt;getLabel();
+
+class BankAccount {
+    private float $balance;
+    public function __construct(float $initial) { $this-&gt;balance = $initial; }
+    public function deposit(float $amount): void {
+        if ($amount &gt; 0) $this-&gt;balance += $amount;
+    }
+    public function getBalance(): float { return $this-&gt;balance; }
+}
+
+class Animal {
+    public function __construct(protected string $name) {}
+    public function speak(): string { return "..."; }
+}
+class Dog extends Animal {
+    public function speak(): string {
+        return $this-&gt;name . " says: Woof!";
+    }
+}
+
+class MathHelper {
+    private static int $callCount = 0;
+    public static function square(float $n): float {
+        self::$callCount++;
+        return $n * $n;
+    }
+}
+echo MathHelper::square(5);</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"Library System"</strong> with classes. Create a <code>Book</code> class (title, author, year, <code>isAvailable</code> flag) and a <code>Library</code> class with methods: <code>addBook(Book $b)</code>, <code>checkOut(string $title)</code>, <code>returnBook(string $title)</code>, and <code>listAvailable(): array</code>. Demonstrate the full checkout lifecycle in a script. Use visibility modifiers throughout.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 10-->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Advanced OOP: Interfaces, Traits, Abstracts &amp; Enums</h2>
+                <p>Designing flexible, extensible systems using PHP's full object-oriented toolkit.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Designing flexible, extensible systems using PHP's full object-oriented toolkit.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Interfaces</strong> — An interface is a contract — it defines which methods a class must implement without providing any implementation. This enables polymorphism: different classes can be treated interchangeably as long as they implement the same interface.</li>
+                    <li><strong>Abstract Classes</strong> — Abstract classes sit between regular classes and interfaces — they can provide concrete method implementations and declare abstract methods that subclasses must implement. A class can only extend one abstract class, unlike interfaces.</li>
+                    <li><strong>Traits</strong> — Traits solve the multiple-inheritance problem — they let you package reusable methods and inject them into any class with <code>use</code>. Unlike interfaces, traits provide actual implementation. A class can use multiple traits simultaneously.</li>
+                    <li><strong>Enums (PHP 8.1+)</strong> — Enums define a fixed set of named values, replacing the fragile pattern of using string or integer constants. Backed enums associate each case with a string or integer value, making them suitable for database storage and HTTP responses.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Enums (PHP 8.1+) eliminate an entire class of bugs around magic strings/integers used for status codes, roles, and categories. Combined with interfaces and traits, PHP now has the full toolkit needed to write SOLID, testable, framework-quality code.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>&lt;?php
+interface Exportable {
+    public function toCSV(): string;
+    public function toJSON(): string;
+}
+
+class Report implements Exportable {
+    public function __construct(private array $data) {}
+    public function toCSV(): string  { return implode(",", $this-&gt;data); }
+    public function toJSON(): string { return json_encode($this-&gt;data); }
+}
+
+abstract class Shape {
+    public function describe(): string { return "I am a " . static::class; }
+    abstract public function area(): float;
+}
+class Circle extends Shape {
+    public function __construct(private float $radius) {}
+    public function area(): float { return M_PI * $this-&gt;radius ** 2; }
+}
+
+trait Timestampable {
+    private ?string $createdAt = null;
+    public function setCreatedAt(): void { $this-&gt;createdAt = date("Y-m-d H:i:s"); }
+    public function getCreatedAt(): ?string { return $this-&gt;createdAt; }
+}
+class Article {
+    use Timestampable;
+    public function __construct(public string $title) {}
+}
+
+enum OrderStatus: string {
+    case Pending   = "pending";
+    case Shipped   = "shipped";
+    case Delivered = "delivered";
+    case Cancelled = "cancelled";
+}
+$status = OrderStatus::Shipped;
+echo $status-&gt;value;   // "shipped"
+$fromDB = OrderStatus::from("delivered");</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"Payment Gateway Abstraction."</strong> Define a <code>PaymentGateway</code> interface with <code>charge(float $amount): bool</code> and <code>refund(float $amount): bool</code>. Create two concrete implementations: <code>StripeGateway</code> and <code>PayPalGateway</code> (simulate with random success/failure). Add a <code>Loggable</code> trait with a <code>log(string $msg)</code> method. Use a <code>PaymentStatus</code> backed Enum for results.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 11-->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — File Handling, Error Handling &amp; Exceptions</h2>
+                <p>Reading/writing files, handling runtime errors gracefully, and building a robust exception hierarchy.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Reading/writing files, handling runtime errors gracefully, and building a robust exception hierarchy.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Reading &amp; Writing Files</strong> — PHP's file functions make reading and writing files straightforward. <code>file_get_contents()</code> reads an entire file into a string; <code>file_put_contents()</code> writes a string to a file. For large files, use <code>fopen()</code>/<code>fgets()</code>/<code>fclose()</code> to stream line-by-line.</li>
+                    <li><strong>Try / Catch / Finally &amp; Exceptions</strong> — PHP exceptions let you handle errors gracefully without crashing the script. Code that might fail goes in <code>try</code>, your handler goes in <code>catch</code>, and <code>finally</code> runs regardless of whether an exception was thrown — perfect for cleanup code.</li>
+                    <li><strong>Custom Exception Classes</strong> — Custom exceptions make your error handling expressive and precise. By extending <code>Exception</code> (or <code>RuntimeException</code>), you create domain-specific exception types that are far more meaningful than a generic <code>Exception</code>.</li>
+                    <li><strong>Working with JSON Files</strong> — JSON is the standard format for storing and exchanging structured data. PHP's <code>json_encode()</code> converts arrays/objects to JSON strings, and <code>json_decode()</code> parses them back — making it easy to use JSON files as lightweight data stores.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Exceptions are PHP's idiomatic error-handling mechanism. Custom exception classes carrying domain-specific context (like a shortfall amount or a validation field name) transform debugging from guesswork into precise diagnosis — the hallmark of production-quality PHP.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>&lt;?php
+$path = "data/notes.txt";
+file_put_contents($path, "Line 1\nLine 2\nLine 3\n");
+$content = file_get_contents($path);
+$lines   = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+function divide(float $a, float $b): float {
+    if ($b === 0.0) throw new InvalidArgumentException("Cannot divide by zero.");
+    return $a / $b;
+}
+try {
+    echo divide(10, 2);
+    echo divide(10, 0);
+} catch (InvalidArgumentException $e) {
+    echo "Error: " . $e-&gt;getMessage();
+} finally {
+    echo " | Operation complete.";
+}
+
+class InsufficientFundsException extends RuntimeException {
+    public function __construct(private float $shortfall) {
+        parent::__construct("Insufficient funds. Short by: \$$shortfall");
+    }
+    public function getShortfall(): float { return $this-&gt;shortfall; }
+}
+
+$users = [
+    ["id" =&gt; 1, "name" =&gt; "Alice", "role" =&gt; "admin"],
+    ["id" =&gt; 2, "name" =&gt; "Bob",   "role" =&gt; "editor"],
+];
+file_put_contents("users.json", json_encode($users, JSON_PRETTY_PRINT));
+$loaded = json_decode(file_get_contents("users.json"), true);
+echo $loaded[0]["name"];</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"JSON-Based Task Manager."</strong> Store tasks in a <code>tasks.json</code> file (id, title, status, created_at). Write functions: <code>loadTasks()</code>, <code>saveTasks(array $tasks)</code>, <code>addTask(string $title)</code>, <code>completeTask(int $id)</code>, <code>deleteTask(int $id)</code>. Wrap all file operations in try/catch blocks with a custom <code>StorageException</code>. Test via a CLI script (<code>php tasks.php</code>).</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 12-->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Databases with PDO &amp; MySQL</h2>
+                <p>Connecting to MySQL databases, performing CRUD operations safely with PDO and prepared statements.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Connecting to MySQL databases, performing CRUD operations safely with PDO and prepared statements.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Connecting to MySQL with PDO</strong> — PDO (PHP Data Objects) is the modern, database-agnostic way to interact with databases in PHP. It supports multiple database drivers and, critically, makes prepared statements easy — the #1 defence against SQL injection.</li>
+                    <li><strong>Prepared Statements &amp; CRUD</strong> — Prepared statements separate SQL code from user data, making SQL injection impossible. The <code>:placeholder</code> syntax (named) or <code>?</code> (positional) binds values safely at execution time — never concatenate user input into SQL strings.</li>
+                    <li><strong>Fetching Data &amp; <code>fetchAll</code></strong> — PDO's <code>fetch()</code> retrieves one row at a time, while <code>fetchAll()</code> returns all matching rows as an array of arrays. Use <code>rowCount()</code> to check how many rows were affected by an UPDATE or DELETE.</li>
+                    <li><strong>Transactions</strong> — A database transaction groups multiple SQL statements into an atomic unit — either all succeed or all are rolled back. This is essential for operations that must stay consistent, like transferring money between accounts.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> SQL injection is consistently in the OWASP Top 10 vulnerabilities. PDO prepared statements eliminate it completely when used correctly. Transactions ensure data integrity for any multi-step operation — together, these two patterns are non-negotiable for production PHP database work.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>&lt;?php
+$dsn = "mysql:host=localhost;dbname=myapp;charset=utf8mb4";
+$pdo = new PDO($dsn, "root", "password", [
+    PDO::ATTR_ERRMODE            =&gt; PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE =&gt; PDO::FETCH_ASSOC,
+]);
+
+// INSERT with prepared statement
+$stmt = $pdo-&gt;prepare("INSERT INTO users (name, email) VALUES (:name, :email)");
+$stmt-&gt;execute(["name" =&gt; "Alice", "email" =&gt; "alice@example.com"]);
+
+// SELECT
+$stmt = $pdo-&gt;prepare("SELECT * FROM users WHERE id = :id");
+$stmt-&gt;execute(["id" =&gt; 1]);
+$user = $stmt-&gt;fetch();
+
+// fetchAll
+$stmt = $pdo-&gt;prepare("SELECT id, name, email FROM users WHERE active = 1 ORDER BY name");
+$stmt-&gt;execute();
+$users = $stmt-&gt;fetchAll();
+foreach ($users as $user) {
+    echo "{$user['id']}: {$user['name']} ({$user['email']})&lt;br&gt;";
+}
+
+// Transactions
+try {
+    $pdo-&gt;beginTransaction();
+    $pdo-&gt;prepare("UPDATE accounts SET balance = balance - 100 WHERE id = 1")-&gt;execute();
+    $pdo-&gt;prepare("UPDATE accounts SET balance = balance + 100 WHERE id = 2")-&gt;execute();
+    $pdo-&gt;commit();
+} catch (PDOException $e) {
+    $pdo-&gt;rollBack();
+    echo "Transfer failed: " . $e-&gt;getMessage();
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"CRUD Contact Book"</strong> with MySQL. Create a <code>contacts</code> table (id, first_name, last_name, phone, email, created_at). Build a PHP app with pages for: listing all contacts (table with Edit/Delete links), adding a new contact (form + INSERT), editing a contact (pre-filled form + UPDATE), and deleting (confirmation + DELETE). Use PDO prepared statements throughout.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 13–16:</strong> Composer, design patterns, REST APIs, security, and three complete production projects.</p>
+        </div>
+
+        <!--WEEK 13-->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Composer, Namespaces &amp; Modern PHP Tooling</h2>
+                <p>Using Composer for dependency management, organising code with namespaces, and leveraging the PSR standards.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Using Composer for dependency management, organising code with namespaces, and leveraging the PSR standards.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Composer &amp; <code>composer.json</code></strong> — Composer is PHP's dependency manager — it lets you declare, install, and autoload third-party libraries. Every modern PHP project starts with <code>composer init</code> and manages packages through <code>composer.json</code> and the lockfile <code>composer.lock</code>.</li>
+                    <li><strong>Namespaces &amp; PSR-4 Autoloading</strong> — Namespaces prevent class name collisions between your code and third-party libraries. PSR-4 autoloading (configured in <code>composer.json</code>) automatically loads class files based on their namespace — eliminating every <code>require</code> statement.</li>
+                    <li><strong>PHP 8.x Features: Fibers, First-Class Callables &amp; More</strong> — PHP 8.0–8.3 introduced a wave of powerful features: Named Arguments, Match Expressions, Nullsafe Operator (<code>?-&gt;</code>), Fibers (lightweight concurrency), Union/Intersection types, and readonly properties. These modernise PHP dramatically.</li>
+                    <li><strong>PHP Attributes (Annotations)</strong> — PHP 8 Attributes (<code>#[AttributeName]</code>) replace docblock annotations with a first-class, validated syntax. Frameworks like Symfony and Laravel use attributes for routing, validation, and dependency injection configuration.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Composer transformed PHP from "copy random scripts into your project" to a modern, dependency-managed ecosystem. PSR-4 autoloading and namespaces are the foundation every modern framework (Laravel, Symfony, Slim) is built on — there's no going back.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># Terminal — Composer commands
+composer init
+composer require guzzlehttp/guzzle
+composer require --dev phpunit/phpunit
+composer install
+composer update
+
+&lt;?php
+// src/Services/EmailService.php
+namespace App\Services;
+
+class EmailService {
+    public function send(string $to, string $subject): bool {
+        return true;
+    }
+}
+
+// Nullsafe operator
+$city = $user?-&gt;getAddress()?-&gt;getCity() ?? "Unknown";
+
+// Readonly properties
+class Point {
+    public function __construct(
+        public readonly float $x,
+        public readonly float $y,
+    ) {}
+}
+
+// PHP Attributes
+#[\Attribute]
+class Route {
+    public function __construct(
+        public readonly string $path,
+        public readonly string $method = "GET",
+    ) {}
+}
+
+class UserController {
+    #[Route("/users", method: "GET")]
+    public function index(): void { /* list users */ }
+
+    #[Route("/users", method: "POST")]
+    public function store(): void { /* create user */ }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Bootstrap a <strong>"Modern PHP Project."</strong> Use <code>composer init</code> with PSR-4 autoloading for <code>App\</code> → <code>src/</code>. Install <code>vlucas/phpdotenv</code> (env variables), <code>monolog/monolog</code> (logging), and <code>phpunit/phpunit</code> (testing). Create an <code>App\Config</code> class, an <code>App\Logger</code> wrapper, and a PHPUnit test. Run tests with <code>./vendor/bin/phpunit</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!--WEEK 14 -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Design Patterns &amp; Architecture</h2>
+                <p>Applying the most important software design patterns used in professional PHP frameworks and applications.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Applying the most important software design patterns used in professional PHP frameworks and applications.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Repository Pattern</strong> — The Repository pattern decouples your business logic from your data storage layer. Your application code talks to a repository interface — the concrete implementation (MySQL, JSON, memory) can be swapped without touching business logic.</li>
+                    <li><strong>Dependency Injection &amp; Service Container</strong> — Dependency Injection (DI) means passing a class's dependencies in from the outside rather than creating them internally. A DI Container automates this wiring — it's the heart of frameworks like Laravel and Symfony.</li>
+                    <li><strong>Singleton &amp; Factory Patterns</strong> — The Singleton ensures only one instance of a class exists (useful for a DB connection). The Factory pattern centralises object creation, letting you swap out which concrete class is returned based on configuration or context.</li>
+                    <li><strong>Middleware Pattern</strong> — Middleware is a chain of handlers that process an HTTP request before it reaches the final controller. Each middleware can inspect, modify, or short-circuit the request — used for auth, logging, rate limiting, and CORS in frameworks like Slim and Laravel.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The Repository pattern and Dependency Injection are the two architectural decisions that separate testable, maintainable PHP from spaghetti code. Every major framework (Laravel, Symfony, Slim) is built on these patterns — understanding them is essential for working in any modern PHP codebase.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>&lt;?php
+// Repository Pattern
+interface UserRepository {
+    public function findById(int $id): ?array;
+    public function save(array $user): void;
+}
+
+class MySQLUserRepository implements UserRepository {
+    public function __construct(private PDO $pdo) {}
+    public function findById(int $id): ?array {
+        $s = $this-&gt;pdo-&gt;prepare("SELECT * FROM users WHERE id = ?");
+        $s-&gt;execute([$id]);
+        return $s-&gt;fetch() ?: null;
+    }
+    public function save(array $user): void { /* ... */ }
+}
+
+// Dependency Injection
+class OrderService {
+    public function __construct(
+        private UserRepository  $users,
+        private PaymentGateway  $payment,
+    ) {}
+
+    public function placeOrder(int $userId, float $amount): bool {
+        $user = $this-&gt;users-&gt;findById($userId);
+        return $user ? $this-&gt;payment-&gt;charge($amount) : false;
+    }
+}
+
+// Factory Pattern
+class PaymentGatewayFactory {
+    public static function create(string $provider): PaymentGateway {
+        return match($provider) {
+            "stripe" =&gt; new StripeGateway(),
+            "paypal" =&gt; new PayPalGateway(),
+            default  =&gt; throw new \InvalidArgumentException("Unknown: $provider"),
+        };
+    }
+}
+
+// Middleware Pattern
+interface Middleware {
+    public function handle(array $request, callable $next): array;
+}
+class AuthMiddleware implements Middleware {
+    public function handle(array $request, callable $next): array {
+        if (empty($request["token"])) return ["status" =&gt; 401, "body" =&gt; "Unauthorized"];
+        return $next($request);
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Refactor Week 12's Contact Book using proper architecture. Introduce a <code>ContactRepository</code> interface with a <code>PDOContactRepository</code> implementation. Create a <code>ContactService</code> class that uses the repository (injected via constructor). Add a <code>ValidationMiddleware</code> that checks required fields before the controller runs. Write 3 PHPUnit tests for the service.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 15-->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — API Development, Security &amp; Performance</h2>
+                <p>Building RESTful JSON APIs, hardening PHP applications against common attacks, and optimizing performance.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Building RESTful JSON APIs, hardening PHP applications against common attacks, and optimizing performance.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Building a REST API in PHP</strong> — A REST API returns JSON responses to HTTP requests. In plain PHP, you parse the request method/path, dispatch to the appropriate handler, and send back a proper <code>Content-Type: application/json</code> header with a status code.</li>
+                    <li><strong>PHP Security Fundamentals</strong> — Web security is non-negotiable. The four most critical attack vectors in PHP are: SQL Injection (prevent with PDO prepared statements), XSS (prevent with <code>htmlspecialchars()</code>), CSRF (prevent with tokens), and Session Hijacking (prevent with <code>session_regenerate_id()</code>).</li>
+                    <li><strong>Password Hashing &amp; Secure Authentication</strong> — PHP's <code>password_hash()</code> and <code>password_verify()</code> functions implement bcrypt hashing, the industry standard for storing passwords. Never use MD5, SHA1, or plain text — always use these built-in functions.</li>
+                    <li><strong>Caching with APCu &amp; OPcache</strong> — OPcache compiles PHP files to bytecode and caches them in memory, eliminating repeated parsing — it's the single biggest performance win for any PHP app. APCu adds a user-level key-value cache for storing computed results.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Security and performance are what separate hobby PHP projects from production-grade applications. <code>password_hash()</code> + PDO prepared statements + OPcache + caching are four lines of effort that prevent every common attack and 10x your app's performance.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>&lt;?php
+// REST API
+header("Content-Type: application/json");
+header("Access-Control-Allow-Origin: *");
+
+$method = $_SERVER["REQUEST_METHOD"];
+$path   = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
+
+$response = match([$method, $path]) {
+    ["GET", "/api/users"]  =&gt; ["users" =&gt; [["id" =&gt; 1, "name" =&gt; "Alice"]]],
+    default                =&gt; ["error" =&gt; "Not Found"],
+};
+echo json_encode($response);
+
+// XSS Prevention
+$userInput = "&lt;script&gt;alert('XSS')&lt;/script&gt;";
+echo htmlspecialchars($userInput, ENT_QUOTES, "UTF-8");
+
+// CSRF Token
+if (empty($_SESSION["csrf_token"])) {
+    $_SESSION["csrf_token"] = bin2hex(random_bytes(32));
+}
+
+// Password Hashing
+$password = "my_super_secret_password";
+$hash     = password_hash($password, PASSWORD_DEFAULT);
+$isValid  = password_verify("my_super_secret_password", $hash);
+
+// APCu Caching
+$cacheKey = "all_products";
+$products = apcu_fetch($cacheKey, $success);
+if (!$success) {
+    $products = $pdo-&gt;query("SELECT * FROM products")-&gt;fetchAll();
+    apcu_store($cacheKey, $products, 300); // Cache for 300 seconds
+}
+echo json_encode($products);</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>"Secure REST API"</strong> for a to-do list. Endpoints: <code>GET /api/todos</code>, <code>POST /api/todos</code>, <code>PUT /api/todos/{id}</code>, <code>DELETE /api/todos/{id}</code>. Implement JWT-style Bearer token authentication (use <code>firebase/php-jwt</code> via Composer). Add CSRF protection, input sanitization, rate limiting (track in session), and return proper HTTP status codes.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 16-->
+
+        <div class="rm-card" id="week16">
+            <div class="rm-card-header">
+                <h2>Week 16 — Capstone Mini Projects (Beginner → Master)</h2>
+                <p>Applying the full curriculum in three progressively complex real-world PHP applications.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Applying everything learned across the entire 16-week curriculum in three complete, real-world portfolio projects.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — Blog CMS (Beginner–Intermediate)</h3>
+                <p>A classic multi-page blog with a public-facing frontend and a password-protected admin panel. Cements Phase 1–2 skills: forms, sessions, PDO CRUD, and file uploads.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>PHP Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Public homepage with post listing</td>
+                            <td>PDO <code>SELECT</code> + <code>foreach</code> + <code>htmlspecialchars</code></td>
+                        </tr>
+                        <tr>
+                            <td>Single post page with comments</td>
+                            <td>URL routing + comment form with <code>$_POST</code></td>
+                        </tr>
+                        <tr>
+                            <td>Admin authentication</td>
+                            <td><code>password_hash</code> + <code>password_verify</code> + sessions</td>
+                        </tr>
+                        <tr>
+                            <td>Create/edit/delete posts</td>
+                            <td>Full PDO CRUD with prepared statements</td>
+                        </tr>
+                        <tr>
+                            <td>Featured image upload</td>
+                            <td><code>$_FILES</code> + <code>move_uploaded_file</code> + validation</td>
+                        </tr>
+                        <tr>
+                            <td>MySQL schema</td>
+                            <td><code>posts</code>, <code>comments</code>, <code>users</code> tables</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A complete blog CMS with public homepage, single post pages with comments, session-based admin authentication using <code>password_hash</code>, full CRUD for posts, featured image upload with type/size validation, and a MySQL backend with three tables. Deploy to localhost with XAMPP/Laragon and include a SQL dump.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — MVC Framework &amp; E-Commerce Store (Intermediate–Advanced)</h3>
+                <p>Build a micro MVC framework from scratch, then implement a product catalogue and shopping cart on top of it. This forces deep understanding of OOP, routing, and separation of concerns.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>PHP Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hand-rolled MVC framework</td>
+                            <td><code>Router</code>, <code>Request</code>, <code>Response</code>, <code>Controller</code>, <code>View</code> classes</td>
+                        </tr>
+                        <tr>
+                            <td>PSR-4 autoloading</td>
+                            <td>Composer + namespaces (<code>App\</code> → <code>src/</code>)</td>
+                        </tr>
+                        <tr>
+                            <td>Environment config</td>
+                            <td><code>vlucas/phpdotenv</code> for <code>.env</code> files</td>
+                        </tr>
+                        <tr>
+                            <td>Product catalogue + search</td>
+                            <td>PDO queries with dynamic WHERE clauses + pagination</td>
+                        </tr>
+                        <tr>
+                            <td>Shopping cart</td>
+                            <td><code>$_SESSION</code>-stored cart with add/remove/update</td>
+                        </tr>
+                        <tr>
+                            <td>Checkout flow</td>
+                            <td>PDO transactions for atomic order placement</td>
+                        </tr>
+                        <tr>
+                            <td>Repository pattern + DI</td>
+                            <td>Interface + constructor injection throughout</td>
+                        </tr>
+                        <tr>
+                            <td>PHPUnit tests</td>
+                            <td>Router, CartService, OrderRepository</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A complete e-commerce store built on a hand-rolled MVC framework: PSR-4 autoloading, env-based config, product catalogue with search and pagination, session-based shopping cart, checkout flow using PDO transactions, admin dashboard built with Repository pattern and Dependency Injection, and PHPUnit tests covering Router, CartService, and OrderRepository.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — RESTful API Platform with Authentication (Advanced–Master)</h3>
+                <p>A production-quality JSON REST API built with clean architecture, JWT authentication, caching, and a complete test suite — the kind of backend that powers a mobile app or SPA frontend.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>PHP Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Full REST API (Users, Posts, Categories, Comments)</td>
+                            <td>Route handlers + JSON responses + HTTP status codes</td>
+                        </tr>
+                        <tr>
+                            <td>JWT authentication</td>
+                            <td><code>firebase/php-jwt</code> + Bearer token middleware</td>
+                        </tr>
+                        <tr>
+                            <td>Role-based access control</td>
+                            <td>Backed Enums (<code>admin</code>, <code>editor</code>, <code>reader</code>)</td>
+                        </tr>
+                        <tr>
+                            <td>Request validation</td>
+                            <td>Custom exception hierarchy + RFC 7807 error responses</td>
+                        </tr>
+                        <tr>
+                            <td>Response caching</td>
+                            <td>APCu cache with invalidation on write</td>
+                        </tr>
+                        <tr>
+                            <td>Rate limiting middleware</td>
+                            <td>X requests per minute per IP, tracked in APCu</td>
+                        </tr>
+                        <tr>
+                            <td>Database migrations</td>
+                            <td>Version-controlled SQL files + CLI runner</td>
+                        </tr>
+                        <tr>
+                            <td>100% test coverage</td>
+                            <td>PHPUnit on service and repository layers</td>
+                        </tr>
+                        <tr>
+                            <td>Production deployment</td>
+                            <td>VPS + Nginx + PHP-FPM + Let's Encrypt HTTPS</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A production-grade RESTful API platform with full CRUD for Users, Posts, Categories, and Comments, JWT authentication with token refresh, role-based access control via backed Enums, request validation with RFC 7807 error responses, APCu response caching with write invalidation, rate limiting middleware, version-controlled database migrations, 100% PHPUnit coverage on the service layer, and a live deployment on a VPS (DigitalOcean/Hetzner) with Nginx + PHP-FPM and HTTPS via Let's Encrypt.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–4</td>
+                        <td>Absolute Basics</td>
+                        <td>Write working PHP scripts using variables, strings, arrays, type system, and constants</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>5–8</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Direct program logic with conditionals and loops, write typed functions, process forms securely, and persist data with sessions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>9–12</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Model data with OOP, use interfaces/traits/enums, handle files and exceptions, and persist data with PDO and MySQL</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>13–16</td>
+                        <td>Master Level Concepts</td>
+                        <td>Use Composer and namespaces, apply design patterns, build secure REST APIs, optimize performance, and complete three production projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Resource</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>XAMPP / Laragon</td>
+                        <td>Local development environment (Apache + PHP + MySQL)</td>
+                    </tr>
+                    <tr>
+                        <td>Composer (getcomposer.org)</td>
+                        <td>Dependency management for PHP</td>
+                    </tr>
+                    <tr>
+                        <td>PHP: The Right Way (phptherightway.com)</td>
+                        <td>Best practices reference for modern PHP</td>
+                    </tr>
+                    <tr>
+                        <td>PDO Documentation (php.net)</td>
+                        <td>Database access reference</td>
+                    </tr>
+                    <tr>
+                        <td>PHPUnit (phpunit.de)</td>
+                        <td>Unit testing framework</td>
+                    </tr>
+                    <tr>
+                        <td>PHP-FIG PSR Standards (php-fig.org)</td>
+                        <td>Coding standards and interoperability</td>
+                    </tr>
+                    <tr>
+                        <td>Laravel (laravel.com)</td>
+                        <td>Production PHP framework — natural next step</td>
+                    </tr>
+                    <tr>
+                        <td>Slim Framework (slimframework.com)</td>
+                        <td>Lightweight API framework</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Complete each week's task before moving on — building projects reinforces concepts far better than reading alone.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — your commit history is visible proof of consistent progress.</li>
+                    <li>Always enable <code>declare(strict_types=1)</code> from Week 4 onward — strict typing catches entire classes of bugs at the boundary.</li>
+                    <li>Use PDO prepared statements from Week 12 onward — never concatenate user input into SQL. Ever.</li>
+                    <li>By Week 16, you should have three complete, deployed projects and the confidence to build any PHP application from a blog CMS to a production REST API from scratch.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity - 15 Week Roadmap</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>Cybersecurity Learning Roadmap</h1>
+        <p>Complete 15-Week Beginner-to-Professional Roadmap — Foundations · Networking · Ethical Hacking · Defensive Security · Incident Response · CTF · Career Readiness</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Roadmap</h2>
+            <p>This roadmap takes a complete beginner to a <strong>job-ready, portfolio-equipped cybersecurity professional</strong> in 15 weeks of full-time study (~35–40 hours/week). It is structured in five phases: <strong>Phase 1 (Weeks 1–3)</strong> covers cybersecurity fundamentals, networking, and Linux. <strong>Phase 2 (Weeks 4–6)</strong> covers cryptography, web application security (OWASP Top 10), and network security. <strong>Phase 3 (Weeks 7–9)</strong> covers malware, social engineering, ethical hacking methodology, and vulnerability assessment. <strong>Phase 4 (Weeks 10–12)</strong> covers SIEM, log analysis, incident response, digital forensics, and cloud security. <strong>Phase 5 (Weeks 13–15)</strong> covers CTF challenges, security governance, capstone project, and career preparation.</p>
+            <p>By Week 15 you will have built a complete cybersecurity portfolio, solved real CTF challenges, completed a hands-on capstone project, and be prepared for entry-level cybersecurity roles and certifications.</p>
+            <p><strong>Important:</strong> Everything in this roadmap must be practiced only in authorized, legal environments — your own systems, purpose-built practice platforms (TryHackMe, Hack The Box), and with explicit written permission when testing others' systems.</p>
+            <p><strong>Level:</strong> Beginner → Professional &nbsp;|&nbsp; <strong>Duration:</strong> 15 weeks &nbsp;|&nbsp; <strong>Study Mode:</strong> Full-time (~35–40 hrs/week) &nbsp;|&nbsp; <strong>Focus:</strong> Offensive + Defensive Security</p>
+        </div>
+
+        <!-- WEEK 1  -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Introduction to Cybersecurity &amp; the CIA Triad</h2>
+                <p>Understand what cybersecurity is, why it exists, how attacks happen, and establish the CIA Triad mental framework that underlies every security decision.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What cybersecurity is and what it protects</strong> — attack surface, physical vs digital security, real-world breach examples.</li>
+                    <li><strong>The CIA Triad</strong> — Confidentiality (eavesdropping, data theft), Integrity (tampering, MitM), Availability (DDoS, ransomware).</li>
+                    <li><strong>Core security concepts</strong> — threats, vulnerabilities, exploits, risk (Risk = Threat × Vulnerability × Impact), attack vectors, threat actors.</li>
+                    <li><strong>Types of cybersecurity</strong> — network, application, endpoint, cloud, operational, information security.</li>
+                    <li><strong>Security principles</strong> — defense in depth, least privilege, need to know, zero trust, security by design.</li>
+                    <li><strong>Legal and ethical foundations</strong> — computer crime laws, authorized vs unauthorized access, responsible disclosure, ethical hacker's code.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every technical security decision — from configuring a firewall to choosing an encryption algorithm — is grounded in the CIA Triad. Understanding threats, threat actors, and the principles of security gives you the mental framework to think like both an attacker and a defender. Without this week, technical tools later will feel disconnected from purpose.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>What is cybersecurity, the attack surface, real breach case studies (WannaCry, SolarWinds, Target).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>The CIA Triad — deep study of each property with examples of violations.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Threats, vulnerabilities, exploits, attack vectors — build a threat/vulnerability/exploit chain for 3 examples.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Threat actor categories with real examples (script kiddies, hacktivists, nation-states, insiders).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Five security principles — study and write examples for each: defense in depth, least privilege, zero trust.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Legal and ethical foundations — computer crime laws, responsible disclosure, ethical hacker code.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Full review + complete TryHackMe "Intro to Cybersecurity" and "Careers in Cyber" rooms + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Research and write a one-page summary of three major real-world cyberattacks (WannaCry, SolarWinds, Target breach). For each, identify which CIA property was violated, what vulnerability was exploited, and the impact.</li>
+                    <li>Create a mind map connecting all this week's concepts.</li>
+                    <li>Complete TryHackMe rooms: "Intro to Cybersecurity" and "Careers in Cyber."</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Cybersecurity Threat Analysis Report</strong> — choose any organization (your university, a local business, or imaginary company). Identify five realistic threats it faces. For each threat: classify it (CIA property), identify the likely threat actor, describe the attack vector, and propose one security control. Present as a formatted PDF or document.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Treating cybersecurity as purely technical and skipping conceptual foundations.</li>
+                        <li>Confusing "threat" (something that could cause harm) with "vulnerability" (a weakness that a threat exploits).</li>
+                        <li>Believing only hackers need to understand attacks — defenders need equal attack knowledge.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Write definitions in your own words immediately after reading them.</li>
+                        <li>Use the threat → vulnerability → exploit chain to analyze every real-world example.</li>
+                        <li>Always ask: "Which CIA property does this affect?"</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>TryHackMe — "Pre-Security" and "Intro to Cybersecurity" learning paths</li>
+                    <li>Professor Messer — CompTIA Security+ free video series (professormesser.com)</li>
+                    <li>NIST Introduction to Cybersecurity (nist.gov)</li>
+                    <li>Cybrary — "Intro to IT and Cybersecurity" free course</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35–38 hours</p>
+            </div>
+        </div>
+
+        <!--WEEK 2  -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Networking Fundamentals for Cybersecurity</h2>
+                <p>Build a thorough understanding of how networks work — because virtually every cyberattack travels over a network.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>How the internet works</strong> — packets, routing, IP addresses (public/private, IPv4/IPv6), DNS, HTTP vs HTTPS.</li>
+                    <li><strong>OSI Model (7 layers)</strong> — Physical, Data Link, Network, Transport, Session, Presentation, Application; attacks at each layer.</li>
+                    <li><strong>TCP/IP Protocol Suite</strong> — TCP three-way handshake (SYN/SYN-ACK/ACK), UDP, common ports (21, 22, 23, 25, 53, 80, 443, 3389).</li>
+                    <li><strong>Network devices</strong> — hubs, switches, routers, firewalls, proxies and their security implications.</li>
+                    <li><strong>Network addressing</strong> — subnetting (CIDR), DHCP, ARP and ARP poisoning attacks.</li>
+                    <li><strong>Wireless security</strong> — WEP (broken), WPA, WPA2, WPA3, evil twin attacks, rogue access points.</li>
+                    <li><strong>Wireshark intro</strong> — capturing packets, reading packet details, filtering traffic, identifying encrypted vs unencrypted traffic.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Most cyberattacks — phishing, network intrusions, MitM, DDoS — happen over networks. Without understanding how networks work, you cannot understand attack propagation, firewall configuration, or malicious traffic detection. Network knowledge is assessed in virtually every cybersecurity certification and interview.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>How the internet works — DNS, HTTP vs HTTPS, packet routing.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>OSI model — all 7 layers with security examples at each.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>TCP/IP — three-way handshake, UDP, ports; memorize all common ports.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Network devices (hub, switch, router, firewall); DHCP, ARP.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Subnetting and CIDR; private vs public IP ranges.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Wireless security — WEP/WPA/WPA2/WPA3, evil twin attacks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Wireshark practical — capture and analyze real packets; filter for DNS, HTTP, TCP handshakes; complete TryHackMe networking rooms.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Open Wireshark and capture your home network traffic for 5 minutes. Identify HTTP requests, DNS lookups, and TCP handshakes.</li>
+                    <li>Run <code>nmap -sV 127.0.0.1</code> in your Kali VM and identify running services.</li>
+                    <li>Use dnschecker.org to look up DNS records for 5 websites and find their IP addresses.</li>
+                    <li>Draw the OSI model from memory every day until automatic.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Network Security Audit Report</strong> — on your home network, use Wireshark to capture 10 minutes of traffic. Identify: all connecting devices (by MAC), all protocols in use, any unencrypted HTTP traffic, and most common destination IPs. Write a short report on findings and their security implications. <em>Analyze only your own network.</em></p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Memorizing OSI layers without understanding what happens at each.</li>
+                        <li>Confusing TCP and UDP without understanding security implications.</li>
+                        <li>Reading about packets without doing Wireshark practice.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>For every attack type, ask: "What OSI layer does this target?"</li>
+                        <li>Do Wireshark analysis daily this week.</li>
+                        <li>Draw the TCP three-way handshake from memory and explain how SYN flood abuses it.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>TryHackMe — "Pre-Security" networking sections</li>
+                    <li>Professor Messer — Networking videos</li>
+                    <li>Wireshark Official Tutorials (wireshark.org)</li>
+                    <li>Cisco Networking Academy — "Introduction to Networks" (netacad.com — free)</li>
+                    <li>David Bombal — Networking for Beginners (YouTube)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 37–40 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 3 -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Linux for Cybersecurity</h2>
+                <p>Become comfortable with the Linux command line — essential since most security tools, servers, and penetration testing environments run on Linux.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Why Linux for cybersecurity</strong> — Kali Linux, open-source tools, server dominance.</li>
+                    <li><strong>Linux file system</strong> — <code>/etc</code>, <code>/var/log</code>, <code>/home</code>, <code>/tmp</code>; why <code>/etc/passwd</code> and <code>/etc/shadow</code> matter.</li>
+                    <li><strong>Command line navigation</strong> — <code>pwd</code>, <code>ls -la</code>, <code>cd</code>, <code>mkdir</code>, <code>rm</code>, <code>cp</code>, <code>mv</code>, <code>cat</code>, <code>less</code>, <code>head</code>, <code>tail</code>.</li>
+                    <li><strong>File permissions</strong> — <code>chmod</code>, <code>chown</code>, permission string (<code>-rwxr-xr-x</code>).</li>
+                    <li><strong>User management</strong> — <code>whoami</code>, <code>sudo</code>, <code>useradd</code>, <code>/etc/shadow</code>.</li>
+                    <li><strong>Process management</strong> — <code>ps aux</code>, <code>top</code>, <code>kill</code>; detecting malware processes.</li>
+                    <li><strong>Networking commands</strong> — <code>ifconfig</code>, <code>netstat</code>, <code>ss -tunlp</code>, <code>curl</code>, <code>ssh</code>.</li>
+                    <li><strong>Text processing</strong> — <code>grep</code>, <code>awk</code>, <code>sort</code>, <code>uniq</code>, <code>wc</code>, pipelines.</li>
+                    <li><strong>Bash scripting basics</strong> — variables, conditionals, loops, writing security scripts.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every penetration testing tool, every log analysis task, every server configuration, and every forensics investigation happens in a command-line environment. Analysts who write one-line grep pipelines to parse thousands of log entries in seconds are far more effective than those who only use GUIs. Kali Linux is the standard penetration testing environment.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>File system structure, navigation commands, creating and managing files.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>File permissions — every character in the permission string; <code>chmod</code> and <code>chown</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>User management — <code>/etc/passwd</code>, <code>/etc/shadow</code>, <code>sudo</code> and privilege escalation concepts.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Process management — <code>ps aux</code>, <code>top</code>, identifying unusual processes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Networking commands — <code>ifconfig</code>, <code>netstat</code>, <code>ss</code>, <code>curl</code>, <code>ssh</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Text processing — <code>grep</code>, <code>awk</code>, <code>sort</code>, <code>uniq</code>; parse a sample log for failed logins.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Bash scripting — write 3 scripts: file backup, ping-based port scanner, SSH failed login log parser; complete TryHackMe "Linux Fundamentals" Parts 1–3.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Parse an Apache log file using <code>grep</code>, <code>awk</code>, <code>sort</code>, <code>uniq</code> to find top 10 IPs, all 404 errors, and all POST requests.</li>
+                    <li>Write a bash script that checks if a user exists and creates them if not.</li>
+                    <li>Find all SUID files: <code>find / -perm -4000 2>/dev/null</code> and research why they are a security risk.</li>
+                    <li>Complete OverTheWire Bandit (levels 0–10) for Linux challenge practice.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Linux Security Audit Script</strong> (<code>security_audit.sh</code>) that reports: current logged-in users (<code>who</code>), all listening ports (<code>ss -tunlp</code>), users with no password, world-writable files in <code>/tmp</code>, and last 20 lines of <code>/var/log/auth.log</code>. Make it executable and test on your Kali VM.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Running everything as root instead of understanding privilege escalation.</li>
+                        <li>Not understanding file permissions — leads to serious misconfiguration.</li>
+                        <li>Copying commands without understanding what they do (dangerous in security).</li>
+                        <li>Not practicing text processing enough — log analysis is a daily security task.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Use a normal user account daily; switch to root only when necessary and know exactly why.</li>
+                        <li>Read <code>man command</code> or <code>--help</code> for every new command before using it.</li>
+                        <li>Solve TryHackMe Linux challenges without looking at hints first.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>TryHackMe — "Linux Fundamentals" Parts 1–3</li>
+                    <li>OverTheWire "Bandit" wargame (overthewire.org)</li>
+                    <li>"The Linux Command Line" by William Shotts (free PDF at linuxcommand.org)</li>
+                    <li>Null Byte — Linux for Hackers series (YouTube)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+        <!-- WEEK 4 -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Cryptography Fundamentals</h2>
+                <p>Understand how cryptography protects data, how common cryptographic systems work, and how cryptographic failures lead to real security breaches.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Why cryptography exists</strong> — data in transit, data at rest, authentication, integrity.</li>
+                    <li><strong>Symmetric encryption</strong> — AES (128/192/256 bit), block cipher modes (ECB insecure, CBC, GCM), DES/3DES history.</li>
+                    <li><strong>Asymmetric encryption</strong> — RSA (prime factorization concept), public/private key pairs, ECC.</li>
+                    <li><strong>Hashing</strong> — one-way transformation, MD5 (broken), SHA-1 (deprecated), SHA-256, SHA-3; rainbow tables, dictionary attacks.</li>
+                    <li><strong>Salting</strong> — why salting defeats rainbow table attacks.</li>
+                    <li><strong>Digital signatures &amp; certificates</strong> — X.509 certificates, Certificate Authorities, chain of trust, TLS/SSL handshake.</li>
+                    <li><strong>Key exchange</strong> — Diffie-Hellman, Perfect Forward Secrecy (PFS).</li>
+                    <li><strong>Cryptographic attacks</strong> — brute force, dictionary, padding oracle, certificate spoofing.</li>
+                    <li><strong>Python cryptography</strong> — <code>hashlib</code>, <code>cryptography</code> library, <code>bcrypt</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Cryptography is woven into every aspect of cybersecurity. HTTPS uses TLS. Password storage uses hashing. VPNs use symmetric encryption. Understanding when cryptography is implemented correctly — and critically when it is broken — is essential for both attackers and defenders.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Symmetric encryption, AES — use CyberChef to encrypt with AES and see ciphertext.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Block cipher modes — demonstrate ECB penguin problem; compare ECB vs CBC output.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Asymmetric encryption — RSA conceptually; generate key pair with OpenSSL on Kali.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Hashing — hash the same string with MD5/SHA-1/SHA-256 in CyberChef; crack MD5 hash of a common word online.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Salting, digital signatures, certificates; inspect a real TLS certificate: <code>openssl s_client -connect google.com:443</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>TLS handshake, Diffie-Hellman; implement AES encryption and hashing in Python.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Cryptographic attack practice on TryHackMe and PicoCTF; review.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Generate RSA key pair: <code>openssl genrsa -out private.pem 2048</code> and <code>openssl rsa -in private.pem -pubout -out public.pem</code>.</li>
+                    <li>Inspect HTTPS certificate of any website using browser developer tools.</li>
+                    <li>Write a Python script that takes a password, adds a random salt, hashes with SHA-256, and verifies re-entry.</li>
+                    <li>Use Hashcat on Kali to crack MD5 hashed passwords against rockyou.txt wordlist.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Password Security Analyzer</strong> Python tool — accepts a password, evaluates strength, hashes it with SHA-256 (without salt and with salt), demonstrates why unsalted hashes match rainbow table entries for common passwords, and shows why the salted version does not. Output a security recommendation report.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Thinking MD5 is still acceptable for password storage.</li>
+                        <li>Confusing hashing (one-way) with encryption (reversible).</li>
+                        <li>Believing "using HTTPS" means the application is secure — only the transport is encrypted.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>MD5 and SHA-1 are broken for security — use SHA-256 or bcrypt for passwords.</li>
+                        <li>Hash ≠ Encrypt: you cannot decrypt a hash.</li>
+                        <li>HTTPS secures the tunnel, not the application logic inside it.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>CyberChef (gchq.github.io/CyberChef)</li>
+                    <li>TryHackMe — "Cryptography" room</li>
+                    <li>PicoCTF — Cryptography challenges (picoctf.org)</li>
+                    <li>Computerphile — Cryptography videos (YouTube)</li>
+                    <li>Khan Academy — Cryptography course (free)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36–40 hours</p>
+            </div>
+        </div>
+
+        <!-- WEEK 5 -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Web Application Security &amp; OWASP Top 10</h2>
+                <p>Understand how web applications are attacked and how to defend them using the OWASP Top 10 as the definitive framework.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>How web apps work</strong> — client-server model, HTTP request/response, sessions/cookies, Same-Origin Policy.</li>
+                    <li><strong>OWASP Top 10 (2021)</strong> — A01 Broken Access Control, A02 Cryptographic Failures, A03 Injection, A04 Insecure Design, A05 Security Misconfiguration, A06 Vulnerable Components, A07 Auth Failures, A08 Integrity Failures, A09 Logging Failures, A10 SSRF.</li>
+                    <li><strong>SQL Injection (deep dive)</strong> — classic, blind, time-based, error-based; prevention via parameterized queries.</li>
+                    <li><strong>XSS</strong> — reflected, stored, DOM-based; Content Security Policy (CSP) prevention.</li>
+                    <li><strong>CSRF</strong> — attack mechanism, CSRF tokens, SameSite cookie attribute.</li>
+                    <li><strong>Burp Suite</strong> — proxy setup, intercepting/modifying requests, Repeater, Intruder.</li>
+                    <li><strong>DVWA and WebGoat</strong> — practicing all OWASP vulnerabilities at Low/Medium/High/Impossible security levels.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Web applications are the primary attack surface in the modern world. SQL injection and XSS have been top risks for over a decade — understanding them is not optional for any security professional. Burp Suite is the standard tool for web application security testing.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>HTTP request/response, sessions, cookies, Same-Origin Policy.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>OWASP Top 10 overview — A01 through A05 with real examples.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>A06 through A10; set up DVWA on Kali VM.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>SQL injection — theory, types, manual exploitation on DVWA; study parameterized queries.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>XSS — all 3 types, demonstrate each on DVWA; understand CSP.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>CSRF — theory, demonstration; Burp Suite setup and intercepting/modifying requests.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Full lab day — work through all DVWA vulnerability categories at all security levels; complete TryHackMe "OWASP Top 10" room.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Using DVWA at Low security, exploit SQL injection to dump all usernames and passwords. Then test at Medium and High to observe defenses.</li>
+                    <li>Demonstrate stored XSS: inject a script into DVWA's guestbook that causes an alert for every viewer.</li>
+                    <li>Use Burp Suite to intercept a DVWA login request and modify it with a SQL injection payload.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Web Application Vulnerability Report</strong> — using DVWA as target, assess SQL injection, XSS, CSRF, file upload, and command injection. For each: document the vulnerability, how you exploited it (with Burp Suite screenshots), real-world impact, and developer fix. Format as a professional penetration testing report.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Practicing on real websites without authorization — this is a crime.</li>
+                        <li>Thinking SQL injection only works on login forms.</li>
+                        <li>Confusing XSS (attacking users) with SQL injection (attacking the database).</li>
+                        <li>Skipping Burp Suite because it seems complex.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Only practice on DVWA, WebGoat, TryHackMe, or other legal targets.</li>
+                        <li>SQL injection = attacking the database; XSS = attacking other users through the app.</li>
+                        <li>Spend a full day getting comfortable with Burp Suite before using it in assessments.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>OWASP official website (owasp.org)</li>
+                    <li>PortSwigger Web Security Academy (portswigger.net/web-security) — by Burp Suite makers</li>
+                    <li>DVWA (dvwa.co.uk)</li>
+                    <li>TryHackMe — "OWASP Top 10" room</li>
+                    <li>Hacker101 (hacker101.com) — free web security course</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+        <!--  WEEK 6  -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Network Security: Firewalls, VPNs, IDS/IPS &amp; Protocols</h2>
+                <p>Understand how network security controls work, how to configure them, and how attackers try to bypass them.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Network security architecture</strong> — defense in depth, DMZ, network segmentation, VLANs.</li>
+                    <li><strong>Firewalls</strong> — packet filtering, stateful inspection, WAF, NGFW; <code>iptables</code> and <code>ufw</code> on Linux; common misconfigurations.</li>
+                    <li><strong>NAT</strong> — how it hides internal IPs; why NAT is not security.</li>
+                    <li><strong>VPNs</strong> — encrypted tunnels, protocols (OpenVPN, WireGuard, IPSec, L2TP), DNS/IP leak risks.</li>
+                    <li><strong>IDS/IPS</strong> — signature-based vs anomaly-based detection; HIDS vs NIDS; Snort rule writing; false positives/negatives.</li>
+                    <li><strong>Network attacks</strong> — ARP poisoning, DNS spoofing, SYN flood, MitM, VLAN hopping.</li>
+                    <li><strong>Secure protocols</strong> — SSH vs Telnet, SFTP vs FTP, SNMPv3, HTTPS enforcement.</li>
+                    <li><strong>Nmap scanning</strong> — <code>-sV -O</code>, <code>-sS</code>, <code>-p</code>, NSE scripts (<code>--script vuln</code>).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Network security controls are the first line of defense in most organizations. Understanding how firewalls, IDS, and VPNs work — and how attackers bypass them — is essential for network security engineers and penetration testers. Nmap is the most widely used network reconnaissance tool, assessed in virtually every penetration testing certification.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Network architecture, DMZ, segmentation, VLANs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Firewalls — all types; configure <code>iptables</code> on Ubuntu VM.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>ufw</code> and verifying rules; NAT concepts; VPNs and protocols.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>IDS/IPS — Snort installation and basic rule writing; test on virtual network.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>ARP poisoning demonstration using arpspoof on Kali targeting Ubuntu VM (isolated lab only).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>DNS spoofing and SYN flood concepts; secure vs insecure protocols.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Nmap comprehensive lab — scan Ubuntu VM from Kali; complete TryHackMe network security rooms.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Configure <code>iptables</code> on Ubuntu VM: allow SSH from Kali IP only, allow HTTP/HTTPS, deny all other incoming. Verify with Nmap.</li>
+                    <li>Write 3 Snort rules: detect port scan, detect SQLMap user-agent, detect Telnet traffic.</li>
+                    <li>Perform ARP poisoning in isolated lab using <code>arpspoof</code> and capture intercepted traffic in Wireshark.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Network Security Configuration and Testing Report</strong> — configure Ubuntu VM as a secure web server, implement iptables rules, set up Snort, perform full Nmap scan before and after firewall configuration, and document the difference. Include firewall rules, Snort alerts generated, and before/after Nmap comparison.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Thinking NAT provides security — NAT hides addresses but does not filter malicious traffic.</li>
+                        <li>Believing a VPN makes you anonymous.</li>
+                        <li>Confusing IDS (detects/alerts) with IPS (actively blocks).</li>
+                        <li>Writing overly broad firewall rules.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>NAT ≠ Security. Firewalls = Security.</li>
+                        <li>VPN provides confidentiality of transport, not anonymity.</li>
+                        <li>Always write firewall rules on least privilege: deny all by default, allow only needed traffic.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>TryHackMe — Network Security rooms</li>
+                    <li>Snort documentation (snort.org)</li>
+                    <li>Nmap official documentation (nmap.org/book/toc.html)</li>
+                    <li>Professor Messer — CompTIA Security+ networking security videos</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+        <!-- WEEK 7 -->
+        
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Malware, Social Engineering &amp; Human Factors</h2>
+                <p>Understand the full spectrum of malware types and social engineering attacks — the two most common and effective attack categories in the real world.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Malware types</strong> — viruses, worms, trojans, ransomware, spyware, keyloggers, adware, rootkits, botnets/C2, fileless malware.</li>
+                    <li><strong>Malware delivery</strong> — malicious attachments, drive-by downloads, watering hole attacks, supply chain attacks (SolarWinds), USB drops.</li>
+                    <li><strong>Social engineering psychology</strong> — Cialdini's six principles: urgency, authority, fear, reciprocity, scarcity, social proof.</li>
+                    <li><strong>Social engineering attacks</strong> — phishing, spear phishing, whaling, vishing, smishing, pretexting, baiting, quid pro quo, tailgating.</li>
+                    <li><strong>Malware analysis</strong> — sandboxes (Any.run), VirusTotal, static analysis (strings, file type, hash lookup), dynamic analysis concepts.</li>
+                    <li><strong>Email security</strong> — SPF, DKIM, DMARC records; phishing email header analysis.</li>
+                    <li><strong>Defenses</strong> — security awareness training, EDR, application whitelisting, least privilege.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> 90%+ of successful cyberattacks begin with malware or social engineering (or both). Understanding how these attacks work is essential for building defenses, training users, and incident response. These are the attacks that happen to real people and organizations every day.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Malware types with real examples (WannaCry, Stuxnet, Mirai); use VirusTotal to look up known malware hashes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Malware delivery — supply chain, watering hole, drive-by with case studies.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Social engineering psychology — Cialdini's 6 principles in security context.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Phishing variants — spear phishing, whaling, vishing, smishing; analyze real phishing email samples.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Physical social engineering — tailgating, pretexting, baiting; set up GoPhish.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Malware analysis — use Any.run to analyze a research sample; use FLOSS to extract strings.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Defense mechanisms — SPF/DKIM/DMARC; complete TryHackMe "Phishing" and "Malware Analysis" rooms.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Analyze 3 different samples in Any.run (find safe-to-analyze samples via MalwareBazaar at abuse.ch). Document: file type, network connections, files created, registry changes, overall behavior.</li>
+                    <li>Examine email headers of 3 phishing emails (phishtank.com) and identify spoofed sender, actual sending server, and malicious link.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Social Engineering Awareness Campaign</strong> — design a phishing simulation for an imaginary company. Create: a realistic phishing email template (.html file — do NOT send to real people), a local landing page simulating credential harvesting, and a "you've been phished" educational awareness page explaining red flags. Write a companion "Security Awareness Training" one-pager on identifying phishing.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Running malware on your actual computer instead of a sandboxed environment.</li>
+                        <li>Thinking technical people cannot be social engineered — spear phishing targeting IT staff is extremely common.</li>
+                        <li>Not learning to analyze email headers.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always use Any.run, Cuckoo Sandbox, or isolated VM for malware analysis.</li>
+                        <li>Study real phishing emails at PhishTank.com.</li>
+                        <li>Practice reading email headers using MXToolbox's email header analyzer.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Any.run (any.run — free tier)</li>
+                    <li>VirusTotal (virustotal.com)</li>
+                    <li>MalwareBazaar (bazaar.abuse.ch — for research samples)</li>
+                    <li>TryHackMe — "Phishing" room</li>
+                    <li>PhishTank (phishtank.com)</li>
+                    <li>SANS Internet Storm Center (isc.sans.edu)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36–40 hours</p>
+            </div>
+        </div>
+
+        <!--  WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Ethical Hacking Methodology &amp; Penetration Testing</h2>
+                <p>Learn the structured methodology of penetration testing and conduct a basic penetration test against a legal target using industry-standard tools.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Penetration testing fundamentals</strong> — pen test vs vulnerability assessment vs red team; Rules of Engagement; black/white/grey box types.</li>
+                    <li><strong>Phase 1 — Reconnaissance</strong> — passive OSINT (WHOIS, DNS enumeration, Google dorking, theHarvester, Shodan); active reconnaissance.</li>
+                    <li><strong>Phase 2 — Scanning &amp; Enumeration</strong> — Nmap, banner grabbing, enum4linux, gobuster/dirb, SMB enumeration.</li>
+                    <li><strong>Phase 3 — Exploitation</strong> — Metasploit Framework (msfconsole, exploits, payloads, auxiliaries); exploiting Metasploitable 2.</li>
+                    <li><strong>Phase 4 — Post-Exploitation</strong> — Meterpreter, privilege escalation, lateral movement, data exfiltration, covering tracks (awareness).</li>
+                    <li><strong>Phase 5 — Reporting</strong> — executive summary, technical findings, CVSS scoring, recommendations, proof of concept.</li>
+                    <li><strong>Practice targets</strong> — Metasploitable 2, TryHackMe guided rooms, Hack The Box "Starting Point."</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Penetration testing is the most visible and sought-after cybersecurity specialization. The methodology here — reconnaissance through reporting — is the same framework used by professional penetration testers at top security firms. Understanding the attacker's workflow is equally essential for defenders.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Penetration testing methodology and types; rules of engagement; legal authorization.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Passive reconnaissance — WHOIS, DNS enumeration, theHarvester, Google dorking on an imaginary target.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Active recon and enumeration — comprehensive Nmap scan on Metasploitable 2; banner grabbing.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Metasploit framework — msfconsole tour; exploit a vulnerability on Metasploitable 2.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Post-exploitation with Meterpreter — explore compromised system; attempt privilege escalation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Full penetration test simulation on Metasploitable 2 from recon to post-exploitation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Write a professional penetration test report for the Metasploitable 2 assessment; complete TryHackMe "Jr Penetration Tester" rooms.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Using only OSINT, gather about an imaginary target: company name, headquarters, domain registrar, mail server (MX records), subdomains, employee email format.</li>
+                    <li>Full Metasploit chain on Metasploitable 2: Nmap scan → identify vsftpd 2.3.4 backdoor → exploit → get shell → extract <code>/etc/shadow</code>.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Professional Penetration Test Report</strong> for Metasploitable 2 — including: executive summary (for non-technical manager), scope and methodology section, findings table with CVSS scores, detailed write-ups for at least 3 vulnerabilities (description, evidence/screenshots, risk rating, remediation), and overall security posture conclusion. Model on TCM Security report templates.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Jumping to exploitation without completing reconnaissance — professionals spend more time in recon.</li>
+                        <li>Scanning or attacking systems without written authorization — this is illegal.</li>
+                        <li>Writing poor reports — the report is the deliverable clients pay for, not the exploitation.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always complete full reconnaissance before any exploitation.</li>
+                        <li>Never scan outside your authorized scope.</li>
+                        <li>Write a penetration test report for every machine you practice on — builds the habit.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>TCM Security — "Practical Ethical Hacking" free YouTube content</li>
+                    <li>TryHackMe — "Jr Penetration Tester" learning path</li>
+                    <li>Hack The Box "Starting Point" (free tier)</li>
+                    <li>Metasploit Unleashed (offensive-security.com — free official Metasploit course)</li>
+                    <li>IppSec's YouTube channel (Hack The Box machine walkthroughs)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–44 hours</p>
+            </div>
+        </div>
+
+        <!-- WEEK 9  -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Vulnerability Assessment &amp; Security Scanning</h2>
+                <p>Conduct systematic vulnerability assessments using industry-standard tools and begin scripting for security automation.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Vulnerability assessment vs penetration testing</strong> — identification only vs identification + exploitation; when to use each.</li>
+                    <li><strong>CVE and NVD</strong> — CVE identifier system, NVD database (nvd.nist.gov), CVSS v3.1 scoring (base/temporal/environmental).</li>
+                    <li><strong>Nessus Essentials</strong> — installation, network scan, web app scan, interpreting critical/high/medium/low results, avoiding false positives.</li>
+                    <li><strong>OpenVAS / Greenbone</strong> — free alternative; installing on Kali; comparing results to Nessus.</li>
+                    <li><strong>Web vulnerability scanning</strong> — Nikto (fast server scanner), OWASP ZAP (automated scanning), SQLMap (SQL injection automation).</li>
+                    <li><strong>Python for security scripting</strong> — <code>socket</code> (port scanner), <code>requests</code> (HTTP testing), <code>subprocess</code> (calling tools), parsing Nmap XML output.</li>
+                    <li><strong>Exploit databases</strong> — Exploit-DB (exploit-db.com), SearchSploit (command-line Kali tool), reading exploit PoC code.</li>
+                    <li><strong>Vulnerability management lifecycle</strong> — discover → prioritize → remediate → verify; risk-based prioritization.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Vulnerability assessment is a core service provided by security teams and consulting firms. CVEs, CVSS scoring, and scanning tools are assessed in CompTIA Security+, CEH, and OSCP certifications. Python scripting begins here and becomes increasingly important in professional security work.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>CVE, NVD, CVSS — look up 10 real CVEs and understand each score component.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Nessus Essentials — install, configure, scan Metasploitable 2, interpret critical findings.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>OpenVAS/Greenbone — scan same target; compare results to Nessus.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Nikto and OWASP ZAP — scan DVWA web application; SQLMap against DVWA.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Python scripting — write a multi-threaded port scanner from scratch using <code>socket</code> and <code>threading</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>SearchSploit and Exploit-DB — search for exploits for services found in Nessus; read exploit code.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Full vulnerability management exercise — complete assessment, prioritize by CVSS, write remediation plan; complete TryHackMe vulnerability scanning rooms.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write a Python script that scans a range of IP addresses (your VMs) for open ports and saves results to a CSV file.</li>
+                    <li>Use SQLMap against DVWA: <code>sqlmap -u "http://dvwa-ip/dvwa/vulnerabilities/sqli/?id=1&amp;Submit=Submit" --cookie="PHPSESSID=...; security=low" --dbs</code>.</li>
+                    <li>Use SearchSploit to find all exploits for vsftpd 2.3.4 and UnrealIRCd.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>An <strong>Automated Vulnerability Scanner Report Generator</strong> — a Python script that runs an Nmap scan (<code>subprocess</code>), parses XML output (<code>xml.etree.ElementTree</code>), queries ExploitDB via SearchSploit for each discovered service/version, and generates a formatted HTML report showing: open ports, service versions, associated CVEs/exploits found, and recommended remediation. Run against Metasploitable 2.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Treating scanner output as gospel — all scanners produce false positives requiring manual verification.</li>
+                        <li>Not prioritizing findings — trying to fix everything at once instead of addressing critical CVEs first.</li>
+                        <li>Running aggressive scans without throttling — crashes services and triggers alerts.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always manually verify critical findings before reporting.</li>
+                        <li>Prioritize by CVSS score and business impact.</li>
+                        <li>Use scanner settings appropriate for the environment (safe mode for production).</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Tenable Nessus Essentials (free registration at tenable.com)</li>
+                    <li>Greenbone/OpenVAS (greenbone.net)</li>
+                    <li>Exploit-DB (exploit-db.com)</li>
+                    <li>OWASP ZAP (zaproxy.org)</li>
+                    <li>NVD (nvd.nist.gov)</li>
+                    <li>TryHackMe — Vulnerability Scanning rooms</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+        <!--  WEEK 10  -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Security Monitoring, SIEM &amp; Log Analysis</h2>
+                <p>Learn how defenders monitor for threats using SIEM systems, analyze logs to detect attacks, and build detection rules — core skills of a SOC analyst.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>SOC structure</strong> — L1/L2/L3 analysts, incident handlers, threat hunters; daily SOC operations.</li>
+                    <li><strong>Log types and sources</strong> — Windows Event IDs (4624, 4625, 4648, 4672, 4688, 4698), Linux auth.log, web server logs, firewall logs, DHCP/DNS logs.</li>
+                    <li><strong>SIEM fundamentals</strong> — collect, normalize, correlate, alert; log collection agents; correlation rules; dashboards.</li>
+                    <li><strong>Splunk SPL</strong> — basic queries, filtering, aggregation (<code>stats count by src_ip | sort -count</code>), time-based analysis, dashboards and alerts.</li>
+                    <li><strong>Detection rules</strong> — brute force detection, lateral movement, data exfiltration, malware beaconing patterns.</li>
+                    <li><strong>Threat intelligence</strong> — IOCs (IPs, domains, hashes, URLs), MITRE ATT&amp;CK framework, AlienVault OTX.</li>
+                    <li><strong>Alert triage</strong> — true positive vs false positive; investigation workflow; contextualizing alerts.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> SOC analyst is the most common entry-level cybersecurity role. SIEM skills are required for almost every security operations position. The ability to query logs, write detection rules, and triage alerts is directly assessable in real interviews — many include a Splunk or log analysis practical exercise.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>SOC structure and daily operations; log types and their security value.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Windows Event IDs — study each critical ID; analyze sample Windows event logs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Splunk installation and basic SPL; query sample logs with filtering and aggregation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Advanced SPL; create dashboards showing top failed logins, top source IPs, login success rate over time.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Writing detection rules — brute force, lateral movement, data exfiltration.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Threat intelligence — MITRE ATT&amp;CK; AlienVault OTX IOC lookup; integrate IOC matching into Splunk.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Full alert triage exercise; work through Boss of the SOC (BOTS) v1; complete TryHackMe SOC Level 1 rooms.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Download a sample Windows event log and answer: how many failed login attempts? Which accounts targeted? Any failed logon followed by successful logon?</li>
+                    <li>Write 3 Splunk detection rules for: SSH brute force, PowerShell execution (Event ID 4688), DNS queries to known malicious domains from an IOC list.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Security Monitoring Dashboard</strong> — using Splunk Free, ingest 3 log sources (sample Windows events, web access logs, auth.log). Create dashboards with: total events per hour, top 10 source IPs, top 10 failed login accounts, successful vs failed login ratio over time, and alerts for IPs in a provided IOC list. Write a one-page operational runbook for SOC analyst brute force investigation.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Alert fatigue — writing rules that fire for every minor event, drowning real attacks in noise.</li>
+                        <li>Not understanding what "normal" looks like — you cannot detect anomalies without a baseline.</li>
+                        <li>Forgetting MITRE ATT&amp;CK context — alerts without context slow triage.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Tune detection rules aggressively to reduce false positives.</li>
+                        <li>Establish baseline behavior before writing anomaly-based rules.</li>
+                        <li>Map every detection rule to a MITRE ATT&amp;CK technique.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>TryHackMe — "SOC Level 1" learning path</li>
+                    <li>Splunk Free (splunk.com — 500MB/day, no time limit)</li>
+                    <li>Boss of the SOC (BOTS) v1 (with your own Splunk install)</li>
+                    <li>MITRE ATT&amp;CK (attack.mitre.org — free)</li>
+                    <li>CyberDefenders (cyberdefenders.org — blue team labs, free)</li>
+                    <li>LetsDefend.io (free tier)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+        <!--  WEEK 11 -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Incident Response &amp; Digital Forensics</h2>
+                <p>Understand how to respond to security incidents systematically and conduct digital forensic investigations to determine what happened, when, who did it, and how.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>IR lifecycle</strong> — Preparation → Identification → Containment → Eradication → Recovery → Lessons Learned; IR team roles; severity levels.</li>
+                    <li><strong>Preparation</strong> — incident response plan (IRP), playbooks, communication protocols.</li>
+                    <li><strong>Identification and containment</strong> — validating incidents, scoping, short/long-term containment, evidence preservation.</li>
+                    <li><strong>Digital forensics fundamentals</strong> — order of volatility, chain of custody, write blockers, forensic imaging, hash verification.</li>
+                    <li><strong>Windows forensics</strong> — Autopsy/Sleuth Kit, browser history, prefetch, registry hives, event logs, LNK files, MFT; Volatility memory forensics.</li>
+                    <li><strong>Linux forensics</strong> — auth.log, file timestamps (atime/mtime/ctime), recovering deleted files (photorec, foremost), /proc filesystem.</li>
+                    <li><strong>Network forensics</strong> — PCAP analysis with Wireshark, following TCP streams, identifying C2 traffic, NetworkMiner.</li>
+                    <li><strong>Eradication and recovery</strong> — malware removal, reimaging, credential reset, patching, post-incident report.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> When a breach occurs, organizations need people who can respond systematically, preserve evidence for legal proceedings, and determine exactly what happened. IR and digital forensics skills are required in SOC roles, DFIR roles, and are heavily tested in CompTIA CySA+ and GCIH certifications.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>IR lifecycle, playbooks, severity levels.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Digital forensics fundamentals — order of volatility, chain of custody, imaging concepts.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Autopsy setup and disk image analysis of a CyberDefenders forensic challenge.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Windows artifacts — registry forensics, prefetch, LNK files, event logs in Autopsy.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Volatility — analyze memory dump: running processes, network connections, injected DLLs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Network forensics — analyze PCAP in Wireshark; reconstruct TCP session; use NetworkMiner.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Complete full IR exercise from CyberDefenders case; write full incident report; complete TryHackMe DFIR rooms.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Complete a CyberDefenders free case (cyberdefenders.org).</li>
+                    <li>Download a memory dump and use Volatility to answer: what processes were running? Any injected? What network connections? Any known malware (compare hashes to VirusTotal)?</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Digital Forensics Investigation Report</strong> — using a provided forensic disk image or PCAP from CyberDefenders, conduct a full investigation. Report should include: executive summary (what happened?), timeline of events with evidence, artifacts found and significance, attack vector determination, attacker actions, data exfiltrated (if any), and recommendations.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Performing IR without preserving evidence first — rebooting overwrites volatile evidence (RAM).</li>
+                        <li>Breaking chain of custody — evidence must be documented with hash values before and after handling.</li>
+                        <li>Not writing everything down during investigation — document every action with timestamps.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Before touching a compromised system: capture RAM, document processes and network connections, then image the disk.</li>
+                        <li>Calculate SHA-256 hashes of every piece of evidence.</li>
+                        <li>Write timestamped notes of every investigative step.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>CyberDefenders (cyberdefenders.org — free blue team labs)</li>
+                    <li>Autopsy (sleuthkit.org — free)</li>
+                    <li>Volatility (volatilityfoundation.org — free)</li>
+                    <li>TryHackMe — "Digital Forensics and Incident Response" path</li>
+                    <li>SANS SIFT Workstation (free)</li>
+                    <li>NetworkMiner Community Edition (netresec.com — free)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+        <!--WEEK 12 -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Cloud Security &amp; Identity and Access Management</h2>
+                <p>Understand how cloud security differs from traditional security, apply security controls in a cloud environment, and master IAM — increasingly the most attacked control domain.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Cloud fundamentals</strong> — IaaS/PaaS/SaaS models, shared responsibility model, public/private/hybrid/multi-cloud.</li>
+                    <li><strong>AWS Security</strong> — IAM (users, groups, roles, policies), S3 bucket permissions, Security Groups, CloudTrail, AWS Config, GuardDuty.</li>
+                    <li><strong>Cloud security threats</strong> — misconfiguration (leading breach cause), credential theft (GitHub key leaks), privilege escalation via IAM, insecure APIs.</li>
+                    <li><strong>Cloud attack tools</strong> — Pacu (AWS exploitation framework), ScoutSuite (cloud security auditing).</li>
+                    <li><strong>IAM deep dive</strong> — MFA (most impactful control), SSO, OAuth 2.0, SAML, Privileged Access Management (PAM), Zero Trust.</li>
+                    <li><strong>Active Directory</strong> — domain controllers, Kerberos authentication, Group Policy, LDAP; AD attacks (Pass-the-Hash, Kerberoasting, Golden Ticket), BloodHound.</li>
+                    <li><strong>Secrets management</strong> — why hardcoded credentials are dangerous, .env files, AWS Secrets Manager, truffleHog scanning.</li>
+                    <li><strong>Cloud compliance</strong> — CIS Benchmarks, SOC 2, GDPR, ISO 27001.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Most modern infrastructure runs in the cloud. Cloud misconfigurations are now the leading cause of data breaches. IAM attacks are the most common initial access method. Every security role now requires cloud security knowledge, and AWS is the most commonly tested platform in security interviews and certifications.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Cloud models, shared responsibility model, AWS free tier account setup.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>AWS IAM — create users, groups, policies, roles; practice least-privilege configuration.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>S3 security — test public vs private access, enable CloudTrail logging.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Cloud threats — credential exposure via GitHub (academic example); use ScoutSuite to audit AWS test environment.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>IAM — MFA, SSO, OAuth 2.0; Active Directory fundamentals.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>AD attacks — Kerberoasting and Pass-the-Hash concepts; BloodHound demo on TryHackMe.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Secrets management; compliance frameworks overview; complete TryHackMe cloud security rooms.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>In AWS free tier: create an insecure S3 bucket (public with a "secret" file), an overly open security group, then use ScoutSuite to detect and remediate.</li>
+                    <li>Use truffleHog to scan a test Git repository for accidentally committed credentials.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Cloud Security Audit Report</strong> — using ScoutSuite against a deliberately misconfigured AWS test environment, document every finding with: severity, which CIS Benchmark it violates, and how to remediate. Additionally create a properly secured least-privilege IAM policy for a hypothetical web application with documented design decisions.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Thinking cloud security is entirely the provider's responsibility — the shared responsibility model means you are responsible for your configurations.</li>
+                        <li>Leaving access keys in code committed to GitHub — automated bots scan for exposed AWS credentials within seconds.</li>
+                        <li>Not enabling MFA on cloud accounts.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Know the shared responsibility model for each service type (IaaS/PaaS/SaaS).</li>
+                        <li>Use <code>.gitignore</code> to exclude <code>.env</code> and credential files always.</li>
+                        <li>Enable MFA on root AWS account and all IAM users; use roles instead of access keys.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>AWS free tier (aws.amazon.com/free)</li>
+                    <li>CloudGoat (github.com/RhinoSecurityLabs/cloudgoat)</li>
+                    <li>ScoutSuite (github.com/nccgroup/ScoutSuite)</li>
+                    <li>flaws.cloud (free AWS security challenge)</li>
+                    <li>TryHackMe — "Cloud Security" rooms</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36–40 hours</p>
+            </div>
+        </div>
+
+        <!--  WEEK 13 -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Capture The Flag (CTF) &amp; Hands-On Practice</h2>
+                <p>Apply everything learned in realistic, gamified security challenges — building problem-solving skills and developing the hacker mindset.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>CTF fundamentals</strong> — what CTFs are, categories (Web, Crypto, Forensics, Pwn, OSINT, Misc), how flags work, platforms.</li>
+                    <li><strong>Web challenges</strong> — SQL injection, XSS, CSRF, SSRF, auth bypass, JWT attacks, IDOR.</li>
+                    <li><strong>Cryptography challenges</strong> — Caesar cipher, ROT13, Base64, RSA with small keys, hash cracking.</li>
+                    <li><strong>Forensics challenges</strong> — steganography (steghide, binwalk, stegsolve, exiftool), PCAP analysis, disk image analysis.</li>
+                    <li><strong>OSINT challenges</strong> — finding information using only public sources.</li>
+                    <li><strong>Binary analysis (intro)</strong> — <code>file</code>, <code>strings</code>, <code>xxd</code>, <code>ltrace</code>/<code>strace</code>, Ghidra basics.</li>
+                    <li><strong>CTF scripting</strong> — Python for automation; brute forcing Caesar cipher; intro to pwntools.</li>
+                    <li><strong>CTF strategy</strong> — enumeration first, hints in titles, team collaboration, using writeups after solving.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> CTFs are the best way to practice security skills in a legal, controlled, gamified environment. They develop problem-solving skills, expose you to techniques across every security domain, and provide verifiable proof of competence. Many employers specifically ask about CTF experience — it demonstrates self-motivated, practical learning.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>PicoCTF — complete 5 general skills and 3 cryptography challenges.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>PicoCTF — complete 5 web exploitation challenges.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>PicoCTF — complete 5 forensics challenges including steganography.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>TryHackMe — complete a guided CTF room; try OWASP Juice Shop challenges.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Hack The Box "Starting Point" — attempt first retired easy machine independently.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Hack The Box "Starting Point" — complete a second machine; use IppSec walkthrough only after independent attempt.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Write detailed notes for all challenges; begin CTF writeup blog post for portfolio.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Complete at least 20 PicoCTF challenges across at least 4 categories.</li>
+                    <li>Solve an HTB "Starting Point" machine independently and write a complete walkthrough.</li>
+                    <li>Use steghide, binwalk, and exiftool to extract hidden data from steganography files.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>CTF Portfolio Writeup</strong> — write professional writeups for at least 5 CTF challenges solved this week. Each writeup: challenge name and category, the flag, step-by-step solution walkthrough, tools used, key concepts demonstrated, and lessons learned. Publish on GitHub Pages, Medium, or Substack — this becomes a key portfolio piece.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Giving up too quickly and immediately going to writeups — CTFs teach most when you struggle first.</li>
+                        <li>Not documenting what you try (including failures) — failures are learning.</li>
+                        <li>Avoiding hard categories like binary exploitation — the most skill-building challenges.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Set a timer — attempt every challenge for at least 30 minutes before seeking hints.</li>
+                        <li>Write notes on every attempt, even failed ones.</li>
+                        <li>Rotate through all categories rather than staying in your comfort zone.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>PicoCTF (picoctf.org — best for beginners)</li>
+                    <li>CTFtime (ctftime.org — upcoming CTF events worldwide)</li>
+                    <li>TryHackMe — CTF rooms</li>
+                    <li>Hack The Box Starting Point (hackthebox.com — free tier)</li>
+                    <li>IppSec YouTube channel (HTB walkthroughs)</li>
+                    <li>CTF101 (ctf101.org — free CTF skills guide)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–44 hours</p>
+            </div>
+        </div>
+
+        <!--  WEEK 14  -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Security Policies, Risk Management &amp; Compliance</h2>
+                <p>Understand the governance side of cybersecurity — how organizations manage risk systematically, what security policies look like, and how compliance frameworks guide security programs.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Information security governance</strong> — board/executive responsibility, CISO role, strategy vs operations.</li>
+                    <li><strong>Risk management</strong> — identify → assess → treat → monitor; qualitative vs quantitative; risk appetite/tolerance; treatment options (accept, mitigate, transfer, avoid).</li>
+                    <li><strong>Threat modeling</strong> — STRIDE (Spoofing, Tampering, Repudiation, Information Disclosure, DoS, Elevation of Privilege); Business Impact Analysis (BIA).</li>
+                    <li><strong>Security policies</strong> — policy vs standard vs guideline vs procedure; AUP, password policy, IR policy, change management, data classification.</li>
+                    <li><strong>Compliance frameworks</strong> — ISO/IEC 27001, NIST CSF (Identify/Protect/Detect/Respond/Recover), NIST SP 800-53, SOC 2, PCI DSS, GDPR, HIPAA.</li>
+                    <li><strong>Security controls</strong> — technical, administrative, physical; preventive, detective, corrective, deterrent, compensating.</li>
+                    <li><strong>Business Continuity &amp; Disaster Recovery</strong> — BCP, DRP, RTO, RPO, 3-2-1 backup rule.</li>
+                    <li><strong>Security awareness training</strong> — program design, phishing simulations, metrics.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Many security roles — GRC Analyst, Information Security Manager, Compliance Analyst — are primarily governance focused, not technical. NIST CSF and ISO 27001 are required for CompTIA Security+ and CISSP. Even purely technical roles benefit from understanding the governance context in which they operate.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Governance and risk management process; qualitative vs quantitative risk assessment.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>STRIDE threat modeling applied to a real system.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Security policy types; read and analyze 3 real published policies.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Write a complete Acceptable Use Policy and Password Policy for an imaginary company.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>NIST CSF and ISO 27001 — study frameworks, map AUP to NIST CSF controls.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>PCI DSS, GDPR, HIPAA — key requirements; compliance implications for a sample business.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>BCP and DRP — write a simple BCP for the imaginary company; complete TryHackMe governance rooms.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Perform STRIDE threat model on DVWA architecture — apply each STRIDE category to each component (web server, database, network, auth) and identify one mitigation.</li>
+                    <li>Map 3 security controls from your virtual lab to each of the 5 NIST CSF functions (Identify, Protect, Detect, Respond, Recover).</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Security Program Documentation Package</strong> for an imaginary company — write: an Acceptable Use Policy, a Password Policy, a Data Classification Policy (4+ classification levels), and a one-page Incident Response Procedure. Additionally, create a Risk Register with 8+ identified risks, likelihood/impact ratings, and proposed treatments.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Viewing governance as less important than technical skills — GRC roles often pay comparably.</li>
+                        <li>Writing aspirational but unenforceable policies — good policies are specific, measurable, and realistic.</li>
+                        <li>Treating compliance as equivalent to security — passing an audit does not mean you are secure.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Study one real framework (NIST CSF) in depth — it connects to everything else.</li>
+                        <li>Write policies using SMART criteria: Specific, Measurable, Achievable, Relevant, Time-bound.</li>
+                        <li>Remember: compliance is the floor, not the ceiling.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>NIST Cybersecurity Framework (nist.gov/cyberframework — free PDF)</li>
+                    <li>NIST SP 800-53 (csrc.nist.gov — free)</li>
+                    <li>GDPR full text (gdpr-info.eu)</li>
+                    <li>PCI DSS overview (pcisecuritystandards.org)</li>
+                    <li>TryHackMe — Governance and Regulation rooms</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35–38 hours</p>
+            </div>
+        </div>
+
+        <!-- WEEK 15  -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Capstone Project, Portfolio &amp; Career Preparation</h2>
+                <p>Complete the capstone, assemble a professional cybersecurity portfolio, and thoroughly prepare for entry-level job applications, certifications, and technical interviews.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Activities</h3>
+                <ol>
+                    <li><strong>Capstone completion (Days 1–3)</strong> — full enterprise security assessment and defense implementation (see Final Project below).</li>
+                    <li><strong>Portfolio assembly (Day 4)</strong> — GitHub profile with all security projects/scripts; CTF writeup blog; home lab documentation; LinkedIn profile; one-page cybersecurity CV.</li>
+                    <li><strong>Interview preparation (Day 5)</strong> — technical questions, behavioral STAR method, common interview formats (phone screen, take-home lab, panel, scenario-based).</li>
+                    <li><strong>Certification pathway planning (Day 6)</strong> — CompTIA Security+ as first cert; 60–90 day study plan post-roadmap; Splunk free training.</li>
+                    <li><strong>Community and continuous learning (Day 7)</strong> — Discord communities (TryHackMe, HTB), security Twitter/X, conferences (DEF CON YouTube), security news, bug bounty (HackerOne, Bugcrowd).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> This week converts 14 weeks of learning into tangible proof of skill. A finished capstone and polished portfolio are what evaluators, interviewers, and hiring managers actually look at — they determine whether you get the opportunity to demonstrate your knowledge in person.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Capstone Part 1 — Offensive Assessment: set up target VMs, complete full penetration test from recon to post-exploitation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Capstone Part 2 — Defensive Implementation: iptables, Snort/Suricata, logging, patching, MFA.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Capstone Parts 3–5 — SIEM monitoring, forensic investigation, security documentation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Portfolio assembly — GitHub, CTF blog, LinkedIn, CV/resume.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Interview prep — practice all 35 technical questions out loud; behavioral STAR method.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Certification plan — CompTIA Security+ study plan; explore bug bounty programs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Community engagement, continuous learning setup, final review of entire roadmap.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🏆 Final Capstone: Enterprise Security Assessment &amp; Defense Implementation</h4>
+                    <p>A comprehensive, real-world simulation demonstrating readiness for an entry-level security role:</p>
+                    <ol>
+                        <li><strong>Part 1 — Offensive Assessment:</strong> Complete penetration test of 3-VM environment (Windows + Linux web server + network device). Follow full methodology: passive OSINT → active scanning → exploitation (3+ documented exploits) → post-exploitation → privilege escalation → professional pen test report with CVSS-scored findings.</li>
+                        <li><strong>Part 2 — Defensive Implementation:</strong> Based on Part 1 findings, implement: iptables firewall rules, Snort/Suricata for attack detection, rsyslog forwarding, service patching/disabling, and MFA where applicable.</li>
+                        <li><strong>Part 3 — Security Monitoring:</strong> Set up Splunk to ingest target environment logs. Write correlation rules for attacks performed. Create monitoring dashboard. Document alerts that would have detected your attack.</li>
+                        <li><strong>Part 4 — Incident Response:</strong> Simulate malware infection (EICAR test string). Conduct forensic investigation with Autopsy and Volatility. Write complete IR report following NIST lifecycle.</li>
+                        <li><strong>Part 5 — Security Documentation:</strong> Risk assessment (5 risks, CVSS ratings), security policy suite (AUP, password policy, IR policy), network security architecture diagram, remediation tracking spreadsheet.</li>
+                    </ol>
+                    <p><strong>Final Deliverable:</strong> A complete security assessment package — penetration test report, defensive implementation report, monitoring dashboard screenshots, incident response report, and security policy suite. Professional enough to be a portfolio piece when applying for security roles.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Rushing the capstone without proper documentation — the deliverable is what hiring managers see.</li>
+                        <li>Neglecting the portfolio while focusing entirely on the capstone.</li>
+                        <li>Not practicing interview answers out loud — reading them is not the same as saying them.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Treat the capstone report like a real client deliverable — professional formatting matters.</li>
+                        <li>Portfolio is equally important — it is seen first.</li>
+                        <li>Practice technical answers out loud at least 3 times before any interview.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>HackerOne (hackerone.com) and Bugcrowd (bugcrowd.com) — legal bug bounty practice</li>
+                    <li>Professor Messer — CompTIA Security+ free study (professormesser.com)</li>
+                    <li>DEF CON talks (YouTube — free, world-class security research)</li>
+                    <li>Krebs on Security (krebsonsecurity.com) — security news</li>
+                    <li>TCM Security report templates (tcm-sec.com)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–45 hours</p>
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="interview">
+            <h2>Interview &amp; Viva Preparation — 35 Key Questions</h2>
+
+            <h3>Fundamental Concepts</h3>
+            <ol>
+                <li>Explain the CIA Triad and give a real-world example of a breach that violated each property.</li>
+                <li>What is the difference between a threat, a vulnerability, and a risk?</li>
+                <li>What is defense in depth and why is it preferred over a single security layer?</li>
+                <li>What is zero trust architecture and why is it replacing perimeter-based security?</li>
+                <li>What is the difference between authentication and authorization?</li>
+            </ol>
+
+            <h3>Networking and Protocols</h3>
+            <ol start="6">
+                <li>Explain the TCP three-way handshake and how a SYN flood attack abuses it.</li>
+                <li>What happens when you type google.com in a browser and press Enter? (security-relevant answer expected)</li>
+                <li>What is the difference between IDS and IPS?</li>
+                <li>What is ARP poisoning and how does it enable a man-in-the-middle attack?</li>
+                <li>Why is Telnet considered insecure? What should be used instead?</li>
+            </ol>
+
+            <h3>Cryptography</h3>
+            <ol start="11">
+                <li>What is the difference between symmetric and asymmetric encryption?</li>
+                <li>Why should MD5 not be used for password storage?</li>
+                <li>What is a salt in the context of password hashing and why is it important?</li>
+                <li>What is Perfect Forward Secrecy and why does it matter?</li>
+                <li>Explain how the TLS handshake works.</li>
+            </ol>
+
+            <h3>Web Application Security</h3>
+            <ol start="16">
+                <li>What is SQL injection and how do parameterized queries prevent it?</li>
+                <li>What is the difference between reflected, stored, and DOM-based XSS?</li>
+                <li>What is the OWASP Top 10 and why is it important?</li>
+                <li>What is CSRF and how does a CSRF token prevent it?</li>
+                <li>What is the difference between Burp Suite and OWASP ZAP?</li>
+            </ol>
+
+            <h3>Penetration Testing</h3>
+            <ol start="21">
+                <li>Describe the five phases of penetration testing.</li>
+                <li>What is the difference between black box, white box, and grey box penetration testing?</li>
+                <li>What tools would you use for reconnaissance? For exploitation?</li>
+                <li>What is Metasploit and what is Meterpreter?</li>
+                <li>What is a CVE and how is CVSS used to score vulnerabilities?</li>
+            </ol>
+
+            <h3>Defensive Security</h3>
+            <ol start="26">
+                <li>What is a SIEM and what does it do?</li>
+                <li>What Windows Event IDs would you monitor for a brute force attack?</li>
+                <li>What is the order of volatility in digital forensics?</li>
+                <li>What is chain of custody and why does it matter in forensics?</li>
+                <li>Describe the NIST Incident Response lifecycle.</li>
+            </ol>
+
+            <h3>Cloud and IAM</h3>
+            <ol start="31">
+                <li>What is the shared responsibility model in cloud security?</li>
+                <li>What IAM best practices would you apply to a new AWS account?</li>
+                <li>What is least privilege and give an example of applying it in cloud IAM?</li>
+                <li>What is MFA and why is it considered the single most impactful security control?</li>
+                <li>What is Kerberoasting in Active Directory?</li>
+            </ol>
+        </div>
+
+        <div class="rm-section-box" id="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <h3>Is cybersecurity hard to learn?</h3>
+            <p>Cybersecurity has wide breadth which can feel overwhelming, but it is learnable with a structured approach. The first few weeks (networking and Linux) are the steepest learning curve — everything becomes more manageable once those foundations are solid. Patience and consistent daily practice matter more than raw intelligence.</p>
+
+            <h3>Do I need to know how to hack to work in cybersecurity?</h3>
+            <p>Offensive skills are valuable for penetration testers and red teamers, but most cybersecurity jobs are defensive: SOC analysts, incident responders, compliance analysts, security engineers. Understanding how attacks work is universally valuable, but you do not need to be an expert hacker to have a successful cybersecurity career.</p>
+
+            <h3>Is it legal to practice the techniques in this roadmap?</h3>
+            <p>All practices in this roadmap are legal when conducted in authorized environments: your own virtual machines, TryHackMe, Hack The Box, PicoCTF, or your own lab network. Never apply any attack technique to systems you do not own or have explicit written permission to test. Computer crime laws have serious penalties in virtually every jurisdiction.</p>
+
+            <h3>Do I need a degree to work in cybersecurity?</h3>
+            <p>Many entry-level roles prioritize certifications and demonstrable skills over degrees. CompTIA Security+, CEH, and CySA+ open many doors. A portfolio of documented projects and CTF achievements often impresses hiring managers more than a degree alone. A degree in IT, Computer Science, or Information Systems is helpful but not universally required.</p>
+
+            <h3>Which certification should I pursue first?</h3>
+            <p>CompTIA Security+ is the most widely recommended first cybersecurity certification. It is vendor-neutral, covers the breadth of cybersecurity topics, is required by many US government and defense contractor positions (under DoD 8570), and prepares you for CySA+ (defensive focus) or PenTest+ (offensive focus) next.</p>
+
+            <h3>How long does it take to get a cybersecurity job?</h3>
+            <p>Someone completing this 15-week roadmap with a Security+ certification and a strong portfolio could realistically land a Tier 1 SOC analyst position. Most people entering from non-technical backgrounds find the job search takes 3–6 months after training. Building a visible portfolio (GitHub, CTF writeups, LinkedIn) significantly shortens this timeline.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="stpart">
+                <div class="logo1">
+                    <h3>CodePath</h3>
+                    <p>Learn. Practice. Master</p>
+                </div>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R: Beginner to Master — 16 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>R: Beginner to Master</h1>
+        <p>Complete 16-Week Curriculum — From RStudio Setup to Functional Programming, Statistical Modeling &amp; Package Development</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#week16">W16</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>16-week, project-driven R curriculum</strong> designed to take a complete beginner to a professional-level R developer and data analyst. The roadmap moves from <strong>RStudio setup, vectors, data types, and data frames</strong> through <strong>control flow, functions, the apply family, and the tidyverse</strong>, into <strong>S3/S4/R6 OOP, file handling, error handling, ggplot2, and statistical modeling</strong>, all the way to <strong>functional programming with purrr, performance optimization, reproducible reporting, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics and R's core data structures, <strong>Phase 2</strong> covers control flow, custom functions, and the tidyverse, <strong>Phase 3</strong> covers intermediate and advanced core topics including OOP systems and statistical modeling, and <strong>Phase 4</strong> covers master-level functional programming, performance, reporting, and package development.</p>
+            <p>By Week 16, you will have built three complete, portfolio-ready data analysis applications and be confident building production-grade R scripts, packages, and reproducible reports from scratch.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 16 weeks &nbsp;|&nbsp; <strong>Stack:</strong> R 4.3+, RStudio, tidyverse, Quarto/R Markdown &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic programming logic (no R experience needed)</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–4:</strong> RStudio, vectors, data structures, and data frames.</p>
+        </div>
+
+        <!--WEEK 1-->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Environment Setup &amp; R Fundamentals</h2>
+                <p>Install R and RStudio, understand the R console, and write your first lines of R code.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Installing R and RStudio, understanding the R console, and writing your first lines of R code.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What is R &amp; Why Use It?</strong> — R is a programming language and environment built specifically for statistical computing, data analysis, and visualization, originally developed by statisticians for statisticians. Unlike general-purpose languages, R treats data analysis as a first-class citizen, with vectors and data frames built directly into its core syntax.</li>
+                    <li><strong>Installing R &amp; RStudio</strong> — R is the underlying language engine, while RStudio is the most popular IDE for writing and running R code, offering a console, script editor, and plotting pane in one window. Install R first from CRAN, then RStudio Desktop on top of it.</li>
+                    <li><strong>The RStudio Interface: Console, Script, Environment, Plots</strong> — RStudio is divided into four key panes: the Console (where code executes immediately), the Script Editor (where you write reusable <code>.R</code> files), the Environment pane (showing all currently defined variables), and the Plots/Viewer pane (displaying graphs and output).</li>
+                    <li><strong>Installing &amp; Loading Packages</strong> — R's functionality is massively extended through packages — pre-built collections of functions hosted on CRAN. You install a package once with <code>install.packages()</code>, then load it into each session with <code>library()</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The R and RStudio mental model — console vs script, environment pane, packages — is the foundation every R workflow builds on. Getting the tidyverse installed and loading correctly from Day 1 means you are ready for real data work from Week 2 onward.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># R uses <- as the traditional assignment operator (= also works)
+x <- 5                  # Assign the value 5 to x
+print(x)                # Explicitly print x to the console
+x                       # In RStudio/console, typing x alone also prints it
+
+# Verify your setup:
+R.version.string        # e.g. "R version 4.3.2"
+getwd()                 # Shows your current working directory
+sessionInfo()           # Detailed report: R version, OS, loaded packages
+
+# Packages: install ONCE, load in every session
+install.packages("tidyverse")   # Run once to download and install
+library(tidyverse)              # Run in every script that uses it
+search()                        # Lists all currently attached packages</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Set up your R environment and explore it. Install R and RStudio. Create a new script called <code>week1.R</code>. In it, assign your name, age, and favorite hobby to three variables, print each one, and use <code>class()</code> on each variable to check its type. Install and load the <code>tidyverse</code> package and confirm it loaded successfully using <code>library()</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 2 -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Vectors &amp; Basic Data Types</h2>
+                <p>Understand R's foundational data structure — the vector — and the core atomic data types it can hold.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding R's foundational data structure — the vector — and the core atomic data types it can hold.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Atomic Data Types: numeric, character, logical, integer</strong> — R has four primary atomic types: <code>numeric</code> (decimals), <code>integer</code> (whole numbers, suffixed with <code>L</code>), <code>character</code> (text strings), and <code>logical</code> (<code>TRUE</code>/<code>FALSE</code>). Every value in R belongs to one of these types, checkable with <code>class()</code> or <code>typeof()</code>.</li>
+                    <li><strong>Creating Vectors with <code>c()</code></strong> — A vector is R's fundamental data structure — an ordered collection of values that must all be the same type. The <code>c()</code> (combine) function is the primary way to create vectors, and R will automatically coerce mixed types to the most flexible common type.</li>
+                    <li><strong>Vectorized Operations</strong> — R applies arithmetic operations to entire vectors element-by-element automatically — a concept called "vectorization" — eliminating the need for explicit loops in most cases. This is one of R's most powerful and distinctive features compared to general-purpose languages.</li>
+                    <li><strong>Indexing &amp; Subsetting Vectors</strong> — R uses 1-based indexing (not 0-based), and square brackets <code>[]</code> select one or more elements by position, by a logical condition, or by name. Negative indices exclude elements rather than selecting from the end.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Vectors are the atom of R — every other data structure (matrix, data frame, list) is built from them. Vectorized operations are what make R code concise and fast — learning to think in vectors rather than loops is the single most important mental shift for becoming an effective R programmer.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># Atomic types
+age      <- 28L              # integer (L suffix)
+price    <- 19.99            # numeric (double by default)
+name     <- "Alice"          # character
+is_admin <- TRUE             # logical
+class(age); class(price); class(name); class(is_admin)
+
+# Vectors with c()
+numbers <- c(10, 20, 30, 40, 50)
+mixed   <- c(1, "two", TRUE)   # Coercion: ALL become character!
+length(numbers)                # 5
+
+# Vectorized operations — no loop needed
+prices     <- c(10, 20, 30, 40)
+discounted <- prices * 0.9     # Multiplies EVERY element at once
+total      <- sum(prices)      # Aggregate function
+
+# Indexing (1-based!)
+fruits <- c("Apple", "Banana", "Cherry", "Date")
+fruits[1]                      # "Apple"
+fruits[c(1, 3)]                # "Apple" "Cherry"
+fruits[-2]                     # All EXCEPT 2nd element
+fruits[fruits == "Cherry"]     # Logical subsetting</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Class Grades Analyzer</strong>. Create a numeric vector of 8 student test scores. Calculate and print the mean, median, minimum, and maximum using built-in functions (<code>mean()</code>, <code>median()</code>, <code>min()</code>, <code>max()</code>). Use logical subsetting to extract only scores above the mean. Use vectorized operations to convert all scores to a percentage out of 100 (assume max possible score was 80).</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 3 -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Data Structures: Matrices, Lists &amp; Factors</h2>
+                <p>Expand beyond simple vectors into R's richer multi-dimensional and heterogeneous data structures.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Expanding beyond simple vectors into R's richer multi-dimensional and heterogeneous data structures.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Matrices</strong> — A matrix is a two-dimensional, rectangular data structure where every element must be the same type (like a vector, but with rows and columns). Matrices are created with <code>matrix()</code> and are essential for linear algebra and numeric computations.</li>
+                    <li><strong>Lists</strong> — A list is R's most flexible data structure — unlike vectors, a list can hold elements of completely different types and lengths, including other lists. Lists use double square brackets <code>[[ ]]</code> to extract a single element's actual value, versus single brackets <code>[ ]</code> which return a sub-list.</li>
+                    <li><strong>Factors (Categorical Data)</strong> — A factor represents categorical data with a fixed, known set of possible values ("levels") — like survey responses (Low/Medium/High) or blood types. Factors are R's way of efficiently storing and statistically handling categorical variables, especially in modeling.</li>
+                    <li><strong>NULL, NA &amp; Missing Data</strong> — <code>NA</code> represents a missing or unknown value within a vector, while <code>NULL</code> represents the complete absence of a value or an empty object. Most R functions require explicit handling of <code>NA</code> to avoid silently propagating missing-ness through calculations.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Lists are the backbone of R's OOP systems and the return value of most modeling functions (like <code>lm()</code>). Factors prevent a classic data analysis bug — treating categories as numbers. Proper <code>NA</code> handling with <code>na.rm = TRUE</code> is in virtually every real-world analysis script.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># Matrix
+m <- matrix(1:6, nrow = 2, ncol = 3)
+m[1, 2]      # Row 1, column 2 → 3
+m[, 2]       # All rows, column 2 → 3 5
+dim(m)       # 2 3
+
+# List — different types, different lengths
+person <- list(name = "Bob", age = 32, scores = c(85, 90, 78))
+person$name           # "Bob"
+person[["age"]]       # 32
+person[["scores"]][2] # 90
+str(person)           # Structure overview
+
+# Ordered factor
+sizes <- factor(c("Small", "Large", "Medium", "Small"),
+                levels = c("Small", "Medium", "Large"),
+                ordered = TRUE)
+sizes[1] < sizes[2]   # TRUE — Small < Large
+table(sizes)          # Frequency count
+
+# NA handling
+scores <- c(85, 90, NA, 78, NA)
+sum(scores)                    # NA — poisoned by default!
+sum(scores, na.rm = TRUE)      # 253 — NAs ignored
+sum(is.na(scores))             # 2 — count of missing values</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Student Records System</strong>. Create a list representing one student with <code>name</code>, <code>age</code>, and a numeric vector of <code>grades</code> (include one <code>NA</code> to simulate a missing grade). Calculate the student's average grade ignoring the <code>NA</code>. Create an ordered factor for "grade letter" (A, B, C, D, F) and demonstrate comparing two grade levels. Build a 3×3 matrix representing 3 students' scores across 3 subjects and extract one student's full row.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 4-->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Data Frames &amp; Importing Data</h2>
+                <p>Work with R's most important data structure for real-world analysis — the data frame — and load external data.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Working with R's most important data structure for real-world data analysis — the data frame — and loading external data.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Creating &amp; Inspecting Data Frames</strong> — A data frame is R's equivalent of a spreadsheet or database table — a list of equal-length vectors (columns) that can each hold different types, displayed in a rectangular row/column format. It is the central data structure for nearly all data analysis work in R.</li>
+                    <li><strong>Selecting Columns &amp; Rows</strong> — Data frames support multiple selection syntaxes: <code>$</code> for a single column by name, <code>[ ]</code> with row/column indices, and logical conditions for filtering rows. Understanding these is essential before moving to tidyverse's cleaner syntax.</li>
+                    <li><strong>Reading CSV Files</strong> — <code>read.csv()</code> (base R) or <code>readr::read_csv()</code> (tidyverse, faster and more consistent) load external CSV files directly into a data frame, making file-based data immediately ready for analysis. The tidyverse version automatically guesses column types and prints a helpful summary.</li>
+                    <li><strong>Writing Data Out (<code>write.csv</code> / <code>write_csv</code>)</strong> — Once you have cleaned or transformed data, <code>write_csv()</code> exports a data frame to a CSV file, preserving column names as the header row by default. Always confirm the file was written with <code>file.exists()</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The data frame is the workhorse of all R data analysis. Every real-world dataset you will ever load — from CSV, Excel, SQL, or an API — lands in a data frame. The <code>$</code>, <code>[ ]</code>, and logical-filter syntax are used in every single R analysis script ever written.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>library(readr)
+
+# Create and inspect a data frame
+df <- data.frame(
+  name  = c("Alice", "Bob", "Carol"),
+  age   = c(28, 32, 25),
+  score = c(85.5, 90.2, 78.9)
+)
+head(df)          # Preview first rows
+str(df)           # Structure: column types and sample values
+nrow(df); ncol(df)  # 3 3
+
+# Selection and filtering
+df$name               # 'name' column as a vector
+df[, "age"]           # Same result, matrix-style
+df[1, ]               # First row, all columns
+df[df$age > 26, ]     # Rows where age > 26
+
+# Read and write CSV
+sales_data <- read_csv("sales.csv")
+summary(sales_data)   # Quick statistical summary
+
+cleaned_data <- data.frame(product = c("Widget", "Gadget"),
+                            revenue = c(1500, 2300))
+write_csv(cleaned_data, "cleaned_output.csv")
+file.exists("cleaned_output.csv")   # TRUE</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Sales Data Explorer</strong>. Create a data frame with at least 6 rows representing product sales (columns: <code>product</code>, <code>category</code>, <code>units_sold</code>, <code>price</code>). Use <code>$</code> and <code>[ ]</code> syntax to select only the <code>product</code> and <code>price</code> columns, filter rows where <code>units_sold &gt; 50</code>, and calculate a new "revenue" column (<code>units_sold * price</code>). Write the final data frame to a CSV file and confirm it was created with <code>file.exists()</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 5–8:</strong> Conditionals, loops, custom functions, strings, dates, and the tidyverse.</p>
+        </div>
+
+        <!--WEEK 5 -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Conditionals &amp; Control Flow</h2>
+                <p>Direct program execution using if/else logic and R's vectorized conditional functions.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Directing program execution using if/else logic and R's vectorized conditional functions.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>if</code>, <code>else if</code>, <code>else</code></strong> — R's conditional syntax evaluates a single logical condition and branches accordingly. Note that <code>if</code>/<code>else</code> in R works on a single value, not a whole vector — for vectorized conditionals, <code>ifelse()</code> is needed.</li>
+                    <li><strong>Vectorized Conditionals with <code>ifelse()</code></strong> — <code>ifelse()</code> applies a condition across an entire vector at once, returning a new vector where each element is chosen based on the corresponding logical test. This avoids writing a manual loop for simple element-wise conditional logic.</li>
+                    <li><strong><code>switch()</code> Statements</strong> — <code>switch()</code> selects one of several code branches based on matching a string or integer value, serving as R's alternative to long <code>if</code>/<code>else if</code> chains when comparing a single variable against multiple discrete options.</li>
+                    <li><strong>Logical Operators (<code>&amp;</code>, <code>|</code>, <code>&amp;&amp;</code>, <code>||</code>, <code>!</code>)</strong> — R distinguishes between vectorized logical operators (<code>&amp;</code>, <code>|</code>, which compare element-by-element) and scalar short-circuit operators (<code>&amp;&amp;</code>, <code>||</code>, which compare exactly one value). Use <code>&amp;&amp;</code>/<code>||</code> inside <code>if()</code> statements, and <code>&amp;</code>/<code>|</code> when filtering vectors or data frames.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The distinction between scalar <code>if()</code> and vectorized <code>ifelse()</code> is one of the most common sources of bugs for R beginners — using <code>if()</code> on a vector produces a warning and only checks the first element. Getting this right prevents silent, hard-to-detect errors in data processing pipelines.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># Scalar if/else — one value only
+score <- 85
+if (score >= 90) {
+  grade <- "A"
+} else if (score >= 80) {
+  grade <- "B"   # This branch executes
+} else {
+  grade <- "C"
+}
+
+# Vectorized ifelse() — works on the entire vector at once
+scores  <- c(45, 92, 67, 88, 55)
+results <- ifelse(scores >= 60, "Pass", "Fail")
+# "Fail" "Pass" "Pass" "Pass" "Fail"
+
+# switch() for discrete string matching
+day_type <- function(day) {
+  switch(day,
+    "Mon" = , "Tue" = , "Wed" = , "Thu" = , "Fri" = "Weekday",
+    "Sat" = , "Sun" = "Weekend",
+    "Unknown day"
+  )
+}
+day_type("Sat")  # "Weekend"
+
+# Vectorized vs scalar logical operators
+age      <- c(15, 22, 17, 30)
+has_id   <- c(FALSE, TRUE, TRUE, TRUE)
+can_enter <- age >= 18 & has_id   # Element-by-element &
+if (age[2] >= 18 && has_id[2]) print("Entry granted")</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Movie Rating Classifier</strong>. Create a numeric vector of 10 movie ratings (0–10 scale). Use nested <code>ifelse()</code> calls to classify each as "Poor" (&lt;5), "Average" (5–7), or "Excellent" (&gt;7). Separately, write a <code>switch()</code>-based function that takes a genre string ("Action", "Comedy", "Drama") and returns a recommended runtime range as a string. Test all branches.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 6 -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Loops &amp; The Apply Family</h2>
+                <p>Iterate over data using traditional loops and R's idiomatic, more efficient <code>apply</code> family of functions.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Iterating over data using traditional loops and R's idiomatic, more efficient <code>apply</code> family of functions.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>for</code> Loops</strong> — R's <code>for</code> loop iterates over each element of a vector or list, executing the loop body once per element. They remain useful for tasks with side effects like printing or file writing, though often slower than vectorized alternatives for large datasets.</li>
+                    <li><strong><code>while</code> Loops</strong> — <code>while</code> loops repeat a block of code as long as a condition remains true, checked before each iteration — useful when the number of iterations is not known in advance, unlike a <code>for</code> loop over a fixed-length vector.</li>
+                    <li><strong>The <code>sapply()</code> &amp; <code>lapply()</code> Functions</strong> — <code>lapply()</code> applies a function to every element of a list/vector and always returns a list; <code>sapply()</code> does the same but tries to simplify the result into a vector or matrix when possible. These are the idiomatic R replacement for many <code>for</code> loops, and are often faster.</li>
+                    <li><strong><code>mapply()</code> &amp; <code>vapply()</code></strong> — <code>mapply()</code> applies a function across multiple vectors simultaneously (element-wise, like a multi-argument <code>sapply</code>), while <code>vapply()</code> is a safer version of <code>sapply()</code> that requires you to specify the expected output type, preventing silent bugs from unexpected return shapes.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> In R, explicit <code>for</code> loops on large data are slow — the apply family calls optimized C code under the hood. <code>vapply()</code> over <code>sapply()</code> is the professional choice because it fails loudly if the return type is wrong, catching bugs at development time instead of silently corrupting results.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># for loop — iterates directly over values
+fruits <- c("Apple", "Banana", "Cherry")
+for (fruit in fruits) {
+  cat("I like", fruit, "\n")
+}
+
+# while loop
+count <- 1; total <- 0
+while (count <= 5) {
+  total <- total + count
+  count <- count + 1    # MUST update or infinite loop!
+}
+print(total)  # 15
+
+# lapply vs sapply
+numbers <- c(4, 9, 16, 25)
+result_list <- lapply(numbers, sqrt)   # Returns a LIST
+result_vec  <- sapply(numbers, sqrt)   # Returns a VECTOR (simplified)
+class(result_list); class(result_vec)  # "list" "numeric"
+
+# mapply: multi-vector element-wise
+heights <- c(160, 170, 180)
+weights <- c(60,  70,  85)
+bmi <- mapply(function(h, w) w / (h/100)^2, heights, weights)
+
+# vapply: enforces return type
+safe_result <- vapply(heights, function(h) h / 100, FUN.VALUE = numeric(1))</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Temperature Converter Pipeline</strong>. Create a numeric vector of 10 Celsius temperatures. Use <code>sapply()</code> to convert all of them to Fahrenheit (<code>F = C * 9/5 + 32</code>) in one line — no explicit <code>for</code> loop for the conversion. Then write a <code>for</code> loop that prints a formatted sentence for each temperature pair (e.g., "20°C is 68°F"). Finally, use <code>vapply()</code> to classify each Fahrenheit temperature as "Cold", "Mild", or "Hot", enforcing a <code>character(1)</code> return type.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 7-->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Writing Functions</h2>
+                <p>Create reusable, well-documented custom functions — the cornerstone of clean, maintainable R code.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Creating reusable, well-documented custom functions — the cornerstone of clean, maintainable R code.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Defining Functions with <code>function()</code></strong> — R functions are defined using the <code>function()</code> keyword, assigned to a name like any other variable, and automatically return the value of their last evaluated expression — no explicit <code>return()</code> required, though it is often clearer to include it.</li>
+                    <li><strong>Default Arguments &amp; Named Arguments</strong> — Function parameters can have default values, making them optional when calling the function. Arguments can be passed positionally (in order) or by name (in any order), with named arguments improving readability for functions with many parameters.</li>
+                    <li><strong>Variable Scope &amp; the <code>&lt;&lt;-</code> Operator</strong> — Variables created inside a function exist only in that function's local scope and disappear once it returns. The <code>&lt;&lt;-</code> "superassignment" operator can modify a variable in an enclosing (parent) scope, though it should be used sparingly as it can make code harder to reason about.</li>
+                    <li><strong>Anonymous Functions &amp; the Lambda Shorthand (<code>\(x)</code>)</strong> — Anonymous functions (functions without an assigned name) are commonly used inline within <code>sapply()</code>/<code>lapply()</code> calls. R 4.1+ introduced a compact lambda syntax <code>\(x) ...</code> as shorthand for <code>function(x) ...</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Functions are the primary unit of reuse in R. The <code>\(x)</code> lambda shorthand appears everywhere in modern tidyverse code — in <code>purrr::map()</code>, <code>sapply()</code>, and inline <code>mutate()</code> calls. Understanding lexical scope prevents a whole class of bugs where functions unexpectedly read the wrong variable from the global environment.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># Basic function — auto-returns last expression
+calculate_bmi <- function(weight_kg, height_m) {
+  weight_kg / (height_m^2)
+}
+calculate_bmi(70, 1.75)   # 22.86
+
+# Default and named arguments
+greet <- function(name, greeting = "Hello", punctuation = "!") {
+  paste0(greeting, ", ", name, punctuation)
+}
+greet("Alice")                           # "Hello, Alice!"
+greet("Bob", greeting = "Hey")           # "Hey, Bob!"
+greet(punctuation = "?", name = "Carol") # Order doesn't matter when named
+
+# Variable scope and <<- superassignment
+counter <- 0
+increment <- function() { counter <<- counter + 1 }
+increment(); increment(); increment()
+print(counter)  # 3 — global variable was modified
+
+# Lambda shorthand (R 4.1+)
+numbers     <- c(1, 2, 3, 4, 5)
+squared_old <- sapply(numbers, function(x) x^2)
+squared_new <- sapply(numbers, \(x) x^2)   # Identical result, less typing
+print(squared_new)  # 1 4 9 16 25</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Statistics Toolkit</strong> of custom functions. Write <code>summarize_vector(x)</code> that returns a named list with mean, median, sd, min, and max. Write <code>normalize(x)</code> that rescales a vector to a 0–1 range (<code>(x - min(x)) / (max(x) - min(x))</code>), with a default parameter to round to 2 decimal places. Write a function using the <code>\(x)</code> lambda shorthand inside <code>sapply()</code> to apply <code>normalize()</code> across 3 different vectors stored in a list.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 8-->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Strings, Dates &amp; The Tidyverse (dplyr/tidyr)</h2>
+                <p>Manipulate text and dates, and learn the tidyverse's elegant grammar for transforming data frames.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Manipulating text and dates, and learning the tidyverse's elegant grammar for transforming data frames.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>String Manipulation with <code>stringr</code></strong> — The <code>stringr</code> package (part of tidyverse) provides a consistent, predictable set of string functions, all prefixed with <code>str_</code>. Common operations include <code>str_detect()</code> (pattern matching), <code>str_replace()</code>, <code>str_split()</code>, and <code>str_trim()</code>.</li>
+                    <li><strong>Dates with <code>lubridate</code></strong> — The <code>lubridate</code> package makes working with dates dramatically easier than base R, providing intuitive parsing functions (<code>ymd()</code>, <code>mdy()</code>) and extraction functions (<code>year()</code>, <code>month()</code>, <code>wday()</code>) for common date components.</li>
+                    <li><strong>The Pipe Operator (<code>%&gt;%</code> and <code>|&gt;</code>)</strong> — The pipe operator passes the result of the expression on its left as the first argument to the function on its right, allowing you to chain multiple operations into a readable left-to-right sequence. R now has a native pipe (<code>|&gt;</code>) alongside the original magrittr pipe (<code>%&gt;%</code>) from tidyverse.</li>
+                    <li><strong><code>dplyr</code> Verbs: <code>filter()</code>, <code>select()</code>, <code>mutate()</code>, <code>arrange()</code></strong> — <code>dplyr</code> provides a consistent "grammar of data manipulation" built around a handful of verbs. Chained together with the pipe, they form highly readable data transformation pipelines that read like English sentences.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The pipe operator fundamentally changes how R code reads — transforming deeply nested function calls into clear, step-by-step left-to-right pipelines. The five core <code>dplyr</code> verbs (<code>filter</code>, <code>select</code>, <code>mutate</code>, <code>arrange</code>, <code>summarize</code>) cover 90% of all data manipulation tasks in any real analysis project.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>library(stringr); library(lubridate); library(dplyr)
+
+# stringr — consistent str_ prefix
+text <- "  Hello, R World!  "
+str_trim(text)                          # "Hello, R World!"
+str_to_upper(text)                      # "  HELLO, R WORLD!  "
+str_detect(text, "World")               # TRUE
+str_replace(text, "World", "Universe")  # "  Hello, R Universe!  "
+
+# lubridate — intuitive date parsing
+date1 <- ymd("2024-03-15")
+date2 <- mdy("03/20/2024")
+date2 - date1                           # Time difference of 5 days
+year(date1); month(date1)               # 2024 3
+
+# Pipe operator
+numbers <- c(4, 16, 25, 9, 1)
+result  <- numbers |> mean() |> sqrt() |> round(2)
+
+# dplyr pipeline
+df <- data.frame(name = c("A","B","C"), score = c(60,95,80), age = c(22,19,25))
+result <- df |>
+  filter(score >= 70) |>
+  mutate(passed = TRUE) |>
+  arrange(desc(score)) |>
+  select(name, score)
+print(result)</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Customer Order Pipeline</strong> using tidyverse. Create a data frame of 8 customer orders (columns: <code>customer_name</code>, <code>order_date</code> as a string, <code>amount</code>, <code>status</code>). Parse <code>order_date</code> with <code>lubridate</code>. Using a <code>dplyr</code> pipe chain: filter for <code>status == "Completed"</code>, create a new <code>month</code> column extracted from the date, calculate <code>amount_with_tax</code> (8% tax), and sort by <code>amount_with_tax</code> descending. Print the final result.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 9–12:</strong> S3/S4/R6 OOP, file handling, error handling, ggplot2, and statistical modeling.</p>
+        </div>
+
+        <!--  WEEK 9 -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Object-Oriented R: S3 Classes</h2>
+                <p>Understand R's most common and lightweight object-oriented system, S3, used throughout base R and many packages.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding R's most common and lightweight object-oriented system, S3, used throughout base R and many packages.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>S3 Classes &amp; <code>structure()</code></strong> — S3 is R's simplest and most widely-used OOP system — it works by attaching a <code>"class"</code> attribute to an ordinary object (often a list), with no formal class definition required. Functions then behave differently based on that class attribute through a mechanism called "dispatch."</li>
+                    <li><strong>Generic Functions &amp; Method Dispatch</strong> — S3's power comes from "generic" functions like <code>print()</code> and <code>summary()</code>, which automatically dispatch to a class-specific method (e.g., <code>print.employee</code>) if one exists. This lets built-in functions behave appropriately for your custom object types.</li>
+                    <li><strong>Writing Custom Generic Functions</strong> — You can create entirely new generic functions using <code>UseMethod()</code>, which tells R to look up the appropriate class-specific implementation at call time. This is how you build extensible, class-aware behavior into your own functions.</li>
+                    <li><strong>Inheritance in S3</strong> — S3 supports a simple form of inheritance by assigning an object multiple classes (a character vector), with R checking each class in order when dispatching a method. If no method exists for the first (most specific) class, R falls back to the next class in the vector.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> S3 is everywhere in R — <code>lm()</code> returns an S3 object, <code>summary()</code> and <code>print()</code> use S3 dispatch, and almost every major package uses S3 for its core types. Understanding S3 dispatch is what lets you write functions that work intelligently on different types of objects, just like base R does.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># S3 object: a list with a class attribute
+create_employee <- function(name, salary) {
+  structure(list(name = name, salary = salary), class = "employee")
+}
+emp <- create_employee("Alice", 65000)
+class(emp)   # "employee"
+
+# Generic dispatch: print.employee called automatically for "employee" objects
+print.employee <- function(x, ...) {
+  cat("Employee:", x$name, "| Salary: $", x$salary, "\n")
+}
+print(emp)   # Calls print.employee(), not the default print!
+
+# Custom generic function
+describe <- function(x) UseMethod("describe")
+describe.employee <- function(x) cat(x$name, "earns $", x$salary, "\n")
+describe.default  <- function(x) cat("No specific description available.\n")
+describe(emp)    # Dispatches to describe.employee()
+describe(42)     # Dispatches to describe.default()
+
+# S3 inheritance: multiple classes
+create_manager <- function(name, salary, team_size) {
+  structure(list(name = name, salary = salary, team_size = team_size),
+            class = c("manager", "employee"))  # "manager" checked first
+}
+mgr <- create_manager("Carol", 95000, 6)
+print(mgr)   # No print.manager → falls back to print.employee()</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Shape Calculator</strong> using S3 classes. Create constructor functions for <code>circle</code> (radius) and <code>rectangle</code> (width, height) S3 objects. Write a generic <code>area()</code> function with class-specific methods (<code>area.circle</code>, <code>area.rectangle</code>) that calculate each shape's area correctly. Write custom <code>print.circle</code> and <code>print.rectangle</code> methods that display a formatted description. Create instances of both and call <code>area()</code> and <code>print()</code> on each.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 10-->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — S4 &amp; R6 Classes (Advanced OOP)</h2>
+                <p>Move beyond S3 into R's more formal, structured object-oriented systems used in larger applications and packages.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Moving beyond S3 into R's more formal, structured object-oriented systems used in larger applications and packages.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>S4 Classes with <code>setClass()</code></strong> — S4 is a more rigorous, formal OOP system than S3, requiring you to explicitly declare a class's structure (its "slots") and their expected types upfront using <code>setClass()</code>. This enforced structure provides better validation and is preferred for complex package development (e.g., Bioconductor packages).</li>
+                    <li><strong>S4 Generic Methods with <code>setGeneric()</code> / <code>setMethod()</code></strong> — Like S3, S4 supports generic functions that dispatch based on class, but with explicit declaration via <code>setGeneric()</code> and <code>setMethod()</code>. This formality provides stricter type-checking and clearer contracts than S3's more implicit convention-based approach.</li>
+                    <li><strong>R6 Classes: Reference Semantics</strong> — R6 (a popular CRAN package) provides a more traditional, mutable, encapsulated OOP system closely resembling Python or Java classes, where objects are modified in-place ("reference semantics") rather than copied on every modification like S3/S4. This makes R6 ideal for stateful objects like database connections or simulations.</li>
+                    <li><strong>R6 Private Fields &amp; Methods</strong> — R6 supports true encapsulation via a <code>private</code> list, whose fields and methods are completely inaccessible from outside the object — only accessible from within the class's own public methods. This enables proper data hiding, unlike S3 and S4 which have no built-in privacy mechanism.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> R6 has become the standard for stateful, encapsulated objects in modern R packages — it is used by <code>shiny</code>, <code>plumber</code>, and <code>testthat</code> internally. Understanding the difference between S3's copy-on-modify semantics and R6's reference semantics prevents subtle bugs when passing objects between functions.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>library(R6)
+
+# S4 class with typed slots
+setClass("BankAccount", representation(
+  owner   = "character",
+  balance = "numeric"
+))
+account <- new("BankAccount", owner = "Alice", balance = 1000)
+account@balance   # 1000 — S4 uses @ not $
+
+# S4 generic and method
+setGeneric("deposit", function(account, amount) standardGeneric("deposit"))
+setMethod("deposit", "BankAccount", function(account, amount) {
+  account@balance <- account@balance + amount
+  account   # Return the updated object
+})
+account <- deposit(account, 500)
+account@balance   # 1500
+
+# R6 class: mutable, reference semantics
+Counter <- R6Class("Counter",
+  public = list(
+    count = 0,
+    increment = function() {
+      self$count <- self$count + 1   # self = current instance
+      invisible(self)                # Enables method chaining
+    }
+  )
+)
+c1 <- Counter$new()
+c1$increment(); c1$increment()
+c1$count   # 2 — modified IN PLACE
+
+# R6 with private fields — true encapsulation
+BankR6 <- R6Class("BankR6",
+  public = list(
+    initialize = function(b) { private$balance <- b },
+    deposit    = function(a) { private$balance <- private$balance + a },
+    getBalance = function()  { private$balance }
+  ),
+  private = list(balance = 0)   # acc$balance from outside → NULL (hidden!)
+)
+acc <- BankR6$new(100); acc$deposit(50); acc$getBalance()  # 150</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Library Management System</strong> comparing S4 and R6. First, implement it with S4: a <code>Book</code> class (<code>title</code>, <code>author</code>, <code>available</code> logical slot) with <code>checkOut()</code> and <code>returnBook()</code> generic methods. Then reimplement the same system using R6 with private state for the book's availability, exposing only public <code>checkOut()</code>/<code>returnBook()</code>/<code>isAvailable()</code> methods. Write a short comment comparing the two approaches.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 11  -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — File Handling &amp; Error Handling</h2>
+                <p>Read and write various file formats robustly, and gracefully handle errors and exceptional conditions.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Reading and writing various file formats robustly, and gracefully handling errors and exceptional conditions.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Working with RDS Files (R's Native Format)</strong> — RDS is R's native binary file format for saving a single R object (of any type — data frame, list, model, etc.) to disk with perfect fidelity, preserving classes and structure exactly. Unlike CSV, RDS round-trips complex objects without any data-type loss.</li>
+                    <li><strong>Reading JSON with <code>jsonlite</code></strong> — The <code>jsonlite</code> package provides <code>fromJSON()</code> and <code>toJSON()</code> for converting between R objects and JSON, the standard format for web APIs and config files. It intelligently converts JSON arrays/objects into appropriate R vectors, lists, or data frames.</li>
+                    <li><strong><code>tryCatch()</code> for Error Handling</strong> — <code>tryCatch()</code> is R's primary mechanism for catching and handling errors gracefully, similar to try/catch in other languages. You specify handler functions for different condition types: <code>error</code> (fatal), <code>warning</code> (non-fatal), and <code>finally</code> (always runs).</li>
+                    <li><strong>Custom Conditions with <code>warning()</code> and <code>stop()</code></strong> — <code>stop()</code> immediately halts execution and raises an error, while <code>warning()</code> signals a potential problem without stopping the program. Both are "conditions" that <code>tryCatch()</code> can intercept. Writing clear, descriptive messages makes debugging far easier.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Production R code fails gracefully — it does not crash and lose work. <code>tryCatch()</code> is what separates a beginner script from a production data pipeline. RDS is the professional standard for saving R model objects between sessions — it is how you save a trained machine learning model and load it months later with identical behavior.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>library(jsonlite)
+
+# RDS: perfect round-trip for any R object
+my_data <- list(name = "Alice", scores = c(85, 90, 78), active = TRUE)
+saveRDS(my_data, "my_data.rds")
+loaded  <- readRDS("my_data.rds")
+identical(my_data, loaded)   # TRUE — identical structure
+
+# JSON with jsonlite
+json_text <- '{"name": "Bob", "age": 32, "skills": ["R", "Python"]}'
+parsed    <- fromJSON(json_text)
+parsed$skills                              # "R" "Python"
+toJSON(parsed, pretty = TRUE)              # Convert back to formatted JSON
+
+# tryCatch: graceful error handling
+safe_divide <- function(a, b) {
+  tryCatch({
+    if (b == 0) stop("Cannot divide by zero!")
+    a / b
+  },
+  error   = function(e) { cat("Error:", conditionMessage(e), "\n"); NA },
+  finally = { cat("safe_divide called.\n") }
+  )
+}
+safe_divide(10, 0)   # Prints error message, returns NA, runs finally
+
+# Custom conditions
+validate_age <- function(age) {
+  if (!is.numeric(age)) stop("Age must be numeric, got: ", class(age))
+  if (age < 0)          stop("Age cannot be negative: ", age)
+  if (age > 120)        warning("Age seems unusually high: ", age)
+  age
+}
+tryCatch(validate_age(150), warning = function(w) cat("Warning:", conditionMessage(w)))</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Resilient Data Loader</strong>. Write a function <code>safe_load_csv(filepath)</code> that uses <code>tryCatch()</code> to attempt reading a CSV with <code>read_csv()</code>, catching file-not-found errors and returning an empty data frame with a printed error message instead of crashing. Test it against both a real CSV file you create and a nonexistent filename. Separately, save a list-based "config" object to RDS, reload it, and verify with <code>identical()</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 12 -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Data Visualization &amp; Statistical Modeling</h2>
+                <p>Create publication-quality visualizations with <code>ggplot2</code> and fit fundamental statistical models.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Creating publication-quality visualizations with <code>ggplot2</code> and fitting fundamental statistical models.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>The Grammar of Graphics with <code>ggplot2</code></strong> — <code>ggplot2</code> builds visualizations by layering components: data, aesthetic mappings (<code>aes()</code> — which columns map to x/y/color), and geometric objects (<code>geom_*()</code> — points, lines, bars). This layered "grammar of graphics" approach makes complex, customized plots remarkably composable.</li>
+                    <li><strong>Common Plot Types: Bar, Line, Histogram, Boxplot</strong> — <code>ggplot2</code> supports nearly every standard chart type through different <code>geom_*()</code> functions: <code>geom_col()</code> for bar charts, <code>geom_line()</code> for time series, <code>geom_histogram()</code> for distributions, and <code>geom_boxplot()</code> for comparing groups.</li>
+                    <li><strong>Linear Regression with <code>lm()</code></strong> — <code>lm()</code> fits a linear regression model using a formula syntax (<code>y ~ x</code>) that reads naturally as "y predicted by x." The resulting model object supports <code>summary()</code> for coefficients/significance and <code>predict()</code> for forecasting new values.</li>
+                    <li><strong>Summary Statistics &amp; <code>summary()</code></strong> — The <code>summary()</code> function is a polymorphic generic that provides an appropriate statistical overview depending on the object passed — a five-number summary for numeric vectors, frequency counts for factors, or full model diagnostics for an <code>lm</code> object.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>ggplot2</code> is the most used data visualization library in data science — its grammar-of-graphics approach means you can build virtually any chart by composing layers. <code>lm()</code> is R's flagship statistical function, and understanding its output (coefficients, R², p-values) is fundamental for any data science or research role.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>library(ggplot2)
+
+# Layered ggplot2: scatter + trend line
+df <- data.frame(x = 1:10, y = c(2,4,3,5,7,6,8,9,7,10),
+                 group = rep(c("A","B"), 5))
+ggplot(df, aes(x = x, y = y, color = group)) +
+  geom_point(size = 3) +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "Sample Scatter Plot") +
+  theme_minimal()
+
+# Bar chart
+scores <- data.frame(student = c("A","B","C","D"), score = c(85,92,78,88))
+ggplot(scores, aes(x = student, y = score)) +
+  geom_col(fill = "steelblue") +
+  theme_minimal()
+
+# Linear regression
+df2   <- data.frame(hours = c(1,2,3,4,5), score = c(50,58,65,75,82))
+model <- lm(score ~ hours, data = df2)  # y ~ x formula
+summary(model)                           # R², coefficients, p-values
+predict(model, newdata = data.frame(hours = 6))  # Forecast month 6
+
+# summary() — polymorphic S3 generic
+scores_vec <- c(65, 72, 88, 91, 55, 78, 82, 69)
+summary(scores_vec)                      # Five-number summary
+sd(scores_vec)                           # Standard deviation
+quantile(scores_vec, probs = c(0.25, 0.75))</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Sales Analysis &amp; Forecast Report</strong>. Create a data frame of 12 months of sales data (month 1–12, revenue). Use <code>ggplot2</code> to create a line chart of revenue over time with a fitted trend line (<code>geom_smooth</code>). Fit an <code>lm()</code> model predicting revenue from month number, print its <code>summary()</code>, and use <code>predict()</code> to forecast months 13 and 14. Create a second plot: a boxplot comparing revenue across quarters (group months into Q1–Q4 first).</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 13–16:</strong> Functional programming with purrr, performance optimization, reproducible reporting, package development, and three complete capstone projects.</p>
+        </div>
+
+        <!-- WEEK 13 -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Functional Programming with <code>purrr</code> &amp; Closures</h2>
+                <p>Master R's functional programming paradigm using the tidyverse's <code>purrr</code> package and the closures that underpin it.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering R's functional programming paradigm using the tidyverse's <code>purrr</code> package and the closures that underpin it.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>purrr::map()</code> Family</strong> — <code>purrr</code> provides a more consistent, type-safe alternative to base R's <code>apply</code> family — <code>map()</code> always returns a list, while <code>map_dbl()</code>, <code>map_chr()</code>, and <code>map_lgl()</code> return simplified vectors of a guaranteed specific type, failing loudly if that type cannot be produced.</li>
+                    <li><strong>Closures: Functions That Return Functions</strong> — A closure is a function that captures and "remembers" variables from its enclosing environment, even after that outer function has finished executing — enabling powerful patterns like function factories that generate customized functions on demand.</li>
+                    <li><strong>Decorators: Wrapping Functions for Extra Behavior</strong> — Although R has no formal <code>@decorator</code> syntax, closures let you achieve the same effect — writing a function that wraps another function, adding behavior (logging, timing, caching) before and/or after the original runs, then returning the enhanced version.</li>
+                    <li><strong>Memoization (Caching Function Results)</strong> — Memoization is a performance optimization, typically implemented via a closure, that caches a function's previous results so repeated calls with the same arguments return instantly from the cache instead of recomputing. This is especially valuable for expensive recursive functions.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>purrr</code>'s type-safe <code>map_dbl()</code>/<code>map_chr()</code> family prevents a whole class of silent type-coercion bugs that <code>sapply()</code> can introduce. Closures and decorators are the patterns behind every timing, logging, retry, and caching abstraction in professional R packages — understanding them makes you a far more powerful R programmer.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>library(purrr)
+
+# purrr map family — type-guaranteed returns
+numbers <- list(4, 9, 16, 25)
+map(numbers, sqrt)                               # Always returns a LIST
+map_dbl(numbers, sqrt)                           # DOUBLE vector guaranteed: 2 3 4 5
+map_chr(numbers, ~ paste0("Value: ", .x))        # ~.x is purrr lambda shorthand
+
+# Closure: function factory
+make_multiplier <- function(factor) {
+  function(x) x * factor    # Closes over `factor` permanently
+}
+double <- make_multiplier(2)
+triple <- make_multiplier(3)
+double(5); triple(5)  # 10  15 — each closure has its own private `factor`
+
+# Decorator-style closure: adds timing to any function
+with_timing <- function(f) {
+  function(...) {
+    start  <- Sys.time()
+    result <- f(...)
+    cat("Took:", Sys.time() - start, "\n")
+    result
+  }
+}
+slow_sum  <- function(n) sum(1:n)
+timed_sum <- with_timing(slow_sum)
+timed_sum(1000000)
+
+# Memoization via closure
+make_memoized_fib <- function() {
+  cache <- c(1, 1)
+  function(n) {
+    if (n <= length(cache)) return(cache[n])   # Cache hit!
+    result   <- Recall(n-1) + Recall(n-2)
+    cache[n] <<- result                         # Store result
+    result
+  }
+}
+fib <- make_memoized_fib()
+fib(20)   # Computed once; subsequent identical calls return instantly</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Function Enhancement Toolkit</strong>. Using <code>purrr::map_dbl()</code>, apply a custom statistics function across a list of 5 numeric vectors of different lengths. Write a <code>with_logging(f)</code> decorator-style closure that prints the function name and arguments before calling the wrapped function. Write a memoized factorial function using a closure-based cache and demonstrate that repeated calls with the same input are near-instant compared to the first call.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 14 -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Performance, Vectorization &amp; Parallel Computing</h2>
+                <p>Write efficient R code by avoiding common performance pitfalls and leveraging multi-core parallel processing.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing efficient R code by avoiding common performance pitfalls and leveraging multi-core parallel processing.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Vectorization vs Explicit Loops (Performance)</strong> — R's vectorized operations (built on optimized C code under the hood) are dramatically faster than equivalent explicit <code>for</code> loops for large datasets, because they avoid R's per-iteration interpreter overhead. Profiling with <code>system.time()</code> reveals this difference concretely.</li>
+                    <li><strong>Pre-allocating Memory</strong> — Growing a vector or list inside a loop (e.g., <code>result &lt;- c(result, new_value)</code>) forces R to repeatedly copy the entire growing structure into new memory — a major performance trap. Pre-allocating the full-size container upfront with <code>vector()</code> or <code>numeric()</code> avoids this entirely.</li>
+                    <li><strong>Profiling Code with <code>Rprof()</code> / <code>microbenchmark</code></strong> — The <code>microbenchmark</code> package precisely times and statistically compares multiple implementations of the same task, running each thousands of times to produce reliable performance distributions. This is the standard tool for evidence-based optimization decisions.</li>
+                    <li><strong>Parallel Computing with the <code>parallel</code> Package</strong> — The built-in <code>parallel</code> package's <code>mclapply()</code> (Mac/Linux) or <code>parLapply()</code> (cross-platform, with clusters) distributes independent computations across multiple CPU cores simultaneously, dramatically speeding up embarrassingly-parallel workloads like simulations or per-row data processing.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The growing-vector-in-a-loop anti-pattern turns O(n) work into O(n²) — a script that takes 1 second on 1,000 rows takes 1,000 seconds on 1,000,000 rows. <code>microbenchmark</code> prevents premature optimization by showing you where the actual bottlenecks are, not where you guess them to be.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>library(microbenchmark); library(parallel)
+
+n <- 1000000; x <- 1:n
+
+# Vectorized vs loop — concrete performance comparison
+system.time({
+  result_loop <- numeric(n)
+  for (i in 1:n) result_loop[i] <- x[i]^2   # SLOW: interpreter overhead per step
+})
+system.time({ result_vec <- x^2 })            # FAST: optimized C internally
+
+# Pre-allocation — avoid growing vectors in loops
+n <- 10000
+# BAD: result <- c(); for (i in 1:n) result <- c(result, i^2)  ← AVOID
+result <- numeric(n)                           # GOOD: allocate ALL space upfront
+for (i in 1:n) result[i] <- i^2               # Fill by index — no copying
+
+# microbenchmark: evidence-based comparison
+x_bench <- 1:10000
+microbenchmark(
+  loop_version   = { s <- 0; for(i in x_bench) s <- s + i },
+  sapply_version = sum(sapply(x_bench, identity)),
+  vectorized     = sum(x_bench),
+  times = 100
+)
+
+# Parallel computing
+detectCores()
+slow_square <- function(x) { Sys.sleep(0.01); x^2 }
+results <- mclapply(1:20, slow_square, mc.cores = detectCores() - 1)</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Performance Optimization Case Study</strong>. Write three implementations of a function that computes the cumulative sum of squares for 50,000 numbers: a naive growing-vector loop, a pre-allocated loop, and a fully vectorized version. Benchmark all three using <code>microbenchmark</code> (10 runs each) and print the results. Use <code>mclapply()</code>/<code>parLapply()</code> to parallelize a simulated "slow" computation (<code>Sys.sleep</code>) across at least 20 independent tasks, comparing total time against sequential <code>lapply()</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 15 -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Reproducible Reporting &amp; Package Development</h2>
+                <p>Create shareable, reproducible analysis reports with R Markdown/Quarto and package your own R code for reuse.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Creating shareable, reproducible analysis reports with R Markdown/Quarto and packaging your own R code for reuse.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>R Markdown / Quarto Documents</strong> — R Markdown (and its successor, Quarto) lets you combine narrative text, executable R code, and rendered output (tables, plots) in a single document that compiles to HTML, PDF, or Word — the standard tool for reproducible data analysis reporting in R.</li>
+                    <li><strong>Code Chunks &amp; Chunk Options</strong> — Within an R Markdown/Quarto document, R code lives in "chunks" with optional settings controlling whether code, output, or warnings are displayed in the final rendered document. This fine-grained control is essential for producing clean, presentation-ready reports.</li>
+                    <li><strong>Creating an R Package Structure</strong> — Packaging your reusable functions into a formal R package (using <code>usethis::create_package()</code>) provides a standardized structure for documentation, testing, and sharing — the same format used by every package on CRAN.</li>
+                    <li><strong>Writing Function Documentation with <code>roxygen2</code></strong> — <code>roxygen2</code> comments (prefixed with <code>#'</code>) sit directly above a function definition and generate proper <code>.Rd</code> help documentation automatically, viewable via <code>?function_name</code> once the package is built. This keeps documentation co-located with the code it describes.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Reproducible reports are the gold standard in data science — a Quarto document can be re-run six months later on new data and produce an identical analysis automatically. Publishing a package on CRAN or GitHub is the highest form of R code sharing, and the skills here (roxygen2, testthat, usethis) are what separate a script writer from a professional R developer.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>library(usethis)
+
+# R Markdown / Quarto chunk options:
+# ---
+# title: "Sales Report"
+# output: html_document
+# ---
+# ## Summary
+# This report analyzes quarterly sales trends.
+#
+# ```{r summary-chunk, echo=FALSE, warning=FALSE}
+# summary(mtcars$mpg)   # Code runs; output shown; code itself hidden
+# ```
+#
+# ```{r plot-chunk, echo=FALSE, fig.width=8}
+# library(ggplot2)
+# ggplot(mtcars, aes(x = wt, y = mpg)) + geom_point()
+# ```
+
+# Package scaffolding
+create_package("~/myFirstPackage")  # Standard package folder structure
+use_r("statistics_helpers")         # Creates R/statistics_helpers.R
+use_testthat()                      # Sets up testthat testing framework
+use_roxygen_md()                    # Enables roxygen2 documentation
+
+# roxygen2 documentation — sits above the function
+#' Calculate Body Mass Index
+#'
+#' @param weight_kg Numeric. Weight in kilograms.
+#' @param height_m Numeric. Height in meters.
+#' @return Numeric BMI value.
+#' @examples
+#' calculate_bmi(70, 1.75)
+calculate_bmi <- function(weight_kg, height_m) {
+  weight_kg / (height_m^2)
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Reproducible Analysis Report and a Mini Package</strong>. Create a Quarto/<code>.Rmd</code> document analyzing the built-in <code>mtcars</code> dataset: include narrative markdown sections, at least 2 code chunks (one hidden with <code>echo=FALSE</code>), a <code>ggplot2</code> visualization, and a summary table. Render it to HTML. Separately, scaffold a minimal R package containing 2 of your functions from previous weeks, complete with <code>roxygen2</code> documentation comments and at least one <code>testthat</code> unit test.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 16  -->
+
+        <div class="rm-card" id="week16">
+            <div class="rm-card-header">
+                <h2>Week 16 — Capstone Mini Projects (Beginner → Master)</h2>
+                <p>Apply everything learned across the entire curriculum in three complete, real-world R data analysis projects.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Applying everything learned across the entire 16-week curriculum in three complete, portfolio-ready R data analysis projects.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — Personal Finance Tracker &amp; Dashboard (Beginner–Intermediate)</h3>
+                <p>A script-based tool that ingests a CSV of personal transactions and produces a categorized spending summary with visualizations. Reinforces Phase 1–2 fundamentals: data frames, vectors, dplyr pipelines, and ggplot2.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>R Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Read CSV of transactions</td>
+                            <td><code>readr::read_csv()</code></td>
+                        </tr>
+                        <tr>
+                            <td>Clean data &amp; parse dates</td>
+                            <td><code>lubridate</code> + <code>dplyr</code> pipeline</td>
+                        </tr>
+                        <tr>
+                            <td>Total spending per category/month</td>
+                            <td><code>dplyr::group_by()</code> + <code>summarize()</code></td>
+                        </tr>
+                        <tr>
+                            <td>Flag large purchases</td>
+                            <td><code>ifelse()</code> + custom functions</td>
+                        </tr>
+                        <tr>
+                            <td>Spend-by-category bar chart</td>
+                            <td><code>ggplot2::geom_col()</code></td>
+                        </tr>
+                        <tr>
+                            <td>Spend-over-time line chart</td>
+                            <td><code>ggplot2::geom_line()</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A fully functional personal finance tracker with CSV ingestion, <code>lubridate</code> date parsing, <code>dplyr</code> aggregation pipelines, two <code>ggplot2</code> visualizations, and a clean summary CSV output. Push to GitHub with a <code>README.md</code> including a sample data format and instructions to run.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — Customer Segmentation Analysis Tool (Intermediate–Advanced)</h3>
+                <p>An object-oriented statistical analysis tool that loads customer data, performs clustering analysis, and generates a full reproducible report — combining OOP, statistical modeling, and error handling.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>R Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>R6 class <code>CustomerDataset</code></td>
+                            <td>R6 OOP with private state + public methods</td>
+                        </tr>
+                        <tr>
+                            <td>Robust file loading</td>
+                            <td><code>tryCatch()</code> with informative error messages</td>
+                        </tr>
+                        <tr>
+                            <td>K-means customer segmentation</td>
+                            <td><code>kmeans()</code> statistical modeling</td>
+                        </tr>
+                        <tr>
+                            <td>Custom S3 output methods</td>
+                            <td><code>print.segmentation_result</code> + <code>summary.segmentation_result</code></td>
+                        </tr>
+                        <tr>
+                            <td>Cluster scatter + segment bar plots</td>
+                            <td><code>ggplot2</code> layered visualizations</td>
+                        </tr>
+                        <tr>
+                            <td>Full HTML report</td>
+                            <td>Quarto / R Markdown with code chunks</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A complete customer segmentation tool demonstrating R6 OOP, <code>tryCatch()</code>-based resilient file loading, k-means clustering, custom S3 print/summary methods, and two <code>ggplot2</code> visualizations — all tied together in a rendered Quarto HTML report. Push to GitHub with a design explanation in the README.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Automated Stock Analysis &amp; Forecasting Package (Advanced–Master)</h3>
+                <p>A complete, installable R package providing reusable functions for downloading, analyzing, and forecasting stock price data — demonstrating the full depth of professional R development covered in this curriculum.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>R Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Formal package structure</td>
+                            <td><code>usethis::create_package()</code> + <code>DESCRIPTION</code></td>
+                        </tr>
+                        <tr>
+                            <td>Core analysis functions with docs</td>
+                            <td><code>roxygen2</code> documentation + <code>testthat</code> tests</td>
+                        </tr>
+                        <tr>
+                            <td>R6 class <code>StockPortfolio</code></td>
+                            <td>R6 with private state + public methods</td>
+                        </tr>
+                        <tr>
+                            <td>Linear regression price forecast</td>
+                            <td><code>lm()</code> + <code>predict()</code> + <code>tryCatch()</code></td>
+                        </tr>
+                        <tr>
+                            <td>Performance-optimized calculations</td>
+                            <td>Vectorization + <code>purrr::map_dbl()</code> + <code>microbenchmark</code></td>
+                        </tr>
+                        <tr>
+                            <td>Bundled Quarto vignette</td>
+                            <td>Package <code>vignettes/</code> folder with full workflow</td>
+                        </tr>
+                        <tr>
+                            <td>Parallel batch stock analysis</td>
+                            <td><code>parallel::mclapply()</code> across multiple stocks</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A production-grade, installable R package with <code>roxygen2</code> documentation, <code>testthat</code> unit tests, an R6 portfolio class, <code>lm()</code>-based forecasting, vectorized + <code>purrr</code>-optimized calculations benchmarked with <code>microbenchmark</code>, parallel batch processing via <code>mclapply()</code>, and a bundled Quarto vignette. This is the capstone that demonstrates mastery of the complete R curriculum. Push to GitHub and include installation instructions (<code>devtools::install_github("...")</code>) in the README.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–4</td>
+                        <td>Absolute Basics</td>
+                        <td>Set up RStudio; use vectors, matrices, lists, factors, and data frames to load, inspect, and write real data</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>5–8</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Write conditional logic, apply-family loops, custom functions, and tidyverse pipelines with stringr, lubridate, and dplyr</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>9–12</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Design S3/S4/R6 OOP systems, handle errors with tryCatch, persist data with RDS/JSON, and build ggplot2 visualizations and lm() models</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>13–16</td>
+                        <td>Master Level Concepts</td>
+                        <td>Apply purrr functional programming, closures, and decorators; optimize performance; build reproducible Quarto reports; develop formal R packages; and complete three production-grade projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool / Resource</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RStudio Desktop (posit.co)</td>
+                        <td>Primary IDE for R development</td>
+                    </tr>
+                    <tr>
+                        <td>CRAN (cran.r-project.org)</td>
+                        <td>Official package repository — install any package</td>
+                    </tr>
+                    <tr>
+                        <td>tidyverse.org</td>
+                        <td>Documentation for dplyr, ggplot2, purrr, stringr, lubridate</td>
+                    </tr>
+                    <tr>
+                        <td>R for Data Science (r4ds.hadley.nz)</td>
+                        <td>Free, definitive tidyverse reference book by Hadley Wickham</td>
+                    </tr>
+                    <tr>
+                        <td>Advanced R (adv-r.hadley.nz)</td>
+                        <td>Deep dive into R's OOP systems, environments, and internals</td>
+                    </tr>
+                    <tr>
+                        <td>Quarto (quarto.org)</td>
+                        <td>Modern reproducible reporting framework (successor to R Markdown)</td>
+                    </tr>
+                    <tr>
+                        <td>testthat (testthat.r-lib.org)</td>
+                        <td>Unit testing framework for R packages</td>
+                    </tr>
+                    <tr>
+                        <td>R Packages book (r-pkgs.org)</td>
+                        <td>Authoritative guide to package development by Hadley Wickham</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Complete each week's task before moving on — writing and running R code every day beats reading alone by a wide margin, especially for data wrangling and visualization.</li>
+                    <li>Use the built-in <strong>datasets</strong> (<code>mtcars</code>, <code>iris</code>, <code>airquality</code>) for quick experimentation whenever you do not have your own data yet — they are always available with no loading required.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — your commit history is visible proof of consistent progress and an impressive data science portfolio for future employers.</li>
+                    <li>Use <strong>RStudio's debugger</strong> (<code>browser()</code> inside a function, or clicking the margin to set breakpoints) from Week 7 onward — it is the fastest way to understand what your functions are actually doing.</li>
+                    <li>By Week 16, you should have three complete, deployed projects and the confidence to build any R data analysis pipeline, statistical model, or installable package from scratch.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

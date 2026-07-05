@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: Beginner to Master — 24 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>JavaScript: Beginner to Master</h1>
+        <p>Complete 24-Week Curriculum — From Core Syntax to Asynchronous, Production-Grade Applications</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#week16">W16</a>
+        <a href="#week17">W17</a>
+        <a href="#week18">W18</a>
+        <a href="#week19">W19</a>
+        <a href="#week20">W20</a>
+        <a href="#week21">W21</a>
+        <a href="#week22">W22</a>
+        <a href="#week23">W23</a>
+        <a href="#week24">W24</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>24-week, phase-based JavaScript curriculum</strong> designed to take a complete beginner to a professional-level JavaScript developer. The roadmap moves from <strong>core syntax, runtime, and types</strong> through <strong>control flow, functions, data structures, OOP, asynchronous programming, and Node.js</strong>, all the way to <strong>generators, design patterns, performance optimization, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics and JavaScript's dynamic type system, <strong>Phase 2</strong> covers control flow, functions, and modern data structures, <strong>Phase 3</strong> covers object-oriented design, error handling, async programming, and the Node.js ecosystem, and <strong>Phase 4</strong> takes you into generators, advanced async patterns, design patterns, performance, and production-level projects.</p>
+            <p>By Week 24, you will have built three complete, portfolio-ready applications and be confident writing modern JavaScript for both the browser and Node.js environments.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 24 weeks &nbsp;|&nbsp; <strong>Study Time:</strong> ~5–8 hours/week &nbsp;|&nbsp; <strong>Environments:</strong> Browser + Node.js</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–5:</strong> Build a rock-solid foundation in JavaScript syntax, the runtime, and data types.</p>
+        </div>
+
+        <!--  WEEK 1 -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — JavaScript Setup &amp; Your First Script</h2>
+                <p>Understand where JavaScript runs and write your very first program.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding where JavaScript runs and writing your first program.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>The JavaScript Runtime (Browser vs Node.js)</strong> — JavaScript runs inside a browser engine like V8 in Chrome, or standalone via Node.js on a server. Both share the core language but differ in available built-ins like <code>window</code> or <code>process</code>.</li>
+                    <li><strong>Linking Scripts &amp; Node Execution</strong> — In the browser, JS is loaded via a <code>&lt;script&gt;</code> tag; in Node, you run a <code>.js</code> file with the <code>node</code> command. Understanding both contexts is essential before diving into the language itself.</li>
+                    <li><strong><code>console.log()</code> &amp; Developer Tools</strong> — <code>console.log()</code> prints values to the console and is the most basic debugging tool in JavaScript. Browser DevTools and the Node terminal both display this output.</li>
+                    <li><strong>Comments &amp; Code Structure</strong> — Single-line (<code>//</code>) and multi-line (<code>/* */</code>) comments document code without being executed. JavaScript files are processed top-to-bottom unless functions or modules alter that flow.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Before writing any logic, you need to understand where JavaScript runs, how it is executed, and how to see output. The browser/Node distinction shapes everything from available APIs to how you debug problems.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// hello.js - Your first JavaScript program
+console.log("Hello, JavaScript World!");
+
+/* Multi-line comment:
+   This script runs top-to-bottom in Node or the browser. */
+let today = "Setup Day";
+console.log("Today is:", today);</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Install Node.js, write a <code>hello.js</code> file that prints your name and a welcome message, then run it using <code>node hello.js</code> from the terminal.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 2 -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Variables &amp; Primitive Data Types</h2>
+                <p>Store data using JavaScript's dynamic and flexible type system.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Storing data using JavaScript's dynamic type system.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>let</code>, <code>const</code>, and <code>var</code></strong> — <code>let</code> and <code>const</code> are modern, block-scoped declarations, while <code>var</code> is the older function-scoped style to avoid in new code. <code>const</code> prevents reassignment, making intent clearer.</li>
+                    <li><strong>Primitive Types</strong> — JavaScript has primitives including <code>number</code>, <code>string</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>, and <code>bigint</code>. Unlike Java, JS does not require explicit type declarations.</li>
+                    <li><strong>Dynamic Typing</strong> — A variable's type can change at runtime because JavaScript does not enforce types at declaration. This flexibility requires extra discipline to avoid type-related bugs.</li>
+                    <li><strong><code>typeof</code> Operator</strong> — <code>typeof</code> returns a string describing a value's current type, useful for debugging and runtime validation.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> JavaScript's dynamic type system is both its greatest strength and a common source of bugs. Understanding how types work from the beginning saves countless hours of debugging later.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>let age = 25;               // number
+const name = "Alice";       // string, cannot be reassigned
+let isActive = true;        // boolean
+let nothing = null;         // intentional empty value
+console.log(typeof age, typeof name, typeof isActive);</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Create a script that declares variables for a product (name, price, quantity, inStock) and logs a formatted summary using <code>console.log()</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 3 -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Operators &amp; Type Coercion</h2>
+                <p>Manipulate data and understand JavaScript's flexible type conversions.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Manipulating data and understanding JavaScript's flexible type conversions.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Arithmetic Operators</strong> — <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, and <code>**</code> perform mathematical operations. JavaScript numbers are always floating-point internally, even for whole numbers.</li>
+                    <li><strong>Comparison Operators: <code>==</code> vs <code>===</code></strong> — <code>==</code> compares values after type coercion, while <code>===</code> compares both value and type without conversion. Using <code>===</code> is always the recommended default.</li>
+                    <li><strong>Logical Operators &amp; Truthy/Falsy Values</strong> — <code>&amp;&amp;</code>, <code>||</code>, and <code>!</code> combine boolean logic, and JS treats values like <code>0</code>, <code>""</code>, and <code>null</code> as falsy. Understanding truthiness is critical for correct conditionals.</li>
+                    <li><strong>Type Coercion</strong> — JavaScript automatically converts types in many operations. Explicit conversion with <code>Number()</code> or <code>String()</code> avoids relying on these implicit rules.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> JavaScript's type coercion is one of its most misunderstood features. Knowing exactly when and how types are converted prevents entire categories of bugs.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>console.log(5 + "5");       // "55" (coercion: number to string)
+console.log(5 === "5");     // false (strict: different types)
+console.log(5 == "5");      // true (loose: coerced first)
+console.log(Boolean(0));    // false (falsy value)
+console.log(Number("42"));  // 42 (explicit conversion)</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a script that takes a temperature in Celsius (as a string) and converts it to Fahrenheit, demonstrating explicit type conversion with <code>Number()</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 4 -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Strings &amp; Template Literals</h2>
+                <p>Work with and transform text data using JavaScript's powerful string tools.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Working with and transforming text data.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>String Methods</strong> — Methods like <code>.length</code>, <code>.toUpperCase()</code>, <code>.slice()</code>, and <code>.includes()</code> let you inspect and transform text, used constantly in real-world data processing.</li>
+                    <li><strong>Template Literals</strong> — Backtick-delimited strings allow embedded expressions via <code>${}</code> and multi-line text without concatenation. They are the modern standard for building dynamic strings.</li>
+                    <li><strong>String Immutability</strong> — Strings in JavaScript cannot be changed in place. Methods always return new strings rather than modifying the original.</li>
+                    <li><strong>String Searching &amp; Splitting</strong> — Methods like <code>.indexOf()</code>, <code>.split()</code>, and <code>.replace()</code> locate or break apart text. These are foundational for parsing and formatting user input.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> String manipulation is one of the most common tasks in any JavaScript program. Template literals alone transform how readable and maintainable dynamic text output can be.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>const name = "javascript";
+const upper = name.toUpperCase();
+const greeting = `Hello, ${name}! You have ${5} new messages.`;
+console.log(greeting);
+console.log(name.split("").reverse().join(""));</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a script that takes a sentence and logs the word count, the reversed sentence, and the sentence in all uppercase using template literals for every output line.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 5 -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Arrays &amp; Basic Objects</h2>
+                <p>Store ordered and structured collections of related data.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Storing collections of related data using arrays and object literals.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Array Declaration &amp; Indexing</strong> — Arrays hold ordered collections of values accessed via zero-based indices. They are dynamically resizable and can hold mixed types.</li>
+                    <li><strong>Common Array Methods</strong> — Methods like <code>.push()</code>, <code>.pop()</code>, <code>.length</code>, and <code>.indexOf()</code> manipulate and inspect array contents. Mastering these prepares you for higher-order array methods later.</li>
+                    <li><strong>Object Literals</strong> — Objects store key-value pairs using curly-brace syntax, representing structured real-world entities. Dot or bracket notation accesses properties.</li>
+                    <li><strong>Iterating Arrays with <code>for</code> and <code>for...of</code></strong> — A standard <code>for</code> loop provides full index control, while <code>for...of</code> simplifies iteration when only values are needed.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Arrays and objects are the two most important data containers in JavaScript. Nearly every program you write will use both heavily, and they are the building blocks of more advanced data structures.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>const scores = [90, 85, 77];
+scores.push(100);
+for (const score of scores) {
+    console.log(score);
+}
+const person = { name: "Alice", age: 30 };
+console.log(person.name, person["age"]);</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Build a script that stores 5 numbers in an array, calculates their sum and average, and stores the result in an object with <code>sum</code> and <code>average</code> keys.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 6–10:</strong> Learn to direct program execution and organize code into reusable, modular units.</p>
+        </div>
+
+        <!--  WEEK 6  -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Conditional Statements</h2>
+                <p>Make decisions in code using JavaScript's conditional constructs.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Making decisions in code.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>if</code>, <code>else if</code>, <code>else</code></strong> — These statements branch execution based on a condition evaluated top to bottom. Only the first truthy branch executes its block.</li>
+                    <li><strong><code>switch</code> Statements</strong> — <code>switch</code> compares one value against multiple cases, serving as a cleaner alternative to long if-else chains. Each case typically ends with <code>break</code>.</li>
+                    <li><strong>Ternary Operator</strong> — The <code>condition ? valueIfTrue : valueIfFalse</code> syntax compresses simple if-else logic into a single expression, commonly used for concise variable assignments.</li>
+                    <li><strong>Optional Chaining &amp; Nullish Coalescing</strong> — <code>?.</code> safely accesses nested properties without throwing on <code>null</code>/<code>undefined</code>, while <code>??</code> provides a fallback only when a value is null or undefined.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Decision-making is the foundation of all program logic. Optional chaining and nullish coalescing are modern JavaScript features that make defensive coding far cleaner and more readable.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>const age = 20;
+const status = age >= 18 ? "Adult" : "Minor";
+console.log(status);
+const user = { profile: null };
+console.log(user.profile?.bio ?? "No bio set");</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a grading script that converts a numeric score (0–100) into a letter grade using <code>if-else</code>, then rewrite the same logic using a <code>switch</code> statement.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 7 -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Loops &amp; Iteration</h2>
+                <p>Repeat actions efficiently over data using JavaScript's loop constructs.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Repeating actions efficiently over data.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>for</code> Loop</strong> — The classic loop combines initialization, condition, and increment for precise counting iterations. It remains the most flexible loop for index-based logic.</li>
+                    <li><strong><code>while</code> and <code>do...while</code> Loops</strong> — <code>while</code> checks its condition before each pass, while <code>do...while</code> always runs once first. Choose based on whether the first execution should be unconditional.</li>
+                    <li><strong><code>break</code> and <code>continue</code></strong> — <code>break</code> exits a loop entirely, while <code>continue</code> skips to the next iteration, providing finer control beyond the basic condition.</li>
+                    <li><strong><code>for...in</code> vs <code>for...of</code></strong> — <code>for...in</code> iterates over an object's enumerable keys, while <code>for...of</code> iterates over values in iterables like arrays. Confusing these is a common beginner mistake.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Loops are how programs process collections and automate repetition. The distinction between <code>for...in</code> and <code>for...of</code> alone prevents many subtle bugs when working with objects and arrays.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>for (let i = 1; i &lt;= 5; i++) {
+    if (i === 3) continue;
+    console.log(i);
+}
+const obj = { a: 1, b: 2 };
+for (const key in obj) {
+    console.log(key, obj[key]);
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a script that prints a multiplication table (1–10) for a number set in a variable, then extend it to print a full 10x10 grid using nested loops.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Functions Deep Dive</h2>
+                <p>Write reusable, organized blocks of logic using all of JavaScript's function forms.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing reusable, organized blocks of logic.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Function Declarations &amp; Expressions</strong> — Functions can be declared with the <code>function</code> keyword or assigned as expressions. Declarations are hoisted, while expressions are not, affecting when they can be called.</li>
+                    <li><strong>Arrow Functions</strong> — Arrow functions offer concise syntax and do not bind their own <code>this</code>, inheriting it from the surrounding scope. They are the modern default for short, anonymous functions.</li>
+                    <li><strong>Default &amp; Rest Parameters</strong> — Default parameters provide fallback values when arguments are omitted. Rest parameters (<code>...args</code>) gather any number of extra arguments into an array.</li>
+                    <li><strong>Higher-Order Functions</strong> — Functions that accept or return other functions are central to JavaScript's functional style and underlie array methods like <code>map</code> and <code>filter</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Functions are the fundamental unit of reusability in JavaScript. Arrow functions and higher-order functions are used everywhere in modern JS, from event handlers to React components.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>function add(a, b = 0) {
+    return a + b;
+}
+const multiply = (a, b) =&gt; a * b;
+function sumAll(...nums) {
+    return nums.reduce((total, n) =&gt; total + n, 0);
+}
+console.log(add(5), multiply(2, 3), sumAll(1, 2, 3));</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a <code>calculate</code> arrow function that accepts an operator string and two numbers, supporting add, subtract, multiply, and divide operations.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 9 -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Arrays Deep Dive: <code>map</code>, <code>filter</code>, <code>reduce</code></h2>
+                <p>Process collections declaratively instead of with manual loops.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Processing collections declaratively instead of with manual loops.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>.map()</code></strong> — Transforms every array element into a new array based on a callback, without mutating the original. It is the go-to method for applying a transformation across an entire list.</li>
+                    <li><strong><code>.filter()</code></strong> — Builds a new array containing only elements that pass a given test function, replacing manual loops that conditionally push to a results array.</li>
+                    <li><strong><code>.reduce()</code></strong> — Collapses an array into a single accumulated value via a callback and initial value. It is the most powerful but often the trickiest array method to master.</li>
+                    <li><strong>Method Chaining</strong> — Array methods can be chained together like <code>.filter().map().reduce()</code> to build readable, declarative data pipelines favored in modern JavaScript.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> These three methods are the backbone of modern JavaScript data processing. Once you internalize them, you will rarely need to write a manual loop for array transformations again.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>const nums = [1, 2, 3, 4, 5, 6];
+const result = nums
+    .filter(n =&gt; n % 2 === 0)
+    .map(n =&gt; n * n)
+    .reduce((sum, n) =&gt; sum + n);
+console.log(result); // 56</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Given an array of product objects with <code>name</code> and <code>price</code> properties, use <code>.filter()</code> and <code>.map()</code> to get names of products priced under $50, then use <code>.reduce()</code> to sum all prices.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 10-->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Maps, Sets &amp; Modules</h2>
+                <p>Use specialized data structures and organize code across files with ES Modules.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Specialized data structures and code organization across files.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>Map</code></strong> — Stores key-value pairs where keys can be any type, maintains insertion order, and offers cleaner iteration than plain objects for dynamic key sets.</li>
+                    <li><strong><code>Set</code></strong> — Stores only unique values, automatically discarding duplicates. Ideal for membership checks and deduplicating arrays.</li>
+                    <li><strong>ES Modules (<code>import</code>/<code>export</code>)</strong> — Modules split code across files, explicitly exporting and importing only what is needed. This replaces older global-script patterns with clean dependency management.</li>
+                    <li><strong>Destructuring</strong> — Array and object destructuring extract multiple values into variables in one concise statement, dramatically reducing boilerplate when working with structured data.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> ES Modules are the standard for organizing modern JavaScript projects. Map and Set solve real data problems that plain objects and arrays handle awkwardly.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// mathUtils.js
+export const square = (n) =&gt; n * n;
+
+// main.js
+import { square } from "./mathUtils.js";
+const uniqueNums = new Set([1, 2, 2, 3]);
+const { name, age } = { name: "Alice", age: 30 };
+console.log(square(4), uniqueNums, name, age);</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Split a set of string utility functions into a separate module file, import them into a main script, and use a <code>Set</code> to deduplicate a list of sample words.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 11–17:</strong> Master OOP, error handling, asynchronous programming, and the Node.js ecosystem.</p>
+        </div>
+
+        <!-- WEEK 11 -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Objects &amp; Object-Oriented Basics</h2>
+                <p>Model real-world entities with objects and understand JavaScript's prototype system.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Modeling real-world entities with objects and prototypes.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Object Creation Patterns</strong> — Objects can be created via literals, constructor functions, or <code>Object.create()</code>, each with different use cases. These patterns clarify how JavaScript's flexible object model works.</li>
+                    <li><strong>The Prototype Chain</strong> — Every JavaScript object has an internal link to a prototype it inherits from. This chain is the mechanism behind all inheritance in JavaScript.</li>
+                    <li><strong><code>this</code> Keyword</strong> — <code>this</code> refers to the context an object method is called on, which can change depending on how a function is invoked. Arrow functions and regular functions handle <code>this</code> differently.</li>
+                    <li><strong><code>Object.keys()</code>, <code>values()</code>, <code>entries()</code></strong> — These methods extract an object's keys, values, or key-value pairs as arrays, bridging objects into the array method ecosystem.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Understanding the prototype chain and how <code>this</code> works is what separates JavaScript developers who "use" OOP from those who truly understand it. This knowledge is also tested in almost every technical interview.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>const car = {
+    model: "Tesla",
+    year: 2024,
+    describe() {
+        return `${this.model} (${this.year})`;
+    }
+};
+console.log(car.describe());
+console.log(Object.keys(car));</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Create a <code>book</code> object with title, author, and price properties plus a <code>displayInfo()</code> method, then use <code>Object.entries()</code> to log each property and its value.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 12 -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — ES6 Classes &amp; Encapsulation</h2>
+                <p>Use modern class syntax to structure object-oriented JavaScript code.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Using modern class syntax to structure object-oriented code.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Class Declarations &amp; Constructors</strong> — The <code>class</code> keyword provides clean syntax over prototype-based inheritance. The <code>constructor()</code> method initializes new instances.</li>
+                    <li><strong>Instance Methods &amp; Properties</strong> — Methods inside a class body become part of each instance's prototype, while constructor-assigned properties belong to each individual object.</li>
+                    <li><strong>Private Fields (<code>#field</code>)</strong> — The <code>#</code> prefix marks class fields and methods as truly private, inaccessible from outside the class — giving JavaScript proper encapsulation.</li>
+                    <li><strong>Getters &amp; Setters</strong> — <code>get</code> and <code>set</code> keywords define methods that behave like properties, allowing validation logic to run transparently on read and write access.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> ES6 classes and private fields are now standard in modern JavaScript codebases. Private fields in particular solve a long-standing problem with encapsulation in JavaScript OOP.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>class BankAccount {
+    #balance = 0;
+    deposit(amount) {
+        if (amount &gt; 0) this.#balance += amount;
+    }
+    get balance() { return this.#balance; }
+}
+const acc = new BankAccount();
+acc.deposit(100);
+console.log(acc.balance); // 100</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Refactor your <code>book</code> object from Week 11 into a <code>Book</code> class with private fields, a constructor, and a setter for price that rejects negative values.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 13-->
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Inheritance &amp; Polymorphism</h2>
+                <p>Build class hierarchies and write flexible, reusable behavior across related types.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Building class hierarchies and flexible, reusable behavior.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>extends</code> &amp; Subclasses</strong> — A class can inherit from another using <code>extends</code>, gaining the parent's methods and properties. This promotes code reuse across related object types.</li>
+                    <li><strong><code>super</code> Keyword</strong> — <code>super()</code> calls the parent constructor, and <code>super.method()</code> calls an overridden parent method. Essential when a subclass needs to extend rather than fully replace parent behavior.</li>
+                    <li><strong>Method Overriding</strong> — A subclass can redefine an inherited method, and JavaScript will use the subclass version at runtime — enabling polymorphic behavior.</li>
+                    <li><strong><code>instanceof</code> &amp; Type Checking</strong> — <code>instanceof</code> checks whether an object was created from a particular class or its subclasses. Useful for runtime type-checking in polymorphic code.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Inheritance and polymorphism allow writing flexible code that works across many object types without knowing the exact type in advance — a concept used throughout modern JavaScript frameworks.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>class Animal {
+    speak() { return "Some sound"; }
+}
+class Dog extends Animal {
+    speak() { return "Woof!"; }
+}
+const pet = new Dog();
+console.log(pet.speak());          // "Woof!"
+console.log(pet instanceof Animal); // true</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Create a <code>Shape</code> base class with an <code>area()</code> method, then build <code>Circle</code> and <code>Rectangle</code> subclasses that override it. Loop through an array of shapes logging each area.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 14-->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Error Handling &amp; Defensive Coding</h2>
+                <p>Write resilient code that handles failures gracefully instead of crashing.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing resilient code that handles failures gracefully.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>try...catch...finally</code></strong> — Risky code goes in <code>try</code>, errors are caught in <code>catch</code>, and <code>finally</code> always runs. This isolates failures from crashing the rest of the program.</li>
+                    <li><strong>The <code>Error</code> Object &amp; Custom Errors</strong> — JavaScript's <code>Error</code> object carries a message and stack trace, and can be extended to create custom error types like <code>ValidationError</code>.</li>
+                    <li><strong><code>throw</code> Statement</strong> — <code>throw</code> manually raises an error, immediately halting normal execution until caught. It is how your own code signals that something has gone wrong.</li>
+                    <li><strong>Validating Input Defensively</strong> — Checking arguments and throwing early for invalid input prevents bugs from silently propagating deeper. This "fail fast" approach is a hallmark of professional code.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Unhandled errors crash applications and expose users to bad experiences. Proper error handling, especially in async code (Weeks 15–16), is what separates production-ready code from prototype code.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>class InsufficientFundsError extends Error {
+    constructor(msg) {
+        super(msg);
+        this.name = "InsufficientFundsError";
+    }
+}
+function withdraw(balance, amount) {
+    if (amount &gt; balance) throw new InsufficientFundsError("Not enough funds");
+    return balance - amount;
+}
+try { withdraw(50, 100); }
+catch (e) { console.log(e.name, "-", e.message); }</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a <code>withdraw</code> function that throws a custom <code>InsufficientFundsError</code> when overdrawn, and a calling script that handles it gracefully with a friendly console message.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 15-->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Asynchronous JavaScript: Callbacks &amp; Promises</h2>
+                <p>Handle operations that take time without blocking program execution.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Handling operations that take time without blocking execution.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>The Event Loop</strong> — JavaScript runs on a single thread but uses an event loop to handle async tasks like timers and I/O without blocking. Understanding this model explains why JS code does not "wait" by default.</li>
+                    <li><strong>Callbacks &amp; Callback Hell</strong> — A callback is a function passed to execute once an async operation finishes. Nesting many callbacks creates hard-to-read "callback hell," the pain point that motivated Promises.</li>
+                    <li><strong>Promises</strong> — A <code>Promise</code> represents a value available now, later, or never, with <code>.then()</code>/<code>.catch()</code> handling success and failure. Promises provide a cleaner, chainable alternative to nested callbacks.</li>
+                    <li><strong><code>Promise.all()</code> &amp; <code>Promise.race()</code></strong> — <code>Promise.all()</code> waits for all promises to resolve, while <code>Promise.race()</code> resolves as soon as the first one finishes. Both coordinate multiple concurrent async operations.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Almost everything in real-world JavaScript is asynchronous — API calls, database queries, file reads, timers. The event loop and Promises are the foundation you must understand before modern async/await syntax makes complete sense.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>function fetchData() {
+    return new Promise((resolve, reject) =&gt; {
+        setTimeout(() =&gt; resolve("Data loaded!"), 1000);
+    });
+}
+fetchData()
+    .then(data =&gt; console.log(data))
+    .catch(err =&gt; console.error(err));</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write three functions that each return a Promise resolving after a different delay (simulating API calls), then use <code>Promise.all()</code> to log all results once every one has completed.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 16-->
+
+        <div class="rm-card" id="week16">
+            <div class="rm-card-header">
+                <h2>Week 16 — <code>async</code>/<code>await</code> &amp; Working with APIs</h2>
+                <p>Write clean asynchronous code and fetch real data from REST APIs.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing clean asynchronous code and fetching real data.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>async</code> Functions</strong> — Marking a function <code>async</code> makes it always return a Promise and allows the use of <code>await</code> inside it — the modern standard for readable async code.</li>
+                    <li><strong><code>await</code> Keyword</strong> — <code>await</code> pauses execution within an <code>async</code> function until a Promise resolves, without blocking the rest of the application.</li>
+                    <li><strong><code>fetch()</code> API</strong> — <code>fetch()</code> makes HTTP requests to servers or REST APIs, returning a Promise that resolves to a response object. It is the standard built-in tool for network communication.</li>
+                    <li><strong>Error Handling in Async Code</strong> — Wrapping <code>await</code> calls in <code>try...catch</code> properly handles network failures. Forgetting this is a common source of unhandled promise rejection bugs.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>async</code>/<code>await</code> is the standard way professionals write asynchronous JavaScript today. Combining it with <code>fetch()</code> to call real APIs unlocks a massive range of possible applications.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>async function getUser(id) {
+    try {
+        const response = await fetch(`https://api.example.com/users/${id}`);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Fetch failed:", error.message);
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write an <code>async</code> function that fetches data from a public test API like JSONPlaceholder, logs the result, and properly catches and logs any network errors.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 17 -->
+        <div class="rm-card" id="week17">
+            <div class="rm-card-header">
+                <h2>Week 17 — The Node.js Ecosystem: File System &amp; npm</h2>
+                <p>Work with files and third-party packages outside the browser using Node.js.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Working with files and third-party packages outside the browser.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Node's File System (<code>fs</code>) Module</strong> — The built-in <code>fs</code> module reads and writes files on disk in both synchronous and Promise-based forms, enabling JavaScript to interact with the local file system.</li>
+                    <li><strong><code>npm</code> &amp; <code>package.json</code></strong> — <code>npm</code> is Node's package manager, and <code>package.json</code> declares a project's metadata and dependencies. Nearly every real-world JS project uses this ecosystem.</li>
+                    <li><strong>CommonJS vs ES Modules in Node</strong> — Node historically used <code>require()</code>/<code>module.exports</code>, while modern Node supports <code>import</code>/<code>export</code> ES Modules. Knowing both is necessary when reading varied codebases.</li>
+                    <li><strong>Environment Variables &amp; <code>.env</code></strong> — Environment variables store configuration like API keys outside source code. This is standard practice for keeping secrets out of version control.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Almost every real JavaScript project beyond simple scripts runs in Node and uses npm packages. Understanding the file system and package ecosystem is essential for backend development, CLI tools, and build pipelines.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import { readFile, writeFile } from "fs/promises";
+
+async function saveNote(text) {
+    await writeFile("notes.txt", text);
+    const content = await readFile("notes.txt", "utf-8");
+    console.log("Saved content:", content);
+}
+saveNote("Learning Node.js file system!");</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Initialize a Node project with <code>npm init</code>, install a small utility package like <code>chalk</code>, and write a script that reads a list of names from a <code>.txt</code> file and writes a sorted version to a new file.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 18–24:</strong> Tackle generators, advanced async patterns, design patterns, performance, and build three complete portfolio projects.</p>
+        </div>
+
+        <!--  WEEK 18 -->
+        <div class="rm-card" id="week18">
+            <div class="rm-card-header">
+                <h2>Week 18 — Generators, Iterators &amp; Closures</h2>
+                <p>Master advanced control-flow and functional patterns unique to JavaScript.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering advanced control-flow and functional patterns unique to JavaScript.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Closures</strong> — A closure forms when an inner function retains access to its outer function's variables even after the outer function has returned. Closures power private state, memoization, and module encapsulation.</li>
+                    <li><strong>Generator Functions (<code>function*</code>)</strong> — Generators use <code>function*</code> and <code>yield</code> to pause and resume execution, producing values lazily over time. They are the foundation for custom iterators and certain async patterns.</li>
+                    <li><strong>The Iterator Protocol</strong> — An object becomes iterable by implementing <code>[Symbol.iterator]</code> returning an object with a <code>.next()</code> method. This is what makes <code>for...of</code> work on arrays, strings, Maps, and custom objects.</li>
+                    <li><strong>Lazy Evaluation</strong> — Generators compute values only when requested rather than all at once, making them memory-efficient for large or infinite sequences.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Generators and closures are what JavaScript developers point to as truly "advanced" features. They underlie many library patterns, async iteration, and sophisticated state management techniques.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>function makeCounter() {
+    let count = 0;
+    return () =&gt; ++count;
+}
+function* idGenerator() {
+    let id = 1;
+    while (true) yield id++;
+}
+const gen = idGenerator();
+console.log(gen.next().value, gen.next().value); // 1 2</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a generator function that lazily yields the Fibonacci sequence, and a closure-based function that creates an independent counter for each separate call.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 19 -->
+        <div class="rm-card" id="week19">
+            <div class="rm-card-header">
+                <h2>Week 19 — Advanced Asynchronous Patterns &amp; Concurrency</h2>
+                <p>Coordinate complex asynchronous workflows like a senior engineer.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Coordinating complex asynchronous workflows like a senior engineer.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Microtasks vs Macrotasks</strong> — Promises resolve in the microtask queue, which runs before macrotasks like <code>setTimeout</code> callbacks. This explains subtle ordering behavior in mixed sync/async code.</li>
+                    <li><strong><code>Promise.allSettled()</code> &amp; <code>Promise.any()</code></strong> — <code>allSettled()</code> waits for every promise regardless of failure, while <code>any()</code> resolves as soon as one succeeds. Both give finer control than <code>all()</code>/<code>race()</code>.</li>
+                    <li><strong>Async Iterators (<code>for await...of</code>)</strong> — Async generators produce promises that resolve over time, consumed cleanly with <code>for await...of</code>. Essential for streaming data like paginated API results.</li>
+                    <li><strong>Web Workers / Worker Threads</strong> — Since JS is single-threaded, true parallel computation requires Web Workers in the browser or <code>worker_threads</code> in Node. These communicate via message-passing rather than shared memory.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Real applications deal with partial failures, streaming data, and CPU-intensive tasks. These advanced async patterns are the tools senior JavaScript engineers reach for when basic Promises are not enough.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>async function fetchAll(urls) {
+    const results = await Promise.allSettled(urls.map(u =&gt; fetch(u)));
+    results.forEach(r =&gt; console.log(r.status));
+}
+async function* streamNumbers() {
+    for (let i = 1; i &lt;= 3; i++) {
+        await new Promise(r =&gt; setTimeout(r, 100));
+        yield i;
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Simulate 5 API calls with varying success/failure using <code>Promise.allSettled()</code> and log a summary, then write an async generator that streams 5 numbers with a delay between each.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 20 -->
+
+        <div class="rm-card" id="week20">
+            <div class="rm-card-header">
+                <h2>Week 20 — Design Patterns &amp; Functional Programming</h2>
+                <p>Write maintainable, idiomatic JavaScript at a professional level.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing maintainable, idiomatic JavaScript at a professional level.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Module Pattern &amp; Singleton</strong> — Using closures or ES modules to expose only a controlled public interface mimics the Singleton pattern, ensuring shared, centralized state and clean APIs.</li>
+                    <li><strong>Factory Functions</strong> — A factory function creates and returns objects without <code>class</code> or <code>new</code>, offering a flexible alternative for object creation popular in functional-leaning codebases.</li>
+                    <li><strong>Currying &amp; Partial Application</strong> — Currying transforms a multi-argument function into a sequence of single-argument functions, enabling reusable, pre-configured function variants via closures.</li>
+                    <li><strong>Pure Functions &amp; Immutability</strong> — A pure function always produces the same output for the same input with no side effects. Favoring immutable data via spread syntax makes code more predictable and testable.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> These design patterns appear throughout major JavaScript libraries and frameworks. Currying is used in libraries like Ramda and Redux, factory functions power many testing utilities, and pure functions are central to React's design philosophy.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>const curriedAdd = (a) =&gt; (b) =&gt; (c) =&gt; a + b + c;
+console.log(curriedAdd(1)(2)(3)); // 6
+
+const addItem = (cart, item) =&gt; [...cart, item];
+const cart1 = ["apple"];
+const cart2 = addItem(cart1, "banana");
+console.log(cart1, cart2); // original unchanged</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a factory function <code>createUser</code> that returns user objects with a private counter (via closure) tracking how many users have been created, and a curried <code>discount</code> function for calculating prices at different tiers.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 21-->
+
+        <div class="rm-card" id="week21">
+            <div class="rm-card-header">
+                <h2>Week 21 — Performance, Memory &amp; Browser Internals</h2>
+                <p>Understand what happens under the hood for optimized, professional JavaScript.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding what happens under the hood for optimized code.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>The Call Stack &amp; Stack Overflow</strong> — JavaScript tracks function calls in a call stack, and excessive recursion without a base case causes a <code>RangeError</code>. Understanding the stack clarifies recursive behavior and error traces.</li>
+                    <li><strong>Garbage Collection in JS</strong> — JavaScript engines automatically reclaim memory from unreachable objects using mark-and-sweep. Memory leaks occur when references are unintentionally kept alive, such as forgotten event listeners.</li>
+                    <li><strong>Debouncing &amp; Throttling</strong> — Debouncing delays execution until after a pause in repeated calls, while throttling limits execution to a fixed rate. Both are essential for handling frequent events like scrolling or typing.</li>
+                    <li><strong>Browser Rendering Basics (DOM &amp; Reflow)</strong> — Frequent direct DOM manipulation triggers costly reflows and repaints. Batching DOM updates and minimizing layout-affecting changes keeps UIs fast and responsive.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Senior JavaScript developers understand why their code is fast or slow. Debouncing and throttling are asked about in nearly every frontend interview, and understanding the garbage collector prevents production memory leaks.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>function debounce(fn, delay) {
+    let timer;
+    return (...args) =&gt; {
+        clearTimeout(timer);
+        timer = setTimeout(() =&gt; fn(...args), delay);
+    };
+}
+const logSearch = debounce((term) =&gt; console.log("Searching:", term), 300);
+logSearch("a");
+logSearch("ap");
+logSearch("app"); // only "app" logs after 300ms</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Implement both a <code>debounce</code> and a <code>throttle</code> utility function from scratch, then simulate rapid repeated calls to each and observe the difference in console output timing.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 22  -->
+
+        <div class="rm-card" id="week22">
+            <div class="rm-card-header">
+                <h2>Week 22 — Mini Project 1: Interactive To-Do List App</h2>
+                <p>Apply DOM manipulation, events, and local storage in a complete browser application.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Project Overview</h3>
+                <p>A complete browser-based to-do list app applying Phases 1–3 skills in a real user interface.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>DOM Manipulation</strong></td>
+                            <td>Using <code>querySelector()</code>, <code>createElement()</code>, and <code>appendChild()</code> to dynamically build and update the page based on application state.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Event Listeners</strong></td>
+                            <td>Attaching <code>addEventListener()</code> to buttons and inputs to respond to user actions. Event-driven programming is the backbone of all interactive web applications.</td>
+                        </tr>
+                        <tr>
+                            <td><strong><code>localStorage</code> for Persistence</strong></td>
+                            <td>Saving data in the browser between page reloads using <code>setItem()</code>/<code>getItem()</code> with JSON serialization — lightweight client-side persistence without a backend.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rendering Lists from Data</strong></td>
+                            <td>Mapping an array of task objects into DOM elements on every state change keeps the UI in sync — the "render from state" pattern foundational to all modern frontend frameworks.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Skills Applied</h3>
+                <ul>
+                    <li>DOM selection, creation, and modification</li>
+                    <li>Event-driven programming patterns</li>
+                    <li>JSON serialization and <code>localStorage</code></li>
+                    <li>Array methods for rendering state</li>
+                    <li>Error handling for invalid input</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Project Deliverable</h4>
+                    <p>Build the full To-Do app: add, complete, and delete tasks via the DOM, persist the task array to <code>localStorage</code> on every change, and reload tasks from storage on page load. No frameworks — pure JavaScript only.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 23-->
+
+        <div class="rm-card" id="week23">
+            <div class="rm-card-header">
+                <h2>Week 23 — Mini Project 2: Weather Dashboard with Live API Data</h2>
+                <p>Combine async programming, error handling, and dynamic rendering with a real third-party API.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Project Overview</h3>
+                <p>A live weather dashboard applying async programming, performance techniques, and dynamic DOM rendering.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Consuming a Public REST API</strong></td>
+                            <td>Using <code>fetch()</code> with <code>async</code>/<code>await</code> to retrieve live weather data by city name. Handling API keys and query parameters is part of professional API integration.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Loading &amp; Error States in UI</strong></td>
+                            <td>Displaying a loading indicator while awaiting data, and a friendly error message on failure, makes the app feel professional. This directly applies Week 14's error handling to visible UI.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Debounced Search Input</strong></td>
+                            <td>Applying the debounce utility from Week 21 to a search box prevents firing an API request on every keystroke — a textbook real-world performance optimization.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Caching Responses</strong></td>
+                            <td>Storing previously fetched results in a <code>Map</code> avoids redundant API calls for repeated searches. Combines Week 10's Map structure with async patterns for efficiency.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Skills Applied</h3>
+                <ul>
+                    <li>Async/await and fetch with real APIs</li>
+                    <li>Custom error handling in async functions</li>
+                    <li>Debounce utility for performance</li>
+                    <li>Map-based response caching</li>
+                    <li>Dynamic DOM rendering of API data</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Project Deliverable</h4>
+                    <p>Build the full Weather Dashboard: a debounced search input, async fetch with loading and error states, a <code>Map</code>-based response cache, and dynamic DOM rendering of temperature and weather conditions.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 24-->
+
+        <div class="rm-card" id="week24">
+            <div class="rm-card-header">
+                <h2>Week 24 — Mini Project 3: Real-Time Collaborative Note Board</h2>
+                <p>Capstone project integrating design patterns, async concurrency, modules, and architecture into a multi-feature application.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Project Overview</h3>
+                <p>A production-style note board application synthesizing all 24 weeks of curriculum into one complete project.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Modular Application Architecture</strong></td>
+                            <td>Splitting the project into separate modules (<code>state.js</code>, <code>api.js</code>, <code>ui.js</code>, <code>utils.js</code>) with clean import/export boundaries demonstrates professional-scale code organization.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>State Management Pattern</strong></td>
+                            <td>A centralized state object with a publish-subscribe pattern using closures lets multiple UI parts react consistently to data changes — the core idea behind real state management libraries.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Simulated Real-Time Updates</strong></td>
+                            <td>Using <code>setInterval</code> combined with async iteration to simulate incoming notes from other users demonstrates Week 19's async iterator patterns in a tangible, realistic feature.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Comprehensive Error Boundaries &amp; Logging</strong></td>
+                            <td>Wrapping all async operations in consistent <code>try...catch</code> blocks with centralized logging ensures the app degrades gracefully — error handling at full-application, master-level scale.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Skills Applied</h3>
+                <ul>
+                    <li>ES Modules and professional project structure</li>
+                    <li>Pub-sub state management via closures</li>
+                    <li>Async generators and <code>setInterval</code> simulation</li>
+                    <li>Centralized error handling and logging</li>
+                    <li>All OOP, async, and functional patterns from Phases 2–4</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🏆 Final Capstone Deliverable</h4>
+                    <p>Build the full Note Board: a pub-sub state store, modularized files for state, UI, API, and utilities, simulated incoming notes via <code>setInterval</code>, and centralized error logging — synthesizing all 24 weeks of skills into one complete application.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>function createStore(initialState) {
+    let state = initialState;
+    const listeners = [];
+    return {
+        getState: () =&gt; state,
+        subscribe: (fn) =&gt; listeners.push(fn),
+        setState: (newState) =&gt; {
+            state = { ...state, ...newState };
+            listeners.forEach(fn =&gt; fn(state));
+        }
+    };
+}</code></pre>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–5</td>
+                        <td>Absolute Basics</td>
+                        <td>Write JavaScript using all core types, operators, strings, arrays, and objects in both Browser and Node</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>6–10</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Build programs with conditionals, loops, arrow functions, higher-order array methods, and ES Modules</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>11–17</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Design OOP systems, handle errors, use async/await with real APIs, and work with the Node.js ecosystem</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>18–24</td>
+                        <td>Master Level Concepts</td>
+                        <td>Write production-grade JavaScript using generators, advanced async patterns, design patterns, and three complete projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Spend approximately <strong>5–8 hours per week</strong>: read explanations, type out every code example by hand, and complete the practical task before moving on.</li>
+                    <li>Test asynchronous concepts (Weeks 15–16, 19) in both the browser console and Node.js to see runtime differences firsthand.</li>
+                    <li>Push every weekly exercise to a personal <strong>GitHub repository</strong> to build a visible portfolio by Week 24.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+                <div class="logo1">
+                    <h3>CodePath</h3>
+                    <p>Learn. Practice. Master</p>
+                </div>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+
+</body>
+</html>

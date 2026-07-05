@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Automation - 15 Week Roadmap</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>Python Automation</h1>
+        <p>Complete 15-Week Beginner-to-Portfolio-Ready Roadmap — Scripting · File Handling · Web Scraping · Task Automation · System Automation</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#capstone">Capstone</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Roadmap</h2>
+            <p>This roadmap takes a complete beginner to a confident, portfolio-ready Python Automation developer in 15 weeks of full-time study (~35–40 hours/week). Python is the dominant language for automation because it is readable, richly supported, cross-platform, and fast to prototype.</p>
+            <p>The path runs: <strong>Python Foundations → File &amp; System Automation → Web Automation → Advanced Automation → Packaging, Deployment &amp; Capstone.</strong></p>
+            <p>By Week 15 you will have built approximately <strong>13 mini-projects</strong> and one complete, production-ready automation suite — <strong>AutoPilot</strong>, a modular personal productivity automation system.</p>
+
+            <h3>At a Glance</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Language</strong></td>
+                        <td>Python 3 (latest stable release)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Duration</strong></td>
+                        <td>15 weeks · Full-time (~35–40 hrs/week)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Level</strong></td>
+                        <td>Complete Beginner → Portfolio-Ready</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Focus</strong></td>
+                        <td>Scripting · File Handling · Web Scraping · Task Automation · System Automation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mini Projects</strong></td>
+                        <td>13 weekly builds + 1 complete capstone system</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cost</strong></td>
+                        <td>Free — Python, VS Code, and all libraries cost nothing</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Five Phases</h3>
+            <ul>
+                <li><strong>Phase 1 (Weeks 1–3):</strong> Python language foundations — variables, functions, OOP, error handling, and regular expressions.</li>
+                <li><strong>Phase 2 (Weeks 4–6):</strong> File and system automation — files, folders, CSV, Excel, PDFs, images, and OS-level operations.</li>
+                <li><strong>Phase 3 (Weeks 7–9):</strong> Web automation — HTTP requests, web scraping, browser automation, and REST API interaction.</li>
+                <li><strong>Phase 4 (Weeks 10–12):</strong> Advanced automation — email/notifications, database automation, GUI automation, and task scheduling.</li>
+                <li><strong>Phase 5 (Weeks 13–15):</strong> Capstone systems — data pipelines, packaging scripts, deployment, and a complete capstone automation suite.</li>
+            </ul>
+
+            <h3>Tools &amp; Software</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool</th>
+                        <th>Purpose</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Python 3 (latest stable)</strong></td>
+                        <td>The programming language</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>VS Code</strong></td>
+                        <td>Code editor with Python extension</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>pip</strong></td>
+                        <td>Python package manager (bundled with Python)</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Git &amp; GitHub</strong></td>
+                        <td>Version control + portfolio hosting</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Jupyter Notebook</strong></td>
+                        <td>Interactive Python environment for exploration</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>BeautifulSoup4</strong></td>
+                        <td>HTML parsing for web scraping</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Selenium / Playwright</strong></td>
+                        <td>Browser automation</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>openpyxl / pandas</strong></td>
+                        <td>Excel file manipulation and data analysis</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PyAutoGUI</strong></td>
+                        <td>GUI automation (mouse, keyboard)</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>schedule</strong></td>
+                        <td>Python task scheduler</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SQLite3 / SQLAlchemy</strong></td>
+                        <td>Local database and ORM</td>
+                        <td>Free (built-in)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Postman</strong></td>
+                        <td>API testing companion tool</td>
+                        <td>Free tier</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Python Language Foundations</h2>
+            <p>Weeks 1 through 3 take you from writing your first Python program to mastering regular expressions, the standard library, and professional code structure. By the end of Phase 1 you will write structured, maintainable automation scripts using OOP, error handling, and modern file path handling — the foundation every subsequent phase builds on.</p>
+        </div>
+
+
+        <!--  WEEK 1-->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Python Basics: Variables, Control Flow &amp; Functions</h2>
+                <p>Write real Python programs using variables, data types, conditions, loops, and functions — the building blocks of every automation script.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Python environment</strong> — running Python: interactive REPL, <code>.py</code> scripts, Jupyter Notebook; <code>print()</code>, <code>input()</code>, comments.</li>
+                    <li><strong>Variables and data types</strong> — <code>int</code>, <code>float</code>, <code>str</code>, <code>bool</code>; type conversion; <code>type()</code> function.</li>
+                    <li><strong>Strings (critical for automation)</strong> — <code>.upper()</code>, <code>.lower()</code>, <code>.strip()</code>, <code>.replace()</code>, <code>.split()</code>, <code>.join()</code>; f-strings; slicing; <code>in</code> operator.</li>
+                    <li><strong>Collections</strong> — lists (<code>.append()</code>, <code>.remove()</code>, <code>.sort()</code>), dictionaries (<code>.get()</code>, <code>.keys()</code>, <code>.items()</code>), tuples, sets.</li>
+                    <li><strong>Control flow</strong> — <code>if</code>/<code>elif</code>/<code>else</code>; <code>for</code> loop; <code>while</code> loop; <code>break</code>, <code>continue</code>, <code>pass</code>; list comprehensions.</li>
+                    <li><strong>Functions</strong> — <code>def</code>, parameters, return values, default parameters, <code>*args</code>, <code>**kwargs</code>, scope, lambda functions.</li>
+                    <li><strong>Useful built-in functions</strong> — <code>len()</code>, <code>range()</code>, <code>enumerate()</code>, <code>zip()</code>, <code>sorted()</code>, <code>map()</code>, <code>filter()</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every Python automation script uses variables to store data, loops to process lists of files or records, conditionals to handle different cases, and functions to structure reusable logic. This week is the foundation — every subsequent week builds directly on these concepts.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Environment setup + <code>print()</code>/<code>input()</code> + variables + data types + type conversion.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Strings — all major methods + f-strings + slicing; build a "text analyzer" (count words, find a substring).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Lists and Dictionaries — create, modify, iterate; build a simple "phone book" dictionary.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>if</code>/<code>elif</code>/<code>else</code> + <code>for</code> loops + <code>while</code> loops; build a grade calculator and a number guessing game.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Functions — define 8 functions (calculate, validate, format, transform); no scripts longer than 30 lines.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>List comprehensions + <code>enumerate</code>/<code>zip</code>/<code>map</code>/<code>filter</code>; rewrite yesterday's loops as comprehensions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review all concepts + mini project + push to GitHub.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write a function that takes a list of filenames and returns only those with a <code>.pdf</code> extension.</li>
+                    <li>Write a function that takes a price as a string (<code>"$19.99"</code>) and returns it as a float (<code>19.99</code>).</li>
+                    <li>Write a script that accepts a sentence as input and outputs word count, character count, and whether a specific word is present.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Text Report Generator</strong> — a Python script that accepts a block of text as input (simulating a log file or data extract) and outputs: total line count, word count, count of lines containing "ERROR", a list of all unique words found, and the 5 most common words — all using basic Python with no external libraries — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>=</code> for comparison instead of <code>==</code>.</li>
+                        <li>Confusing <code>.append(item)</code> (adds one item) with <code>.extend(list)</code> (adds all items from another list).</li>
+                        <li>Indentation errors — Python uses indentation for code blocks, unlike most other languages.</li>
+                        <li>Modifying a list while iterating over it — causes skipped items.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Read comparison expressions aloud: "if x equals-equals 5" — the double equals means compare.</li>
+                        <li>Use <code>append()</code> for a single item; <code>extend()</code> or <code>+</code> to merge two lists.</li>
+                        <li>Configure VS Code to show whitespace characters — indentation problems become visible.</li>
+                        <li>Never modify a list in a <code>for</code> loop — iterate over a copy: <code>for item in list.copy()</code>.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Python official tutorial — docs.python.org/3/tutorial</li>
+                    <li>"Automate the Boring Stuff with Python" by Al Sweigart — automatetheboringstuff.com (completely free online)</li>
+                    <li>freeCodeCamp — "Python for Everybody" (YouTube)</li>
+                    <li>Real Python — realpython.com (free articles on every Python topic)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 32–36 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 2  -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Python Intermediate: OOP, Modules &amp; Error Handling</h2>
+                <p>Write structured, maintainable Python automation code using classes, modules, error handling, and the standard library.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Object-Oriented Programming (OOP)</strong> — classes and objects, <code>__init__()</code>, <code>self</code>, instance variables, methods, inheritance, <code>__str__()</code>.</li>
+                    <li><strong>Modules and imports</strong> — <code>import module</code> vs <code>from module import function</code>; creating your own modules; <code>if __name__ == "__main__":</code>.</li>
+                    <li><strong>Standard library overview</strong> — <code>os</code>, <code>sys</code>, <code>pathlib</code>, <code>datetime</code>, <code>time</code>, <code>math</code>, <code>random</code>, <code>json</code>, <code>csv</code>, <code>re</code>.</li>
+                    <li><strong>Error handling</strong> — <code>try</code>/<code>except</code>/<code>else</code>/<code>finally</code>; catching specific exceptions; <code>raise</code>; custom exception classes.</li>
+                    <li><strong><code>datetime</code> module</strong> — <code>datetime.now()</code>, <code>timedelta</code>, <code>strftime()</code>/<code>strptime()</code>, timestamped filenames.</li>
+                    <li><strong><code>json</code> module</strong> — <code>json.loads()</code>, <code>json.dumps()</code>, reading/writing JSON files.</li>
+                    <li><strong><code>logging</code> module</strong> — <code>logging.basicConfig()</code>, <code>logging.info()</code>/<code>.warning()</code>/<code>.error()</code>; why logging beats <code>print()</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Real automation projects have multiple files, handle errors gracefully (network timeouts, missing files, malformed data), and run unattended. Without OOP you can't structure complex automation. Without error handling, any unexpected input crashes the script. Without logging, debugging a script that ran at 2 AM is impossible.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Classes — <code>__init__</code>, <code>self</code>, instance variables, methods; build a <code>LogEntry</code> class.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Inheritance + <code>__str__</code> + <code>__repr__</code>; build an <code>AutomationTask</code> base class with <code>EmailTask</code> and <code>FileTask</code> subclasses.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Modules — create a <code>utils.py</code> with 5 reusable functions; import into main script; <code>__name__ == "__main__"</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>datetime</code> module — generate timestamped filenames; calculate days between dates; parse date strings.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td><code>json</code> module — read config from JSON; write results to JSON; handle malformed JSON.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Error handling — <code>try</code>/<code>except</code>/<code>finally</code>; handle 5 different exception types in one script.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td><code>logging</code> module — replace all <code>print()</code>s in previous scripts with proper logging + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Rewrite the Week 1 Text Report Generator using a <code>TextAnalyzer</code> class with methods for each analysis.</li>
+                    <li>Write a function that reads a JSON config file and returns default values if the file is missing or malformed.</li>
+                    <li>Write a script that deliberately triggers 5 different errors and catches each with a helpful message.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Task Logger</strong> — a Python script using OOP: a <code>Task</code> base class with <code>name</code>, <code>status</code>, <code>created_at</code>; subclasses <code>FileTask</code> and <code>WebTask</code>; a <code>TaskManager</code> class with <code>add_task()</code>, <code>complete_task()</code>, <code>export_to_json()</code> methods; full error handling; <code>logging</code> to both console and a <code>tasks.log</code> file; timestamped JSON export — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Forgetting <code>self</code> as the first parameter in every class method.</li>
+                        <li>Catching bare <code>except:</code> without specifying an exception type — silently swallows unexpected errors.</li>
+                        <li>Not using <code>finally</code> when opening files — leaves files open if an exception occurs.</li>
+                        <li>Using <code>print()</code> for everything in scripts meant to run unattended.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Rule: every method definition starts with <code>def method_name(self, ...)</code>.</li>
+                        <li>Always catch specific exceptions: <code>except FileNotFoundError</code>, <code>except ValueError</code>. Use <code>except Exception as e</code> as a catch-all at the outermost level only.</li>
+                        <li>Use context managers (<code>with open(...) as f:</code>) — Python closes the file automatically even on exception.</li>
+                        <li>Use <code>logging</code> from Week 2 onward for any script that might run unattended.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>"Automate the Boring Stuff" — Chapters 8–11 (automatetheboringstuff.com)</li>
+                    <li>Real Python — "Python Classes: The Power of Object-Oriented Programming" (realpython.com)</li>
+                    <li>Python official logging documentation (docs.python.org)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35–38 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 3   -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Regular Expressions, <code>pathlib</code> &amp; the Standard Library</h2>
+                <p>Master regular expressions for text extraction and transformation, and become fluent with <code>pathlib</code> and key standard library modules used in every automation project.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Regular Expressions (<code>re</code> module)</strong> — basic patterns (<code>.</code>, <code>*</code>, <code>+</code>, <code>?</code>, <code>^</code>, <code>$</code>), character classes (<code>\d</code>, <code>\w</code>, <code>\s</code>), groups; <code>re.search()</code>, <code>re.findall()</code>, <code>re.sub()</code>, <code>re.compile()</code>; practical patterns: email, phone, URL, dates.</li>
+                    <li><strong><code>pathlib</code> module</strong> — <code>Path</code> object; path operations with <code>/</code> operator; <code>path.exists()</code>, <code>path.is_file()</code>; <code>path.stem</code>, <code>path.suffix</code>, <code>path.parent</code>; <code>path.glob()</code>, <code>path.mkdir()</code>, <code>path.rename()</code>, <code>path.read_text()</code>.</li>
+                    <li><strong><code>os</code> and <code>shutil</code> modules</strong> — <code>os.listdir()</code>, <code>os.walk()</code>, <code>os.environ</code>, <code>os.system()</code>; <code>shutil.copy()</code>, <code>shutil.move()</code>, <code>shutil.rmtree()</code>.</li>
+                    <li><strong><code>csv</code> module</strong> — <code>csv.reader()</code>, <code>csv.DictReader()</code>, <code>csv.writer()</code>, <code>csv.DictWriter()</code>; encoding issues.</li>
+                    <li><strong><code>sys</code> module</strong> — <code>sys.argv</code>, <code>sys.exit()</code>, <code>sys.path</code>.</li>
+                    <li><strong><code>subprocess</code> module</strong> — <code>subprocess.run()</code>, capturing output, running OS commands.</li>
+                    <li><strong><code>argparse</code> module</strong> — building CLI interfaces; <code>ArgumentParser</code>, <code>add_argument()</code>, <code>parse_args()</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Regex is the Swiss Army knife of text extraction — pulling emails from a log file, finding all prices on a page, validating file names. <code>pathlib</code> is how every modern Python automation script handles files. <code>argparse</code> turns your scripts into professional tools usable by anyone from the command line. These three topics appear in virtually every automation script after this week.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Regex basics — <code>re.search</code>, <code>re.findall</code>, basic patterns; match emails and phone numbers in sample text.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Regex groups + <code>re.sub</code> + <code>re.compile</code>; extract dates and URLs from a log file.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>pathlib</code> — Path creation, navigation, <code>.glob()</code>, file properties; build a directory scanner.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>pathlib</code> file operations (read/write/rename/delete) + <code>shutil</code> copy/move; build a file sorter.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td><code>csv</code> module — read + write; process a sample CSV (filter rows, add a column, save result).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td><code>subprocess.run</code> + <code>os.environ</code> + <code>sys.argv</code>; run a shell command and capture output.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td><code>argparse</code> — add CLI flags to 3 previous scripts + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write a regex pattern that extracts all email addresses from a multi-line text string.</li>
+                    <li>Write a script that walks a directory tree and reports all files larger than 1MB.</li>
+                    <li>Write a script with <code>argparse</code> that accepts <code>--input</code>, <code>--output</code>, and <code>--format</code> flags.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>File Inventory Reporter</strong> — a CLI tool (<code>argparse</code>) that accepts a directory path, recursively scans with <code>pathlib.glob()</code> and <code>os.walk()</code>, groups files by extension, lists files above a configurable size threshold, extracts dates from filenames using regex, and writes a CSV report with columns: <code>filename</code>, <code>extension</code>, <code>size_kb</code>, <code>date_extracted</code>, <code>full_path</code> — pushed to GitHub with a README showing usage examples.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Forgetting <code>r""</code> raw strings for regex patterns — backslashes are misinterpreted.</li>
+                        <li>Using <code>os.path.join()</code> instead of <code>pathlib</code> — older style, less readable.</li>
+                        <li>Using <code>csv.reader</code> and accessing columns by number (fragile) instead of <code>DictReader</code> with column names (robust).</li>
+                        <li>Not handling CSV encoding — <code>UnicodeDecodeError</code> on Excel-generated files.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always write regex patterns as raw strings: <code>r"\d{4}-\d{2}-\d{2}"</code>.</li>
+                        <li>Default to <code>pathlib.Path</code> for all path operations from Week 3 onward.</li>
+                        <li>Always use <code>csv.DictReader</code> when column names are available — <code>row['Name']</code> beats <code>row[0]</code>.</li>
+                        <li>For CSV files from Excel: <code>open(file, encoding='utf-8-sig')</code> — handles the BOM character Excel adds.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>regex101.com — free interactive regex testing tool (essential for Week 3)</li>
+                    <li>"Automate the Boring Stuff" — Chapter 7 (Pattern Matching with Regex)</li>
+                    <li>Python <code>pathlib</code> documentation (docs.python.org)</li>
+                    <li>Real Python — "Python's pathlib Module: Taming the File System"</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35–38 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — File &amp; System Automation</h2>
+            <p>Weeks 4 through 6 build real automation tools that organize files, process spreadsheets, handle PDFs and images, monitor system health, and schedule scripts to run automatically. By the end of Phase 2 your automation scripts run themselves — no human needed to trigger them.</p>
+        </div>
+
+
+        <!-- WEEK 4 -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — File System Automation: Organizers, Batch Processing &amp; CSV/Excel</h2>
+                <p>Build real-world automation scripts that organize files, process spreadsheets, and automate bulk operations on the file system.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>File reading and writing</strong> — <code>open()</code> modes (<code>'r'</code>, <code>'w'</code>, <code>'a'</code>, <code>'rb'</code>); context managers; <code>f.read()</code>, <code>f.readline()</code>, <code>f.readlines()</code>; encoding.</li>
+                    <li><strong>File organization automation</strong> — batch renaming by rule; sorting files into subfolders by extension, date, or size; finding and deleting duplicate files with <code>hashlib</code>; archiving to <code>.zip</code>.</li>
+                    <li><strong><code>zipfile</code> and <code>tarfile</code> modules</strong> — creating/extracting zip archives; adding files to existing archives.</li>
+                    <li><strong>Excel automation with <code>openpyxl</code></strong> — reading cell values, iterating over rows, writing values, formatting cells, creating formulas, saving workbooks.</li>
+                    <li><strong><code>pandas</code> intro for data automation</strong> — <code>pd.read_csv()</code>, <code>pd.read_excel()</code>; DataFrame basics; filtering; <code>.to_csv()</code>, <code>.to_excel()</code>; merging DataFrames.</li>
+                    <li><strong><code>hashlib</code> for file comparison</strong> — MD5/SHA256 hashing for duplicate detection.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> File organization, batch renaming, and spreadsheet processing are the most common automation requests in any office environment. A script that organizes 1000 mixed files into type-based subfolders in 2 seconds, or processes 50 Excel reports into a single summary, provides immediate visible value that requires zero explanation to a non-technical audience.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>File read/write — read a log file line by line, filter lines containing "ERROR", write them to a new file.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Batch file renaming — rename all files in a folder to add a date prefix + replace spaces with underscores.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>File sorter — sort files from a "Downloads" folder into subfolders by extension.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Duplicate finder with <code>hashlib</code> + zip archiver with <code>zipfile</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td><code>openpyxl</code> — read an Excel file, sum a column, add a "Total" row, save with formatting.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td><code>pandas</code> — read a multi-sheet Excel report, filter rows, merge two DataFrames, export to CSV.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write a script that finds all <code>.jpg</code> and <code>.png</code> files in a folder and creates a single zip archive with a timestamped name.</li>
+                    <li>Write a script that reads a CSV of employee records and creates individual Excel files for each department.</li>
+                    <li>Write a script that compares two folders and lists files that exist in one but not the other.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Downloads Organizer</strong> — a CLI tool that accepts a <code>--folder</code> path (default: <code>~/Downloads</code>), scans all files, creates subfolders (Images, Documents, Videos, Audio, Archives, Code, Other), moves files to the correct subfolder by extension, logs every move, archives all files older than a configurable number of days into a dated zip file, and generates a summary CSV report of all actions taken — pushed to GitHub with a <code>README.md</code>.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Not using context managers (<code>with open(...) as f</code>) — leaves files open on error.</li>
+                        <li>Moving files without checking if the destination already has a file with the same name — overwrites data silently.</li>
+                        <li>Loading huge CSV files with <code>pandas</code> into memory when <code>csv.reader</code> line-by-line would work.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always use <code>with open(...) as f:</code> — guarantees the file is closed even on exception.</li>
+                        <li>Before moving a file, check: <code>if dest_path.exists(): handle_duplicate()</code>.</li>
+                        <li>For CSV files with millions of rows: use <code>csv.reader</code> or <code>pandas</code> chunking (<code>pd.read_csv(file, chunksize=1000)</code>).</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>"Automate the Boring Stuff" — Chapters 8–10 (Files, Organizing Files)</li>
+                    <li><code>openpyxl</code> documentation (openpyxl.readthedocs.io)</li>
+                    <li>pandas documentation — "Getting Started" section (pandas.pydata.org)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 37–40 hours</p>
+            </div>
+        </div>
+
+
+        <!--   WEEK 5   -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — PDF, Image &amp; Document Automation</h2>
+                <p>Automate working with PDFs (read, merge, split, extract text), images (resize, convert, watermark), and Word documents.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>PDF automation with <code>pdfplumber</code> and <code>PyPDF2</code></strong> — <code>pdfplumber</code> for text and table extraction; <code>PyPDF2</code> for merging, splitting, rotating, watermarking, encrypting PDFs.</li>
+                    <li><strong>Image automation with <code>Pillow</code> (PIL)</strong> — <code>Image.open()</code>, resize, thumbnail, convert formats, rotate, crop, batch processing; adding text watermarks with <code>ImageDraw</code> and <code>ImageFont</code>.</li>
+                    <li><strong>Word document automation with <code>python-docx</code></strong> — create documents, add paragraphs/headings/tables, modify existing docs, bulk find-and-replace, template-based report generation.</li>
+                    <li><strong>OCR intro with <code>pytesseract</code></strong> — <code>pytesseract.image_to_string()</code>; extracting text from images and scanned PDFs; pre-processing for better accuracy.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> PDFs are the most common document format in business. A script that merges 20 PDFs, extracts all tables, or generates 50 personalized Word reports from a template is immediately valuable in legal, finance, HR, and research contexts. Image batch processing is critical for e-commerce, photography, and media workflows.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td><code>pdfplumber</code> — extract text and tables from 3 different PDF types; handle failures gracefully.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td><code>PyPDF2</code> — merge 5 PDFs into one; split a 10-page PDF into individual pages; add watermark.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>Pillow</code> — open, resize, convert format, rotate, flip; batch convert 20 images in a folder.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>Pillow</code> <code>ImageDraw</code> — add text watermark (company name, copyright); add logo watermark.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td><code>python-docx</code> — create a report with headings, paragraphs, and a table from a list of dicts.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Bulk Word find-and-replace; template-based report generation from a CSV of names/data.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td><code>pytesseract</code> OCR intro + review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write a script that merges all PDF files in a folder into a single PDF, sorted by filename.</li>
+                    <li>Write a script that batch-resizes all images in a folder to a maximum of 1920x1080 while maintaining aspect ratio.</li>
+                    <li>Write a script that generates 10 personalized "Certificate of Completion" Word documents from a CSV of student names.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Document Processing Suite</strong> — a CLI tool with 3 sub-commands: (1) <code>pdf</code> — merge PDFs, extract text/tables to CSV, add watermark; (2) <code>images</code> — batch resize/convert/watermark a folder with a configurable logo; (3) <code>reports</code> — read a CSV file of data and generate a Word document report for each row using a template — all with logging and error handling — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>PyPDF2</code> for text extraction — <code>PyPDF2</code> is poor at it; use <code>pdfplumber</code> for extraction.</li>
+                        <li>Resizing images with <code>img.resize()</code> instead of <code>img.thumbnail()</code> — <code>resize()</code> distorts aspect ratio.</li>
+                        <li>Forgetting that <code>pdfplumber</code> returns <code>None</code> for pages with no extractable text — always check <code>if text:</code> before processing.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Text extraction: <code>pdfplumber</code>. PDF structure manipulation: <code>PyPDF2</code>.</li>
+                        <li>Images: use <code>img.thumbnail((max_w, max_h))</code> for proportional resizing.</li>
+                        <li>Always <code>if text := page.extract_text():</code> before processing extracted text.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li><code>pdfplumber</code> GitHub documentation</li>
+                    <li><code>python-docx</code> documentation (python-docx.readthedocs.io)</li>
+                    <li>Pillow documentation (pillow.readthedocs.io)</li>
+                    <li>"Automate the Boring Stuff" — Chapter 13 (PDFs)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36–40 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 6-->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — System &amp; Process Automation: Scheduling, Monitoring &amp; OS Interaction</h2>
+                <p>Automate system-level tasks — running commands, monitoring system health, scheduling scripts, managing environment variables, and sending desktop notifications.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>subprocess</code> deep dive</strong> — <code>subprocess.run()</code> with full options; <code>subprocess.Popen()</code> for long-running processes; capturing stdout/stderr; platform-specific commands.</li>
+                    <li><strong>Environment variables and configuration</strong> — <code>os.environ.get()</code>; <code>python-dotenv</code>; storing API keys and settings outside code.</li>
+                    <li><strong>System monitoring with <code>psutil</code></strong> — <code>psutil.cpu_percent()</code>, <code>psutil.virtual_memory()</code>, <code>psutil.disk_usage()</code>, listing processes, network I/O.</li>
+                    <li><strong>Task scheduling</strong> — <code>schedule</code> library; <code>schedule.every(10).minutes.do(job)</code>; Windows Task Scheduler; macOS/Linux <code>cron</code>.</li>
+                    <li><strong>Desktop notifications with <code>plyer</code></strong> — cross-platform notifications for automation alerts.</li>
+                    <li><strong>Watchdog — file system monitoring</strong> — <code>Observer</code>, <code>FileSystemEventHandler</code>; <code>on_created()</code>, <code>on_modified()</code> event handlers; auto-process files as they arrive.</li>
+                    <li><strong>Running scripts as services</strong> — Windows Task Scheduler; Linux <code>systemd</code>; macOS <code>launchd</code> (intro level).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Automation that requires a human to manually run a script every day is only partially automated. This week adds the final piece: scripts that run themselves on a schedule, monitor system conditions, respond to file events, and alert humans only when intervention is needed. <code>watchdog</code> + <code>schedule</code> + <code>psutil</code> together enable genuinely autonomous automation workflows.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td><code>subprocess</code> deep dive — run git commands from Python, capture output, handle errors.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td><code>python-dotenv</code> — refactor all previous scripts to use <code>.env</code> for paths and credentials.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>psutil</code> — build a system monitor that logs CPU/memory/disk every 60 seconds to a CSV.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Alert system — trigger a <code>plyer</code> desktop notification if disk usage exceeds a threshold.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td><code>schedule</code> library — schedule the system monitor to run daily + log to file.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>OS scheduling — set up a cron job (Linux/macOS) or Task Scheduler entry (Windows) for one script.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td><code>watchdog</code> — monitor a folder and auto-trigger the Week 4 file organizer on new file arrival + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build a "Git backup" script that runs <code>git add</code>, <code>git commit</code>, and <code>git push</code> automatically on a schedule.</li>
+                    <li>Build a system health monitor that sends a desktop alert if any threshold (CPU, RAM, disk) is exceeded.</li>
+                    <li>Build a "watch folder" that automatically processes any new PDF dropped into it (extract text → save as <code>.txt</code>).</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>System Automation Dashboard</strong> — runs continuously; monitors CPU, RAM, and disk usage every 30 seconds; logs to CSV; sends desktop notifications for threshold breaches; watches a "drop folder" with <code>watchdog</code> and runs the Week 4 file organizer on any new file; runs a scheduled daily system report at a set time — pushed to GitHub with a <code>.env.example</code> and README.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Running <code>schedule</code> without an infinite loop — the script exits before any scheduled jobs run.</li>
+                        <li>Hardcoding absolute file paths in scheduled scripts — breaks if the working directory changes.</li>
+                        <li>Not adding <code>time.sleep(1)</code> inside the scheduler loop — causes 100% CPU usage.</li>
+                        <li>Running <code>watchdog</code> and <code>schedule</code> in the same thread — one blocks the other.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li><code>schedule</code> always needs: <code>while True: schedule.run_pending(); time.sleep(1)</code>.</li>
+                        <li>Use <code>Path(__file__).parent</code> as the base path — always relative to the script's location.</li>
+                        <li>For combining <code>watchdog</code> + <code>schedule</code>: run each in its own thread using <code>threading.Thread</code>.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li><code>schedule</code> documentation (schedule.readthedocs.io)</li>
+                    <li><code>psutil</code> documentation (psutil.readthedocs.io)</li>
+                    <li><code>watchdog</code> documentation (watchdog.readthedocs.io)</li>
+                    <li>"Automate the Boring Stuff" — Chapter 15 (Keeping Time, Scheduling Tasks)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36–38 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Web Automation</h2>
+            <p>Weeks 7 through 9 open the internet to your automation scripts. Week 7 covers scraping static web pages with <code>requests</code> and BeautifulSoup. Week 8 adds browser automation for JavaScript-rendered pages with Selenium and Playwright. Week 9 integrates real-world REST APIs into scheduled data pipelines.</p>
+        </div>
+
+
+        <!-- WEEK 7  -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — HTTP Requests &amp; Web Scraping with BeautifulSoup</h2>
+                <p>Fetch data from the web programmatically using the <code>requests</code> library and extract specific data from HTML pages using BeautifulSoup.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>HTTP and the web</strong> — request → server → HTML response; HTTP methods (GET, POST); status codes (200, 403, 404, 429, 500); request/response headers.</li>
+                    <li><strong><code>requests</code> library</strong> — <code>requests.get(url)</code>; <code>response.status_code</code>, <code>response.text</code>, <code>response.json()</code>; params, headers, timeouts; <code>requests.Session()</code>; <code>response.raise_for_status()</code>.</li>
+                    <li><strong>HTML basics for scraping</strong> — tags, attributes (<code>id</code>, <code>class</code>, <code>href</code>); using browser DevTools (F12) to find elements.</li>
+                    <li><strong>BeautifulSoup4 (<code>bs4</code>)</strong> — <code>soup.find()</code>, <code>soup.find_all()</code>; CSS selectors (<code>soup.select()</code>, <code>soup.select_one()</code>); <code>.text</code>, <code>.get_text(strip=True)</code>, <code>tag['href']</code>.</li>
+                    <li><strong>Scraping best practices and ethics</strong> — checking <code>robots.txt</code>; rate limiting with <code>time.sleep()</code>; User-Agent headers; static vs dynamic pages.</li>
+                    <li><strong>Common scraping challenges</strong> — pagination, handling <code>None</code> from <code>.find()</code>, saving to CSV and JSON.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Web scraping is one of the most practically valuable automation skills — price monitoring, research data collection, job listing aggregation, sports statistics, and real estate data are all commonly scraped. <code>requests</code> + BeautifulSoup is the standard Python stack for static page scraping and is sufficient for the majority of public data sources.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Important Note on Web Scraping Ethics</h3>
+                    <ul>
+                        <li>Always check <code>https://targetsite.com/robots.txt</code> before scraping any site.</li>
+                        <li>Scraping legality varies by jurisdiction and website terms of service — always check a site's ToS before scraping.</li>
+                        <li>This roadmap uses <code>books.toscrape.com</code> and <code>quotes.toscrape.com</code> — legal, purpose-built scraping practice sites.</li>
+                    </ul>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>HTTP basics + <code>requests.get()</code> — fetch <code>books.toscrape.com</code>, log status code and first 500 characters.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>BeautifulSoup basics — parse the fetched HTML; find all book titles; print them.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Extract structured data — book title, price, rating, availability; store in a list of dicts.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>CSS selectors + pagination — scrape all 20 pages of <code>books.toscrape.com</code>; aggregate into one list.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Save scraped data to CSV and JSON; add error handling for failed requests.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Scrape <code>quotes.toscrape.com</code> — quotes, authors, tags; handle pagination; export to CSV.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Scrape a news site's headlines (check <code>robots.txt</code> first) + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Scrape the top 100 books from <code>books.toscrape.com</code> and export to a CSV sorted by rating.</li>
+                    <li>Build a "price tracker" that scrapes the current price of a product from a static product page and logs it with a timestamp.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Book Catalog Scraper</strong> — scrapes all 1000 books from <code>books.toscrape.com</code> (all 50 pages), extracts: title, price, star rating (as integer), availability, category (from each book's detail page), saves to a CSV and JSON file, logs progress every 10 pages, includes a 1-second delay between requests, handles HTTP errors gracefully, and generates a summary (total books, average price, count per rating, count per category) — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Common Mistakes</h3>
+                    <ul>
+                        <li>Always add <code>time.sleep(1)</code> (or more) between requests — be a polite scraper.</li>
+                        <li>Use <code>.get_text(strip=True)</code> for clean text extraction.</li>
+                        <li>Always check for <code>None</code>: <code>if element := soup.find('div', class_='price'): price = element.text</code>.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li><code>requests</code> documentation (docs.python-requests.org)</li>
+                    <li>BeautifulSoup documentation (www.crummy.com/software/BeautifulSoup/bs4/doc)</li>
+                    <li><code>books.toscrape.com</code> — legal scraping practice site</li>
+                    <li>"Automate the Boring Stuff" — Chapter 12 (Web Scraping)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 8  -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Browser Automation: Selenium &amp; Playwright</h2>
+                <p>Automate web browsers — logging into websites, filling forms, clicking buttons, and scraping JavaScript-rendered content.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Why browser automation?</strong> — static scraping fails on JavaScript-rendered pages; browser automation controls a real browser; use cases: login-required pages, form submission, screenshot capture, automated testing.</li>
+                    <li><strong>Selenium</strong> — <code>webdriver.Chrome()</code>, headless mode; <code>find_element(By.CSS_SELECTOR)</code>, <code>find_elements()</code>; <code>.click()</code>, <code>.send_keys()</code>; <code>WebDriverWait</code> + <code>expected_conditions</code>; <code>driver.execute_script()</code>; <code>driver.quit()</code>.</li>
+                    <li><strong>Playwright (the modern alternative)</strong> — faster, more reliable, better auto-waits; <code>playwright.chromium.launch(headless=True)</code>; <code>page.goto()</code>; locators: <code>page.locator()</code>, <code>page.get_by_text()</code>, <code>page.get_by_role()</code>; <code>locator.click()</code>, <code>locator.fill()</code>; <code>page.screenshot()</code>, <code>page.pdf()</code>.</li>
+                    <li><strong>Practical browser automation patterns</strong> — login automation; form filling from CSV; scraping JS-rendered content; scheduled screenshots; downloading files.</li>
+                    <li><strong><code>playwright codegen</code></strong> — record browser interactions and generate Python code automatically.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Playwright and Selenium open up the full internet to automation, not just static pages. Login-required portals, JavaScript-heavy dashboards, and interactive forms all require browser automation. <code>playwright codegen</code> alone can generate 80% of a browser automation script from a manual interaction recording — a professional tool used by QA engineers daily.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Selenium install + launch browser + navigate + headless mode; scrape a JS-rendered page that BeautifulSoup can't handle.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Form automation — fill and submit a login form; handle errors (wrong credentials).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>WebDriverWait</code> — wait for a specific element before interacting; scrape data that loads after a delay.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Playwright install + first script; navigate, click, fill, screenshot.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Playwright locators + <code>wait_for_load_state</code>; scrape a multi-page JavaScript-rendered site.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td><code>playwright codegen</code> — record an interaction on a practice site; review and parameterize the generated code.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Build a scheduled screenshot tool (takes screenshots of 3 URLs daily) + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Automate logging into <code>quotes.toscrape.com/login</code> (username: <code>user</code>, password: <code>12345</code>) and scrape quotes that only appear after login.</li>
+                    <li>Build a script that fills a Google Form automatically from a CSV of responses (use a test form you create yourself).</li>
+                    <li>Build a "web page PDF saver" — a list of URLs saved as PDFs using <code>page.pdf()</code>.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Browser Automation Toolkit</strong> with 3 scripts: (1) <strong>Login Scraper</strong> — logs into a practice site, scrapes restricted content, saves to CSV; (2) <strong>Form Filler</strong> — reads data from a CSV and fills a web form for each row using Playwright; (3) <strong>Page Monitor</strong> — takes daily screenshots of 3 configurable URLs with timestamps — all using <code>.env</code> for credentials, with logging and error handling — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>time.sleep(5)</code> everywhere instead of <code>WebDriverWait</code> or <code>wait_for_load_state</code> — brittle and slow.</li>
+                        <li>Not calling <code>driver.quit()</code> at the end — leaves ghost browser processes.</li>
+                        <li>Using Selenium for pages that don't need it — BeautifulSoup + <code>requests</code> is faster for static pages.</li>
+                        <li>Storing credentials in the script file instead of <code>.env</code>.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Playwright Python documentation (playwright.dev/python)</li>
+                    <li>Selenium Python documentation (selenium-python.readthedocs.io)</li>
+                    <li>Real Python — "Modern Web Automation With Python and Playwright"</li>
+                    <li><code>quotes.toscrape.com/login</code> — legal practice login page</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–44 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 9 -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — REST API Automation &amp; Data Integration</h2>
+                <p>Interact with real-world APIs to fetch, send, and process data automatically — integrating external services into automation workflows.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>REST API fundamentals</strong> — endpoints, base URLs, versioning; authentication (API Key, Bearer Token, Basic Auth, OAuth 2.0 intro); rate limits.</li>
+                    <li><strong>Working with REST APIs using <code>requests</code></strong> — GET, POST, PUT/PATCH, DELETE; headers; pagination (offset/limit, page/per_page, cursor-based).</li>
+                    <li><strong>Real APIs used this week</strong> — OpenWeatherMap API (free tier), REST Countries API (no key required), GitHub API, JSONPlaceholder (free fake REST API), Google Sheets API (intro).</li>
+                    <li><strong>Processing API responses</strong> — parsing nested JSON; extracting fields; saving to CSV/JSON/database; retry logic with exponential backoff.</li>
+                    <li><strong>Webhooks (conceptual intro)</strong> — APIs that push data to your script; basic webhook receiver with Flask.</li>
+                    <li><strong><code>httpx</code> — async HTTP requests</strong> — concurrent API calls; <code>httpx.get()</code> vs <code>async with httpx.AsyncClient()</code>.</li>
+                    <li><strong>Scheduled API polling</strong> — fetch data every hour, compare to previous, alert on change; building a simple ETL pipeline.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> APIs are the backbone of modern automation. Fetching live weather data, monitoring a GitHub repository, reading from a Google Sheet, posting to Slack, or pulling financial data from a market API — all use the patterns taught this week. Combining APIs with scheduling (Week 6) creates genuinely powerful real-time automation workflows.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>REST Countries API (no auth needed) — fetch and display data for 5 countries.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>OpenWeatherMap API (sign up for free key) — fetch current weather + 5-day forecast for a list of cities.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>GitHub API — list all public repos, open issues, and recent commits; save to JSON.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>POST/PUT/DELETE with JSONPlaceholder — full CRUD via API.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Rate limiting + retry with <code>tenacity</code>; pagination — fetch all pages of a paginated API.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Weather alert automation — poll every hour, alert via desktop notification if temperature exceeds threshold.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Google Sheets API intro (read data from a sheet into a DataFrame) + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build a "country comparison" script that fetches data for 10 countries and exports a comparison table to CSV.</li>
+                    <li>Build a "GitHub repo monitor" that checks if any of your repos has new issues since the last check.</li>
+                    <li>Build a script that fetches weather data for 5 cities every hour and stores in a growing CSV.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Weather &amp; News Automation Dashboard</strong> — fetches weather for 5 cities from OpenWeatherMap; fetches top news headlines from a free news API; saves all data to a daily CSV; compares current weather to yesterday's saved data and flags significant changes; sends a desktop notification for extreme weather; scheduled to run daily at 8 AM via <code>schedule</code>; <code>.env</code> for all API keys — pushed to GitHub with a <code>README.md</code> and <code>.env.example</code>.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Hardcoding API keys in scripts pushed to GitHub — serious security issue.</li>
+                        <li>Not handling rate limits — script fails after 60 requests with a 429 error.</li>
+                        <li>Not checking <code>response.raise_for_status()</code> — assuming every response is valid.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>API keys always in <code>.env</code>. Add <code>.env</code> to <code>.gitignore</code>. Check with <code>git status</code> before every commit.</li>
+                        <li>Implement retry with backoff: <code>tenacity.retry</code> or a <code>while</code> loop with <code>time.sleep(2**attempt)</code>.</li>
+                        <li>Always call <code>response.raise_for_status()</code> immediately after getting a response.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>REST Countries API (restcountries.com) — no key needed</li>
+                    <li>OpenWeatherMap free tier (openweathermap.org/api)</li>
+                    <li>JSONPlaceholder (jsonplaceholder.typicode.com) — free fake REST API</li>
+                    <li>Real Python — "Python's Requests Library (Guide)"</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Advanced Automation</h2>
+            <p>Weeks 10 through 12 add the professional-grade automation skills that make scripts truly production-ready: multi-channel notification systems, database-backed ETL pipelines, and desktop GUI automation for systems with no API. By the end of Phase 4, your scripts communicate, store data persistently, and can control any application on your screen.</p>
+        </div>
+
+
+        <!--  WEEK 10  -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Email, Messaging &amp; Notification Automation</h2>
+                <p>Automate sending and reading emails, posting to messaging platforms (Slack, Telegram), and building multi-channel notification systems.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Email sending with <code>smtplib</code></strong> — SMTP protocol basics; <code>smtplib.SMTP_SSL('smtp.gmail.com', 465)</code>; <code>MIMEText</code> and <code>MIMEMultipart</code>; sending to multiple recipients; Gmail App Passwords.</li>
+                    <li><strong>Email with attachments</strong> — <code>MIMEBase</code>; attaching PDFs, CSVs, images; HTML email body.</li>
+                    <li><strong>Reading email with <code>imaplib</code></strong> — IMAP server connection; searching for emails (UNSEEN, FROM, SUBJECT, SINCE); fetching and parsing with <code>email</code> module; extracting attachments.</li>
+                    <li><strong>Email with <code>yagmail</code></strong> — <code>yagmail.SMTP(user, password)</code>; <code>yag.send(to, subject, contents, attachments)</code> — simpler API for everyday sending.</li>
+                    <li><strong>Slack automation</strong> — Slack Incoming Webhooks; <code>slack_sdk</code> library; sending messages and rich formatting (Block Kit) to a channel.</li>
+                    <li><strong>Telegram Bot automation</strong> — creating a bot with BotFather; <code>python-telegram-bot</code> library; sending messages, photos, and files.</li>
+                    <li><strong>Building an alert routing system</strong> — a <code>Notifier</code> class with <code>send_email()</code>, <code>send_slack()</code>, <code>send_telegram()</code>; configuration-driven routing from <code>.env</code> or JSON config.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Notification and alerting is how unattended automation communicates with humans. A disk monitor that silently logs to a file is less useful than one that sends you a Slack message or email. Email automation also handles real workflow tasks: automatically processing invoice attachments, sending weekly reports, or alerting a team when a data pipeline fails.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td><code>smtplib</code> — send a plain-text email; send an HTML email; store credentials in <code>.env</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Email with PDF and CSV attachments; send a weekly report email with attached summary.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>imaplib</code> — search unseen emails from a specific sender; extract and save attachments.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Slack Incoming Webhook — send a message + rich formatting (Block Kit) to a channel.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Telegram Bot — BotFather setup; send message + photo via <code>python-telegram-bot</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td><code>Notifier</code> class combining all three channels + config-driven routing.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Integrate <code>Notifier</code> into the Week 6 system monitor + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write a script that monitors a CSV for new rows added since the last run and emails a summary of new entries.</li>
+                    <li>Build a "daily digest" email — fetches top news headlines, weather, and top GitHub repos, sends as formatted HTML at 7 AM.</li>
+                    <li>Build a Telegram bot that responds to <code>/status</code> with current CPU/RAM/disk usage.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Notification Automation Hub</strong> — a <code>Notifier</code> class with email (via <code>yagmail</code>), Slack, and Telegram support; integrates with the Week 6 system monitor (alerts via the configured channel when thresholds are breached); a "daily report" job that generates a summary of the previous day's log file and emails it; reads a monitored inbox for emails with "URGENT" in the subject and forwards them to Slack — all scheduled, all credentials in <code>.env</code> — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using a regular Gmail password instead of a Gmail App Password — authentication always fails.</li>
+                        <li>Not closing the SMTP connection after sending — leaves dangling connections.</li>
+                        <li>Sending test emails to real recipients during development.</li>
+                        <li>Rate-limiting from email providers — sending 1000 emails in a loop gets the account flagged.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Gmail: enable 2FA → generate an App Password → use that in <code>.env</code>, not your regular password.</li>
+                        <li>Use <code>with smtplib.SMTP_SSL(...) as server:</code> — closes automatically.</li>
+                        <li>Set up a dedicated test Gmail account for automation tests — never use your main account.</li>
+                        <li>Add <code>time.sleep(1)</code> between emails when sending in bulk.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li><code>yagmail</code> documentation (GitHub)</li>
+                    <li>Slack API documentation — "Incoming Webhooks" section (api.slack.com)</li>
+                    <li><code>python-telegram-bot</code> documentation (python-telegram-bot.readthedocs.io)</li>
+                    <li>"Automate the Boring Stuff" — Chapter 18 (Sending Email)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36–40 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 11-->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Database Automation: SQLite, SQLAlchemy &amp; Data Pipelines</h2>
+                <p>Store, query, and manage structured data in local databases programmatically, and build automated ETL (Extract, Transform, Load) data pipelines.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>SQLite with <code>sqlite3</code></strong> — <code>sqlite3.connect()</code>; <code>cursor.execute(SQL)</code>, <code>cursor.fetchall()</code>; creating tables, CRUD operations; parameterized queries (SQL injection prevention); <code>connection.commit()</code>; context manager.</li>
+                    <li><strong>SQLAlchemy ORM (intro)</strong> — <code>create_engine()</code>, <code>declarative_base()</code>, <code>sessionmaker()</code>; defining models as Python classes; CRUD with ORM; when to use raw SQL vs ORM.</li>
+                    <li><strong>Automated data ingestion</strong> — CSV → <code>pandas</code> → SQLite; <code>df.to_sql()</code>; deduplication before insert.</li>
+                    <li><strong>ETL pipeline pattern</strong> — Extract (API/CSV/web scrape), Transform (clean/filter/validate), Load (SQLite/CSV/API); error handling and logging at each stage; idempotency.</li>
+                    <li><strong>Querying and reporting</strong> — aggregation queries (<code>COUNT</code>, <code>SUM</code>, <code>AVG</code>, <code>GROUP BY</code>), joins; exporting to CSV/Excel with <code>pandas</code>; scheduled weekly reports.</li>
+                    <li><strong>PostgreSQL intro (conceptual)</strong> — when to move from SQLite; <code>psycopg2</code> adapter; free PostgreSQL hosting (Neon, Supabase, Render — verify current availability).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Storing automation results in a database instead of accumulating CSV files is what makes automation scalable and queryable. An ETL pipeline that collects data daily from an API, cleans it, deduplicates, and stores it in SQLite — then generates a weekly summary report — is a complete, production-quality automation workflow.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>SQLite basics — create a <code>scrape_results</code> database; insert Week 7 book data; query and display.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Parameterized queries + <code>pandas</code> to SQLite + deduplication on insert.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>SQLAlchemy ORM — define 2 model classes; CRUD operations.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>ETL pipeline — Extract (API), Transform (pandas), Load (SQLite); handle duplicates.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Report queries — aggregations, joins, export to CSV; scheduled weekly report.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Email the weekly report (combine with Week 10 email automation).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>PostgreSQL intro (connect to a free Neon/Supabase test DB) + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build a pipeline that runs daily: fetches weather data for 10 cities, stores in SQLite, and alerts via email if any city shows extreme temperature.</li>
+                    <li>Write a script that reads a CSV of product prices scraped over 30 days, stores in SQLite, and generates a "price trend" report for each product.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>An <strong>Automated Data Pipeline</strong> — a complete ETL system: (1) Extract: scrape book data from <code>books.toscrape.com</code> + weather from OpenWeatherMap API; (2) Transform: <code>pandas</code> clean (strip whitespace, parse prices, validate); (3) Load: insert into SQLite with deduplication; (4) Report: generate a weekly summary exported to Excel; (5) Deliver: email the report as an attachment; (6) Schedule: runs daily via <code>schedule</code> — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Concatenating user input into SQL strings — SQL injection vulnerability even in local databases.</li>
+                        <li>Not committing after write operations — changes are lost when connection closes.</li>
+                        <li>Accumulating thousands of CSVs instead of a database — makes historical queries impossible.</li>
+                        <li>Not handling <code>IntegrityError</code> on duplicate inserts — crashes the pipeline.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always use parameterized queries: <code>?</code> placeholders in <code>sqlite3</code>.</li>
+                        <li>Always call <code>conn.commit()</code> after any INSERT/UPDATE/DELETE.</li>
+                        <li>Wrap bulk inserts in <code>try/except sqlite3.IntegrityError: pass</code> or use <code>INSERT OR IGNORE</code>.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li><code>sqlite3</code> Python documentation (docs.python.org)</li>
+                    <li>SQLAlchemy documentation — "ORM Tutorial" (docs.sqlalchemy.org)</li>
+                    <li>DB Browser for SQLite (sqlitebrowser.org) — free GUI tool</li>
+                    <li>Real Python — "Introduction to Python SQL Libraries"</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–40 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 12  -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — GUI Automation, OCR &amp; Desktop Integration</h2>
+                <p>Automate interactions with desktop applications that have no API — controlling mouse and keyboard with PyAutoGUI, and extracting text from screenshots with OCR.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>PyAutoGUI — mouse and keyboard automation</strong> — <code>pyautogui.moveTo()</code>, <code>click()</code>, <code>rightClick()</code>, <code>typewrite()</code>, <code>hotkey()</code>, <code>screenshot()</code>; <code>FAILSAFE = True</code> (always enable); <code>PAUSE</code> global delay.</li>
+                    <li><strong>Screen coordinate finding</strong> — <code>pyautogui.position()</code>, <code>pyautogui.size()</code>, <code>displayMousePosition()</code>.</li>
+                    <li><strong>Image-based automation</strong> — <code>pyautogui.locateCenterOnScreen('element.png')</code>; <code>locateAllOnScreen()</code>; clicking by image; handling <code>ImageNotFoundException</code>.</li>
+                    <li><strong>OCR with <code>pytesseract</code> (expanded)</strong> — full setup (Tesseract OS-level tool + pip package); pre-processing with Pillow (grayscale, threshold, resize); <code>image_to_string()</code>; <code>image_to_data()</code> for bounding boxes.</li>
+                    <li><strong><code>pyperclip</code> — clipboard automation</strong> — <code>pyperclip.copy()</code>, <code>pyperclip.paste()</code>; faster and more reliable text entry.</li>
+                    <li><strong>Combining GUI automation with other systems</strong> — screenshot → OCR → process text → trigger next GUI action; automating legacy desktop apps.</li>
+                    <li><strong><code>keyboard</code> and <code>mouse</code> libraries</strong> — global hotkey listeners: <code>keyboard.add_hotkey('ctrl+shift+h', my_function)</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Many business-critical systems are legacy desktop applications with no API — accounting software, ERP systems, old databases. PyAutoGUI can automate data entry and extraction from these systems. Screenshot + OCR creates a complete "eyes + hands" automation pipeline for any application on screen, regardless of whether it has an API.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td><code>pyautogui</code> basics — screenshot, <code>moveTo</code>, <code>click</code>, <code>typewrite</code>; automate opening Notepad and typing a paragraph.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Hotkeys + <code>locateOnScreen</code> image-based clicking; automate a multi-step desktop workflow.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>pytesseract</code> setup + basic OCR on a screenshot; extract text from a calculator result.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>OCR pre-processing with Pillow (grayscale, threshold) — improve accuracy on low-contrast screenshots.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td><code>pyperclip</code> + clipboard workflow — copy data from one app, process in Python, paste result into another.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Combine: screenshot → OCR → log → clear → repeat cycle.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Build a global hotkey trigger (<code>keyboard</code> library) + review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write a script that opens a desktop app, takes a screenshot every 5 seconds for 1 minute, and saves all screenshots with timestamps.</li>
+                    <li>Build a "screen reader" — takes a screenshot of any window, extracts all text via OCR, saves to a text file.</li>
+                    <li>Build a script that monitors your screen for the word "ERROR" in any application and sends a desktop notification.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Desktop Automation Agent</strong> — activated by a global hotkey (<code>Ctrl+Shift+A</code>); when triggered: (1) takes a screenshot of the current screen; (2) runs OCR to extract all text; (3) uses regex to find dates, prices, or email addresses; (4) saves structured data to a daily CSV; (5) copies a summary to the clipboard; demonstrates automating a form fill in a practice desktop application — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Not setting <code>pyautogui.FAILSAFE = True</code> — a runaway script with no escape.</li>
+                        <li>Hardcoding screen coordinates without checking screen resolution — breaks on different monitor setups.</li>
+                        <li>Relying on pixel-perfect <code>locateOnScreen</code> matching — fails if screen scaling or DPI differs.</li>
+                        <li>Running OCR on an unprocessed screenshot — very low accuracy; always preprocess.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Line 1 of every <code>pyautogui</code> script: <code>pyautogui.FAILSAFE = True</code>.</li>
+                        <li>Use <code>pyautogui.size()</code> to get current resolution and scale coordinates, or use image-based clicking instead of hardcoded coordinates.</li>
+                        <li>For <code>locateOnScreen</code>: use <code>confidence=0.8</code> (requires <code>opencv-python</code> installed).</li>
+                        <li>OCR preprocessing: convert to grayscale, increase contrast, scale up by 2x before OCR.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li><code>pyautogui</code> documentation (pyautogui.readthedocs.io)</li>
+                    <li>Tesseract OCR GitHub — installation instructions (github.com/tesseract-ocr/tesseract)</li>
+                    <li>"Automate the Boring Stuff" — Chapter 20 (Controlling the Keyboard and Mouse)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36–40 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 5 — Capstone Systems, Packaging &amp; Deployment</h2>
+            <p>Weeks 13 through 15 build the final, professional layer: production-grade scraping with anti-detection, professional CLI packaging with Click and pytest, cloud deployment via GitHub Actions, and the complete AutoPilot capstone automation suite.</p>
+        </div>
+
+
+        <!--  WEEK 13 -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Advanced Web Scraping: Anti-Detection, Proxies &amp; Resilient Pipelines</h2>
+                <p>Handle real-world scraping challenges — JavaScript-heavy sites, anti-detection, proxy rotation, and building robust, resumable scraping pipelines.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Advanced Playwright scraping</strong> — scraping JavaScript-rendered SPAs (React, Vue); intercepting network requests with <code>page.route()</code>; <code>page.evaluate()</code> for JS-context data extraction; waiting for specific elements or response URLs.</li>
+                    <li><strong>Anti-detection techniques</strong> — User-Agent rotation; random delays (<code>time.sleep(random.uniform(1, 3))</code>); disabling automation detection flags; cookie handling; session persistence.</li>
+                    <li><strong>Proxy rotation</strong> — what proxies are and why they're used; rotating proxies with cycling on 429/403 errors; <code>requests</code> with a proxy: <code>requests.get(url, proxies={'https': 'http://ip:port'})</code>.</li>
+                    <li><strong>Scrapy framework (intro)</strong> — Scrapy vs <code>requests</code> + BeautifulSoup vs Playwright; <code>scrapy startproject</code>, <code>scrapy genspider</code>; spider basics; <code>scrapy crawl</code>.</li>
+                    <li><strong>Resumable scraping pipelines</strong> — tracking scraping progress in SQLite; resuming a paused scrape; deduplication in the data store.</li>
+                    <li><strong>Data validation with <code>pydantic</code></strong> — <code>pydantic.BaseModel</code>; validating scraped records before inserting into the database.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Real-world scraping is messier than practice sites. This week adds the professional skills needed for production scraping: handling failures, rotating identities, validating data quality, and building pipelines that can run for hours without crashing. These are the skills that separate a hobbyist scraper from a professional data engineer.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Advanced Playwright — intercept API calls a page makes; capture the underlying JSON data.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Anti-detection — rotate user agents; add random delays; disable automation detection in Playwright.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Cookie/session management — maintain login session across multiple pages.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Proxy rotation — implement proxy cycling with error fallback.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Scrapy intro — create a project, build a spider for <code>books.toscrape.com</code>, export to JSON.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Resumable pipeline — track progress in SQLite; restart from last scraped page.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td><code>pydantic</code> validation + review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build a scraper for <code>quotes.toscrape.com/js</code> using Playwright (requires JavaScript).</li>
+                    <li>Build a Scrapy spider that scrapes 5 pages of a site and stores results in a SQLite database.</li>
+                    <li>Add <code>pydantic</code> validation to the Week 7 book scraper.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Resilient Product Monitor</strong> — a Playwright-based scraper targeting <code>books.toscrape.com</code> with: user-agent rotation, random delays, session management, resumable progress in SQLite, <code>pydantic</code> data validation, a retry mechanism (3 retries with exponential backoff), outputs to SQLite and daily CSV, sends an email alert if prices drop by more than 10% since the last scrape — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Disabling all bot detection protections and then being surprised when an IP is blocked.</li>
+                        <li>Not validating scraped data — inserting <code>None</code> or empty strings into a database that expects real values.</li>
+                        <li>Building a scraper with no resume capability — having to restart from scratch after a 6-hour scrape fails at hour 5.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Be a polite, disguised scraper: random delays, realistic user agents, session cookies.</li>
+                        <li>Always validate with <code>pydantic</code> or explicit checks before inserting into the database.</li>
+                        <li>Track progress in SQLite from the first page — resumability is non-negotiable for any long-running scrape.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Playwright Python documentation — advanced topics (playwright.dev/python)</li>
+                    <li>Scrapy documentation — Tutorial section (docs.scrapy.org)</li>
+                    <li><code>pydantic</code> documentation (docs.pydantic.dev)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 14 -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Packaging, CLI Tools &amp; Deployment</h2>
+                <p>Package Python automation scripts as professional, distributable CLI tools; manage dependencies properly; and deploy scripts to run in the cloud on a schedule.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Professional project structure</strong> — <code>src/</code> layout, <code>__init__.py</code>, <code>requirements.txt</code>, <code>.env.example</code>, <code>.gitignore</code>, <code>README.md</code>.</li>
+                    <li><strong>Click — building professional CLI tools</strong> — <code>@click.command()</code>, <code>@click.option()</code>, <code>@click.argument()</code>; types, default values, required flags, help text; subcommands with <code>@click.group()</code>.</li>
+                    <li><strong>Unit testing with <code>pytest</code></strong> — <code>test_</code> prefix functions; <code>assert</code> statements; fixtures (<code>@pytest.fixture</code>); mocking with <code>unittest.mock.patch</code>; running tests: <code>pytest tests/ -v</code>.</li>
+                    <li><strong>Packaging with <code>pyproject.toml</code> (intro)</strong> — modern Python packaging; building a distributable package with <code>build</code> and <code>twine</code>; publishing to PyPI (intro level).</li>
+                    <li><strong>Deploying automation scripts</strong> — GitHub Actions (<code>.github/workflows/</code> YAML cron schedule; GitHub Actions Secrets); PythonAnywhere; Railway/Render (verify current free tier); Docker (<code>Dockerfile</code>, <code>docker build</code>, <code>docker run</code>).</li>
+                    <li><strong>Environment variables in deployment</strong> — setting secrets on GitHub Actions, PythonAnywhere, Render; never storing <code>.env</code> in the repository.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A script that only runs on your laptop is a personal tool. A properly packaged, documented, deployable script is a product. GitHub Actions alone transforms any automation script into a cloud-hosted, scheduled service with zero ongoing cost. <code>pytest</code> ensures your automation keeps working when you make changes.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Restructure a previous project into the professional directory layout; write a complete <code>README.md</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td><code>click</code> CLI — convert the Week 3 File Inventory Reporter to a <code>click</code>-based multi-command tool.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>pytest</code> — write 10 tests for the Week 11 pipeline (test the transform step, deduplication logic).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>unittest.mock.patch</code> — mock the API call in the Week 9 weather automation; test without hitting the real API.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>GitHub Actions — create a workflow that runs the Week 9 weather script on a daily cron schedule.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Deploy to PythonAnywhere — upload a script, set it up to run on schedule.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Docker intro — write a <code>Dockerfile</code> for one project; build and run locally + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Convert the Week 4 Downloads Organizer into a <code>click</code> CLI tool with <code>--folder</code>, <code>--days</code>, and <code>--dry-run</code> flags.</li>
+                    <li>Write <code>pytest</code> tests for the Week 7 book scraper (mock the HTTP response).</li>
+                    <li>Set up a GitHub Actions workflow that runs a script daily and emails you the output.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Professional CLI Automation Package</strong> — take the Week 9 Weather + News Dashboard and refactor it into a properly packaged project: professional directory structure, <code>click</code> multi-command CLI (<code>weather</code>, <code>news</code>, <code>report</code>, <code>deploy</code>), <code>pytest</code> test suite mocking all API calls, GitHub Actions workflow running daily with secrets stored in GitHub, deployed to PythonAnywhere, <code>Dockerfile</code> included, full <code>README.md</code> with usage, installation, and configuration docs — pushed to GitHub as a standalone, installable package.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Committing <code>.env</code> file to GitHub — exposes all API keys and credentials publicly.</li>
+                        <li>Not pinning dependency versions in <code>requirements.txt</code> — code breaks when a library updates.</li>
+                        <li>Writing tests that depend on real network calls — slow and flaky.</li>
+                        <li>Not adding a <code>.gitignore</code> from the start of a project.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Add <code>.env</code> to <code>.gitignore</code> before the first commit. Check <code>git status</code> before every push.</li>
+                        <li>Use <code>pip freeze > requirements.txt</code> to capture exact versions.</li>
+                        <li>Mock all external calls in tests: APIs, email, database — tests should work offline.</li>
+                        <li>Use GitHub's <code>.gitignore</code> template for Python when creating a new repository.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li><code>click</code> documentation (click.palletsprojects.com)</li>
+                    <li><code>pytest</code> documentation (docs.pytest.org)</li>
+                    <li>GitHub Actions documentation (docs.github.com/actions)</li>
+                    <li>PythonAnywhere (pythonanywhere.com) — free tier hosting</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 15  -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Capstone Build, Documentation &amp; Portfolio</h2>
+                <p>Build the complete AutoPilot capstone automation suite, polish all previous work, write comprehensive documentation, and assemble a professional portfolio.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics</h3>
+                <ol>
+                    <li><strong>Capstone build</strong> — see Capstone section for the full AutoPilot specification.</li>
+                    <li><strong>Code review and refactoring</strong> — review all 13 mini-projects for quality; refactor the 3 best into professional-grade tools.</li>
+                    <li><strong>Documentation</strong> — <code>README.md</code> for every project; docstrings on every function; usage examples.</li>
+                    <li><strong>Portfolio assembly</strong> — a GitHub profile README linking all projects with descriptions and screenshots.</li>
+                    <li><strong>Demo preparation</strong> — record a 3-minute screen recording demonstrating the capstone running end-to-end.</li>
+                </ol>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>AutoPilot architecture + directory structure + all module stubs + GitHub repo with CI.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>File automation module (Weeks 4–5 systems combined); tests.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Web data module (scraper + API + database pipeline); tests.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Notification module (email + Slack/Telegram); scheduling integration.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>CLI interface (<code>click</code>) + GitHub Actions deployment + Docker.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Documentation — README, docstrings, <code>.env.example</code>, usage guide.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Screen recording demo + portfolio README + publish final version.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> This converts 14 weeks of learning into tangible proof of skill. A finished capstone, polished portfolio, and 3-minute demo are what evaluators and employers actually look at — the quality of your presentation directly affects how your project is perceived.</p>
+                </div>
+
+                <p><strong>Estimated Study Hours:</strong> 40–45 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-card" id="capstone">
+            <div class="rm-card-header">
+                <h2>🏆 Final Capstone — AutoPilot: Personal Productivity Automation Suite</h2>
+                <p>A modular, deployable Python automation system that handles multiple real productivity workflows — running automatically, requiring no daily human intervention.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <div class="rm-highlight">
+                    <p><strong>Why AutoPilot?</strong> It uses every major skill from the 15-week roadmap, produces working deployed software that evaluators can verify from the GitHub Actions tab, demonstrates multi-module integration, and has clear real-world relevance — the same patterns power enterprise automation systems used by operations teams worldwide.</p>
+                </div>
+
+                <h3>The Five Modules</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th>What It Does</th>
+                            <th>Phase</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>File Watcher &amp; Organizer</strong></td>
+                            <td>Monitors <code>~/Downloads</code> with <code>watchdog</code>; sorts new files into subfolders; archives files older than 30 days; logs all actions.</td>
+                            <td>Phase 2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Daily Data Pipeline</strong></td>
+                            <td>Scrapes book data daily; fetches weather for 5 cities; fetches top news headlines; stores in SQLite with deduplication; detects significant changes.</td>
+                            <td>Phase 3</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Automated Report Generator</strong></td>
+                            <td>Runs every Monday morning; queries previous week's data from SQLite; generates a Word document with summary statistics; exports CSV; emails the report as an attachment.</td>
+                            <td>Phase 2 + 4</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Notification Hub</strong></td>
+                            <td>Receives alerts from all other modules; routes to email, Slack, or Telegram based on config; disk space alert if any drive exceeds 85%; daily weather summary at 7:30 AM.</td>
+                            <td>Phase 4</td>
+                        </tr>
+                        <tr>
+                            <td><strong>System Health Monitor</strong></td>
+                            <td>CPU, RAM, disk usage logged every 5 minutes to SQLite; alert via Telegram if any threshold is breached; weekly "system health summary" CSV generated.</td>
+                            <td>Phase 2</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                
+
+                <h3>CLI Commands</h3>
+                <pre class="rm-code">autopilot start          # Start all modules
+autopilot status         # Show current system status
+autopilot report         # Generate and email the weekly report now
+autopilot test           # Run the full pytest suite</pre>
+
+                <h3>Capstone Feature Checklist</h3>
+                <ul>
+                    <li>File Watcher running — new files in drop folder are automatically sorted</li>
+                    <li>Daily Data Pipeline running — scrape + API + SQLite + deduplication confirmed</li>
+                    <li>Weekly report generated and emailed automatically every Monday</li>
+                    <li>Notification Hub routing alerts to at least one channel (email, Slack, or Telegram)</li>
+                    <li>System Health Monitor logging every 5 minutes to SQLite</li>
+                    <li><code>click</code> CLI with <code>start</code>, <code>status</code>, <code>report</code>, <code>test</code> commands</li>
+                    <li><code>pytest</code> test suite — all tests passing</li>
+                    <li>All credentials in <code>.env</code> — <code>.env</code> not in GitHub</li>
+                    <li>GitHub Actions workflow running the daily pipeline (verifiable from Actions tab)</li>
+                    <li><code>Dockerfile</code> included — image builds and runs successfully</li>
+                    <li><code>README.md</code> with setup, configuration, and usage documentation</li>
+                    <li><code>.env.example</code> with placeholder values for every required variable</li>
+                    <li><code>requirements.txt</code> with pinned versions</li>
+                    <li>3-minute screen recording demo — all 5 modules demonstrated</li>
+                    <li>GitHub profile README linking all 13 mini-projects + capstone with descriptions</li>
+                </ul>
+
+                <h3>Roadmap at a Glance</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Weeks</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1. Python Foundations</td>
+                            <td>1–3</td>
+                            <td>Python syntax, OOP, error handling, regex, standard library</td>
+                        </tr>
+                        <tr>
+                            <td>2. File &amp; System Automation</td>
+                            <td>4–6</td>
+                            <td>Files, Excel, PDF, images, system monitoring, scheduling</td>
+                        </tr>
+                        <tr>
+                            <td>3. Web Automation</td>
+                            <td>7–9</td>
+                            <td>Web scraping, browser automation, REST APIs</td>
+                        </tr>
+                        <tr>
+                            <td>4. Advanced Automation</td>
+                            <td>10–12</td>
+                            <td>Email, databases, data pipelines, GUI automation</td>
+                        </tr>
+                        <tr>
+                            <td>5. Packaging &amp; Capstone</td>
+                            <td>13–15</td>
+                            <td>Anti-detection scraping, CLI packaging, deployment, portfolio</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>13 Mini-Projects Built Throughout the Roadmap</h4>
+                    <ol>
+                        <li><strong>Text Report Generator</strong> (W1) — analyzes text for word count, unique words, error lines.</li>
+                        <li><strong>Task Logger</strong> (W2) — OOP-based task manager with JSON export and logging.</li>
+                        <li><strong>File Inventory Reporter</strong> (W3) — CLI tool scanning directories and generating CSV reports.</li>
+                        <li><strong>Downloads Organizer</strong> (W4) — automatically sorts files into folders and archives old ones.</li>
+                        <li><strong>Document Processing Suite</strong> (W5) — merge PDFs, batch resize images, generate Word reports.</li>
+                        <li><strong>System Automation Dashboard</strong> (W6) — monitors CPU/RAM/disk with alerts and a watch folder.</li>
+                        <li><strong>Book Catalog Scraper</strong> (W7) — scrapes 1000 books from a practice site into CSV and JSON.</li>
+                        <li><strong>Browser Automation Toolkit</strong> (W8) — login scraper, form filler, scheduled screenshot tool.</li>
+                        <li><strong>Weather &amp; News Dashboard</strong> (W9) — fetches API data daily, stores in CSV, sends alerts.</li>
+                        <li><strong>Notification Automation Hub</strong> (W10) — email, Slack, and Telegram notification routing system.</li>
+                        <li><strong>Automated Data Pipeline</strong> (W11) — full ETL pipeline to SQLite with weekly Excel reports.</li>
+                        <li><strong>Desktop Automation Agent</strong> (W12) — global hotkey trigger, OCR screen reader, form filler.</li>
+                        <li><strong>Resilient Product Monitor</strong> (W13) — anti-detection scraper with price change alerts.</li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+                <div class="logo1">
+                    <h3>CodePath</h3>
+                    <p>Learn. Practice. Master</p>
+                </div>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                    </ul>
+
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C: Beginner to Master — 16 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>C: Beginner to Master</h1>
+        <p>Complete 16-Week Curriculum — From printf("Hello, World!") to Multithreaded Systems Programming</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#week16">W16</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>16-week, project-driven C curriculum</strong> designed to take a complete beginner to a professional-level systems programmer. The roadmap moves from <strong>compilation, syntax, variables, and basic I/O</strong> through <strong>control flow, functions, arrays, and strings</strong>, into <strong>pointers, structs, file handling, and dynamic memory</strong>, all the way to <strong>function pointers, state machines, POSIX threads, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics including the compilation pipeline and primitive types, <strong>Phase 2</strong> covers control flow, functions, and data structures, <strong>Phase 3</strong> covers intermediate and advanced core topics like pointers, structs, file I/O, and dynamic memory, and <strong>Phase 4</strong> covers master-level function pointers, linked lists, concurrency, and production systems programming.</p>
+            <p>By Week 16, you will have built three complete, portfolio-ready applications and be confident building production-grade C programs — from command-line tools to multithreaded systems.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 16 weeks &nbsp;|&nbsp; <strong>Stack:</strong> C (C11/C17), GCC, POSIX &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic programming logic</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–4:</strong> Fundamentals, data types, operators, and basic I/O.</p>
+        </div>
+
+        <!-- WEEK 1 -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Setting Up &amp; Your First Program</h2>
+                <p>Environment setup, compilation pipeline, and basic program structure.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Setting up your environment, understanding the compilation pipeline, and writing your very first C program.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>The Compilation Process</strong> — C code is translated into machine instructions through preprocessing, compiling, assembling, and linking. Understanding this pipeline explains errors like "undefined reference" and "implicit declaration" that you will encounter later.</li>
+                    <li><strong>Program Structure (<code>main</code>, headers)</strong> — Every C program starts execution at <code>main()</code>, and headers like <code>stdio.h</code> give access to library functions. This is the skeleton that every C file shares — without it, nothing compiles.</li>
+                    <li><strong><code>printf</code> and Basic Output</strong> — <code>printf</code> formats and prints text to the console using format specifiers like <code>%d</code>, <code>%f</code>, and <code>%s</code>. It is the primary way to see what your program is doing during development and debugging.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> C is the only language where you need to understand the compilation pipeline to effectively debug your programs. Knowing that preprocessing handles <code>#include</code>, that the linker resolves function references, and that <code>return 0</code> communicates success to the OS — these mental models prevent hours of confusion in every future week.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;stdio.h&gt;      // Provides printf()
+
+int main(void) {
+    printf("Hello, World!\n"); // \n moves to next line
+    return 0;                  // Tells OS the program succeeded
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Install GCC (or use an online compiler like repl.it), write a program that prints your <strong>name</strong>, <strong>favorite language</strong>, and <strong>today's date</strong> on three separate lines using <code>printf</code> with appropriate format specifiers.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 2  -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Variables &amp; Primitive Data Types</h2>
+                <p>Storing and labeling data in memory.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding how C stores data in memory and working with all primitive types and the <code>sizeof</code> operator.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Variables &amp; Declaration</strong> — A variable is a named location in memory that holds a value of a specific type. In C, you must declare a type before using a variable — there is no type inference like in modern languages.</li>
+                    <li><strong>Primitive Types (<code>int</code>, <code>float</code>, <code>double</code>, <code>char</code>)</strong> — C provides built-in types for whole numbers, decimals, and single characters. Each type uses a different amount of memory and has a different value range — critical knowledge for embedded and systems work.</li>
+                    <li><strong><code>sizeof</code> Operator</strong> — <code>sizeof</code> tells you how many bytes a type or variable occupies in memory at compile time. This is essential for understanding memory usage, writing portable code, and working with pointers correctly later on.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Unlike high-level languages, C gives you no automatic type coercion and no runtime type information. Understanding exactly how many bytes each type occupies — and what happens when you overflow them — is the difference between a C programmer who writes correct code and one who writes code that silently corrupts data.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int age = 25;
+    float price = 9.99f;
+    char grade = 'A';
+    printf("Size of int: %zu bytes\n", sizeof(age));
+    printf("Size of float: %zu bytes\n", sizeof(price));
+    printf("Age: %d, Price: %.2f, Grade: %c\n", age, price, grade);
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Declare variables for your age (<code>int</code>), height in meters (<code>float</code>), and first initial (<code>char</code>). Print all three values with their <code>sizeof</code> sizes. Observe how sizes may differ on different systems.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 3  -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Operators &amp; Type Casting</h2>
+                <p>Manipulating data with arithmetic and logical operations.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Manipulating data with arithmetic and logical operations, and explicitly controlling type conversions.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Arithmetic &amp; Assignment Operators</strong> — These perform math (<code>+</code> <code>-</code> <code>*</code> <code>/</code> <code>%</code>) and update variables (<code>+=</code> <code>-=</code>) in a single step. The modulus <code>%</code> operator returns the remainder of integer division — essential for range-wrapping and even/odd checks.</li>
+                    <li><strong>Relational &amp; Logical Operators</strong> — Relational operators (<code>==</code> <code>!=</code> <code>&lt;</code> <code>&gt;</code>) compare values and return true/false (1 or 0 in C), while logical operators (<code>&amp;&amp;</code> <code>||</code> <code>!</code>) combine multiple conditions. These form the basis of all decision-making in code.</li>
+                    <li><strong>Type Casting</strong> — Casting explicitly converts a value from one type to another, such as <code>int</code> to <code>float</code>. Without it, integer division silently truncates decimal results — one of the most common C bugs for beginners.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Integer division truncation is responsible for countless silent bugs in C programs. <code>7 / 2</code> returning <code>3</code> instead of <code>3.5</code> is correct C behavior — but only if you know it's happening. Mastering explicit casting and understanding when implicit promotion occurs is a foundational C skill.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a = 7, b = 2;
+    float result = (float)a / b; // Cast prevents integer division
+    printf("7 / 2 as float = %.2f\n", result);
+    printf("7 %% 2 = %d\n", a % b);
+    printf("a > b: %d\n", a > b);       // 1 (true)
+    printf("a == 7 && b < 5: %d\n", a == 7 && b &lt; 5); // 1
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a program that takes two integers and prints their <strong>sum, difference, product, float division, and modulus</strong>. Demonstrate that integer division without casting gives a different result than float division.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 4 -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Input Handling &amp; Constants</h2>
+                <p>Making programs interactive and protecting fixed values.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Making programs interactive with <code>scanf</code> and protecting fixed values using constants and preprocessor macros.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>scanf</code> for Input</strong> — <code>scanf</code> reads formatted input from the keyboard into variables using format specifiers. Always match the specifier to the variable's type and always pass the variable's address using <code>&amp;</code> to avoid undefined behavior.</li>
+                    <li><strong>Constants (<code>const</code>, <code>#define</code>)</strong> — Constants are values that cannot change after being set, improving safety and readability. <code>#define</code> creates a preprocessor macro (no type, no scope), while <code>const</code> creates a typed, scoped constant — prefer <code>const</code> in modern C.</li>
+                    <li><strong>Format Specifiers Deep Dive</strong> — Format specifiers like <code>%d</code>, <code>%f</code>, <code>%c</code>, and <code>%s</code> tell <code>printf</code>/<code>scanf</code> how to interpret data. Mismatching them with the wrong type causes undefined behavior — one of the most dangerous classes of C bugs.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The <code>&amp;</code> address-of operator in <code>scanf</code> is most students' first encounter with the concept of memory addresses in C — the same concept that underpins all of pointer theory in Week 9. Getting comfortable with "passing an address" here makes pointers dramatically less confusing later.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+#define PI 3.14159   // Preprocessor constant — no type, no semicolon
+
+int main(void) {
+    int radius;
+    printf("Enter radius: ");
+    scanf("%d", &radius);      // & gives the memory address of radius
+    printf("Area = %.2f\n", PI * radius * radius);
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>simple calculator</strong> that asks the user for two numbers and an operator (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>), then prints the result. Handle division by zero with an error message.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 5–8:</strong> Functions, modules, and core data structures.</p>
+        </div>
+
+        <!-- WEEK 5-->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Conditional Statements</h2>
+                <p>Making decisions in code.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Making decisions in code using C's full set of conditional and branching constructs.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>if</code> / <code>else if</code> / <code>else</code></strong> — These statements execute different code blocks depending on whether a condition is true or false. They are the foundation of all branching logic in C and every other programming language.</li>
+                    <li><strong><code>switch</code> Statements</strong> — <code>switch</code> compares one variable against multiple constant values, offering a cleaner alternative to long <code>if-else</code> chains. The <code>break</code> statement at the end of each case is mandatory — forgetting it causes fall-through to the next case.</li>
+                    <li><strong>Ternary Operator</strong> — The ternary operator (<code>condition ? a : b</code>) is a compact one-line way to write simple if-else logic. It is best used for short, readable value assignments — avoid nesting ternaries as it destroys readability.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The <code>switch</code> statement's fall-through behavior — where execution continues into the next case unless you write <code>break</code> — is one of C's most famous gotchas. Understanding it here prevents real bugs. The ternary operator is used constantly in C for compact conditional assignments, especially inside <code>printf</code> calls.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int score = 85;
+    char grade = (score >= 90) ? 'A' : (score >= 80) ? 'B' : 'C';
+    printf("Grade: %c\n", grade);
+
+    int day = 3;
+    switch (day) {
+        case 1: printf("Monday\n");    break;
+        case 2: printf("Tuesday\n");   break;
+        case 3: printf("Wednesday\n"); break;
+        default: printf("Other day\n");
+    }
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a program that takes a number <strong>1–7</strong> and prints the corresponding day of the week using a <code>switch</code> statement. Then add a second version using <code>if-else if</code> and compare the readability of both approaches.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 6   -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Loops &amp; Iteration</h2>
+                <p>Repeating actions efficiently.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Repeating actions efficiently using all three of C's loop constructs and controlling iteration precisely.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>for</code> Loops</strong> — A <code>for</code> loop repeats code a known number of times using an initializer, condition, and increment. It is ideal for counting, array traversal, and any scenario where the number of iterations is determined before the loop starts.</li>
+                    <li><strong><code>while</code> and <code>do-while</code> Loops</strong> — <code>while</code> repeats as long as a condition holds, checking before each iteration; <code>do-while</code> checks after, guaranteeing at least one run. Choose based on whether the first execution should be conditional or guaranteed.</li>
+                    <li><strong><code>break</code> and <code>continue</code></strong> — <code>break</code> exits a loop immediately, while <code>continue</code> skips the rest of the current iteration and jumps to the next check. They give you fine-grained control over loop flow without needing complex condition expressions.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Loops over arrays and strings are the most fundamental operation in all of C programming. Every algorithm you will write in Weeks 8–16 — searching, sorting, counting words, processing files — is built on a loop. Getting completely fluent with <code>for</code>, <code>while</code>, <code>break</code>, and <code>continue</code> now is essential.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    // for loop with continue
+    for (int i = 1; i &lt;= 5; i++) {
+        if (i == 3) continue; // Skip printing 3
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    // do-while — runs at least once
+    int n = 0;
+    do {
+        printf("n = %d\n", n);
+        n++;
+    } while (n &lt; 3);
+
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a program that prints all <strong>prime numbers between 1 and 100</strong> using nested <code>for</code> loops. Use a <code>break</code> to exit the inner loop early when a divisor is found.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 7 -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Functions</h2>
+                <p>Organizing code into reusable blocks.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Organizing code into reusable, testable, and maintainable blocks using C functions.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Function Declaration &amp; Definition</strong> — A function is a named block of code that performs a task and can be called repeatedly. Declaring a prototype (signature without body) at the top of the file lets you call a function before it is defined below — standard practice in C.</li>
+                    <li><strong>Parameters &amp; Return Values</strong> — Functions can accept input via parameters and send back a result via <code>return</code>. This enables modular, reusable logic — the fundamental building block of every large C program.</li>
+                    <li><strong>Pass by Value vs. Scope</strong> — C passes arguments by value by default, meaning functions work on copies of the original variables, not the originals themselves. Variables declared inside a function are local and disappear when the function returns — understanding scope prevents "variable undefined" errors.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> "Pass by value" is C's default and a constant source of confusion for new programmers who expect a function to modify their variable. Understanding that C copies the value — not the reference — is the exact conceptual gap that makes pointers (Week 9) make sense. Functions are also the unit of organization in all real C programs.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+// Function prototype — declared before main
+int square(int n);
+
+int main(void) {
+    printf("Square of 5: %d\n", square(5));
+    printf("Square of 9: %d\n", square(9));
+    return 0;
+}
+
+int square(int n) {     // Takes a COPY of the argument
+    return n * n;       // Original variable in main is untouched
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write functions <code>add</code>, <code>subtract</code>, <code>multiply</code>, and <code>divide</code>, then call each from <code>main</code> with two user-provided numbers. Add prototypes at the top and define functions below <code>main</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Arrays &amp; Strings</h2>
+                <p>Storing and manipulating collections of data.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Storing collections of data using arrays and understanding how C represents strings as null-terminated character arrays.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>One-Dimensional Arrays</strong> — An array stores multiple values of the same type in contiguous memory, accessed via an index starting at 0. Arrays have a fixed size once declared — there is no automatic resizing like a Python list or JavaScript array.</li>
+                    <li><strong>Multi-Dimensional Arrays</strong> — A 2D array is essentially an array of arrays, useful for representing grids, matrices, or tables. Access uses two indices, like <code>grid[row][col]</code>, and they are stored in row-major order in memory.</li>
+                    <li><strong>Strings as Char Arrays</strong> — In C, a string is just an array of characters ending with a null terminator (<code>\0</code>). Functions like <code>strlen</code>, <code>strcpy</code>, and <code>strcmp</code> from <code>string.h</code> operate on this convention — knowing the null terminator exists is critical for avoiding buffer overflows.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Buffer overflows — writing past the end of a char array — are the most infamous class of C security vulnerabilities. Understanding that strings in C are just char arrays with a <code>\0</code> at the end, and that C will not stop you from writing past the end, is the knowledge that prevents the most dangerous class of C bugs.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main(void) {
+    // Integer array
+    int scores[5] = {85, 92, 78, 95, 88};
+    printf("First score: %d\n", scores[0]);
+
+    // String as char array with null terminator
+    char name[20] = "Claude";
+    printf("Name: %s, Length: %zu\n", name, strlen(name));
+
+    // 2D array
+    int grid[2][3] = {{1, 2, 3}, {4, 5, 6}};
+    printf("grid[1][2] = %d\n", grid[1][2]); // 6
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a 5-element integer array, fill it with user input, then write a function that returns the <strong>largest value</strong> in the array. Extend it to also find the minimum and average.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 9–12:</strong> Structs, file handling, error handling, and dynamic memory.</p>
+        </div>
+
+        <!-- WEEK 9  -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Pointers: The Heart of C</h2>
+                <p>Direct memory manipulation using pointers.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding and applying C's most powerful and most feared feature — direct memory manipulation through pointers.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Pointer Basics</strong> — A pointer is a variable that stores the memory address of another variable. The <code>&amp;</code> operator gets an address, and <code>*</code> dereferences a pointer to access the value stored at that address.</li>
+                    <li><strong>Pointers &amp; Functions (Pass by Reference)</strong> — Passing a pointer to a function allows the function to modify the original variable, simulating "pass by reference". This is essential for functions that need to return multiple values or modify data in place.</li>
+                    <li><strong>Pointer Arithmetic</strong> — Adding to a pointer moves it forward by the size of its pointed-to type, not just one byte. This is how C traverses arrays internally — an array name is itself a pointer to its first element.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Pointers are the feature that separates C from every other high-level language — and the reason C is used for operating systems, embedded systems, and performance-critical code. Every concept in the remaining weeks — dynamic memory, linked lists, function pointers, threads — requires pointer fluency. There is no shortcut here: you must understand pointers completely.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void increment(int *ptr) { // Receives the address of the variable
+    (*ptr)++;               // Dereference to modify the original
+}
+
+int main(void) {
+    int x = 10;
+    int *p = &x;           // p stores the address of x
+    printf("x = %d, address = %p\n", x, (void *)p);
+    increment(&x);
+    printf("x after increment = %d\n", x); // 11
+
+    // Pointer arithmetic — moves by sizeof(int)
+    int arr[3] = {10, 20, 30};
+    int *ap = arr;
+    printf("arr[1] = %d\n", *(ap + 1)); // 20
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a <code>swap(int *a, int *b)</code> function that swaps two integers using pointers and verify it in <code>main</code>. Then write a function that uses pointer arithmetic to find the sum of all elements in an array <strong>without using array index notation</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 10  -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Structs, Unions &amp; OOP Patterns in C</h2>
+                <p>Modeling real-world entities — C's equivalent of classes.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Modeling real-world entities using structs and unions, and applying object-oriented-like patterns in C.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>struct</code> — Custom Data Types</strong> — A <code>struct</code> groups related variables of different types under one name, similar to a class's fields in OOP. This is C's primary tool for object-like data modeling and is used in virtually every real C program.</li>
+                    <li><strong>Struct Pointers &amp; <code>typedef</code></strong> — <code>typedef</code> creates an alias for a struct type, removing the need to repeat the <code>struct</code> keyword everywhere. Struct pointers let you pass large objects efficiently to functions and modify them in place using the <code>-&gt;</code> arrow operator.</li>
+                    <li><strong>Unions</strong> — A <code>union</code> stores different data types in the same memory location, with only one member valid at a time. It saves memory when you need to represent one of several possible value types — commonly used in network protocol headers and embedded systems.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Structs are the foundation of every real C data model — from Linux kernel data structures to SQLite's internal types. The <code>-&gt;</code> arrow operator for accessing struct members through a pointer is syntax you will use constantly in all remaining weeks and in every real C codebase you encounter.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+typedef struct {
+    char name[30];
+    int age;
+} Person;  // typedef removes need to write "struct Person" everywhere
+
+void birthday(Person *p) {
+    p-&gt;age++;  // -> dereferences pointer AND accesses member
+}
+
+int main(void) {
+    Person alice = {"Alice", 30};
+    printf("Before: %s is %d\n", alice.name, alice.age);
+    birthday(&alice);
+    printf("After:  %s is %d\n", alice.name, alice.age);
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Define a <code>Book</code> struct (title, author, price). Create an array of 3 books, fill them with user input, and write a function that prints the <strong>most expensive book</strong>. Pass the array to the function using a pointer.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 11-->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — File Handling &amp; Error Handling</h2>
+                <p>Persisting data and writing robust programs.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Persisting data to disk and writing robust, production-grade programs that handle failure gracefully.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>File I/O (<code>fopen</code>, <code>fprintf</code>, <code>fscanf</code>, <code>fclose</code>)</strong> — <code>fopen</code> opens a file in a mode (read/write/append), and you must always <code>fclose</code> it when done or data may not be written. <code>fprintf</code>/<code>fscanf</code> write and read formatted data exactly like <code>printf</code>/<code>scanf</code>.</li>
+                    <li><strong>Error Detection (<code>errno</code>, return codes)</strong> — Most C library functions signal failure through return values like <code>NULL</code> or <code>-1</code>, and the global <code>errno</code> variable provides more detail on exactly what went wrong. Always check these return values before trusting a result.</li>
+                    <li><strong><code>perror</code> and Defensive Programming</strong> — <code>perror</code> prints a human-readable description of the last error alongside your custom message — essential for debugging file and system call failures. Checking pointers and inputs before use prevents the most common class of C crashes.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> C gives you no exceptions — there is no <code>try-catch</code>. Every function can fail, and in C, it is entirely your responsibility to check every return value. Programs that skip error checking appear to work in testing and crash in production. This week instills the defensive programming mindset that characterizes professional C developers.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    FILE *fp = fopen("data.txt", "w");
+    if (fp == NULL) {           // ALWAYS check fopen's return value
+        perror("File error");   // Prints: "File error: No such file..."
+        return 1;
+    }
+    fprintf(fp, "Score: %d\n", 95);
+    fclose(fp);                 // ALWAYS close — flushes buffers to disk
+
+    // Read it back
+    fp = fopen("data.txt", "r");
+    char buf[100];
+    fgets(buf, sizeof(buf), fp);
+    printf("Read: %s", buf);
+    fclose(fp);
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a program that logs 5 user-entered names into <code>names.txt</code>, then reads the file back and prints each line <strong>numbered</strong> (e.g., <code>1. Alice</code>). Handle all possible file open failures with <code>perror</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 12   -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Dynamic Memory &amp; Standard Libraries</h2>
+                <p>Manual memory management and the C standard library ecosystem.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Managing heap memory manually and leveraging the C standard library for common operations.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>malloc</code>, <code>calloc</code>, <code>realloc</code>, <code>free</code></strong> — These functions allocate memory on the heap at runtime, letting you create data structures whose size is not known at compile time. Every allocation must be paired with a <code>free</code> to avoid memory leaks — one of the most costly bugs in long-running C programs.</li>
+                    <li><strong>Common Standard Libraries (<code>stdlib.h</code>, <code>math.h</code>, <code>time.h</code>)</strong> — <code>stdlib.h</code> provides memory and conversion utilities, <code>math.h</code> provides mathematical functions, and <code>time.h</code> handles dates and randomness seeding. Knowing the standard library prevents reinventing the wheel in every project.</li>
+                    <li><strong>Memory Leaks &amp; Dangling Pointers</strong> — A memory leak occurs when allocated memory is never freed; a dangling pointer points to memory that has already been freed and may be reallocated to something else. Tools like Valgrind detect both classes of bugs before they reach production.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Dynamic memory allocation is what makes linked lists, dynamic arrays, hash maps, and trees possible in C — every data structure in Week 14 depends on it. Memory leaks in server software cause gradual memory exhaustion and crashes hours or days after deployment. Understanding <code>malloc</code>/<code>free</code> correctly is a defining skill of a competent C programmer.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(void) {
+    int n;
+    printf("How many numbers? ");
+    scanf("%d", &n);
+
+    int *arr = malloc(n * sizeof(int)); // Heap allocation — runtime size
+    if (!arr) { perror("malloc"); return 1; }
+
+    for (int i = 0; i &lt; n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    printf("First: %d\n", arr[0]);
+
+    free(arr);   // ALWAYS release heap memory
+    arr = NULL;  // Prevent dangling pointer
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a program that asks the user how many numbers they want to store, dynamically allocates an array of that size, fills it with user input, computes the <strong>average</strong>, and frees the memory. Verify with Valgrind (or AddressSanitizer) that there are no leaks.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 13–16:</strong> Function pointers, state machines, concurrency, and three complete capstone projects.</p>
+        </div>
+
+        <!--WEEK 13-->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Function Pointers &amp; Decorator Patterns</h2>
+                <p>Treating functions as data to build flexible, wrapped behavior.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Treating functions as first-class data using function pointers and building decorator-style behavior wrapping — C's equivalent of higher-order functions.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Function Pointers</strong> — A function pointer stores the address of a function, allowing it to be passed around, stored in structs, and called indirectly. This enables callbacks, pluggable behavior, and runtime-selectable algorithms — the foundation of C plugin systems.</li>
+                    <li><strong>Decorator-Style Wrapping</strong> — By wrapping a function pointer inside another function that adds logic (timing, logging, validation) before and after calling it, you replicate Python-style decorators in C. This pattern is used in Linux's kernel module system and many embedded frameworks.</li>
+                    <li><strong><code>qsort</code> and Callbacks in the Standard Library</strong> — <code>qsort</code> is the standard library's real-world example of function pointers — it accepts a custom comparator function to sort any data type. Understanding it cements how callbacks work and is directly applicable to everyday C programming.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Function pointers are how C achieves runtime polymorphism — the same mechanism used to implement virtual function tables (vtables) in C++ and object systems in languages like Python and Ruby. Every callback-based API in C (signal handlers, <code>qsort</code>, GTK events) uses function pointers. This is master-level C.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+void greet(void) { printf("Hello!\n"); }
+void farewell(void) { printf("Goodbye!\n"); }
+
+// "Decorator" — wraps any void function with logging
+void logger(void (*fn)(void)) {
+    printf("[LOG] Calling function...\n");
+    fn();                          // Call through the function pointer
+    printf("[LOG] Done.\n");
+}
+
+// Comparator for qsort — function pointer callback
+int compare_ints(const void *a, const void *b) {
+    return (*(int *)a - *(int *)b);
+}
+
+int main(void) {
+    logger(greet);     // Pass function as argument
+    logger(farewell);
+
+    int nums[] = {5, 2, 8, 1, 9};
+    qsort(nums, 5, sizeof(int), compare_ints);
+    for (int i = 0; i &lt; 5; i++) printf("%d ", nums[i]);
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a <code>timed_run(void (*fn)(void))</code> wrapper that prints <strong>"Start"</strong>, calls the function, then prints <strong>"End"</strong> — applying it to two different sample functions. Then use <code>qsort</code> to sort an array of <code>struct Student</code> by GPA using a custom comparator.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 14 -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Generators via State Machines &amp; Linked Lists</h2>
+                <p>Lazy iteration and dynamic data structures in C.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Simulating generator-style lazy iteration using state structs and building dynamic data structures with linked lists.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Generator-Style Iterators (State Structs)</strong> — Since C lacks <code>yield</code>, a generator is simulated with a struct holding state (current value, step, limit) and a <code>next()</code> function that advances it. This produces values lazily, one at a time — the same behavior as Python generators but implemented manually.</li>
+                    <li><strong>Singly Linked Lists</strong> — A linked list is a chain of nodes where each node holds data and a pointer to the next node. It allows dynamic growth without resizing or copying, unlike arrays — and is the foundational data structure for stacks, queues, and hash table chaining.</li>
+                    <li><strong>Recursion</strong> — A recursive function calls itself to solve smaller instances of a problem until reaching a base case. It is a natural fit for tree-like and divide-and-conquer problems and is commonly used for traversing linked lists and implementing merge sort.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Linked lists are one of the most commonly asked-about data structures in C interviews — and understanding how to manage <code>malloc</code>/<code>free</code> correctly for each node, avoiding leaks and dangling pointers, demonstrates full mastery of dynamic memory from Week 12. State-machine generators are used in embedded systems and network protocol parsers everywhere.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+// Generator-style counter using a state struct
+typedef struct { int current; int limit; } Counter;
+int has_next(Counter *c) { return c-&gt;current &lt; c-&gt;limit; }
+int next_value(Counter *c) { return c-&gt;current++; } // "yields" next number
+
+// Linked list node
+typedef struct Node { int data; struct Node *next; } Node;
+Node *create_node(int data) {
+    Node *n = malloc(sizeof(Node));
+    n-&gt;data = data; n-&gt;next = NULL;
+    return n;
+}
+
+int main(void) {
+    Counter c = {0, 5};
+    while (has_next(&c)) printf("%d ", next_value(&c));
+    printf("\n");
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Implement a singly linked list with <code>insert</code>, <code>print</code>, and <code>free_list</code> functions. Then build a <strong>generator struct</strong> that yields the first 10 Fibonacci numbers one call at a time, printing each before calling <code>next()</code> again.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 15 -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Concurrency with POSIX Threads</h2>
+                <p>Running code in parallel safely using pthreads.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Achieving true parallelism using POSIX threads and protecting shared state from race conditions with mutexes.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Creating Threads (<code>pthread_create</code>)</strong> — <code>pthread_create</code> spawns a new thread that runs a function concurrently with the main program. <code>pthread_join</code> waits for that thread to finish before the main program continues — preventing the program from exiting before threads complete.</li>
+                    <li><strong>Race Conditions &amp; Mutexes</strong> — A race condition occurs when multiple threads access shared data simultaneously without coordination, causing unpredictable and incorrect results. A mutex (mutual exclusion lock) ensures only one thread touches shared data at a time — <code>pthread_mutex_lock</code> and <code>pthread_mutex_unlock</code> bracket the critical section.</li>
+                    <li><strong>Thread-Safe Design Principles</strong> — Designing thread-safe code means minimizing shared mutable state and protecting everything that must be shared with proper locking. This prevents deadlocks (two threads each waiting for the other's lock) and data corruption in production systems.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Multithreading is how servers handle thousands of simultaneous connections and how scientific computing utilizes all CPU cores. Race conditions are invisible in testing — a shared counter incremented by two threads without a mutex may give the correct answer 99% of the time and silently produce a wrong answer 1% of the time in production. Mutexes are the solution.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;pthread.h&gt;
+#include &lt;stdio.h&gt;
+
+pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+int shared_counter = 0;
+
+void *increment_task(void *arg) {
+    for (int i = 0; i &lt; 100000; i++) {
+        pthread_mutex_lock(&lock);    // Only one thread at a time
+        shared_counter++;
+        pthread_mutex_unlock(&lock);  // Release for next thread
+    }
+    return NULL;
+}
+
+int main(void) {  // Compile with: gcc -o prog main.c -lpthread
+    pthread_t t1, t2;
+    pthread_create(&t1, NULL, increment_task, NULL);
+    pthread_create(&t2, NULL, increment_task, NULL);
+    pthread_join(t1, NULL);
+    pthread_join(t2, NULL);
+    printf("Counter: %d\n", shared_counter); // Should be 200000
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create two threads that both increment a shared global counter <strong>100,000 times each</strong>. First run without a mutex and observe incorrect results. Then fix it using <code>pthread_mutex_lock</code>/<code>unlock</code> and confirm the result is always exactly <strong>200,000</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 16 -->
+
+        <div class="rm-card" id="week16">
+            <div class="rm-card-header">
+                <h2>Week 16 — Capstone: Three Progressive Mini Projects</h2>
+                <p>Synthesizing every concept learned into three complete, real programs.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Synthesizing every concept learned across all 16 weeks into three complete, progressively complex programs that demonstrate full C mastery.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — Command-Line To-Do List (Beginner)</h3>
+                <p>A console app using arrays, structs, and file I/O to add, view, complete, and save tasks to disk. Reinforces Phases 1–3: structs, file handling, loops, and basic functions.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>C Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Task data model</td>
+                            <td><code>typedef struct Task</code> with title and done flag</td>
+                        </tr>
+                        <tr>
+                            <td>Interactive menu</td>
+                            <td><code>while</code> loop + <code>switch</code> on user input</td>
+                        </tr>
+                        <tr>
+                            <td>Persist tasks to disk</td>
+                            <td><code>fopen</code>/<code>fprintf</code>/<code>fclose</code> file I/O</td>
+                        </tr>
+                        <tr>
+                            <td>Load tasks on startup</td>
+                            <td><code>fscanf</code> + defensive <code>NULL</code> check</td>
+                        </tr>
+                        <tr>
+                            <td>Mark task complete</td>
+                            <td>Struct pointer update via array index</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A fully functional CLI To-Do app with add, list, complete, and delete operations that persists to a <code>.txt</code> file. Compile with <code>gcc -o todo main.c</code>. Push to GitHub with a <code>README.md</code>. Build on <strong>Days 1–2</strong>.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — Student Record Management System (Intermediate)</h3>
+                <p>A dynamic linked-list-based student database with add, search, sort, and delete — persisted to a binary file. Reinforces pointers, dynamic memory, structs, and file I/O together.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>C Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dynamic student records</td>
+                            <td>Linked list with <code>malloc</code>/<code>free</code> per node</td>
+                        </tr>
+                        <tr>
+                            <td>Search by name</td>
+                            <td>Pointer traversal with <code>strcmp</code></td>
+                        </tr>
+                        <tr>
+                            <td>Sort by GPA</td>
+                            <td>Function pointer comparator with <code>qsort</code></td>
+                        </tr>
+                        <tr>
+                            <td>Binary file persistence</td>
+                            <td><code>fwrite</code>/<code>fread</code> with struct serialization</td>
+                        </tr>
+                        <tr>
+                            <td>Memory cleanup on exit</td>
+                            <td><code>free_list()</code> traversal to release all nodes</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A working student record system with linked-list storage, GPA-based sorting via <code>qsort</code>, name search, and binary file persistence. Verify zero memory leaks with Valgrind. Build on <strong>Days 3–4</strong>.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Multithreaded File Word-Counter (Master)</h3>
+                <p>A tool that splits a large text file into chunks, counts word frequency in parallel using pthreads with a mutex-protected shared results array, and prints the top 10 words — the true systems programming capstone.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>C Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>File chunk splitting</td>
+                            <td><code>fseek</code>/<code>ftell</code> + dynamic <code>malloc</code> buffers</td>
+                        </tr>
+                        <tr>
+                            <td>Parallel word counting</td>
+                            <td><code>pthread_create</code> — one thread per chunk</td>
+                        </tr>
+                        <tr>
+                            <td>Thread-safe result merging</td>
+                            <td><code>pthread_mutex_lock</code> around shared word array</td>
+                        </tr>
+                        <tr>
+                            <td>Top 10 words output</td>
+                            <td>Function pointer comparator + <code>qsort</code></td>
+                        </tr>
+                        <tr>
+                            <td>Full error handling</td>
+                            <td><code>perror</code> + return code checking throughout</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>// Skeleton: thread worker counting words in one file chunk
+void *count_chunk(void *arg) {
+    char *chunk = (char *)arg;
+    pthread_mutex_lock(&lock);    // Protect shared word_count map
+    // ... tokenize chunk with strtok and update shared counts ...
+    pthread_mutex_unlock(&lock);
+    free(chunk);
+    return NULL;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A multithreaded word-frequency counter that reads a large text file, splits it into N chunks (one per thread), counts words in parallel with mutex protection, and prints the <strong>top 10 most frequent words</strong>. Compile with <code>gcc -o wc main.c -lpthread</code>. Verify correctness against a single-threaded reference implementation. Build on <strong>Days 5–7</strong>. This is the capstone demonstrating mastery of the entire C curriculum.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–4</td>
+                        <td>Absolute Basics</td>
+                        <td>Understand the compilation pipeline, declare variables, use operators, and write interactive programs with <code>printf</code>/<code>scanf</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>5–8</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Write functions, control flow with conditionals and loops, and manipulate arrays and C strings confidently</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>9–12</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Master pointers and pointer arithmetic, model data with structs, persist data with file I/O, and manage heap memory with malloc/free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>13–16</td>
+                        <td>Master Level Concepts</td>
+                        <td>Use function pointers for callbacks and decorators, build linked lists and generator patterns, write multithreaded programs with mutex safety, and complete three production projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool / Resource</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>GCC (gcc.gnu.org)</td>
+                        <td>Primary C compiler — use <code>-Wall -Wextra -g</code> flags always</td>
+                    </tr>
+                    <tr>
+                        <td>Valgrind (valgrind.org)</td>
+                        <td>Memory leak and invalid access detection</td>
+                    </tr>
+                    <tr>
+                        <td>GDB (gnu.org/software/gdb)</td>
+                        <td>Command-line debugger for stepping through C programs</td>
+                    </tr>
+                    <tr>
+                        <td>cppreference.com/w/c</td>
+                        <td>Complete C standard library reference</td>
+                    </tr>
+                    <tr>
+                        <td>The C Programming Language (K&amp;R)</td>
+                        <td>The definitive C book by Kernighan &amp; Ritchie</td>
+                    </tr>
+                    <tr>
+                        <td>CS50 (cs50.harvard.edu)</td>
+                        <td>Harvard's free C-based introductory course</td>
+                    </tr>
+                    <tr>
+                        <td>AddressSanitizer (<code>-fsanitize=address</code>)</td>
+                        <td>Runtime memory error detection built into GCC/Clang</td>
+                    </tr>
+                    <tr>
+                        <td>Compiler Explorer (godbolt.org)</td>
+                        <td>See what assembly your C code compiles to in real time</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Always compile with <strong><code>-Wall -Wextra -g</code></strong> flags — warnings are errors in disguise, and <code>-g</code> enables debugging symbols for GDB.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — your commit history is visible proof of consistent, serious progress.</li>
+                    <li>Run Valgrind or AddressSanitizer (<code>-fsanitize=address</code>) on every program from Week 9 onward — do not trust code you haven't checked for memory errors.</li>
+                    <li>By Week 16, you should have three complete, compilable, leak-free projects and the confidence to read and contribute to real-world C codebases like the Linux kernel, Redis, or SQLite.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <!--  FOOTER  -->
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

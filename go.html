@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go: Beginner to Master — 12 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>Go: Beginner to Master</h1>
+        <p>Complete 12-Week Curriculum — From Go Syntax & Types to Concurrency, Generics & Production Applications</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>12-week, phase-based Go curriculum</strong> designed to take a complete beginner to a professional-level Go developer. The roadmap moves from <strong>environment setup, primitive types, variables, and operators</strong> through <strong>control flow, functions, structs, and custom data structures</strong>, into <strong>interfaces, error handling, file I/O, and Go's standard library</strong>, all the way to <strong>goroutines, channels, generics, functional patterns, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics and Go fundamentals, <strong>Phase 2</strong> covers control flow, functions, and structs, <strong>Phase 3</strong> covers interfaces, error handling, file I/O, and packages, and <strong>Phase 4</strong> covers master-level concurrency, generics, and full project work.</p>
+            <p>By Week 12, you will have built three complete, portfolio-ready applications and be confident building production-grade Go applications from scratch.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 12 weeks &nbsp;|&nbsp; <strong>Stack:</strong> Go 1.21+ &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic programming logic</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–3:</strong> Go environment, syntax, primitive types, arrays, slices, and maps.</p>
+        </div>
+
+        <!--  WEEK 1  -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Go Environment, Syntax &amp; Primitive Types</h2>
+                <p>Get Go installed, understand program structure, and learn primitive data types.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Getting Go installed, understanding program structure, and learning primitive data types.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Go Installation &amp; Workspace (<code>go mod</code>, <code>go run</code>)</strong> — Go projects are organized using modules, which track dependencies and versions. The <code>go</code> command-line tool compiles, runs, and manages your code without needing external build systems.</li>
+                    <li><strong>Package Declaration &amp; <code>main</code> Function</strong> — Every Go file belongs to a package, and executable programs must have a <code>main</code> package with a <code>main</code> function. This function is the entry point Go calls when your program starts.</li>
+                    <li><strong>Variables &amp; Type Inference (<code>var</code>, <code>:=</code>)</strong> — Go is statically typed, but it can infer types automatically using the <code>:=</code> short declaration syntax. Variables declared with <code>var</code> are useful when you need an explicit type or a zero-value default.</li>
+                    <li><strong>Primitive Types (<code>int</code>, <code>float64</code>, <code>string</code>, <code>bool</code>)</strong> — Go provides built-in primitive types representing numbers, text, and true/false values. Choosing the right type ensures memory efficiency and predictable arithmetic behavior.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Go's module system and tooling are first-class features of the language. Understanding <code>go mod</code>, <code>go run</code>, and the package/main structure from day one builds the mental model needed for every Go concept that follows — from simple CLI tools to production-grade APIs.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>package main
+
+import "fmt" // standard library for formatted I/O
+
+func main() {
+    var age int = 30      // explicit type declaration
+    name := "Gopher"      // inferred type: string
+    isLearning := true    // inferred type: bool
+    fmt.Println(name, age, isLearning)
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Install Go, run <code>go mod init week1</code>, and write a program that declares your <strong>name</strong>, <strong>age</strong>, and a boolean for <code>isEmployed</code>, printing them in a single formatted sentence using <code>fmt.Printf</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 2   -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Operators, Constants &amp; Type Conversion</h2>
+                <p>Master arithmetic and logical operators and how Go handles strict typing.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering arithmetic and logical operators and how Go handles strict typing.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Arithmetic &amp; Comparison Operators</strong> — Go supports standard operators like <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code> for math and <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code> for comparisons. Integer division truncates, so dividing two ints never produces a decimal.</li>
+                    <li><strong>Constants (<code>const</code>) &amp; <code>iota</code></strong> — Constants hold values that cannot change during execution, improving safety and readability. The <code>iota</code> keyword auto-increments values, commonly used to build enumerated constants.</li>
+                    <li><strong>Type Conversion (Explicit Casting)</strong> — Go never converts types automatically, even between numeric types — you must convert explicitly. This strictness prevents subtle bugs common in looser-typed languages.</li>
+                    <li><strong>Strings &amp; Runes (UTF-8 Basics)</strong> — Go strings are sequences of bytes encoded in UTF-8, and a <code>rune</code> represents a single Unicode code point. Understanding this distinction matters when working with non-ASCII text.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Go's strict type system is intentional — it eliminates entire categories of runtime bugs caused by implicit conversions. Understanding <code>iota</code> for enumerations and explicit casting for numeric work is fundamental to writing correct, idiomatic Go from the start.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>package main
+
+import "fmt"
+
+func main() {
+    const Pi = 3.14159              // constant value
+    var x int = 10
+    var y float64 = float64(x) / 3.0  // explicit conversion required
+    fmt.Println(Pi, y, x%3)        // modulo operator
+
+    // iota for enumerated constants
+    const (
+        Sunday = iota  // 0
+        Monday         // 1
+        Tuesday        // 2
+    )
+    fmt.Println(Sunday, Monday, Tuesday)
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a <strong>simple unit converter</strong>: take a temperature in Celsius (<code>int</code>), convert it to Fahrenheit (<code>float64</code>) using explicit casting, and print both values with two decimal precision.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 3   -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Composite Types: Arrays, Slices &amp; Maps</h2>
+                <p>Learn Go's core data containers used in almost every real program.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Learning Go's core data containers used in almost every real program.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Arrays (Fixed-Size Collections)</strong> — An array has a fixed length defined at declaration and cannot grow or shrink. Arrays are rarely used directly in Go but form the foundation for slices.</li>
+                    <li><strong>Slices (Dynamic Arrays)</strong> — A slice is a flexible, resizable view over an underlying array, making it Go's go-to list-like structure. You can grow a slice using the built-in <code>append</code> function.</li>
+                    <li><strong>Maps (Key-Value Pairs)</strong> — A map stores values indexed by unique keys, similar to dictionaries in other languages. Maps are ideal for fast lookups by name, ID, or other identifiers.</li>
+                    <li><strong>Zero Values &amp; <code>nil</code></strong> — Every Go type has a default "zero value" when not explicitly initialized — 0 for numbers, <code>""</code> for strings, <code>nil</code> for pointers/slices/maps. Understanding zero values prevents unexpected nil-pointer style errors.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Slices and maps are the workhorses of almost every Go program. Unlike arrays, slices grow dynamically and are passed by reference, while maps provide O(1) key lookups. Confusing arrays with slices or mishandling <code>nil</code> maps are among the most common Go beginner mistakes.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>package main
+
+import "fmt"
+
+func main() {
+    nums := []int{1, 2, 3}        // slice literal
+    nums = append(nums, 4)        // grow the slice dynamically
+    fmt.Println(nums)             // [1 2 3 4]
+
+    ages := map[string]int{"Sam": 25}  // map literal
+    ages["Eve"] = 31                   // add new key-value pair
+
+    for name, age := range ages {      // range over map
+        fmt.Printf("%s is %d\n", name, age)
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a small <strong>"inventory" program</strong>: create a slice of product names and a map of <code>product → price</code>. Add two new products to each, then print the full inventory with prices using a <code>range</code> loop.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 4–6:</strong> Conditionals, loops, functions, structs, and custom data structures.</p>
+        </div>
+
+        <!--  WEEK 4  -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Control Flow: Conditionals &amp; Loops</h2>
+                <p>Direct program execution using Go's minimalist control structures.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Directing program execution using Go's minimalist control structures.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>if</code> / <code>else if</code> / <code>else</code> Statements</strong> — Go's conditional statements don't require parentheses around the condition, keeping syntax clean. You can also declare a variable scoped only to the <code>if</code> block for cleaner logic.</li>
+                    <li><strong>The Unified <code>for</code> Loop</strong> — Go has only one looping keyword, <code>for</code>, which can act as a traditional loop, a while-loop, or an infinite loop depending on syntax. This simplifies the language while remaining fully expressive.</li>
+                    <li><strong><code>switch</code> Statements</strong> — Go's <code>switch</code> is more powerful than in many languages — it doesn't require <code>break</code> and supports matching multiple values or conditions per case. It's often a cleaner alternative to long <code>if-else</code> chains.</li>
+                    <li><strong><code>range</code> for Iteration</strong> — The <code>range</code> keyword iterates over slices, arrays, maps, and strings, providing both index/key and value. It's the idiomatic way to loop through collections in Go.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Go's decision to have only one loop keyword (<code>for</code>) and a <code>switch</code> without fall-through by default reflects Go's design philosophy: simple, unambiguous syntax. These constructs form the backbone of every Go program's logic and are used constantly in real codebases.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>package main
+
+import "fmt"
+
+func main() {
+    // if with initialization statement
+    if x := 42; x > 10 {
+        fmt.Println("x is greater than 10")
+    }
+
+    // for as a while loop
+    i := 0
+    for i &lt; 3 {
+        fmt.Println("i =", i)
+        i++
+    }
+
+    // switch — no break needed
+    for i := 0; i &lt; 3; i++ {
+        switch {
+        case i == 0:
+            fmt.Println("first")
+        default:
+            fmt.Println("index:", i)
+        }
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a program that loops through numbers <strong>1–20</strong>, using <code>switch</code> to print <code>"Fizz"</code> for multiples of 3, <code>"Buzz"</code> for multiples of 5, <code>"FizzBuzz"</code> for both, and the number otherwise.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 5  -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Functions, Multiple Returns &amp; Closures</h2>
+                <p>Structure code into reusable, composable units.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Structuring code into reusable, composable units using Go's function features.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Function Declaration &amp; Parameters</strong> — Functions in Go are declared with the <code>func</code> keyword and require explicit parameter and return types. This explicitness makes function signatures self-documenting.</li>
+                    <li><strong>Multiple Return Values</strong> — Unlike many languages, Go functions can return more than one value natively, commonly used for returning a result alongside an error. This pattern is central to idiomatic Go error handling.</li>
+                    <li><strong>Variadic Functions</strong> — A variadic function accepts a variable number of arguments using the <code>...</code> syntax. This is useful for functions like <code>fmt.Println</code> that handle an unknown number of inputs.</li>
+                    <li><strong>Closures &amp; Anonymous Functions</strong> — A closure is a function that captures variables from its surrounding scope, even after that scope has exited. This enables powerful patterns like counters, generators, and callback logic.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Multiple return values are Go's idiomatic alternative to exceptions — returning <code>(result, error)</code> pairs is the pattern used in virtually every Go standard library function. Understanding this convention is essential before moving to interfaces and error handling.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>package main
+
+import "fmt"
+
+// multiple return values — result + error pattern
+func divide(a, b float64) (float64, error) {
+    if b == 0 {
+        return 0, fmt.Errorf("cannot divide by zero")
+    }
+    return a / b, nil
+}
+
+// variadic function
+func sum(nums ...int) int {
+    total := 0
+    for _, n := range nums {
+        total += n
+    }
+    return total
+}
+
+// closure — captures outer variable
+func makeCounter() func() int {
+    count := 0
+    return func() int {
+        count++
+        return count
+    }
+}
+
+func main() {
+    result, err := divide(10, 2)
+    fmt.Println(result, err)         // 5 &lt;nil&gt;
+
+    fmt.Println(sum(1, 2, 3, 4, 5)) // 15
+
+    counter := makeCounter()
+    fmt.Println(counter(), counter()) // 1 2
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a variadic function <code>sum(nums ...int) int</code> that totals any number of integers, then write a <strong>closure-based counter</strong> function that increments and returns a value each time it's called.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 6 -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Structs, Methods &amp; Custom Data Structures</h2>
+                <p>Model real-world entities using Go's struct system.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Modelling real-world entities using Go's struct system and method receivers.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Defining Structs</strong> — A struct groups related fields into a single custom type, similar to a class without inheritance. Structs are the primary way to model structured data in Go.</li>
+                    <li><strong>Methods on Structs</strong> — Methods are functions attached to a specific type via a "receiver," allowing behavior to be tied directly to data. This is how Go achieves object-like behavior without traditional classes.</li>
+                    <li><strong>Pointer vs Value Receivers</strong> — A value receiver works on a copy of the struct, while a pointer receiver can modify the original instance. Choosing the right receiver type is critical for performance and correctness.</li>
+                    <li><strong>Nested &amp; Embedded Structs</strong> — Structs can contain other structs as fields, enabling composition instead of inheritance. Embedding promotes the inner struct's fields and methods directly onto the outer struct.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Structs and methods are Go's answer to classes. The distinction between pointer and value receivers is one of the most important decisions in Go — getting it wrong leads to bugs where mutations silently don't persist. This pattern appears in every non-trivial Go program.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>package main
+
+import "fmt"
+
+type Car struct {
+    Brand string
+    Speed int
+}
+
+// pointer receiver — mutates the original struct
+func (c *Car) Accelerate(amount int) {
+    c.Speed += amount
+}
+
+// value receiver — works on a copy, read-only
+func (c Car) Describe() string {
+    return fmt.Sprintf("%s going %d km/h", c.Brand, c.Speed)
+}
+
+// embedded struct — composition over inheritance
+type ElectricCar struct {
+    Car               // embed Car — inherits fields and methods
+    BatteryLevel int
+}
+
+func main() {
+    myCar := Car{Brand: "Toyota", Speed: 0}
+    myCar.Accelerate(50)
+    fmt.Println(myCar.Describe())  // Toyota going 50 km/h
+
+    tesla := ElectricCar{Car: Car{Brand: "Tesla", Speed: 0}, BatteryLevel: 80}
+    tesla.Accelerate(100)          // promoted method from Car
+    fmt.Println(tesla.Describe())  // Tesla going 100 km/h
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a <strong><code>Rectangle</code> struct</strong> with <code>Width</code> and <code>Height</code> fields. Add methods <code>Area()</code> and <code>Perimeter()</code> using value receivers, then add a <code>Scale(factor float64)</code> method using a pointer receiver that resizes the rectangle in place.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 7–9:</strong> Interfaces, error handling, file I/O, packages, and the standard library.</p>
+        </div>
+
+        <!--  WEEK 7   -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Interfaces &amp; Go's Approach to "OOP"</h2>
+                <p>Understand polymorphism in Go through interfaces instead of class inheritance.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding polymorphism in Go through interfaces instead of class inheritance.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Defining &amp; Implementing Interfaces</strong> — An interface defines a set of method signatures without implementation, and any type implementing those methods automatically satisfies it. Go uses implicit (structural) typing — there's no <code>implements</code> keyword.</li>
+                    <li><strong>Polymorphism via Interfaces</strong> — Functions can accept an interface type to work with any struct that satisfies it, enabling flexible, decoupled code. This is how Go achieves polymorphism without traditional class hierarchies.</li>
+                    <li><strong>The Empty Interface (<code>interface{}</code> / <code>any</code>)</strong> — The empty interface can hold a value of any type, useful for generic-style functions before Go added type parameters. Go 1.18+ aliases this as <code>any</code> for readability.</li>
+                    <li><strong>Type Assertions &amp; Type Switches</strong> — A type assertion extracts the concrete type from an interface value, while a type switch handles multiple possible types cleanly. Both are essential when working with values of unknown underlying type.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Go's implicit interface satisfaction is one of its most elegant design decisions — you can satisfy an interface defined in a library you've never seen, just by implementing the right methods. This is the foundation of Go's entire standard library design and is key to writing testable, decoupled code.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>package main
+
+import "fmt"
+
+type Shape interface {
+    Area() float64
+}
+
+type Circle struct{ Radius float64 }
+type Rectangle struct{ Width, Height float64 }
+
+func (c Circle) Area() float64    { return 3.14 * c.Radius * c.Radius }
+func (r Rectangle) Area() float64 { return r.Width * r.Height }
+
+// accepts any Shape — polymorphic
+func printArea(s Shape) {
+    fmt.Printf("Area: %.2f\n", s.Area())
+}
+
+// type switch — handle unknown concrete types
+func describe(i any) {
+    switch v := i.(type) {
+    case int:    fmt.Println("int:", v)
+    case string: fmt.Println("string:", v)
+    default:     fmt.Println("unknown type")
+    }
+}
+
+func main() {
+    var s Shape = Circle{Radius: 4}
+    printArea(s)                       // Area: 50.24
+    printArea(Rectangle{Width: 3, Height: 5}) // Area: 15.00
+    describe(42)                       // int: 42
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Define a <strong><code>Shape</code> interface</strong> with an <code>Area()</code> method. Implement it for both <code>Circle</code> and <code>Rectangle</code> structs, then write a function <code>printArea(s Shape)</code> that works for either type. Add a type switch that also prints the shape's name.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Error Handling, Panic/Recover &amp; File I/O</h2>
+                <p>Write robust programs that handle failures and interact with the filesystem.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing robust programs that handle failures gracefully and interact with the filesystem.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>The <code>error</code> Interface &amp; Custom Errors</strong> — Go treats errors as ordinary values implementing the <code>error</code> interface, rather than using exceptions. You can create custom error types for richer, more descriptive failure information.</li>
+                    <li><strong><code>panic</code> and <code>recover</code></strong> — <code>panic</code> immediately stops normal execution for unrecoverable situations, while <code>recover</code> lets a deferred function regain control and prevent a crash. These are reserved for truly exceptional cases, not routine error handling.</li>
+                    <li><strong><code>defer</code> for Cleanup</strong> — The <code>defer</code> keyword schedules a function call to run right before the enclosing function returns, commonly used to close files or release resources. Deferred calls run in last-in-first-out order.</li>
+                    <li><strong>Reading &amp; Writing Files (<code>os</code>, <code>bufio</code>)</strong> — The <code>os</code> package provides functions to open, create, and manipulate files, while <code>bufio</code> adds efficient buffered reading and writing. Together they form Go's standard approach to file I/O.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Go's error-as-value approach is intentionally different from exception-based languages — it forces you to handle every possible failure explicitly. <code>defer</code> prevents resource leaks that are a common source of bugs and production incidents. Together, these patterns define idiomatic, production-quality Go.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>package main
+
+import (
+    "bufio"
+    "fmt"
+    "os"
+)
+
+// custom error type with extra context
+type FileError struct {
+    Path string
+    Err  error
+}
+
+func (e *FileError) Error() string {
+    return fmt.Sprintf("file error at %s: %v", e.Path, e.Err)
+}
+
+func main() {
+    // create file — defer guarantees Close even on error
+    file, err := os.Create("notes.txt")
+    if err != nil {
+        fmt.Println("Error:", err)
+        return
+    }
+    defer file.Close()  // runs when main() returns
+
+    file.WriteString("Hello, Go file I/O!\n")
+    file.WriteString("Second line.\n")
+
+    // read file back with bufio.Scanner
+    readFile, _ := os.Open("notes.txt")
+    defer readFile.Close()
+
+    scanner := bufio.NewScanner(readFile)
+    for scanner.Scan() {
+        fmt.Println(scanner.Text())
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a program that reads a text file <strong>line-by-line</strong> using <code>bufio.Scanner</code>, counts the number of lines and words, and writes the results to a new summary file — handling all errors explicitly with informative error messages.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 9 -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Packages, Modules &amp; Popular Standard Libraries</h2>
+                <p>Organise larger codebases and leverage Go's rich standard library.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Organising larger codebases into packages and leveraging Go's rich standard library for JSON and HTTP.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Creating &amp; Importing Custom Packages</strong> — Splitting code into packages improves organization and reusability across a project. Exported identifiers (capitalized names) are accessible from other packages; lowercase ones stay private to their package.</li>
+                    <li><strong>Go Modules &amp; Dependency Management</strong> — <code>go.mod</code> tracks your module's dependencies and versions, while <code>go get</code> fetches external packages. This system replaced the older <code>GOPATH</code>-based workflow for dependency management.</li>
+                    <li><strong>JSON Encoding/Decoding (<code>encoding/json</code>)</strong> — Go's <code>encoding/json</code> package converts structs to JSON (marshaling) and JSON back into structs (unmarshaling). Struct tags control how field names map to JSON keys.</li>
+                    <li><strong>HTTP Requests &amp; a Basic Server (<code>net/http</code>)</strong> — The <code>net/http</code> package lets you build web servers and make HTTP client requests with minimal setup. It's one of Go's most celebrated standard-library features for backend development.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Go's standard library is exceptionally powerful — <code>net/http</code> alone is sufficient to build production HTTP servers without any third-party framework. Understanding struct tags for JSON mapping and the package visibility rules are essential for any Go backend developer.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>package main
+
+import (
+    "encoding/json"
+    "fmt"
+    "net/http"
+)
+
+type User struct {
+    Name string `json:"name"` // struct tag maps Go field to JSON key
+    Age  int    `json:"age"`
+}
+
+// JSON marshaling
+func main() {
+    data, _ := json.Marshal(User{Name: "Ana", Age: 28})
+    fmt.Println(string(data))  // {"name":"Ana","age":28}
+
+    // unmarshal JSON back to struct
+    var u User
+    json.Unmarshal(data, &u)
+    fmt.Println(u.Name, u.Age) // Ana 28
+
+    // basic HTTP server
+    http.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
+        w.Header().Set("Content-Type", "application/json")
+        json.NewEncoder(w).Encode(map[string]string{"status": "ok"})
+    })
+    fmt.Println("Server running on :8080")
+    http.ListenAndServe(":8080", nil)
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a custom package <code>mathutils</code> with exported functions for <code>Square</code> and <code>Cube</code>. Import it into <code>main</code>, then build a tiny <strong>HTTP server</strong> with one route (<code>/health</code>) that returns a JSON status message with a timestamp.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 10–12:</strong> Goroutines, channels, generics, functional patterns, and three complete projects.</p>
+        </div>
+
+        <!--  WEEK 10  -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Concurrency: Goroutines &amp; Channels</h2>
+                <p>Harness Go's signature feature: lightweight concurrent execution.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Harnessing Go's signature feature: lightweight concurrent execution with goroutines and channels.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Goroutines</strong> — A goroutine is a lightweight thread managed by the Go runtime, started simply by prefixing a function call with <code>go</code>. Thousands of goroutines can run concurrently with minimal overhead — far cheaper than OS threads.</li>
+                    <li><strong>Channels for Communication</strong> — Channels let goroutines safely send and receive values between each other, avoiding shared-memory race conditions. They embody Go's philosophy: "don't communicate by sharing memory; share memory by communicating."</li>
+                    <li><strong>Buffered vs Unbuffered Channels</strong> — Unbuffered channels block until both sender and receiver are ready, enforcing synchronization. Buffered channels allow a fixed number of values to be queued without immediate blocking.</li>
+                    <li><strong><code>select</code> Statements</strong> — The <code>select</code> statement lets a goroutine wait on multiple channel operations simultaneously, proceeding with whichever is ready first. It's essential for building responsive concurrent systems and implementing timeouts.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Concurrency is Go's most celebrated feature — it's why companies like Google, Cloudflare, and Uber adopted Go for high-throughput services. Understanding goroutines and channels, especially the difference between buffered and unbuffered channels, is what separates Go developers from Go masters.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>package main
+
+import (
+    "fmt"
+    "time"
+)
+
+func worker(id int, ch chan string) {
+    ch &lt;- fmt.Sprintf("worker %d done", id)  // send result to channel
+}
+
+func main() {
+    ch := make(chan string)
+    go worker(1, ch)           // launch goroutine
+    fmt.Println(&lt;-ch)          // receive result: "worker 1 done"
+
+    // buffered channel — queue up to 3 values without blocking
+    buffered := make(chan int, 3)
+    buffered &lt;- 1
+    buffered &lt;- 2
+    buffered &lt;- 3
+
+    // select with timeout — responsive concurrency
+    done := make(chan bool)
+    go func() {
+        time.Sleep(2 * time.Second)
+        done &lt;- true
+    }()
+    select {
+    case &lt;-done:
+        fmt.Println("completed!")
+    case &lt;-time.After(3 * time.Second):
+        fmt.Println("timed out!")
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Launch <strong>5 goroutines</strong> that each compute the square of a number and send it to a shared channel. Collect all results in the main goroutine. Use a <code>select</code> with a <code>time.After</code> timeout to print a message if results take longer than 2 seconds.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 11  -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Sync Primitives, Generics &amp; Functional Patterns</h2>
+                <p>Manage shared state safely and write reusable, type-flexible code.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Managing shared state safely with sync primitives and writing reusable, type-flexible code with generics.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>sync.WaitGroup</code> &amp; <code>sync.Mutex</code></strong> — <code>WaitGroup</code> lets the main goroutine wait until a set of other goroutines finish, while <code>Mutex</code> prevents simultaneous access to shared data. Together they solve the most common concurrency safety problems.</li>
+                    <li><strong>Generics (Type Parameters)</strong> — Generics, introduced in Go 1.18, let you write functions and types that work across multiple data types while preserving compile-time type safety. They reduce code duplication compared to using <code>interface{}</code>.</li>
+                    <li><strong>Functional Patterns: Higher-Order Functions</strong> — Go supports passing functions as arguments and returning them as values, enabling decorator-like and generator-like patterns. These patterns simulate features other languages implement natively.</li>
+                    <li><strong>"Decorator" Pattern via Function Wrapping</strong> — Since Go lacks built-in decorators, the same effect is achieved by wrapping a function inside another function that adds behavior before/after the call. This is commonly used for logging, timing, and HTTP middleware.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Race conditions are among the hardest bugs to debug. <code>sync.Mutex</code> and <code>WaitGroup</code> are the standard tools to prevent them. Generics (Go 1.18+) fundamentally changed what's possible in reusable Go code — understanding them is now essential for any Go developer working on modern codebases.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>package main
+
+import (
+    "fmt"
+    "sync"
+)
+
+// sync.Mutex — protect shared counter
+type SafeCounter struct {
+    mu    sync.Mutex
+    count int
+}
+
+func (c *SafeCounter) Increment() {
+    c.mu.Lock()
+    defer c.mu.Unlock()
+    c.count++
+}
+
+// generic function — works with any comparable type
+func Map[T, U any](items []T, f func(T) U) []U {
+    result := make([]U, len(items))
+    for i, v := range items {
+        result[i] = f(v)
+    }
+    return result
+}
+
+// decorator pattern via function wrapping
+func WithLogging(f func()) func() {
+    return func() {
+        fmt.Println("start")
+        f()
+        fmt.Println("end")
+    }
+}
+
+func main() {
+    nums := []int{1, 2, 3}
+    squared := Map(nums, func(n int) int { return n * n })
+    fmt.Println(squared)  // [1 4 9]
+
+    logged := WithLogging(func() { fmt.Println("doing work") })
+    logged()              // start / doing work / end
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a generic <strong><code>Filter[T any](items []T, predicate func(T) bool) []T</code></strong> function. Then write a <strong>decorator function</strong> <code>WithLogging(f func())</code> that wraps any function and prints <code>"start"</code>/<code>"end"</code> messages around its execution.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 12 -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Capstone Mini Projects (Beginner → Master)</h2>
+                <p>Consolidate everything learned into three progressively advanced real-world projects.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Applying everything learned across the entire 12-week curriculum in three complete, real-world portfolio projects.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — CLI Task Manager (Beginner–Intermediate)</h3>
+                <p>A command-line to-do list app using slices, structs, and file I/O to persist tasks between runs. Reinforces fundamentals: structs, slices, loops, switch statements, and basic file handling.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Go Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Task data model</td>
+                            <td><code>struct Task { ID int; Title string; Done bool }</code></td>
+                        </tr>
+                        <tr>
+                            <td>Add / list / delete tasks</td>
+                            <td>Slice operations — <code>append</code>, <code>range</code>, index filtering</td>
+                        </tr>
+                        <tr>
+                            <td>Persist tasks between runs</td>
+                            <td>JSON file I/O with <code>encoding/json</code> + <code>os</code></td>
+                        </tr>
+                        <tr>
+                            <td>Command parsing</td>
+                            <td><code>os.Args</code> + <code>switch</code> statement dispatch</td>
+                        </tr>
+                        <tr>
+                            <td>Error handling</td>
+                            <td>Explicit <code>error</code> returns + <code>defer file.Close()</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A CLI app supporting commands: <code>add "Buy milk"</code>, <code>list</code>, <code>done &lt;id&gt;</code>, and <code>delete &lt;id&gt;</code>. All tasks persist to <code>tasks.json</code> between runs. Display tasks with status indicators and handle all edge cases with explicit error messages.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — REST API with JSON Storage (Intermediate–Advanced)</h3>
+                <p>A small <code>net/http</code> API exposing CRUD endpoints for a "Book" resource, storing data as JSON on disk. Reinforces interfaces, error handling, and the standard library's web and JSON tools.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Go Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Book data model</td>
+                            <td>Struct with JSON tags — <code>json:"title"</code></td>
+                        </tr>
+                        <tr>
+                            <td>GET /books</td>
+                            <td><code>net/http</code> handler + <code>json.NewEncoder</code></td>
+                        </tr>
+                        <tr>
+                            <td>POST /books</td>
+                            <td><code>json.NewDecoder</code> + request body parsing</td>
+                        </tr>
+                        <tr>
+                            <td>DELETE /books/{id}</td>
+                            <td>URL path parsing + slice filtering</td>
+                        </tr>
+                        <tr>
+                            <td>JSON file persistence</td>
+                            <td>Read/write <code>books.json</code> on every request</td>
+                        </tr>
+                        <tr>
+                            <td>Interface-based storage</td>
+                            <td><code>BookStore</code> interface for testable architecture</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A complete REST API with <code>GET</code>, <code>POST</code>, and <code>DELETE</code> endpoints for books, JSON file persistence, a <code>BookStore</code> interface for the storage layer, and proper HTTP status codes and error responses for all edge cases.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Concurrent Web Scraper/Aggregator (Advanced–Master)</h3>
+                <p>A tool that concurrently fetches data from multiple URLs using goroutines, channels, and <code>sync.WaitGroup</code>, aggregating results safely. Ties together concurrency, generics, error handling, and clean architecture.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Go Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Concurrent URL fetching</td>
+                            <td>Goroutines — one per URL</td>
+                        </tr>
+                        <tr>
+                            <td>Wait for all goroutines</td>
+                            <td><code>sync.WaitGroup</code> — coordinated completion</td>
+                        </tr>
+                        <tr>
+                            <td>Safe result collection</td>
+                            <td>Buffered channel — lock-free communication</td>
+                        </tr>
+                        <tr>
+                            <td>Per-request timeout</td>
+                            <td><code>select</code> + <code>time.After</code></td>
+                        </tr>
+                        <tr>
+                            <td>Generic result aggregation</td>
+                            <td>Generic <code>Map</code> + <code>Filter</code> functions</td>
+                        </tr>
+                        <tr>
+                            <td>Final report output</td>
+                            <td>Structured result printing with error summaries</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Code Example — Project 3 Pattern</h3>
+                <pre><code>package main
+
+import (
+    "fmt"
+    "sync"
+)
+
+func fetch(url string, wg *sync.WaitGroup, results chan&lt;- string) {
+    defer wg.Done()                      // signal completion when done
+    results &lt;- "fetched: " + url         // send result to channel
+}
+
+func main() {
+    urls    := []string{"a.com", "b.com", "c.com", "d.com", "e.com"}
+    results := make(chan string, len(urls))  // buffered — no blocking
+    var wg sync.WaitGroup
+
+    for _, u := range urls {
+        wg.Add(1)
+        go fetch(u, &wg, results)  // launch one goroutine per URL
+    }
+
+    wg.Wait()       // wait for all goroutines to finish
+    close(results)  // safe to close after all sends are done
+
+    for r := range results {
+        fmt.Println(r)
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A concurrent aggregator that fetches 5–10 mock "URLs" concurrently using one goroutine per URL, collects results via a buffered channel, handles per-request timeouts with <code>select</code> + <code>time.After</code>, uses generic <code>Filter</code> to separate successful from failed fetches, and prints a final formatted report with success/error counts.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–3</td>
+                        <td>Absolute Basics</td>
+                        <td>Write working Go programs using primitive types, slices, maps, and Go module tooling</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>4–6</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Direct program logic with for/switch, structure code with functions and closures, and model data with structs and methods</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>7–9</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Design decoupled systems with interfaces, handle errors idiomatically, interact with files, and build HTTP servers and JSON APIs</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>10–12</td>
+                        <td>Master Level Concepts</td>
+                        <td>Write concurrent programs with goroutines and channels, apply generics and functional patterns, and complete three production projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Resource</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>go.dev/doc</td>
+                        <td>Official Go documentation and language specification</td>
+                    </tr>
+                    <tr>
+                        <td>go.dev/tour</td>
+                        <td>Interactive Go tour — best starting point for beginners</td>
+                    </tr>
+                    <tr>
+                        <td>gobyexample.com</td>
+                        <td>Annotated code examples for every Go feature</td>
+                    </tr>
+                    <tr>
+                        <td>The Go Programming Language — Donovan &amp; Kernighan</td>
+                        <td>The definitive Go book for deep language understanding</td>
+                    </tr>
+                    <tr>
+                        <td>pkg.go.dev</td>
+                        <td>Standard library and third-party package documentation</td>
+                    </tr>
+                    <tr>
+                        <td>golangci-lint</td>
+                        <td>Linter aggregator for enforcing idiomatic Go code</td>
+                    </tr>
+                    <tr>
+                        <td>VS Code + Go extension</td>
+                        <td>Best IDE setup for Go with IntelliSense and debugging</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Complete each week's task before moving on — building projects reinforces concepts far better than reading alone.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — your commit history is visible proof of consistent progress.</li>
+                    <li>Run <code>go vet</code> and <code>golangci-lint</code> on your code from Week 3 onward — get comfortable with idiomatic Go early.</li>
+                    <li>Use <code>go test -race</code> on all concurrent code in Weeks 10–12 to detect race conditions before they become production bugs.</li>
+                    <li>By Week 12, you should have three complete projects and the confidence to build any Go CLI tool, REST API, or concurrent service from scratch.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                        <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#projects">Projects</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                    </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

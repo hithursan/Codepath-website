@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kotlin: Beginner to Master — 15 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>Kotlin: Beginner to Master</h1>
+        <p>Complete 15-Week Curriculum — From Kotlin Syntax & Null Safety to Coroutines, DSLs & Production Ktor Applications</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>15-week, phase-based Kotlin curriculum</strong> designed to take a complete beginner to a professional-level Kotlin developer. The roadmap moves from <strong>syntax, variables, null safety, and collections</strong> through <strong>control flow, functions, data classes, and modules</strong>, into <strong>OOP, generics, file I/O, and error handling</strong>, all the way to <strong>coroutines, DSLs, reflection, multiplatform, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics including setup and null safety, <strong>Phase 2</strong> covers control flow, functions, and core data structures, <strong>Phase 3</strong> covers intermediate and advanced core topics like OOP, generics, and error handling, and <strong>Phase 4</strong> covers master-level coroutines, DSLs, reflection, and production projects.</p>
+            <p>By Week 15, you will have built three complete, portfolio-ready applications and be confident building production-grade Kotlin applications across Android, backend, and multiplatform targets.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 15 weeks &nbsp;|&nbsp; <strong>Stack:</strong> Kotlin 2.0+, IntelliJ IDEA, Gradle &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic programming logic</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–3:</strong> Setup, core types, variables, and null safety.</p>
+        </div>
+
+        <!--WEEK 1-->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Introduction to Kotlin &amp; Environment Setup</h2>
+                <p>Understand what Kotlin is, how it relates to the JVM, and write your first working program.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding what Kotlin is, how it relates to the JVM, and writing your first working program.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What is Kotlin &amp; Why Use It?</strong> — Kotlin is a modern, statically typed language developed by JetBrains that runs on the JVM, compiles to JavaScript, and compiles natively via Kotlin/Native. It is Google's preferred language for Android development and is increasingly popular for backend services due to its concise syntax and strong null safety.</li>
+                    <li><strong>Installing Kotlin &amp; Project Setup (IntelliJ IDEA / Gradle)</strong> — IntelliJ IDEA has first-class Kotlin support out of the box; Android Studio also bundles the Kotlin compiler. Projects are typically managed with Gradle, using a <code>build.gradle.kts</code> file written in Kotlin itself.</li>
+                    <li><strong>Running Kotlin (Compiler, REPL, Kotlin Scripts)</strong> — <code>kotlinc</code> compiles <code>.kt</code> files to <code>.jar</code> or <code>.class</code> files runnable on the JVM. The Kotlin REPL lets you experiment interactively. Kotlin scripts (<code>.kts</code>) run directly without a formal project, ideal for quick prototypes.</li>
+                    <li><strong>Variables — <code>val</code> vs <code>var</code> &amp; Type Inference</strong> — <code>val</code> declares an immutable, read-only reference (preferred by default); <code>var</code> declares a mutable reference. Kotlin infers types from the assigned value, so explicit type annotations are optional but recommended at function boundaries.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Everything in Kotlin is built on these fundamentals. Understanding the JVM relationship, the <code>val</code>/<code>var</code> distinction, and how type inference works forms the mental model you will rely on throughout every subsequent phase of this curriculum.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// Kotlin entry point — no class wrapper required
+fun main() {
+    println("Hello, Kotlin!")
+    println("Running on JVM: ${System.getProperty("java.version")}")
+}
+
+val name = "Alice"          // immutable — inferred as String
+var age = 30                // mutable — inferred as Int
+age += 1                    // allowed — var can change
+// name = "Bob"             // compile error — val cannot be reassigned
+val score: Double = 95.5    // explicit type annotation</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Set up a Kotlin project in IntelliJ IDEA (or use an online Kotlin Playground). Write a program that declares your name as a <code>val</code> and your current mood as a <code>var</code>, then prints a greeting. Change the mood variable and print again to confirm mutability works as expected.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 2-->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Data Types, Operators &amp; String Templates</h2>
+                <p>Learn Kotlin's type system, perform calculations with operators, and format output with string templates.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Learning Kotlin's type system, performing calculations with operators, and formatting output with string templates.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Basic Types (<code>Int</code>, <code>Double</code>, <code>Boolean</code>, <code>Char</code>, <code>String</code>)</strong> — Kotlin's basic types are all objects with no primitives at the language level, though the compiler optimises them to JVM primitives where possible. Every type is part of a unified type hierarchy rooted at <code>Any</code>.</li>
+                    <li><strong>Arithmetic, Comparison &amp; Logical Operators</strong> — Kotlin supports standard arithmetic (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>), comparison (<code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>), and logical (<code>&amp;&amp;</code>, <code>||</code>, <code>!</code>) operators — with <code>==</code> performing structural equality (calling <code>.equals()</code>) rather than reference equality, unlike Java.</li>
+                    <li><strong>String Templates &amp; Raw Strings</strong> — String templates embed expressions directly with <code>$variable</code> or <code>${expression}</code> — no concatenation needed. Raw strings (triple-quoted <code>"""..."""</code>) preserve formatting and avoid escape characters, ideal for multi-line text, regex, or JSON.</li>
+                    <li><strong>Type Conversion &amp; Smart Casts</strong> — Kotlin requires explicit conversion functions (<code>toInt()</code>, <code>toDouble()</code>, <code>toString()</code>) with no implicit widening like Java. Smart casts automatically treat a variable as a more specific type after an <code>is</code> check, without an explicit cast.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Kotlin's structural equality <code>==</code> vs reference equality <code>===</code> distinction eliminates a whole category of bugs that plague Java developers. String templates replace string concatenation entirely — you will use them in virtually every line of output code you write.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>val age: Int        = 30
+val price: Double   = 19.99
+val isActive: Boolean = true
+val name: String    = "Alice"
+println("$name is $age years old, price: $price")
+
+val a = 17; val b = 5
+println(a / b)            // 3 — integer division
+println(a.toDouble() / b) // 3.4 — explicit conversion
+println(a == 17)          // true — structural equality
+
+val text = "42"
+val number = text.toIntOrNull() ?: 0  // safe conversion with fallback
+val obj: Any = "Hello"
+if (obj is String) {
+    println(obj.length)               // smart cast — obj is String here
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a Kotlin program that acts as a simple <strong>BMI Calculator</strong>. Prompt for weight (kg) and height (m) using <code>readLine()</code>, convert the input strings safely with <code>toDoubleOrNull()</code>, calculate BMI, and print a formatted result using a string template with two decimal places (<code>"%.2f".format(bmi)</code>).</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 3-->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Null Safety, Ranges &amp; Nullable Types</h2>
+                <p>Master Kotlin's signature null-safety system and use ranges for concise iteration and comparison logic.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering Kotlin's signature null-safety system and using ranges for concise iteration and comparison logic.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Nullable Types (<code>?</code>) &amp; the Billion-Dollar Bug Fix</strong> — Appending <code>?</code> to a type (<code>String?</code>) allows a variable to hold <code>null</code>; without it, the compiler guarantees the variable can never be null. This eliminates <code>NullPointerException</code> at compile time — Kotlin's most celebrated feature.</li>
+                    <li><strong>Safe Calls (<code>?.</code>) &amp; the Elvis Operator (<code>?:</code>)</strong> — The safe call operator (<code>?.</code>) calls a method or property only if the receiver isn't null, otherwise returning <code>null</code>. The Elvis operator (<code>?:</code>) provides a default value when the left-hand expression is null — together they eliminate verbose null-checking boilerplate.</li>
+                    <li><strong>The Not-Null Assertion (<code>!!</code>) &amp; Safe Casts</strong> — The <code>!!</code> operator forcibly asserts a nullable value is not null, throwing <code>NullPointerException</code> if wrong — use it sparingly. The safe cast operator (<code>as?</code>) returns <code>null</code> instead of throwing when a cast fails.</li>
+                    <li><strong>Ranges, Progressions &amp; <code>in</code> / <code>!in</code></strong> — Ranges (<code>1..10</code>) represent a sequence of values and are used heavily in loops and <code>when</code> expressions. <code>downTo</code>, <code>step</code>, and <code>until</code> (exclusive end) control direction and stride. The <code>in</code> operator checks range membership concisely.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Null safety is Kotlin's defining feature — the entire reason it was created. Understanding the difference between <code>?.</code> (safe, returns null) and <code>!!</code> (unsafe, throws) and knowing when to use each is the most important skill for writing production Kotlin code.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>var name: String = "Alice"       // cannot be null — compiler enforced
+var nickname: String? = null     // can be null — must be checked before use
+
+val length = nickname?.length         // null — safe call short-circuits
+val displayName = nickname ?: "Anonymous"  // Elvis fallback
+println(displayName)                  // Anonymous
+
+val maybeNull: String? = "Hello"
+val definitelyString: String = maybeNull!!   // throws if null
+
+for (i in 1..5)            print("$i ")       // 1 2 3 4 5
+for (i in 10 downTo 1 step 3) print("$i ")   // 10 7 4 1
+println(5 in 1..10)         // true</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a <strong>"safe registration" program</strong>: model a <code>User</code> with a nullable <code>email: String?</code> field. Write a function <code>getContactInfo(user)</code> that uses safe calls and the Elvis operator to return the email or <strong>"No email provided"</strong>. Add a range check that validates an <code>age: Int?</code> is between 13 and 120 using <code>in</code> and safe null handling.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 4–7:</strong> Functions, collections, data classes, and modules.</p>
+        </div>
+
+        <!-- WEEK 4 -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Functions &amp; Control Flow</h2>
+                <p>Direct program logic with Kotlin's expressive control structures and write clean, reusable functions.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Directing program logic with Kotlin's expressive control structures and writing clean, reusable functions.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Function Syntax, Default &amp; Named Arguments</strong> — Kotlin functions are declared with <code>fun</code>, support default parameter values, and allow named arguments at call sites for clarity — eliminating the need for method overloading in most cases.</li>
+                    <li><strong><code>if</code>/<code>else</code> and <code>when</code> as Expressions</strong> — In Kotlin, <code>if</code>/<code>else</code> and <code>when</code> can be used as expressions that return a value, not just statements — eliminating the need for a separate ternary operator. <code>when</code> is Kotlin's powerful pattern-matching replacement for <code>switch</code>.</li>
+                    <li><strong>Loops — <code>for</code>, <code>while</code>, <code>do-while</code></strong> — <code>for</code> loops iterate over ranges, collections, or anything implementing <code>Iterable</code>. <code>break</code> and <code>continue</code> support labels (<code>break@outer</code>) for controlling nested loops precisely.</li>
+                    <li><strong>Single-Expression Functions &amp; Lambda Expressions</strong> — Functions with a single expression body can omit braces and use <code>=</code> instead. Lambda expressions (<code>{ params -> body }</code>) are first-class values, often used as arguments to higher-order functions like <code>map</code>, <code>filter</code>, and <code>forEach</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Kotlin's <code>when</code> as an expression is one of its most powerful features — replacing entire chains of <code>if-else</code> with exhaustive, readable pattern matching. The implicit <code>it</code> parameter in single-argument lambdas is a pattern you will see in virtually every Kotlin codebase.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>fun greet(name: String, greeting: String = "Hello", punctuation: String = "!"): String =
+    "$greeting, $name$punctuation"
+
+println(greet("Alice"))                          // Hello, Alice!
+println(greet("Bob", punctuation = "?"))          // Hello, Bob?
+
+val score = 82
+val grade = when {
+    score >= 90 -> "A"
+    score >= 80 -> "B"
+    score >= 70 -> "C"
+    else        -> "F"
+}
+println(grade)   // B
+
+fun square(x: Int): Int = x * x                  // single-expression function
+val numbers = listOf(1, 2, 3, 4)
+println(numbers.map { it * it })                  // [1, 4, 9, 16]</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a <strong>console calculator</strong> with a <code>when</code> expression dispatching <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, and <code>%</code> operations as separate functions. Use default arguments for an optional <code>precision: Int = 2</code> parameter controlling decimal places in output. Loop the menu using a labeled <code>while</code> loop until the user types <strong>"exit"</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 5-->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Collections: List, Set, Map &amp; Sequences</h2>
+                <p>Store and manipulate groups of data using Kotlin's rich mutable and immutable collection types.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Storing and manipulating groups of data using Kotlin's rich, distinct mutable and immutable collection types.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Immutable vs. Mutable Collections</strong> — Kotlin distinguishes between read-only interfaces (<code>List</code>, <code>Set</code>, <code>Map</code>) and their mutable counterparts (<code>MutableList</code>, <code>MutableSet</code>, <code>MutableMap</code>). <code>listOf()</code> creates immutable lists by default; <code>mutableListOf()</code> creates ones you can modify.</li>
+                    <li><strong>List Operations &amp; Functional Transformations</strong> — Kotlin's <code>List</code> provides a huge standard library of functional operations: <code>map</code>, <code>filter</code>, <code>sortedBy</code>, <code>groupBy</code>, <code>reduce</code>, and <code>fold</code>. These are chainable, expressive, and replace most manual loop-based logic.</li>
+                    <li><strong>Set &amp; Map — Uniqueness &amp; Key-Value Storage</strong> — <code>Set</code> stores unique elements with no duplicates, ideal for membership testing and deduplication. <code>Map&lt;K, V&gt;</code> stores key-value pairs with convenient <code>to</code> infix syntax for creating pairs.</li>
+                    <li><strong>Sequences — Lazy Evaluation for Large Datasets</strong> — <code>Sequence&lt;T&gt;</code> is Kotlin's lazy collection type — operations are not executed until a terminal operation (<code>toList()</code>, <code>first()</code>, <code>sum()</code>) is called, avoiding creating intermediate collections at each step.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The distinction between immutable and mutable collections is one of Kotlin's most important safety features. Sequences are critical for performance on large datasets — understanding when to switch from eager <code>List</code> operations to lazy <code>Sequence</code> operations is a mark of a senior Kotlin developer.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>val readOnly: List&lt;Int&gt; = listOf(1, 2, 3)
+val mutable: MutableList&lt;Int&gt; = mutableListOf(1, 2, 3)
+mutable.add(4)                  // allowed
+
+val numbers = listOf(5, 3, 8, 1, 9, 2)
+val result = numbers
+    .filter { it > 2 }
+    .sortedDescending()
+    .map { "[$it]" }
+println(result)                  // [[9], [8], [5], [3]]
+
+val scores = mutableMapOf("Alice" to 95, "Bob" to 87)
+scores["Carol"] = 100
+
+val lazyResult = (1..1_000_000).asSequence()
+    .filter { it % 3 == 0 }
+    .map { it * 2 }
+    .take(5)
+    .toList()                   // evaluation happens HERE
+println(lazyResult)             // [6, 12, 18, 24, 30]</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build an in-memory <strong>library catalog</strong> using a <code>MutableMap&lt;String, Book&gt;</code> (ISBN → Book). Implement functions to add, remove, and search books by author using <code>filter</code>. Use a <code>Set&lt;String&gt;</code> to track unique genres across the catalog. Demonstrate the performance benefit of <code>Sequence</code> by processing a list of <strong>1 million numbers</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 6 -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Data Classes, Sealed Classes &amp; Object Declarations</h2>
+                <p>Model domain data idiomatically using Kotlin's signature class types.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Modeling domain data idiomatically using Kotlin's signature class types — data classes, sealed classes, and objects.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Data Classes</strong> — <code>data class</code> automatically generates <code>equals()</code>, <code>hashCode()</code>, <code>toString()</code>, and a <code>copy()</code> method from the declared constructor properties. They're the idiomatic way to model simple value-holding types — DTOs, domain models, and API payloads.</li>
+                    <li><strong>Sealed Classes &amp; Sealed Interfaces</strong> — A <code>sealed class</code> restricts the type hierarchy to a known, fixed set of subclasses declared in the same file. Combined with <code>when</code>, the compiler enforces exhaustiveness — catching missing cases at compile time, ideal for state machines and results.</li>
+                    <li><strong>Enum Classes</strong> — Enum classes define a fixed set of named constants, optionally with properties and methods attached to each constant. They're more powerful than plain constants because they can implement interfaces and hold typed data.</li>
+                    <li><strong>Object Declarations &amp; Companion Objects</strong> — <code>object</code> creates a singleton — exactly one instance, lazily initialised on first access. <code>companion object</code> attaches "static-like" members to a class, accessible without an instance — Kotlin's replacement for Java's <code>static</code> keyword.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Sealed classes are one of the most powerful features in Kotlin. The compiler-enforced exhaustiveness of <code>when</code> over a sealed hierarchy eliminates entire categories of runtime bugs. <code>data class</code> replaces hundreds of lines of Java boilerplate with a single line.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>data class User(val name: String, val age: Int)
+val alice = User("Alice", 30)
+val olderAlice = alice.copy(age = 31)
+println(alice == User("Alice", 30))   // true — structural equality
+
+sealed class Result&lt;out T&gt; {
+    data class Success&lt;T&gt;(val data: T) : Result&lt;T&gt;()
+    data class Error(val message: String) : Result&lt;Nothing&gt;()
+}
+fun &lt;T&gt; handle(result: Result&lt;T&gt;) = when (result) {
+    is Result.Success -> println("Got: ${result.data}")
+    is Result.Error   -> println("Failed: ${result.message}")
+    // no else needed — compiler knows all cases
+}
+
+enum class Direction(val degrees: Int) {
+    NORTH(0), EAST(90), SOUTH(180), WEST(270);
+    fun opposite(): Direction = entries[(ordinal + 2) % entries.size]
+}
+
+object AppConfig { val version = "1.0.0" }  // singleton</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Model a <strong>traffic light system</strong>: <code>enum class LightColor { RED, YELLOW, GREEN }</code> with a <code>next()</code> method cycling through states. Model an API response using a <code>sealed class ApiResult&lt;T&gt;</code> with <code>Loading</code>, <code>Success&lt;T&gt;</code>, and <code>Failure</code> cases. Write an exhaustive <code>when</code> that handles all three <strong>without an <code>else</code> branch</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 7 -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Extension Functions, Scope Functions &amp; Modules</h2>
+                <p>Extend existing types without inheritance, simplify object configuration, and structure multi-file projects.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Extending existing types without inheritance, simplifying object configuration with scope functions, and structuring multi-file Kotlin projects.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Extension Functions &amp; Properties</strong> — Extension functions let you add new functions to existing classes — even ones you don't own like <code>String</code> or <code>List</code> — without modifying their source or using inheritance. They're resolved statically, making them safe and predictable.</li>
+                    <li><strong>Scope Functions — <code>let</code>, <code>run</code>, <code>with</code>, <code>apply</code>, <code>also</code></strong> — Scope functions execute a block of code on an object and return either the object itself or the block's result. <code>apply</code> for configuration, <code>let</code> for null-checks and transformations, <code>also</code> for side effects.</li>
+                    <li><strong>Infix, Operator &amp; Inline Functions</strong> — Infix functions enable readable, operator-like syntax (<code>1 to 2</code> instead of <code>1.to(2)</code>). Operator overloading lets custom types use <code>+</code>, <code>-</code>, <code>==</code>, etc. <code>inline</code> functions eliminate lambda allocation overhead for performance-critical higher-order functions.</li>
+                    <li><strong>Packages, Imports &amp; Multi-File Project Structure</strong> — Kotlin organises code into packages matching the directory structure by convention. <code>import</code> brings external declarations into scope; aliased imports (<code>import Foo as Bar</code>) resolve naming conflicts cleanly.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Extension functions and scope functions are the tools that make Kotlin code feel like a DSL. Every major Kotlin library — Ktor, Exposed, kotlinx — is built on these concepts. Knowing all five scope functions and when to use each is a mark of fluent Kotlin proficiency.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>fun String.isPalindrome(): Boolean {
+    val cleaned = this.lowercase().filter { it.isLetter() }
+    return cleaned == cleaned.reversed()
+}
+println("Racecar".isPalindrome())     // true
+
+data class Person(var name: String = "", var age: Int = 0)
+val person = Person().apply {         // apply: configure, returns object
+    name = "Alice"
+    age = 30
+}
+person.let { println("${it.name} is ${it.age}") }
+
+data class Vector2(val x: Int, val y: Int) {
+    operator fun plus(other: Vector2) = Vector2(x + other.x, y + other.y)
+}
+val v = Vector2(1, 2) + Vector2(3, 4)
+println(v)                            // Vector2(x=4, y=6)</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write an extension function <code>List&lt;Int&gt;.median(): Double</code>. Build a small multi-file project: <code>models/Product.kt</code> defines a data class, <code>utils/Formatting.kt</code> defines extension functions for currency formatting, and <code>Main.kt</code> ties it together using <code>apply</code> to configure a list of products and <code>let</code> to print a formatted summary.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 8–11:</strong> OOP, file I/O, error handling, and libraries.</p>
+        </div>
+
+        <!--WEEK 8-->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Object-Oriented Programming in Kotlin</h2>
+                <p>Master Kotlin's class system — inheritance, interfaces, abstract classes, and visibility modifiers.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering Kotlin's class system — inheritance, interfaces, abstract classes, and visibility modifiers.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Classes, Constructors &amp; Visibility Modifiers</strong> — Kotlin classes have a concise primary constructor declared in the class header, with an optional <code>init</code> block for additional setup logic. Visibility modifiers (<code>public</code>, <code>private</code>, <code>protected</code>, <code>internal</code>) default to <code>public</code> if omitted.</li>
+                    <li><strong>Inheritance &amp; <code>open</code>/<code>override</code></strong> — Classes and members are <code>final</code> (non-inheritable) by default in Kotlin — you must explicitly mark a class <code>open</code> to allow inheritance and a member <code>open</code> to allow overriding. This "closed by default" design prevents fragile base class problems.</li>
+                    <li><strong>Interfaces &amp; Abstract Classes</strong> — Interfaces can contain both abstract methods and methods with default implementations. Abstract classes can hold constructor state (unlike interfaces) and are used when subclasses share both data and behaviour, not just a contract.</li>
+                    <li><strong>Class Delegation (<code>by</code>)</strong> — Kotlin's class delegation lets a class delegate an interface's implementation to another object — composition made effortless, avoiding boilerplate forwarding methods. The <code>by</code> keyword generates all the delegation code automatically.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Kotlin's "closed by default" design prevents the fragile base class problem that plagues Java. The <code>by</code> delegation keyword makes composition (the preferred design principle) trivially easy, replacing dozens of boilerplate forwarding methods with a single keyword.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>class BankAccount(val owner: String, private var balance: Double) {
+    init { require(balance >= 0) { "Initial balance cannot be negative" } }
+    fun deposit(amount: Double) { balance += amount }
+    fun getBalance(): Double = balance
+}
+
+open class Animal(val name: String) {
+    open fun sound(): String = "..."
+}
+class Dog(name: String) : Animal(name) {
+    override fun sound(): String = "Woof"
+}
+
+interface Shape {
+    fun area(): Double
+    fun describe(): String = "Area is ${"%.2f".format(area())}"
+}
+
+interface Repository { fun findAll(): List&lt;String&gt; }
+class InMemoryRepository : Repository { override fun findAll() = listOf("a", "b") }
+class CachedRepository(inner: Repository) : Repository by inner  // delegation</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Design a <code>Shape</code> interface hierarchy: abstract class <code>Polygon</code> and interface <code>Shape</code> with a default <code>describe()</code> method. Implement <code>Triangle</code>, <code>Rectangle</code>, and <code>Circle</code>. Use class delegation (<code>by</code>) to build a <code>LoggingShapeRepository</code> that wraps an <code>InMemoryShapeRepository</code> and logs every <code>findAll()</code> call <strong>without duplicating logic</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 9-->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Generics, Higher-Order Functions &amp; Functional Patterns</h2>
+                <p>Write reusable, type-safe abstractions using generics and Kotlin's first-class function support.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing reusable, type-safe abstractions using generics and Kotlin's first-class function support.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Generic Classes &amp; Functions</strong> — Generic type parameters (<code>&lt;T&gt;</code>) let classes and functions operate on any type while preserving compile-time type safety. Generic constraints (<code>&lt;T : Comparable&lt;T&gt;&gt;</code>) restrict which types are valid and unlock type-specific operations inside the body.</li>
+                    <li><strong>Variance — <code>in</code>, <code>out</code>, and <code>*</code> (Star Projection)</strong> — <code>out T</code> marks a type parameter as covariant (producer-only), <code>in T</code> marks it contravariant (consumer-only). The star projection (<code>*</code>) is used when the specific type parameter is unknown or irrelevant.</li>
+                    <li><strong>Higher-Order Functions &amp; Function Types</strong> — Higher-order functions accept functions as parameters or return functions as results. Function types are written as <code>(ParamType) -&gt; ReturnType</code>. This enables powerful composition patterns: strategy pattern, callbacks, and pipeline building.</li>
+                    <li><strong>Reified Type Parameters &amp; Inline Functions</strong> — Normally, generic type information is erased at runtime (type erasure), making <code>T::class</code> impossible inside a generic function. Marking an <code>inline</code> function's type parameter <code>reified</code> preserves the actual type at runtime, enabling type checks and reflection.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>reified</code> type parameters are a uniquely Kotlin feature that solves a fundamental JVM limitation — type erasure. Understanding variance (<code>in</code>/<code>out</code>) is essential for working with Kotlin's standard library and for building generic frameworks that don't surprise their users with type errors.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>class Box&lt;T&gt;(private var content: T) {
+    fun get(): T = content
+    fun set(value: T) { content = value }
+}
+fun &lt;T : Comparable&lt;T&gt;&gt; maxOf(a: T, b: T): T = if (a > b) a else b
+println(maxOf(5, 10))          // 10
+println(maxOf("apple", "banana"))  // banana
+
+interface Producer&lt;out T&gt; { fun produce(): T }
+interface Consumer&lt;in T&gt; { fun consume(item: T) }
+fun printAll(items: List&lt;*&gt;) = items.forEach { println(it) }
+
+fun &lt;T, R&gt; List&lt;T&gt;.transform(operation: (T) -> R): List&lt;R&gt; = this.map(operation)
+
+inline fun &lt;reified T&gt; isInstance(value: Any): Boolean = value is T
+println(isInstance&lt;String&gt;("hello"))   // true</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a generic <code>EventBus&lt;T&gt;</code> class supporting <code>subscribe((T) -&gt; Unit)</code> and <code>publish(event: T)</code>. Write a generic <code>Cache&lt;K, V&gt;</code> class with an eviction policy passed as a higher-order function <code>(Map&lt;K, V&gt;) -&gt; K</code>. Write a reified <code>inline fun &lt;reified T&gt; safeCastList(items: List&lt;Any?&gt;): List&lt;T&gt;</code> that filters and casts safely.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 10-->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — File I/O, Serialisation &amp; Concurrency Basics</h2>
+                <p>Read and write files, serialise data with kotlinx.serialization, and understand Kotlin's threading fundamentals.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Reading and writing files, serialising data with kotlinx.serialization, and understanding Kotlin's threading fundamentals before coroutines.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>File &amp; Directory I/O (<code>java.io</code> / <code>kotlin.io</code>)</strong> — Kotlin provides idiomatic extension functions over Java's I/O classes: <code>File("path").readText()</code>, <code>writeText()</code>, and <code>forEachLine</code> simplify common file operations. Always use <code>use { }</code> to guarantee streams close properly, even on exceptions.</li>
+                    <li><strong>JSON Serialisation with kotlinx.serialization</strong> — kotlinx.serialization is Kotlin's official multiplatform serialisation library. Annotate a data class <code>@Serializable</code>, then use <code>Json.encodeToString()</code> and <code>Json.decodeFromString()</code> for type-safe, reflection-free JSON conversion.</li>
+                    <li><strong>Threads &amp; the <code>synchronized</code> Keyword</strong> — <code>Thread { }.start()</code> spawns OS-level threads, which are expensive and limited in number. The <code>synchronized</code> keyword prevents race conditions by ensuring only one thread executes a critical section at a time.</li>
+                    <li><strong>Why Coroutines Exist — The Problem with Threads</strong> — Threads are heavyweight (megabytes of stack memory each) and blocking I/O wastes them sitting idle. Coroutines are lightweight, suspendable computations that can pause without blocking the underlying thread — solving the scalability problem threads create for I/O-bound work.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Understanding the raw thread model first makes coroutines make sense — you understand exactly what problem they solve. kotlinx.serialization is now the preferred JSON library for Kotlin Multiplatform, making it essential for any developer targeting more than one platform.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import java.io.File
+File("log.txt").writeText("Line 1\nLine 2\nLine 3")
+File("log.txt").forEachLine { line -> println(line) }
+println(File("log.txt").exists())   // true
+
+import kotlinx.serialization.*
+import kotlinx.serialization.json.*
+
+@Serializable
+data class Product(val name: String, val price: Double, val inStock: Boolean)
+
+val json = Json.encodeToString(Product("Widget", 9.99, true))
+val product = Json.decodeFromString&lt;Product&gt;(json)
+println(product.name)   // Widget
+
+var counter = 0
+val lock = Object()
+val threads = List(100) {
+    Thread { synchronized(lock) { counter++ } }
+}
+threads.forEach { it.start() }
+threads.forEach { it.join() }
+println(counter)   // 100</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <code>ProductCatalog</code> class that persists <code>List&lt;Product&gt;</code> to a JSON file using kotlinx.serialization, with <code>loadFromFile()</code> and <code>saveToFile()</code> methods. Add a <code>synchronized</code> counter that tracks how many times the catalog has been saved, incremented safely from <strong>multiple threads</strong> in a stress test.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 11-->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Error Handling, Logging &amp; Dependency Management</h2>
+                <p>Handle exceptions idiomatically, model failures with Kotlin's Result type, and structure dependencies cleanly.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Handling exceptions idiomatically, modeling failures with Kotlin's <code>Result</code> type, and structuring dependencies cleanly.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Exception Handling — <code>try</code>/<code>catch</code> as an Expression</strong> — Like <code>if</code> and <code>when</code>, <code>try</code>/<code>catch</code> in Kotlin can be used as an expression that returns a value. <code>finally</code> always executes for cleanup. Kotlin doesn't have checked exceptions — you're never forced to declare or catch a specific exception type.</li>
+                    <li><strong>Custom Exceptions &amp; <code>require</code>/<code>check</code>/<code>error</code></strong> — Custom exceptions extend <code>Exception</code> or <code>RuntimeException</code> with domain-specific context. <code>require()</code> validates function arguments, <code>check()</code> validates state, and <code>error()</code> always throws — useful in exhaustive <code>when</code> branches.</li>
+                    <li><strong>The <code>Result&lt;T&gt;</code> Type for Explicit Error Handling</strong> — Kotlin's built-in <code>Result&lt;T&gt;</code> wraps either a success value or a failure exception, avoiding exception-based control flow for expected failures. <code>runCatching { }</code> builds a <code>Result</code> automatically; <code>.onSuccess</code>, <code>.onFailure</code> provide functional handling.</li>
+                    <li><strong>Logging with SLF4J / kotlin-logging</strong> — SLF4J is the standard JVM logging facade; <code>kotlin-logging</code> provides idiomatic Kotlin wrappers with lazy message evaluation — avoiding string construction cost when a log level is disabled. Configure log output and levels via Logback or Log4j2.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Kotlin's <code>Result&lt;T&gt;</code> type and <code>runCatching</code> represent a fundamental shift in error handling philosophy — from exception-based control flow to explicit, typed error values. This pattern is used throughout modern Kotlin libraries and is essential for writing maintainable, predictable code.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>fun parseAge(input: String): Int = try {
+    input.toInt()
+} catch (e: NumberFormatException) {
+    println("Invalid age: ${e.message}")
+    -1                              // try/catch returns a value
+} finally {
+    println("Parsing attempt finished")
+}
+
+class InsufficientFundsException(val requested: Double, val available: Double) :
+    Exception("Requested $requested but only $available available")
+
+fun withdraw(amount: Double, balance: Double): Double {
+    require(amount > 0) { "Amount must be positive" }
+    if (amount > balance) throw InsufficientFundsException(amount, balance)
+    return balance - amount
+}
+
+fun fetchUser(id: Int): Result&lt;String&gt; = runCatching {
+    if (id &lt;= 0) throw IllegalArgumentException("Invalid id")
+    "User-$id"
+}
+fetchUser(5)
+    .onSuccess { println("Found: $it") }
+    .onFailure { println("Error: ${it.message}") }</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <code>UserRegistrationService</code> with <code>require()</code> validation for email format and password length. Return <code>Result&lt;User&gt;</code> from a <code>register()</code> function instead of throwing. Add <code>kotlin-logging</code> calls at <code>info</code> and <code>error</code> levels. Write a small test harness that calls <code>register()</code> with both valid and invalid input, <strong>handling each Result case explicitly</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 12–15:</strong> Coroutines, DSLs, reflection, multiplatform, and three complete capstone projects.</p>
+        </div>
+
+        <!--WEEK 12-->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Coroutines: Structured Concurrency &amp; Flow</h2>
+                <p>Master Kotlin's coroutine system for writing readable, non-blocking, structured concurrent code.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering Kotlin's coroutine system for writing readable, non-blocking, and structured concurrent code.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>suspend</code> Functions &amp; Coroutine Builders (<code>launch</code>, <code>async</code>, <code>runBlocking</code>)</strong> — <code>suspend</code> marks a function as able to pause and resume without blocking a thread. <code>launch</code> starts a fire-and-forget coroutine returning a <code>Job</code>; <code>async</code> starts a coroutine returning a <code>Deferred&lt;T&gt;</code> you can <code>await()</code>.</li>
+                    <li><strong>Coroutine Scope, Context &amp; Structured Concurrency</strong> — A <code>CoroutineScope</code> defines the lifetime boundary for child coroutines — when the scope is cancelled, all children are cancelled too. This "structured concurrency" guarantees no coroutine is ever leaked or forgotten, unlike raw thread management.</li>
+                    <li><strong>Dispatchers — <code>Default</code>, <code>IO</code>, <code>Main</code></strong> — Dispatchers determine which thread pool a coroutine runs on. <code>Dispatchers.Default</code> is for CPU-intensive work, <code>Dispatchers.IO</code> is optimised for blocking I/O, and <code>Dispatchers.Main</code> runs on the UI thread (Android/UI frameworks).</li>
+                    <li><strong>Flow — Asynchronous Streams</strong> — <code>Flow&lt;T&gt;</code> represents a cold, asynchronous stream of values emitted over time — Kotlin's coroutine-based equivalent of reactive streams. Operators like <code>map</code>, <code>filter</code>, and <code>collect</code> compose pipelines; flows are lazy and only run when collected.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Coroutines are the single most important feature that distinguishes Kotlin from Java for modern application development. Structured concurrency — the guarantee that no child coroutine outlives its parent scope — solves the hardest problems of concurrent programming with an elegant model.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import kotlinx.coroutines.*
+
+suspend fun fetchData(): String { delay(500); return "Data loaded" }
+
+fun main() = runBlocking {
+    val deferred = async { fetchData() }
+    println("Doing other work...")
+    println(deferred.await())
+}
+
+suspend fun loadDashboard() = coroutineScope {
+    val user   = async { delay(200); "Alice" }
+    val orders = async { delay(300); listOf("Order1", "Order2") }
+    println("${user.await()}: ${orders.await()}")
+}
+
+suspend fun readFile() = withContext(Dispatchers.IO) {
+    File("data.txt").readText()
+}
+
+import kotlinx.coroutines.flow.*
+fun numberFlow(): Flow&lt;Int&gt; = flow {
+    for (i in 1..5) { delay(100); emit(i) }
+}
+fun main() = runBlocking {
+    numberFlow().map { it * it }.collect { println(it) }  // 1 4 9 16 25
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build an async <strong>WeatherDashboard</strong> that concurrently fetches weather for 5 cities using <code>async</code>/<code>awaitAll</code>, with each simulated fetch using <code>delay()</code>. Convert the result-printing logic into a <code>Flow&lt;CityWeather&gt;</code> pipeline using <code>map</code> and <code>filter</code> (only show cities above 20°C). Use <code>Dispatchers.IO</code> for the simulated network calls.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 13 -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — DSLs, Reflection &amp; Annotations</h2>
+                <p>Build expressive internal Domain-Specific Languages, inspect types at runtime, and create custom annotations.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Building expressive internal Domain-Specific Languages, inspecting types at runtime, and creating custom annotations.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Lambdas with Receivers &amp; Type-Safe Builders</strong> — A lambda with a receiver (<code>T.() -&gt; Unit</code>) executes as if it were a member of <code>T</code>, enabling the "builder pattern" used by Kotlin's own standard library (e.g., <code>buildString { }</code>). This is the foundation of Kotlin's signature DSL capability.</li>
+                    <li><strong>Building a Domain-Specific Language (DSL)</strong> — Combining infix functions, extension functions, and lambdas with receivers, Kotlin can express highly readable internal DSLs — used in practice by Gradle Kotlin DSL, Ktor routing, and kotlinx.html. The goal is code that reads like natural domain language.</li>
+                    <li><strong>Annotations &amp; Annotation Processing Basics</strong> — Custom annotations (<code>annotation class</code>) attach declarative metadata to code, readable via reflection or compile-time processors (like KSP). <code>@Target</code> and <code>@Retention</code> control where an annotation can be applied and whether it survives to runtime.</li>
+                    <li><strong>Reflection — Inspecting Classes at Runtime</strong> — Kotlin reflection (<code>kotlin-reflect</code>) provides a richer API over Java reflection, exposing Kotlin-specific concepts like nullability, data class properties, and <code>KFunction</code>. Use <code>::class</code> to get a <code>KClass&lt;T&gt;</code> reference and inspect its members.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Kotlin's DSL capabilities are what powers Gradle's <code>build.gradle.kts</code>, Ktor's routing, and Jetpack Compose's UI layout. Understanding lambdas with receivers reveals how all of these frameworks actually work under the hood — making you a far more effective user and builder of libraries.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>class HtmlBuilder { private val sb = StringBuilder()
+    fun tag(name: String, content: HtmlBuilder.() -> Unit) {
+        sb.append("&lt;$name&gt;"); this.content(); sb.append("&lt;/$name&gt;")
+    }
+    fun text(s: String) { sb.append(s) }
+    override fun toString() = sb.toString()
+}
+fun html(block: HtmlBuilder.() -> Unit) = HtmlBuilder().apply(block).toString()
+
+val page = html {
+    tag("div") {
+        text("Welcome, ")
+        tag("strong") { text("Alice") }
+    }
+}
+println(page)   // &lt;div&gt;Welcome, &lt;strong&gt;Alice&lt;/strong&gt;&lt;/div&gt;
+
+@Target(AnnotationTarget.FIELD)
+@Retention(AnnotationRetention.RUNTIME)
+annotation class Sensitive(val reason: String = "PII")
+
+data class User(val name: String, @Sensitive("contains email") val email: String)
+
+import kotlin.reflect.full.*
+val kClass = User::class
+kClass.memberProperties.forEach { prop ->
+    println("${prop.name}: ${prop.returnType}")
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a small <strong>SQL-like query DSL</strong>: <code>query { select("name", "age"); from("users"); where { "age" gt 18 } }</code> that generates a SQL string using lambdas with receivers and infix functions. Separately, write a reflection-based function that takes any data class instance and prints all fields annotated with a custom <code>@Sensitive</code> annotation as <strong>"***REDACTED***"</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 14 -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Multiplatform, Testing &amp; Performance</h2>
+                <p>Understand Kotlin Multiplatform fundamentals, write comprehensive tests, and profile Kotlin code.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding Kotlin Multiplatform fundamentals, writing comprehensive tests, and profiling and optimising Kotlin code.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Kotlin Multiplatform (KMP) Fundamentals</strong> — KMP lets you share business logic across Android, iOS, web, and desktop from a single Kotlin codebase, using <code>expect</code>/<code>actual</code> declarations to bridge platform-specific implementations — networking, data models, and validation shared once.</li>
+                    <li><strong>Unit Testing with Kotest / JUnit5</strong> — Kotlin testing typically uses JUnit5 with idiomatic Kotlin assertion libraries like Kotest or AssertJ, providing readable, fluent assertions. Test functions can use backtick-quoted names for full human-readable descriptions.</li>
+                    <li><strong>Mocking with MockK</strong> — MockK is Kotlin's idiomatic mocking library, with first-class support for coroutines, extension functions, and <code>final</code> classes (which other JVM mocking libraries struggle with). It enables isolated unit testing of classes with external dependencies.</li>
+                    <li><strong>Performance — Inline Classes &amp; Benchmarking with JMH</strong> — <code>value class</code> wraps a single value with zero runtime overhead — type-safe wrappers around primitives like <code>UserId(Int)</code> with no boxing cost. JMH provides statistically rigorous benchmarking for the JVM.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Kotlin Multiplatform is the fastest-growing part of the Kotlin ecosystem — companies are adopting it to share business logic across Android and iOS, eliminating duplicated logic in two separate codebases. MockK's coroutine support makes it the only viable mocking library for modern Kotlin code.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// commonMain — shared declaration
+expect fun getPlatformName(): String
+// androidMain
+actual fun getPlatformName(): String = "Android"
+// iosMain
+actual fun getPlatformName(): String = "iOS"
+
+import org.junit.jupiter.api.Test
+import kotlin.test.assertEquals
+class CalculatorTest {
+    @Test
+    fun `adding two positive numbers returns their sum`() {
+        assertEquals(5, 2 + 3)
+    }
+}
+
+import io.mockk.*
+class UserServiceTest {
+    @Test
+    fun `returns user name from repository`() {
+        val repo = mockk&lt;UserRepository&gt;()
+        every { repo.findById(1) } returns User("Alice", 30)
+        val service = UserService(repo)
+        assert(service.getUserName(1) == "Alice")
+    }
+}
+
+@JvmInline
+value class UserId(val value: Int)   // zero-overhead wrapper
+fun getUser(id: UserId): String = "User-${id.value}"</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a shared KMP module exposing <code>expect fun currentTimeMillis(): Long</code> with Android and JVM <code>actual</code> implementations. Write a full <strong>MockK-based unit test suite</strong> for a <code>UserService</code> class with a mocked <code>UserRepository</code>, covering both success and failure paths. Define a <code>value class Email(val raw: String)</code> with validation in an <code>init</code> block.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 15-->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Capstone Week: Three Master Projects</h2>
+                <p>Apply everything learned across the entire curriculum in three complete, production-quality projects.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Synthesising all four phases into three complete, production-quality Kotlin projects.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — CLI Task Manager (Beginner → Intermediate)</h3>
+                <p>A fully typed, file-persisted command-line task management application reinforcing data classes, sealed classes, serialisation, and the Result pattern.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Kotlin Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Task status transitions</td>
+                            <td><code>sealed class TaskStatus</code> with exhaustive <code>when</code></td>
+                        </tr>
+                        <tr>
+                            <td>Immutable task updates</td>
+                            <td><code>data class Task</code> with <code>copy()</code></td>
+                        </tr>
+                        <tr>
+                            <td>JSON persistence to disk</td>
+                            <td>kotlinx.serialization + File I/O</td>
+                        </tr>
+                        <tr>
+                            <td>Formatted task display</td>
+                            <td>Extension functions on <code>Task</code></td>
+                        </tr>
+                        <tr>
+                            <td>Safe load/save operations</td>
+                            <td><code>Result&lt;T&gt;</code> pattern for all repository calls</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>sealed class TaskStatus { object Pending : TaskStatus(); object Done : TaskStatus() }
+data class Task(val id: Int, val title: String, val status: TaskStatus = TaskStatus.Pending)
+
+fun Task.markDone(): Task = this.copy(status = TaskStatus.Done)
+fun List&lt;Task&gt;.summary(): String =
+    "Pending: ${count { it.status == TaskStatus.Pending }}, Done: ${count { it.status == TaskStatus.Done }}"</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A CLI app with commands: <code>add</code>, <code>list</code>, <code>complete</code>, <code>delete</code>, <code>summary</code>. All tasks persist to a JSON file via kotlinx.serialization, validated and loaded safely with <code>Result&lt;T&gt;</code> on startup. Build on <strong>Days 1–2</strong>.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — Async REST API with Ktor (Intermediate → Advanced)</h3>
+                <p>A production-ready REST API for a bookstore inventory system using Ktor and coroutines throughout.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Kotlin Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Typed routing &amp; content negotiation</td>
+                            <td>Ktor server + kotlinx.serialization</td>
+                        </tr>
+                        <tr>
+                            <td>All I/O operations non-blocking</td>
+                            <td><code>suspend</code> functions end-to-end + <code>Dispatchers.IO</code></td>
+                        </tr>
+                        <tr>
+                            <td>Dependency injection</td>
+                            <td>Koin DI framework</td>
+                        </tr>
+                        <tr>
+                            <td>Global error handling</td>
+                            <td>Ktor <code>StatusPages</code> plugin</td>
+                        </tr>
+                        <tr>
+                            <td>Streaming inventory export</td>
+                            <td><code>Flow&lt;Book&gt;</code> collected into response writer</td>
+                        </tr>
+                        <tr>
+                            <td>Integration test suite</td>
+                            <td>Ktor <code>testApplication { }</code> + MockK</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>fun Application.bookRoutes(service: BookService) {
+    routing {
+        route("/books") {
+            get { call.respond(service.getAll()) }
+            post {
+                val book = call.receive&lt;CreateBookDto&gt;()
+                call.respond(HttpStatusCode.Created, service.create(book))
+            }
+            get("/export") {
+                call.respondTextWriter {
+                    service.exportFlow().collect { write("$it\n") }
+                }
+            }
+        }
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A complete Ktor REST API with CRUD endpoints for <code>Books</code> and <code>Authors</code>, pagination, a streaming CSV export endpoint backed by <code>Flow&lt;Book&gt;</code>, global error handling via <code>StatusPages</code>, and an integration test suite using Ktor's <code>testApplication { }</code>. Build on <strong>Days 3–4</strong>.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Real-Time Multiplayer Game Server (Advanced → Master)</h3>
+                <p>A real-time multiplayer word-guessing game server using Ktor WebSockets, coroutines, structured concurrency, and a game configuration DSL.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Kotlin Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Typed WebSocket message protocol</td>
+                            <td>Ktor WebSockets + <code>sealed class GameMessage</code></td>
+                        </tr>
+                        <tr>
+                            <td>Thread-safe message passing</td>
+                            <td><code>Channel&lt;T&gt;</code> between game rooms</td>
+                        </tr>
+                        <tr>
+                            <td>Game room lifecycle management</td>
+                            <td>Each room is a <code>CoroutineScope</code> — cancels cleanly</td>
+                        </tr>
+                        <tr>
+                            <td>Live state broadcast to all clients</td>
+                            <td><code>StateFlow</code> for reactive state sharing</td>
+                        </tr>
+                        <tr>
+                            <td>Round configuration DSL</td>
+                            <td>Lambdas with receivers + infix functions</td>
+                        </tr>
+                        <tr>
+                            <td>Shared protocol types</td>
+                            <td>KMP <code>commonMain</code> module reused by mobile client</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>sealed class GameMessage {
+    data class Guess(val playerId: String, val word: String) : GameMessage()
+    data class RoundStarted(val word: String, val timeLimit: Int) : GameMessage()
+    data class PlayerJoined(val playerId: String) : GameMessage()
+}
+
+class GameRoom(private val scope: CoroutineScope) {
+    private val _state = MutableStateFlow&lt;GameMessage&gt;(GameMessage.RoundStarted("____", 30))
+    val state: StateFlow&lt;GameMessage&gt; = _state.asStateFlow()
+
+    fun submitGuess(playerId: String, word: String) = scope.launch {
+        _state.emit(GameMessage.Guess(playerId, word))
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A Ktor WebSocket server supporting multiple concurrent game rooms, each with its own <code>CoroutineScope</code> lifecycle. Live game state broadcasts via <code>StateFlow</code> to all connected players. A round configuration DSL controls game rules. A shared KMP module defines the message protocol so a future Android/iOS client can reuse the same types. Build on <strong>Days 5–7</strong>. This is the capstone demonstrating mastery of the entire Kotlin curriculum.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–3</td>
+                        <td>Absolute Basics</td>
+                        <td>Write Kotlin programs using types, null safety, ranges, and all core collection types</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>4–7</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Structure programs with functions, collections, data classes, sealed classes, and extension functions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>8–11</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Apply OOP with delegation, generics with variance, file I/O, serialisation, and Result-based error handling</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>12–15</td>
+                        <td>Master Level Concepts</td>
+                        <td>Write structured concurrent code with coroutines and Flow, build DSLs, use reflection, test with MockK, and complete three production projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool / Resource</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>kotlinlang.org/docs</td>
+                        <td>Official language reference — every feature, kept current</td>
+                    </tr>
+                    <tr>
+                        <td>Kotlin Koans (play.kotlinlang.org/koans)</td>
+                        <td>Interactive exercises for hands-on syntax practice</td>
+                    </tr>
+                    <tr>
+                        <td>Kotlin in Action (2nd Ed.)</td>
+                        <td>Deep language and coroutines mastery book</td>
+                    </tr>
+                    <tr>
+                        <td>Philipp Lackner (YouTube)</td>
+                        <td>Android &amp; Kotlin practical video tutorials</td>
+                    </tr>
+                    <tr>
+                        <td>Ktor Documentation (ktor.io)</td>
+                        <td>Backend development with Kotlin</td>
+                    </tr>
+                    <tr>
+                        <td>kotlinx.coroutines GitHub</td>
+                        <td>Coroutines deep dive — official guide and source</td>
+                    </tr>
+                    <tr>
+                        <td>MockK Documentation (mockk.io)</td>
+                        <td>Idiomatic Kotlin mocking for unit tests</td>
+                    </tr>
+                    <tr>
+                        <td>Kotlin Slack (kotlinlang.slack.com)</td>
+                        <td>Real-time help from JetBrains team and community</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Complete each week's task before moving on — building small programs reinforces concepts far more than reading alone.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — your commit history shows consistent progress to future employers.</li>
+                    <li>Use the <strong>Kotlin REPL</strong> and Playground for quick experiments in Phases 1 and 2, then move to full IntelliJ IDEA projects from Phase 3 onward.</li>
+                    <li>By Week 15, you should have three complete, runnable projects and the confidence to build any Kotlin application — CLI, Android, backend, or multiplatform — from scratch.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

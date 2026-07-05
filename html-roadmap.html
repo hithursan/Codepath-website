@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Learning - 15 Week Roadmap</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <header class="rm-header">
+        <h1>HTML Learning</h1>
+        <p>Complete 15-Week Beginner-to-Advanced Roadmap — Structure, Semantics, Forms, Accessibility &amp; SEO</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Roadmap</h2>
+            <p>This is a 15-week, full-time, beginner-to-advanced HTML roadmap built for a college project website. It covers HTML fundamentals (Weeks 1–6), intermediate/semantic and forms-heavy HTML (Weeks 7–10), advanced topics including accessibility, SEO, multimedia, and light HTML-adjacent CSS/JS integration needed to make HTML "feel complete" (Weeks 11–13), and a final project + portfolio polish phase (Weeks 14–15).</p>
+            <p>Every week builds directly on the previous one. By Week 15 you will have <strong>1 capstone project</strong> and <strong>12+ smaller projects</strong> to show in a portfolio, plus the conceptual depth to answer technical interview questions confidently.</p>
+            <p><strong>Level:</strong> Beginner to Advanced &nbsp;|&nbsp; <strong>Duration:</strong> 15 weeks &nbsp;|&nbsp; <strong>Study mode:</strong> Full-time (~30–35 hrs/week) &nbsp;|&nbsp; <strong>Language:</strong> HTML (with light CSS/JS from Week 11)</p>
+
+            <h3>Introduction to HTML</h3>
+            <p>HTML (HyperText Markup Language) is the standard markup language used to create the structure and content of webpages. It tells the browser what each piece of content <em>is</em> — a heading, a paragraph, a link, an image, a table — rather than how it should look (that's CSS's job) or how it should behave (that's JavaScript's job). Every website on the internet, no matter how complex, has HTML as its skeleton.</p>
+
+            <h3>Career Relevance</h3>
+            <ul>
+                <li>Frontend Developer, Full-Stack Developer, UI/UX Designer, Web Designer</li>
+                <li>WordPress Developer, QA/Automation Tester, Technical Writer</li>
+                <li>Digital Marketer / SEO Specialist</li>
+                <li>HTML is a mandatory foundation for CSS, JavaScript, React, Angular, and almost every web framework.</li>
+            </ul>
+
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>No coding background required.</li>
+                <li>Basic computer literacy (typing, file/folder management, using a browser).</li>
+                <li>Ability to install free software.</li>
+            </ul>
+
+            <h3>Tools Needed</h3>
+            <ul>
+                <li><strong>Code Editor:</strong> Visual Studio Code (VS Code) — recommended, free.</li>
+                <li><strong>Browser:</strong> Google Chrome or Mozilla Firefox (with Developer Tools).</li>
+                <li><strong>VS Code Extensions:</strong> "Live Server," "HTML CSS Support," "Prettier."</li>
+                <li><strong>Optional:</strong> GitHub account (for hosting via GitHub Pages).</li>
+            </ul>
+
+            <h3>Setup Steps</h3>
+            <ol>
+                <li>Download and install VS Code from code.visualstudio.com.</li>
+                <li>Install Google Chrome or Firefox if not already installed.</li>
+                <li>Open VS Code → Extensions panel (Ctrl+Shift+X) → install "Live Server" by Ritwick Dey.</li>
+                <li>Create a project folder, e.g., <code>html-roadmap-project</code>.</li>
+                <li>Inside it, create <code>index.html</code> — right-click → "Open with Live Server."</li>
+                <li>(Optional, Week 14+) Create a free GitHub account for hosting your final project.</li>
+            </ol>
+
+            <h3>Basic Glossary</h3>
+            <ul>
+                <li><strong>Tag:</strong> Keyword in angle brackets, e.g., <code>&lt;p&gt;</code>.</li>
+                <li><strong>Element:</strong> A complete tag structure including opening tag, content, and closing tag.</li>
+                <li><strong>Attribute:</strong> Extra info added inside a tag, e.g., <code>href</code> in <code>&lt;a href="..."&gt;</code>.</li>
+                <li><strong>Void/Self-closing element:</strong> An element with no closing tag, e.g., <code>&lt;img&gt;</code>, <code>&lt;br&gt;</code>.</li>
+                <li><strong>DOM:</strong> The browser's in-memory tree representation of your HTML.</li>
+                <li><strong>Semantic HTML:</strong> Tags that describe their meaning instead of generic <code>&lt;div&gt;</code>.</li>
+                <li><strong>Block-level element:</strong> Takes full width, starts on a new line (e.g., <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>).</li>
+                <li><strong>Inline element:</strong> Takes only as much width as needed (e.g., <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>).</li>
+                <li><strong>Nesting:</strong> Placing one element inside another.</li>
+                <li><strong>Validation:</strong> Checking HTML for syntax correctness (e.g., via W3C Validator).</li>
+            </ul>
+        </div>
+
+
+        <!--  WEEK 1 -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — HTML Foundations &amp; Document Structure</h2>
+                <p>Understand what HTML is, set up your environment, and write your first valid HTML documents.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What is HTML, how the web works</strong> — Client-server basics, browser rendering, HTML vs CSS vs JS roles.</li>
+                    <li><strong>Document structure</strong> — <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;meta charset&gt;</code>.</li>
+                    <li><strong>Basic tags</strong> — <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;br&gt;</code>, <code>&lt;hr&gt;</code>, comments.</li>
+                    <li><strong>Text formatting tags</strong> — <code>&lt;b&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;u&gt;</code>, <code>&lt;mark&gt;</code>, <code>&lt;small&gt;</code>, <code>&lt;sub&gt;</code>, <code>&lt;sup&gt;</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Everything else builds on document structure. Mistakes here (like missing DOCTYPE) cause browser quirks-mode issues later. This is the non-skippable foundation of all web development.</p>
+                </div>
+
+                <h3>Step-by-Step Learning Order</h3>
+                <p>How the web works → Editor setup → Boilerplate structure → Headings/paragraphs → Text formatting → Comments.</p>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>How the web/browsers work; install VS Code, Chrome, Live Server.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>HTML boilerplate; <code>&lt;head&gt;</code> vs <code>&lt;body&gt;</code>; create first <code>index.html</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Headings and paragraphs; practice 10 small snippets.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Text formatting tags (bold, italic, mark, etc.).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Comments, <code>&lt;br&gt;</code>, <code>&lt;hr&gt;</code>; review all tags learned.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Practice tasks + mini project.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Revise, quiz yourself, rest/buffer.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build a "My Bio" page using only headings, paragraphs, and text formatting.</li>
+                    <li>Recreate a simple Wikipedia-style article structure (title, intro paragraph, bold key terms).</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A one-page <strong>"About Me"</strong> HTML document with a heading, 3 paragraphs, and at least 5 different formatting tags used correctly — no CSS, pure HTML structure only.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Forgetting <code>&lt;!DOCTYPE html&gt;</code> at the top.</li>
+                        <li>Not closing tags properly.</li>
+                        <li>Using <code>&lt;br&gt;</code> for spacing instead of proper structure.</li>
+                        <li>Confusing <code>&lt;b&gt;</code>/<code>&lt;strong&gt;</code> (visual vs semantic).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always start from a saved boilerplate template.</li>
+                        <li>Use VS Code auto-closing tags to prevent unclosed tags.</li>
+                        <li>Remember <code>&lt;strong&gt;</code>/<code>&lt;em&gt;</code> carry meaning; <code>&lt;b&gt;</code>/<code>&lt;i&gt;</code> are purely visual.</li>
+                        <li>Type every example yourself — never copy-paste code when learning.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MDN Web Docs — "Getting started with HTML"</li>
+                    <li>W3Schools HTML Tutorial</li>
+                    <li>freeCodeCamp — "Responsive Web Design" HTML intro module</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 25–30 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 2 -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Links, Images, Lists &amp; Paths</h2>
+                <p>Learn how to connect pages, embed images, and structure list-based content.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Hyperlinks</strong> — <code>&lt;a&gt;</code>, <code>href</code>, <code>target="_blank"</code>, internal vs external links, anchor links (<code>#id</code>).</li>
+                    <li><strong>Images</strong> — <code>&lt;img&gt;</code>, <code>src</code>, <code>alt</code>, <code>width</code>/<code>height</code>, image formats (JPG, PNG, SVG, WebP).</li>
+                    <li><strong>File paths</strong> — Absolute vs relative paths, folder structuring.</li>
+                    <li><strong>Lists</strong> — <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>, nested lists, <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, <code>&lt;dd&gt;</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Navigation and media are core to any real website. Path errors are the #1 beginner bug — mastering relative/absolute paths now prevents endless broken-link frustration on every future project.</p>
+                </div>
+
+                <h3>Step-by-Step Learning Order</h3>
+                <p>Paths concept → Links → Images → Unordered/Ordered lists → Nested lists → Description lists.</p>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Hyperlinks basics and attributes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Anchor/jump links within a page.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Images — tags, attributes, formats, alt text importance.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Absolute vs relative paths; practice folder organization.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Ordered/unordered lists.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Nested &amp; description lists + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project + revision.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Create 3 linked pages (Home, About, Contact) navigating to each other.</li>
+                    <li>Build an image gallery section using relative paths.</li>
+                    <li>Create a nested list representing a table of contents.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>3-page mini-site</strong> (Home/About/Contact) with working navigation links, at least 2 images with proper <code>alt</code> text, and one nested list (e.g., a site menu or FAQ list).</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Wrong relative paths (<code>/images</code> vs <code>images/</code>).</li>
+                        <li>Missing <code>alt</code> attributes on images.</li>
+                        <li>Forgetting <code>target="_blank"</code> opens in same tab causing confusion.</li>
+                        <li>Broken anchor link IDs (mismatched <code>href="#id"</code> and actual element <code>id</code>).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always test links by clicking, not just reading code.</li>
+                        <li>Keep a consistent folder structure (<code>/images</code>, <code>/pages</code>).</li>
+                        <li>Use lowercase, hyphenated filenames — no spaces (e.g., <code>about-me.html</code>).</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MDN — "Creating hyperlinks"</li>
+                    <li>MDN — "Image basics in HTML"</li>
+                    <li>W3Schools Lists tutorial</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 28–32 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 3 -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Tables &amp; Basic Forms</h2>
+                <p>Structure tabular data and build basic interactive input forms.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Tables</strong> — <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>, <code>colspan</code>, <code>rowspan</code>, <code>&lt;caption&gt;</code>.</li>
+                    <li><strong>Forms intro</strong> — <code>&lt;form&gt;</code>, <code>action</code>, <code>method</code> (GET vs POST).</li>
+                    <li><strong>Input basics</strong> — <code>&lt;input&gt;</code> types: text, password, email, number, date, checkbox, radio.</li>
+                    <li><strong>Form structure</strong> — <code>&lt;label&gt;</code>, <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;option&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;button&gt;</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Tables and forms are the most commonly tested beginner HTML skills and are used in almost every real site — contact forms, login forms, registration forms, and data display tables appear on nearly every production website.</p>
+                </div>
+
+                <h3>Step-by-Step Learning Order</h3>
+                <p>Tables basics → Table structuring (thead/tbody) → Form container → Input types → Labels/fieldsets → Select/textarea/button.</p>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Basic table structure.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Advanced table — colspan, rowspan, thead/tbody/tfoot.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Form container, action/method, basic text inputs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Input types — checkbox, radio, email, date, number.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Labels, fieldset, legend (accessibility-linked).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Select, textarea, button + practice.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project + revision.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build a timetable using <code>colspan</code>/<code>rowspan</code>.</li>
+                    <li>Build a student registration form with at least 6 different input types, all linked to <code>&lt;label&gt;</code>.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Student Registration Form"</strong> page with a data table (showing sample registered students) and a working form below it — name, email, DOB, gender (radio), course (select), message (textarea), submit button.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using tables for page layout (outdated, incorrect practice).</li>
+                        <li>Inputs without <code>&lt;label&gt;</code> — hurts accessibility.</li>
+                        <li>Missing <code>name</code> attribute on inputs (breaks form submission).</li>
+                        <li>Not grouping related radio buttons under the same <code>name</code>.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Use tables only for real tabular data — never for layout.</li>
+                        <li>Always pair every input with a <code>&lt;label for="id"&gt;</code>.</li>
+                        <li>Double-check every input has a unique <code>id</code> and a <code>name</code> attribute.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MDN — "HTML table basics"</li>
+                    <li>MDN — "Your first HTML form"</li>
+                    <li>W3Schools Forms tutorial</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 30–35 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 4 -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Advanced Forms &amp; Form Validation</h2>
+                <p>Master advanced form inputs and built-in HTML validation attributes.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Advanced input types</strong> — <code>url</code>, <code>tel</code>, <code>range</code>, <code>color</code>, <code>file</code>, <code>search</code>, <code>hidden</code>.</li>
+                    <li><strong>Validation attributes</strong> — <code>required</code>, <code>pattern</code>, <code>min</code>, <code>max</code>, <code>minlength</code>, <code>maxlength</code>, <code>step</code>.</li>
+                    <li><strong>Datalist &amp; autocomplete</strong> — <code>&lt;datalist&gt;</code>, <code>autocomplete</code>.</li>
+                    <li><strong>Form usability</strong> — <code>placeholder</code>, <code>autofocus</code>, <code>disabled</code>, <code>readonly</code>, grouping with <code>&lt;fieldset&gt;</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Real-world forms (sign-ups, payments, surveys) depend heavily on native validation — reduces the need for JavaScript for basic checks. Understanding these attributes is directly tested in interviews and viva evaluations.</p>
+                </div>
+
+                <h3>Step-by-Step Learning Order</h3>
+                <p>Advanced input types → Validation attributes → Datalist/autocomplete → Usability attributes → Combine into one complex form.</p>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Advanced input types — url, tel, range, color, file.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td><code>required</code>, <code>pattern</code>, <code>min</code>/<code>max</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>minlength</code>/<code>maxlength</code>/<code>step</code>; test validation live in browser.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>&lt;datalist&gt;</code>, <code>autocomplete</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td><code>placeholder</code>, <code>autofocus</code>, <code>disabled</code>, <code>readonly</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Build a complete validated form + practice.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project + revision/quiz.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build a "Job Application Form" with file upload, range slider (experience years), and pattern-validated phone number.</li>
+                    <li>Create a search bar using <code>&lt;datalist&gt;</code> with city suggestions.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A fully validated <strong>"Event Registration Form"</strong> — required fields, email pattern check, age <code>min</code>/<code>max</code>, phone <code>pattern</code>, and a <code>&lt;datalist&gt;</code> for country selection.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Relying only on <code>required</code> and ignoring <code>pattern</code> for format checks.</li>
+                        <li>Using <code>disabled</code> when <code>readonly</code> was meant — disabled fields don't submit data.</li>
+                        <li>Incorrect regex in <code>pattern</code> attribute.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Test every validation rule manually by submitting wrong data before moving on.</li>
+                        <li>Remember: <code>disabled</code> = not submitted; <code>readonly</code> = visible, submitted, but not editable.</li>
+                        <li>Keep <code>pattern</code> regex simple and test it on regex101.com before using.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MDN — "Client-side form validation"</li>
+                    <li>MDN — "The HTML5 input types"</li>
+                    <li>web.dev forms guide</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 30–35 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 5  -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Semantic HTML &amp; Page Layout Structure</h2>
+                <p>Structure full pages using meaningful, accessible semantic tags instead of generic div soup.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Semantic elements</strong> — <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>.</li>
+                    <li><strong>Generic containers</strong> — <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code> and when to use them vs semantic tags.</li>
+                    <li><strong>Document outline</strong> — Heading hierarchy best practices (<code>h1</code> once per page, logical nesting).</li>
+                    <li><strong>Figures &amp; captions</strong> — <code>&lt;figure&gt;</code>, <code>&lt;figcaption&gt;</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Semantic HTML improves SEO, accessibility, and code readability — a core "best practice" topic that interviewers and evaluators specifically check for. A page built with proper semantics is easier to maintain, style, and understand.</p>
+                </div>
+
+                <h3>Step-by-Step Learning Order</h3>
+                <p>Why semantics matter → header/nav/footer → main/section/article → aside → div/span usage rules → figure/figcaption → full page skeleton.</p>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Why semantics matter; header, footer.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>nav, main.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>section vs article vs div — the trickiest distinction.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>aside; heading hierarchy rules.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>figure/figcaption.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Build a full semantic page skeleton + practice.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project + revision.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Convert a previous "div-only" page (from Week 1–3) into full semantic HTML.</li>
+                    <li>Inspect 2 real websites' structure using DevTools and note which semantic tags they use.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A semantic <strong>"Blog Homepage"</strong> layout: header with nav, main with 2–3 <code>&lt;article&gt;</code> blog posts inside a <code>&lt;section&gt;</code>, an <code>&lt;aside&gt;</code> with related links, and a <code>&lt;footer&gt;</code>.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>&lt;section&gt;</code> for purely visual grouping (should have a heading and thematic meaning).</li>
+                        <li>Using multiple <code>&lt;h1&gt;</code> tags per page.</li>
+                        <li>Overusing <code>&lt;div&gt;</code> where semantic tags clearly exist.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>If a <code>&lt;div&gt;</code> represents a real region (navigation, article, sidebar), use the semantic tag instead.</li>
+                        <li>One <code>&lt;h1&gt;</code> per page — always.</li>
+                        <li>Give every <code>&lt;section&gt;</code> a heading to justify its existence.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MDN — "HTML element reference" (Semantics section)</li>
+                    <li>web.dev — "Semantics" articles</li>
+                    <li>freeCodeCamp — Responsive Web Design semantic HTML module</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 28–32 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 6 -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Multimedia: Audio, Video &amp; Embeds</h2>
+                <p>Learn to embed media content and external resources properly and safely.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Audio</strong> — <code>&lt;audio&gt;</code>, <code>controls</code>, <code>autoplay</code>, <code>loop</code>, <code>&lt;source&gt;</code>, fallback text.</li>
+                    <li><strong>Video</strong> — <code>&lt;video&gt;</code>, <code>poster</code>, multiple <code>&lt;source&gt;</code> formats, <code>&lt;track&gt;</code> (captions).</li>
+                    <li><strong>Embeds</strong> — <code>&lt;iframe&gt;</code>, embedding YouTube videos/maps safely (<code>sandbox</code>, <code>allow</code>, <code>loading="lazy"</code>).</li>
+                    <li><strong>SVG &amp; Canvas basics</strong> — Inline <code>&lt;svg&gt;</code> simple shapes, intro to <code>&lt;canvas&gt;</code> (awareness level).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Modern websites are media-rich. Correct embedding avoids performance and security issues. Knowing how to add captions to video is also an accessibility requirement in professional work.</p>
+                </div>
+
+                <h3>Step-by-Step Learning Order</h3>
+                <p>Audio basics → Video basics → Captions/track → iframe usage &amp; security attributes → SVG intro → Canvas awareness.</p>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Audio tag and attributes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Video tag, poster image, multiple sources.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Captions with <code>&lt;track&gt;</code>; accessibility importance.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>iframe basics; embedding YouTube/Google Maps.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>iframe security attributes (sandbox, allow, loading="lazy").</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>SVG basics + canvas awareness + practice.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project + revision.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Embed a local video with custom poster image and controls.</li>
+                    <li>Embed a YouTube video and a Google Map using iframes with lazy loading.</li>
+                    <li>Draw a simple shape (circle/rectangle) using inline SVG.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Media Gallery"</strong> page with one audio player, one video player (with poster + captions track), and one embedded map/YouTube video — all responsive and lazy-loaded.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Forgetting fallback text for unsupported browsers inside <code>&lt;audio&gt;</code>/<code>&lt;video&gt;</code> tags.</li>
+                        <li>Embedding iframes without <code>loading="lazy"</code> — hurts page performance.</li>
+                        <li>Missing <code>controls</code> attribute — users can't interact with media.</li>
+                        <li>Using non-royalty-free media — copyright issues.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always provide fallback text inside <code>&lt;audio&gt;</code>/<code>&lt;video&gt;</code> tags.</li>
+                        <li>Always add <code>loading="lazy"</code> on non-critical iframes.</li>
+                        <li>Use only royalty-free assets (Pixabay, Pexels) for practice projects.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MDN — "Video and audio content"</li>
+                    <li>MDN — <code>&lt;iframe&gt;</code> reference</li>
+                    <li>Pixabay (pixabay.com) — free sample media files</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 25–30 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 7  -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Accessibility (a11y) in HTML</h2>
+                <p>Write HTML that is usable by everyone, including people using screen readers and assistive tech.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Why accessibility matters</strong> — Legal/ethical/SEO reasons, WCAG basics (awareness level).</li>
+                    <li><strong>ARIA basics</strong> — <code>role</code>, <code>aria-label</code>, <code>aria-hidden</code>, <code>aria-describedby</code> (used only when native HTML isn't enough).</li>
+                    <li><strong>Accessible forms &amp; navigation</strong> — Label associations, <code>tabindex</code>, skip links, focus states.</li>
+                    <li><strong>Color contrast &amp; text alternatives</strong> — <code>alt</code> text quality, contrast awareness.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Accessibility is a major professional and ethical skill. Many real companies and exam evaluators specifically check for it. Accessible sites are also better for SEO and usability for all users, not just those with disabilities.</p>
+                </div>
+
+                <h3>Step-by-Step Learning Order</h3>
+                <p>Why accessibility → Native HTML accessibility (semantic tags, labels) → ARIA only as a supplement → Keyboard navigation/focus → Alt text &amp; contrast awareness.</p>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Why accessibility matters; WCAG overview (conceptual).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Native HTML accessibility recap (semantics, labels).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>ARIA roles/attributes — when and when not to use them.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Keyboard navigation, tabindex, skip links.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Writing good alt text; contrast awareness.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Audit previous projects for accessibility + fix them.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project + revision.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Run your Week 5 mini project through a screen reader and note 3 issues.</li>
+                    <li>Add a "skip to main content" link to a multi-section page.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Take your Week 5 <strong>"Blog Homepage"</strong> and refactor it into an <strong>Accessible Blog Homepage</strong>: proper landmark roles, skip link, accessible form, quality alt text, and logical tab order.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Overusing ARIA when semantic HTML already solves it ("First rule of ARIA: don't use ARIA if you don't have to").</li>
+                        <li>Empty <code>alt=""</code> on meaningful images.</li>
+                        <li>Removing focus outlines in CSS without providing a visible replacement.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always prefer native semantic HTML first; only add ARIA for genuinely custom widgets.</li>
+                        <li>Never set <code>alt=""</code> unless the image is purely decorative.</li>
+                        <li>Never remove focus styles without providing a visible alternative.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MDN — "Accessibility" guide</li>
+                    <li>W3C WAI — "Introduction to Web Accessibility"</li>
+                    <li>WebAIM.org — articles and tools</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 28–32 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — SEO-Friendly HTML &amp; Meta Information</h2>
+                <p>Learn how HTML structure affects search engine visibility and write SEO-friendly markup.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Meta tags</strong> — <code>&lt;meta name="description"&gt;</code>, <code>&lt;meta name="viewport"&gt;</code>, <code>&lt;meta charset&gt;</code>.</li>
+                    <li><strong>Open Graph &amp; social meta</strong> — <code>og:title</code>, <code>og:description</code>, <code>og:image</code> (for social sharing previews).</li>
+                    <li><strong>SEO-friendly structure</strong> — Proper heading hierarchy, descriptive <code>alt</code> text, descriptive link text (avoid "click here"), <code>&lt;title&gt;</code> best practices.</li>
+                    <li><strong>robots.txt / sitemap.xml awareness</strong> — Conceptual overview (separate files, not HTML tags, but commonly grouped with on-page SEO).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Demonstrates real-world relevance of HTML beyond just rendering. Important for college evaluators who ask "why does this tag matter?" — and critical for any career touching web or digital marketing.</p>
+                </div>
+
+                <h3>Step-by-Step Learning Order</h3>
+                <p>Core meta tags → Viewport (mobile-friendliness) → Open Graph tags → SEO-friendly content structure → robots.txt/sitemap awareness.</p>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Core meta tags — charset, description, viewport.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Title tag best practices; heading hierarchy for SEO.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Open Graph tags for social sharing previews.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Descriptive alt text &amp; link text for SEO.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>robots.txt and sitemap.xml — conceptual overview.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Apply all SEO practices to an existing project.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project + revision.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>View-source 3 real websites and list all <code>&lt;meta&gt;</code> tags found.</li>
+                    <li>Add full SEO meta tags (including Open Graph) to your Week 5 blog project.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>An <strong>"SEO-Optimized Landing Page"</strong> — complete <code>&lt;head&gt;</code> with charset, viewport, description, title best practices, Open Graph tags, and a body with proper heading hierarchy and descriptive alt/link text throughout.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Missing viewport meta tag — breaks mobile responsiveness entirely.</li>
+                        <li>Duplicate or missing <code>&lt;title&gt;</code> tags.</li>
+                        <li>Vague alt text like "image1.jpg".</li>
+                        <li>Multiple <code>&lt;h1&gt;</code> tags confusing search engines.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always include the viewport meta tag as a default in every project from now on.</li>
+                        <li>Write a unique, descriptive <code>&lt;title&gt;</code> for every page.</li>
+                        <li>Write alt text that describes the image's purpose/content — not its filename.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Google Search Central — "SEO Starter Guide"</li>
+                    <li>MDN — <code>&lt;meta&gt;</code> reference</li>
+                    <li>Open Graph Protocol official docs (ogp.me)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 25–30 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 9  -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — HTML5 APIs &amp; Interactive Elements (Native, No/Minimal JS)</h2>
+                <p>Explore native HTML5 interactive elements that work with little or no JavaScript.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>&lt;details&gt;</code> / <code>&lt;summary&gt;</code></strong> — Native collapsible content/accordion.</li>
+                    <li><strong><code>&lt;dialog&gt;</code></strong> — Native modal popups.</li>
+                    <li><strong><code>&lt;progress&gt;</code> and <code>&lt;meter&gt;</code></strong> — Native progress/measurement bars.</li>
+                    <li><strong><code>&lt;template&gt;</code> (awareness)</strong> — Reusable inert HTML chunks (mostly used with JS, but HTML-defined).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Shows that HTML5 alone can create interactivity that previously required JavaScript. A strong "advanced HTML" demonstration for your project — using <code>&lt;details&gt;</code>/<code>&lt;summary&gt;</code> for an FAQ or <code>&lt;progress&gt;</code> for skills is visually impressive with zero JS.</p>
+                </div>
+
+                <h3>Step-by-Step Learning Order</h3>
+                <p>details/summary → progress/meter → dialog (with minimal JS to open/close) → template awareness.</p>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td><code>&lt;details&gt;</code>/<code>&lt;summary&gt;</code> — build an FAQ accordion.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td><code>&lt;progress&gt;</code> and <code>&lt;meter&gt;</code> elements.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>&lt;dialog&gt;</code> element basics (open/close via attribute).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>&lt;dialog&gt;</code> with minimal JS trigger button.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td><code>&lt;template&gt;</code> element — conceptual understanding.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Combine all into an interactive demo page + practice.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project + revision.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build a FAQ accordion using only <code>&lt;details&gt;</code>/<code>&lt;summary&gt;</code> — no JS, no CSS needed.</li>
+                    <li>Build a skill-level showcase using <code>&lt;progress&gt;</code>/<code>&lt;meter&gt;</code> (e.g., "HTML: 80%").</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>An <strong>"Interactive FAQ + Skills"</strong> page combining a <code>&lt;details&gt;</code>-based accordion FAQ section and a <code>&lt;meter&gt;</code>/<code>&lt;progress&gt;</code>-based skills showcase — fully functional with zero or minimal JS.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Confusing <code>&lt;progress&gt;</code> (task completion) with <code>&lt;meter&gt;</code> (a static measurement like disk usage).</li>
+                        <li>Forgetting <code>&lt;dialog&gt;</code> needs JS (<code>.showModal()</code>) to open properly in most cases.</li>
+                        <li>Not testing browser support for newer elements.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Remember: progress = "how much is done," meter = "how much exists/value."</li>
+                        <li>Always check caniuse.com for <code>&lt;dialog&gt;</code> support before relying on it heavily.</li>
+                        <li>Clearly separate "pure HTML" sections from "HTML + tiny JS" sections in your code comments.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MDN — <code>&lt;details&gt;</code>, <code>&lt;dialog&gt;</code>, <code>&lt;progress&gt;</code>, <code>&lt;meter&gt;</code> reference pages</li>
+                    <li>web.dev — articles on the <code>&lt;dialog&gt;</code> element</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 25–28 hours</p>
+            </div>
+        </div>
+
+
+        <!--   WEEK 10  -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Responsive HTML Foundations</h2>
+                <p>Understand the HTML-level techniques that support responsive, mobile-friendly design.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Viewport meta tag deep dive</strong> — Recap + why it's mandatory for all modern pages.</li>
+                    <li><strong>Responsive images</strong> — <code>srcset</code>, <code>sizes</code>, <code>&lt;picture&gt;</code>, <code>&lt;source media=""&gt;</code>.</li>
+                    <li><strong>Responsive tables awareness</strong> — Why large tables break on mobile (conceptual; CSS fix).</li>
+                    <li><strong>Mobile-first content order</strong> — Why HTML source order matters for responsive/mobile-first design.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Most real websites must work on mobile. The viewport tag and responsive images are pure HTML — they are the mandatory foundation that CSS later styles. Missing them makes everything else irrelevant.</p>
+                </div>
+
+                <h3>Step-by-Step Learning Order</h3>
+                <p>Viewport recap → srcset/sizes → <code>&lt;picture&gt;</code> element → responsive table awareness → content order/mobile-first thinking.</p>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Viewport recap; test previous projects on DevTools device mode.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td><code>srcset</code> and <code>sizes</code> attributes for responsive images.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>&lt;picture&gt;</code> element with multiple <code>&lt;source media=""&gt;</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Responsive table issues — scroll wrapper div approach.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Mobile-first content ordering principles.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Apply responsive images to an old project + practice.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project + revision.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Add <code>srcset</code>/<code>sizes</code> to an image so it loads different sizes on mobile vs desktop.</li>
+                    <li>Use <code>&lt;picture&gt;</code> to serve a different image on small screens vs large screens.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Update your Week 6 <strong>"Media Gallery"</strong> page to be responsive-ready: responsive images via <code>&lt;picture&gt;</code>/<code>srcset</code>, and a horizontally-scrollable wrapper for any table content.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Forgetting the viewport tag — breaks mobile rendering entirely.</li>
+                        <li>Using only one large image for all screen sizes — hurts mobile performance.</li>
+                        <li>Not testing on actual device-width views in DevTools.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Treat the viewport meta tag as mandatory in every project from now on.</li>
+                        <li>Always provide at least 2 image sizes via <code>srcset</code>.</li>
+                        <li>Always test in DevTools device mode before considering a page "done."</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MDN — "Responsive images"</li>
+                    <li>web.dev — "Responsive Images" guide</li>
+                    <li>Google "Mobile-Friendly Test" tool</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 25–28 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 11 -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — HTML + Minimal CSS Integration</h2>
+                <p>Learn just enough CSS to make your HTML pages look like a real, presentable website.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <div class="rm-highlight">
+                    <p><strong>⚠️ Note:</strong> This week intentionally introduces light CSS because pure unstyled HTML cannot demonstrate a presentable website. This is clearly a cross-over week, not pure HTML. All CSS sections are clearly marked.</p>
+                </div>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Connecting CSS</strong> — Inline, internal <code>&lt;style&gt;</code>, external <code>&lt;link rel="stylesheet"&gt;</code> (best practice).</li>
+                    <li><strong>Basic selectors</strong> — Element, class, ID selectors; specificity basics.</li>
+                    <li><strong>Box model basics</strong> — <code>margin</code>, <code>padding</code>, <code>border</code>, <code>width</code>/<code>height</code>.</li>
+                    <li><strong>Basic layout</strong> — Flexbox fundamentals (just enough for navbars/cards).</li>
+                </ol>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Linking external CSS; class vs ID selectors.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Box model — margin, padding, border.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Basic colors, fonts, backgrounds.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Flexbox basics — <code>display:flex</code>, <code>justify-content</code>, <code>align-items</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Apply Flexbox to build a navbar.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Style full website — apply CSS across all previous mini projects.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project + revision.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Style your Week 5 blog homepage with an external CSS file.</li>
+                    <li>Build a Flexbox-based responsive navigation bar.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Apply a consistent external CSS stylesheet across at least <strong>3 of your previous mini-projects</strong> so they share a unified, professional look — same fonts, colors, and navbar style.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using inline styles everywhere — hard to maintain at scale.</li>
+                        <li>Not understanding why styles "don't apply" (specificity/selector errors).</li>
+                        <li>Mixing units inconsistently (px here, % there, em elsewhere).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always prefer one external stylesheet over inline styles.</li>
+                        <li>Use browser DevTools to inspect why a style isn't applying.</li>
+                        <li>Pick one unit system (e.g., px or rem) and stay consistent.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MDN — "CSS basics"</li>
+                    <li>freeCodeCamp — Flexbox course</li>
+                    <li>CSS-Tricks — "A Complete Guide to Flexbox"</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 30–35 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 12  -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — HTML + Minimal JavaScript Integration</h2>
+                <p>Understand how HTML connects to JavaScript and add light interactivity to your pages.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <div class="rm-highlight">
+                    <p><strong>⚠️ Note:</strong> Like Week 11, this week is a deliberate, clearly-flagged crossover into basic JavaScript — only enough to make forms/buttons interactive, not full JS mastery. Your project remains an HTML project with a light JS layer.</p>
+                </div>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Connecting JS</strong> — <code>&lt;script&gt;</code> tag placement (<code>defer</code>, end-of-body), inline <code>onclick</code> (why to avoid it).</li>
+                    <li><strong>DOM basics</strong> — <code>document.getElementById</code>, <code>document.querySelector</code> (conceptual link to HTML structure).</li>
+                    <li><strong>Simple event handling</strong> — Button clicks, form submit prevention (<code>preventDefault</code>).</li>
+                    <li><strong>HTML5 data attributes</strong> — <code>data-*</code> attributes and why they're useful for JS hooks.</li>
+                </ol>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td><code>&lt;script&gt;</code> placement and <code>defer</code>; why inline <code>onclick</code> is discouraged.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>DOM selection — getElementById, querySelector.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Simple click event — show/hide a section.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Form submit event with <code>preventDefault</code> + basic validation message.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td><code>data-*</code> attributes — practical example (tabs).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Build a small tabbed interface using data attributes + practice.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project + revision.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Add a "Show more / Show less" toggle button to a text section using minimal JS.</li>
+                    <li>Add a custom validation message on form submit (in addition to native HTML validation).</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Mini Interactive Dashboard"</strong> section: a tabbed interface using <code>data-*</code> attributes + a few lines of JS showing different content panels — Skills, Projects, and Contact tabs.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Writing too much JS and losing focus on the HTML project goal.</li>
+                        <li>Using <code>onclick="..."</code> inline everywhere — hard to maintain, mixes concerns.</li>
+                        <li>Forgetting <code>defer</code> and getting "element not found" errors (JS runs before HTML loads).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Keep a clear boundary — this is an HTML project with a light JS layer, not a JS project.</li>
+                        <li>Always add <code>defer</code> to script tags in <code>&lt;head&gt;</code>, or place <code>&lt;script&gt;</code> at end of <code>&lt;body&gt;</code>.</li>
+                        <li>Use external <code>.js</code> files instead of inline handlers.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MDN — "JavaScript basics"</li>
+                    <li>MDN — "Introduction to events"</li>
+                    <li>javascript.info — selected chapters on DOM and events</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 28–32 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 13   -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Code Quality, Validation, Debugging &amp; Best Practices</h2>
+                <p>Write clean, valid, well-organized, and maintainable HTML — essential before building the final project.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>HTML validation</strong> — W3C Markup Validator, common validation errors and fixes.</li>
+                    <li><strong>Code organization</strong> — File/folder structure conventions, naming conventions, indentation/formatting (Prettier).</li>
+                    <li><strong>Browser DevTools mastery</strong> — Elements tab, Console tab (basic errors), Network tab (basic awareness).</li>
+                    <li><strong>Cross-browser &amp; performance basics</strong> — Testing in 2+ browsers, image optimization basics, minimizing unnecessary nesting.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Clean, valid, well-structured code is what separates a "passing" project from a "polished, professional" one. Directly affects grading and viva impressions. Evaluators who open DevTools will immediately notice validation errors and poor structure.</p>
+                </div>
+
+                <h3>Step-by-Step Learning Order</h3>
+                <p>Validation → Folder/naming conventions → Formatting tools → DevTools deep-dive → Cross-browser testing → Performance basics.</p>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>W3C Validator — validate and fix all old projects.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Folder structure &amp; naming conventions cleanup across all projects.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Prettier setup; auto-formatting all HTML files.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>DevTools deep-dive — Elements, Console, Network tabs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Cross-browser testing — Chrome + Firefox minimum.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Performance basics — image compression, removing unused code.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project + revision.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Validate all previous mini-projects through W3C Validator; fix every reported error.</li>
+                    <li>Reorganize all project folders into one consistent structure (<code>/css</code>, <code>/js</code>, <code>/images</code>, <code>/pages</code>).</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Project Cleanup Audit"</strong> — a simple HTML page itself listing each previous mini-project, validation errors found and fixed, and folder/naming improvements made. This documents your quality process.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Ignoring validator warnings as "not important."</li>
+                        <li>Inconsistent file naming (<code>Page1.html</code>, <code>about_us.HTML</code>).</li>
+                        <li>Not testing in more than one browser.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Treat 0 validation errors as a non-negotiable goal before final submission.</li>
+                        <li>Adopt lowercase-hyphenated naming permanently (<code>about-us.html</code>).</li>
+                        <li>Always test in at least Chrome and Firefox before marking anything as done.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>validator.w3.org — W3C Markup Validator</li>
+                    <li>MDN — "Debugging HTML"</li>
+                    <li>Chrome DevTools official documentation</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 25–28 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 14  -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Final Capstone Project: Planning &amp; Build (Part 1)</h2>
+                <p>Plan and build the structural foundation of your final capstone project — the actual college project website.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Project planning</strong> — Sitemap, page list, content outline, wireframing (simple paper/Figma sketch).</li>
+                    <li><strong>Information architecture</strong> — Deciding navigation structure, consistent header/footer across pages.</li>
+                    <li><strong>Building core pages</strong> — Home, About, and 2–3 content pages using everything learned.</li>
+                    <li><strong>Reusable structure</strong> — Consistent <code>&lt;head&gt;</code> template, consistent navbar/footer across all pages.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> This is where all 13 weeks of learning converge into one real, complete, presentable deliverable. Planning now prevents major rework during Week 15. Rushing this week is the single biggest mistake students make on final projects.</p>
+                </div>
+
+                <h3>Step-by-Step Learning Order</h3>
+                <p>Plan sitemap → Wireframe each page → Build shared header/footer template → Build Home page → Build remaining core pages.</p>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Define project topic/sitemap; list all pages needed.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Wireframe each page (simple sketches); decide navigation structure.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Build shared header/nav/footer template; set up folder structure.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Build Home page fully (semantic, accessible, SEO meta).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Build About/Topic-overview page.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Build 1–2 more content pages (e.g., Roadmap, Resources).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review structure across all pages; fix inconsistencies.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Create a written sitemap document (list of pages + purpose of each).</li>
+                    <li>Build and test the shared header/footer across at least 3 pages.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Week 14 Deliverable</h4>
+                    <p>The <strong>skeleton (structure + content, lightly styled)</strong> of your final capstone website with at least 4 working, linked pages — consistent navigation, semantic HTML, and proper meta tags on every page.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Skipping planning and jumping straight to coding.</li>
+                        <li>Inconsistent navigation across pages (different on every page).</li>
+                        <li>Forgetting accessibility/SEO practices under final-project time pressure.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Force yourself to write the sitemap before opening the code editor.</li>
+                        <li>Copy the exact same header/footer code across pages — don't retype it.</li>
+                        <li>Keep a personal checklist: alt text, labels, meta tags, semantic tags — verify on every page.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Figma (free tier) — simple wireframing tool</li>
+                    <li>Excalidraw (free, browser-based) — quick wireframes</li>
+                    <li>MDN — ongoing HTML reference</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 30–35 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 15 -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Final Capstone Project: Completion, Polish &amp; Presentation</h2>
+                <p>Complete, polish, validate, and prepare your final project for submission and presentation.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Remaining pages</strong> — Finish all remaining pages (Contact, FAQ, Resources, etc.).</li>
+                    <li><strong>Final polish</strong> — Consistent styling pass, responsive check, accessibility audit, SEO meta audit.</li>
+                    <li><strong>Validation &amp; QA</strong> — Full W3C validation pass, cross-browser test, broken-link check, spell-check.</li>
+                    <li><strong>Presentation prep</strong> — README/documentation, hosting (GitHub Pages), viva/demo rehearsal.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> This week determines the final quality and grade of your project. Polish and presentation matter as much as code correctness — a well-explained, cleanly presented project scores higher than messy code with more features.</p>
+                </div>
+
+                <h3>Step-by-Step Learning Order</h3>
+                <p>Finish remaining content → Full styling polish pass → Accessibility/SEO/responsive audit → Validation &amp; QA → Documentation → Hosting → Presentation rehearsal.</p>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Build remaining pages — Contact, FAQ, Resources.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Full CSS styling consistency pass across all pages.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Responsive check (DevTools device mode) on every page.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Accessibility audit — screen reader spot-check, alt text, labels, contrast.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>SEO meta audit + W3C validation pass on every page (fix all errors).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Write README/project documentation; host on GitHub Pages.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Final review + rehearse viva/demo presentation out loud.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Run every page through W3C Validator one final time — target 0 errors.</li>
+                    <li>Do a full click-through of every link on every page to confirm nothing is broken.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🏆 Final Capstone Project — "Learn HTML: An Interactive Educational Website"</h4>
+                    <p>A complete multi-page educational static website that teaches HTML to other beginners — combining everything learned across all 15 weeks.</p>
+                    <p><strong>Suggested Pages:</strong> Home, About HTML, Why Learn HTML, Prerequisites, Weekly Roadmap, Tools &amp; Resources, Mini Projects Showcase, FAQ, Contact.</p>
+                    <p><strong>Key Features:</strong></p>
+                    <ol>
+                        <li>Working contact/feedback form with full HTML5 validation.</li>
+                        <li>FAQ accordion using <code>&lt;details&gt;</code>/<code>&lt;summary&gt;</code>.</li>
+                        <li>Responsive image gallery of mini-project screenshots.</li>
+                        <li>Accessible navigation with skip links and proper landmark roles.</li>
+                        <li>SEO meta tags and Open Graph tags on every page.</li>
+                    </ol>
+                    <p><strong>Tech:</strong> HTML5, minimal CSS (Week 11), minimal JS (Week 12), hosted on GitHub Pages.</p>
+                    <p><strong>Deliverables:</strong> Live hosted link, GitHub repo, README documentation, project report.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Leaving broken links/images unnoticed before submission.</li>
+                        <li>Inconsistent fonts/colors across pages.</li>
+                        <li>No documentation or README explaining the project.</li>
+                        <li>Rehearsing the demo too little — fumbling explanations during viva.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always do a final full click-through test of every link and image.</li>
+                        <li>Use one shared CSS file site-wide for full consistency.</li>
+                        <li>Write a short README — purpose, pages, tech used, how to run locally.</li>
+                        <li>Rehearse your project explanation out loud at least twice before presenting.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>GitHub Pages — free static site hosting</li>
+                    <li>validator.w3.org — final validation pass</li>
+                    <li>WebAIM WAVE — free browser extension for accessibility checking</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 30–35 hours</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+                <div class="logo1">
+                    <h3>CodePath</h3>
+                    <p>Learn. Practice. Master</p>
+                </div>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+
+</body>
+</html>

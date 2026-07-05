@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop App Development - 15 Week Roadmap</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>Desktop App Development with Electron.js</h1>
+        <p>Complete 15-Week Beginner-to-Advanced Roadmap — Build Cross-Platform Apps for Windows, macOS &amp; Linux</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#capstone">Capstone</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Roadmap</h2>
+            <p>This roadmap presents a complete, structured, <strong>beginner-to-advanced learning path</strong> for <strong>Desktop Application Development</strong> using <strong>Electron.js, JavaScript, HTML, and CSS</strong> — built and documented as a college project.</p>
+            <p>Whether you have never written a single line of code before, or you're a student looking for a practical, hands-on technical project — this roadmap takes you step by step from the very basics to building, packaging, and distributing a real desktop application that runs on <strong>Windows, macOS, and Linux</strong>.</p>
+            <p><strong>Duration:</strong> 15 weeks &nbsp;|&nbsp; <strong>Pace:</strong> Full-time (~35 hrs/week) &nbsp;|&nbsp; <strong>Stack:</strong> Electron.js · JavaScript (ES6+) · HTML5 · CSS3 · Node.js · SQLite</p>
+            <p><strong>Hands-On:</strong> 14 weekly mini-projects + 1 complete, packaged capstone app (NoteVault) &nbsp;|&nbsp; <strong>Platform:</strong> Cross-platform (Windows, macOS, Linux) &nbsp;|&nbsp; <strong>Cost:</strong> 100% free tools and resources</p>
+
+            <h3>5 Phases Overview</h3>
+            <ul>
+                <li><strong>Phase 1 (Weeks 1–4):</strong> Foundations — Terminal, HTML, CSS, JavaScript</li>
+                <li><strong>Phase 2 (Weeks 5–7):</strong> Electron Core — App structure, IPC, file system</li>
+                <li><strong>Phase 3 (Weeks 8–10):</strong> Desktop Features — UI, database, native OS APIs</li>
+                <li><strong>Phase 4 (Weeks 11–13):</strong> Advanced — Security, packaging, testing, CI</li>
+                <li><strong>Phase 5 (Weeks 14–15):</strong> Capstone build, polish, and final presentation</li>
+            </ul>
+
+            <p>By Week 15, you will have a real, installable desktop application — <strong>"NoteVault,"</strong> a cross-platform note-taking app — that you can distribute as a downloadable installer.</p>
+        </div>
+
+
+        <!--WEEK 1 -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Developer Environment, Terminal &amp; Version Control</h2>
+                <p>Set up your full development environment, learn to use the terminal, and publish your first project on GitHub.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Terminal basics</strong> — <code>cd</code>, <code>ls</code>/<code>dir</code>, <code>mkdir</code>, <code>touch</code>/<code>New-Item</code>, <code>rm</code>, <code>pwd</code>; navigating file system without mouse.</li>
+                    <li><strong>Why developers use terminal</strong> — Running programs, installing packages, interacting with Git.</li>
+                    <li><strong>Git concepts</strong> — Version control, repository, working directory, staging area, commit, push, pull.</li>
+                    <li><strong>Git workflow</strong> — <code>git init</code>, <code>git add</code>, <code>git commit -m</code>, <code>git push</code>, <code>git status</code>, <code>git log</code>.</li>
+                    <li><strong>GitHub</strong> — Creating a repository, cloning, relationship between local Git and GitHub.</li>
+                    <li><strong><code>.gitignore</code></strong> — What it is, why <code>node_modules</code> must always be in it.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every tool in this roadmap is used through the terminal. Every project is saved using Git. Setting this up correctly in Week 1 means you will never have to worry about losing your work, and you will build the habit of committing code from day one.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Install Node.js, VS Code, Git. Verify installations. Explore VS Code interface.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Terminal basics (navigation, creating folders/files). Practice until comfortable.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Git concepts. Git init, add, commit on a test folder.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Create GitHub account. Create a repository. Push your first commit.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td><code>git log</code>, <code>git diff</code>, branches (<code>git branch</code>, <code>git checkout -b</code>), basic merge.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Set up VS Code extensions. Explore integrated terminal in VS Code.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review all commands from memory. Complete the mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Navigate to 5 different folders using only the terminal (no mouse).</li>
+                    <li>Create a folder with 3 files, init Git repo, commit all three files.</li>
+                    <li>Make a change, check <code>git status</code>, stage, commit, view <code>git log</code>.</li>
+                    <li>Push a repository to GitHub and confirm it appears online.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Create a GitHub repository called <code>desktop-app-roadmap-journal</code>. Inside, create a <code>week-01.md</code> file containing: (a) screenshots confirming Node.js, npm, and Git are installed, (b) a list of 10 terminal commands you learned and what each does, and (c) a brief description of what a Git commit is in your own words.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Typing <code>git add .</code> without first checking <code>git status</code>.</li>
+                        <li>Pushing the <code>node_modules</code> folder to GitHub (can be hundreds of megabytes).</li>
+                        <li>Using spaces in folder or file names, causing terminal confusion.</li>
+                        <li>Being afraid of the terminal and skipping practice.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always run <code>git status</code> before every <code>git add</code> and <code>git commit</code>.</li>
+                        <li>Create <code>.gitignore</code> with <code>node_modules</code> on first line before writing any code.</li>
+                        <li>Use hyphens or underscores instead of spaces in folder/file names.</li>
+                        <li>Treat terminal practice like a musical instrument — 15 minutes daily beats 2 hours weekly.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>GitHub Skills — Introduction to GitHub (skills.github.com)</li>
+                    <li>Git Official Documentation (git-scm.com/doc)</li>
+                    <li>MDN: Command Line Crash Course</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 30 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 2 -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — HTML Fundamentals</h2>
+                <p>Learn HTML — the language used to define the structure and content of every screen in your desktop app.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Document structure</strong> — <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code>.</li>
+                    <li><strong>Text elements</strong> — headings (<code>h1</code>–<code>h6</code>), <code>&lt;p&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;br&gt;</code>.</li>
+                    <li><strong>Links and images</strong> — <code>&lt;a href=""&gt;</code>, absolute vs. relative paths, <code>&lt;img src="" alt=""&gt;</code>.</li>
+                    <li><strong>Lists</strong> — <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code> — when to use each.</li>
+                    <li><strong>Forms</strong> — <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code> types (text, email, checkbox, radio, range), <code>&lt;button&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>.</li>
+                    <li><strong>Tables</strong> — <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>.</li>
+                    <li><strong>Semantic elements</strong> — <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every screen of your Electron app is an HTML file. The structure you put in your HTML defines where every button, panel, list, and input lives in your application. Good HTML habits now make styling and scripting much easier later.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Document structure + headings and paragraphs. Create first <code>.html</code> file with Live Server.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Links, images, difference between absolute and relative paths.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Lists — ordered, unordered, nested. When to use tables vs. lists.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Forms — all input types. Build a sample contact form.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Tables — when and how to use them correctly.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Semantic elements — restructure code using <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;footer&gt;</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Create an HTML page from memory — structure, headings, paragraph, link.</li>
+                    <li>Build a form with text, email, dropdown, checkbox, submit button.</li>
+                    <li>Use at least 5 different semantic elements in one page meaningfully.</li>
+                    <li>Open Chrome DevTools (F12) and explore Elements panel.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Build a 3-page static HTML website about your roadmap project. Page 1: Home. Page 2: About (list of topics, image). Page 3: Notes (form with title input, textarea, save button). Use semantic HTML throughout. Connect all 3 pages with working navigation. Commit to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Not closing tags (e.g., <code>&lt;p&gt;text</code> instead of <code>&lt;p&gt;text&lt;/p&gt;</code>).</li>
+                        <li>Using <code>&lt;br&gt;</code> for spacing instead of CSS margin/padding.</li>
+                        <li>Using tables for page layout instead of CSS.</li>
+                        <li>Skipping the <code>alt</code> attribute on images.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always close every tag before writing inside it: <code>&lt;p&gt;&lt;/p&gt;</code> first, content after.</li>
+                        <li>Reserve <code>&lt;br&gt;</code> only for intentional line breaks (poem, address), not spacing.</li>
+                        <li>Accept early that structure (HTML) and appearance (CSS) are deliberately separate.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MDN Web Docs — Learn HTML</li>
+                    <li>freeCodeCamp — Responsive Web Design (HTML section)</li>
+                    <li>HTML Reference (htmlreference.io)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 32 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 3  -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — CSS Fundamentals</h2>
+                <p>Learn CSS to control the appearance of HTML — colors, layout, fonts, spacing — and build professional desktop app interfaces.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Selectors</strong> — element, class (<code>.</code>), ID (<code>#</code>), pseudo-classes (<code>:hover</code>, <code>:focus</code>), combinators.</li>
+                    <li><strong>Box model</strong> — <code>margin</code>, <code>border</code>, <code>padding</code>, <code>content</code>; <code>box-sizing: border-box</code>.</li>
+                    <li><strong>Colors</strong> — <code>color</code>, <code>background-color</code>, hex, rgb, hsl.</li>
+                    <li><strong>Typography</strong> — <code>font-family</code>, <code>font-size</code>, <code>font-weight</code>, <code>line-height</code>, Google Fonts.</li>
+                    <li><strong>Display &amp; positioning</strong> — <code>block</code>, <code>inline</code>, <code>inline-block</code>; <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code>.</li>
+                    <li><strong>Flexbox</strong> — <code>display: flex</code>, <code>justify-content</code>, <code>align-items</code>, <code>flex-direction</code>, <code>flex-wrap</code>, <code>gap</code>.</li>
+                    <li><strong>CSS Grid</strong> — <code>display: grid</code>, <code>grid-template-columns</code>, <code>grid-gap</code>.</li>
+                    <li><strong>Units</strong> — <code>px</code>, <code>%</code>, <code>em</code>, <code>rem</code>, <code>vh</code>, <code>vw</code>.</li>
+                    <li><strong>CSS variables</strong> — <code>--variable-name</code> and <code>var()</code> for theme colors.</li>
+                    <li><strong>Transitions</strong> — smooth hover effects.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The visual quality of your desktop app entirely depends on your CSS skill. A functional app with poor CSS looks unfinished. The same HTML with good CSS looks professional. Flexbox especially is used in almost every app layout.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Selectors, colors, typography — style your Week 2 HTML pages.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Box model, margin, padding, border. Use DevTools to inspect box model.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Display types, positioning. Build a navigation bar.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Flexbox — complete Flexbox Froggy, build a 2-column layout.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>CSS Grid — layout 3-page site using grid for main content.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>CSS variables + transitions + hover effects. Apply color theme.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Style all 3 pages from Week 2 project with consistent CSS.</li>
+                    <li>Build navigation bar that changes appearance on hover (CSS only).</li>
+                    <li>Use CSS variables to define 5-color theme palette, apply across whole page.</li>
+                    <li>Build a 2-column layout (sidebar + main) using Flexbox.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Redesign your 3-page HTML site from Week 2 with complete consistent CSS. Requirements: custom color theme using CSS variables, sticky top navigation, 2-column layout on Notes page (sidebar + editor, Flexbox), smooth hover effects on buttons, Google Font. Should look clean enough that a stranger wouldn't immediately recognize it as a student project.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>&lt;br&gt;</code> or <code>&lt;p&gt;</code> for vertical spacing instead of <code>margin</code>/<code>padding</code>.</li>
+                        <li>Overusing <code>position: absolute</code>, breaking layouts at different window sizes.</li>
+                        <li>Giving every element a unique ID and using ID selectors everywhere.</li>
+                        <li>Trying to learn Flexbox/Grid from text alone instead of interactive practice.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>All spacing between elements = CSS <code>margin</code> or <code>padding</code>. Period.</li>
+                        <li>Use <code>position: absolute</code> sparingly, only for elements truly needing to overlap.</li>
+                        <li>Prefer class selectors over ID selectors in CSS.</li>
+                        <li>Do Flexbox Froggy and Grid Garden before reading text-based Flexbox explanations.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MDN Web Docs — CSS</li>
+                    <li>Flexbox Froggy (flexboxfroggy.com) — interactive practice</li>
+                    <li>Grid Garden (cssgridgarden.com) — interactive CSS Grid</li>
+                    <li>CSS-Tricks Flexbox Guide</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 4  -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — JavaScript Fundamentals (ES6+)</h2>
+                <p>Learn JavaScript — the programming language that makes your app interactive and logical — from absolute scratch.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Variables</strong> — <code>let</code>, <code>const</code>, data types (string, number, boolean, null, undefined, array, object).</li>
+                    <li><strong>Control flow</strong> — <code>if</code>/<code>else if</code>/<code>else</code>, <code>switch</code>, <code>for</code> loops, <code>while</code> loops.</li>
+                    <li><strong>Functions</strong> — declarations, expressions, arrow functions <code>=&gt;</code>, parameters, return values.</li>
+                    <li><strong>Arrays</strong> — <code>push</code>, <code>pop</code>, <code>shift</code>, <code>unshift</code>, <code>map</code>, <code>filter</code>, <code>forEach</code>, <code>find</code>, <code>includes</code>, <code>length</code>.</li>
+                    <li><strong>Objects</strong> — property access (dot and bracket), destructuring, shorthand syntax.</li>
+                    <li><strong>DOM</strong> — <code>document.getElementById()</code>, <code>querySelector()</code>, <code>innerHTML</code>, <code>textContent</code>, <code>createElement</code>, <code>appendChild</code>, <code>classList</code>.</li>
+                    <li><strong>Events</strong> — <code>addEventListener()</code>, click/input/keyboard events, <code>event.preventDefault()</code>.</li>
+                    <li><strong>Async basics</strong> — Why async exists, <code>setTimeout</code>, Promises, <code>async/await</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> JavaScript is the engine of your entire desktop application — the logic, data handling, communication between UI and file system, database operations. There is no shortcut around a solid week of JavaScript fundamentals.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Variables, data types, operators. Practice in Node.js REPL.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Control flow (if/else, switch, for loops, while loops).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Functions — declarations, expressions, arrow functions. Write 10 small functions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Arrays and methods (<code>map</code>, <code>filter</code>, <code>forEach</code>, <code>find</code>). Practice until natural.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Objects and destructuring. DOM manipulation (<code>querySelector</code>, <code>innerHTML</code>, <code>classList</code>).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Events (<code>addEventListener</code> — click, input, keydown). Connect JS to HTML.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Async intro (Promises, async/await) + review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write 10 arrow functions from scratch covering different logic.</li>
+                    <li>Given array of 10 objects, use <code>filter</code> for current-month notes, <code>map</code> for titles.</li>
+                    <li>Build button that adds item to a visible list on click (DOM methods only).</li>
+                    <li>Practice <code>async/await</code> by wrapping <code>setTimeout</code> in a Promise.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Build a JavaScript <strong>quiz application</strong> using vanilla HTML, CSS, JavaScript: 10 questions stored as array of objects, each with question/4 options/correct answer. Show correct or wrong on click. Track score. Show results screen with "Try Again" button. No external libraries. Commit to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Confusing <code>=</code> (assignment), <code>==</code> (loose), <code>===</code> (strict) — almost always use <code>===</code>.</li>
+                        <li>Forgetting <code>map</code>/<code>filter</code> return NEW arrays, don't modify original.</li>
+                        <li>Trying to change HTML before DOM has loaded.</li>
+                        <li>Forgetting <code>await</code> before async call (Promise object appears instead of value).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always use <code>===</code> for comparisons unless specific reason for <code>==</code>.</li>
+                        <li>Remember <code>array.map(...)</code> doesn't change <code>array</code> — store in variable.</li>
+                        <li>Place <code>&lt;script&gt;</code> at bottom of <code>&lt;body&gt;</code>, or use <code>DOMContentLoaded</code>.</li>
+                        <li>Pair every <code>async function</code> with <code>await</code> on every async call, wrap in <code>try/catch</code>.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>javascript.info — most thorough beginner JS guide</li>
+                    <li>MDN Web Docs — JavaScript</li>
+                    <li>freeCodeCamp — JavaScript Algorithms and Data Structures</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 5  -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Introduction to Electron &amp; Your First Desktop App</h2>
+                <p>Understand how Electron works and build your first working desktop application window.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Project setup</strong> — <code>npm init -y</code>, installing <code>electron</code> as dev dependency, configuring <code>start</code> script.</li>
+                    <li><strong><code>main.js</code></strong> — Entry point of every Electron app, run by Node.js.</li>
+                    <li><strong><code>app</code> module</strong> — <code>app.whenReady()</code>, <code>app.on('window-all-closed')</code>, <code>app.on('activate')</code>.</li>
+                    <li><strong><code>BrowserWindow</code></strong> — Creating window, <code>width</code>, <code>height</code>, <code>webPreferences</code>, loading URL or file.</li>
+                    <li><strong>Loading HTML</strong> — <code>win.loadFile('index.html')</code> vs <code>win.loadURL(...)</code>.</li>
+                    <li><strong>DevTools</strong> — <code>win.webContents.openDevTools()</code> for debugging renderer.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> This is the moment everything from Weeks 1–4 clicks together — your HTML, CSS, and JavaScript files now run inside a native desktop window that you control with Node.js. This is the "aha moment" of the roadmap.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Read Electron Quick Start (official docs). Set up first project and run it.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Customize BrowserWindow (size, title, icon). Experiment with <code>webPreferences</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>App lifecycle — handle <code>window-all-closed</code> correctly for macOS vs Windows/Linux.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Load different HTML files. Explore DevTools inside Electron window.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Use Electron Fiddle to explore 5 different Electron API demos.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Restructure into <code>src/main/</code> and <code>src/renderer/</code> folders. Add CSS and JS.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Run <code>npm start</code> and see your HTML in a native window.</li>
+                    <li>Change window's title, size, background color.</li>
+                    <li>Open and close DevTools from main process.</li>
+                    <li>Handle <code>window-all-closed</code> for correct macOS vs Windows/Linux behavior.</li>
+                    <li>Create a second window with a button click.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Create new Electron project with proper folder structure. Display a custom <strong>"Welcome to NoteVault"</strong> screen with app name, tagline, "Get Started" button (no functionality yet). Set custom window title, minimum size, background color. Open DevTools automatically in development. Push to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Running Electron globally (<code>npm install -g electron</code>) instead of per-project.</li>
+                        <li>Forgetting <code>start</code> script in <code>package.json</code>.</li>
+                        <li>Not handling macOS <code>activate</code> event correctly.</li>
+                        <li>Looking for errors in terminal when renderer errors only appear in DevTools.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always install Electron locally: <code>npm install --save-dev electron</code>.</li>
+                        <li>Always add <code>"start": "electron ."</code> to <code>package.json</code>.</li>
+                        <li>Copy the standard 3-event lifecycle from official Quick Start until memorized.</li>
+                        <li>Check DevTools (inside window) for renderer errors, terminal for main process errors.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Electron Official Docs — Quick Start</li>
+                    <li>Electron Fiddle (online playground)</li>
+                    <li>Electron API Demos (GitHub)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 6  -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — IPC Communication, preload.js &amp; Context Isolation</h2>
+                <p>Learn how the main process and renderer process communicate — the most important architectural concept in Electron.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Why separation</strong> — Renderer is like a browser; unrestricted Node.js access is a security risk.</li>
+                    <li><strong><code>preload.js</code></strong> — Runs in special context with access to both Node.js and renderer's window; acts as gatekeeper.</li>
+                    <li><strong><code>contextBridge.exposeInMainWorld</code></strong> — Only safe way to pass functions from preload/Node.js to renderer.</li>
+                    <li><strong><code>ipcRenderer.invoke('channel')</code></strong> — Renderer sends message to main and awaits reply (Promise-based).</li>
+                    <li><strong><code>ipcMain.handle('channel', handler)</code></strong> — Main process listens and returns result.</li>
+                    <li><strong><code>win.webContents.send('channel', data)</code></strong> — Main pushes message to renderer (no request needed).</li>
+                    <li><strong><code>ipcRenderer.on('channel', handler)</code></strong> — Renderer listens for push from main.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> IPC is the nervous system of your Electron application. Every time the UI needs to read a file, save data, or trigger an OS feature, it uses IPC. Misunderstanding IPC is the #1 reason Electron apps end up insecure or architecturally broken.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Read Electron Process Model docs. Understand why context isolation exists.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Create <code>preload.js</code>, link in <code>webPreferences</code>, expose simple function using <code>contextBridge</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Call exposed function from <code>renderer.js</code>. Confirm in DevTools console.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Implement <code>ipcRenderer.invoke</code> + <code>ipcMain.handle</code> for "ping/pong" message.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Implement <code>win.webContents.send</code> + <code>ipcRenderer.on</code> for push from main to renderer.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Combine both patterns: renderer requests, main responds and pushes. Add real button.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Expose 3 different functions via <code>contextBridge</code>, call each from renderer.js.</li>
+                    <li>Send a number from renderer to main, double it in main, display result back in UI.</li>
+                    <li>Trigger push message from main using <code>setTimeout</code>, show in renderer.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Build a <strong>two-window Electron app</strong>. Window 1: form with text input + "Send to Main" button. On click, message sent to main via IPC, main reverses text and sends back, reversed text appears in UI. Window 2: log window where main pushes new log entry every time IPC is used. All via <code>contextBridge</code> + <code>ipcMain.handle</code> + <code>ipcRenderer.invoke</code>. Push to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Enabling <code>nodeIntegration: true</code> to avoid learning IPC — serious security mistake.</li>
+                        <li>Calling <code>ipcRenderer</code> directly in renderer without going through <code>contextBridge</code>.</li>
+                        <li>Forgetting to pass <code>preload</code> path in <code>webPreferences</code>.</li>
+                        <li>Confusing <code>ipcMain.handle</code> (request-response with <code>invoke</code>) with <code>ipcMain.on</code> (fire-and-forget with <code>send</code>).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Never set <code>nodeIntegration: true</code> or <code>contextIsolation: false</code> — outdated and insecure.</li>
+                        <li>All renderer ↔ main communication must go through <code>preload.js</code> and <code>contextBridge</code>.</li>
+                        <li>Use <code>invoke</code>/<code>handle</code> for request-response; <code>send</code>/<code>on</code> only for one-way pushes.</li>
+                        <li>Always use <code>path.join(__dirname, 'preload.js')</code>.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Electron Docs — Process Model</li>
+                    <li>Electron Docs — IPC Tutorial</li>
+                    <li>Electron Docs — contextBridge</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 7 -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — File System Access &amp; Node.js Integration</h2>
+                <p>Give your Electron app real-world usefulness by reading, writing, and managing files on the user's computer.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>fs</code> module</strong> — <code>fs.readFileSync</code>, <code>fs.readFile</code> (async), <code>fs.writeFileSync</code>, <code>fs.writeFile</code>, <code>fs.existsSync</code>, <code>fs.mkdirSync</code>.</li>
+                    <li><strong><code>path</code> module</strong> — <code>path.join()</code>, <code>path.dirname()</code>, <code>path.basename()</code>, <code>path.extname()</code> for cross-platform paths.</li>
+                    <li><strong><code>dialog</code> API</strong> — <code>dialog.showOpenDialog()</code>, <code>dialog.showSaveDialog()</code>, <code>dialog.showMessageBox()</code>.</li>
+                    <li><strong><code>app.getPath('userData')</code></strong> — Where to safely store app data per OS.</li>
+                    <li><strong>JSON files</strong> — Reading/writing <code>.json</code> as simple data store; <code>JSON.parse</code> and <code>JSON.stringify</code>.</li>
+                    <li><strong>Error handling</strong> — Wrapping file operations in <code>try/catch</code>, showing meaningful error dialogs.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> This is what separates a desktop app from a website — the ability to interact with the user's real files. File system access enables saving notes, loading documents, reading configuration. It's also the first week heavily combining IPC (Week 6) with Node.js.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td><code>path</code> module deep dive. Use <code>path.join()</code> everywhere.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td><code>fs.readFileSync</code> and <code>fs.writeFileSync</code> — practice with <code>.txt</code> and <code>.json</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>fs.readFile</code>/<code>fs.writeFile</code> with <code>async/await</code>. Error handling with <code>try/catch</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Use <code>app.getPath('userData')</code> — read/write config file in userData directory.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Add <code>dialog.showOpenDialog()</code> for native file picker. Read and display selected file.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Add <code>dialog.showSaveDialog()</code>. Save textarea content to user-chosen file.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Read <code>.txt</code> file from Desktop, display content in Electron <code>&lt;textarea&gt;</code>.</li>
+                    <li>Write <code>&lt;textarea&gt;</code> content back to file on "Save" click.</li>
+                    <li>Use <code>dialog.showOpenDialog</code> to let user pick any file (not hardcoded path).</li>
+                    <li>Read/write <code>.json</code> in <code>userData</code> to persist setting (last opened file path).</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Build a <strong>"File Reader"</strong> feature as part of NoteVault. Renderer has "Open File" button triggering <code>dialog.showOpenDialog</code> (via IPC) to let user pick any <code>.txt</code> or <code>.md</code> file. File content read using <code>fs.readFile</code> in main process and sent to renderer where it displays in <code>&lt;pre&gt;</code> or <code>&lt;textarea&gt;</code>. "Save" button writes changes back to same file. Push to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>fs</code> functions directly in renderer process (should only run in main, called via IPC).</li>
+                        <li>Building file paths by string concatenation instead of <code>path.join()</code>.</li>
+                        <li>Calling <code>dialog</code> from renderer instead of main process.</li>
+                        <li>Not handling case where <code>dialog.showOpenDialog</code> returns empty (user clicked Cancel).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>All <code>fs</code> and <code>dialog</code> calls belong in main process — call from renderer through IPC only.</li>
+                        <li>Use <code>path.join()</code> for every file path construction, every time, no exceptions.</li>
+                        <li>Always check <code>result.canceled</code> after <code>dialog.showOpenDialog()</code>.</li>
+                        <li>Wrap every <code>fs</code> operation in <code>try/catch</code> and return meaningful error through IPC.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Node.js <code>fs</code> Module Documentation</li>
+                    <li>Node.js <code>path</code> Module Documentation</li>
+                    <li>Electron Docs — dialog API</li>
+                    <li>Electron Docs — app.getPath</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Building Desktop App UIs (Markdown Editor)</h2>
+                <p>Build a polished, desktop-quality user interface — the split-panel markdown note editor that forms the core of NoteVault.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Desktop UI principles</strong> — No scrolling pages, fixed layouts, panels/panes, dense info display, keyboard-first.</li>
+                    <li><strong>Split layout</strong> — CSS Flexbox for resizable sidebar + editor pane.</li>
+                    <li><strong>Frameless window</strong> — <code>frame: false</code> in BrowserWindow, custom draggable title bar with <code>-webkit-app-region: drag</code>.</li>
+                    <li><strong>Keyboard shortcuts</strong> — <code>globalShortcut.register()</code> (OS-level) and local shortcuts via <code>keydown</code> listeners.</li>
+                    <li><strong>Marked.js</strong> — Installing <code>marked</code>, converting markdown to HTML, injecting into <code>&lt;div&gt;</code> for live preview.</li>
+                    <li><strong>Dark mode</strong> — <code>nativeTheme.shouldUseDarkColors</code>, CSS <code>prefers-color-scheme</code>, manual toggling.</li>
+                    <li><strong>Focus states</strong> — Styling <code>:focus</code> for keyboard-friendly interface.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Most tutorials stop at "it works" — this week is about making your app look and feel like a real desktop product. UI quality is one of the biggest factors in how evaluators and users perceive your application.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Sketch NoteVault UI layout. Build basic HTML structure (sidebar, editor, preview).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>CSS split-panel layout using Flexbox. Sidebar fixed-width, editor fills remaining.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Install Marked.js. Connect textarea input to live preview rendering.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Dark mode implementation using CSS variables + system preference detection.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Theme toggle button. Persist user's choice in userData config file.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Keyboard shortcuts: Ctrl/Cmd+N, Ctrl/Cmd+S. Proper <code>:focus</code> styling.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project — full UI integrated and looking professional.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build 2-column split layout, left 250px wide, right fills rest.</li>
+                    <li>Install Marked.js and convert hardcoded markdown string to HTML.</li>
+                    <li>Connect <code>&lt;textarea&gt;</code> so typing updates live preview <code>&lt;div&gt;</code>.</li>
+                    <li>Add dark/light toggle that switches theme by changing <code>data-theme</code> on <code>&lt;body&gt;</code>.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Build the <strong>NoteVault note editor UI</strong>: 3-panel layout (note list sidebar | markdown editor textarea | live preview div), dark/light mode toggle, at least 3 keyboard shortcuts, Marked.js live preview working. UI should be clean and desktop-like — no page scroll, no floating elements, no obvious "website" look. Push to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Building UI that looks like a webpage (scrolling, large headers) instead of desktop app.</li>
+                        <li>Running Marked.js in renderer but importing with Node.js <code>require</code> (must use browser-compatible build).</li>
+                        <li>Making sidebar and editor scroll independently but forgetting <code>overflow: auto</code>.</li>
+                        <li>Not handling XSS risk of injecting <code>marked(userInput)</code> directly into <code>innerHTML</code>.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Study at least 3 professional desktop apps before designing your own.</li>
+                        <li>Use browser-compatible Marked.js CDN build, or import correctly for your project setup.</li>
+                        <li>Set <code>height: 100vh</code> on app container, use <code>overflow: auto</code> on scrollable panels.</li>
+                        <li>Sanitize markdown output before injecting into <code>innerHTML</code> to avoid XSS.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Marked.js Documentation (marked.js.org)</li>
+                    <li>Electron Docs — nativeTheme</li>
+                    <li>Electron Docs — globalShortcut</li>
+                    <li>CSS-Tricks Flexbox Guide</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 9  -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Data Persistence with SQLite</h2>
+                <p>Replace in-memory or JSON-file storage with a proper local SQLite database, giving NoteVault reliable, queryable, persistent data storage.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>SQLite</strong> — File-based, serverless SQL database; entire database is single <code>.db</code> file; no separate server needed.</li>
+                    <li><strong><code>better-sqlite3</code></strong> — Synchronous SQLite driver for Node.js (simpler to use correctly in Electron main process).</li>
+                    <li><strong>Schema</strong> — Creating <code>notes</code> table with columns: <code>id</code>, <code>title</code>, <code>content</code>, <code>createdAt</code>, <code>updatedAt</code>.</li>
+                    <li><strong>CRUD in SQL</strong> — <code>INSERT INTO</code>, <code>SELECT * FROM</code>, <code>UPDATE ... SET ... WHERE</code>, <code>DELETE FROM ... WHERE</code>.</li>
+                    <li><strong>Initialization</strong> — <code>CREATE TABLE IF NOT EXISTS</code> on first run.</li>
+                    <li><strong>DB location</strong> — Storing <code>.db</code> in <code>app.getPath('userData')</code> for correct OS-specific folder.</li>
+                    <li><strong>Search</strong> — <code>SELECT ... WHERE title LIKE '%search%'</code> for basic search.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> JSON files work for small apps but break down quickly — no efficient searching, risk of corruption on bad save, no relational capability. SQLite is the standard choice for local desktop app data and is built into many operating systems.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>SQLite concept + install <code>better-sqlite3</code>. Write test script creating database and table.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>SQL practice: INSERT, SELECT, UPDATE, DELETE in isolation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Create <code>db.js</code> with <code>createNote</code>, <code>getAllNotes</code>, <code>getNoteById</code> functions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Add <code>updateNote</code> and <code>deleteNote</code>. Test all 5 functions from standalone script.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Create IPC channels for each operation (<code>ipcMain.handle('db:createNote', ...)</code>).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Connect Week 8 UI to real SQLite data. Display notes from DB in sidebar.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Implement search. Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Create SQLite database with <code>notes</code> table; manually insert/update/delete rows.</li>
+                    <li>Write <code>getAllNotes</code> and <code>createNote</code> functions, test from Node.js script.</li>
+                    <li>Connect "New Note" button to IPC call that inserts note into SQLite.</li>
+                    <li>Load all notes from SQLite on startup and display in sidebar.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Replace all in-memory/JSON-based note storage with SQLite. NoteVault sidebar should load real notes from database on startup, editor should save to database, deleting a note should remove it from both UI and database. Notes must persist across app restarts. Push to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Calling <code>better-sqlite3</code> from renderer process (must only run in main).</li>
+                        <li>Not closing database connection properly.</li>
+                        <li>Forgetting <code>CREATE TABLE IF NOT EXISTS</code> — app crashes on second launch.</li>
+                        <li>Building <code>.db</code> file path with string concatenation instead of <code>path.join</code>.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>All database code belongs in <code>db.js</code> inside main process — never import in renderer.</li>
+                        <li>Always use <code>CREATE TABLE IF NOT EXISTS</code> in initialization query.</li>
+                        <li>Always use <code>path.join(app.getPath('userData'), 'notes.db')</code> for DB path.</li>
+                        <li>Separate database functions (pure SQL logic) from IPC handler setup.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>better-sqlite3 GitHub Documentation</li>
+                    <li>SQLBolt — Interactive SQL Lessons (sqlbolt.com)</li>
+                    <li>SQLite Official Documentation</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 10 -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Native Desktop APIs (Tray, Notifications, Menus &amp; Dialogs)</h2>
+                <p>Add native OS features to NoteVault — the features that make it feel like a real desktop app rather than a website in a window.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>Menu</code> and <code>MenuItem</code></strong> — Native app menu (File, Edit, View, Help) with <code>Menu.buildFromTemplate</code>; <code>Menu.setApplicationMenu</code>.</li>
+                    <li><strong>Context menus</strong> — Right-click menu with <code>menu.popup()</code>.</li>
+                    <li><strong><code>Tray</code></strong> — Tray icon, tooltip, tray menu with "Show App", "New Quick Note", "Quit".</li>
+                    <li><strong><code>Notification</code></strong> — <code>new Notification({ title, body }).show()</code> after saving note.</li>
+                    <li><strong><code>dialog.showMessageBox</code></strong> — Native confirmation dialogs ("Are you sure you want to delete?").</li>
+                    <li><strong><code>clipboard</code></strong> — <code>clipboard.readText()</code>, <code>clipboard.writeText()</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> These are the features that distinguish a desktop app from a web app. A system tray icon, native menus with keyboard shortcuts, and native dialogs give your application the polished, professional feel users expect from real desktop software.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Build native app menu using <code>Menu.buildFromTemplate</code>. Add keyboard accelerators.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Right-click context menu on note list sidebar.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>System tray icon — create icon, tray menu, show/hide main window from tray.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Desktop notifications on note save and other relevant actions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Replace browser dialogs with <code>dialog.showMessageBox</code> (delete confirmation, error alerts).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Clipboard feature: right-click note → "Copy Title to Clipboard".</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build 4-item native menu (File, Edit, View, Help) with at least 3 sub-items each.</li>
+                    <li>Create tray icon that shows main window on click, has Quit option.</li>
+                    <li>Show desktop notification with custom title and body.</li>
+                    <li>Replace <code>window.confirm()</code> with <code>dialog.showMessageBox</code> via IPC.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Add all native OS features to NoteVault: full application menu with keyboard shortcuts for major actions, system tray icon with quick access options, desktop notification on note save, native confirmation dialog before deleting any note. Push to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Calling <code>Menu</code>, <code>Tray</code>, <code>Notification</code> from renderer (all must be in main process).</li>
+                        <li>Not providing valid icon for <code>Tray</code> — must be actual image file with correct path.</li>
+                        <li>Using <code>window.alert()</code> or <code>window.confirm()</code> instead of Electron's native dialog API.</li>
+                        <li>Forgetting on macOS, <code>Menu.setApplicationMenu(null)</code> removes menu entirely.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>All <code>Menu</code>, <code>Tray</code>, <code>Notification</code>, <code>dialog</code> calls belong in main process.</li>
+                        <li>Use <code>path.join(__dirname, 'assets/tray-icon.png')</code> for tray icon path.</li>
+                        <li>Always use <code>dialog.showMessageBox</code> for user confirmations in Electron app.</li>
+                        <li>Test macOS-specific behavior if possible, or note expected difference in README.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Electron Docs — Menu API</li>
+                    <li>Electron Docs — Tray API</li>
+                    <li>Electron Docs — Notification API</li>
+                    <li>Electron Docs — dialog API</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 11 -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Security Best Practices &amp; Packaging for Distribution</h2>
+                <p>Harden NoteVault's security and package it into a real, installable application for Windows, macOS, and Linux.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Security</strong> — Review all <code>webPreferences</code>, disable <code>nodeIntegration</code>, enable <code>contextIsolation</code>, set CSP header, sanitize all IPC inputs.</li>
+                    <li><strong><code>electron-builder</code></strong> — Installation, <code>electron-builder.yml</code>, <code>appId</code>, <code>productName</code>, build targets (<code>win</code>, <code>mac</code>, <code>linux</code>).</li>
+                    <li><strong>Build targets</strong> — NSIS installer on Windows, DMG on macOS, AppImage on Linux.</li>
+                    <li><strong>Icons</strong> — Properly sized icons per platform (electron-builder handles conversion).</li>
+                    <li><strong>Code signing</strong> — What it is (certificate telling OS your app is trustworthy), why it matters, requires paid certificates for production (college project doesn't require).</li>
+                    <li><strong>GitHub Releases</strong> — Tagging a release and uploading packaged installers as release assets.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> An app that can't be installed and distributed is a demo, not a product. Packaging turns your code into something you can hand to your evaluator as a downloadable file — and security best practices are foundational to any professional software.</p>
+                </div>
+
+                <div class="rm-info">
+                    <h3>💡 Important Note on Code Signing</h3>
+                    <p>Code signing requires paid certificates from Apple ($99/year) and Microsoft for production distribution. Your college project does <strong>not</strong> require code signing — distributing unsigned builds via GitHub Releases is completely valid for academic demonstration. Users will see an "unverified publisher" warning, which is normal for unsigned apps.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Electron security checklist review. Fix all <code>webPreferences</code> and IPC validation issues.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Install <code>electron-builder</code>. Create basic <code>electron-builder.yml</code> configuration.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Build for your current OS. Test installer end-to-end.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Add proper app icons for all platforms (PNG → ICO/ICNS conversion if needed).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Configure builds for all three platforms. Build and test.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Create GitHub Release. Upload installer files. Write distribution instructions in README.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Audit current <code>BrowserWindow</code> creation against Electron security checklist.</li>
+                    <li>Add validation to at least 3 IPC handlers (check types, reject invalid inputs).</li>
+                    <li>Run <code>npm run build</code> and install the resulting package on your computer.</li>
+                    <li>Upload a release to GitHub with packaged installer attached.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Package NoteVault as a distributable application for your OS (and additional platforms if available). Upload packaged installer to a GitHub Release. Write a <code>DISTRIBUTION.md</code> explaining how to download, install, and use NoteVault — as if explaining to someone with no technical background.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Building package before fixing security issues, distributing an insecure app.</li>
+                        <li>Forgetting to set <code>main</code> field in <code>package.json</code> correctly.</li>
+                        <li>Not testing installed version (only testing <code>npm start</code>) — installed app can behave differently.</li>
+                        <li>Using relative <code>preload</code> path that works with <code>npm start</code> but breaks in packaged version.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Complete security review before packaging, every time.</li>
+                        <li>Always use <code>path.join(__dirname, 'preload.js')</code> for preload path.</li>
+                        <li>Always install and test built package before sharing or submitting.</li>
+                        <li>Keep <code>src/</code> and <code>dist/</code> cleanly separated in project structure.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Electron Security Tutorial</li>
+                    <li>electron-builder Documentation (electron.build)</li>
+                    <li>GitHub Docs — Creating a Release</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 12  -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Testing Electron Applications</h2>
+                <p>Write automated tests for NoteVault — both unit tests for core logic and end-to-end tests interacting with the real running app.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Unit testing</strong> — Testing pure JS functions in isolation (note formatting, date helpers, validation).</li>
+                    <li><strong>Jest</strong> — <code>test()</code>, <code>expect()</code>, matchers (<code>toBe</code>, <code>toEqual</code>, <code>toContain</code>, <code>toThrow</code>), <code>describe()</code> blocks.</li>
+                    <li><strong>What not to unit test</strong> — Electron APIs, IPC handlers, file system calls (require integration or e2e testing).</li>
+                    <li><strong>Playwright with Electron</strong> — <code>_electron.launch()</code> to start app, <code>page.click()</code>, <code>page.fill()</code>, <code>page.textContent()</code>.</li>
+                    <li><strong>Test setup</strong> — Separate test database (don't touch development data during tests).</li>
+                    <li><strong>Coverage</strong> — <code>jest --coverage</code>, reading the report, line vs branch coverage.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Testing is what makes software maintainable. Evaluators are often impressed by test suites because they signal you understand professional software development practices, not just that you can make something run once.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Install Jest. Configure in <code>package.json</code>. Write 3 tests for utility functions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Practice Jest matchers. Write tests for note validation functions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Install Playwright + Electron helpers. Write "app launches + window appears" test.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Write e2e test: open app → type note title → click Save → verify note appears.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Write e2e test: select note → click Delete → confirm dialog → verify note removed.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Run <code>jest --coverage</code>. Review report and improve coverage for uncovered logic.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write unit tests for 5 pure utility functions (date formatting, string truncation, validation).</li>
+                    <li>Write at least 3 Playwright e2e tests covering create, read, delete flows.</li>
+                    <li>Confirm all tests pass from clean state (no pre-existing test data).</li>
+                    <li>Run coverage and identify at least 2 areas to improve.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Write complete test suite for NoteVault: at least 8 Jest unit tests covering pure functions, at least 3 Playwright e2e tests covering main user flows (launch app, create note, delete note). All tests must pass with <code>npm test</code>. Push to GitHub with test results screenshot in README.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Writing only "happy path" tests where everything works — failing to test error cases.</li>
+                        <li>Trying to unit test Electron APIs like <code>dialog</code> or <code>BrowserWindow</code> (need mocking or e2e).</li>
+                        <li>Tests that pass only in specific order (tests should be independent).</li>
+                        <li>Testing implementation details instead of observable behavior.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>For every function, write one success test and at least one failure/edge-case test.</li>
+                        <li>Unit test only pure functions and logic; use Playwright for anything involving real Electron app.</li>
+                        <li>Use <code>beforeEach</code> to reset state so each test starts from known clean condition.</li>
+                        <li>Test from user's perspective: "when I click New Note, new note appears" — not "the createNote function is called".</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Jest Official Documentation (jestjs.io)</li>
+                    <li>Playwright Documentation (playwright.dev)</li>
+                    <li>electron-playwright-helpers (GitHub)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 13 -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — GitHub Actions CI/CD &amp; Developer Workflow</h2>
+                <p>Set up a professional Continuous Integration pipeline that automatically builds and tests NoteVault on every push to GitHub.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>CI/CD concept</strong> — Continuous Integration (auto-running tests on every push), Continuous Delivery/Deployment (auto-releasing built artifacts).</li>
+                    <li><strong>GitHub Actions structure</strong> — <code>.github/workflows/ci.yml</code>, triggers (<code>on: push</code>, <code>on: pull_request</code>), jobs, steps, <code>runs-on</code>.</li>
+                    <li><strong>Workflow</strong> — Checkout code → set up Node.js → install dependencies → run tests → (optional) build package.</li>
+                    <li><strong>Caching</strong> — <code>actions/cache</code> to cache <code>node_modules</code> between runs for faster builds.</li>
+                    <li><strong>Matrix builds</strong> — Running same workflow on Windows, macOS, Linux simultaneously for cross-platform verification.</li>
+                    <li><strong>Secrets</strong> — GitHub Secrets to store sensitive environment variables.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> CI is standard practice in professional software development. Having a working CI pipeline in your college project is a strong differentiator that shows you understand the complete software development lifecycle.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Read GitHub Actions overview. Create minimal <code>ci.yml</code> that prints "Hello CI" on push.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Add Node.js setup, <code>npm install</code>, and <code>npm test</code> to workflow.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Add <code>node_modules</code> caching. Verify second run is faster than first.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Add matrix build for ubuntu, windows, and macos.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Deliberately push failing test; observe CI failure. Fix; push again.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Add build step (<code>npm run build</code>) as optional CI step. Review logs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Push change to repository and observe Actions tab run your workflow.</li>
+                    <li>Add matrix build and confirm tests run on all 3 OS.</li>
+                    <li>Intentionally push broken test, verify CI catches it before "good" push fixes.</li>
+                    <li>Read a failing CI log and identify where error occurred.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Set up fully working GitHub Actions CI pipeline for NoteVault. Pipeline must: (a) trigger on every push to main and every PR, (b) run on all 3 OS (matrix), (c) install dependencies, (d) run full Jest test suite, (e) cache <code>node_modules</code> for faster builds. Add CI status badge to README.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>YAML indentation errors — YAML is whitespace-sensitive; one wrong indent breaks workflow.</li>
+                        <li>Not caching <code>node_modules</code>, resulting in slow CI runs that timeout.</li>
+                        <li>Electron's e2e tests failing in CI because no display (headless) — Playwright needs special config.</li>
+                        <li>Pushing <code>.env</code> files or secrets to GitHub accidentally.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Use YAML linter (VS Code has built-in YAML validation) before pushing workflow files.</li>
+                        <li>Always include <code>actions/cache</code> for <code>node_modules</code>.</li>
+                        <li>For Playwright e2e in Linux CI, install <code>xvfb</code> (virtual display) or use <code>xvfb-run</code>.</li>
+                        <li>Always have <code>node_modules/</code> and <code>.env</code> in <code>.gitignore</code> before first commit.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>GitHub Actions Documentation</li>
+                    <li>GitHub Actions — Quickstart</li>
+                    <li>actions/cache GitHub Action</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 32 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 14  -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — NoteVault: Full Integration &amp; Feature Completion</h2>
+                <p>Integrate all features built in Weeks 5–13 into one polished, fully working application and complete any missing features.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Integration</strong> — Connecting sidebar list (Week 9 SQLite), editor (Week 8 UI), file I/O (Week 7), notifications (Week 10) into coherent user flow.</li>
+                    <li><strong>State management</strong> — Tracking currently selected note, unsaved changes, search query, theme preference in a consistent bug-free way.</li>
+                    <li><strong>UX polish</strong> — Empty state (no notes yet), loading indicator on first DB read, disabling Save when nothing changed, confirmation on closing with unsaved changes.</li>
+                    <li><strong>Accessibility</strong> — Keyboard navigation through note list, focus management when creating new note, ARIA attributes on key elements.</li>
+                    <li><strong>Performance</strong> — Avoiding unnecessary re-renders or DB calls on every keystroke (debouncing search input).</li>
+                    <li><strong>Security review</strong> — Verify context isolation on, all IPC inputs validated, no sensitive data in renderer.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Most of the code exists from previous weeks — this week is about making it feel complete and coherent. The difference between a "student project that works" and an "impressive capstone" is polish. Empty states, loading indicators, and error handling are what real users notice.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Feature checklist review. List all gaps. Prioritize fixes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Fix top 3 integration bugs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Add empty states, loading states, error messages.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Add unsaved changes detection and prompt on close/switch.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Keyboard navigation + accessibility improvements.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Performance: debounce search, optimize SQLite queries.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Security review + run full test suite.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Walk through every feature from Final Project checklist; confirm each works end-to-end.</li>
+                    <li>Add at least 3 UX polish improvements (empty state, loading indicator, unsaved changes prompt).</li>
+                    <li>Use NoteVault yourself for one full hour and note every friction point.</li>
+                </ul>
+
+                <div class="rm-info">
+                    <p>📌 <strong>This Week Is Capstone Build Mode:</strong> See the dedicated Capstone section below for the complete feature checklist and project specification.</p>
+                </div>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 15  -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Documentation, Final Packaging &amp; Presentation</h2>
+                <p>Finalize all documentation, package the production-ready release of NoteVault, and prepare for your college presentation and viva.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>README</strong> — Project title, description, tech stack badges, screenshot, features, installation (from installer, not <code>npm start</code>), building from source, credits.</li>
+                    <li><strong>Screenshots</strong> — Clean screenshots of each major app view for README and website.</li>
+                    <li><strong>System design document</strong> — Architecture diagram (main/renderer/db), data flow for major operations, technology choices and reasons.</li>
+                    <li><strong>Release</strong> — <code>git tag v1.0.0</code>, pushing tag to GitHub, creating GitHub Release, attaching all 3 platform installers.</li>
+                    <li><strong>Demo script</strong> — 5-minute walkthrough covering: launch, create note, markdown with live preview, save, system tray interaction, search, delete.</li>
+                    <li><strong>Viva preparation</strong> — Review all FAQ/interview questions; practice explaining IPC in simple terms.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Polish, documentation, and rehearsal convert 14 weeks of building into actual presentation/viva success. The technical work is in place; this week makes sure it's visible, installable, and presentable.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Write complete, professional README with all sections.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Take screenshots of every main screen. Add to README and website.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Write system design document / architecture overview.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Final packaging: build all 3 platform packages. Tag and create GitHub Release.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Complete website content — update all pages with final screenshots, links, download URL.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Prepare and rehearse 5-minute demo walkthrough.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Viva prep — answer all FAQ/interview questions out loud, unscripted.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Testing only with <code>npm start</code> and never installing packaged version before demo.</li>
+                        <li>Forgetting to update website pages with real screenshots from completed app.</li>
+                        <li>Rehearsing demo only once — muscle memory from 3–5 practice runs prevents freezing during live demo.</li>
+                        <li>Submitting without confirming GitHub Release download link actually works for someone else.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Install and demo the packaged version, not development version, at least once before final presentation.</li>
+                        <li>Treat website update as required final step, not optional.</li>
+                        <li>Do full demo rehearsal with timer at least 3 times.</li>
+                        <li>Send download link to a friend; confirm they can install and run it.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Make a README — Best Practices (makeareadme.com)</li>
+                    <li>Shields.io — README Badges</li>
+                    <li>Your own compiled notes from Weeks 1–14</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-card" id="capstone">
+            <div class="rm-card-header">
+                <h2>🏆 Final Capstone Project</h2>
+                <p>The complete cross-platform desktop application that ties together every concept from all 15 weeks.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <div class="rm-project">
+                    <h4>NoteVault — Cross-Platform Note-Taking Desktop Application</h4>
+                    <p>NoteVault is a fully-featured, installable cross-platform note-taking desktop application — the kind of tool you'd actually use daily. Built incrementally across Phases 1–4 and finalized in Weeks 14–15.</p>
+
+                    <h4>Core Features</h4>
+                    <ol>
+                        <li><strong>Note Management</strong> — Create, view, edit, delete notes with title, content, created/updated timestamps. All stored in local SQLite database.</li>
+                        <li><strong>Markdown Editor with Live Preview</strong> — Split-panel editor (textarea on left, rendered HTML on right) using Marked.js for live markdown rendering.</li>
+                        <li><strong>Sidebar Note List</strong> — All notes displayed in scrollable sidebar; click to open in editor; sorted by last updated.</li>
+                        <li><strong>Search</strong> — Live search across note titles (and optionally content) with SQL <code>LIKE</code> queries.</li>
+                        <li><strong>File I/O</strong> — Import <code>.md</code>/<code>.txt</code> files via native open dialog; export notes via native save dialog.</li>
+                        <li><strong>Native Application Menu</strong> — File menu (New, Open, Save, Quit), Edit menu (Undo, Redo, Cut, Copy, Paste), View menu (Toggle Theme, DevTools), Help menu — all with keyboard accelerators.</li>
+                        <li><strong>System Tray Icon</strong> — Tray icon with quick actions: Show App, New Quick Note, Quit.</li>
+                        <li><strong>Desktop Notifications</strong> — Notification on note save and other significant actions.</li>
+                        <li><strong>Native Dialogs</strong> — Confirmation dialog before delete; error dialogs on failures.</li>
+                        <li><strong>Right-Click Context Menus</strong> — Context menu on note list with Copy Title, Delete, etc.</li>
+                        <li><strong>Dark/Light Theme</strong> — Toggle between themes; preference persisted across sessions in <code>userData</code> config.</li>
+                        <li><strong>Keyboard Shortcuts</strong> — Ctrl/Cmd+N (new note), Ctrl/Cmd+S (save), Ctrl/Cmd+F (search), and more.</li>
+                        <li><strong>Unsaved Changes Detection</strong> — Prompt before closing window or switching notes with unsaved changes.</li>
+                        <li><strong>Cross-Platform Installers</strong> — NSIS for Windows, DMG for macOS, AppImage for Linux — all generated via electron-builder.</li>
+                    </ol>
+
+                    <h4>Technical Architecture</h4>
+                    <p><strong>Process Separation:</strong> Main process (Node.js — file system, SQLite, dialogs, menus, tray) ⇄ Preload script (<code>contextBridge</code>) ⇄ Renderer process (HTML/CSS/JS — UI only).</p>
+                    <p><strong>IPC Channels:</strong> All renderer ↔ main communication via <code>ipcRenderer.invoke</code> / <code>ipcMain.handle</code> through <code>contextBridge</code>-exposed APIs.</p>
+                    <p><strong>Data Layer:</strong> SQLite database via <code>better-sqlite3</code>, stored in <code>app.getPath('userData')</code>. Single <code>notes</code> table with full CRUD.</p>
+                    <p><strong>Security:</strong> <code>nodeIntegration: false</code>, <code>contextIsolation: true</code>, all IPC inputs validated, Content Security Policy header set.</p>
+
+                    <h4>Tech Stack Summary</h4>
+                    <p>Electron.js · JavaScript (ES6+) · HTML5 · CSS3 · Node.js · SQLite (<code>better-sqlite3</code>) · Marked.js · electron-builder · Jest · Playwright · GitHub Actions CI</p>
+
+                    <h4>Deliverables</h4>
+                    <ul>
+                        <li>Working cross-platform desktop app (Windows, macOS, Linux)</li>
+                        <li>Packaged installers (NSIS / DMG / AppImage) via electron-builder</li>
+                        <li>GitHub Release with all 3 platform installers attached for download</li>
+                        <li>Complete GitHub repository with professional README (screenshots, features, install instructions, architecture overview)</li>
+                        <li><code>DISTRIBUTION.md</code> — non-technical install guide for evaluators</li>
+                        <li>System design document with architecture diagram</li>
+                        <li>Passing test suite (Jest unit tests + Playwright e2e tests)</li>
+                        <li>GitHub Actions CI pipeline (matrix build: Windows, macOS, Linux)</li>
+                        <li>Rehearsed 5-minute demo walkthrough</li>
+                    </ul>
+                </div>
+
+                <div class="rm-highlight">
+                    <p><strong>Important:</strong> NoteVault is <em>not</em> built only in Weeks 14–15 — it is the consolidation of skills built throughout Weeks 5–13. Each week's mini project directly extends the same Library API. Week 14 is integration and polish; Week 15 is packaging, documentation, and presentation prep.</p>
+                </div>
+
+                <h3>Total Roadmap At a Glance</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Weeks</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Foundations</strong></td>
+                            <td>1–4</td>
+                            <td>Terminal, Git, HTML, CSS, JavaScript</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. Electron Core</strong></td>
+                            <td>5–7</td>
+                            <td>App structure, IPC, file system</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Desktop Features</strong></td>
+                            <td>8–10</td>
+                            <td>UI, SQLite database, native OS APIs</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4. Advanced</strong></td>
+                            <td>11–13</td>
+                            <td>Security, packaging, testing, CI/CD</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5. Capstone</strong></td>
+                            <td>14–15</td>
+                            <td>Integration, polish, documentation, presentation</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Total estimated study hours:</strong> ~530 hours over 15 weeks (~35 hrs/week average)</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="stpart">
+                <div class="logo1">
+                    <h3>CodePath</h3>
+                    <p>Learn. Practice. Master</p>
+                </div>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++: Beginner to Master — 16 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>C++: Beginner to Master</h1>
+        <p>Complete 16-Week Curriculum — From Hello World to Multithreaded Systems & C++20 Coroutines</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#week16">W16</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>16-week, project-driven C++ curriculum</strong> designed to take a complete beginner to a professional-level C++ developer. The roadmap moves from <strong>compilation, types, operators, and strings</strong> through <strong>control flow, functions, OOP, and the STL</strong>, into <strong>templates, smart pointers, file I/O, and exception handling</strong>, all the way to <strong>lambdas, design patterns, C++20 coroutines, concurrency, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics and modern C++ syntax, <strong>Phase 2</strong> covers control flow, functions, and data structures, <strong>Phase 3</strong> covers OOP, file handling, error handling, templates, and the STL, and <strong>Phase 4</strong> covers master-level patterns, concurrency, and full production-grade applications.</p>
+            <p>By Week 16, you will have built three complete, portfolio-ready applications and be confident writing production-grade modern C++ from scratch.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 16 weeks &nbsp;|&nbsp; <strong>Standard:</strong> C++17/C++20 &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic programming logic (no C++ experience needed)</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–4:</strong> Toolchain, types, operators, input/output, and the modern C++ syntax foundation.</p>
+        </div>
+
+        <!--  WEEK 1  -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Setting Up &amp; Your First Program</h2>
+                <p>Understand the C++ compilation pipeline and write your very first working program.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Toolchain setup, compilation, and basic program anatomy.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Compilation &amp; Toolchain</strong> — C++ source code is compiled by a compiler (like g++ or clang++) into a binary executable through preprocessing, compiling, and linking stages. Understanding this helps you diagnose build errors early.</li>
+                    <li><strong>Program Structure (<code>main</code>, <code>#include</code>)</strong> — Every C++ program begins execution in <code>main()</code>, and <code>#include</code> directives bring in standard library functionality like input/output. This skeleton is the same across all C++ programs.</li>
+                    <li><strong><code>std::cout</code> and Basic Output</strong> — <code>std::cout</code> is the standard output stream object used with the <code>&lt;&lt;</code> insertion operator to print text and values. It is the idiomatic C++ replacement for C's <code>printf</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The compilation model is fundamental to understanding C++ — unlike interpreted languages, every error, warning, and optimization happens at compile time. Getting the toolchain right from Day 1 means you spend time learning C++, not fighting your environment.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;iostream&gt;     // Provides std::cout
+
+int main() {
+    std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl; // endl flushes + newline
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Install g++/clang++ (or use an online compiler like <strong>godbolt.org</strong> or <strong>replit.com</strong>). Write a program that prints your name, your goal for learning C++, and today's date on separate lines. Compile with <code>g++ -std=c++17 -o hello hello.cpp</code> and run the binary.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 2-->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Variables, Data Types &amp; <code>auto</code></h2>
+                <p>Store and label data in memory the modern C++ way using type inference.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Storing and labeling data in memory the modern C++ way.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Variables &amp; Declaration</strong> — A variable is a named, typed storage location in memory, and C++ requires you to declare its type before use. Initialization at declaration is strongly encouraged to avoid undefined values.</li>
+                    <li><strong>Fundamental Types (<code>int</code>, <code>double</code>, <code>char</code>, <code>bool</code>)</strong> — C++ provides built-in types for integers, decimals, characters, and true/false logic. Each type has a fixed size and range that affects memory usage and behavior.</li>
+                    <li><strong>Type Inference with <code>auto</code></strong> — The <code>auto</code> keyword lets the compiler deduce a variable's type from its initializer, reducing verbosity. It is especially useful with complex types like iterators that you will meet later.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> C++ is a strongly typed language — every variable has a type the compiler enforces. Understanding types prevents an entire class of bugs (integer overflow, precision loss) that crash programs silently. <code>auto</code> is the modern, preferred style in C++11 and beyond.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    auto age    = 25;        // Compiler infers int
+    double price = 9.99;
+    bool isStudent = true;
+    std::cout &lt;&lt; age &lt;&lt; " " &lt;&lt; price &lt;&lt; " " &lt;&lt; isStudent &lt;&lt; "\n";
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Declare variables for your age, height (double), and whether you have coded before (bool) using <code>auto</code> where possible. Print them all formatted in one clean line. Then intentionally cause an integer overflow by assigning a value larger than <code>INT_MAX</code> and observe the result.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 3 -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Operators &amp; Type Casting</h2>
+                <p>Perform computations and safely convert between types using modern C++ casts.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Performing computations and safely converting between types.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Arithmetic &amp; Compound Assignment</strong> — Arithmetic operators (<code>+ - * / %</code>) perform calculations, while compound assignment (<code>+= -=</code>) updates a variable in place. These are the building blocks of all numeric logic in any C++ program.</li>
+                    <li><strong>Relational &amp; Logical Operators</strong> — Relational operators (<code>== != &lt; &gt;</code>) compare values to produce a <code>bool</code>, and logical operators (<code>&amp;&amp; || !</code>) combine conditions. Together they drive every decision your program makes.</li>
+                    <li><strong>C++-Style Casting (<code>static_cast</code>)</strong> — <code>static_cast&lt;Type&gt;(value)</code> explicitly and safely converts a value's type, replacing C-style casts in modern code. It clearly signals intent and catches more errors at compile time.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Integer division is one of the most common beginner bugs — <code>7 / 2</code> produces <code>3</code>, not <code>3.5</code>. <code>static_cast</code> is the explicit, readable, and compiler-checked solution. Understanding operator precedence prevents subtle logic bugs in every program you will ever write.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int a = 7, b = 2;
+    double result = static_cast&lt;double&gt;(a) / b; // Safe explicit cast
+    std::cout &lt;&lt; "7 / 2 = " &lt;&lt; result &lt;&lt; "\n";  // Prints 3.5
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a program that takes two integers from the user and prints their sum, difference, product, true division (as double using <code>static_cast</code>), and modulus. Then add a check using relational and logical operators that prints whether the first number is between 10 and 100 inclusive.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 4  -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Input Handling, Constants &amp; Strings</h2>
+                <p>Build interactive programs and work with text using the safe <code>std::string</code> class.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Interactive programs and the <code>std::string</code> class.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>std::cin</code> for Input</strong> — <code>std::cin</code> reads formatted input from the keyboard using the <code>&gt;&gt;</code> extraction operator. It works seamlessly with built-in types and <code>std::string</code>, and <code>std::getline</code> is used for full-line input including spaces.</li>
+                    <li><strong>Constants (<code>const</code>, <code>constexpr</code>)</strong> — <code>const</code> marks a variable as unmodifiable after initialization, while <code>constexpr</code> guarantees evaluation at compile time. Both improve safety and enable compiler optimizations for known-at-compile-time values.</li>
+                    <li><strong><code>std::string</code> Basics</strong> — <code>std::string</code> is C++'s safe, dynamic alternative to C's raw character arrays, handling memory management automatically. It supports concatenation with <code>+</code>, comparison with <code>==</code>, and methods like <code>.length()</code>, <code>.substr()</code>, and <code>.find()</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>const</code> and <code>constexpr</code> are everywhere in professional C++ code — they communicate intent, prevent bugs, and enable optimizations. <code>std::string</code> eliminates the notorious buffer-overflow bugs of C-style <code>char</code> arrays that caused decades of security vulnerabilities.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    constexpr double PI = 3.14159; // Compile-time constant
+    std::string name;
+    std::cout &lt;&lt; "Enter your name: ";
+    std::getline(std::cin, name);  // Reads full line including spaces
+    std::cout &lt;&lt; "Hello, " &lt;&lt; name &lt;&lt; "! PI = " &lt;&lt; PI &lt;&lt; "\n";
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a simple calculator that asks the user for two numbers and an operator (<code>+ - * /</code>) using <code>std::cin</code>. Print the result. Define a <code>constexpr</code> maximum input value and warn the user if either number exceeds it. Use <code>std::string</code> to store and echo back the full expression entered.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 5–8:</strong> Branching, loops, functions, references, and STL data structures.</p>
+        </div>
+
+        <!--  WEEK 5  -->
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Conditional Statements</h2>
+                <p>Write branching logic that makes decisions based on runtime data.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Branching logic and decision-making.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>if / else if / else</code></strong> — These statements run different code blocks based on whether a condition evaluates to true or false. They are the most fundamental form of branching in any language and the basis of all decision-making logic.</li>
+                    <li><strong><code>switch</code> Statements</strong> — <code>switch</code> compares a single variable against multiple constant cases, offering cleaner syntax than long <code>if-else</code> chains for discrete values. Always use <code>break</code> to prevent unintended fall-through to the next case.</li>
+                    <li><strong>Ternary Operator</strong> — The ternary operator (<code>condition ? a : b</code>) compactly expresses a simple conditional assignment in a single line. It improves readability for short, simple branches where a full <code>if-else</code> would be verbose.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every non-trivial program branches. Choosing the right construct — <code>if-else</code> for complex conditions, <code>switch</code> for discrete values, ternary for simple inline choices — is a mark of readable, professional code. <code>switch</code> fall-through is also a classic C++ interview topic.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int score = 85;
+    // Chained ternary for compact grade assignment
+    char grade = (score &gt;= 90) ? 'A' : (score &gt;= 80) ? 'B' : 'C';
+    std::cout &lt;&lt; "Grade: " &lt;&lt; grade &lt;&lt; "\n";
+
+    int day = 3;
+    switch (day) {
+        case 1: std::cout &lt;&lt; "Monday\n";    break;
+        case 2: std::cout &lt;&lt; "Tuesday\n";   break;
+        case 3: std::cout &lt;&lt; "Wednesday\n"; break;
+        default: std::cout &lt;&lt; "Other\n";
+    }
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a program that takes a number 1–7 and prints the corresponding day of the week using a <code>switch</code> statement. Then extend it: use <code>if-else</code> to also print whether that day is a weekday or weekend. Finally, use the ternary operator to print "Work day" or "Rest day" in one line.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 6 -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Loops &amp; Iteration</h2>
+                <p>Repeat logic efficiently and idiomatically using all three C++ loop types.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Repeating logic efficiently and idiomatically.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>for</code> and Range-Based <code>for</code> Loops</strong> — A traditional <code>for</code> loop repeats code a set number of times with a counter, while a range-based <code>for</code> loop (<code>for (auto x : container)</code>) iterates directly over a collection's elements. The latter is the modern, preferred style for any STL container.</li>
+                    <li><strong><code>while</code> and <code>do-while</code> Loops</strong> — <code>while</code> repeats while a condition holds, checking before execution. <code>do-while</code> checks after, guaranteeing at least one run regardless of the condition. Choose based on whether the loop body must always execute at least once.</li>
+                    <li><strong><code>break</code> and <code>continue</code></strong> — <code>break</code> exits a loop entirely and transfers control past it, while <code>continue</code> skips the rest of the current iteration and jumps to the next check. Both give precise control over loop execution flow.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Loops power algorithms — sorting, searching, processing data. The range-based <code>for</code> loop is idiomatic modern C++ and eliminates off-by-one errors common with index-based loops. Understanding <code>break</code> and <code>continue</code> is essential for writing efficient search and filter logic.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+int main() {
+    // Traditional for loop with continue
+    for (int i = 1; i &lt;= 5; i++) {
+        if (i == 3) continue; // Skip 3
+        std::cout &lt;&lt; i &lt;&lt; " ";
+    }
+    std::cout &lt;&lt; "\n";
+
+    // Range-based for loop — modern, preferred style
+    std::vector&lt;std::string&gt; names = {"Alice", "Bob", "Carol"};
+    for (const auto &amp;name : names) {
+        std::cout &lt;&lt; name &lt;&lt; "\n";
+    }
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a program that prints all prime numbers between 1 and 100 using nested loops. Then use a <code>do-while</code> loop to build a menu-driven program that keeps asking the user to pick an option (1: Print primes, 2: Quit) until they choose to quit. Use <code>break</code> to exit cleanly.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 7   -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Functions &amp; References</h2>
+                <p>Write modular, reusable, and efficient code using functions, overloading, and references.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Modular, reusable, and efficient code organization.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Function Declaration &amp; Default Arguments</strong> — Functions are named, reusable blocks of logic that can specify default parameter values, reducing the need for overloaded versions. Forward declarations (prototypes) let you call a function before its full definition appears in the file.</li>
+                    <li><strong>Pass by Reference (<code>&amp;</code>)</strong> — Passing a parameter by reference (<code>int &amp;x</code>) lets a function modify the caller's original variable without copying it. This is C++'s safer, cleaner alternative to C's raw pointers for most modification use cases and avoids expensive copies of large objects.</li>
+                    <li><strong>Function Overloading</strong> — Overloading allows multiple functions with the same name but different parameter lists. The compiler picks the correct version at compile time based on argument types, improving API readability for related operations without needing different names.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Functions are the primary unit of code organization in C++. Pass-by-reference is one of the most important concepts in the language — it is how the STL's algorithms and containers avoid unnecessary copies. Overloading is used throughout the standard library and every major C++ codebase.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;iostream&gt;
+
+void increment(int &amp;x) { x++; } // Reference: modifies the original variable
+
+// Overloaded add functions — same name, different parameter types
+int    add(int a, int b)           { return a + b; }
+double add(double a, double b)     { return a + b; }
+int    add(int a, int b, int c)    { return a + b + c; }
+
+int main() {
+    int val = 10;
+    increment(val);
+    std::cout &lt;&lt; "val = " &lt;&lt; val &lt;&lt; "\n"; // 11
+    std::cout &lt;&lt; add(1, 2) &lt;&lt; "\n";       // int version
+    std::cout &lt;&lt; add(1.5, 2.5) &lt;&lt; "\n";   // double version
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write overloaded <code>add</code> functions for two ints, two doubles, and three ints, then call all three from <code>main</code> and print results. Next, write a <code>swap(int &amp;a, int &amp;b)</code> function using pass-by-reference. Finally, add a function with a default argument — <code>void greet(std::string name, std::string greeting = "Hello")</code> — and test both the default and custom greeting versions.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 8   -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Arrays, Vectors &amp; Strings</h2>
+                <p>Store and manage collections of data using C-style arrays and the modern STL <code>std::vector</code>.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Storing and managing collections of data.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>C-Style Arrays</strong> — A C-style array stores a fixed number of same-typed elements in contiguous memory, indexed from zero. It is foundational knowledge but has a fixed, non-resizable size and does not know its own length — making it error-prone in real code.</li>
+                    <li><strong><code>std::vector</code> — The Dynamic Array</strong> — <code>std::vector</code> is a resizable array from the Standard Template Library that grows automatically as elements are added with <code>.push_back()</code>. It is the default, idiomatic choice for sequential data in all modern C++ programs.</li>
+                    <li><strong>String Manipulation</strong> — <code>std::string</code> supports operations like <code>.substr()</code>, <code>.find()</code>, <code>.replace()</code>, and concatenation for powerful text processing. These methods replace unsafe manual character-array logic inherited from C.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>std::vector</code> is the most used container in C++ — it appears in virtually every non-trivial program. Understanding the difference between stack-allocated C arrays (fixed size, fast) and heap-managed vectors (dynamic, safe) is essential for writing correct, performant code.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+
+int main() {
+    // C-style array — fixed size, no bounds checking
+    int scores[3] = {90, 85, 92};
+
+    // std::vector — dynamic, safe, self-aware
+    std::vector&lt;int&gt; nums = {3, 1, 4, 1, 5};
+    nums.push_back(9);                        // Grows automatically
+    std::cout &lt;&lt; "Size: " &lt;&lt; nums.size() &lt;&lt; "\n"; // 6
+
+    // String manipulation
+    std::string word = "Hello, World!";
+    std::cout &lt;&lt; word.substr(7, 5) &lt;&lt; "\n"; // "World"
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a <code>std::vector&lt;int&gt;</code> filled with 5 user-entered numbers. Write three functions: one that returns the largest value, one that returns the average as a double, and one that reverses the vector in-place using pass-by-reference. Print the original, largest, average, and reversed vector.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 9–12:</strong> OOP, file handling, exception handling, templates, STL, and smart pointers.</p>
+        </div>
+
+        <!--  WEEK 9    -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Object-Oriented Programming I — Classes &amp; Objects</h2>
+                <p>Model real-world entities with encapsulation using C++ classes.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Modeling real-world entities with encapsulation.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Classes &amp; Objects</strong> — A class is a blueprint defining data (member variables) and behavior (member functions/methods), and an object is a concrete instance of that class. This is the foundation of object-oriented design in C++ and enables modeling complex domains as self-contained entities.</li>
+                    <li><strong>Constructors &amp; Destructors</strong> — A constructor initializes an object's state when it is created, and a destructor automatically cleans up resources when the object is destroyed. They automate setup and teardown — the foundation of C++'s RAII (Resource Acquisition Is Initialization) philosophy.</li>
+                    <li><strong>Encapsulation (<code>public</code>/<code>private</code>)</strong> — Encapsulation hides internal data (<code>private</code>) and exposes only controlled access through public methods (getters/setters). This protects an object's internal invariants from invalid external modification and is the first pillar of OOP.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Classes are the primary abstraction mechanism in C++. RAII — the idea that resource lifetime is tied to object lifetime via constructors and destructors — is the key concept that makes C++ memory and resource management safe and deterministic without a garbage collector.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class Person {
+private:
+    std::string name; // Hidden internal state — encapsulation
+    int age;
+public:
+    // Constructor with member initializer list
+    Person(std::string n, int a) : name(n), age(a) {}
+    // Destructor — called automatically when object goes out of scope
+    ~Person() { std::cout &lt;&lt; name &lt;&lt; " destroyed.\n"; }
+    void greet() const { std::cout &lt;&lt; "Hi, I'm " &lt;&lt; name &lt;&lt; ", age " &lt;&lt; age &lt;&lt; "\n"; }
+};
+
+int main() {
+    Person p("Alice", 30);
+    p.greet();
+    return 0; // Destructor called here automatically
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a <code>BankAccount</code> class with a private <code>balance</code> (double) and private <code>owner</code> (string). Add public methods: <code>deposit(double amount)</code>, <code>withdraw(double amount)</code> (reject if insufficient funds with an error message), and <code>getBalance()</code>. Test it in <code>main</code> with a series of deposits and withdrawals, verifying balance correctness after each operation.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--   WEEK 10   -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — OOP II — Inheritance &amp; Polymorphism</h2>
+                <p>Build extensible class hierarchies using inheritance, virtual functions, and abstract classes.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Building extensible hierarchies of behavior.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Inheritance</strong> — Inheritance lets a derived class reuse and extend the data and behavior of a base class using <code>class Dog : public Animal</code> syntax. This promotes code reuse and models "is-a" relationships, keeping shared logic in one place while allowing specialization.</li>
+                    <li><strong>Polymorphism &amp; Virtual Functions</strong> — Marking a function <code>virtual</code> allows a derived class to override its behavior, and calling it through a base class pointer or reference invokes the derived version at runtime. The <code>override</code> keyword makes the intent explicit and catches typos at compile time.</li>
+                    <li><strong>Abstract Classes &amp; Interfaces</strong> — A class with at least one pure virtual function (<code>= 0</code>) cannot be instantiated and acts as a contract that all derived classes must fulfill. This enforces that every subclass implements required behavior, creating a reliable interface.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Polymorphism is what makes C++ design flexible — you can write code that operates on a base class pointer and automatically get the right behavior for any derived type added later. Always use <code>override</code> in modern C++ and make base class destructors <code>virtual</code> to prevent resource leaks through base pointers.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;iostream&gt;
+#include &lt;memory&gt;
+
+class Animal {
+public:
+    virtual void speak() const { std::cout &lt;&lt; "...\n"; }
+    virtual ~Animal() = default; // Virtual destructor — critical for polymorphism
+};
+
+class Dog : public Animal {
+public:
+    void speak() const override { std::cout &lt;&lt; "Woof!\n"; }
+};
+
+class Cat : public Animal {
+public:
+    void speak() const override { std::cout &lt;&lt; "Meow!\n"; }
+};
+
+int main() {
+    std::unique_ptr&lt;Animal&gt; a = std::make_unique&lt;Dog&gt;();
+    a-&gt;speak(); // Calls Dog::speak() — runtime polymorphism
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create an abstract <code>Shape</code> base class with a pure virtual <code>area()</code> method and a pure virtual <code>perimeter()</code> method. Implement <code>Circle</code> and <code>Rectangle</code> subclasses. Store a <code>std::vector&lt;std::unique_ptr&lt;Shape&gt;&gt;</code> containing both types, then loop over it and print each shape's area and perimeter — demonstrating runtime polymorphism.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--   WEEK 11  -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — File Handling &amp; Error Handling</h2>
+                <p>Persist data to disk and write robust, exception-safe programs.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Persisting data and writing robust, exception-safe programs.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>File I/O (<code>fstream</code>)</strong> — <code>std::ifstream</code> reads from files and <code>std::ofstream</code> writes to them using the same familiar <code>&lt;&lt;</code>/<code>&gt;&gt;</code> operators as console I/O. Always check that a file stream opened successfully with <code>.is_open()</code> before attempting to use it.</li>
+                    <li><strong>Exceptions (<code>try</code>/<code>catch</code>/<code>throw</code>)</strong> — C++ exceptions let you signal and handle errors by <code>throw</code>-ing an object and catching it in a <code>try/catch</code> block at any point up the call stack. This cleanly separates error-handling logic from normal program flow without requiring error-code returns.</li>
+                    <li><strong>Standard Exception Types</strong> — The <code>&lt;stdexcept&gt;</code> header provides built-in exception classes like <code>std::runtime_error</code>, <code>std::invalid_argument</code>, and <code>std::out_of_range</code>. Using them (or deriving from <code>std::exception</code>) creates consistent, descriptive, and catchable errors.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Real programs persist data. File I/O with proper error handling is in every production C++ application — from game save files to database systems. Exception-based error handling, combined with RAII, ensures resources like file handles are always properly closed even when errors occur.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;fstream&gt;
+#include &lt;stdexcept&gt;
+#include &lt;iostream&gt;
+
+void writeScore(int score, const std::string &amp;filename) {
+    if (score &lt; 0) throw std::invalid_argument("Score cannot be negative");
+    std::ofstream file(filename);
+    if (!file.is_open()) throw std::runtime_error("Failed to open file: " + filename);
+    file &lt;&lt; score;
+} // File closed automatically here — RAII in action
+
+int main() {
+    try {
+        writeScore(95, "scores.txt");
+        writeScore(-1, "scores.txt"); // Throws
+    } catch (const std::invalid_argument &amp;e) {
+        std::cerr &lt;&lt; "Input error: " &lt;&lt; e.what() &lt;&lt; "\n";
+    } catch (const std::exception &amp;e) {
+        std::cerr &lt;&lt; "Error: " &lt;&lt; e.what() &lt;&lt; "\n";
+    }
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a program that logs 5 user-entered names into <code>names.txt</code> using <code>std::ofstream</code>, then reads them back and prints them using <code>std::ifstream</code>. Wrap all file operations in <code>try/catch</code> blocks. Throw a <code>std::runtime_error</code> if the file fails to open and a <code>std::invalid_argument</code> if the user enters an empty name.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 12 -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Templates, STL &amp; Smart Pointers</h2>
+                <p>Write generic algorithms and manage heap memory safely with modern C++ tools.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Generic programming and modern, safe memory management.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Function &amp; Class Templates</strong> — Templates let you write a single function or class that works generically across multiple types, with the correct version generated by the compiler for each type used. This avoids duplicating identical logic for <code>int</code>, <code>double</code>, <code>std::string</code>, etc.</li>
+                    <li><strong>The Standard Template Library (STL)</strong> — The STL provides battle-tested generic containers (<code>std::vector</code>, <code>std::map</code>, <code>std::set</code>, <code>std::unordered_map</code>) and algorithms (<code>std::sort</code>, <code>std::find</code>, <code>std::transform</code>) that dramatically reduce the code you need to write by hand.</li>
+                    <li><strong>Smart Pointers (<code>unique_ptr</code>, <code>shared_ptr</code>)</strong> — Smart pointers wrap raw pointers and automatically call <code>delete</code> when the object is no longer needed, eliminating most manual memory leaks and dangling pointer bugs. Use <code>unique_ptr</code> for exclusive ownership and <code>shared_ptr</code> for shared ownership.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Templates are the foundation of the entire C++ STL. Smart pointers have essentially replaced raw <code>new</code>/<code>delete</code> in modern C++ — the C++ Core Guidelines say "never use raw <code>delete</code>" in new code. Mastering these three topics makes you immediately productive in any professional C++ codebase.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;memory&gt;
+
+// Generic template function — works for int, double, string, etc.
+template &lt;typename T&gt;
+T maxVal(T a, T b) { return (a &gt; b) ? a : b; }
+
+// Generic sum using template
+template &lt;typename T&gt;
+T sum(const std::vector&lt;T&gt; &amp;v) {
+    T total = T{};
+    for (const auto &amp;x : v) total += x;
+    return total;
+}
+
+int main() {
+    std::vector&lt;int&gt; nums = {5, 2, 8, 1, 9};
+    std::sort(nums.begin(), nums.end()); // STL algorithm
+
+    auto ptr = std::make_unique&lt;int&gt;(42); // Smart pointer — auto-freed
+    std::cout &lt;&lt; "Max: " &lt;&lt; maxVal(10, 20) &lt;&lt; ", Sum: " &lt;&lt; sum(nums) &lt;&lt; "\n";
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a generic <code>template &lt;typename T&gt; T sum(std::vector&lt;T&gt; v)</code> function and test it with both <code>int</code> and <code>double</code> vectors. Use <code>std::sort</code> and <code>std::find</code> on a vector of strings. Refactor a raw-pointer <code>Person*</code> allocation from Week 9 to use <code>std::unique_ptr&lt;Person&gt;</code> — verify no manual <code>delete</code> is needed.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 13–16:</strong> Lambdas, design patterns, C++20 coroutines, concurrency, and three complete capstone projects.</p>
+        </div>
+
+        <!--  WEEK 13  -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Lambdas &amp; the Decorator Pattern</h2>
+                <p>Treat behavior as first-class data and wrap functions flexibly using lambdas and <code>std::function</code>.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Treating behavior as data and wrapping functions flexibly.</p>
+
+                <div class="rm-highlight">
+                    <p><strong>Note:</strong> C++ does not have Python-style decorators as a language keyword. Master-level C++ engineers achieve decorator-like behavior via templates, lambdas, and the Decorator design pattern. This week covers the genuine, idiomatic C++ equivalents.</p>
+                </div>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Lambda Expressions</strong> — A lambda is an anonymous, inline function object capable of capturing surrounding variables by value (<code>[=]</code>) or reference (<code>[&amp;]</code>). Lambdas are heavily used with STL algorithms like <code>std::sort</code>, <code>std::for_each</code>, and <code>std::find_if</code> as concise, local callbacks.</li>
+                    <li><strong><code>std::function</code> &amp; Higher-Order Functions</strong> — <code>std::function</code> is a generic wrapper that can hold any callable — a function pointer, lambda, or functor — matching a given signature. This enables passing and storing behavior just like data, enabling higher-order function patterns.</li>
+                    <li><strong>The Decorator Design Pattern</strong> — In C++, "decorating" a function means wrapping it inside another callable that adds behavior (timing, logging, retry logic) before and/or after invoking the original. This is the idiomatic OOP/functional equivalent of Python's <code>@decorator</code> syntax, and is used in production logging, profiling, and middleware systems.</li>
+                </ol>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;functional&gt;
+#include &lt;iostream&gt;
+#include &lt;chrono&gt;
+
+// Decorator pattern: wraps any void() callable with logging
+auto logger(std::function&lt;void()&gt; fn) {
+    return [fn]() {
+        std::cout &lt;&lt; "[LOG] Start\n";
+        fn();
+        std::cout &lt;&lt; "[LOG] End\n";
+    };
+}
+
+// Lambda with capture — captures 'multiplier' by value
+int main() {
+    int multiplier = 3;
+    auto triple = [multiplier](int x) { return x * multiplier; };
+    std::cout &lt;&lt; triple(7) &lt;&lt; "\n"; // 21
+
+    auto loggedHello = logger([]() { std::cout &lt;&lt; "Hello!\n"; });
+    loggedHello();
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a <code>timed_run</code> decorator using <code>std::function</code> and <code>&lt;chrono&gt;</code> that measures and prints how long a wrapped lambda takes to execute. Test it by wrapping a lambda that sorts a <code>std::vector</code> of 1,000,000 random integers. Also use lambdas with <code>std::sort</code> and <code>std::find_if</code> on a vector of custom <code>Person</code> objects.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 14  -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Generators via Iterators &amp; C++20 Coroutines</h2>
+                <p>Produce values lazily on demand using custom iterators and C++20 <code>co_yield</code>.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Lazy, on-demand value production.</p>
+
+                <div class="rm-highlight">
+                    <p><strong>Note:</strong> C++ does not have Python-style generators as a keyword. Master-level C++ engineers achieve lazy, on-demand value production via custom iterators or C++20 coroutines with <code>co_yield</code>. This is the genuine, idiomatic C++ equivalent.</p>
+                </div>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Custom Iterators</strong> — A custom iterator class implements <code>operator++</code>, <code>operator*</code>, and <code>operator!=</code> so your own data structures work with range-based <code>for</code> loops and STL algorithms. This is the traditional C++ approach to lazy, step-by-step iteration over custom sequences.</li>
+                    <li><strong>C++20 Coroutines (<code>co_yield</code>)</strong> — <code>co_yield</code> lets a function pause and return a value, then resume execution from exactly where it left off on the next call — just like a Python generator. This is the most direct, modern equivalent of generators in C++, enabling memory-efficient lazy sequences.</li>
+                    <li><strong>Linked Lists &amp; Recursion</strong> — A linked list is a chain of dynamically allocated nodes connected by smart pointers, allowing flexible, non-contiguous growth. Recursion solves problems by having a function call itself on smaller sub-problems until a base case stops the chain — the basis of many classic algorithms.</li>
+                </ol>
+
+                <h3>Code Example</h3>
+                <pre><code>// C++20 Coroutine-based generator (conceptual — requires coroutine support)
+// Produces Fibonacci numbers lazily, one at a time
+Generator&lt;int&gt; fibonacci() {
+    int a = 0, b = 1;
+    while (true) {
+        co_yield a;             // Pause here, return 'a' to the caller
+        a = std::exchange(b, a + b); // Resume here on next call
+    }
+}
+
+// Custom Iterator example — lets range-for work on a custom Range class
+class Range {
+    int current, end;
+public:
+    Range(int start, int end) : current(start), end(end) {}
+    Range&amp; operator++() { ++current; return *this; }
+    int operator*() const { return current; }
+    bool operator!=(const Range&amp; o) const { return current != o.current; }
+    Range begin() { return *this; }
+    Range end()   { return Range(end, end); }
+};</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Implement a singly linked list class with <code>insert()</code>, <code>print()</code>, and <code>remove()</code> using <code>std::unique_ptr</code> for node ownership — no raw <code>delete</code>. Then implement a Fibonacci sequence generator: either a C++20 coroutine if your compiler supports it, or a stateful class with a <code>next()</code> method. Use it to yield and print the first 10 Fibonacci numbers one at a time.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 15 -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Concurrency with <code>std::thread</code></h2>
+                <p>Write safe, parallel modern C++ code using threads, mutexes, and async futures.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing safe, parallel modern C++ code.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Creating Threads (<code>std::thread</code>)</strong> — <code>std::thread</code> launches a function to run concurrently with the rest of the program. Calling <code>.join()</code> on the thread object blocks the caller until that thread finishes. This is the standard, portable way to achieve parallelism in modern C++.</li>
+                    <li><strong>Race Conditions &amp; <code>std::mutex</code></strong> — A race condition occurs when multiple threads access shared data simultaneously without synchronization, producing unpredictable, non-reproducible results. <code>std::mutex</code> combined with <code>std::lock_guard</code> (RAII locking) ensures only one thread modifies shared data at a time.</li>
+                    <li><strong><code>std::async</code> &amp; Futures</strong> — <code>std::async</code> runs a function asynchronously and returns a <code>std::future</code> that will eventually hold its result. Calling <code>.get()</code> on the future blocks until the result is ready. This is a higher-level, simpler abstraction than manually managing threads for one-off concurrent tasks.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Modern CPUs have many cores — sequential code that does not use them leaves performance on the table. Concurrency is used in game engines, web servers, data pipelines, and any performance-critical system. Understanding race conditions and mutexes is essential for writing concurrent code that is correct, not just fast.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;iostream&gt;
+
+int counter = 0;
+std::mutex mtx;
+
+void incrementMany(int times) {
+    for (int i = 0; i &lt; times; i++) {
+        std::lock_guard&lt;std::mutex&gt; lock(mtx); // RAII lock — auto-released
+        counter++;
+    }
+}
+
+int main() {
+    std::thread t1(incrementMany, 100000);
+    std::thread t2(incrementMany, 100000);
+    t1.join();
+    t2.join();
+    std::cout &lt;&lt; "Counter: " &lt;&lt; counter &lt;&lt; "\n"; // Always 200000 with mutex
+    return 0;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create two threads that both increment a shared global counter 100,000 times each. Run it first <strong>without</strong> a mutex (observe the incorrect, non-deterministic result) and document what you see. Then fix it with <code>std::mutex</code> and <code>std::lock_guard</code> and verify the result is always 200,000. Finally, use <code>std::async</code> to concurrently fetch two simulated "results" (sleep + return a value) and print both using <code>std::future</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 16  -->
+
+        <div class="rm-card" id="week16">
+            <div class="rm-card-header">
+                <h2>Week 16 — Capstone Mini Projects (Beginner → Master)</h2>
+                <p>Apply everything learned across the entire curriculum in three complete, real-world C++ applications.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Applying everything learned across the entire 16-week curriculum in three complete, portfolio-ready C++ projects.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — Command-Line To-Do List (Beginner–Intermediate)</h3>
+                <p>A console application using classes, <code>std::vector</code>, and <code>fstream</code> to add, view, complete, and persist tasks to disk. Reinforces Phases 1–3: OOP, STL containers, and file I/O.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>C++ Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Add, view, complete, delete tasks</td>
+                            <td><code>std::vector</code> + class methods</td>
+                        </tr>
+                        <tr>
+                            <td>Save tasks to disk on exit</td>
+                            <td><code>std::ofstream</code> file I/O</td>
+                        </tr>
+                        <tr>
+                            <td>Load tasks on startup</td>
+                            <td><code>std::ifstream</code> + parsing</td>
+                        </tr>
+                        <tr>
+                            <td>Menu-driven interface loop</td>
+                            <td><code>do-while</code> loop + <code>switch</code></td>
+                        </tr>
+                        <tr>
+                            <td>Error handling for bad input</td>
+                            <td><code>try/catch</code> + <code>std::invalid_argument</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A fully functional command-line to-do list with persistent file storage, a menu-driven loop, and exception-based error handling. Compile with <code>g++ -std=c++17 -o todo main.cpp</code>. Push to GitHub with a <code>README.md</code> including build instructions and a sample run screenshot.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — Student Record Management System (Intermediate–Advanced)</h3>
+                <p>A system using class hierarchies, <code>std::unique_ptr</code>, and STL algorithms to add, search, sort, and delete student records persisted to a file. Reinforces inheritance, smart pointers, and generic algorithms together.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>C++ Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Base <code>Person</code> + derived <code>Student</code> classes</td>
+                            <td>Inheritance + <code>virtual</code> methods</td>
+                        </tr>
+                        <tr>
+                            <td>Polymorphic storage collection</td>
+                            <td><code>std::vector&lt;std::unique_ptr&lt;Person&gt;&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>Sort students by GPA or name</td>
+                            <td><code>std::sort</code> + lambda comparator</td>
+                        </tr>
+                        <tr>
+                            <td>Search by student ID</td>
+                            <td><code>std::find_if</code> + lambda predicate</td>
+                        </tr>
+                        <tr>
+                            <td>Persist records to CSV file</td>
+                            <td><code>fstream</code> + string parsing</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A complete student record system demonstrating polymorphism, smart pointer ownership, STL algorithms with lambda comparators, and file persistence. All memory management done via smart pointers — zero raw <code>delete</code> calls. Push to GitHub with a design explanation in the README.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Multithreaded File Word-Counter (Advanced–Master)</h3>
+                <p>A tool that splits a large text file into chunks, counts word frequency in parallel using <code>std::thread</code> with a mutex-protected shared <code>std::unordered_map</code>, and prints the top 10 words using lambdas and <code>std::sort</code>. The true capstone combining file I/O, smart pointers, lambdas, and concurrency.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>C++ Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Read and split large text file</td>
+                            <td><code>std::ifstream</code> + string parsing</td>
+                        </tr>
+                        <tr>
+                            <td>Parallel chunk processing</td>
+                            <td><code>std::thread</code> per chunk</td>
+                        </tr>
+                        <tr>
+                            <td>Thread-safe shared word map</td>
+                            <td><code>std::mutex</code> + <code>std::lock_guard</code></td>
+                        </tr>
+                        <tr>
+                            <td>Top-10 words extraction</td>
+                            <td><code>std::sort</code> + lambda comparator</td>
+                        </tr>
+                        <tr>
+                            <td>Timed execution measurement</td>
+                            <td>Decorator pattern + <code>&lt;chrono&gt;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Code Example</h3>
+                <pre><code>// Project 3 — thread worker: counts words in one chunk of the file
+void countChunk(const std::string &amp;chunk,
+                std::mutex &amp;mtx,
+                std::unordered_map&lt;std::string, int&gt; &amp;counts) {
+    std::istringstream stream(chunk);
+    std::string word;
+    while (stream &gt;&gt; word) {
+        std::lock_guard&lt;std::mutex&gt; lock(mtx); // Protects shared map
+        counts[word]++;
+    }
+}
+// Build: g++ -std=c++20 -pthread -O2 -o wordcount main.cpp</code></pre>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A production-grade multithreaded word frequency counter that processes a large text file in parallel, prints the top 10 most frequent words, and reports total execution time using the decorator/chrono pattern. This is the capstone that demonstrates mastery of the complete C++ curriculum. Push all three projects to a single public GitHub repository with individual <code>README.md</code> files and build instructions.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–4</td>
+                        <td>Absolute Basics</td>
+                        <td>Compile and run programs; use modern types, <code>auto</code>, <code>const</code>, operators, <code>std::cin</code>/<code>cout</code>, and <code>std::string</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>5–8</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Write branching logic, loops, modular functions with references and overloads, and manage data with <code>std::vector</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>9–12</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Design class hierarchies with OOP, persist data with file I/O, handle errors with exceptions, and use templates, STL, and smart pointers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>13–16</td>
+                        <td>Master Level Concepts</td>
+                        <td>Apply lambdas and design patterns, produce lazy values with coroutines, write concurrent multithreaded code, and complete three production-grade projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>g++ / clang++ (C++20 flag)</td>
+                        <td>Compiler — <code>g++ -std=c++20 -Wall -Wextra</code></td>
+                    </tr>
+                    <tr>
+                        <td>Godbolt Compiler Explorer</td>
+                        <td>See compiled assembly, test snippets online instantly</td>
+                    </tr>
+                    <tr>
+                        <td>cppreference.com</td>
+                        <td>Authoritative C++ standard library reference</td>
+                    </tr>
+                    <tr>
+                        <td>CMake</td>
+                        <td>Industry-standard C++ build system for real projects</td>
+                    </tr>
+                    <tr>
+                        <td>Valgrind / AddressSanitizer</td>
+                        <td>Memory leak and error detection</td>
+                    </tr>
+                    <tr>
+                        <td>C++ Core Guidelines (isocpp.github.io)</td>
+                        <td>Official best practices by Bjarne Stroustrup &amp; Herb Sutter</td>
+                    </tr>
+                    <tr>
+                        <td>CLion / VS Code + clangd</td>
+                        <td>IDE with full C++ IntelliSense and debugging</td>
+                    </tr>
+                    <tr>
+                        <td>"A Tour of C++" — Bjarne Stroustrup</td>
+                        <td>Concise book covering modern C++ by the language creator</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Complete each week's task before moving on — writing and compiling code every day beats reading alone by a wide margin.</li>
+                    <li>Always compile with <strong>warnings enabled</strong> — <code>g++ -std=c++20 -Wall -Wextra -o program main.cpp</code> — and fix every warning, not just errors.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — your commit history is visible proof of consistent progress to future employers.</li>
+                    <li>Use <strong>Valgrind</strong> or <strong>AddressSanitizer</strong> (<code>-fsanitize=address</code>) from Week 9 onward to catch memory errors early before they become habits.</li>
+                    <li>By Week 16, you should have three complete, compiled, and documented projects and the confidence to write any C++ application from scratch.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

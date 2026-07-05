@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science - 15 Week Roadmap</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <header class="rm-header">
+        <h1>Data Science</h1>
+        <p>Complete 15-Week Beginner-to-Advanced Roadmap — Python · Statistics · Data Analysis · Machine Learning · Deep Learning · Deployment</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#capstone">Capstone</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Roadmap</h2>
+            <p>Data Science is the discipline of extracting meaning, insight, and predictions from data using a combination of programming, statistics, and domain knowledge. This roadmap takes a complete beginner to a confident, portfolio-ready data scientist in 15 weeks of full-time study (~35–40 hours/week).</p>
+            <p>The path runs: <strong>Python Foundations → NumPy &amp; pandas → Statistics &amp; Math → Data Cleaning → Visualization → EDA → Machine Learning → Advanced ML → Deep Learning → SQL &amp; Deployment → Capstone.</strong></p>
+            <p>By Week 15 you will have built approximately <strong>14 mini-projects</strong> and one complete, deployed data science project — presented as an interactive web application on Streamlit Cloud.</p>
+
+            <h3>At a Glance</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Language</strong></td>
+                        <td>Python 3 (latest stable) + SQL</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Duration</strong></td>
+                        <td>15 weeks · Full-time (~35–40 hrs/week)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Level</strong></td>
+                        <td>Complete Beginner → Portfolio-Ready</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Focus</strong></td>
+                        <td>Python · Statistics · Data Analysis · Machine Learning · Deep Learning · Deployment</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mini Projects</strong></td>
+                        <td>14 weekly builds + 1 complete deployed capstone</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cost</strong></td>
+                        <td>100% free tools — Python, Jupyter, scikit-learn, TensorFlow, Streamlit</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Five Phases</h3>
+            <ul>
+                <li><strong>Phase 1 (Weeks 1–3):</strong> Python programming foundations and mathematics/statistics — the language and quantitative backbone of everything that follows.</li>
+                <li><strong>Phase 2 (Weeks 4–6):</strong> Data analysis and visualization — cleaning messy real-world datasets, exploring them visually, and extracting insight.</li>
+                <li><strong>Phase 3 (Weeks 7–10):</strong> Machine learning — supervised and unsupervised algorithms, model evaluation, and practical scikit-learn.</li>
+                <li><strong>Phase 4 (Weeks 11–13):</strong> Advanced ML, feature engineering, ensemble methods, and an introduction to deep learning with TensorFlow/Keras.</li>
+                <li><strong>Phase 5 (Weeks 14–15):</strong> SQL for data science, project workflow, Streamlit deployment, and a complete capstone project.</li>
+            </ul>
+
+            <h3>Key Tools &amp; Libraries</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool</th>
+                        <th>Purpose</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Python 3 + Anaconda</strong></td>
+                        <td>Primary language + bundled DS libraries + Jupyter</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Colab</strong></td>
+                        <td>Free cloud Jupyter notebooks with GPU access</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>NumPy / pandas</strong></td>
+                        <td>Numerical computing and data manipulation</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Matplotlib / Seaborn / Plotly</strong></td>
+                        <td>Static and interactive data visualization</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>scikit-learn</strong></td>
+                        <td>Machine learning algorithms and pipelines</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>XGBoost / LightGBM</strong></td>
+                        <td>Gradient boosting (ensemble ML)</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TensorFlow / Keras</strong></td>
+                        <td>Deep learning framework</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Streamlit</strong></td>
+                        <td>Building and deploying data apps</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kaggle</strong></td>
+                        <td>Datasets, competitions, free GPU notebooks</td>
+                        <td>Free</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Python &amp; Mathematics Foundations</h2>
+            <p>Weeks 1 through 3 build the language and quantitative backbone of data science. You will go from writing your first Python program to mastering NumPy and pandas for data manipulation, and building the statistical intuition needed to correctly understand and apply every machine learning algorithm in later phases.</p>
+        </div>
+
+
+        <!-- WEEK 1 -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Python Fundamentals for Data Science</h2>
+                <p>Write real Python programs using variables, functions, collections, and control flow — with examples drawn from data science contexts throughout.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Python environment setup and first notebook</strong> — running Python in Jupyter Notebook cells, Google Colab, and <code>.py</code> scripts; <code>print()</code>, <code>type()</code>, comments; Markdown cells in Jupyter.</li>
+                    <li><strong>Variables and data types</strong> — <code>int</code>, <code>float</code>, <code>str</code>, <code>bool</code>; type conversion; f-strings: <code>f"The mean is {mean:.2f}"</code>.</li>
+                    <li><strong>Collections for data science</strong> — lists (index, slice, <code>.append()</code>, <code>.sort()</code>), tuples (coordinate pairs, column name tuples), dictionaries (<code>{"feature": value}</code>), sets (unique values), list comprehensions.</li>
+                    <li><strong>Control flow</strong> — <code>if</code>/<code>elif</code>/<code>else</code>; <code>for</code> loop; <code>while</code> loop; <code>break</code>, <code>continue</code>.</li>
+                    <li><strong>Functions</strong> — <code>def</code>, parameters, return values, default parameters, lambda functions, built-in functions: <code>len()</code>, <code>sum()</code>, <code>min()</code>, <code>max()</code>, <code>sorted()</code>, <code>zip()</code>, <code>enumerate()</code>, <code>map()</code>, <code>filter()</code>.</li>
+                    <li><strong>File I/O basics</strong> — <code>open()</code>; reading <code>.txt</code> and <code>.csv</code> files line by line; context manager: <code>with open(...) as f:</code>.</li>
+                    <li><strong>Python OOP basics (light intro)</strong> — classes and objects; <code>__init__()</code>, <code>self</code>, methods — enough to understand scikit-learn's <code>fit()</code>/<code>predict()</code> pattern.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every data science tool (NumPy, pandas, scikit-learn) is a Python library. Without Python fluency, you can't read documentation, understand errors, or modify examples to solve your specific problems. The list/dict/function skills this week are used in every subsequent week.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Environment setup + variables + data types + f-strings; log 5 data values with descriptions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Lists — all operations + list comprehensions; calculate min/max/mean/range of a list.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Dictionaries + tuples + sets; build a "student record" dict with grade calculations.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Control flow — <code>if</code>/<code>for</code>/<code>while</code>; write a grade classifier and a loop over a dataset.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Functions — define 8 data-relevant functions (mean, median, variance, count above threshold).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Built-in functions + file I/O — read a CSV file manually line by line; calculate stats.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>OOP intro + review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write a function that takes a list of numbers and returns mean, median, and standard deviation using only built-in Python (no NumPy yet).</li>
+                    <li>Write a function that reads a CSV file manually, parses each row, and returns a list of dicts.</li>
+                    <li>Write a list comprehension that filters a list of temperatures to only those above 30°C and converts them to Fahrenheit.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Basic Data Analyzer</strong> — a Python script (no libraries) that reads a plain-text file of numbers (one per line), calculates: count, sum, mean, median, mode, min, max, range, and standard deviation, and prints a formatted summary report — pushed to GitHub in a Jupyter Notebook with Markdown documentation cells explaining each step.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Confusing <code>=</code> (assignment) with <code>==</code> (comparison).</li>
+                        <li>Modifying a list while iterating over it.</li>
+                        <li>Using mutable default arguments in functions (<code>def f(lst=[])</code> — the list is shared across calls).</li>
+                        <li>Not documenting Jupyter notebooks — running cells out of order.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Read comparisons aloud: "if x equals-equals 5."</li>
+                        <li>Iterate over a copy: <code>for item in list.copy():</code> if modification is needed.</li>
+                        <li>Use <code>None</code> as a default argument: <code>def f(lst=None): if lst is None: lst = []</code>.</li>
+                        <li>Run Jupyter notebooks from top to bottom (Kernel → Restart &amp; Run All) regularly.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>"Python for Everybody" by Dr. Chuck — py4e.com (free book + videos)</li>
+                    <li>Kaggle's "Python" micro-course — kaggle.com/learn (free, interactive, 5 hours)</li>
+                    <li>Google Colab intro tutorial — colab.research.google.com</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 33–36 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 2  -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — NumPy &amp; pandas: The Data Science Foundation</h2>
+                <p>Master NumPy for fast numerical computing and pandas for real-world tabular data manipulation — the two most important data science libraries.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>NumPy</strong> — creating arrays (<code>np.array()</code>, <code>np.zeros()</code>, <code>np.arange()</code>, <code>np.linspace()</code>, <code>np.random.rand()</code>); shapes/dtypes; indexing/slicing; boolean indexing; broadcasting; ufuncs (<code>np.sum()</code>, <code>np.mean()</code>, <code>np.std()</code>, <code>np.percentile()</code>); reshaping; <code>np.where()</code>, <code>np.unique()</code>; linear algebra intro.</li>
+                    <li><strong>pandas — Series &amp; DataFrame</strong> — creating from dict/list/CSV; <code>pd.read_csv()</code>, <code>pd.read_excel()</code>, <code>pd.read_json()</code>.</li>
+                    <li><strong>Inspecting data</strong> — <code>.head()</code>, <code>.tail()</code>, <code>.shape</code>, <code>.info()</code>, <code>.describe()</code>, <code>.dtypes</code>, <code>.columns</code>.</li>
+                    <li><strong>Selecting data</strong> — <code>df['col']</code>, <code>df[['col1','col2']]</code>, <code>df.loc[]</code> (label-based), <code>df.iloc[]</code> (integer-based); boolean filtering with <code>&amp;</code> and <code>|</code>.</li>
+                    <li><strong>Transforming data</strong> — adding/removing columns; sorting; <code>groupby().agg()</code>; <code>value_counts()</code>.</li>
+                    <li><strong>Handling missing data</strong> — <code>.isnull()</code>, <code>.notnull()</code>, <code>.fillna()</code>, <code>.dropna()</code>.</li>
+                    <li><strong>String operations</strong> — <code>df['col'].str.lower()</code>, <code>.str.contains()</code>, <code>.str.split()</code>.</li>
+                    <li><strong>Merging and dates</strong> — <code>pd.merge()</code>, <code>pd.concat()</code>, <code>pd.to_datetime()</code>, <code>.to_csv()</code>, <code>.to_excel()</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> NumPy and pandas are the absolute core of Python data science. 95% of real data science work begins with loading a dataset into a pandas DataFrame and manipulating it. Every other library (scikit-learn, Matplotlib, Seaborn) works with NumPy arrays or pandas DataFrames as inputs.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>NumPy arrays — creation, shapes, dtypes, indexing, slicing; compare speed vs Python list.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>NumPy ufuncs + broadcasting + reshaping + <code>np.where()</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>pandas Series + DataFrame creation + reading a CSV; practice <code>.head()</code>/<code>.info()</code>/<code>.describe()</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>loc</code>/<code>iloc</code> selection + boolean filtering + adding/removing columns.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td><code>groupby</code> + aggregation + sorting + <code>value_counts()</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Missing data handling + <code>pd.merge()</code> + <code>pd.concat()</code> + date parsing.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>String operations + <code>.to_csv()</code> + review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Load the Titanic dataset from Kaggle and answer 10 questions using only pandas: average age by class, survival rate by gender, most common embarkation port, etc.</li>
+                    <li>Create a NumPy array of 1000 random values; calculate all basic statistics; filter to values above the 75th percentile.</li>
+                    <li>Merge two DataFrames on a common key and answer 5 questions about the combined data.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Dataset Explorer</strong> notebook — loads the Titanic dataset (or any dataset of choice), produces: shape and dtypes, a missing value report (count + percentage per column), summary statistics for all numerical columns, value counts for all categorical columns, 5 specific group-by analyses (e.g., survival rate by class, average fare by embarkation), and writes a cleaned version to a new CSV — fully documented with Markdown cells — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>df['col'] == None</code> instead of <code>df['col'].isnull()</code> — the <code>== None</code> check doesn't work with pandas NaN.</li>
+                        <li>Chaining operations without <code>inplace=True</code> or assignment — changes are not saved.</li>
+                        <li>Using <code>.iloc</code> and <code>.loc</code> interchangeably — they behave differently on non-integer indexes.</li>
+                        <li>Forgetting that boolean filtering with multiple conditions requires parentheses: <code>(df['a'] &gt; 0) &amp; (df['b'] &lt; 10)</code>.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Missing values: always use <code>.isnull()</code> / <code>.notnull()</code>, never <code>== None</code> or <code>== np.nan</code>.</li>
+                        <li>All pandas operations return a new DataFrame unless <code>inplace=True</code> — always assign: <code>df = df.dropna()</code>.</li>
+                        <li><code>.loc['label']</code> for label-based; <code>.iloc[5]</code> for position-based.</li>
+                        <li>Multiple conditions always need parentheses AND use <code>&amp;</code>/<code>|</code> operators, never <code>and</code>/<code>or</code>.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>pandas documentation — "10 minutes to pandas" (pandas.pydata.org)</li>
+                    <li>Kaggle "Pandas" micro-course (kaggle.com/learn) — free, interactive</li>
+                    <li>NumPy official quickstart (numpy.org/doc/stable/user/quickstart.html)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36–40 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 3 -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Statistics &amp; Mathematics for Data Science</h2>
+                <p>Build the statistical and mathematical intuition needed to understand and correctly apply data science algorithms.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Descriptive statistics</strong> — mean, median, mode (when each is appropriate); variance, standard deviation, IQR, range; percentiles and quantiles; skewness and kurtosis; covariance and correlation.</li>
+                    <li><strong>Probability fundamentals</strong> — sample space, events, probability; conditional probability <code>P(A|B)</code>; Bayes' theorem (critical for Naive Bayes); independence vs dependence.</li>
+                    <li><strong>Probability distributions</strong> — Bernoulli, Binomial, Poisson; Uniform, Normal (Gaussian); the 68-95-99.7 rule; Z-score; Central Limit Theorem (CLT).</li>
+                    <li><strong>Hypothesis testing</strong> — null hypothesis (H₀) vs alternative hypothesis (H₁); p-value; significance level (α = 0.05); t-test (one-sample, two-sample, paired); chi-squared test; confidence intervals.</li>
+                    <li><strong>Linear algebra basics (for ML)</strong> — vectors and dot products; matrices (multiplication, transpose, inverse); eigenvalues and eigenvectors (conceptual — for PCA in Week 10).</li>
+                    <li><strong>Calculus intuition (for ML)</strong> — derivatives (slope of a function); gradient (derivative of a multi-variable function); gradient descent — the optimization algorithm behind most ML and all deep learning.</li>
+                    <li><strong>Computing statistics with Python</strong> — <code>scipy.stats</code>: <code>ttest_ind()</code>, <code>chi2_contingency()</code>, <code>pearsonr()</code>; visualizing distributions with Matplotlib and Seaborn.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Understanding statistics is what separates a data scientist from someone who runs code without understanding it. Misinterpreting a p-value, not knowing when correlation implies causation, or applying a model that assumes normality to non-normal data are common errors with real consequences. The intuition for gradient descent (this week) directly explains why neural networks train the way they do (Week 13).</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Descriptive stats — compute mean/median/mode/std/IQR on the Titanic dataset; interpret each.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Skewness + correlation matrix on a real dataset; visualize with histograms and scatter plots.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Probability basics — Bayes' theorem; simulate coin flips and dice rolls with <code>numpy.random</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Normal distribution + Z-score + CLT — simulate 1000 sample means and verify normality.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Hypothesis testing — t-test (does survival rate differ by sex?), chi-squared (are class and survival independent?).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Linear algebra with NumPy — vector dot products, matrix multiplication; connect to ML context.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Gradient descent simulation — code a gradient descent on a simple quadratic function; visualize convergence + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Test whether the average salary differs significantly between two departments using a t-test.</li>
+                    <li>Calculate the correlation matrix for a dataset and identify the 3 most correlated feature pairs.</li>
+                    <li>Simulate rolling a die 10,000 times and verify the Central Limit Theorem on the sample means.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Statistical Analysis Report</strong> notebook — loads a real dataset (e.g., the <code>gapminder</code> dataset), computes all descriptive statistics with interpretations, tests 3 hypotheses using the appropriate test, reports p-values with correct interpretation, shows a correlation matrix heatmap, and simulates the Central Limit Theorem on one variable — with thorough Markdown documentation — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Confusing correlation with causation — two variables moving together does not mean one causes the other.</li>
+                        <li>Interpreting p-value as "probability the null hypothesis is true" — it is not.</li>
+                        <li>Applying a t-test when data is not approximately normal and sample sizes are small.</li>
+                        <li>Using <code>mean</code> for skewed data (salary, house prices) instead of <code>median</code>.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always plot your data before computing statistics — outliers and skewness are visible in a histogram.</li>
+                        <li>p-value = "probability of observing this result if H₀ is true" — never "probability H₀ is false."</li>
+                        <li>For small samples with non-normal data: use non-parametric tests (Mann-Whitney U, Kruskal-Wallis).</li>
+                        <li>Report median and IQR for skewed variables; mean and std for symmetric, normally distributed ones.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>StatQuest with Josh Starmer (YouTube) — the clearest free statistics for data science resource</li>
+                    <li>Khan Academy Statistics (khanacademy.org) — free, interactive</li>
+                    <li><code>scipy.stats</code> documentation (docs.scipy.org)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36–40 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Data Analysis &amp; Visualization</h2>
+            <p>Weeks 4 through 6 transform raw, messy data into actionable insight. You will learn to clean real-world datasets, create compelling visualizations with Matplotlib, Seaborn, and Plotly, and conduct a complete structured Exploratory Data Analysis — the process every data scientist performs before training any model.</p>
+        </div>
+
+
+        <!-- WEEK 4 -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Data Cleaning &amp; Preprocessing</h2>
+                <p>Transform raw, messy, real-world data into clean, analysis-ready data — handling missing values, outliers, duplicates, encoding, and scaling.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Understanding dirty data</strong> — types of problems: missing values, duplicates, inconsistent formats, incorrect data types, outliers, impossible values; data quality assessment.</li>
+                    <li><strong>Handling missing values</strong> — <code>.isnull().sum()</code>, <code>.isnull().mean()</code>; strategies: deletion (<code>dropna()</code>), mean/median/mode imputation, forward/backward fill, <code>SimpleImputer</code> from scikit-learn.</li>
+                    <li><strong>Handling duplicates</strong> — <code>.duplicated()</code>, <code>.drop_duplicates()</code>.</li>
+                    <li><strong>Data type correction</strong> — <code>pd.to_numeric()</code>, <code>pd.to_datetime()</code>, <code>.astype()</code>.</li>
+                    <li><strong>Encoding categorical variables</strong> — Label Encoding (<code>LabelEncoder</code>); One-Hot Encoding (<code>pd.get_dummies()</code> / <code>OneHotEncoder</code>); Ordinal Encoding; the dummy variable trap.</li>
+                    <li><strong>Outlier detection and handling</strong> — Z-score method (±3 std); IQR method (Q1 - 1.5*IQR, Q3 + 1.5*IQR); box plots; remove, cap (winsorization), or log transform.</li>
+                    <li><strong>Feature scaling</strong> — <code>MinMaxScaler</code> (0–1 range); <code>StandardScaler</code> (mean=0, std=1); when scaling matters (k-NN, SVM, neural networks) vs when it doesn't (Decision Trees).</li>
+                    <li><strong>scikit-learn Pipeline intro</strong> — <code>Pipeline</code> for chaining preprocessing steps; <code>ColumnTransformer</code> for different transformations per column.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Real-world data is always messy. Data scientists spend 60–80% of their time cleaning data. A model trained on uncleaned data produces unreliable results. The preprocessing skills taught this week are applied in every machine learning project from Week 7 onward.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Data profiling — load a messy dataset; assess missing values, dtypes, duplicates, ranges.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Missing value handling — compare deletion vs imputation on a regression target.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Categorical encoding — label + one-hot on the same column; compare the resulting DataFrames.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Outlier detection — Z-score + IQR on salary/price columns; box plot visualization.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Feature scaling — apply <code>MinMaxScaler</code> and <code>StandardScaler</code>; observe effect on data distribution.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td><code>Pipeline</code> + <code>ColumnTransformer</code> — combine all preprocessing steps for numerical and categorical columns.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>End-to-end cleaning of a new dataset + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Clean the Ames Housing dataset completely: handle all 81 features with missing values and encode all categorical columns.</li>
+                    <li>Compare model performance (use a simple <code>LinearRegression</code>) on the raw vs cleaned dataset.</li>
+                    <li>Build a reusable <code>clean_dataset(df)</code> function that handles the most common issues.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Data Cleaning Pipeline</strong> notebook — loads a real messy dataset (Titanic or Ames Housing), builds a full <code>Pipeline</code> + <code>ColumnTransformer</code> that: imputes missing numerics with median, imputes missing categoricals with mode, one-hot encodes categoricals, standardizes numerics — saves the cleaned output to CSV, documents every decision with Markdown justification — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Imputing with the mean of the entire dataset instead of the training set mean (causes data leakage).</li>
+                        <li>One-hot encoding without dropping one category (dummy variable trap — multicollinearity).</li>
+                        <li>Scaling the target variable (only scale features, not the target).</li>
+                        <li>Not encoding categorical columns before feeding to scikit-learn (most estimators don't accept strings).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Fit scalers and imputers only on training data: <code>scaler.fit(X_train)</code> then <code>scaler.transform(X_test)</code>.</li>
+                        <li>Use <code>pd.get_dummies(df, drop_first=True)</code> or <code>OneHotEncoder(drop='first')</code>.</li>
+                        <li>Only scale <code>X</code> (features), never <code>y</code> (target) for most algorithms.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Kaggle "Data Cleaning" micro-course (kaggle.com/learn) — free, focused</li>
+                    <li>scikit-learn preprocessing documentation (scikit-learn.org)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36–40 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 5-->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Data Visualization: Matplotlib, Seaborn &amp; Plotly</h2>
+                <p>Create clear, informative, and visually appealing charts that communicate data insights effectively — the foundation of data storytelling.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Matplotlib</strong> — <code>fig, ax = plt.subplots()</code>; plot types: line, bar/barh, scatter, histogram, pie; customization (titles, labels, legends, grid, colors); multiple subplots; saving figures; styles (<code>plt.style.use('seaborn-v0_8')</code>).</li>
+                    <li><strong>Seaborn</strong> — <code>sns.histplot()</code>/<code>sns.kdeplot()</code>; <code>sns.boxplot()</code>/<code>sns.violinplot()</code>; <code>sns.scatterplot()</code>/<code>sns.pairplot()</code>; <code>sns.heatmap(df.corr(), annot=True)</code>; <code>sns.barplot()</code>/<code>sns.countplot()</code>; <code>sns.lineplot()</code>; <code>sns.FacetGrid()</code>; <code>hue</code> parameter.</li>
+                    <li><strong>Plotly</strong> — <code>import plotly.express as px</code>; <code>px.scatter()</code>, <code>px.bar()</code>, <code>px.line()</code>, <code>px.histogram()</code>, <code>px.box()</code>; <code>px.choropleth()</code> for geographic maps; interactive hover/zoom/pan; <code>fig.write_html()</code>.</li>
+                    <li><strong>Choosing the right chart</strong> — distribution → histogram/box/violin; relationship → scatter; comparison → bar; time → line; correlation → heatmap; part-of-whole → pie (use sparingly).</li>
+                    <li><strong>Data storytelling principles</strong> — remove chart junk; use color purposefully; label clearly; consistent scales.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A data insight that can't be communicated visually is a data insight that won't be acted on. Visualization is the primary way data scientists communicate with non-technical stakeholders. Every EDA, ML evaluation, and final project presentation relies on the skills from this week.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Matplotlib basics — line/bar/scatter/histogram with full customization on one dataset.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Matplotlib subplots — a 2×3 grid of different chart types comparing dataset features.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Seaborn distributions — histogram, KDE, box plot, violin plot on the same variable.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Seaborn relationships — pairplot + correlation heatmap; interpret the patterns found.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Seaborn categorical — countplot, barplot with <code>hue</code>; compare survival rates by class and sex.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Plotly interactive — rebuild 3 Seaborn charts as interactive Plotly charts.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td><code>px.choropleth</code> map + storytelling principles + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Create a complete visualization report for the gapminder dataset: life expectancy vs GDP scatter, population choropleth map, life expectancy over time by continent line chart.</li>
+                    <li>Build a correlation heatmap and identify the top 3 correlated pairs in the Ames Housing dataset.</li>
+                    <li>Recreate a chart from a news article or data journalism website using Matplotlib.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Visual Data Story</strong> notebook — loads a dataset of your choice, tells a data story in 8–10 Seaborn/Plotly charts answering specific questions, with Markdown narrative text between each chart explaining the finding — all charts saved as high-resolution PNG files — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>plt.plot()</code> without <code>fig, ax = plt.subplots()</code> — works but breaks on multiple subplots.</li>
+                        <li>Using default chart colors with multiple overlapping series — impossible to distinguish.</li>
+                        <li>Building a pie chart with more than 5 slices — becomes unreadable.</li>
+                        <li>Not labeling axes and titles — a chart without context communicates nothing.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always start with <code>fig, ax = plt.subplots(figsize=(10, 6))</code> — gives you control over size.</li>
+                        <li>Use a named color palette: <code>sns.color_palette('Set2')</code> for categorical series.</li>
+                        <li>5+ categories: use a horizontal bar chart, not a pie chart.</li>
+                        <li>Every chart must have: a title, x-axis label, y-axis label, and a source note.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Matplotlib documentation tutorials (matplotlib.org/stable/tutorials)</li>
+                    <li>Seaborn tutorial documentation (seaborn.pydata.org/tutorial)</li>
+                    <li>Plotly Express documentation (plotly.com/python/plotly-express)</li>
+                    <li>Kaggle "Data Visualization" micro-course (kaggle.com/learn)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36–38 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 6 -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Exploratory Data Analysis (EDA)</h2>
+                <p>Conduct a complete, structured Exploratory Data Analysis from start to finish — combining all Phase 1 and Phase 2 skills to systematically understand a dataset before modelling.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>EDA framework</strong> — the 6-step process: understand the problem → understand the data → assess quality → explore univariate → explore bivariate/multivariate → summarize findings; EDA is question-driven, not tool-driven.</li>
+                    <li><strong>Univariate analysis</strong> — numerical: histogram, box plot, mean/median/std/skewness, outlier detection; categorical: value counts, bar chart, proportion table.</li>
+                    <li><strong>Bivariate analysis</strong> — numerical vs numerical: scatter plot, correlation coefficient; categorical vs numerical: box plot by category, bar chart of means; categorical vs categorical: <code>pd.crosstab()</code>, stacked bar chart, chi-squared test.</li>
+                    <li><strong>Multivariate analysis</strong> — pair plots with <code>hue</code>; correlation matrix heatmap; scatter plots with color and size encoding; 3D scatter plots with Plotly.</li>
+                    <li><strong>Feature relationships and business insights</strong> — identifying the most predictive features for the target; identifying multicollinearity.</li>
+                    <li><strong>Profiling tools</strong> — <code>ydata-profiling</code> (automatic EDA reports); <code>sweetviz</code> (comparative EDA); when to use auto-profiling vs manual EDA.</li>
+                    <li><strong>Communicating EDA findings</strong> — structured EDA report in Jupyter; key findings → supporting evidence → implications for modelling.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> EDA is what data scientists do before training any model. The insights from EDA determine: which features to include, which to engineer, which algorithms are appropriate, and what data quality issues need fixing. A thorough EDA prevents countless modelling mistakes downstream.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Choose a dataset from Kaggle; define 10 specific questions you want to answer; write them in Markdown.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Univariate analysis — all numerical + all categorical columns with visualizations and written observations.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Bivariate: numerical vs numerical — scatter plots, correlation; find the top correlated features.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Bivariate: categorical vs numerical — box plots; categorical vs categorical — cross-tabs + chi-squared.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Multivariate — pair plot, correlation heatmap, 3-variable scatter.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Auto-profiling with <code>ydata-profiling</code>; compare findings to your manual EDA.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Write full EDA summary + implications for modelling + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Complete EDA Report</strong> notebook — conducts a structured EDA on a real Kaggle dataset (student choice), following all 6 EDA phases, with 10+ visualizations, 3 statistical tests, a correlation heatmap, an auto-profiling report, a written summary of key findings, and a "next steps for modelling" section — this notebook should be portfolio-quality: clean, well-documented, interpretive — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Running EDA without questions — producing plots that don't answer anything.</li>
+                        <li>Analyzing all 50 columns of a dataset equally — focus on the target variable and the most relevant features.</li>
+                        <li>Only using one visualization type (e.g., only histograms).</li>
+                        <li>Not writing interpretive text — a plot without interpretation is just an image.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Write your research questions first — every chart should answer one of them.</li>
+                        <li>Start with <code>.corr()['target'].sort_values()</code> — immediately ranks features by correlation with the target.</li>
+                        <li>Use at least 4 different visualization types.</li>
+                        <li>Every chart gets a 1–3 sentence interpretation below it.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Kaggle notebooks (kaggle.com) — look at highly-voted EDA notebooks for any dataset</li>
+                    <li><code>ydata-profiling</code> documentation (ydata-profiling.ydata.ai)</li>
+                    <li>"Python for Data Analysis" by Wes McKinney (free via O'Reilly with free trial)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36–40 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Machine Learning</h2>
+            <p>Weeks 7 through 10 cover the complete machine learning toolkit: regression for predicting numbers, classification for predicting categories, cross-validation for reliable evaluation, and unsupervised learning for finding hidden structure. By the end of Phase 3 you will have trained and evaluated 8+ ML algorithms using the scikit-learn API.</p>
+        </div>
+
+
+        <!--WEEK 7 -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Machine Learning Fundamentals &amp; Linear Regression</h2>
+                <p>Understand the core concepts of machine learning and implement your first predictive model — Linear Regression — using scikit-learn's fit/predict pattern.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Machine learning fundamentals</strong> — types of ML (supervised/unsupervised/reinforcement); the ML workflow; training/validation/test sets; <code>train_test_split()</code>; bias-variance tradeoff; underfitting vs overfitting.</li>
+                    <li><strong>scikit-learn API pattern</strong> — consistent <code>fit()</code>/<code>predict()</code>/<code>score()</code> interface across all algorithms.</li>
+                    <li><strong>Simple Linear Regression</strong> — <code>y = β₀ + β₁x</code>; Ordinary Least Squares (OLS); interpreting coefficients; assumptions (linearity, independence, homoscedasticity, normality of residuals).</li>
+                    <li><strong>Multiple Linear Regression</strong> — multiple predictors; feature matrix <code>X</code> shape; <code>model.coef_</code>, <code>model.intercept_</code>.</li>
+                    <li><strong>Regression evaluation metrics</strong> — MAE, MSE, RMSE, R² (R-squared), Adjusted R²; <code>from sklearn.metrics import mean_squared_error, r2_score</code>.</li>
+                    <li><strong>Residual analysis</strong> — plotting residuals vs fitted values; checking normality of residuals; detecting patterns.</li>
+                    <li><strong>Polynomial Regression</strong> — <code>PolynomialFeatures(degree=2)</code>; fitting a curved relationship with a linear model.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Linear Regression is the foundation of ML — understanding it deeply (especially bias-variance tradeoff and residual analysis) makes every subsequent algorithm easier to understand. The scikit-learn API pattern you learn here (<code>fit</code>/<code>predict</code>/<code>score</code>) is the same for every algorithm through Week 13.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>ML concepts + train/test split + bias-variance; <code>train_test_split</code> on 3 datasets.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Simple Linear Regression — implement from scratch with NumPy; then with scikit-learn; compare.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Multiple Linear Regression on the Ames Housing dataset; interpret all coefficients.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Regression metrics — compute MAE/MSE/RMSE/R² for the housing model; compare on train vs test.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Residual analysis — plot residuals; check for patterns; diagnose model issues.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Polynomial Regression — fit degree 1, 2, 3, 4 on a curved dataset; plot train vs test R².</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Full regression project on a new dataset + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>House Price Predictor</strong> notebook — loads the Ames Housing dataset, applies the Week 4 preprocessing pipeline, trains a Multiple Linear Regression model, evaluates with all 4 metrics on train and test, analyzes residuals for assumption violations, adds Polynomial features and compares, and reports final model interpretation — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Fitting the scaler on the entire dataset before splitting — data leakage.</li>
+                        <li>Interpreting R² = 0.7 as "the model is 70% accurate" — it means "explains 70% of variance."</li>
+                        <li>Not checking residuals — a high R² with patterned residuals indicates violated assumptions.</li>
+                        <li>Using Linear Regression on classification problems.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>StatQuest "Linear Regression" videos (YouTube)</li>
+                    <li>scikit-learn "Getting Started" documentation (scikit-learn.org)</li>
+                    <li>Kaggle "Intro to Machine Learning" micro-course (kaggle.com/learn)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 37–40 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 8  -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Classification: Logistic Regression, KNN &amp; Decision Trees</h2>
+                <p>Solve classification problems — predicting a category rather than a number — using three foundational algorithms and classification-specific evaluation metrics.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Classification concepts</strong> — binary vs multi-class; decision boundary; class imbalance.</li>
+                    <li><strong>Classification evaluation metrics</strong> — confusion matrix (TP, TN, FP, FN); accuracy, precision, recall (sensitivity), F1-score; ROC curve and AUC; <code>classification_report()</code>, <code>confusion_matrix()</code>, <code>roc_auc_score()</code>; when to prioritize precision vs recall.</li>
+                    <li><strong>Logistic Regression</strong> — sigmoid function; decision threshold (default 0.5); <code>model.predict_proba()</code>; interpreting coefficients in log-odds terms.</li>
+                    <li><strong>K-Nearest Neighbors (KNN)</strong> — majority vote among K nearest neighbors; distance metrics (Euclidean, Manhattan); choosing K with cross-validation; why KNN requires feature scaling; curse of dimensionality.</li>
+                    <li><strong>Decision Trees</strong> — recursive binary splitting; Gini impurity vs entropy; <code>max_depth</code>, <code>min_samples_split</code>; <code>tree.plot_tree()</code>; <code>dt.feature_importances_</code>; no scaling required.</li>
+                    <li><strong>Handling class imbalance</strong> — SMOTE (<code>imbalanced-learn</code>); undersampling; <code>class_weight='balanced'</code>; use AUC-ROC not accuracy for imbalanced problems.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Classification is the most common ML task — spam detection, churn prediction, disease diagnosis, image recognition, and credit risk all frame the problem as "which class does this belong to?" The confusion matrix, precision/recall, and AUC introduced this week are used to evaluate every classifier you'll train.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Confusion matrix + all metrics; compute by hand for a simple 10-sample example.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Logistic Regression on Titanic survival; compute full classification report; adjust threshold.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>ROC curve + AUC for Logistic Regression; interpret the curve.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>KNN — train for K=1, 3, 5, 7, 11; compare accuracy; visualize decision boundaries on 2D data.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Decision Tree — train; visualize; tune <code>max_depth</code>; examine feature importances.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Class imbalance — create an imbalanced dataset; compare accuracy vs AUC; apply <code>class_weight='balanced'</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Compare all 3 classifiers on one dataset + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Customer Churn Classifier</strong> notebook — loads a telecom churn dataset, preprocesses it, trains Logistic Regression/KNN/Decision Tree, compares them using confusion matrix/F1/AUC, handles class imbalance with <code>class_weight</code>, selects the best model, and provides a written recommendation — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Reporting accuracy on an imbalanced dataset — 99% accuracy when 99% of data is class 0 means nothing.</li>
+                        <li>Forgetting to scale before KNN — distances between scaled and unscaled features are meaningless.</li>
+                        <li>Choosing model based on training accuracy instead of test accuracy.</li>
+                        <li>Interpreting a Decision Tree's training accuracy as its real performance — trees overfit easily.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>StatQuest "Logistic Regression" and "Decision Trees" series (YouTube)</li>
+                    <li>scikit-learn classification documentation (scikit-learn.org)</li>
+                    <li>Kaggle "Intro to Machine Learning" micro-course</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 9 -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Advanced Supervised Learning: SVM, Naive Bayes &amp; Cross-Validation</h2>
+                <p>Learn two more powerful classifiers (SVM and Naive Bayes), master cross-validation for reliable model evaluation, and apply hyperparameter tuning.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Support Vector Machines (SVM)</strong> — maximum-margin hyperplane; support vectors; soft-margin SVM with <code>C</code> parameter; kernel trick; kernels: <code>linear</code>, <code>rbf</code>, <code>poly</code>; always requires feature scaling.</li>
+                    <li><strong>Naive Bayes</strong> — Bayes' theorem applied to classification; naive independence assumption; Gaussian NB (continuous features); Multinomial NB (text/word counts); Bernoulli NB (binary features); best use case: text classification.</li>
+                    <li><strong>Cross-Validation</strong> — why a single train/test split is insufficient; K-Fold CV: train on K-1 folds, test on 1; <code>cross_val_score(estimator, X, y, cv=5, scoring='f1')</code>; Stratified K-Fold for imbalanced classes; reporting: mean ± standard deviation of CV scores.</li>
+                    <li><strong>Hyperparameter Tuning</strong> — hyperparameters vs parameters; Grid Search: <code>GridSearchCV(estimator, param_grid, cv=5)</code>; Random Search: <code>RandomizedSearchCV</code>; fitting on train, evaluating on test.</li>
+                    <li><strong>Model selection best practices</strong> — the final test set is used ONCE; learning curves; validation curves.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Real ML projects require reliable model evaluation — a single train/test split can be misleading. Cross-validation gives you a confidence interval on your model's performance. GridSearchCV is the standard way to find the best hyperparameters. SVM and Naive Bayes add powerful tools for text and high-dimensional data.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>SVM theory + <code>kernel='linear'</code> on Iris dataset; visualize decision boundary.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>SVM with <code>rbf</code> kernel + <code>C</code> parameter effect; tune with a simple loop.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Naive Bayes — Gaussian NB on Iris; Multinomial NB on a text dataset.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>K-Fold cross-validation — manual implementation; then <code>cross_val_score</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Stratified K-Fold on an imbalanced dataset; compare to regular K-Fold.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td><code>GridSearchCV</code> on SVM; <code>RandomizedSearchCV</code> on Decision Tree; compare results.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Learning and validation curves for the Week 8 churn model + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Text Spam Classifier</strong> notebook — loads the SMS Spam Collection dataset from UCI, preprocesses text (lowercase, remove punctuation, CountVectorizer), trains Naive Bayes, Logistic Regression, and SVM classifiers, evaluates with 5-fold stratified CV, tunes the best model with <code>GridSearchCV</code>, and generates a final classification report — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using the test set during hyperparameter tuning — makes the test set a "training" set.</li>
+                        <li>Reporting CV scores without standard deviation — "F1 = 0.87" is less useful than "F1 = 0.87 ± 0.03."</li>
+                        <li>Forgetting to scale for SVM — kernel computations are meaningless on unscaled features.</li>
+                        <li>Using Grid Search with a very fine grid on too many parameters — exponentially slow.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>The test set is used ONCE — after all GridSearch and tuning is done.</li>
+                        <li>Always report: <code>f"{scores.mean():.3f} ± {scores.std():.3f}"</code>.</li>
+                        <li>SVM always goes in a Pipeline after <code>StandardScaler</code>.</li>
+                        <li>Start with a coarse grid (e.g., <code>C: [0.1, 1, 10]</code>), then refine around the best value.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>StatQuest "Support Vector Machines" (YouTube)</li>
+                    <li>scikit-learn model selection documentation (cross-validation, GridSearchCV)</li>
+                    <li>UCI SMS Spam Collection dataset (archive.ics.uci.edu)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+
+        <!--   WEEK 10  -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Unsupervised Learning: Clustering, PCA &amp; Anomaly Detection</h2>
+                <p>Discover patterns in data without labels using clustering algorithms, reduce data dimensionality with PCA, and detect anomalies.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>K-Means Clustering</strong> — algorithm: initialize centroids → assign → recompute → repeat; <code>KMeans(n_clusters=k)</code>; Elbow method (inertia); Silhouette score; limitations: spherical clusters, sensitive to outliers.</li>
+                    <li><strong>Hierarchical Clustering</strong> — agglomerative (bottom-up) vs divisive; dendrogram; linkage methods (Ward, complete, average); <code>scipy.cluster.hierarchy.dendrogram()</code>.</li>
+                    <li><strong>DBSCAN</strong> — density-based; no need to specify K; finds arbitrarily-shaped clusters; marks noise as -1; <code>eps</code> and <code>min_samples</code> parameters.</li>
+                    <li><strong>Cluster evaluation</strong> — Silhouette score; Davies-Bouldin index; visual inspection via PCA projection.</li>
+                    <li><strong>Principal Component Analysis (PCA)</strong> — finds orthogonal axes of maximum variance; <code>PCA(n_components=2).fit_transform(X)</code>; explained variance ratio; scree plot; uses: visualization, preprocessing, reducing overfitting.</li>
+                    <li><strong>t-SNE and UMAP (intro)</strong> — non-linear dimensionality reduction for visualization; <code>from sklearn.manifold import TSNE</code>.</li>
+                    <li><strong>Anomaly Detection (intro)</strong> — <code>IsolationForest(contamination=0.05)</code>; Local Outlier Factor (LOF); Z-score based detection; use cases: fraud detection, network intrusion.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Many real problems have no labels — you don't know what categories exist in advance. Customer segmentation, document grouping, and anomaly detection are inherently unsupervised tasks. PCA is used as a preprocessing step in many supervised ML pipelines to reduce dimensionality and improve performance.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>K-Means on Iris and Mall Customers; elbow method for K selection.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Silhouette score; K-Means vs ground truth comparison on Iris.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Hierarchical clustering + dendrogram on a small dataset.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>DBSCAN on a non-spherical dataset; compare to K-Means on the same data.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>PCA — reduce the Iris dataset to 2 components; visualize; scree plot.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>t-SNE on MNIST digits (first 2000 samples) — visualize the 10-class clustering.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Isolation Forest for anomaly detection on a credit card fraud dataset + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Customer Segmentation Analysis</strong> notebook — loads the Mall Customer or Online Retail dataset, applies K-Means with proper K selection (elbow + silhouette), visualizes segments with PCA projection, profiles each segment (mean values of features per cluster), provides marketing strategy recommendations for each segment — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Applying K-Means without scaling — features on different scales dominate the distance calculation.</li>
+                        <li>Choosing K based only on the elbow without the silhouette score.</li>
+                        <li>Using PCA for feature selection — PCA is for dimensionality reduction, not feature selection; the components are linear combinations of all features.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>StatQuest "K-Means Clustering" and "PCA" series (YouTube)</li>
+                    <li>scikit-learn clustering documentation (scikit-learn.org)</li>
+                    <li>Mall Customer Segmentation dataset (Kaggle)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 37–40 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Advanced ML &amp; Deep Learning Intro</h2>
+            <p>Weeks 11 through 13 add the advanced machine learning layer: feature engineering and ensemble methods that win Kaggle competitions, time series and NLP for specialized data types, and neural networks with TensorFlow/Keras for image and sequence data. By the end of Phase 4 you will have trained CNNs, LSTMs, and used transfer learning — the techniques behind modern AI products.</p>
+        </div>
+
+
+        <!--  WEEK 11 -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Feature Engineering &amp; Ensemble Methods</h2>
+                <p>Improve model performance through intelligent feature creation and selection, and master ensemble methods (Random Forest, Gradient Boosting) that are the workhorses of real-world ML competitions.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Feature Engineering</strong> — creating new features: ratios, products, log transforms, date features; binning continuous variables; interaction features; text features (character count, word count); why feature engineering often matters more than algorithm choice.</li>
+                    <li><strong>Feature Selection</strong> — filter methods (correlation, chi-squared); wrapper methods: Recursive Feature Elimination (<code>RFE</code>); embedded methods: <code>SelectFromModel</code>; variance threshold.</li>
+                    <li><strong>Random Forest</strong> — ensemble of many Decision Trees; bagging (bootstrap aggregation); random feature selection; <code>RandomForestClassifier(n_estimators=100)</code>; feature importances; Out-of-Bag (OOB) error.</li>
+                    <li><strong>Gradient Boosting</strong> — sequential trees, each correcting previous errors; gradient descent on trees; <code>GradientBoostingClassifier</code>; XGBoost (<code>pip install xgboost</code>); LightGBM; key hyperparameters: <code>n_estimators</code>, <code>learning_rate</code>, <code>max_depth</code>, <code>subsample</code>; early stopping.</li>
+                    <li><strong>Random Forest vs Gradient Boosting</strong> — RF: parallel training, robust, less hyperparameter sensitive; GBM/XGBoost: generally higher accuracy, more tuning required.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Random Forest and XGBoost together win the majority of Kaggle tabular data competitions. They require less preprocessing than many algorithms, handle mixed data types well, and produce good performance out of the box. Feature engineering — often more impactful than algorithm choice — is what separates average models from great ones.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Feature engineering — create 5 new features in the Titanic dataset (family size, title from name); observe model improvement.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Feature selection — <code>RFE</code>, <code>SelectFromModel</code>, correlation filter; compare model on full vs selected features.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Random Forest — fit with default settings; plot feature importances; OOB error.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Tune Random Forest with <code>RandomizedSearchCV</code>; compare to default.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Gradient Boosting with scikit-learn; compare to Random Forest on same dataset.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>XGBoost — install, train, early stopping, feature importance plot.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>LightGBM intro + full comparison: DT vs RF vs GBM vs XGBoost + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>An <strong>Ensemble Model Comparison</strong> notebook — loads the Titanic or Ames Housing dataset, engineers 5+ new features, trains and compares: Logistic Regression/Decision Tree/Random Forest/Gradient Boosting/XGBoost using 5-fold CV, selects the best model, tunes it with <code>RandomizedSearchCV</code>, presents final evaluation — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Engineering features on the entire dataset before train/test split — leakage.</li>
+                        <li>Setting <code>learning_rate</code> too high in gradient boosting — model fails to converge or overfits.</li>
+                        <li>Ignoring the <code>random_state</code> parameter — non-reproducible results.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Feature engineering should be part of the Pipeline or applied after splitting.</li>
+                        <li>XGBoost: start with <code>learning_rate=0.1</code>, <code>n_estimators=100</code>; use early stopping.</li>
+                        <li>Always set <code>random_state=42</code> in all stochastic estimators.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>StatQuest "Random Forests" and "XGBoost" (YouTube)</li>
+                    <li>XGBoost documentation (xgboost.readthedocs.io)</li>
+                    <li>Kaggle "Intermediate Machine Learning" micro-course (kaggle.com/learn)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 12  -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Time Series Analysis &amp; Natural Language Processing (NLP) Intro</h2>
+                <p>Handle two specialized but extremely common data types — time-series data and text data — with appropriate analysis and modelling techniques.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Time Series Analysis</strong> — components (Trend, Seasonality, Cyclicity, Noise); <code>pd.to_datetime()</code>, <code>df.set_index('date')</code>, <code>.resample()</code>, <code>.rolling()</code>; ACF and PACF plots; <code>seasonal_decompose()</code> from <code>statsmodels</code>; stationarity and ADF test; ARIMA model; Prophet by Meta (<code>pip install prophet</code>).</li>
+                    <li><strong>NLP — Text preprocessing</strong> — tokenization; stop word removal; stemming vs lemmatization; <code>CountVectorizer</code> (bag of words); <code>TfidfVectorizer</code> (TF-IDF); N-grams (bigrams, trigrams).</li>
+                    <li><strong>NLP — Text classification</strong> — sentiment analysis; pipeline: <code>TfidfVectorizer</code> + <code>LogisticRegression</code>/<code>Naive Bayes</code>; evaluating text classifiers.</li>
+                    <li><strong>NLP — Word embeddings intro</strong> — Word2Vec conceptual overview; why embeddings outperform bag-of-words; <code>spaCy</code> intro — loading <code>en_core_web_sm</code> and accessing <code>.vector</code>.</li>
+                    <li><strong>NLP practical tools</strong> — <code>NLTK</code> basics; <code>spaCy</code> for production NLP; <code>TextBlob</code> for simple sentiment; Hugging Face Transformers intro (BERT demo).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Time series data appears in finance, IoT, sales forecasting, and healthcare monitoring. Text data appears in customer reviews, social media, and document analysis. These two domains represent a huge proportion of real-world data science problems and require specialized techniques beyond tabular ML.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Time series basics — load a stock price dataset; resample to weekly/monthly; rolling 7-day average.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Decomposition + stationarity test; ARIMA model on Air Passengers dataset.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Prophet — install and forecast; interpret trend and seasonal components.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Text preprocessing — tokenize, remove stopwords, stem/lemmatize on 100 reviews.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td><code>CountVectorizer</code> → <code>TfidfVectorizer</code> → text classification pipeline on IMDB sentiment.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td><code>spaCy</code> — POS tagging, Named Entity Recognition, word vectors.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Hugging Face pipeline demo for sentiment classification + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>Sentiment Analysis &amp; Time Series Dashboard</strong> notebook — builds a TF-IDF + Logistic Regression sentiment classifier for the IMDB dataset, reports performance, analyzes sentiment trends over time if dates are available, and builds a Prophet time series forecast on a sales or stock dataset — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Not resampling before plotting a time series with irregular timestamps.</li>
+                        <li>Fitting <code>TfidfVectorizer</code> on the test set — causes data leakage; fit only on train.</li>
+                        <li>Using ARIMA on non-stationary data without differencing.</li>
+                        <li>Tokenizing text without lowercase conversion — "Apple" and "apple" treated as different words.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li><code>statsmodels</code> documentation — time series section (statsmodels.org)</li>
+                    <li>NLTK Book (nltk.org/book) — free online</li>
+                    <li>Kaggle "NLP" micro-course (kaggle.com/learn)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 13 -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Introduction to Deep Learning with TensorFlow &amp; Keras</h2>
+                <p>Understand neural networks conceptually and build real deep learning models — image classifiers, regression networks, and simple NLP networks — using TensorFlow/Keras.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Neural network fundamentals</strong> — neurons, weights, biases, activation functions (Sigmoid, ReLU, Softmax); feedforward network; loss functions (cross-entropy for classification, MSE for regression); backpropagation; gradient descent + Adam optimizer.</li>
+                    <li><strong>Keras Sequential API</strong> — <code>model = Sequential()</code>; <code>model.add(Dense(units=64, activation='relu'))</code>; <code>model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])</code>; <code>model.fit()</code>, <code>model.evaluate()</code>, <code>model.predict()</code>; plotting training history.</li>
+                    <li><strong>Convolutional Neural Networks (CNNs)</strong> — convolution operation; <code>Conv2D</code>, <code>MaxPooling2D</code>, <code>Flatten</code>, <code>Dense</code>; image classification; <code>ImageDataGenerator</code> for data augmentation; Transfer Learning: loading pre-trained MobileNet/VGG16.</li>
+                    <li><strong>Overfitting in deep learning</strong> — Dropout (<code>Dropout(0.5)</code>); Batch Normalization (<code>BatchNormalization()</code>); Early Stopping (<code>EarlyStopping(patience=5, restore_best_weights=True)</code>); L2 regularization.</li>
+                    <li><strong>RNN / LSTM intro</strong> — why sequences need RNNs (order matters); <code>LSTM(units=64)</code>; text classification with LSTM; time series forecasting with LSTM.</li>
+                    <li><strong>Google Colab for deep learning</strong> — using free GPU: Runtime → Change runtime type → T4 GPU.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Deep learning powers modern AI — image recognition, language models, speech recognition. Building a CNN that classifies images or an LSTM that classifies text gives you firsthand understanding of the techniques behind every major AI product. This week is where data science meets AI.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Neural network theory → first Keras model (Dense layers on Titanic dataset); plot loss curves.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Overfitting prevention — add Dropout and EarlyStopping; compare training curves.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>CNN theory → first CNN on MNIST (handwritten digits); achieve &gt;98% accuracy.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>CNN on CIFAR-10 (colored images); add <code>ImageDataGenerator</code> for data augmentation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Transfer Learning — load MobileNetV2, freeze base layers, add custom head; fine-tune on a small dataset.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>LSTM for text sentiment classification on IMDB dataset.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>LSTM for time series forecasting on stock prices + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>An <strong>Image Classifier with Transfer Learning</strong> notebook — uses MobileNetV2 pre-trained on ImageNet, fine-tunes it on a 2–5 class image dataset (dogs vs cats, or a custom dataset), trains with data augmentation and early stopping, plots training/validation curves, reports final accuracy, saves the model as <code>model.h5</code>, and demonstrates prediction on 5 sample images — using Google Colab GPU — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Training on CPU (10x slower than GPU for CNNs) — always use Google Colab GPU.</li>
+                        <li>Adding too many layers and neurons before getting a simple model to work.</li>
+                        <li>Not normalizing image pixel values (divide by 255.0) — network learns slowly or not at all.</li>
+                        <li>Using Sigmoid activation in the output layer for multi-class classification (use Softmax).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Switch to Colab GPU: Runtime → Change runtime type → T4 GPU.</li>
+                        <li>Start simple (1 Conv layer, 1 Dense layer) and add complexity only if needed.</li>
+                        <li><code>X_train = X_train / 255.0</code> — always normalize pixel values to 0–1.</li>
+                        <li>Multi-class: <code>loss='categorical_crossentropy'</code> + <code>activation='softmax'</code>. Binary: <code>loss='binary_crossentropy'</code> + <code>activation='sigmoid'</code>.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>TensorFlow/Keras tutorials (tensorflow.org/tutorials)</li>
+                    <li>Deep Learning Specialization (deeplearning.ai — audit for free)</li>
+                    <li>Kaggle "Intro to Deep Learning" micro-course (kaggle.com/learn)</li>
+                    <li>Google Colab (colab.research.google.com) — free GPU</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–45 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 5 — SQL, Deployment &amp; Capstone</h2>
+            <p>Weeks 14 and 15 bridge the gap between analysis and production. You will master SQL for database querying, deploy a machine learning model as an interactive Streamlit web application, and build and present the complete capstone project — transforming 14 weeks of learning into a deployed, portfolio-quality data science product.</p>
+        </div>
+
+
+        <!--  WEEK 14  -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — SQL for Data Science &amp; Model Deployment with Streamlit</h2>
+                <p>Query databases with SQL to extract data for analysis, and deploy a machine learning model as an interactive web application using Streamlit.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>SQL for Data Science</strong> — basic SQL: <code>SELECT</code>, <code>FROM</code>, <code>WHERE</code>, <code>ORDER BY</code>, <code>LIMIT</code>; aggregation: <code>COUNT()</code>, <code>SUM()</code>, <code>AVG()</code>, <code>GROUP BY</code>, <code>HAVING</code>; joins: <code>INNER JOIN</code>, <code>LEFT JOIN</code>, <code>RIGHT JOIN</code>; subqueries; window functions: <code>ROW_NUMBER()</code>, <code>RANK()</code>, <code>LAG()</code>, <code>LEAD()</code>, <code>SUM() OVER(PARTITION BY...)</code>; CTEs (<code>WITH cte AS (...)</code>).</li>
+                    <li><strong>Python + SQL integration</strong> — <code>pd.read_sql(query, conn)</code>; <code>sqlalchemy</code> for connecting Python to databases; <code>import sqlite3</code> (built-in).</li>
+                    <li><strong>Streamlit — building data apps</strong> — <code>import streamlit as st</code>; text: <code>st.title()</code>, <code>st.header()</code>, <code>st.write()</code>, <code>st.markdown()</code>; widgets: <code>st.slider()</code>, <code>st.selectbox()</code>, <code>st.text_input()</code>, <code>st.file_uploader()</code>; data display: <code>st.dataframe()</code>, <code>st.metric()</code>; visualization: <code>st.pyplot()</code>, <code>st.plotly_chart()</code>; <code>st.cache_data</code>; <code>st.sidebar</code>.</li>
+                    <li><strong>Model deployment pattern</strong> — <code>joblib.dump(model, 'model.pkl')</code>; <code>joblib.load('model.pkl')</code>; input form → preprocessing → <code>model.predict()</code> → display result.</li>
+                    <li><strong>Deployment to Streamlit Cloud</strong> — streamlit.io/cloud (free for public repos); push to GitHub → deploy in 3 clicks.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> SQL is as essential as Python for most data science roles — job postings routinely list SQL as a required skill. Streamlit bridges the gap between an analysis notebook and a product that stakeholders can interact with. A deployed Streamlit app is the most impressive portfolio piece a data science student can present.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>SQL SELECT/WHERE/ORDER BY/LIMIT on a database; translate 5 pandas operations to SQL.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>SQL GROUP BY/HAVING/aggregations; answer 10 business questions from a sales database.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>SQL JOINs — INNER/LEFT/RIGHT; combine 3 tables; window functions intro.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>CTEs + subqueries + <code>pd.read_sql()</code> — import SQL results directly into pandas.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Streamlit intro — build a data explorer app: upload CSV → show summary → plot histogram.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Streamlit model app — load a saved model, collect user inputs via sliders, display prediction.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Deploy the Streamlit app to Streamlit Cloud + review + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write SQL queries to answer 15 business questions from the Northwind database.</li>
+                    <li>Build a Streamlit EDA dashboard: upload any CSV, automatically show statistics, plot distributions, and correlation heatmap.</li>
+                    <li>Build a Streamlit app for the Week 8 churn classifier: sliders for all features → predict churn probability.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>An <strong>ML Prediction App</strong> — a Streamlit application that loads a trained model (your best model from Weeks 7–11), provides an interactive form for all feature inputs, preprocesses the input with the saved pipeline, predicts and displays the result with a confidence score, and includes an EDA page with visualizations of the training data — deployed on Streamlit Cloud and accessible via a public URL — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using SQL <code>HAVING</code> without <code>GROUP BY</code> — <code>HAVING</code> filters aggregated groups, not individual rows.</li>
+                        <li>Not saving the preprocessing pipeline with <code>joblib</code> — re-training on new data gives different scaled values.</li>
+                        <li>Putting <code>joblib.load()</code> outside <code>@st.cache_data</code> — model reloads on every interaction.</li>
+                        <li>Not testing the Streamlit app with edge cases — empty inputs, strings where numbers expected.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li><code>HAVING</code> always follows <code>GROUP BY</code> — it filters groups, not rows.</li>
+                        <li>Save the entire Pipeline: <code>joblib.dump(pipeline, 'pipeline.pkl')</code>.</li>
+                        <li>Decorate any loading function with <code>@st.cache_data</code> or <code>@st.cache_resource</code>.</li>
+                        <li>Add input validation in the Streamlit app before calling <code>model.predict()</code>.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Mode Analytics SQL Tutorial (mode.com/sql-tutorial) — free</li>
+                    <li>Kaggle "Intro to SQL" and "Advanced SQL" micro-courses (kaggle.com/learn)</li>
+                    <li>Streamlit documentation (docs.streamlit.io)</li>
+                    <li>Streamlit Cloud (streamlit.io/cloud) — free deployment</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 15  -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Capstone Project, Portfolio &amp; Career Preparation</h2>
+                <p>Build and deploy the complete capstone data science project, document it professionally, and prepare a compelling portfolio and interview readiness.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics</h3>
+                <ol>
+                    <li><strong>Capstone project build</strong> — see Capstone section for the full specification.</li>
+                    <li><strong>Documentation</strong> — GitHub repository with detailed <code>README.md</code>, methodology section, key findings.</li>
+                    <li><strong>Portfolio assembly</strong> — GitHub profile README linking all 14 mini-projects with descriptions, tech stack, and live demo links.</li>
+                    <li><strong>Kaggle profile</strong> — submit the capstone analysis to a relevant competition or publish as a Kaggle notebook.</li>
+                    <li><strong>Interview preparation</strong> — technical and behavioral practice from the 35 interview questions.</li>
+                    <li><strong>Career tools</strong> — LinkedIn profile update, GitHub profile cleanup.</li>
+                </ol>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Choose capstone dataset; define problem statement; plan analysis phases.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>EDA phase — 10 visualizations, 3 statistical tests, key findings documented.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Preprocessing + feature engineering; build scikit-learn Pipeline.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Model training — compare 5 models with cross-validation; tune best model.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Streamlit app build; deploy to Streamlit Cloud.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>GitHub README + portfolio README; record 3-minute demo video.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Interview question practice (35 questions) + review + final commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> This converts 14 weeks of learning into tangible proof of skill. A finished capstone, polished portfolio, and deployed Streamlit app are what evaluators and employers actually look at — the quality of your presentation directly affects how your project is perceived.</p>
+                </div>
+
+                <p><strong>Estimated Study Hours:</strong> 40–45 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-card" id="capstone">
+            <div class="rm-card-header">
+                <h2>🏆 Final Capstone — End-to-End Data Science Project</h2>
+                <p>A complete, production-quality data science project combining all 15 weeks of learning into one deployed interactive application on Streamlit Cloud.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Capstone?</strong> It uses every major skill from the 15-week roadmap — from pandas manipulation to XGBoost and Streamlit deployment. It produces deployed, accessible software that evaluators can interact with from any browser. The combination of EDA notebook + modelling notebook + deployed app + professional README is the standard portfolio format for data science roles.</p>
+                </div>
+
+                <h3>Choose Your Domain</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Title</th>
+                            <th>Dataset</th>
+                            <th>Task</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Option A</strong></td>
+                            <td>Employee Attrition Predictor</td>
+                            <td>IBM HR Analytics (Kaggle, free)</td>
+                            <td>Binary classification — predict which employees are likely to leave</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Option B</strong></td>
+                            <td>House Price Estimator</td>
+                            <td>Ames Housing (Kaggle, free)</td>
+                            <td>Regression — predict house prices with deployed interactive estimator</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Option C</strong></td>
+                            <td>E-Commerce Customer Segmentation &amp; CLV Prediction</td>
+                            <td>Online Retail (Kaggle, free)</td>
+                            <td>Clustering + regression — segment customers and predict Customer Lifetime Value</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Required Deliverables</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Deliverable</th>
+                            <th>What It Contains</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>EDA Notebook (<code>eda.ipynb</code>)</strong></td>
+                            <td>Complete 6-phase EDA with 10+ visualizations; 3+ statistical hypothesis tests with interpretations; written findings and data quality assessment.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Modelling Notebook (<code>modeling.ipynb</code>)</strong></td>
+                            <td>Preprocessing Pipeline (<code>ColumnTransformer</code> + <code>Pipeline</code>); 3+ new engineered features; 5 models compared with 5-fold CV; <code>RandomizedSearchCV</code> tuning; final evaluation on held-out test set; feature importance / SHAP values.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Deployed Streamlit App</strong></td>
+                            <td>Interactive input form; real-time prediction with confidence; EDA visualizations from training data; "About" page explaining the methodology; deployed to Streamlit Cloud (public URL).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GitHub Repository</strong></td>
+                            <td>Professional <code>README.md</code> with: problem statement, dataset description, methodology, key findings, model performance, demo link, installation instructions; clean commit history; <code>requirements.txt</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Summary Presentation (10 slides)</strong></td>
+                            <td>Problem → Data → Insights → Model → Results → Deployment → Business Impact; suitable for a non-technical audience.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>GitHub Repository Structure</h3>
+                <pre class="rm-code">capstone-project/
+├── eda.ipynb                  # Complete EDA notebook
+├── modeling.ipynb             # Preprocessing + ML modelling notebook
+├── app.py                     # Streamlit application
+├── model/
+│   ├── pipeline.pkl           # Saved preprocessing + model pipeline
+│   └── model_info.json        # Model metadata (features, metrics)
+├── data/
+│   ├── raw/                   # Original dataset
+│   └── processed/             # Cleaned dataset
+├── requirements.txt           # All dependencies with versions
+└── README.md                  # Professional project documentation</pre>
+
+                <h3>14 Mini-Projects Built Throughout the Roadmap</h3>
+                <ol>
+                    <li><strong>Basic Data Analyzer</strong> (W1) — pure Python stats calculator.</li>
+                    <li><strong>Dataset Explorer</strong> (W2) — Titanic dataset exploration with pandas.</li>
+                    <li><strong>Statistical Analysis Report</strong> (W3) — hypothesis tests + probability distributions.</li>
+                    <li><strong>Data Cleaning Pipeline</strong> (W4) — full scikit-learn preprocessing pipeline.</li>
+                    <li><strong>Visual Data Story</strong> (W5) — 10-chart visual narrative in Seaborn/Plotly.</li>
+                    <li><strong>Complete EDA Report</strong> (W6) — full 6-phase EDA on a Kaggle dataset.</li>
+                    <li><strong>House Price Predictor</strong> (W7) — Multiple Linear Regression on Ames Housing.</li>
+                    <li><strong>Customer Churn Classifier</strong> (W8) — Logistic Regression/KNN/Decision Tree comparison.</li>
+                    <li><strong>Text Spam Classifier</strong> (W9) — Naive Bayes + SVM with GridSearch on SMS Spam dataset.</li>
+                    <li><strong>Customer Segmentation</strong> (W10) — K-Means clustering with PCA visualization.</li>
+                    <li><strong>Ensemble Model Comparison</strong> (W11) — Random Forest vs XGBoost with feature engineering.</li>
+                    <li><strong>Sentiment &amp; Time Series Dashboard</strong> (W12) — NLP classifier + Prophet forecasting.</li>
+                    <li><strong>Image Classifier with Transfer Learning</strong> (W13) — MobileNetV2 fine-tuned CNN.</li>
+                    <li><strong>ML Prediction App</strong> (W14) — Streamlit app deployed on Streamlit Cloud.</li>
+                </ol>
+
+                <h3>Capstone Feature Checklist</h3>
+                <ul>
+                    <li>EDA notebook — 10+ visualizations, 3 hypothesis tests, written findings</li>
+                    <li>Preprocessing Pipeline built with <code>ColumnTransformer</code> + <code>Pipeline</code></li>
+                    <li>At least 3 engineered features documented and justified</li>
+                    <li>5 models compared with 5-fold cross-validation</li>
+                    <li>Best model tuned with <code>RandomizedSearchCV</code></li>
+                    <li>inal evaluation on held-out test set — results reported</li>
+                    <li>Feature importance or SHAP values for model explainability</li>
+                    <li>Streamlit app deployed on Streamlit Cloud — public URL accessible</li>
+                    <li>Input validation in the Streamlit app</li>
+                    <li>Pipeline saved with <code>joblib</code> — reloaded in the Streamlit app</li>
+                    <li>Professional GitHub README — all required sections present</li>
+                    <li><code>requirements.txt</code> with pinned versions</li>
+                    <li>Realistic, plausible sample data used throughout</li>
+                    <li>10-slide summary presentation for non-technical audience</li>
+                    <li>3-minute demo video recorded</li>
+                </ul>
+
+                <h3>Roadmap at a Glance</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Weeks</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1. Foundations</td>
+                            <td>1–3</td>
+                            <td>Python, NumPy, pandas, statistics, mathematics</td>
+                        </tr>
+                        <tr>
+                            <td>2. Data Analysis</td>
+                            <td>4–6</td>
+                            <td>Data cleaning, visualization, exploratory analysis</td>
+                        </tr>
+                        <tr>
+                            <td>3. Machine Learning</td>
+                            <td>7–10</td>
+                            <td>Regression, classification, clustering, dimensionality reduction</td>
+                        </tr>
+                        <tr>
+                            <td>4. Advanced ML &amp; DL</td>
+                            <td>11–13</td>
+                            <td>Feature engineering, ensembles, NLP, deep learning</td>
+                        </tr>
+                        <tr>
+                            <td>5. Deployment &amp; Career</td>
+                            <td>14–15</td>
+                            <td>SQL, Streamlit deployment, capstone project, portfolio</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!--FOOTER -->
+    <footer>
+        <div class="stpart">
+                <div class="logo1">
+                    <h3>CodePath</h3>
+                    <p>Learn. Practice. Master</p>
+                </div>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+
+</body>
+</html>

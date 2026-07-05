@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assembly x86-64: Beginner to Master — 16 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#projects">Projects</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>Assembly x86-64: Beginner to Master</h1>
+        <p>Complete 16-Week Curriculum — From Hello World to SIMD, Concurrency &amp; Low-Level Systems Programming</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#week16">W16</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>16-week, project-driven Assembly curriculum</strong> designed to take a complete beginner to a professional-level systems programmer. The roadmap moves from <strong>CPU mental models, registers, arithmetic, and bitwise operations</strong> through <strong>conditional jumps, loops, procedures, and arrays</strong>, into <strong>structs, dynamic memory, error handling, floating-point, and C library interop</strong>, all the way to <strong>recursion, SIMD vectorization, OS-level concurrency, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics and the CPU mental model, <strong>Phase 2</strong> covers control flow, procedures, and data structures, <strong>Phase 3</strong> covers intermediate and advanced core topics including structs and dynamic memory, and <strong>Phase 4</strong> covers master-level SIMD, concurrency, and full systems-programming projects.</p>
+            <p>By Week 16, you will have built three complete, portfolio-ready low-level applications and be confident writing production-grade Assembly from scratch.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 16 weeks &nbsp;|&nbsp; <strong>Stack:</strong> x86-64, NASM, Linux (System V ABI), GDB &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic programming logic (no Assembly experience needed)</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–4:</strong> Registers, data sections, arithmetic, and bitwise operations.</p>
+        </div>
+
+        <!--WEEK 1 -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Environment Setup &amp; The CPU Mental Model</h2>
+                <p>Understand what Assembly actually is, how a CPU executes instructions, and assemble your first program.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding what Assembly actually is, how a CPU executes instructions, and assembling your first working binary.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What is Assembly Language?</strong> — Assembly is a low-level, human-readable representation of machine code where each instruction maps almost directly to a single CPU operation. Unlike high-level languages, there is no garbage collector, no automatic memory management, and no hidden abstractions — you control the CPU directly.</li>
+                    <li><strong>Installing NASM &amp; Assembling Your First Binary</strong> — NASM (Netwide Assembler) converts <code>.asm</code> source files into machine code object files, which the linker then turns into an executable binary. This two-step process — assemble, then link — is fundamental to how all Assembly programs are built.</li>
+                    <li><strong>The CPU Mental Model: Registers, Memory &amp; the Instruction Pointer</strong> — A CPU executes one instruction at a time, fetched from the address held in the Instruction Pointer (<code>RIP</code>). Registers are tiny, extremely fast storage slots built directly into the CPU, used for nearly all computation since accessing RAM is comparatively slow.</li>
+                    <li><strong>General-Purpose Registers (RAX, RBX, RCX, RDX, etc.)</strong> — x86-64 provides 16 general-purpose 64-bit registers (<code>RAX</code> through <code>R15</code>), each usable for arithmetic, data storage, or addressing. Certain registers have conventional roles — <code>RAX</code> typically holds return values, and <code>RDI</code>/<code>RSI</code>/<code>RDX</code>/<code>RCX</code>/<code>R8</code>/<code>R9</code> pass function arguments under the System V calling convention.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The CPU mental model — registers, the instruction pointer, and memory — is the foundation every Assembly concept builds on. Getting the toolchain working from Day 1 means you spend time learning Assembly, not fighting your environment.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>; hello.asm — A minimal x86-64 NASM program
+section .text
+    global _start          ; Entry point must be marked global for the linker
+_start:
+    mov rax, 60             ; syscall number for exit (Linux x86-64)
+    mov rdi, 0              ; exit code 0
+    syscall                 ; trigger the kernel system call
+
+; Assemble and link:
+; nasm -f elf64 hello.asm -o hello.o
+; ld hello.o -o hello
+; ./hello &amp;&amp; echo $?</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Set up your toolchain and write an <strong>Exit Code Calculator</strong>. Write a program that computes <code>(15 + 27) - 10</code> entirely using registers (<code>mov</code>, <code>add</code>, <code>sub</code>) and exits with the result as the process exit code. Assemble, link, and run it, then verify the result using <code>echo $?</code> in your terminal.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--   WEEK 2 -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Data Sections, Sizes &amp; Moving Data</h2>
+                <p>Understand how Assembly programs declare and organize data in memory and the rules of moving values between locations.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding how Assembly programs declare and organize data in memory, and the rules of moving values between locations.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>The <code>.data</code>, <code>.bss</code>, and <code>.text</code> Sections</strong> — Assembly programs are organized into sections: <code>.text</code> holds executable instructions, <code>.data</code> holds initialized variables, and <code>.bss</code> reserves space for uninitialized variables. This separation lets the OS apply different memory permissions — <code>.text</code> is execute-only, <code>.data</code> is read-write.</li>
+                    <li><strong>Defining Data with <code>db</code>, <code>dw</code>, <code>dd</code>, <code>dq</code></strong> — NASM's data definition directives declare variables of specific sizes: <code>db</code> (byte, 1 byte), <code>dw</code> (word, 2 bytes), <code>dd</code> (doubleword, 4 bytes), and <code>dq</code> (quadword, 8 bytes). Choosing the right size matters for both correctness and memory efficiency.</li>
+                    <li><strong>Register Sizes: 64-bit, 32-bit, 16-bit, 8-bit</strong> — Every 64-bit register has smaller "views" you can access directly: <code>RAX</code> (64-bit), <code>EAX</code> (lower 32 bits), <code>AX</code> (lower 16 bits), and <code>AL</code>/<code>AH</code> (lower/upper 8 bits). Writing to <code>EAX</code> automatically zeroes the upper 32 bits of <code>RAX</code> — a critical quirk worth memorizing.</li>
+                    <li><strong>The <code>mov</code> Instruction &amp; Addressing Modes</strong> — <code>mov</code> copies data between registers, between a register and memory, or an immediate value into a register — but never directly between two memory locations. Square brackets <code>[ ]</code> dereference an address, meaning "the value stored at this memory location."</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Understanding sections and data sizes is the foundation of every Assembly program structure. The <code>EAX</code> zero-extension behavior is one of the most common sources of subtle bugs in x86-64 code — knowing it from Week 2 prevents hours of debugging later.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>section .data
+    message db "Hello, Assembly!", 0   ; Null-terminated string
+    flag    db 1                        ; 1 byte
+    score   dw 1000                     ; 2 bytes
+    bigNum  dd 100000                   ; 4 bytes
+    address dq 0x7fffffffffff           ; 8 bytes — full 64-bit
+
+section .bss
+    buffer resb 64                      ; Reserve 64 uninitialized bytes
+
+section .text
+    global _start
+_start:
+    mov rax, 0xFFFFFFFFFFFFFFFF  ; Fill all 64 bits
+    mov eax, 0x12345678           ; Writing EAX ZEROES upper 32 bits of RAX!
+    mov rbx, [score]              ; RBX = VALUE at 'score' address
+    mov rax, 60
+    xor rdi, rdi
+    syscall</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Memory Swap</strong> program. Declare two <code>dq</code> variables in <code>.data</code> initialized to <code>100</code> and <code>200</code>. Without using a third memory variable, swap their values using only registers and <code>mov</code> instructions. Exit with the first variable's new value as the exit code to verify the swap worked correctly.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--   WEEK 3    -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Arithmetic &amp; The FLAGS Register</h2>
+                <p>Perform arithmetic operations and understand how the CPU tracks results via status flags.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Performing arithmetic operations and understanding how the CPU tracks the results of those operations via status flags.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Basic Arithmetic: <code>add</code>, <code>sub</code>, <code>inc</code>, <code>dec</code></strong> — <code>add</code> and <code>sub</code> perform addition and subtraction between two operands, while <code>inc</code>/<code>dec</code> provide shorthand for adding or subtracting exactly 1. All of these modify the FLAGS register as a side effect.</li>
+                    <li><strong>Multiplication &amp; Division (<code>mul</code>, <code>imul</code>, <code>div</code>, <code>idiv</code>)</strong> — Multiplication and division in x86-64 have unusual register conventions: <code>mul</code>/<code>div</code> work on unsigned numbers using implicit <code>RAX</code>/<code>RDX</code> pairs, while <code>imul</code>/<code>idiv</code> handle signed numbers. Division requires the dividend split across <code>RDX:RAX</code> before executing.</li>
+                    <li><strong>The FLAGS Register</strong> — The FLAGS register holds single-bit indicators set automatically by arithmetic and comparison instructions — the Zero Flag (<code>ZF</code>), Carry Flag (<code>CF</code>), Sign Flag (<code>SF</code>), and Overflow Flag (<code>OF</code>) are the most important. Conditional jumps read these flags to make decisions.</li>
+                    <li><strong>The <code>cmp</code> Instruction</strong> — <code>cmp</code> performs a subtraction internally to set the FLAGS register but discards the result, leaving both operands unchanged. It exists purely to prepare the FLAGS for a subsequent conditional jump instruction.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The FLAGS register is the bridge between arithmetic and control flow — without understanding it, conditional jumps next week will feel like magic. The <code>RDX</code> clearing requirement before division is one of the most common Assembly bugs — knowing it now prevents crashes later.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>section .text
+    global _start
+_start:
+    mov rax, 50
+    add rax, 25       ; RAX = 75
+    sub rax, 10       ; RAX = 65
+    inc rax           ; RAX = 66
+    dec rax           ; RAX = 65
+
+    ; Division: CRITICAL — clear RDX before div
+    mov rax, 50
+    xor rdx, rdx      ; RDX MUST be zero before unsigned division!
+    mov rbx, 7
+    div rbx           ; RAX = 7 (quotient), RDX = 1 (remainder)
+
+    ; cmp sets FLAGS without modifying operands
+    mov rax, 10
+    mov rbx, 10
+    cmp rax, rbx      ; Internally: 10 - 10 = 0 → ZF = 1
+
+    mov rax, 60
+    xor rdi, rdi
+    syscall</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Basic Calculator</strong> program. Using two hardcoded <code>dq</code> values in <code>.data</code>, compute their sum, difference, product, and quotient — storing each in separate memory locations using <code>mov</code>. Carefully handle the <code>RDX</code> clearing requirement before division. Exit with the quotient as your exit code and verify by hand-calculating the expected result.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 4 -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Bitwise Operations &amp; Number Representation</h2>
+                <p>Manipulate individual bits and understand how Assembly represents signed numbers, hex, and binary.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Manipulating individual bits and understanding how Assembly represents signed numbers, hexadecimal, and binary.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Bitwise Logical Operators: <code>and</code>, <code>or</code>, <code>xor</code>, <code>not</code></strong> — Bitwise operators work on individual bits rather than the number as a whole — <code>and</code> is used for masking specific bits, <code>or</code> for setting bits, <code>xor</code> for toggling bits (and the classic zero-a-register trick), and <code>not</code> for inverting all bits.</li>
+                    <li><strong>Bit Shifting: <code>shl</code>, <code>shr</code>, <code>sar</code></strong> — <code>shl</code> (shift left) and <code>shr</code> (shift right) move bits and fill vacated positions with zero — equivalent to multiplying or dividing by powers of two. <code>sar</code> (arithmetic shift right) preserves the sign bit, making it correct for signed division by powers of two.</li>
+                    <li><strong>Signed vs Unsigned Numbers &amp; Two's Complement</strong> — The CPU does not inherently know if a value is signed or unsigned — the same bit pattern can be interpreted either way depending on which instructions you use. Negative numbers are stored using two's complement: invert all bits and add 1.</li>
+                    <li><strong>Hexadecimal &amp; Binary Literals in NASM</strong> — NASM accepts numeric literals in decimal, hexadecimal (<code>0x</code> prefix), and binary (<code>0b</code> prefix). Hex is the standard for representing memory addresses and bit masks since it maps cleanly to 4-bit nibbles.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Bitwise operations are used everywhere in systems programming — setting hardware flags, packing/unpacking data, efficient multiplication/division by powers of two. The <code>xor rcx, rcx</code> zero pattern appears in virtually every Assembly program and is faster than <code>mov rcx, 0</code> on most CPUs.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>section .text
+    global _start
+_start:
+    ; Bitwise operations
+    mov rax, 0b1100       ; RAX = 12 in binary
+    and rax, 0b1010        ; AND → 0b1000 = 8 (keeps bits set in BOTH)
+    mov rbx, 0b0001
+    or  rax, rbx           ; OR  → 0b1001 = 9 (sets bits in EITHER)
+    xor rcx, rcx           ; XOR with itself = fastest way to zero a register
+
+    ; Bit shifting (powers of two math)
+    mov rax, 5
+    shl rax, 1             ; RAX = 10 (5 * 2)
+    shl rax, 2             ; RAX = 40 (10 * 4)
+    shr rax, 3             ; RAX = 5  (40 / 8)
+
+    ; Two's complement: -1 in 64-bit = all bits set
+    mov rax, -1            ; 0xFFFFFFFFFFFFFFFF
+
+    mov rax, 60
+    xor rdi, rdi
+    syscall</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Bit Manipulation Toolkit</strong>. Write a program that: (1) uses <code>xor</code> to zero a register, (2) uses <code>or</code> to build the binary pattern <code>0b10110101</code>, (3) uses <code>and</code> with a mask to extract only the lower 4 bits, and (4) uses <code>shl</code>/<code>shr</code> to multiply a value by 8 then divide by 4. Verify each intermediate result in GDB using <code>print/x $rax</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 5–8:</strong> Jumps, loops, procedures, calling conventions, arrays, and strings.</p>
+        </div>
+
+        <!--   WEEK 5 -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Conditional Jumps &amp; Branching</h2>
+                <p>Control program flow with labels and conditional jump instructions — Assembly's equivalent of if/else.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Controlling program flow with labels and conditional jump instructions — Assembly's equivalent of if/else.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Unconditional Jumps (<code>jmp</code>) &amp; Labels</strong> — A label marks a named location in your code, and <code>jmp</code> unconditionally transfers execution there — Assembly's equivalent of <code>goto</code>. Labels are how you build every higher-level control structure (loops, functions, if/else) since Assembly has no native syntax for them.</li>
+                    <li><strong>Conditional Jumps (<code>je</code>, <code>jne</code>, <code>jg</code>, <code>jl</code>, etc.)</strong> — Conditional jumps only branch if specific FLAGS bits are set — <code>je</code>/<code>jz</code> (jump if equal/zero), <code>jne</code>/<code>jnz</code> (not equal), <code>jg</code>/<code>jl</code> (greater/less, signed), and <code>ja</code>/<code>jb</code> (above/below, unsigned). They always follow a <code>cmp</code> or arithmetic instruction that sets the relevant flags.</li>
+                    <li><strong>Implementing if/else Logic</strong> — There is no <code>if</code> keyword in Assembly — you build conditional logic manually using <code>cmp</code> followed by a conditional jump that skips over or jumps to a block of code. The pattern inverts the condition: "jump AWAY if the condition is true" or vice versa, depending on your structure.</li>
+                    <li><strong>The <code>test</code> Instruction</strong> — <code>test</code> performs a bitwise AND between two operands purely to set FLAGS, without storing the result — most commonly used as <code>test rax, rax</code> to efficiently check if a register is zero. It is faster than <code>cmp rax, 0</code> on most CPUs.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every non-trivial Assembly program branches. Conditional jumps are the only decision-making mechanism in Assembly — understanding the signed vs unsigned jump variants (<code>jg</code> vs <code>ja</code>) prevents subtle comparison bugs when dealing with negative numbers or large addresses.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>section .text
+    global _start
+_start:
+    ; Unconditional jump
+    mov rax, 1
+    jmp skip_this
+    mov rax, 999       ; Never executed
+skip_this:
+
+    ; if/else: if (rax == 100) rbx = 1 else rbx = 0
+    mov rax, 100
+    cmp rax, 100
+    jne else_branch    ; If NOT equal, jump to else
+        mov rbx, 1
+        jmp end_if
+else_branch:
+        mov rbx, 0
+end_if:
+
+    ; test: fast zero-check
+    xor rax, rax
+    test rax, rax      ; ZF = 1 because RAX is zero
+    jz is_zero
+is_zero:
+
+    mov rax, 60
+    xor rdi, rdi
+    syscall</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Number Classifier</strong>. Given a hardcoded value in <code>RAX</code>, use <code>cmp</code>/<code>test</code> and conditional jumps to classify it: store <code>1</code> in <code>RBX</code> if positive, <code>-1</code> if negative, or <code>0</code> if exactly zero. Then extend the program to also check if the number is even or odd (using <code>and</code> with <code>1</code> and <code>test</code>), storing that result in <code>RCX</code>. Test with at least 4 different input values.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 6 -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Loops</h2>
+                <p>Build repeating control structures using conditional jumps and the dedicated <code>loop</code> instruction.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Building repeating control structures using conditional jumps and the dedicated <code>loop</code> instruction.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Manual Loops with Labels &amp; Jumps</strong> — Every loop in Assembly is fundamentally a label, a body of instructions, a counter update, and a conditional jump back to the label. Understanding this manual construction is essential before relying on the <code>loop</code> shorthand instruction.</li>
+                    <li><strong>The <code>loop</code> Instruction</strong> — The dedicated <code>loop</code> instruction automatically decrements <code>RCX</code> and jumps to the given label if <code>RCX</code> is not zero, combining two manual steps into one. It is a convenient shorthand, though many modern compilers avoid it in favor of explicit jumps for performance reasons.</li>
+                    <li><strong>While-Style &amp; Do-While-Style Loop Patterns</strong> — A "while" loop checks its condition before the first iteration (may run zero times), while a "do-while" loop checks after the first iteration (always runs at least once). Both patterns are built from the same ingredients — labels, comparisons, and jumps — just arranged differently.</li>
+                    <li><strong>Nested Loops</strong> — Nested loops require separate counter registers for each loop level, since a single register cannot track two independent counts simultaneously. Always double-check which register belongs to which loop level and reset the inner counter on every outer iteration.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Loops power all algorithms — sorting, searching, array processing. Understanding the manual label/jump pattern first means you truly understand what the <code>loop</code> instruction does under the hood. Nested loops with mismatched counters are a classic Assembly bug — knowing it now prevents hours of debugging.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>section .text
+    global _start
+_start:
+    ; Manual loop: sum 5+4+3+2+1 = 15
+    mov rcx, 5
+    mov rax, 0
+sum_loop:
+    add rax, rcx
+    dec rcx
+    jnz sum_loop       ; Jump back if RCX != 0
+
+    ; loop instruction (RCX is always the counter)
+    mov rcx, 10
+    mov rbx, 0
+count_loop:
+    inc rbx
+    loop count_loop    ; Decrements RCX, jumps if RCX != 0
+
+    ; while-style: while (rax < 10)
+    mov rax, 0
+while_top:
+    cmp rax, 10
+    jge while_end      ; Exit if RAX >= 10
+    inc rax
+    jmp while_top
+while_end:
+
+    ; Nested loops: outer * inner = 3 * 4 = 12 iterations
+    mov rcx, 3
+outer_loop:
+    mov rdx, 4         ; RESET inner counter each outer pass!
+inner_loop:
+    dec rdx
+    jnz inner_loop
+    dec rcx
+    jnz outer_loop
+
+    mov rax, 60
+    xor rdi, rdi
+    syscall</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Sum of Squares</strong> calculator using nested control flow. Without using <code>mul</code> for the squaring step, compute the sum of squares from 1 to 10 (1² + 2² + ... + 10²) using a loop where each square is computed via repeated addition (an inner loop). Store the final result and exit with it. Manually verify against the known answer: <strong>385</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 7 -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Procedures, the Stack &amp; Calling Conventions</h2>
+                <p>Organize code into reusable procedures and understand the stack-based mechanics of function calls.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Organizing code into reusable procedures and understanding the stack-based mechanics of function calls.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>The Stack: <code>push</code> and <code>pop</code></strong> — The stack is a region of memory that grows downward, accessed via the <code>RSP</code> (stack pointer) register. <code>push</code> decrements <code>RSP</code> and stores a value; <code>pop</code> retrieves the top value and increments <code>RSP</code> — it is strictly Last-In-First-Out (LIFO).</li>
+                    <li><strong><code>call</code> and <code>ret</code> — Procedure Invocation</strong> — <code>call</code> pushes the return address (the instruction after the call) onto the stack and jumps to the target label; <code>ret</code> pops that address back into <code>RIP</code>, resuming execution right after the original call. This pair is how Assembly implements function calls.</li>
+                    <li><strong>The System V AMD64 Calling Convention</strong> — On Linux x86-64, the first six integer/pointer function arguments are passed in <code>RDI</code>, <code>RSI</code>, <code>RDX</code>, <code>RCX</code>, <code>R8</code>, <code>R9</code> (in that order), with the return value placed in <code>RAX</code>. Following this convention is essential for interoperating with C libraries and the OS.</li>
+                    <li><strong>Caller-Saved vs Callee-Saved Registers &amp; Stack Frames</strong> — Caller-saved registers (<code>RAX</code>, <code>RCX</code>, <code>RDX</code>, <code>RSI</code>, <code>RDI</code>, <code>R8</code>–<code>R11</code>) may be overwritten by any function call. Callee-saved registers (<code>RBX</code>, <code>RBP</code>, <code>R12</code>–<code>R15</code>) must be preserved by the called function using <code>push</code>/<code>pop</code> at the start and end of the procedure.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The stack and calling convention are the backbone of every function call in any language. Getting caller-saved vs callee-saved registers wrong produces the hardest Assembly bugs to debug — values mysteriously change across function calls. This week's knowledge directly enables interop with C libraries in Week 12.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>section .text
+    global _start
+
+; add_function(a, b): RDI=a, RSI=b → return in RAX
+add_function:
+    push rbx               ; Callee-saved — preserve before using
+    mov rax, rdi
+    add rax, rsi
+    pop rbx                ; Restore callee-saved register
+    ret
+
+_start:
+    mov rdi, 15            ; First argument
+    mov rsi, 27            ; Second argument
+    call add_function      ; RAX = 42 after return
+
+    ; Stack: push/pop LIFO demo
+    mov rax, 10
+    mov rbx, 20
+    push rax               ; RSP -= 8, [RSP] = 10
+    push rbx               ; RSP -= 8, [RSP] = 20
+    pop rcx                ; RCX = 20 (last in, first out)
+    pop rdx                ; RDX = 10
+
+    mov rax, 60
+    xor rdi, rdi
+    syscall</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Procedure Library</strong>. Write three standalone procedures following the System V calling convention: <code>max_of_two</code> (RDI, RSI → RAX), <code>is_prime</code> (RDI → RAX, returns 1 or 0), and <code>factorial</code> (RDI → RAX, using a loop — not recursion). Properly save/restore any callee-saved registers you use. Call all three from <code>_start</code> with test values and verify each result via <code>echo $?</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Arrays, Strings &amp; Indexed Addressing</h2>
+                <p>Work with sequences of data in memory using indexed addressing modes and build string-processing routines.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Working with sequences of data in memory using indexed addressing modes and building string-processing routines.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Declaring &amp; Accessing Arrays</strong> — Arrays in Assembly are simply contiguous blocks of memory, declared with repeated <code>dq</code>/<code>dd</code> values or the <code>times</code> directive. You access an element by calculating its byte offset: <code>base_address + (index * element_size)</code>.</li>
+                    <li><strong>Indexed &amp; Scaled Addressing Modes</strong> — x86-64 supports a powerful addressing mode <code>[base + index*scale + displacement]</code> that computes an array element's address in a single instruction. The scale factor (1, 2, 4, or 8) automatically matches your element size, eliminating manual multiplication.</li>
+                    <li><strong>Null-Terminated Strings &amp; String Length</strong> — C-style strings in Assembly are simply byte arrays terminated by a <code>0</code> (null) byte, with no separate length field. Computing a string's length requires manually scanning forward until you encounter that null terminator.</li>
+                    <li><strong>Linux Syscalls: Writing to Standard Output</strong> — The <code>write</code> syscall (number 1 on Linux x86-64) outputs bytes to a file descriptor — <code>1</code> for stdout. It requires the file descriptor in <code>RDI</code>, a pointer to the data in <code>RSI</code>, and the byte count in <code>RDX</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Arrays are the most common data structure in any program, and the scaled addressing mode <code>[rsi + rcx*8]</code> is how you access them efficiently. The <code>write</code> syscall is your first tool for producing visible output — essential for every project from this point forward.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>section .data
+    numbers dq 10, 20, 30, 40, 50    ; Array of 5 quadwords
+    msg     db "Hello, syscalls!", 10  ; 10 = newline
+    len     equ $ - msg               ; Assemble-time length calculation
+
+section .text
+    global _start
+_start:
+    ; Scaled indexed addressing: arr[2]
+    mov rsi, numbers
+    mov rcx, 2
+    mov rax, [rsi + rcx*8]   ; RAX = 30 (index 2, scale 8)
+
+    ; Null-terminated string length
+    mov rsi, msg
+    xor rcx, rcx
+strlen_loop:
+    cmp byte [rsi + rcx], 0
+    je strlen_done
+    inc rcx
+    jmp strlen_loop
+strlen_done:               ; RCX = string length
+
+    ; write syscall: print to stdout
+    mov rax, 1             ; syscall: write
+    mov rdi, 1             ; fd = stdout
+    mov rsi, msg
+    mov rdx, len
+    syscall
+
+    mov rax, 60
+    xor rdi, rdi
+    syscall</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>String Reverser &amp; Printer</strong>. Declare a string in <code>.data</code>. Write a procedure that calculates its length, then reverses it in-place using indexed addressing and a two-pointer swap technique (one index from the front, one from the back). Use the <code>write</code> syscall to print both the original and reversed strings to stdout.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 9–12:</strong> Structs, dynamic memory, error handling, macros, floating-point, and C library interop.</p>
+        </div>
+
+        <!--   WEEK 9-->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Structures, the Stack Frame &amp; Local Variables</h2>
+                <p>Model structured records in memory and manage local variables within procedures using proper stack frames.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Modeling structured records in memory and properly managing local variables within procedures using stack frames.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Struct-Like Layouts with <code>struc</code></strong> — NASM's <code>struc</code>/<code>endstruc</code> directives let you define a named memory layout with labeled field offsets, similar to a C struct. This makes structured data (like a "Point" with x/y fields) far more readable than tracking raw byte offsets manually.</li>
+                    <li><strong>Accessing Struct Fields in Memory</strong> — Once a struct layout is defined, you access individual fields by adding the field's offset (provided automatically by <code>struc</code>) to the struct's base address. This pattern is identical to how compiled C struct access works under the hood.</li>
+                    <li><strong>Stack Frames with <code>push rbp</code> / <code>mov rbp, rsp</code></strong> — A stack frame is a dedicated region of stack memory for a single function call, anchored by <code>RBP</code> (the base pointer). The classic prologue saves the caller's frame and establishes a stable reference point for accessing local variables.</li>
+                    <li><strong>Local Variables via Stack Offsets</strong> — Local variables that do not fit in registers are stored on the stack, accessed as negative offsets from <code>RBP</code> (e.g., <code>[rbp-8]</code> for the first local). This convention keeps local data isolated per function call, safely supporting recursion.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Stack frames with <code>RBP</code> are what GDB uses to display a backtrace — understanding them lets you debug complex programs. NASM's <code>struc</code> is how you model any real-world data (packets, file headers, game entities) without losing track of byte offsets.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>struc Point
+    .x: resq 1          ; Field x: 8 bytes (offset 0)
+    .y: resq 1          ; Field y: 8 bytes (offset 8)
+endstruc
+
+section .bss
+    myPoint resb Point_size
+
+section .text
+    global _start
+
+calculate:
+    push rbp
+    mov rbp, rsp
+    sub rsp, 16             ; Allocate 2 local variables (8 bytes each)
+
+    mov qword [rbp-8],  100 ; local_var1 = 100
+    mov qword [rbp-16], 200 ; local_var2 = 200
+    mov rax, [rbp-8]
+    add rax, [rbp-16]       ; RAX = 300
+
+    mov rsp, rbp
+    pop rbp
+    ret
+
+_start:
+    ; Access struct fields
+    mov rax, myPoint
+    mov qword [rax + Point.x], 10
+    mov qword [rax + Point.y], 20
+
+    call calculate          ; RAX = 300
+
+    mov rax, 60
+    xor rdi, rdi
+    syscall</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Rectangle Struct Library</strong>. Define a <code>Rectangle</code> struct with <code>width</code> and <code>height</code> fields using <code>struc</code>. Write a procedure <code>rect_area</code> that takes a pointer to a Rectangle in <code>RDI</code> and returns the area in <code>RAX</code>, using a proper stack frame with local variables for intermediate calculations. Create two rectangle instances in <code>.bss</code>, populate their fields, and compute both areas.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 10  -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Dynamic Memory &amp; Linked Data Structures</h2>
+                <p>Manage memory dynamically at runtime using syscalls and build pointer-based linked lists.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Managing memory dynamically at runtime using syscalls and building pointer-based data structures like linked lists.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Dynamic Memory with the <code>mmap</code> Syscall</strong> — Since Assembly has no <code>malloc()</code> built in, you request memory directly from the kernel using the <code>mmap</code> syscall (number 9 on Linux), which maps a new region of virtual memory into your process. This is the low-level mechanism that <code>malloc()</code> itself is built on.</li>
+                    <li><strong>Pointers &amp; Pointer Arithmetic</strong> — A pointer is simply a register or memory location holding a memory address. Pointer arithmetic means adding or subtracting byte offsets to navigate between related memory locations — exactly how you traverse an array or follow a linked structure.</li>
+                    <li><strong>Building a Singly Linked List</strong> — A linked list node contains a data field and a pointer ("next") to the following node, with the list's end marked by a null pointer (0). Each node can be allocated dynamically via <code>mmap</code>, then linked together by storing addresses in the "next" field.</li>
+                    <li><strong>Traversing a Linked List</strong> — Traversal means starting at the head pointer and repeatedly following the "next" field until you reach a null pointer, processing each node's data along the way. This loop-with-pointer pattern is foundational to nearly all dynamic data structures.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Dynamic memory is what separates toy programs from real applications — anything that grows at runtime needs it. Understanding <code>mmap</code> directly shows you what every OS-level allocator does. Linked lists built in Assembly demonstrate that every high-level data structure is ultimately just pointers and memory layouts.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>struc Node
+    .data: resq 1          ; Value stored in this node
+    .next: resq 1          ; Pointer to next Node (0 = end of list)
+endstruc
+
+section .text
+    global _start
+_start:
+    ; mmap: request 4096 bytes from kernel
+    mov rax, 9             ; syscall: mmap
+    xor rdi, rdi           ; addr = NULL (kernel chooses)
+    mov rsi, 4096          ; length = 4096 bytes
+    mov rdx, 3             ; PROT_READ | PROT_WRITE
+    mov r10, 0x22          ; MAP_PRIVATE | MAP_ANONYMOUS
+    mov r8, -1             ; fd = -1
+    xor r9, r9             ; offset = 0
+    syscall                ; RAX = pointer to new memory
+
+    ; Pointer arithmetic
+    mov rsi, rax           ; RSI = base pointer
+    add rsi, 8             ; Advance 8 bytes (one element forward)
+
+    ; Linked list traversal
+    ; RSI = head pointer
+traverse_loop:
+    test rsi, rsi          ; NULL check
+    jz traverse_done
+    mov rax, [rsi + Node.data]  ; Process node data
+    mov rsi, [rsi + Node.next]  ; Follow the next pointer
+    jmp traverse_loop
+traverse_done:
+
+    mov rax, 60
+    xor rdi, rdi
+    syscall</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Dynamic Linked List of Integers</strong>. Use <code>mmap</code> to allocate memory for 5 nodes. Link them together into a singly linked list containing the values 10, 20, 30, 40, 50. Write a <code>sum_list</code> procedure that traverses the list and returns the total sum in <code>RAX</code>. Exit with the computed sum (<strong>150</strong>) as your exit code to verify correctness.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--   WEEK 11   -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Error Handling, Syscall Return Values &amp; Macros</h2>
+                <p>Detect and handle syscall failures, and write reusable code with NASM macros.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Detecting and handling failures from system calls, and writing reusable code with NASM macros.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Syscall Error Conventions (Negative Return Values)</strong> — Linux syscalls signal errors by returning a negative value in <code>RAX</code> corresponding to a negated <code>errno</code> code, rather than throwing an exception. Checking <code>RAX</code> after every syscall that can fail — file I/O, memory allocation — is essential defensive programming.</li>
+                    <li><strong>Building an Error-Handling Routine</strong> — Without exceptions, error handling in Assembly means manually checking return codes after every risky operation and branching to dedicated cleanup code. A common pattern centralizes all error paths into a single labeled block that prints a message and exits cleanly.</li>
+                    <li><strong>NASM Macros with <code>%macro</code></strong> — A macro is a named, reusable block of Assembly code with parameters, expanded inline at assemble-time wherever it is invoked — similar to a C preprocessor macro but more powerful. Macros eliminate repetitive boilerplate like syscall setups.</li>
+                    <li><strong>Conditional Assembly with <code>%if</code>/<code>%ifdef</code></strong> — NASM supports compile-time conditional assembly, letting you include or exclude code blocks based on defined constants — useful for debug builds, platform-specific code, or feature flags. <code>%ifdef</code> checks if a symbol was defined via the <code>-d</code> command-line flag.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every production Assembly program checks syscall return values — ignoring them causes silent data corruption or crashes with no error message. NASM macros transform verbose, repetitive Assembly into readable, maintainable code, and are used in every serious Assembly codebase.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>; Macro: reduces 3-line syscall exit to 1 line
+%macro EXIT 1
+    mov rax, 60
+    mov rdi, %1
+    syscall
+%endmacro
+
+%macro SYS_WRITE 3
+    mov rax, 1
+    mov rdi, %1
+    mov rsi, %2
+    mov rdx, %3
+    syscall
+%endmacro
+
+section .data
+    filename db "data.txt", 0
+    errmsg   db "File not found", 10
+    errlen   equ $ - errmsg
+
+section .text
+    global _start
+_start:
+    ; open syscall with error check
+    mov rax, 2             ; syscall: open
+    mov rdi, filename
+    xor rsi, rsi           ; O_RDONLY
+    syscall
+    cmp rax, 0
+    jl open_failed         ; Negative RAX = error
+    jmp open_ok
+
+open_failed:
+    SYS_WRITE 1, errmsg, errlen
+    EXIT 1
+
+open_ok:
+    EXIT 0</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Safe File Reader</strong> with macros. Write <code>%macro</code> shortcuts for <code>SYS_WRITE</code> and <code>SYS_EXIT</code>. Use the <code>open</code> syscall to attempt opening a file that does not exist, check <code>RAX</code> for a negative (error) result, and branch to an error handler that prints "File not found" via your <code>SYS_WRITE</code> macro and exits with code 1. Test with both an existing and a non-existing filename.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 12  -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Floating-Point (SSE/AVX) &amp; Calling C Library Functions</h2>
+                <p>Perform floating-point arithmetic using SSE registers and interoperate with the C standard library.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Performing floating-point arithmetic using SSE registers and interoperating with the C standard library.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>The XMM Registers &amp; SSE Instructions</strong> — Floating-point math on modern x86-64 uses the dedicated XMM registers (<code>XMM0</code>–<code>XMM15</code>) rather than the general-purpose integer registers, accessed via SSE instructions. <code>movsd</code> moves a double-precision float; <code>addsd</code>/<code>mulsd</code> perform floating-point arithmetic.</li>
+                    <li><strong>Converting Between Integers &amp; Floats</strong> — Integer and floating-point values use entirely different binary representations, so converting between them requires dedicated conversion instructions. <code>cvtsi2sd</code> converts integer-to-double, while <code>cvttsd2si</code> converts double-to-integer (truncating).</li>
+                    <li><strong>Calling C Library Functions (External Linking)</strong> — Assembly programs can call functions from the C standard library (like <code>printf</code>) by declaring them <code>extern</code> and linking against <code>libc</code>. This requires following the System V calling convention precisely and aligning the stack to 16 bytes before the call.</li>
+                    <li><strong>Assembling &amp; Linking with GCC for Libc Programs</strong> — When calling C library functions, you link using <code>gcc</code> instead of <code>ld</code> directly so that <code>libc</code> and the C runtime startup code are linked in automatically. This is the standard approach for Assembly programs that need C library features.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Floating-point is used in game engines, scientific computing, graphics, and machine learning. Calling <code>printf</code> from Assembly is the gateway to using any C library (OpenGL, SDL, POSIX) from Assembly — dramatically expanding what you can build without reimplementing the world.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>extern printf
+extern exit
+
+section .data
+    valA dq 3.14
+    valB dq 2.0
+    fmt  db "Result: %f", 10, 0
+
+section .text
+    global main
+main:
+    ; Floating-point with XMM registers
+    movsd xmm0, [valA]    ; Load 3.14 into XMM0
+    movsd xmm1, [valB]    ; Load 2.0 into XMM1
+    addsd xmm0, xmm1      ; XMM0 = 5.14
+    mulsd xmm0, xmm1      ; XMM0 = 10.28
+
+    ; Integer to float conversion
+    mov rax, 42
+    cvtsi2sd xmm1, rax    ; XMM1 = 42.0
+
+    ; Call printf (variadic: RAX = # of XMM args used)
+    mov rdi, fmt
+    ; xmm0 already holds the result to print
+    mov rax, 1            ; 1 XMM register used
+    call printf
+
+    mov rdi, 0
+    call exit
+
+; Build: nasm -f elf64 program.asm -o program.o
+;        gcc program.o -o program -no-pie</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Floating-Point Statistics Calculator</strong> that calls libc. Declare an array of 5 doubles in <code>.data</code>. Compute their sum and average using <code>movsd</code>/<code>addsd</code>. Convert the integer count (5) to a double using <code>cvtsi2sd</code> for the division step. Use <code>extern printf</code> to print the computed average formatted as <code>"Average: %f\n"</code>. Link with <code>gcc -no-pie</code> and verify the output.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 13–16:</strong> Recursion, SIMD vectorization, OS-level concurrency, and three complete capstone projects.</p>
+        </div>
+
+        <!--  WEEK 13  -->
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Recursion &amp; Advanced Stack Management</h2>
+                <p>Implement recursive algorithms in Assembly and deeply understand the stack's role in supporting them.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Implementing recursive algorithms in Assembly and deeply understanding the stack's role in supporting them.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Recursive Procedures</strong> — A recursive procedure calls itself with modified arguments, relying on the stack to automatically maintain a separate frame (and separate local variables) for each recursive call. Every recursive call pushes a new return address and frame onto the stack, unwinding in reverse order as each call returns.</li>
+                    <li><strong>Stack Depth &amp; Stack Overflow</strong> — Each recursive call consumes additional stack space for its frame; with no base case or excessively deep recursion, the stack grows until it exceeds its allocated limit, causing a segmentation fault. Understanding this is critical for choosing between recursion and iteration for performance-sensitive problems.</li>
+                    <li><strong>Tail Call Patterns (Manual Optimization)</strong> — A tail call is a recursive call that is the very last operation in a function, allowing it to be manually rewritten as a loop (avoiding stack growth entirely) — a transformation compilers do automatically in high-level languages but you must do by hand in Assembly. This converts O(n) stack usage into O(1).</li>
+                    <li><strong>Recursive Data Structure Traversal (Binary Tree)</strong> — Recursive procedures map naturally onto recursive data structures like binary trees, where each node's traversal logic calls the same procedure on its left and right children. This mirrors how recursive algorithms are written in high-level languages, just with explicit register and stack management.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Recursion in Assembly is the clearest demonstration of what the stack actually does — you can watch frames pile up in GDB in real time. Understanding tail call optimization by hand is a master-level skill — it is the basis of how functional language compilers eliminate stack overflows.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>section .text
+    global _start
+
+; Recursive factorial(n): RDI = n → result in RAX
+factorial:
+    cmp rdi, 1
+    jle .base_case        ; Base case: 0! = 1! = 1
+    push rdi              ; Save n (caller-saved — we need it after the recursive call)
+    dec rdi
+    call factorial        ; Recursive call: factorial(n-1)
+    pop rdi               ; Restore original n
+    imul rax, rdi         ; RAX = factorial(n-1) * n
+    ret
+.base_case:
+    mov rax, 1
+    ret
+
+; Tail call optimization: sum(n) rewritten as loop
+sum_iterative:
+    xor rax, rax          ; Accumulator = 0
+.loop:
+    cmp rdi, 0
+    je .done
+    add rax, rdi          ; acc += n
+    dec rdi
+    jmp .loop             ; No recursion — constant stack usage!
+.done:
+    ret
+
+_start:
+    mov rdi, 10
+    call factorial        ; RAX = 3628800
+    mov rax, 60
+    xor rdi, rdi
+    syscall</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Recursive Fibonacci vs Iterative Fibonacci</strong> benchmark. Implement <code>fib_recursive</code> (naive double-recursion: <code>fib(n-1) + fib(n-2)</code>) and <code>fib_iterative</code> (a simple loop). Test both with <code>n=10</code> and verify they produce the same result (<strong>55</strong>). Use GDB to set a breakpoint inside <code>fib_recursive</code> and observe the stack growing across at least 3 recursive calls using <code>info frame</code> and examining <code>RSP</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 14 -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — SIMD &amp; Performance Optimization</h2>
+                <p>Process multiple data elements simultaneously with SIMD instructions and understand CPU-level performance.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Processing multiple data elements simultaneously with SIMD instructions and understanding CPU-level performance considerations.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>SIMD Fundamentals: Processing Multiple Values at Once</strong> — SIMD (Single Instruction, Multiple Data) lets one instruction operate on several values packed into a single wide register simultaneously — a 128-bit XMM register can hold four 32-bit integers and operate on all of them in one instruction. This is how high-performance code achieves massive speedups in video processing, machine learning, and graphics.</li>
+                    <li><strong>Memory Alignment for SIMD</strong> — SIMD instructions like <code>movdqa</code> (aligned move) require data to start at a memory address divisible by 16 (or 32 for AVX), and will crash with a fault if given misaligned data. The <code>align</code> directive ensures your data section meets this requirement; the unaligned variant <code>movdqu</code> is slightly slower but works with any address.</li>
+                    <li><strong>Loop Unrolling</strong> — Loop unrolling manually duplicates a loop's body multiple times per iteration, reducing the overhead of branch instructions and loop-counter updates relative to actual work performed. This is a classic manual optimization technique, trading code size for execution speed.</li>
+                    <li><strong>Branch Prediction &amp; Avoiding Pipeline Stalls</strong> — Modern CPUs use deep pipelines and predict which way a conditional branch will go, paying a significant performance penalty (a "pipeline flush") when wrong. Writing branch-light code using conditional moves like <code>cmovg</code> instead of jumps can meaningfully improve hot-loop performance.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> SIMD is the difference between a program that processes 1 million elements per second and one that processes 4 or 8 million with zero extra hardware. Understanding branch prediction and pipeline stalls is what separates a programmer who writes fast code from one who writes code and hopes it is fast.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>section .data
+    align 16
+    vecA dd 1,  2,  3,  4      ; Four packed 32-bit integers (16 bytes)
+    vecB dd 10, 20, 30, 40
+
+section .text
+    global _start
+_start:
+    ; SIMD: add all 4 pairs simultaneously
+    movdqa xmm0, [vecA]        ; Load 4 ints at once (aligned)
+    paddd  xmm0, [vecB]        ; xmm0 = [11, 22, 33, 44] in ONE instruction
+
+    ; Loop unrolling: 4 elements per iteration instead of 1
+    mov rsi, vecA
+    mov rcx, 0
+unrolled_loop:
+    mov rax, [rsi + rcx*4 + 0]   ; Element 0
+    mov rbx, [rsi + rcx*4 + 4]   ; Element 1
+    mov rdx, [rsi + rcx*4 + 8]   ; Element 2
+    mov r8,  [rsi + rcx*4 + 12]  ; Element 3
+    add rcx, 4
+    cmp rcx, 100
+    jl unrolled_loop
+
+    ; Branchless max using cmov (no misprediction risk)
+    mov rcx, rbx
+    cmp rax, rbx
+    cmovg rcx, rax               ; rcx = rax ONLY if rax > rbx
+
+    mov rax, 60
+    xor rdi, rdi
+    syscall</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>SIMD Vector Adder</strong> with a performance comparison. Implement two versions of a function that adds two arrays of 1,000 packed 32-bit integers: one using a standard scalar loop (<code>add</code>, one element at a time) and one using SIMD (<code>paddd</code>, four elements at a time). Use the <code>rdtsc</code> instruction to roughly compare execution speed between the two approaches and document your findings in a comment block.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 15     -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Interfacing with the OS: Files, Threads &amp; Concurrency</h2>
+                <p>Perform real file I/O and explore low-level concurrency through Linux threads and atomic synchronization.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Performing real file I/O and exploring low-level concurrency through Linux threads and synchronization primitives.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>File I/O: <code>open</code>, <code>read</code>, <code>write</code>, <code>close</code></strong> — Real file operations in Assembly use four core syscalls in sequence: <code>open</code> (returns a file descriptor), <code>read</code>/<code>write</code> (transfer data using that descriptor), and <code>close</code> (releases it). Always check <code>RAX</code> for errors after <code>open</code>, since a missing file or permissions issue returns a negative value.</li>
+                    <li><strong>Linux Threads with <code>clone</code></strong> — The raw <code>clone</code> syscall is the low-level primitive underlying <code>pthread_create()</code> — it spawns a new thread of execution sharing the same address space as the parent process. Working with <code>clone</code> directly requires manually setting up a new stack for the child thread.</li>
+                    <li><strong>Atomic Operations with <code>lock</code> Prefix</strong> — The <code>lock</code> prefix makes certain instructions (like <code>xadd</code>, <code>cmpxchg</code>, <code>inc</code>) execute atomically across multiple CPU cores, preventing race conditions when multiple threads access shared memory simultaneously. This is the hardware-level foundation that mutexes and atomic variables in high-level languages are built upon.</li>
+                    <li><strong>Compare-and-Swap (<code>cmpxchg</code>) for Lock-Free Programming</strong> — <code>cmpxchg</code> atomically compares a memory location against an expected value and, only if they match, swaps in a new value — the fundamental building block of lock-free data structures. Combined with the <code>lock</code> prefix, it enables thread-safe updates without traditional mutexes.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every file operation, network call, and thread ever created on Linux ultimately calls these syscalls. Understanding <code>clone</code> and the <code>lock</code> prefix at the hardware level means you truly understand what pthreads, Go goroutines, and Rust's Mutex do under the hood — a rare and valuable perspective.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>section .data
+    align 8
+    sharedCounter dq 0
+    filename db "data.txt", 0
+
+section .bss
+    buffer resb 256
+
+section .text
+    global _start
+
+; Atomic increment — safe across CPU cores
+increment_counter:
+    lock inc qword [sharedCounter]   ; Indivisible read-modify-write
+    ret
+
+_start:
+    ; File I/O: open → read → close
+    mov rax, 2             ; syscall: open
+    mov rdi, filename
+    xor rsi, rsi           ; O_RDONLY
+    syscall
+    mov r12, rax           ; Save file descriptor
+
+    mov rax, 0             ; syscall: read
+    mov rdi, r12
+    mov rsi, buffer
+    mov rdx, 256
+    syscall
+
+    mov rax, 3             ; syscall: close
+    mov rdi, r12
+    syscall
+
+    ; Atomic CAS: if [sharedCounter] == 0, set to 1
+    mov rax, 0             ; Expected value
+    mov rbx, 1             ; New value
+    lock cmpxchg [sharedCounter], rbx
+    jz swap_ok             ; ZF=1: swap succeeded
+swap_ok:
+    mov rax, 60
+    xor rdi, rdi
+    syscall</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>Concurrent Counter</strong> using raw threads. Use <code>clone</code> to spawn 2 child threads, each incrementing a shared counter 100,000 times using <code>lock inc</code>. Have the main thread wait for both children to finish, then verify the final counter value is exactly <strong>200,000</strong>. As a bonus, remove the <code>lock</code> prefix and observe the incorrect, non-deterministic result — documenting what you see.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 16   -->
+
+        <div class="rm-card" id="week16">
+            <div class="rm-card-header">
+                <h2>Week 16 — Capstone Mini Projects (Beginner → Master)</h2>
+                <p>Apply everything learned across the entire curriculum in three complete, real-world Assembly applications.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Applying everything learned across the entire 16-week curriculum in three complete, portfolio-ready Assembly projects.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — Command-Line Calculator (Beginner–Intermediate)</h3>
+                <p>A standalone CLI calculator that reads two numbers and an operator from command-line arguments and prints the result. Reinforces Phase 1–2 fundamentals: registers, arithmetic, the stack, procedures, and syscalls.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Assembly Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Parse command-line arguments</td>
+                            <td><code>argc</code>/<code>argv</code> from stack at <code>_start</code></td>
+                        </tr>
+                        <tr>
+                            <td>Convert ASCII strings to integers</td>
+                            <td>Manual <code>atoi</code> procedure using loops</td>
+                        </tr>
+                        <tr>
+                            <td>Support <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> operators</td>
+                            <td>Conditional branching with <code>cmp</code>/<code>je</code></td>
+                        </tr>
+                        <tr>
+                            <td>Convert integer result to ASCII string</td>
+                            <td>Manual <code>itoa</code> procedure</td>
+                        </tr>
+                        <tr>
+                            <td>Print result &amp; handle errors</td>
+                            <td><code>write</code> syscall + division-by-zero check</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A fully functional command-line calculator that parses arguments, performs arithmetic, handles errors (division by zero, invalid operators, missing arguments), and prints the result using only syscalls. Build: <code>nasm -f elf64 calc.asm -o calc.o &amp;&amp; ld calc.o -o calc</code>. Push to GitHub with a README and sample run.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — Custom Memory Allocator (Intermediate–Advanced)</h3>
+                <p>A simplified <code>malloc()</code>/<code>free()</code> implementation built from scratch on top of <code>mmap</code>, demonstrating deep understanding of memory management, structs, and pointer manipulation.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Assembly Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>my_malloc(size)</code> — sub-allocate from pool</td>
+                            <td><code>mmap</code> syscall + pointer arithmetic</td>
+                        </tr>
+                        <tr>
+                            <td>Free-list tracking available blocks</td>
+                            <td>Linked list + <code>struc</code> header layout</td>
+                        </tr>
+                        <tr>
+                            <td><code>my_free(ptr)</code> — mark free &amp; coalesce</td>
+                            <td>Pointer traversal + struct field updates</td>
+                        </tr>
+                        <tr>
+                            <td>Block-splitting for exact-size allocation</td>
+                            <td>Stack frame local variables + arithmetic</td>
+                        </tr>
+                        <tr>
+                            <td>Debug print: free-list state dump</td>
+                            <td><code>write</code> syscall + <code>itoa</code> routine</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A complete memory allocator with <code>my_malloc</code>/<code>my_free</code>, block coalescing, block splitting, and a debug print routine showing the free list state. Zero raw <code>mmap</code> calls outside the allocator itself. Push to GitHub with a design explanation of your block header struct layout in the README.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Multithreaded Matrix Multiplication Engine (Advanced–Master)</h3>
+                <p>A high-performance matrix multiplication program combining SIMD vectorization, multi-threading via <code>clone</code>, and atomic synchronization — showcasing the full depth of low-level systems programming covered in this curriculum.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Assembly Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Load N×N matrices from files</td>
+                            <td>Raw file I/O syscalls + string parsing</td>
+                        </tr>
+                        <tr>
+                            <td>Scalar baseline multiplication</td>
+                            <td>Triple nested loop + <code>imul</code></td>
+                        </tr>
+                        <tr>
+                            <td>SIMD-optimized row processing</td>
+                            <td><code>paddd</code>/<code>pmulld</code> + 16-byte alignment</td>
+                        </tr>
+                        <tr>
+                            <td>4-thread parallel row distribution</td>
+                            <td><code>clone</code> syscall + per-thread stack</td>
+                        </tr>
+                        <tr>
+                            <td>Thread-safe completion counter</td>
+                            <td><code>lock inc</code> atomic operation</td>
+                        </tr>
+                        <tr>
+                            <td>Performance benchmarking</td>
+                            <td><code>rdtsc</code> timing + comparison report</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Code Example</h3>
+                <pre><code>; Project 3: thread worker — counts words in a chunk of the file
+; RDI = pointer to chunk, RSI = chunk length,
+; RDX = pointer to shared mutex, RCX = pointer to shared unordered_map
+countChunk:
+    push rbp
+    mov rbp, rsp
+
+.process_word:
+    ; tokenize chunk, then atomically update shared counts:
+    lock inc qword [sharedCounter]   ; Protect shared map access
+    ; ... update word frequency map entry ...
+    jmp .next_word
+
+.done:
+    mov rsp, rbp
+    pop rbp
+    ret
+
+; Build: nasm -f elf64 matrix.asm -o matrix.o
+;        ld matrix.o -o matrix</code></pre>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A production-grade multithreaded matrix multiplication engine with three implementations (scalar, SIMD, SIMD+threads), file I/O for loading/saving matrices, <code>rdtsc</code> benchmarking comparing all three versions, and a performance report in comments documenting speedup at each stage. Push all three projects to a single public GitHub repository with individual READMEs and build instructions (<code>nasm -f elf64 -o ... &amp;&amp; ld ...</code>).</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–4</td>
+                        <td>Absolute Basics</td>
+                        <td>Assemble and run programs; use registers, sections, arithmetic, FLAGS, and bitwise operations confidently</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>5–8</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Write branching logic, loops, reusable procedures with calling conventions, and array/string processing with syscall output</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>9–12</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Model data with structs and stack frames, manage dynamic memory via <code>mmap</code>, handle errors with macros, and use floating-point with C library interop</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>13–16</td>
+                        <td>Master Level Concepts</td>
+                        <td>Implement recursion safely, accelerate code with SIMD, write multithreaded programs with atomic synchronization, and complete three production-grade projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool / Resource</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>NASM (nasm.us)</td>
+                        <td>The Netwide Assembler — primary tool for this curriculum</td>
+                    </tr>
+                    <tr>
+                        <td>GDB</td>
+                        <td>Debugger for stepping through machine code instruction by instruction</td>
+                    </tr>
+                    <tr>
+                        <td>Compiler Explorer (godbolt.org)</td>
+                        <td>See how C/C++ compiles to Assembly in real time</td>
+                    </tr>
+                    <tr>
+                        <td>Intel x86-64 Software Developer Manuals</td>
+                        <td>Authoritative instruction reference for every opcode</td>
+                    </tr>
+                    <tr>
+                        <td>System V AMD64 ABI Specification</td>
+                        <td>Official calling convention reference for Linux x86-64</td>
+                    </tr>
+                    <tr>
+                        <td>OSDev Wiki (wiki.osdev.org)</td>
+                        <td>Deep systems-level reference for OS and hardware topics</td>
+                    </tr>
+                    <tr>
+                        <td><code>objdump -d</code></td>
+                        <td>Disassemble compiled binaries to inspect machine code output</td>
+                    </tr>
+                    <tr>
+                        <td><code>strace</code></td>
+                        <td>Trace all syscalls made by a running program in real time</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Complete each week's task before moving on — writing and assembling code every day beats reading alone by an enormous margin in Assembly.</li>
+                    <li>Use <strong>GDB</strong> from Week 1 — run your programs with <code>gdb ./program</code>, set breakpoints with <code>break _start</code>, and step with <code>si</code> (step instruction). Watching registers change in real time is the fastest way to learn.</li>
+                    <li>Use <strong>Compiler Explorer (godbolt.org)</strong> regularly — write a simple C function and see what Assembly it generates. This builds intuition for how high-level constructs map to low-level instructions.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — your commit history is visible proof of consistent progress and a rare, impressive portfolio for any systems or embedded role.</li>
+                    <li>By Week 16, you should have three complete, assembled, and documented projects and the confidence to write any systems-level Assembly program from scratch.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

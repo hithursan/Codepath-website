@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Learning &amp; Neural Networks - 15 Week Roadmap</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <header class="rm-header">
+        <h1>Deep Learning &amp; Neural Networks</h1>
+        <p>Complete 15-Week Beginner-to-Advanced Roadmap — From Zero Coding to a Deployable AI Project</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#capstone">Capstone</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Roadmap</h2>
+            <p>This roadmap presents a complete, structured, <strong>beginner-to-advanced learning path</strong> for <strong>Deep Learning and Neural Networks</strong> using <strong>Python, TensorFlow, and Keras</strong> — built and documented as a college project.</p>
+            <p>Deep learning is the technology behind face recognition, voice assistants, medical image analysis, self-driving cars, and ChatGPT. This roadmap takes you from learning Python for the first time all the way to building, training, and deploying your own neural network that can classify images with real accuracy.</p>
+            <p><strong>Duration:</strong> 15 weeks &nbsp;|&nbsp; <strong>Pace:</strong> Full-time (~35 hrs/week) &nbsp;|&nbsp; <strong>Stack:</strong> Python · NumPy · Pandas · Matplotlib · Scikit-learn · TensorFlow · Keras · OpenCV · Gradio</p>
+            <p><strong>Hands-On:</strong> 14 weekly mini-projects + 1 complete deployed capstone model &nbsp;|&nbsp; <strong>Outcome:</strong> A trained DL model with explainability (Grad-CAM) and a shareable web demo (Gradio + Hugging Face Spaces)</p>
+
+            <h3>5 Phases Overview</h3>
+            <ul>
+                <li><strong>Phase 1 (Weeks 1–3):</strong> Python, Data Tools &amp; Math Foundations</li>
+                <li><strong>Phase 2 (Weeks 4–5):</strong> Machine Learning Fundamentals</li>
+                <li><strong>Phase 3 (Weeks 6–9):</strong> Deep Learning Core — Neural Networks &amp; CNNs</li>
+                <li><strong>Phase 4 (Weeks 10–12):</strong> Advanced DL — Sequences, NLP &amp; Deployment</li>
+                <li><strong>Phase 5 (Weeks 13–15):</strong> Capstone — VisioNet Build, Evaluation &amp; Presentation</li>
+            </ul>
+
+            <p>By Week 15, you will have built <strong>14 mini-projects</strong> and one complete, deployed capstone — <strong>"VisioNet,"</strong> a smart image classifier with transfer learning, Grad-CAM explainability, and a live Gradio web demo on Hugging Face Spaces.</p>
+        </div>
+
+
+        <!--   WEEK 1  -->
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Python Programming Fundamentals</h2>
+                <p>Learn Python from scratch — syntax, data structures, functions, and OOP basics — well enough to use it for data science and AI work.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Syntax</strong> — Indentation rules, comments, <code>print()</code>, <code>type()</code>, <code>input()</code>.</li>
+                    <li><strong>Data types</strong> — <code>int</code>, <code>float</code>, <code>str</code>, <code>bool</code>, <code>None</code>.</li>
+                    <li><strong>Control flow</strong> — <code>if</code>/<code>elif</code>/<code>else</code>, <code>for</code> loop, <code>while</code> loop, <code>break</code>/<code>continue</code>.</li>
+                    <li><strong>Functions</strong> — <code>def</code>, parameters, return values, default arguments, <code>*args</code>/<code>**kwargs</code>.</li>
+                    <li><strong>Lists</strong> — indexing, slicing, <code>append</code>, <code>extend</code>, <code>pop</code>, list comprehensions.</li>
+                    <li><strong>Dictionaries</strong> — key-value pairs, <code>get()</code>, <code>items()</code>, <code>keys()</code>, <code>values()</code>.</li>
+                    <li><strong>OOP</strong> — <code>class</code>, <code>__init__</code>, <code>self</code>, instance variables, methods (used frequently in TF/Keras).</li>
+                    <li><strong>Jupyter Notebooks</strong> — cells, markdown, running code cells, <code>%</code> magic commands.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every library you'll use for AI — NumPy, Pandas, TensorFlow, Keras — is written in Python and used through Python. Python fundamentals are the non-negotiable prerequisite for everything else in this roadmap.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Install Anaconda, launch JupyterLab. Variables, data types, print, type, basic arithmetic.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Control flow — if/elif/else, for loops, while loops, break/continue.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Functions — define, call, return, default parameters, scope.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Lists — all operations + list comprehensions. Tuples.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Dictionaries and sets. String methods.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>File I/O (read/write text files). OOP basics — define class with <code>__init__</code> and 2 methods.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review all topics + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write function taking list of numbers and returning mean/median/mode (no library).</li>
+                    <li>Write a <code>BankAccount</code> class with <code>deposit()</code>, <code>withdraw()</code>, <code>get_balance()</code>.</li>
+                    <li>List comprehension producing squares of all even numbers 1–50.</li>
+                    <li>Parse dictionary of students/grades; find highest-scoring student.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Build a Python OOP-based <strong>Calculator</strong> with a <code>Calculator</code> class supporting addition, subtraction, multiplication, division, power, square root. Store calculation history as a list. Write in well-commented Jupyter Notebook and push to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>=</code> instead of <code>==</code> in conditionals.</li>
+                        <li>Forgetting Python list indices start at 0.</li>
+                        <li>Defining a class but forgetting <code>self</code> in methods.</li>
+                        <li>Skipping list comprehensions because they "look complicated".</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always test conditionals with <code>print(a == b)</code> before using in <code>if</code> block.</li>
+                        <li>Practice indexing: <code>my_list[0]</code>, <code>my_list[-1]</code>, <code>my_list[1:3]</code> until automatic.</li>
+                        <li>Write every class method with <code>self</code> as first parameter, every time.</li>
+                        <li>Do at least 10 list comprehension exercises before moving on.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>freeCodeCamp — Python for Everybody (YouTube)</li>
+                    <li>Kaggle — Python Course (free, interactive)</li>
+                    <li>Python Official Tutorial (docs.python.org)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 2-->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — NumPy, Pandas &amp; Data Visualization</h2>
+                <p>Master the three core data science libraries that underpin every AI project — and practice exploratory data analysis (EDA) on a real dataset.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>NumPy</strong> — <code>np.array()</code>, shape, dtype, reshaping, slicing, broadcasting, element-wise ops, <code>np.zeros</code>, <code>np.ones</code>, <code>np.random.randn</code>, <code>np.dot</code>, <code>np.mean</code>, <code>np.std</code>, <code>np.argmax</code>.</li>
+                    <li><strong>Pandas</strong> — <code>pd.read_csv()</code>, DataFrame, Series, <code>.head()</code>, <code>.info()</code>, <code>.describe()</code>, <code>.isnull()</code>, <code>.dropna()</code>, <code>.fillna()</code>, <code>.groupby()</code>, <code>.value_counts()</code>, filtering with boolean masks.</li>
+                    <li><strong>Data cleaning</strong> — missing values, duplicate rows, incorrect data types, outlier detection.</li>
+                    <li><strong>Matplotlib</strong> — <code>plt.plot()</code>, <code>plt.bar()</code>, <code>plt.scatter()</code>, <code>plt.hist()</code>, <code>plt.imshow()</code>, subplots, titles, labels.</li>
+                    <li><strong>Seaborn</strong> — <code>sns.heatmap()</code>, <code>sns.boxplot()</code>, <code>sns.pairplot()</code>, <code>sns.countplot()</code> — more aesthetic, less code.</li>
+                    <li><strong>EDA workflow</strong> — load → inspect → clean → visualize → find patterns.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> In AI, your model is only as good as your data. EDA is how you understand a dataset before training anything. NumPy arrays are the native data format for TensorFlow and Keras — understanding them deeply removes confusion from Week 6 onward.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>NumPy — array creation, shapes, indexing, slicing.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>NumPy — broadcasting, dot product, math operations, <code>argmax</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Pandas — Series, DataFrame, loading CSV, <code>.head()</code>, <code>.info()</code>, <code>.describe()</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Pandas — filtering, groupby, value_counts, sort. Handle missing values.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Matplotlib — line, bar, scatter, histogram plots. Subplots.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Seaborn — correlation heatmap, pairplot, boxplot. Combine with Pandas EDA.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>End-to-end EDA on Titanic dataset + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Create 5×4 NumPy array; compute mean of each column without loops (use axis parameter).</li>
+                    <li>Load Titanic dataset; find survival rate by gender, average age by class, missing values per column.</li>
+                    <li>Create 4-panel Matplotlib figure: histogram, scatter, bar, boxplot of same dataset.</li>
+                    <li>Build Seaborn correlation heatmap of Iris dataset; identify most correlated features.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Complete an <strong>EDA notebook on the Titanic dataset</strong> (or another dataset of your choice). Must include: loading and cleaning data, 10+ visualizations with clear titles/labels, at least 5 written observations ("survivors were more likely to be female because..."), correlation heatmap. Push to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Confusing NumPy shape <code>(3, 4)</code> — it's 3 rows, 4 columns.</li>
+                        <li>Using Python loops instead of NumPy vectorized ops (10–100x slower).</li>
+                        <li>Not handling missing values before analysis, causing incorrect statistics.</li>
+                        <li>Creating plots without titles, axis labels, or legends.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always print <code>.shape</code> and visualize array before operating on it.</li>
+                        <li>Default to NumPy operations (<code>np.mean(arr, axis=0)</code>) instead of for loops.</li>
+                        <li>Always check <code>.isnull().sum()</code> at start of any dataset analysis.</li>
+                        <li>Make adding title and axis labels a non-negotiable habit for every plot.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Kaggle — Pandas Course</li>
+                    <li>NumPy Official Quickstart</li>
+                    <li>Matplotlib Official Tutorials</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 3  -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Mathematics for Deep Learning</h2>
+                <p>Build the mathematical intuition for linear algebra, calculus, and probability that underpins every neural network operation.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Vectors</strong> — Geometric meaning, dot product, magnitude, unit vectors, cosine similarity.</li>
+                    <li><strong>Matrices</strong> — Representation, transpose (<code>A.T</code>), matrix-vector multiplication, matrix-matrix multiplication — core operation of every neural network layer.</li>
+                    <li><strong>Why matrix math in DL</strong> — A neural network layer is literally matrix multiplication + activation function.</li>
+                    <li><strong>Derivatives</strong> — Rate of change, power rule, chain rule — needed for backpropagation.</li>
+                    <li><strong>Partial derivatives</strong> — Derivatives w.r.t. one variable holding others constant — how gradients computed in multi-weight networks.</li>
+                    <li><strong>Gradient</strong> — Vector of all partial derivatives; direction of steepest ascent.</li>
+                    <li><strong>Gradient descent</strong> — Moving opposite to gradient to reduce loss; learning rate; 1D optimization visualization.</li>
+                    <li><strong>Probability</strong> — Sample space, probability rules, conditional probability.</li>
+                    <li><strong>Distributions</strong> — Gaussian/normal distribution, mean, variance, standard deviation.</li>
+                    <li><strong>Sigmoid &amp; Softmax</strong> — Turning raw outputs into probabilities.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Deep learning is applied mathematics. Without understanding gradients, you cannot understand why backpropagation works or how to debug a training problem. You don't need to derive equations from scratch in a viva — but you must understand conceptually what each operation does and why.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>3Blue1Brown Linear Algebra videos 1–4 (vectors, linear combinations, matrix transforms). Implement in NumPy.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>3Blue1Brown Linear Algebra videos 5–9 (dot product, cross product, matrix multiplication). Implement.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>3Blue1Brown Calculus videos 1–4 (derivatives, rules). Implement numerical derivative in NumPy.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Chain rule, partial derivatives. Manually compute gradient of simple 2-variable function.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Implement gradient descent from scratch on 1D function. Animate the loss decreasing.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Probability basics — Gaussian distribution, mean, variance. Plot bell curve.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Sigmoid, softmax. Mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Multiply two 3×3 matrices by hand; verify with NumPy <code>np.dot()</code>.</li>
+                    <li>Implement gradient descent from scratch on <code>f(x) = (x-3)²</code> — find minimum, plot path.</li>
+                    <li>Compute numerical derivative of <code>sin(x)</code> at <code>x=π/4</code>; compare to analytical <code>cos(π/4)</code>.</li>
+                    <li>Generate 1000 random Gaussian samples; plot histogram; overlay theoretical curve.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p><strong>"Visual Proof of Gradient Descent"</strong> — Jupyter Notebook that: (1) defines 2D loss surface <code>L(w1, w2) = (w1-2)² + (w2+1)²</code>, (2) implements gradient descent from random start, (3) animates (Matplotlib) trajectory converging to minimum. Include math explanation in markdown cells.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Memorizing equations instead of understanding what they represent geometrically.</li>
+                        <li>Skipping math entirely assuming "Keras will handle it" — leads to inability to debug.</li>
+                        <li>Confusing vector's direction with magnitude.</li>
+                        <li>Not implementing gradient descent from scratch — reading is not doing.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>For every equation, ask "what does this represent geometrically?" before "how do I compute it?"</li>
+                        <li>Do gradient descent from scratch even though Keras will do it automatically — understanding is what matters.</li>
+                        <li>Implement every math concept in NumPy the same day you watch the explanation.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>3Blue1Brown — Essence of Linear Algebra (YouTube)</li>
+                    <li>3Blue1Brown — Essence of Calculus (YouTube)</li>
+                    <li>Khan Academy — Statistics and Probability</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 4  -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Machine Learning Concepts &amp; Scikit-learn</h2>
+                <p>Understand how classical machine learning works — concepts, workflow, and evaluation that apply to deep learning as well.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>ML types</strong> — Supervised (labeled → predict), unsupervised (unlabeled → find structure), reinforcement (agent + env + reward).</li>
+                    <li><strong>Train/val/test split</strong> — Why all 3 needed; data leakage and why it's dangerous.</li>
+                    <li><strong>Scikit-learn workflow</strong> — <code>fit()</code>, <code>predict()</code>, <code>score()</code>, <code>train_test_split</code>, <code>Pipeline</code>.</li>
+                    <li><strong>Classification algorithms</strong> — Logistic Regression, Decision Tree, Random Forest, K-Nearest Neighbors (conceptual + sklearn practice).</li>
+                    <li><strong>Regression algorithms</strong> — Linear Regression (review gradient descent from Week 3).</li>
+                    <li><strong>Classification metrics</strong> — Accuracy, precision, recall, F1-score, confusion matrix.</li>
+                    <li><strong>Regression metrics</strong> — MAE, MSE, RMSE, R².</li>
+                    <li><strong>Cross-validation</strong> — k-fold CV; why single train/test split can be misleading.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Deep learning is built on ML concepts. Overfitting, evaluation metrics, train/test splits, and cross-validation all appear directly in deep learning. Understanding them with simpler sklearn models first makes them much clearer with neural networks.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>ML types, supervised vs unsupervised. What is a model? What is training?</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Load dataset. Train/test split. Fit logistic regression. Evaluate accuracy.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Confusion matrix, precision, recall, F1. When does accuracy lie? (Imbalanced classes.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Decision Trees and Random Forests. Compare with logistic regression.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Linear Regression. MAE, MSE, RMSE, R². Fit on regression dataset.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Cross-validation (k-fold). Bias-variance tradeoff.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Load breast cancer dataset; train Logistic Regression and Random Forest. Compare accuracy/precision/recall.</li>
+                    <li>Manually create scenario where accuracy is 95% but model is useless (hint: 95% one class).</li>
+                    <li>Compute precision and recall from confusion matrix by hand before verifying with sklearn.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Build a binary classifier on <strong>diabetes prediction dataset</strong> (Kaggle). Train 3 models (Logistic Regression, Decision Tree, Random Forest). Compare with accuracy, F1, ROC-AUC. Choose best model and explain why for this specific medical dataset. Push to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using accuracy as only metric, especially on imbalanced datasets.</li>
+                        <li>Data leakage: fitting scaler on full dataset before splitting train/test.</li>
+                        <li>Overfitting on test set by tuning hyperparameters until test looks good.</li>
+                        <li>Not understanding what cross-validation actually does.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always report precision and recall alongside accuracy for medical/imbalanced data.</li>
+                        <li>Always fit scalers/encoders on training data only, then transform test data.</li>
+                        <li>Test set is used exactly once, at very end — treat as sacred.</li>
+                        <li>CV trains k models on different splits and averages performance; final model usually retrained on all training data.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Google Machine Learning Crash Course</li>
+                    <li>Kaggle — Intro to Machine Learning</li>
+                    <li>Scikit-learn Official User Guide</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 5   -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Data Preprocessing, Feature Engineering &amp; Model Optimization</h2>
+                <p>Learn how to prepare raw data for ML and DL models, and understand overfitting/underfitting so you can fix them.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Scaling</strong> — StandardScaler (zero mean, unit variance), MinMaxScaler (0–1); why scaling matters for gradient-based optimization.</li>
+                    <li><strong>Encoding</strong> — One-Hot, Label, Ordinal — when each is appropriate.</li>
+                    <li><strong>Missing data</strong> — Mean/median/mode imputation, dropping rows/columns, when dropping is dangerous.</li>
+                    <li><strong>Feature engineering</strong> — Creating new features (e.g., day of week from date), polynomial features, interaction terms.</li>
+                    <li><strong>Overfitting</strong> — Model memorizes training data; high train accuracy, low val accuracy.</li>
+                    <li><strong>Underfitting</strong> — Model too simple; low train AND val accuracy.</li>
+                    <li><strong>Regularization</strong> — L1 (Lasso — feature selection), L2 (Ridge — smooth weight reduction), dropout (Week 7).</li>
+                    <li><strong>Hyperparameter tuning</strong> — <code>GridSearchCV</code>, <code>RandomizedSearchCV</code>.</li>
+                    <li><strong>Pipelines</strong> — Chaining preprocessing + model to prevent data leakage.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Real-world datasets are never clean and perfectly formatted. Deep learning models are particularly sensitive to feature scaling — unnormalized inputs cause slow or failed training. Every skill from this week applies directly to preparing image and text data in later weeks.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Feature scaling. StandardScaler vs MinMaxScaler. Fit on train, transform test.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Categorical encoding — one-hot and label encoding. Handle mixed-type dataset.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Missing data strategies. Practice on dataset with intentionally introduced NaN values.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Feature engineering — create new features, compare model performance before/after.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Learning curves — plot train vs val loss. Diagnose overfitting/underfitting.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Regularization — add L2 to logistic regression. GridSearchCV on random forest.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Pipelines — chain all preprocessing + model. Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Take diabetes dataset; manually introduce 10% missing values. Apply 3 imputation strategies; compare model performance.</li>
+                    <li>Plot learning curve; deliberately create overfitting with unlimited-depth decision tree. Fix with <code>max_depth=5</code>.</li>
+                    <li>Build complete sklearn Pipeline: StandardScaler + OneHotEncoder + RandomForestClassifier handling full preprocessing automatically.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Build complete <strong>"ML Pipeline Notebook"</strong> on dataset with mixed types, missing values, categorical features (suggested: House Prices dataset on Kaggle). Notebook must: clean data with documented reasoning, engineer at least 2 new features, compare 3 models (before/after feature engineering), produce final best model chosen based on appropriate metrics. Push to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Fitting scaler on all data (train + test) before splitting — data leakage.</li>
+                        <li>Using label encoding for non-ordinal features (implies false ordering: red=1, green=2, blue=3).</li>
+                        <li>Treating every imbalanced dataset same way without analyzing class frequencies first.</li>
+                        <li>Conflating regularization (L1/L2 penalize weights) with normalization (scaling features).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always split first, then fit preprocessing on train set only.</li>
+                        <li>OneHotEncoder for nominal categories; OrdinalEncoder only for ordinal (S/M/L/XL).</li>
+                        <li>Check class distribution with <code>value_counts()</code> before choosing metrics and modeling approach.</li>
+                        <li>Regularization and normalization both important but solve different problems — apply both.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Kaggle — Feature Engineering Course</li>
+                    <li>Scikit-learn Preprocessing Guide</li>
+                    <li>Google ML Crash Course — Regularization</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36 hours</p>
+            </div>
+        </div>
+
+
+        <!--   WEEK 6   -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Neural Networks from Scratch</h2>
+                <p>Build a neural network using only NumPy — no TensorFlow, no Keras — to truly understand forward pass, activation functions, loss, and backpropagation.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Perceptron</strong> — Weighted sum of inputs + bias → activation → output.</li>
+                    <li><strong>Activation functions</strong> — Why linear activation insufficient; ReLU (<code>max(0, x)</code>); Sigmoid for output probability; Softmax for multi-class.</li>
+                    <li><strong>Forward pass</strong> — Layer by layer: <code>Z = W·X + b</code>, <code>A = activation(Z)</code>, repeated per layer.</li>
+                    <li><strong>Loss function</strong> — Binary Cross-Entropy (2-class), Categorical Cross-Entropy (multi-class), MSE (regression).</li>
+                    <li><strong>Backpropagation</strong> — Chain rule applied backward to compute each weight's gradient w.r.t. loss.</li>
+                    <li><strong>Weight update</strong> — <code>W = W - learning_rate × gradient</code>.</li>
+                    <li><strong>Implementation</strong> — Random weight initialization (not zero — why); forward pass; loss; backward pass; update loop.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Building from scratch is what separates someone who can use TensorFlow from someone who understands deep learning. Understanding the math of forward and backward pass enables you to debug training problems, explain your model in a viva, and understand why design choices matter.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>3Blue1Brown neural networks series (all 4 videos). Take notes on backprop math.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Implement single neuron: <code>z = w1*x1 + w2*x2 + b; a = sigmoid(z)</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Implement forward pass for 2-layer network using NumPy matrix operations.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Implement loss function. Verify by computing loss for perfect vs random predictions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Derive gradients on paper for 1 layer. Implement backpropagation for output layer.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Implement full backpropagation (hidden + output). Implement weight update.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Train on XOR problem. Plot loss vs epoch. Verify convergence. Mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Verify network with zero weight initialization never learns (symmetry problem).</li>
+                    <li>Train from-scratch network on XOR; show loss decreasing from ~0.7 to &lt;0.05.</li>
+                    <li>Experiment with 3 learning rates (too high, too low, just right); plot all curves on same graph.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p><strong>"Neural Network from Scratch"</strong> — fully documented Jupyter Notebook implementing 2-layer NN using only NumPy. Must: train on XOR, achieve &lt;0.05 loss, plot loss over training, visualize decision boundary learned, explain every step in markdown. This is a portfolio piece — make it polished. Push to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Initializing all weights to zero (symmetry problem — all neurons learn identically).</li>
+                        <li>Getting confused about matrix shapes during backpropagation — shape errors most common bug.</li>
+                        <li>Learning rate too high (loss explodes) or too low (loss barely decreases) without investigating.</li>
+                        <li>Not testing intermediate outputs — print shapes and values after each step during dev.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always initialize weights randomly: <code>np.random.randn(n_in, n_out) * 0.01</code> never zeros.</li>
+                        <li>Print shape of every matrix at every step during initial implementation.</li>
+                        <li>Start with <code>lr=0.1</code>, observe loss curve, adjust systematically.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>3Blue1Brown — Neural Networks Series (YouTube)</li>
+                    <li>Michael Nielsen — Neural Networks and Deep Learning (free online book)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 7  -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — TensorFlow &amp; Keras — Building and Training Neural Networks</h2>
+                <p>Rebuild everything from Week 6 using TensorFlow and Keras, and extend it to deeper networks with proper training techniques.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>TensorFlow tensors</strong> — <code>tf.Tensor</code>, creating from NumPy, device placement (CPU/GPU).</li>
+                    <li><strong>Keras Sequential API</strong> — <code>tf.keras.Sequential([Dense(64, activation='relu'), ...])</code> for linear stacks.</li>
+                    <li><strong>Keras Functional API</strong> — <code>inputs = Input(shape=...); x = Dense(64)(inputs)</code> for multi-input/output, skip connections.</li>
+                    <li><strong>Optimizers</strong> — SGD, Adam (default choice), RMSprop — what they do differently.</li>
+                    <li><strong>Loss functions</strong> — <code>binary_crossentropy</code>, <code>categorical_crossentropy</code>, <code>sparse_categorical_crossentropy</code>, <code>mse</code>.</li>
+                    <li><strong>Metrics</strong> — <code>accuracy</code>, <code>AUC</code>, <code>Precision</code>, <code>Recall</code>.</li>
+                    <li><strong>Callbacks</strong> — EarlyStopping, ModelCheckpoint (save best weights), ReduceLROnPlateau.</li>
+                    <li><strong>Overfitting solutions</strong> — Dropout layers, L1/L2 regularization, EarlyStopping, data augmentation (preview).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> From this week forward, you will build every model using Keras. Mastering the <code>fit()</code>, <code>compile()</code>, and callbacks pattern is the single most repeated skill in the rest of the roadmap. This week also introduces training diagnostics — reading loss curves to diagnose problems.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>TensorFlow basics — tensors, operations, GPU check. Rebuild XOR in Keras.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Dense layers, activations, compile, fit on MNIST or tabular dataset.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Dropout, BatchNormalization. Observe effects on training curves.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Callbacks — EarlyStopping, ModelCheckpoint. Save and reload best model.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Plot and diagnose train vs val loss. Deliberately create overfitting then fix.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Functional API — build model with skip connection or dual-input.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Train 4-layer network on Fashion-MNIST without regularization; observe overfitting; add Dropout; observe improvement.</li>
+                    <li>Use EarlyStopping; verify training stopped before max epoch.</li>
+                    <li>Save model with ModelCheckpoint; restart Colab; reload; verify same predictions.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Build Keras NN to classify <strong>Fashion-MNIST</strong> (10 clothing classes). Notebook must show: architecture table (layer/size/activation), training curves (loss + accuracy for train/val), comparison with/without Dropout, final test accuracy. Push to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>categorical_crossentropy</code> with integer labels instead of <code>sparse_categorical_crossentropy</code>.</li>
+                        <li>Forgetting <code>model.evaluate()</code> returns loss first, accuracy second — reading wrong order.</li>
+                        <li>Too many Dropout layers or rate too high (e.g., 0.9) causing severe underfitting.</li>
+                        <li>Not setting <code>save_best_only=True</code> in ModelCheckpoint — saves every epoch.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>If labels are integers, use <code>sparse_categorical_crossentropy</code>; if one-hot, use <code>categorical_crossentropy</code>.</li>
+                        <li>Always unpack: <code>loss, acc = model.evaluate(X_test, y_test)</code>.</li>
+                        <li>Typical Dropout: 0.2–0.5; start with 0.3 and observe val accuracy.</li>
+                        <li>Always use <code>save_best_only=True, monitor='val_loss'</code> in ModelCheckpoint.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>TensorFlow Official Tutorials</li>
+                    <li>Keras Documentation — Getting Started</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Convolutional Neural Networks (CNNs) for Image Classification</h2>
+                <p>Understand the architecture of CNNs, build one from scratch in Keras, and train it on a real image dataset.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Why CNNs</strong> — 224×224 RGB = 150,528 pixels. Dense to 1000 neurons = 150M params. Conv layer shares weights with small filters.</li>
+                    <li><strong>Convolution</strong> — Sliding small filter (kernel) over image, computing dot product; detects local patterns (edges, textures).</li>
+                    <li><strong>Filters</strong> — Each filter detects one pattern; 32 filters → 32 feature maps; deeper layers detect complex patterns.</li>
+                    <li><strong>MaxPooling</strong> — Reduces spatial size (28×28 → 14×14), reducing computation and providing positional invariance.</li>
+                    <li><strong>Padding</strong> — "same" preserves spatial dims; "valid" (default) reduces.</li>
+                    <li><strong>Stride</strong> — How far filter moves per step; stride=2 halves spatial dim.</li>
+                    <li><strong>Standard CNN block</strong> — Conv2D → BatchNorm → ReLU → MaxPool.</li>
+                    <li><strong>Classification head</strong> — Flatten (or GlobalAveragePooling2D) → Dense → Dropout → Softmax.</li>
+                    <li><strong>CIFAR-10</strong> — 60,000 images, 32×32 pixels, 10 classes — standard CNN benchmark.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> CNNs are the foundation of almost every computer vision model ever deployed. Transfer learning (Week 9) builds directly on CNN architecture understanding. Image classification is the primary skill used in the VisioNet capstone.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Convolution — manually apply 3×3 filter to 5×5 image on paper. Then implement in NumPy.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Pooling, padding, stride. Read CS231n CNN notes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Build 3-block CNN in Keras. Load CIFAR-10. Train 20 epochs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Add BatchNormalization to each conv block. Retrain; compare curves.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Visualize feature maps from first conv layer on sample image.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Analyze predictions — confusion matrix, correct and wrong predictions with images.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Manually compute output of 5×5 image convolved with 3×3 sharpening filter by hand.</li>
+                    <li>Train same CNN with and without BatchNormalization on CIFAR-10. Compare val accuracy after 20 epochs.</li>
+                    <li>Display 10 incorrect predictions with true and predicted labels. Look for patterns.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Train <strong>CNN image classifier on CIFAR-10</strong>. Notebook must include: architecture table, training curves for 30+ epochs, confusion matrix, 5 correct predictions, 5 incorrect predictions with analysis, your test accuracy. Target at least 70% test accuracy. Push to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>Flatten</code> instead of <code>GlobalAveragePooling2D</code> (too many params, more overfitting).</li>
+                        <li>Forgetting to normalize pixel values to [0, 1] (divide by 255.0).</li>
+                        <li>Stacking many conv layers without MaxPooling — slow, large spatial dims.</li>
+                        <li>Not saving best model checkpoint — losing good model when Colab disconnects.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Prefer <code>GlobalAveragePooling2D</code> over <code>Flatten</code> in modern CNNs.</li>
+                        <li>Always normalize: <code>X_train = X_train / 255.0</code>.</li>
+                        <li>Add MaxPooling after every 1–2 conv layers.</li>
+                        <li>Always use ModelCheckpoint with <code>save_best_only=True</code> before long training runs.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Stanford CS231n Notes — CNNs</li>
+                    <li>TensorFlow — Image Classification Tutorial</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40 hours</p>
+            </div>
+        </div>
+
+
+        <!--   WEEK 9  -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Transfer Learning, Data Augmentation &amp; Fine-Tuning</h2>
+                <p>Use pre-trained CNN models (MobileNetV2) to achieve high accuracy on a custom image dataset in a fraction of the time required to train from scratch — the core skill of the VisioNet capstone.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Why transfer learning works</strong> — Early CNN layers learn universal features (edges, textures); only top classification layers need to adapt.</li>
+                    <li><strong>ImageNet</strong> — 1.4M images across 1000 classes — most common pre-training dataset for vision.</li>
+                    <li><strong>MobileNetV2</strong> — Lightweight CNN; 3.4M parameters; ideal for beginner capstone with limited Colab GPU.</li>
+                    <li><strong>Feature extraction</strong> — Freeze all MobileNetV2 layers, add new classifier head, train only head.</li>
+                    <li><strong>Fine-tuning</strong> — After head training, unfreeze top N layers and train with very small learning rate.</li>
+                    <li><strong>Data augmentation</strong> — <code>RandomFlip</code>, <code>RandomRotation</code>, <code>RandomZoom</code>, <code>RandomBrightness</code> — multiply training data, improve generalization.</li>
+                    <li><strong>Grad-CAM</strong> — Compute gradient of class score w.r.t. final conv activations; use as heatmap overlay.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Transfer learning is the most practically impactful DL technique. With as few as 500 images per class, you can achieve 85–95% accuracy. Without it you'd need millions of images and weeks of training. Grad-CAM adds the "explainability" that makes VisioNet stand out.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Read TensorFlow Transfer Learning tutorial. Load MobileNetV2; inspect architecture.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Data augmentation pipeline. Visualize augmented images before training.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Feature extraction phase — freeze base, add head, train 15 epochs. Plot curves.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Fine-tuning phase — unfreeze top 20 layers, train with lr=1e-5 for 10 epochs. Compare.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Implement Grad-CAM (<code>tf-keras-vis</code> or from scratch with guided tutorials).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Generate Grad-CAM heatmaps for 10 images — 5 correct, 5 incorrect. Analyze.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project — capstone model v1.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Train feature extraction and fine-tuning separately. Record accuracy after each phase to measure improvement.</li>
+                    <li>Intentionally choose dataset with too few images (50/class); observe poor results; add data augmentation; observe improvement.</li>
+                    <li>Generate Grad-CAM for incorrect prediction; describe in writing what model was looking at instead.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Train <strong>MobileNetV2 via transfer learning</strong> on your chosen VisioNet dataset. Notebook must show: data augmentation visualization, feature extraction results, fine-tuning results, comparison table (accuracy before/after FT), 10 Grad-CAM heatmaps with written analysis. Push to GitHub — this is v1 of your capstone model.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Fine-tuning with too high learning rate, destroying pre-trained weights.</li>
+                        <li>Not freezing base model during feature extraction (catastrophic forgetting on small dataset).</li>
+                        <li>Forgetting <code>training=False</code> when calling base model during feature extraction (BatchNorm issues).</li>
+                        <li>Expecting Grad-CAM to always produce clean intuitive heatmaps — model sometimes focuses on texture/background.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Fine-tuning LR should be 10–100× smaller than normal (typical: <code>1e-5</code> for FT, <code>1e-3</code> for head only).</li>
+                        <li>Always <code>base_model.trainable = False</code> during feature extraction; only <code>True</code> during FT.</li>
+                        <li>Always call <code>base_model(x, training=False)</code> in model definition during feature extraction.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>TensorFlow Transfer Learning Tutorial</li>
+                    <li>tf-keras-vis (Grad-CAM library)</li>
+                    <li>Papers With Code — Transfer Learning Explained</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 10 -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Recurrent Neural Networks &amp; LSTMs</h2>
+                <p>Understand how neural networks process sequential data — text, audio, and time series — using RNNs and LSTMs.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Sequential data</strong> — Where order matters; sentence different from shuffled words; tomorrow's temp depends on today's.</li>
+                    <li><strong>RNN</strong> — Processes one element at a time, maintaining hidden state summarizing what seen so far.</li>
+                    <li><strong>Vanishing gradient</strong> — Gradients backpropagated through many time steps shrink exponentially; early steps impossible to learn.</li>
+                    <li><strong>LSTM gates</strong> — Forget (discard from memory), Input (store new info), Output (decide what to output); maintain long-term cell state alleviating vanishing gradient.</li>
+                    <li><strong>GRU</strong> — Simpler LSTM with only 2 gates; often performs similarly with fewer parameters.</li>
+                    <li><strong>Keras LSTM</strong> — <code>LSTM(units, return_sequences=True/False)</code>, <code>Bidirectional(LSTM(...))</code> for reading both directions.</li>
+                    <li><strong>Use cases</strong> — Stock price prediction, music generation, text generation, sentiment analysis.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> LSTMs were the dominant architecture for text/sequence tasks for years before Transformers. Understanding them is essential for the NLP week that follows, and the skills transfer directly to sentiment analysis.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Why sequences need special networks. RNN recurrence relation — diagram on paper.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Vanishing gradient problem — draw gradient flow through 10 time steps.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Read Christopher Olah's LSTM post. Draw all 3 gates yourself. No coding yet.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Implement LSTM in Keras for simple time series (predict next value in sine wave).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>LSTM text predictor — trained on small text corpus (short story or poem).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Bidirectional LSTM. GRU comparison. Plot predictions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Generate sine wave + noise; train LSTM to predict next value. Plot predictions vs ground truth.</li>
+                    <li>Train LSTM on first 100 lines of book; generate 50 characters of new text from it.</li>
+                    <li>Compare LSTM vs GRU on same time series — which is faster? More accurate?</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p><strong>"LSTM Next-Word Predictor"</strong> — train LSTM on text corpus (5,000+ words; book, Wikipedia, etc.). Given 3-word seed, model generates next 20 words. Show 5 examples with different seeds. Document training loss curve. Push to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Setting <code>return_sequences=False</code> when stacking multiple LSTM layers.</li>
+                        <li>Not reshaping time series into <code>(samples, time_steps, features)</code> before LSTM.</li>
+                        <li>Expecting grammatically perfect text from char-level LSTM on small corpus.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Stacking LSTMs: intermediate need <code>return_sequences=True</code>; only final uses <code>False</code>.</li>
+                        <li>LSTM input shape: always <code>(batch_size, timesteps, features)</code>.</li>
+                        <li>Char-level LSTM on 5,000 words produces plausible but nonsensical text — expected.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Christopher Olah — Understanding LSTMs</li>
+                    <li>TensorFlow — Time Series Forecasting Tutorial</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 37 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 11  -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Natural Language Processing with Deep Learning</h2>
+                <p>Apply deep learning to text — preprocessing text data, learning word embeddings, and building a sentiment analysis classifier.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Text preprocessing</strong> — Lowercasing, removing punctuation/stopwords, stemming/lemmatization.</li>
+                    <li><strong>Tokenization</strong> — Converting words to integers; <code>tf.keras.preprocessing.text.Tokenizer</code> or <code>TextVectorization</code>.</li>
+                    <li><strong>Padding</strong> — Sequences have different lengths; <code>pad_sequences</code> pads shorter to fixed length.</li>
+                    <li><strong>One-hot vs embeddings</strong> — One-hot: V-dim sparse vector per word; embeddings: dense low-dim vector capturing semantic relationships.</li>
+                    <li><strong>Word embeddings</strong> — "king" - "man" + "woman" ≈ "queen" — vectors capture meaning.</li>
+                    <li><strong>Keras Embedding layer</strong> — Learns embeddings from scratch during training; size = <code>(vocab_size, embedding_dim)</code>.</li>
+                    <li><strong>GloVe</strong> — Pre-trained word vectors on billions of words; load as initial weights for Embedding layer.</li>
+                    <li><strong>Sentiment architecture</strong> — Embedding → LSTM → Dense (sigmoid for binary) — classify reviews positive/negative.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> NLP is one of the largest application areas of deep learning. Text preprocessing and embedding skills are the foundation for understanding Transformers, BERT, and LLMs — which dominate modern NLP. Sentiment analysis is a well-scoped, demo-able project that shows real utility.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Text preprocessing — lowercase, remove punct/stopwords in Python. Apply to sample reviews.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Tokenization and padding with Keras. Inspect tokenized sequences.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Word embeddings concept. Visualize GloVe vectors with PCA.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Build Embedding → LSTM → Dense model on IMDB. Train. Evaluate.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Load GloVe embeddings. Replace Embedding weights. Retrain. Compare.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Build simple function: input review string → output positive/negative prediction.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Visualize word similarity using GloVe: find 5 most similar to "happy", "terrible", "fast".</li>
+                    <li>Train IMDB sentiment classifier; achieve &gt;85% validation accuracy.</li>
+                    <li>Write function: input English movie review → output "Positive"/"Negative" with confidence score.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Build <strong>sentiment analysis classifier on IMDB Movie Reviews</strong> (50,000 reviews). Train with both learned and pre-trained GloVe embeddings. Notebook must: show preprocessing clearly, include training curve, show val accuracy with both embeddings, include 10 example predictions on reviews you write yourself. Push to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using Python's <code>str.split()</code> for tokenization instead of proper tokenizer.</li>
+                        <li>Forgetting to pad sequences — LSTM crashes or gives wrong shapes.</li>
+                        <li>Building GloVe embeddings matrix incorrectly (index off-by-one — most tokenizers start at 1, not 0).</li>
+                        <li>Overfitting on IMDB with too complex model — Embedding + LSTM with dropout should reach 85–88%.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Use <code>TextVectorization</code> or <code>Tokenizer</code> from Keras, not manual string splitting.</li>
+                        <li>Always check all sequences in batch are same length after padding.</li>
+                        <li>Build GloVe matrix carefully — print first 5 entries and verify words match expected vectors.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Kaggle — NLP Getting Started</li>
+                    <li>GloVe Pre-trained Vectors (Stanford)</li>
+                    <li>TensorFlow — Text Classification Tutorial</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 37 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 12  -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Model Saving, Deployment &amp; Gradio Demo</h2>
+                <p>Save, reload, and deploy your trained models as interactive web demos using Gradio and Hugging Face Spaces — making your AI accessible to anyone with a browser.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Saving models</strong> — <code>model.save('model.keras')</code> (recommended), <code>save_weights()</code>, loading with <code>load_model()</code>.</li>
+                    <li><strong>Model formats</strong> — <code>.keras</code> (full model), <code>.h5</code> (legacy HDF5), SavedModel (TF serving format).</li>
+                    <li><strong>Inference</strong> — <code>model.predict(image)</code> vs <code>model(image, training=False)</code> — when to use each.</li>
+                    <li><strong>Image preprocessing for inference</strong> — Resizing, normalizing, adding batch dim — must match training exactly.</li>
+                    <li><strong>Gradio</strong> — <code>gr.Interface()</code> with input/output types (Image, Text, Audio, Label) — web app with no HTML/CSS/JS.</li>
+                    <li><strong>Gradio Blocks</strong> — For more complex multi-component layouts.</li>
+                    <li><strong>Hugging Face Spaces</strong> — Free hosting for Gradio (and Streamlit) apps — deploy from GitHub repo or directly from Colab.</li>
+                    <li><strong><code>requirements.txt</code></strong> — Listing dependencies for Spaces deployment.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A model you can't demonstrate to someone is a model that doesn't exist for your audience. Gradio transforms a Python function into a shareable web app in 5 lines of code. Your Hugging Face Spaces link is what you put in your resume, README, and college project website.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Model saving formats. Save and reload Week 8 CNN. Verify identical predictions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Write production-ready <code>predict()</code> function with all preprocessing included.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Install Gradio. Build basic Image → Label interface. Test in Colab with public link.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Enhance with Grad-CAM overlay — Gradio shows both label and heatmap.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Create Hugging Face account. Create Space. Deploy.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Write <code>README.md</code> for Hugging Face Space. Add example images. Polish demo.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project — full VisioNet demo deployed.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Save model, restart kernel, reload, verify 5 test predictions identical before/after.</li>
+                    <li>Build Gradio interface for Week 11 sentiment model — text input → positive/negative label.</li>
+                    <li>Deploy both image classifier and text classifier to two separate Hugging Face Spaces.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Deploy fully functional <strong>Gradio web demo</strong> for best model so far (Week 9 transfer learning). Must: accept user-uploaded image, display predicted class + confidence %, display Grad-CAM heatmap showing which parts influenced prediction. Deploy to Hugging Face Spaces; get public URL. Add URL to GitHub README and project website.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Forgetting to include same preprocessing (resize 224×224, normalize [0,1], batch dim) in Gradio function as in training.</li>
+                        <li>Uploading huge model file (hundreds of MB) to HF — Space loading too slow.</li>
+                        <li>Not testing deployed Space before sharing — preprocessing bugs only show on real uploads.</li>
+                        <li>Building Gradio in Colab but only using temporary public link (expires 72h) instead of deploying to Spaces.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Copy exact preprocessing from training notebook into <code>predict()</code> — one missing step = wrong predictions.</li>
+                        <li>MobileNetV2 = 10–20MB typical — manageable. Larger models: consider TFLite conversion.</li>
+                        <li>Test deployed Space with at least 5 different images (incl. edge cases) before sharing.</li>
+                        <li>Deploy to HF Spaces for permanent URL; use Colab link only for quick local testing.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Gradio Official Documentation</li>
+                    <li>Hugging Face Spaces Documentation</li>
+                    <li>TensorFlow — Save and Load Models</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 13  -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — VisioNet Dataset Pipeline &amp; EDA</h2>
+                <p>Finalize your VisioNet dataset, build a complete, reproducible data pipeline, and perform thorough EDA before any model training.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Dataset acquisition</strong> — Downloading from Kaggle, <code>tf.keras.utils.get_file()</code>, <code>tensorflow_datasets</code>.</li>
+                    <li><strong>Quality issues</strong> — Corrupted images, incorrectly labeled, extreme class imbalance, near-duplicate images.</li>
+                    <li><strong>Class imbalance</strong> — If A: 2000 / B: 200, model biased. Solutions: oversample, undersample, <code>class_weight</code> in <code>fit()</code>.</li>
+                    <li><strong>TF data pipeline</strong> — <code>tf.data.Dataset.from_tensor_slices()</code>, <code>.map()</code>, <code>.batch()</code>, <code>.prefetch()</code> — efficient GPU-optimized.</li>
+                    <li><strong><code>ImageDataGenerator</code> vs <code>tf.data</code></strong> — Prefer <code>tf.data</code> for new projects.</li>
+                    <li><strong>Dataset splits</strong> — <code>image_dataset_from_directory()</code> with <code>validation_split=0.2</code> or manual split.</li>
+                    <li><strong>EDA for images</strong> — Mean/std per channel, class distribution bar chart, sample image grid, common dimensions.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Garbage in = garbage out. A model trained on dirty, imbalanced, or improperly split data will never produce reliable results regardless of architecture. This week is the foundation that determines how well VisioNet can possibly perform.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Download and organize dataset. Check directory structure matches <code>image_dataset_from_directory()</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Check for corrupted images, class counts, image size distribution.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>EDA — class distribution chart, sample grid, pixel statistics.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Handle class imbalance — compute <code>class_weight</code> for <code>fit()</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Build <code>tf.data</code> pipeline with augmentation. Visualize augmented batches.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Final train/val/test split. Verify no data leakage between splits.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Document all pipeline decisions in the notebook.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-info">
+                    <p><strong>This Week Is Capstone Prep:</strong> See the dedicated Capstone section below for the complete VisioNet specification.</p>
+                </div>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <!--   WEEK 14  -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — VisioNet Model Training &amp; Evaluation</h2>
+                <p>Train the final VisioNet model to its best possible performance and produce a complete evaluation with all required visualizations.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Training strategy</strong> — Feature extraction (15–20 epochs) → fine-tuning (10–15 epochs).</li>
+                    <li><strong>Hyperparameters to tune</strong> — Learning rate, dropout rate, # unfrozen layers in FT, batch size.</li>
+                    <li><strong>Training monitoring</strong> — Plot loss and accuracy per epoch for train/val; look for divergence (overfitting signal).</li>
+                    <li><strong>Final evaluation</strong> — Run once on held-out test set — never tune hyperparameters based on test.</li>
+                    <li><strong>Confusion matrix</strong> — Which class pairs does model confuse most? Why might they be visually similar?</li>
+                    <li><strong>Per-class report</strong> — <code>classification_report()</code> from sklearn — precision, recall, F1 per class.</li>
+                    <li><strong>Error analysis</strong> — Display 10 images model was most confident about but wrong — reveals systematic failures.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A trained model with no evaluation is not a finished project. Confusion matrices, per-class metrics, and error analysis are what distinguish a tutorial project from a real ML deliverable.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Feature extraction phase. Train 20 epochs. Save best checkpoint.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Fine-tuning phase. Unfreeze top 30 layers. Train 15 epochs. Save best.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Final test set evaluation. Confusion matrix. Classification report.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Error analysis — visualize 10 most confidently wrong predictions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Grad-CAM on 20 test images — 10 correct, 10 wrong. Written analysis.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Compare final model against Week 9 v1 — document what improved.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Clean up notebooks. Final accuracy documented in README.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 15 -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Deployment, Documentation &amp; Final Presentation</h2>
+                <p>Deploy the final VisioNet model to Hugging Face Spaces, finalize all documentation, and prepare a polished presentation and viva readiness.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Final Gradio app integration</strong> — With Grad-CAM in UI.</li>
+                    <li><strong>Hugging Face Spaces deployment</strong> — Live, shareable URL.</li>
+                    <li><strong>Project README and documentation</strong> — Problem, dataset, architecture, results, demo link, how to run.</li>
+                    <li><strong>System design writeup</strong> — Architecture diagram, data flow, tech choices and rationale.</li>
+                    <li><strong>GitHub release</strong> — Tagged version of code + model.</li>
+                    <li><strong>Demo rehearsal and viva preparation</strong> — 5-minute walkthrough; answer interview questions out loud.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Polish, documentation, and rehearsal convert 14 weeks of building into actual presentation/viva success. The model exists; this week makes sure it's visible, demoable, and credible.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Polish and finalize Gradio app. Test with diverse images including edge cases.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Deploy to Hugging Face Spaces. Verify live link works end to end.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Write complete professional README. Include: problem, dataset, architecture, results table, Grad-CAM examples, demo link.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Update project website pages with real screenshots, final accuracy numbers, demo link.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Write system design document — architecture diagram, data flow, technology choices.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Demo rehearsal — practice 5-minute walkthrough at least 3 times.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Viva preparation — answer FAQ questions out loud, unscripted.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Testing demo only on your own best-case images — not on unusual or difficult inputs.</li>
+                        <li>Writing documentation after presenting — always document before the demo date.</li>
+                        <li>Rehearsing once — 3–5 full run-throughs are minimum for polished live demo.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Test live HF demo with unexpected inputs: cartoon, very dark image, irrelevant image — know how model handles before evaluator tries.</li>
+                        <li>Treat documentation as milestone, not afterthought.</li>
+                        <li>Time demo rehearsals — 5-min demo running 8 min is problem; running 4.5 min feels professional.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Make a README (makeareadme.com)</li>
+                    <li>Your own notes from Weeks 1–14</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-card" id="capstone">
+            <div class="rm-card-header">
+                <h2>🏆 Final Capstone Project</h2>
+                <p>The complete deep learning project that ties together every concept from all 15 weeks.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <div class="rm-project">
+                    <h4>🧠 VisioNet — Smart Image Classifier with Explainability</h4>
+                    <p>VisioNet is a complete, deployed deep learning image classifier built using transfer learning, with Grad-CAM explainability and a live Gradio web demo on Hugging Face Spaces. Built incrementally from Week 9 onwards and finalized in Weeks 13–15.</p>
+
+                    <h4>Core Features</h4>
+                    <ol>
+                        <li><strong>Custom Image Classifier</strong> — Trained on a domain-specific dataset of your choice (e.g., medical images, plant species, food categories, vehicle types).</li>
+                        <li><strong>Transfer Learning Architecture</strong> — MobileNetV2 pre-trained on ImageNet, with custom classification head; feature extraction phase followed by fine-tuning phase.</li>
+                        <li><strong>Data Augmentation Pipeline</strong> — RandomFlip, RandomRotation, RandomZoom, RandomBrightness for improved generalization.</li>
+                        <li><strong>Explainability (Grad-CAM)</strong> — Heatmap overlay on input image showing which regions the model focused on for its prediction.</li>
+                        <li><strong>Confidence Scores</strong> — Returns probability for top predicted class.</li>
+                        <li><strong>Live Gradio Web Demo</strong> — Deployed on Hugging Face Spaces; anyone with the URL can upload an image and see both the prediction and the Grad-CAM heatmap.</li>
+                        <li><strong>Complete Evaluation</strong> — Confusion matrix, per-class precision/recall/F1, error analysis on confidently wrong predictions.</li>
+                        <li><strong>Comprehensive Documentation</strong> — README with problem statement, dataset description, architecture, results table, Grad-CAM examples, live demo link, setup instructions.</li>
+                    </ol>
+
+                    <h4>Training Strategy</h4>
+                    <p><strong>Phase 1 (Feature Extraction):</strong> Freeze entire MobileNetV2 base; train only custom classification head for 15–20 epochs with <code>lr=1e-3</code>.</p>
+                    <p><strong>Phase 2 (Fine-Tuning):</strong> Unfreeze top 20–30 layers of MobileNetV2; train with <code>lr=1e-5</code> for 10–15 epochs. Compare accuracy improvement.</p>
+
+                    <h4>Deliverables</h4>
+                    <ul>
+                        <li>Live Gradio demo on Hugging Face Spaces (shareable URL — works in any browser)</li>
+                        <li>Complete GitHub repository with all notebooks, model files, and documentation</li>
+                        <li>Professional README with problem statement, results table, demo link, Grad-CAM examples</li>
+                        <li>EDA notebook (dataset exploration, class distribution, quality checks)</li>
+                        <li>Training notebook (transfer learning, feature extraction + fine-tuning, training curves)</li>
+                        <li>Evaluation notebook (confusion matrix, classification report, error analysis)</li>
+                        <li>Grad-CAM analysis (10+ heatmap visualizations with written interpretation)</li>
+                        <li>System design document (architecture diagram, data flow, technology choices)</li>
+                        <li>5-minute demo walkthrough rehearsed for viva presentation</li>
+                    </ul>
+
+                    <h4>Tech Stack Summary</h4>
+                    <p>Python 3 · NumPy · Pandas · Matplotlib · Seaborn · Scikit-learn · TensorFlow 2.x · Keras · MobileNetV2 · tf-keras-vis (Grad-CAM) · Gradio · Hugging Face Spaces · Google Colab (GPU) · Git/GitHub</p>
+
+                    <h4>Suggested Dataset Domains</h4>
+                    <ul>
+                        <li><strong>Medical:</strong> Skin lesion classification, chest X-ray pneumonia detection, malaria cell classification</li>
+                        <li><strong>Plant/Agriculture:</strong> Plant disease detection, flower species classification</li>
+                        <li><strong>Food:</strong> Food-101 classification, freshness detection</li>
+                        <li><strong>Vehicles:</strong> Car make/model classification, traffic sign recognition</li>
+                        <li><strong>Wildlife:</strong> Bird species identification, animal classification</li>
+                        <li><strong>Custom:</strong> Any domain you find interesting with 500+ images per class available</li>
+                    </ul>
+                </div>
+
+                <div class="rm-highlight">
+                    <p><strong>Important:</strong> VisioNet is <em>not</em> built only in Weeks 13–15 — it is the consolidation of skills built throughout Weeks 1–12. Week 9's transfer learning project is VisioNet v1. Week 12's Gradio demo is VisioNet's deployment skeleton. Weeks 13–15 are dataset finalization, training optimization, and presentation polish.</p>
+                </div>
+
+                <h3>Total Roadmap At a Glance</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Weeks</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Foundations</strong></td>
+                            <td>1–3</td>
+                            <td>Python, NumPy/Pandas/Matplotlib, Math (LA, Calculus, Probability)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. ML Fundamentals</strong></td>
+                            <td>4–5</td>
+                            <td>Scikit-learn, evaluation, preprocessing, regularization</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Deep Learning Core</strong></td>
+                            <td>6–9</td>
+                            <td>NN from scratch, Keras, CNNs, Transfer Learning</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4. Advanced DL</strong></td>
+                            <td>10–12</td>
+                            <td>LSTMs, NLP, Gradio + Hugging Face deployment</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5. Capstone</strong></td>
+                            <td>13–15</td>
+                            <td>VisioNet — Dataset, Training, Deployment, Documentation</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Total estimated study hours:</strong> ~555–580 hours over 15 weeks (~37–39 hrs/week average)</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!--  FOOTER  -->
+    <footer>
+        <div class="stpart">
+                <div class="logo1">
+                    <h3>CodePath</h3>
+                    <p>Learn. Practice. Master</p>
+                </div>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+       
+
+</body>
+</html>

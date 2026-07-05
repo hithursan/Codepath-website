@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Development - 15 Week Roadmap</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>Internet of Things (IoT)</h1>
+        <p>Complete 15-Week Beginner-to-Advanced Roadmap — Arduino, C/C++, Environmental Sensors &amp; Cloud Connectivity</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#capstone">Capstone</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Roadmap</h2>
+            <p>This roadmap takes a complete beginner — with no prior electronics or programming experience — to a hands-on IoT developer capable of building, programming, and cloud-connecting a fully functional environmental monitoring system in 15 weeks of full-time study.</p>
+            <p>The path runs: <strong>Electronics Foundations → Arduino Basics → Environmental Sensors → Display &amp; Alerts → Data Logging → Wi-Fi Connectivity → Cloud Dashboard → Capstone Build.</strong></p>
+            <p>Every week builds directly on the previous one. By Week 15 you will have <strong>EnviroNode</strong> — a real, working IoT device measuring 5 environmental parameters, logging data to an SD card, and streaming live readings to a public cloud dashboard.</p>
+
+            <h3>At a Glance</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Duration</strong></td>
+                        <td>15 weeks · Full-time (~35 hrs/week)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hardware</strong></td>
+                        <td>Arduino Uno/Nano · DHT22 · BMP280 · MQ-135 · LDR · LCD · ESP8266</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Software</strong></td>
+                        <td>Arduino IDE · C/C++ · ThingSpeak · Serial Monitor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cost</strong></td>
+                        <td>Minimal hardware (~$15–30 starter kit); all software is free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hands-On</strong></td>
+                        <td>14 weekly mini-builds + 1 complete cloud-connected monitoring station</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Level</strong></td>
+                        <td>Complete Beginner — no prior electronics or programming required</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Five Phases</h3>
+            <ul>
+                <li><strong>Phase 1 (Weeks 1–3):</strong> Electronics Foundations &amp; Arduino Basics</li>
+                <li><strong>Phase 2 (Weeks 4–7):</strong> Environmental Sensors &amp; Display</li>
+                <li><strong>Phase 3 (Weeks 8–10):</strong> Data Processing, Alerts &amp; Logging</li>
+                <li><strong>Phase 4 (Weeks 11–13):</strong> Wi-Fi Connectivity &amp; Cloud Integration</li>
+                <li><strong>Phase 5 (Weeks 14–15):</strong> EnviroNode Capstone Build &amp; Presentation</li>
+            </ul>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Electronics Foundations &amp; Arduino Basics</h2>
+            <p>Weeks 1 through 3 take you from understanding what electricity is to reading real physical signals with Arduino's analog-to-digital converter. By the end of Phase 1 you will have built multiple circuits, written structured C++ sketches, and learned the core debugging tools used throughout this roadmap.</p>
+        </div>
+
+
+        <!-- WEEK 1  -->
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Electronics Fundamentals &amp; First Arduino Program</h2>
+                <p>Understand basic electronics concepts, set up the Arduino IDE, and build your first working circuit and program.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What is electricity</strong> — voltage, current, resistance and their practical meaning.</li>
+                    <li><strong>Ohm's Law</strong> — <code>V = I × R</code> and its use for LED resistor calculation.</li>
+                    <li><strong>LEDs, resistors, and breadboards</strong> — how each works and how they connect.</li>
+                    <li><strong>Arduino Uno anatomy</strong> — digital pins 0–13, analog pins A0–A5, 5V/3.3V/GND, USB, reset.</li>
+                    <li><strong>Arduino IDE</strong> — writing, verifying, and uploading a sketch.</li>
+                    <li><strong>Sketch structure</strong> — <code>setup()</code> runs once; <code>loop()</code> runs continuously.</li>
+                    <li><strong>Digital output</strong> — <code>pinMode()</code>, <code>digitalWrite()</code>, <code>delay()</code>.</li>
+                    <li><strong>Serial Monitor</strong> — <code>Serial.begin()</code>, <code>Serial.println()</code> for debugging.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every project in this roadmap builds on these fundamentals. If you do not understand what a resistor does or why <code>setup()</code> runs differently from <code>loop()</code>, you will be copy-pasting code without understanding it. This week is the absolute foundation.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Read about voltage, current, resistance. Ohm's Law with a real LED calculation. Draw a simple LED circuit on paper.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Install Arduino IDE. Connect Arduino to PC. Run the Blink example on the built-in LED (Pin 13).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Build first circuit: LED + resistor on breadboard connected to Pin 13. Blink using Blink sketch.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Modify the Blink sketch: 3 different blink patterns. Add a second LED on Pin 12.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Open Serial Monitor. Print "LED ON" and "LED OFF" at the correct moments.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Add a third LED. Create a traffic light pattern: green → yellow → red → repeat.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review Ohm's Law with 3 calculation examples. Complete mini project. Push sketch to GitHub.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Calculate the correct resistor for a red LED (Vf=2V), yellow LED (Vf=2.1V), blue LED (Vf=3.2V) at 5V, 10mA.</li>
+                    <li>Build a circuit with 3 LEDs and write a sketch that blinks them in a specific repeating pattern.</li>
+                    <li>Write a sketch that sends a count to Serial Monitor: "Loop: 1", "Loop: 2" ... every second.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Build a breadboard traffic light (red, yellow, green LEDs + resistors). Write a sketch that cycles: green (5 s) → yellow (2 s) → red (5 s) → repeat. Each transition must print a message to Serial Monitor: <code>TRAFFIC LIGHT: GREEN</code>, <code>TRAFFIC LIGHT: YELLOW</code>, etc. Draw the circuit diagram in Tinkercad. Push the sketch to GitHub with a comment explaining every line.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Connecting an LED directly to 5V and GND without a resistor — the LED will likely burn out immediately.</li>
+                        <li>Plugging components across the breadboard's center gap, accidentally disconnecting them.</li>
+                        <li>Selecting the wrong COM port in Arduino IDE.</li>
+                        <li>Not pressing Save before uploading — uploading an older version of the sketch.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always use a resistor in series with an LED. When in doubt, use 330Ω for red/yellow or 220Ω for green/blue.</li>
+                        <li>Check that component legs are in the same breadboard row — same column, same side of the center gap.</li>
+                        <li>Go to Tools → Port after plugging in Arduino and select the newly appeared port.</li>
+                        <li>Press <code>Ctrl+S</code> before every upload — make it a habit.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Khan Academy — Electrical Engineering (khanacademy.org) — Ohm's Law, circuits</li>
+                    <li>Arduino Official Tutorial — Blink (docs.arduino.cc)</li>
+                    <li>Tinkercad Circuits — Arduino Starter Lessons (tinkercad.com)</li>
+                    <li>Sparkfun — How to Use a Breadboard (learn.sparkfun.com)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 30 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 2 -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Digital Input, Buttons &amp; PWM</h2>
+                <p>Make your Arduino respond to physical inputs (buttons) and control output intensity using PWM.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Digital input</strong> — <code>pinMode(INPUT_PULLUP)</code>, <code>digitalRead()</code>.</li>
+                    <li><strong>Buttons and debouncing</strong> — why bouncing happens and how to fix it in software.</li>
+                    <li><strong>Conditional logic in C++</strong> — <code>if/else</code>, <code>else if</code>, boolean operators <code>&amp;&amp;</code>, <code>||</code>, <code>!</code>.</li>
+                    <li><strong>Variables and data types</strong> — <code>int</code>, <code>bool</code>, <code>float</code>, <code>char</code>, declaration and initialization.</li>
+                    <li><strong>PWM output</strong> — <code>analogWrite(pin, 0–255)</code> on PWM-capable pins.</li>
+                    <li><strong><code>for</code> loops</strong> — repeat a block a set number of times; used for LED fade effects.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Real IoT systems respond to buttons, switches, thresholds, and conditions. Understanding digital input and conditional logic is what allows your system to say "if temperature is above 35°C, turn on the alert." This week also introduces PWM, used for the EnviroNode status indicator LED.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Read about INPUT_PULLUP and floating pins. Understand why pull-up resistors are needed.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Build button circuit. Read button state, print to Serial Monitor. Toggle LED with button.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Software debouncing — implement and observe the difference with and without it.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>C++ variables and data types review. Write a sketch using <code>int</code>, <code>bool</code>, <code>float</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td><code>analogWrite()</code> — fade LED from 0 to 255 and back using a <code>for</code> loop.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Combine button + PWM: button press cycles through 3 brightness levels (off, dim, bright).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build a circuit with 2 buttons and 2 LEDs. Button 1 toggles LED 1; Button 2 fades LED 2 up and down each press.</li>
+                    <li>Add a Serial Monitor debug line every time debounce confirms a valid press: <code>Button pressed (debounced)</code>.</li>
+                    <li>Write a sketch that fades an LED from 0 to 255 over exactly 2 seconds, then off immediately.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>LED brightness controller with 2 buttons. Button A increases brightness (by 50 per press: 0 → 50 → 100 → 150 → 200 → 255 → stays at 255). Button B decreases brightness (same steps in reverse). Current brightness printed to Serial Monitor on every press. Implement debouncing. Draw circuit in Tinkercad. Push to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>INPUT</code> instead of <code>INPUT_PULLUP</code> — causes "floating pin" behavior where button press is detected randomly.</li>
+                        <li>Writing <code>if (buttonState = LOW)</code> (assignment) instead of <code>if (buttonState == LOW)</code> (comparison) — a classic C++ bug.</li>
+                        <li>Forgetting that PWM only works on PWM-capable pins (marked with ~ on the board: 3, 5, 6, 9, 10, 11 on Uno).</li>
+                        <li>Using <code>delay()</code> for button debounce, which blocks the entire program.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always use <code>pinMode(buttonPin, INPUT_PULLUP)</code> — simpler and more reliable than an external pull-up resistor.</li>
+                        <li>Always use <code>==</code> for comparison, never <code>=</code>.</li>
+                        <li>Check the Uno pinout diagram: only pins marked with <code>~</code> support <code>analogWrite()</code>.</li>
+                        <li>Implement debounce with <code>millis()</code> instead of <code>delay()</code>.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Arduino Tutorial — Button (docs.arduino.cc)</li>
+                    <li>Arduino Tutorial — Fading (docs.arduino.cc)</li>
+                    <li>Sparkfun — Switch Basics (learn.sparkfun.com)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 32 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 3 -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Analog Input: Reading the Physical World</h2>
+                <p>Read continuously varying physical signals using Arduino's analog-to-digital converter — the skill used for every environmental sensor in Phase 2.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Analog vs digital signals</strong> — continuous vs discrete.</li>
+                    <li><strong>Analog-to-Digital Conversion (ADC)</strong> — 10-bit, 0–1023 range, 0V–5V mapping.</li>
+                    <li><strong><code>analogRead()</code></strong> — reading from A0–A5 pins.</li>
+                    <li><strong>Voltage divider circuits</strong> — <code>Vmid = 5V × R2 / (R1 + R2)</code>.</li>
+                    <li><strong>Light Dependent Resistors (LDRs)</strong> — resistance decreases as light increases.</li>
+                    <li><strong>Potentiometers</strong> — variable resistor for practicing analog input.</li>
+                    <li><strong><code>map()</code> function</strong> — rescaling from one range to another.</li>
+                    <li><strong>Serial Plotter</strong> — real-time graphing of analog data.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Analog input is how your Arduino reads MQ-135 (air quality) and LDR (light level) values. The ADC and <code>map()</code> function are used in every analog sensor read in the capstone. Understanding the voltage divider is the foundation for understanding how resistive sensors work.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>ADC concept — how <code>analogRead()</code> works. Voltage divider math on paper.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Connect potentiometer. Read values, print to Serial Monitor. See full range 0–1023.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Open Serial Plotter. Plot potentiometer as you turn it. Control LED brightness with <code>map()</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Build LDR voltage divider circuit. Read light values. Plot in Serial Plotter.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Threshold logic: turn LED on if light reading falls below 400 (ambient darkness detected).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Combine potentiometer + LDR: one controls LED brightness, one triggers an alert.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Draw circuit diagrams for both circuits. Mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Read the potentiometer and print a "bar graph" of asterisks to Serial Monitor proportional to the reading (100% = <code>**********</code>, 50% = <code>*****</code>).</li>
+                    <li>Build a "night light" circuit: LED off when bright, LED on when dark, brightness inversely proportional to light level.</li>
+                    <li>Calculate the LDR voltage divider midpoint voltage for 3 different light conditions using approximate LDR resistance values.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Ambient light level meter. LDR reads light level (analogRead 0–1023). Map the value to 5 LEDs on a bar graph: all 5 LEDs on = bright, 0 LEDs = dark. Print the raw ADC value and the number of active LEDs to Serial Monitor every second. Capture a Serial Plotter screenshot showing light levels changing as you move a flashlight near and away. Include the screenshot in your GitHub README.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Connecting the LDR directly between 5V and A0 without a series resistor — the pin floats and gives meaningless values.</li>
+                        <li>Using <code>Serial.print()</code> with multiple values on the same line in Serial Plotter — Plotter requires each value with <code>Serial.println()</code>.</li>
+                        <li>Confusing <code>map()</code> output — it does not clamp values outside the input range; use <code>constrain()</code> too if needed.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always use a voltage divider for resistive sensors: 5V → LDR → junction → 10kΩ resistor → GND; read the junction with <code>analogRead()</code>.</li>
+                        <li>For Serial Plotter: <code>Serial.print("Light:");</code> then <code>Serial.println(lightValue);</code> on separate lines.</li>
+                        <li>Use <code>constrain(value, min, max)</code> before <code>map()</code> if raw reading might occasionally exceed expected range.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Arduino Tutorial — AnalogRead Potentiometer (docs.arduino.cc)</li>
+                    <li>Sparkfun — Voltage Dividers (learn.sparkfun.com)</li>
+                    <li>Last Minute Engineers — LDR Tutorial (lastminuteengineers.com)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 32 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Environmental Sensors &amp; Display</h2>
+            <p>Weeks 4 through 7 add all five of EnviroNode's sensors one by one, introduce the I2C communication protocol, connect a 16×2 LCD display, and integrate everything into a single multi-sensor sketch with structured serial output and a rotating LCD display.</p>
+        </div>
+
+
+        <!--  WEEK 4 -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — DHT22: Temperature &amp; Humidity Sensor</h2>
+                <p>Read accurate temperature and humidity data from the DHT22, handle sensor errors, and display clean formatted data on Serial Monitor and Serial Plotter.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>DHT22 sensor operation</strong> — single-wire digital protocol, thermistor + capacitive humidity element.</li>
+                    <li><strong>DHT22 vs DHT11</strong> — wider range (−40°C to +80°C), higher accuracy (±0.5°C, ±2% RH).</li>
+                    <li><strong>Adafruit DHT library</strong> — <code>dht.readTemperature()</code>, <code>dht.readHumidity()</code>.</li>
+                    <li><strong><code>isnan()</code> error checking</strong> — library returns NaN on failed read; always check before using.</li>
+                    <li><strong><code>float</code> data type</strong> — for decimal temperature and humidity values.</li>
+                    <li><strong><code>millis()</code> non-blocking timer</strong> — read sensor every 2 seconds without blocking other code.</li>
+                    <li><strong>Structured Serial output</strong> — labeled columns, header row, formatted readings.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The DHT22 is the primary temperature and humidity sensor in EnviroNode. This week introduces the complete real environmental sensor workflow: install library → wire sensor → read data → handle errors → format output. This exact pattern repeats for every sensor in the project.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>DHT22 concept and datasheet. Identify the 4 pins (or 3 if using a module). Wire the sensor.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Install DHT library + Adafruit Unified Sensor. Upload example. Verify readings appear.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Add Fahrenheit conversion: <code>float tempF = temperature * 9/5 + 32;</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Add <code>isnan()</code> checks. Simulate a read error by briefly disconnecting the data wire.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Replace <code>delay(2000)</code> with a <code>millis()</code>-based timer. Verify non-blocking behavior.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Format Serial output: print a header line once in setup, then labeled columns every 2 seconds.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project + GitHub commit with Serial Plotter screenshot in README.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Deliberately disconnect the DHT22 data wire mid-run and confirm <code>isnan()</code> correctly triggers the error message.</li>
+                    <li>Use the Serial Plotter to plot temperature and humidity simultaneously as two separate series while breathing on the sensor.</li>
+                    <li>Calculate heat index (feels-like temperature) from temperature and humidity using the formula in the DHT library's HeatIndex example.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Temperature and humidity monitor that: reads DHT22 every 2 seconds (non-blocking with <code>millis()</code>), prints readings in labeled columns (<code>Temp: 27.4°C | Humidity: 65.2% | HeatIndex: 29.1°C</code>), handles read errors gracefully, and plots all three values in Serial Plotter. Push to GitHub with Serial Plotter screenshot in README.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Connecting DHT22 data pin without a 10kΩ pull-up resistor (many module versions have it built-in; bare DHT22 requires it).</li>
+                        <li>Using <code>delay(2000)</code> throughout — blocks all other code from running.</li>
+                        <li>Not calling <code>dht.begin()</code> in <code>setup()</code> — results in zero or NaN readings.</li>
+                        <li>Forgetting to pass the sensor type in the constructor: <code>DHT dht(DHTPIN, DHT22);</code></li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>If using a bare DHT22 (not a module), add a 10kΩ resistor between the data pin and 5V.</li>
+                        <li>Use <code>millis()</code> timing pattern from this week onward — it is the standard approach for all multi-sensor Arduino code.</li>
+                        <li>Always call <code>dht.begin()</code> in <code>setup()</code> before the first read.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Last Minute Engineers — DHT22 Tutorial (lastminuteengineers.com)</li>
+                    <li>Adafruit DHT Library — GitHub (github.com/adafruit/DHT-sensor-library)</li>
+                    <li>Arduino Reference — millis() (arduino.cc/reference)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 33 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 5  -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — I2C Protocol, BMP280 &amp; LCD Display</h2>
+                <p>Learn the I2C communication protocol, read barometric pressure from the BMP280, and display all readings on a 16×2 LCD screen.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>I2C protocol</strong> — SDA (Serial Data), SCL (Serial Clock), device addresses, master/slave; on Uno: A4 (SDA), A5 (SCL).</li>
+                    <li><strong>I2C addresses</strong> — BMP280 typically <code>0x76</code> or <code>0x77</code>; I2C LCD typically <code>0x27</code> or <code>0x3F</code>.</li>
+                    <li><strong>I2C Scanner sketch</strong> — confirm addresses before writing library code.</li>
+                    <li><strong>BMP280 sensor</strong> — barometric pressure (300–1100 hPa) and temperature; Adafruit BMP280 library.</li>
+                    <li><strong>16×2 LCD + I2C adapter</strong> — PCF8574 chip reduces 16-pin LCD to 2 wires; shares I2C bus with BMP280.</li>
+                    <li><strong>LiquidCrystal I2C library</strong> — <code>lcd.begin()</code>, <code>lcd.print()</code>, <code>lcd.setCursor()</code>, <code>lcd.clear()</code>, <code>lcd.backlight()</code>.</li>
+                    <li><strong>LCD display rotation</strong> — <code>millis()</code> timer cycles between screens every 3–5 seconds.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> I2C is how professional embedded systems connect multiple peripherals on shared buses. EnviroNode uses I2C for both the BMP280 and the LCD simultaneously — if you do not understand I2C addressing, your two devices will conflict and neither will work.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>I2C concept — two wires, addresses, master/slave. Read the Wire library reference.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Wire BMP280. Run I2C Scanner. Note the address. Install Adafruit BMP280 library.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Read and print pressure and temperature from BMP280. Compare temperature to DHT22 reading.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Wire I2C LCD (sharing SDA/SCL with BMP280). Run I2C Scanner — confirm both appear.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Install LiquidCrystal I2C library. Display "Hello IoT!" on LCD. Adjust contrast if needed.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Display BMP280 readings on LCD. Rotate screens using <code>millis()</code> timer.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Integrate DHT22 — 3-screen LCD rotation. Mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Use the I2C Scanner to find all I2C devices connected. What happens if you use the wrong address in code?</li>
+                    <li>Display temperature from BMP280 and from DHT22 on separate LCD screens — do they agree?</li>
+                    <li>Display barometric pressure formatted to 1 decimal place: <code>1013.2 hPa</code>.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Environmental display station. LCD rotates every 4 seconds through 3 screens: Screen 1: <code>Temp: 27.4C / Humidity: 65%</code> (DHT22); Screen 2: <code>Pressure: 1013hPa / Temp: 27.1C</code> (BMP280); Screen 3: <code>Status: OK / Uptime: 42s</code>. All readings printed simultaneously to Serial Monitor. Push to GitHub with a photo of the LCD showing live readings.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Powering BMP280 from 5V instead of 3.3V — BMP280 is a 3.3V device (some modules have an onboard regulator; check yours).</li>
+                        <li>Not finding the LCD in I2C Scanner because address is <code>0x3F</code> but library is initialized with <code>0x27</code>.</li>
+                        <li>Calling <code>lcd.clear()</code> every loop — causes visible flickering; use <code>lcd.setCursor(0,0)</code> instead.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Check your BMP280 module's voltage specification before wiring.</li>
+                        <li>Always run I2C Scanner before writing any I2C library code — use the address the Scanner reports.</li>
+                        <li>Use <code>lcd.setCursor()</code> to rewrite specific positions rather than clearing the entire screen each update.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Arduino I2C Scanner Sketch (playground.arduino.cc)</li>
+                    <li>Last Minute Engineers — BMP280 Tutorial (lastminuteengineers.com)</li>
+                    <li>Last Minute Engineers — I2C LCD Tutorial (lastminuteengineers.com)</li>
+                    <li>Arduino Reference — Wire Library (arduino.cc/reference)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 6  -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — LDR Light Sensor &amp; Multi-Sensor Integration</h2>
+                <p>Add ambient light sensing and integrate all sensors into a single, well-structured multi-sensor sketch with clean Serial output.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>LDR calibration</strong> — observe ADC range in your environment; use observed min/max in <code>map()</code>.</li>
+                    <li><strong>Light percentage output</strong> — relative 0–100% (more honest than uncalibrated lux).</li>
+                    <li><strong>User-defined functions in C++</strong> — <code>float readLightPercent()</code>, <code>float readTemperature()</code> etc. — encapsulate sensor reads.</li>
+                    <li><strong><code>struct</code> data type</strong> — group related sensor values: <code>struct EnvironmentData { float temp; float humidity; float pressure; int light; };</code></li>
+                    <li><strong>Structured Serial logging</strong> — timestamp with <code>millis()/1000</code>, tab-separated columns, header row in <code>setup()</code>.</li>
+                    <li><strong>Code organization and comments</strong> — professional habits for multi-function sketches.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> By the end of this week you will have all four of EnviroNode's non-gas sensors reading together in one sketch. This is the first time you face managing multiple sensors, reading intervals, and display updates simultaneously — exactly what multi-sensor IoT systems require.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Review LDR circuit. Calibrate min/max values in your environment. Write <code>readLightPercent()</code> function.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Write functions for each sensor: <code>readTemperature()</code>, <code>readHumidity()</code>, <code>readPressure()</code>, <code>readLight()</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Define an <code>EnvironmentData</code> struct. Fill it from all 4 sensors.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Print structured Serial output: timestamp, all 4 readings in labeled columns every 5 seconds.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Update LCD to include light % on its rotating display.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Real-world test: breathe on DHT22, cover the LDR, take readings outdoors if possible.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Code cleanup — add comments to every function. Mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Multi-sensor serial dashboard: single sketch reads DHT22, BMP280, and LDR every 5 seconds (non-blocking). Prints one header row at startup, then a data row every 5 seconds: <code>Time(s) | Temp(C) | Humidity(%) | Pressure(hPa) | Light(%)</code>. LCD cycles through all 4 parameters. Push to GitHub — the CSV-style output should be importable into a spreadsheet.</p>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Arduino Reference — Functions (arduino.cc/reference)</li>
+                    <li>Arduino Reference — struct (cppreference.com)</li>
+                    <li>Last Minute Engineers — LDR Tutorial (lastminuteengineers.com)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 33 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 7 -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — MQ-135 Air Quality Sensor</h2>
+                <p>Add MQ-135 air quality sensing, understand its operating principles and limitations, and implement a 3-level Air Quality Index indicator.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>MQ-135 operation</strong> — heating element + metal oxide surface; resistance changes in presence of target gases.</li>
+                    <li><strong>Warm-up requirement</strong> — 24+ hours for first use; some minutes each power cycle. Readings immediately after power-on are unreliable.</li>
+                    <li><strong>AOUT vs DOUT</strong> — use AOUT (analog) for precise readings; DOUT (digital) is only above/below threshold.</li>
+                    <li><strong>Voltage conversion</strong> — <code>float voltage = analogRead(A0) * (5.0 / 1023.0);</code></li>
+                    <li><strong>AQI thresholds (relative)</strong> — Low (~0–300 raw) = Good, Mid (~300–600) = Moderate, High (&gt;600) = Poor — calibrate to your environment.</li>
+                    <li><strong>Gases detected</strong> — primarily CO₂, NH₃, benzene, alcohol, smoke — a general indicator, not a specific gas analyzer.</li>
+                    <li><strong>Safety note</strong> — the heating element gets hot; do not touch the metal sensing mesh.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Air quality monitoring is one of the most significant real-world applications of low-cost environmental IoT. Adding the MQ-135 completes EnviroNode's sensing suite. Understanding its limitations — being able to explain what your sensor can and cannot measure — shows technical depth during a viva.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>MQ-135 concept and datasheet. Safety notes. Wire the sensor. Power on for warm-up.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Read analog value. Print to Serial Monitor. Observe how values change near different sources.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Convert raw ADC to voltage. Print voltage alongside raw value.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Define AQI thresholds as <code>const int</code> variables. Implement 3-level classification.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Add LED indicators: Green = Good, Yellow = Moderate, Red = Poor.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Integrate into the multi-sensor sketch from Week 6.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Real-world test near cooking smells, then fresh air. Mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Air quality indicator: MQ-135 reads continuously, classifies as Good/Moderate/Poor using definable thresholds, controls 3 LEDs (green/yellow/red), prints <code>AQI: 412 (MODERATE)</code> to Serial Monitor. LCD displays <code>Air: MOD | 412</code>. Include a clear warning comment at the top of the sketch: <code>// Note: MQ-135 readings are relative, not calibrated AQI values.</code></p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Treating MQ-135 readings as standardized AQI values — they are raw voltages proportional to mixed gas concentrations.</li>
+                        <li>Testing immediately after first power-on — readings are completely unstable until the sensor warms up.</li>
+                        <li>Using DOUT for precise measurement — DOUT only gives a simple above/below threshold binary output.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always document in your code and README that MQ-135 values are relative indicators only.</li>
+                        <li>Power the sensor and let it warm up for at least 1 hour before recording baseline values.</li>
+                        <li>Use AOUT for all analog air quality measurements.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Last Minute Engineers — MQ-135 Tutorial (lastminuteengineers.com)</li>
+                    <li>MQ-135 Datasheet PDF (winsen-sensor.com)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 33 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Data Processing, Alerts &amp; Logging</h2>
+            <p>Weeks 8 through 10 transform EnviroNode from a passive display into an active monitoring system: threshold-based audio and visual alerts, persistent SD card data logging, and structured serial output designed for real-time visualization.</p>
+        </div>
+
+
+        <!--  WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Threshold Alerts &amp; Multi-Sensor Logic</h2>
+                <p>Implement a complete alerting system — buzzer and LED indicators triggered when any environmental parameter exceeds defined safe thresholds.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Buzzer types</strong> — active buzzer (fixed-pitch, <code>digitalWrite</code>); passive buzzer (<code>tone(pin, freq, duration)</code>).</li>
+                    <li><strong>Alert thresholds for EnviroNode</strong> — temperature (&gt;35°C), humidity (&gt;80% or &lt;20%), AQI (&gt;600 raw), pressure (large drop).</li>
+                    <li><strong><code>const</code> threshold variables</strong> — <code>const float TEMP_HIGH = 35.0;</code> — easy to adjust per environment.</li>
+                    <li><strong>Boolean state flags</strong> — track alert states to trigger buzzer only on status change, not every loop cycle.</li>
+                    <li><strong><code>checkAlerts()</code> function</strong> — encapsulate all threshold checking and alerting into one clean function.</li>
+                    <li><strong>Alert priority levels</strong> — critical alert overrides moderate; combine multiple active alerts.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> An environmental monitoring station without alerts is just a display. Threshold-based alerting is the core safety function of any real monitoring system — from greenhouse controllers to server room temperature alarms.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Wire active buzzer. Test basic beep with <code>digitalWrite</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Define all threshold constants. Implement temperature threshold check.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Add all 4 parameter threshold checks. Implement alert LED logic.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>State machine: only change buzzer state when alert status changes, not every loop cycle.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Add buzzer pattern (3 short beeps for alert, 1 long for all-clear).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Write <code>checkAlerts()</code> function — clean the main <code>loop()</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Test all alerts. Hold DHT22 between fingers to trigger temperature alert. Mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>EnviroNode Alert System: all sensors + buzzer + 3 alert LEDs. Thresholds defined as constants at the top of sketch. <code>checkAlerts()</code> function checks all 4 parameters and activates appropriate LED + buzzer pattern. LCD shows <code>ALERT: TEMP HIGH</code> when triggered. Serial Monitor prints <code>[ALERT] Temperature: 36.2°C exceeds threshold 35.0°C</code>. Push to GitHub.</p>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Arduino Tutorial — tone() (docs.arduino.cc)</li>
+                    <li>Arduino Reference — const (arduino.cc/reference)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 33 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 9 -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — SD Card Data Logging</h2>
+                <p>Log all sensor readings to a CSV file on a micro SD card — creating a persistent, downloadable record of environmental data over time.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>SPI protocol</strong> — 4 wires: MOSI, MISO, SCK, CS; on Uno: MOSI=11, MISO=12, SCK=13, CS=configurable.</li>
+                    <li><strong>SD library</strong> — <code>SD.begin(csPin)</code>, <code>SD.open("log.csv", FILE_WRITE)</code>, <code>file.println(data)</code>, <code>file.close()</code>.</li>
+                    <li><strong>CSV file format</strong> — Comma Separated Values; header row; importable into Excel or Google Sheets.</li>
+                    <li><strong>Timestamp with millis()</strong> — relative time in seconds since startup (no RTC needed for this roadmap).</li>
+                    <li><strong>SD card formatting</strong> — must be FAT32 for Arduino SD library; cards over 32GB may need special formatting.</li>
+                    <li><strong>File handling safety</strong> — open → write → close on each log entry prevents data loss on power interruption.</li>
+                    <li><strong>Error handling</strong> — detect SD card initialization failure, display on LCD, continue local operation.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The SD card transforms EnviroNode from a live display into a proper data recorder. Logged CSV files are the direct evidence of your device working over time — they are what you bring to a viva to show hours of real environmental data collection.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>SPI concept. Wire SD module (MOSI=11, MISO=12, SCK=13, CS=10). Format SD card as FAT32.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>SD library basics: open a file, write "Hello SD Card", close, verify on PC.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Write the logging function: timestamp + all sensor readings in CSV format.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Log every 30 seconds (millis() timer). Let it run for 5 minutes. Import CSV into a spreadsheet.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Add SD card initialization error detection — print "SD FAIL" on LCD if SD not found.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Integrate into the full multi-sensor sketch. Resolve any SPI pin conflicts.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Let the full system run for 2 hours. Export CSV. Plot charts in Google Sheets. Mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Data logger: all 5 parameters logged to <code>log.csv</code> on SD card every 30 seconds. Header row: <code>time_s,temp_C,humidity_pct,pressure_hPa,aqi_raw,light_pct</code>. CSV file included in GitHub repo (real data from your sensor). Screenshot of data plotted as line charts in Google Sheets included in README.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>SD card formatted as NTFS or exFAT — only FAT32 (or FAT16 for small cards) works with the Arduino SD library.</li>
+                        <li>Not closing the file after each write — data may not be written to the physical card (buffered in RAM).</li>
+                        <li>SPI pin conflicts — pins 10–13 are reserved for SPI; do not connect other components to them.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Format the SD card on PC as FAT32 before first use every time.</li>
+                        <li>Always call <code>file.close()</code> after writing each set of readings.</li>
+                        <li>Reserve pins 10–13 exclusively for SPI/SD card; move all other components to other digital pins.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Last Minute Engineers — SD Card Tutorial (lastminuteengineers.com)</li>
+                    <li>Arduino Reference — SD Library (arduino.cc/reference)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 10 -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Serial Communication &amp; Data Visualization</h2>
+                <p>Stream all sensor data over Serial for real-time PC-side visualization and understand serial communication protocols in depth.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>UART in depth</strong> — Universal Asynchronous Receiver-Transmitter; full-duplex; TX and RX pins; Uno hardware UART on pins 0/1 shared with USB.</li>
+                    <li><strong>Baud rate</strong> — bits per second; both sender and receiver must use the same rate; 9600 default, 115200 for ESP-01.</li>
+                    <li><strong>Serial Plotter multi-channel format</strong> — <code>Serial.print("Label:"); Serial.print(value); Serial.print(",");</code> for each channel.</li>
+                    <li><strong>SoftwareSerial library</strong> — additional serial port on any two digital pins; required for ESP-01 communication.</li>
+                    <li><strong>Structured output for cloud</strong> — design final serial format to be used in Week 12 for ThingSpeak uploads.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Serial communication mastery bridges local Arduino code and external systems — including the ESP-01 Wi-Fi module coming in Week 11. Designing a clean serial output format now makes the cloud integration step significantly smoother.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Serial communication deep dive. Read the Arduino Serial reference. Baud rates and their uses.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Format Serial output for Serial Plotter: temperature and humidity as two labeled channels.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Add all 5 parameters to the Serial Plotter. Watch live environmental changes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>SoftwareSerial introduction — communicate between two Arduinos (or simulate with loopback).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Design the final serial output format for EnviroNode (used in Week 12 for ThingSpeak).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Full system integration: Serial + SD + LCD + Alerts running together.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project: 5-minute Serial Plotter capture + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Real-time monitoring dashboard: all 5 parameters streaming to Serial Plotter as 5 labeled channels simultaneously. Capture a 5-minute Serial Plotter screenshot showing environmental changes (open a window, cover the LDR, breathe on DHT22). Include in GitHub README.</p>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Arduino Reference — Serial (arduino.cc/reference)</li>
+                    <li>Arduino Reference — SoftwareSerial (arduino.cc/reference)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 32 hours</p>
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Wi-Fi Connectivity &amp; Cloud Integration</h2>
+            <p>Weeks 11 through 13 add the "Internet" to your IoT device. The ESP-01 Wi-Fi module connects EnviroNode to your network, and ThingSpeak receives live sensor data every 60 seconds — creating a public cloud dashboard visible from any device anywhere in the world.</p>
+        </div>
+
+
+        <!--  WEEK 11 -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — ESP-01 / ESP8266 Wi-Fi Module</h2>
+                <p>Connect the ESP-01 module to Arduino and to a Wi-Fi network using AT commands, and perform your first HTTP request from the microcontroller.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>ESP8266 / ESP-01 overview</strong> — Wi-Fi enabled microcontroller from Espressif; used in AT-command mode controlled by Arduino.</li>
+                    <li><strong>3.3V power requirement (critical)</strong> — ESP-01 peaks at ~250mA; never use Arduino's built-in 3.3V pin; use an AMS1117 3.3V regulator from the 5V pin.</li>
+                    <li><strong>ESP-01 pinout</strong> — VCC, GND, TX, RX, CH_PD, GPIO0, RST. CH_PD must be tied HIGH.</li>
+                    <li><strong>AT commands</strong> — <code>AT</code> (test), <code>AT+RST</code> (reset), <code>AT+CWMODE=1</code> (station), <code>AT+CWJAP</code> (connect to Wi-Fi), <code>AT+CIFSR</code> (get IP), <code>AT+CIPSTART</code> (open TCP), <code>AT+CIPSEND</code> (send data).</li>
+                    <li><strong>SoftwareSerial for ESP-01</strong> — use pins 3/4 so hardware Serial remains free for debugging.</li>
+                    <li><strong>Wi-Fi credentials security</strong> — never commit real credentials to a public GitHub repo; use placeholder comments.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Wi-Fi connectivity is what makes EnviroNode an IoT system rather than just a data logger. This week introduces the most challenging hardware of the roadmap — the ESP-01 is sensitive to power and wiring errors. Take extra care with every connection before powering on.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>ESP8266 overview. Read the ESP-01 pinout carefully. Identify all 8 pins before touching the breadboard.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Build the 3.3V power supply using AMS1117 on breadboard. Verify 3.3V output with a multimeter if available.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Wire ESP-01 to Arduino via SoftwareSerial. Send <code>AT</code> command manually. Verify <code>OK</code> response.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Connect to Wi-Fi with <code>AT+CWJAP</code>. Verify with <code>AT+CIFSR</code> (shows IP address).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Write an Arduino sketch that automatically sends AT commands to connect to Wi-Fi on startup.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Perform an HTTP GET request to a simple public URL (httpbin.org/get). See response in Serial Monitor.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project + GitHub commit. Use <code>YOUR_SSID_HERE</code> placeholder in the committed sketch.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Wi-Fi connection tester: on startup, ESP-01 connects to Wi-Fi, obtains an IP address, and sends an HTTP GET request to a public URL. Arduino prints IP address and server response to Serial Monitor. LCD displays <code>WiFi: OK</code>. Push to GitHub with a screenshot of Serial Monitor showing the successful connection and HTTP response.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Powering ESP-01 from Arduino's built-in 3.3V pin (max ~50mA) — ESP-01 draws up to 250mA during Wi-Fi transmission, causing resets and potential damage.</li>
+                        <li>Swapping TX and RX — Arduino TX connects to ESP RX and vice versa; they cross.</li>
+                        <li>Sending 5V logic levels on ESP-01 RX pin — the ESP-01 is not 5V tolerant; use a 1kΩ/2kΩ voltage divider on Arduino TX → ESP RX.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always power ESP-01 from an AMS1117 3.3V regulator sourced from the Arduino 5V pin — not the Arduino 3.3V output.</li>
+                        <li>Remember: TX connects to RX and vice versa. Draw the connection on paper before wiring.</li>
+                        <li>Add a 1kΩ/2kΩ voltage divider on the Arduino TX (5V) → ESP-01 RX (3.3V) signal line.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Last Minute Engineers — ESP8266 AT Commands with Arduino (lastminuteengineers.com)</li>
+                    <li>Random Nerd Tutorials — ESP8266 Getting Started (randomnerdtutorials.com)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 12 -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — ThingSpeak: Cloud Dashboard (Single Channel)</h2>
+                <p>Send sensor data from Arduino via ESP-01 to a ThingSpeak channel and create your first live IoT cloud dashboard.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>ThingSpeak platform</strong> — free IoT analytics platform by MathWorks; accepts HTTP and MQTT; free tier up to 3M messages/year.</li>
+                    <li><strong>Creating a channel and fields</strong> — up to 8 data fields per channel; name each to match your sensor parameter.</li>
+                    <li><strong>Write API key</strong> — unique string authenticating your device's writes; keep it private.</li>
+                    <li><strong>HTTP Write URL</strong> — <code>GET /update?api_key=WRITE_KEY&amp;field1=VALUE HTTP/1.1</code> sent to <code>api.thingspeak.com</code>.</li>
+                    <li><strong>Rate limit</strong> — ThingSpeak free tier: minimum 15 seconds between updates; use 60 seconds to be safe.</li>
+                    <li><strong>Separate millis() timer for cloud</strong> — independent of the sensor read interval (5 s) and display update interval.</li>
+                    <li><strong>ThingSpeak response codes</strong> — 200 = success, 0 = rate limit hit.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Seeing your Arduino's sensor data appear live in a browser — on ThingSpeak — is the moment EnviroNode becomes a real IoT system. This milestone is what you will demonstrate during your viva.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Create ThingSpeak account. Create a new channel. Add one field: Temperature. Copy Write API key.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Construct the ThingSpeak HTTP GET request string manually. Send via ESP-01 AT commands. Verify data appears.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Write Arduino function <code>sendToThingSpeak(float temp)</code> handling the full AT command sequence.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Integrate the function into the running sketch. Watch the live ThingSpeak chart updating.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Handle ThingSpeak response codes (200 = success, 0 = rate limit hit — add 60s minimum gap).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Make the ThingSpeak channel public. Copy the public link.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Run the system for 1 hour. Download channel data as CSV from ThingSpeak. Mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Single-parameter ThingSpeak logger: temperature sent every 60 seconds for a 2-hour run. ThingSpeak channel made public. Include the public channel link in GitHub README. Include a screenshot of the ThingSpeak chart showing 2+ hours of temperature data.</p>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>ThingSpeak Official Documentation (mathworks.com/thingspeak)</li>
+                    <li>Last Minute Engineers — ThingSpeak Tutorial (lastminuteengineers.com)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 13  -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Full Multi-Parameter Cloud Dashboard</h2>
+                <p>Send all 5 environmental parameters to ThingSpeak, build a complete public dashboard with charts, and implement graceful Wi-Fi disconnection handling.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Multi-field ThingSpeak update</strong> — append all fields in one HTTP GET: <code>field1=temp&amp;field2=humidity&amp;field3=pressure&amp;field4=aqi&amp;field5=light</code>.</li>
+                    <li><strong>ThingSpeak chart customization</strong> — axis labels, units, colors, chart type (line, gauge) in channel settings.</li>
+                    <li><strong>ThingSpeak React alerts</strong> — trigger email or webhook when a condition is met (e.g., temperature &gt; 35°C) — conceptual overview.</li>
+                    <li><strong>Wi-Fi reconnection logic</strong> — if <code>AT+CWJAP</code> fails, retry with delay; system continues local operation (SD + LCD) during reconnection attempts.</li>
+                    <li><strong>Graceful degradation</strong> — the system continues its most critical functions even when optional features (cloud upload) fail.</li>
+                    <li><strong>Public channel sharing</strong> — making the dashboard link publicly accessible.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A single-parameter chart is a proof-of-concept; a full 5-parameter dashboard with reconnection handling is a professional IoT system. Graceful degradation — the ability to keep working when the internet drops — is what distinguishes a real product from a prototype.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Update ThingSpeak channel to 5 fields. Update HTTP GET string to send all 5 parameters.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Verify all 5 fields populate correctly in ThingSpeak channel view.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Customize ThingSpeak dashboard: add chart widgets, set axis labels and units.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Implement reconnection logic: detect Wi-Fi failure, retry, resume uploads on reconnect.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Test graceful degradation: disable Wi-Fi router — confirm system continues local SD logging and LCD display.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Run full system for 4 hours. Review ThingSpeak charts. Make channel public.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project: share public channel link in GitHub README. Dashboard screenshot in README.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Full 5-parameter EnviroNode cloud upload for 4+ hours. Public ThingSpeak dashboard with customized charts for all 5 fields. System handles Wi-Fi disconnection and reconnects automatically — confirmed by test. Dashboard screenshot included in GitHub README.</p>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>ThingSpeak Docs — Channel Settings (mathworks.com/thingspeak)</li>
+                    <li>ThingSpeak Docs — React (mathworks.com/thingspeak)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 37 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 5 — EnviroNode Capstone Build &amp; Presentation</h2>
+            <p>Weeks 14 and 15 bring everything together. Week 14 integrates all subsystems into one stable, production-quality sketch and runs extended stability tests. Week 15 finalizes documentation, physical enclosure, and presentation readiness.</p>
+        </div>
+
+
+        <!-- WEEK 14 -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — EnviroNode Full Integration &amp; Stability Testing</h2>
+                <p>Integrate all subsystems into one clean, stable, fully working EnviroNode sketch and run extended stability tests.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>State machine design</strong> — Normal, Warning, Alert, Wi-Fi Connecting, SD Error states; code each explicitly.</li>
+                    <li><strong>Code modularization</strong> — multiple functions, clear naming, one responsibility per function.</li>
+                    <li><strong>Avoiding Arduino String class</strong> — use C-style <code>char</code> arrays and <code>sprintf()</code> instead to prevent memory fragmentation over long runtimes.</li>
+                    <li><strong>PROGMEM</strong> — store constant strings in Flash instead of the Uno's 2KB SRAM to prevent RAM exhaustion.</li>
+                    <li><strong>24-hour stability test</strong> — run the complete system without reset; check for SD write errors, Wi-Fi disconnects, DHT22 NaN errors, buzzer false triggers, LCD corruption.</li>
+                    <li><strong>Wiring cleanup</strong> — organize jumper cables, label connections, strain-relieve wires on the breadboard.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Code that works for 5 minutes in a demo can fail after 6 hours due to memory leaks, SD buffer overflows, or Wi-Fi drops. Stability testing is what separates a real IoT device from a prototype that only works at demo time.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Feature checklist from Capstone section. List what is done and what is missing.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Merge all subsystem sketches into one. Resolve pin conflicts.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Replace <code>String</code> objects with <code>char</code> arrays. Check RAM usage (shown in IDE upload output).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>State machine implementation: Normal/Warning/Alert states with clean transitions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>4-hour stability test. Fix any errors that appear.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Wiring cleanup — organize cables, tape down loose wires, label connections.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>12-hour stability test. Document all issues found and fixed. GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Testing only for 10 minutes and declaring the system "stable" — most long-run failures appear after 2–6 hours.</li>
+                        <li>Using Arduino <code>String</code> class for repeated string operations — causes heap fragmentation and eventual crashes.</li>
+                        <li>Leaving SPI pin conflicts unresolved — causes SD writes to fail when another peripheral pulls the same pin.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Run a minimum 12-hour test before the final week — non-negotiable.</li>
+                        <li>Replace every <code>String</code> object with <code>char buf[32];</code> and <code>sprintf(buf, "format", value);</code>.</li>
+                        <li>Double-check all SPI and I2C pin assignments against the full combined wiring table.</li>
+                    </ul>
+                </div>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+        <!--  WEEK 15  -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Documentation, Enclosure &amp; Final Presentation</h2>
+                <p>Package EnviroNode professionally, finalize all documentation, and prepare a polished presentation and viva readiness.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Circuit diagram finalization</strong> — Tinkercad or Fritzing; must match the actual build exactly.</li>
+                    <li><strong>GitHub repository organization</strong> — clean folder structure, all files committed, strong README.</li>
+                    <li><strong>Technical documentation</strong> — component list, wiring table, library dependencies, ThingSpeak setup instructions.</li>
+                    <li><strong>Physical enclosure</strong> — mount components on cardboard/acrylic/3D-printed base; sensors accessible to the environment.</li>
+                    <li><strong>Demo script preparation</strong> — 5-minute structured demo: power on → sensors initialize → LCD shows readings → trigger an alert → show ThingSpeak chart updating.</li>
+                    <li><strong>Viva preparation</strong> — explain every component, protocol, and design decision.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A finished capstone and polished portfolio are what evaluators actually look at. The quality of documentation and the smoothness of your demo directly affects how your project is perceived — even if the code is excellent, a disorganized presentation loses marks.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Final circuit diagram in Tinkercad or Fritzing. Verify it matches the actual build exactly.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Write complete GitHub README: description, components list, wiring table, library dependencies, ThingSpeak setup, photos.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Physical enclosure: mount components on a base with sensors accessible. Photograph the finished build.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Prepare 5-minute demo script. Practice the full power-on → alert trigger → ThingSpeak sequence.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Demo rehearsal ×3. Time yourself. Prepare for viva questions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Test ThingSpeak public link from a phone on mobile data. Confirm publicly accessible.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Final check: all GitHub files committed, ThingSpeak public link works, demo device fully powered. Ready to present.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Testing the demo only with fresh components, not the actual final build.</li>
+                        <li>Not testing the ThingSpeak public link from a different device on a different network.</li>
+                        <li>Waiting until the last day to draw the circuit diagram — it takes longer than expected.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always demo with the exact physical device you will present — including powering it on from scratch each rehearsal.</li>
+                        <li>Test the ThingSpeak public link from your phone on mobile data (not the same Wi-Fi as the Arduino).</li>
+                        <li>Complete the circuit diagram on Day 1 of Week 15 — it is the first deliverable, not the last.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Fritzing — circuit diagram tool (fritzing.org)</li>
+                    <li>Tinkercad Circuits (tinkercad.com)</li>
+                    <li>Make a README (makeareadme.com)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-card" id="capstone">
+            <div class="rm-card-header">
+                <h2>🏆 Final Capstone — EnviroNode</h2>
+                <p>A complete, Arduino-based environmental monitoring station measuring 5 parameters, logging to SD card, and streaming live data to a public cloud dashboard.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <div class="rm-highlight">
+                    <p><strong>Why EnviroNode?</strong> It uses every major skill from the 15-week roadmap, produces a physically real working device that evaluators can hold and observe, includes a live cloud dashboard viewable from any phone during the viva, and has direct real-world relevance — identical systems are deployed in weather stations, greenhouses, office buildings, and laboratories.</p>
+                </div>
+
+                <h3>Measured Parameters</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Sensor</th>
+                            <th>Update Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Temperature (°C)</td>
+                            <td>DHT22</td>
+                            <td>Every 30 seconds</td>
+                        </tr>
+                        <tr>
+                            <td>Relative Humidity (%)</td>
+                            <td>DHT22</td>
+                            <td>Every 30 seconds</td>
+                        </tr>
+                        <tr>
+                            <td>Barometric Pressure (hPa)</td>
+                            <td>BMP280</td>
+                            <td>Every 30 seconds</td>
+                        </tr>
+                        <tr>
+                            <td>Air Quality Index (raw / categorized)</td>
+                            <td>MQ-135</td>
+                            <td>Every 30 seconds</td>
+                        </tr>
+                        <tr>
+                            <td>Ambient Light Level (%)</td>
+                            <td>LDR</td>
+                            <td>Every 30 seconds</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Suggested Wiring Table</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Arduino Pin</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>DHT22 Data</td>
+                            <td>Digital Pin 2</td>
+                        </tr>
+                        <tr>
+                            <td>BMP280 SDA / LCD SDA</td>
+                            <td>Analog Pin A4 (shared I2C bus)</td>
+                        </tr>
+                        <tr>
+                            <td>BMP280 SCL / LCD SCL</td>
+                            <td>Analog Pin A5 (shared I2C bus)</td>
+                        </tr>
+                        <tr>
+                            <td>MQ-135 AOUT</td>
+                            <td>Analog Pin A0</td>
+                        </tr>
+                        <tr>
+                            <td>LDR (voltage divider)</td>
+                            <td>Analog Pin A1</td>
+                        </tr>
+                        <tr>
+                            <td>Red Alert LED</td>
+                            <td>Digital Pin 8</td>
+                        </tr>
+                        <tr>
+                            <td>Yellow Alert LED</td>
+                            <td>Digital Pin 9</td>
+                        </tr>
+                        <tr>
+                            <td>Green Status LED</td>
+                            <td>Digital Pin 6 *</td>
+                        </tr>
+                        <tr>
+                            <td>Buzzer</td>
+                            <td>Digital Pin 7</td>
+                        </tr>
+                        <tr>
+                            <td>SD Card CS</td>
+                            <td>Digital Pin 10</td>
+                        </tr>
+                        <tr>
+                            <td>SD Card MOSI</td>
+                            <td>Digital Pin 11</td>
+                        </tr>
+                        <tr>
+                            <td>SD Card MISO</td>
+                            <td>Digital Pin 12</td>
+                        </tr>
+                        <tr>
+                            <td>SD Card CLK</td>
+                            <td>Digital Pin 13</td>
+                        </tr>
+                        <tr>
+                            <td>ESP-01 TX</td>
+                            <td>Digital Pin 3 (SoftwareSerial)</td>
+                        </tr>
+                        <tr>
+                            <td>ESP-01 RX</td>
+                            <td>Digital Pin 4 (SoftwareSerial)</td>
+                        </tr>
+                        <tr>
+                            <td>ESP-01 VCC / CH_PD</td>
+                            <td>3.3V via AMS1117 regulator (NOT Arduino 3.3V pin)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>* Pin 10 conflict with SD CS noted in original design has been resolved by moving Green LED to Pin 6.</p>
+
+                <h3>Core Feature Checklist</h3>
+                <ul>
+                    <li>DHT22 reads temperature and humidity reliably (<code>isnan()</code> error check)</li>
+                    <li>BMP280 reads barometric pressure (I2C address confirmed with Scanner)</li>
+                    <li>MQ-135 reads analog air quality value (warmed up ≥1 hour)</li>
+                    <li>LDR reads ambient light level (voltage divider with 10kΩ resistor)</li>
+                    <li>16×2 LCD rotates through 3 screens every 5 seconds</li>
+                    <li>Alert LEDs + buzzer activate on threshold breach</li>
+                    <li>All thresholds defined as <code>const</code> variables at top of sketch</li>
+                    <li>All 5 parameters logged to <code>log.csv</code> on SD card every 30 seconds</li>
+                    <li>SD card initialization error shown on LCD if card not found</li>
+                    <li>ESP-01 connects to Wi-Fi on startup</li>
+                    <li>ThingSpeak channel configured with 5 fields — all populating correctly</li>
+                    <li>Data sent to ThingSpeak every 60 seconds</li>
+                    <li>Wi-Fi disconnection handled gracefully (local operation continues)</li>
+                    <li>ThingSpeak channel made public — link shared in README</li>
+                    <li>Circuit diagram (Tinkercad/Fritzing) — matches actual build</li>
+                    <li>GitHub repo with clean commented sketch, component list, wiring table, photos</li>
+                    <li>Real sample <code>log.csv</code> data file included in repo</li>
+                    <li>ThingSpeak dashboard screenshot showing ≥4 hours of data</li>
+                </ul>
+
+
+                <h3>Viva Readiness Checklist</h3>
+                <ul>
+                    <li>Demonstrate the physical device live — all 5 sensor readings updating on LCD</li>
+                    <li>Open ThingSpeak dashboard on a phone and show live incoming data</li>
+                    <li>Explain what each sensor measures and what physical principle it uses</li>
+                    <li>Explain what I2C is and why BMP280 and LCD share the same 2 wires</li>
+                    <li>Explain why MQ-135 readings are relative, not absolute concentration values</li>
+                    <li>Show the SD card CSV file and explain what each column represents</li>
+                    <li>Explain what happens if Wi-Fi drops (local operation continues)</li>
+                    <li>Describe how you would expand this system for outdoor deployment</li>
+                </ul>
+
+                
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+                <div class="logo1">
+                    <h3>CodePath</h3>
+                    <p>Learn. Practice. Master</p>
+                </div>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+
+</body>
+</html>

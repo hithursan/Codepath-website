@@ -1,0 +1,2285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App Development - 20 Week Roadmap</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>Mobile App Development with React Native</h1>
+        <p>Complete 20-Week Beginner-to-Advanced Roadmap — React Native + TypeScript · iOS &amp; Android</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#week16">W16</a>
+        <a href="#week17">W17</a>
+        <a href="#week18">W18</a>
+        <a href="#week19">W19</a>
+        <a href="#week20">W20</a>
+        <a href="#capstone">Capstone</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Roadmap</h2>
+            <p>This roadmap takes a complete beginner to a confident, portfolio-ready React Native developer in <strong>20 weeks of full-time study</strong> (~35–40 hours/week). It is structured in five phases.</p>
+            <p><strong>React Native</strong> is an open-source framework created by Meta that lets you write one codebase in JavaScript (or TypeScript) and deploy it to <em>both</em> iOS and Android. It is used by major apps including Facebook, Instagram, Shopify, Discord, and Walmart.</p>
+            <p><strong>TypeScript</strong> is a typed superset of JavaScript — virtually all professional React Native projects use it. This roadmap teaches TypeScript gradually alongside JavaScript rather than treating it as a separate hurdle.</p>
+            <p><strong>Stack:</strong> React Native + TypeScript &nbsp;|&nbsp; <strong>Duration:</strong> 20 Weeks (Full-Time) &nbsp;|&nbsp; <strong>Level:</strong> Beginner → Job-Ready &nbsp;|&nbsp; <strong>Platforms:</strong> iOS &amp; Android (Cross-Platform)</p>
+
+            <h3>5 Phases Overview</h3>
+            <ul>
+                <li><strong>Phase 1 (Weeks 1–3):</strong> Foundations — How mobile apps work, JavaScript ES6+, and TypeScript essentials.</li>
+                <li><strong>Phase 2 (Weeks 4–7):</strong> React fundamentals and React Native core — components, styling, navigation, and user input.</li>
+                <li><strong>Phase 3 (Weeks 8–12):</strong> Intermediate skills — APIs/networking, local data persistence, animations, device hardware access, and push notifications.</li>
+                <li><strong>Phase 4 (Weeks 13–17):</strong> Advanced topics — global state management (Redux Toolkit/Zustand), testing, performance optimization, and publishing to the App Store and Play Store.</li>
+                <li><strong>Phase 5 (Weeks 18–20):</strong> Capstone — Firebase backend integration, full capstone app build, portfolio assembly, and interview/viva prep.</li>
+            </ul>
+
+            <p>By Week 20, you will have built <strong>~14 mini-projects</strong>, one major mid-point project, and a complete, published-ready capstone app — <strong>"TaskMate,"</strong> a cross-platform task and productivity manager.</p>
+        </div>
+
+
+        <!--WEEK 1 -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — How Mobile Apps Work, Dev Environment &amp; JavaScript Essentials</h2>
+                <p>Understand what React Native apps are, set up your full development environment, and become confident with core JavaScript needed for React Native.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Mobile app landscape</strong> — Native vs hybrid vs cross-platform development; how React Native bridges JS to native components; iOS vs Android differences; app lifecycle concept.</li>
+                    <li><strong>Development environment setup</strong> — Node.js, Expo CLI, Expo Go installation; VS Code setup with extensions; Git basics.</li>
+                    <li><strong>JavaScript fundamentals</strong> — Variables (<code>var</code>/<code>let</code>/<code>const</code>), data types, operators.</li>
+                    <li><strong>Functions</strong> — Traditional and arrow functions.</li>
+                    <li><strong>Conditionals &amp; Loops</strong> — <code>if/else</code>, ternary, <code>for</code>, <code>while</code>, <code>forEach</code>.</li>
+                    <li><strong>Arrays</strong> — Create, access, iterate, <code>.map()</code>, <code>.filter()</code>.</li>
+                    <li><strong>Objects</strong> — Create, access, spread operator.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every line of React Native code is JavaScript. Starting without a solid JS foundation causes compounding confusion from Week 4 onward. This week is intentionally designed so that you write real, runnable JavaScript from Day 1.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Mobile app landscape concepts + complete full environment setup + verify Expo Go works on your phone.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>JS variables, data types, operators; solve 10 small problems in the Node REPL.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Functions (traditional and arrow); convert 5 of yesterday's solutions to use functions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Conditionals and loops; build a simple grade calculator function.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Arrays — create/access/<code>.map()</code>/<code>.filter()</code>; practice 8 array manipulation problems.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Objects — create/access/spread; build a simple "user profile" object and manipulate it.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + Git commit of all JS practice files + explore the default Expo app on your phone.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Solve 15 small JavaScript logic problems (FizzBuzz, palindrome checker, array sum, object key counter).</li>
+                    <li>Create a GitHub repository and push all practice code with meaningful commit messages.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Personal Info App"</strong> — your very first Expo app showing your name, city, a short bio, and a list of 3 skills displayed as text components. No interactivity yet — just getting comfortable creating an Expo project, editing <code>App.tsx</code>, and seeing changes live on your phone via Expo Go.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Spending Days 1–3 fighting with environment setup and not getting to JavaScript at all.</li>
+                        <li>Copy-pasting code examples without typing them out.</li>
+                        <li>Installing a different version of Node.js than the LTS version, causing compatibility issues with Expo.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Follow the Expo setup guide line by line; if stuck, the Expo Discord is the fastest help source.</li>
+                        <li>Always type every code example. Your fingers need to learn the syntax, not just your eyes.</li>
+                        <li>Always install the Node.js LTS (Long Term Support) version, not "Current."</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Expo official documentation (expo.dev/docs) — Setup guide</li>
+                    <li>javascript.info — "The Modern JavaScript Tutorial" (Chapters 1–5)</li>
+                    <li>freeCodeCamp — JavaScript Algorithms and Data Structures</li>
+                    <li>reactnative.dev — "Introduction" and "Environment Setup" sections</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 30–35 hours (setup-heavy; lighter content week by design)</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 2 -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — JavaScript ES6+ Deep Dive (The React Native-Critical Parts)</h2>
+                <p>Master the specific JavaScript features that React Native and React use constantly — destructuring, spread/rest, modules, Promises, and async/await.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>ES6+ syntax essentials</strong> — Destructuring (arrays and objects), spread (<code>...</code>) and rest operators, template literals, default parameter values, short-circuit evaluation (<code>&amp;&amp;</code>, <code>||</code>, <code>??</code>).</li>
+                    <li><strong>Modules</strong> — <code>export</code> / <code>export default</code>, <code>import</code> (named and default), module-based code organization.</li>
+                    <li><strong>Asynchronous JavaScript</strong> — The event loop concept, callbacks → callback hell, Promises (<code>.then()</code>, <code>.catch()</code>, <code>.finally()</code>, <code>Promise.all()</code>), <code>async</code>/<code>await</code>, error handling with <code>try/catch</code>.</li>
+                    <li><strong>Array methods (advanced)</strong> — <code>.find()</code>, <code>.findIndex()</code>, <code>.some()</code>, <code>.every()</code>, <code>.reduce()</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Destructuring appears in virtually every React component. <code>async/await</code> appears in virtually every API call. The short-circuit operators appear constantly in conditional rendering. Skipping this week makes every week from Week 4 onward harder.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Destructuring (arrays and objects); practice 10 destructuring transformations on sample data.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Spread/rest, template literals, default params, short-circuit evaluation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>ES6 modules — <code>import</code>/<code>export</code>; refactor Day 1–2 practice into a multi-file project.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Event loop concept + Promises + <code>.then()</code>/<code>.catch()</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td><code>async</code>/<code>await</code> + <code>try/catch</code>; rewrite Day 4's Promise chains as <code>async</code> functions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Advanced array methods — <code>.find()</code>, <code>.reduce()</code>, <code>.some()</code>; solve 8 problems.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Rewrite 5 promise chains as <code>async/await</code> functions.</li>
+                    <li>Write an <code>async</code> function that fetches data from a free public API and logs the result.</li>
+                    <li>Use <code>.reduce()</code> to calculate the total price of a sample shopping cart array.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A Node.js <strong>"Weather Info Fetcher"</strong> script — a command-line <code>async</code> function that fetches current weather from a free weather API (e.g., Open-Meteo, no API key needed), displays formatted results using template literals, and handles errors gracefully with <code>try/catch</code> — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Forgetting <code>await</code> inside an <code>async</code> function (logs <code>Promise {}</code> instead of actual data).</li>
+                        <li>Not understanding destructuring deeply enough — this bites hard in React component code.</li>
+                        <li>Using <code>.then()</code> and <code>async/await</code> inconsistently in the same file.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Every time you see <code>Promise {}</code> in a log, check if you forgot <code>await</code>.</li>
+                        <li>Practice destructuring daily as default syntax — override muscle memory.</li>
+                        <li>Decide once per function: <code>.then()</code> chains or <code>async/await</code> — never mix.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>javascript.info — Promises, async/await, destructuring chapters</li>
+                    <li>freeCodeCamp — ES6 section</li>
+                    <li>Open-Meteo API (open-meteo.com) — free, no API key required</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35–38 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 3 -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — TypeScript Fundamentals for React Native</h2>
+                <p>Understand and apply TypeScript's core type system to write safer, more maintainable React Native code.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Why TypeScript?</strong> — Problems with untyped JS at scale; TypeScript's relationship to JavaScript; TypeScript in Expo (on by default in the TypeScript template).</li>
+                    <li><strong>TypeScript type basics</strong> — Primitive types (<code>string</code>, <code>number</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>); arrays (<code>string[]</code> / <code>Array&lt;string&gt;</code>); <code>any</code> (avoid); union types; type inference.</li>
+                    <li><strong>Objects and interfaces</strong> — <code>type</code> aliases, <code>interface</code> declarations, optional properties (<code>?</code>), readonly properties.</li>
+                    <li><strong>Functions with types</strong> — Typing parameters and return values; typing arrow functions; <code>void</code> return type.</li>
+                    <li><strong>Generics (introductory)</strong> — What generics are; common cases: <code>Array&lt;T&gt;</code>, <code>Promise&lt;T&gt;</code>.</li>
+                    <li><strong>TypeScript in React Native context</strong> — Annotating component props with an interface; <code>.tsx</code> file extension; <code>React.FC</code> type.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every component you write from Week 4 onward will use TypeScript to type its props. Every API response in Week 8–9 will need an interface. Getting comfortable with TypeScript now means you code correctly by default from the start.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>TypeScript setup in Expo + primitive types + type inference; convert a JS file to <code>.ts</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Arrays, union types, <code>any</code>-vs-<code>unknown</code> distinction; solve 5 typed problems.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>type</code> aliases and <code>interface</code> — define interfaces for 3 real-world shapes (User, Product, Task).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Function types — add parameter and return-value types to all Week 1–2 functions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Generics conceptual overview + <code>Array&lt;T&gt;</code> and <code>Promise&lt;T&gt;</code> in context.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>TypeScript in TSX — annotate a component's props with an interface; create 2–3 typed components.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Define TypeScript <code>interface</code>s for: a <code>User</code>, a <code>Product</code>, a <code>Task</code>, and an <code>ApiResponse&lt;T&gt;</code> generic wrapper.</li>
+                    <li>Add TypeScript types to all functions written in Weeks 1–2.</li>
+                    <li>Convert a small JS Expo component to a <code>.tsx</code> file with fully typed props.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Typed Product List"</strong> Expo app — a screen displaying a list of products (name, price, category, inStock boolean) where all data is typed using TypeScript interfaces, components are typed with prop interfaces, and no <code>any</code> is used anywhere — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>any</code> everywhere to silence TypeScript errors (defeats the purpose).</li>
+                        <li>Confusing <code>interface</code> and <code>type</code> — paralysis over which to use.</li>
+                        <li>Not restarting the TypeScript language server after config changes.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Ban <code>any</code> from your vocabulary this week. Use TypeScript Playground to figure out the real type.</li>
+                        <li>Use <code>interface</code> for object shapes, <code>type</code> for unions — a clear rule eliminates choice paralysis.</li>
+                        <li>Restart VS Code's TypeScript server (Cmd+Shift+P → "TypeScript: Restart TS Server") when types behave unexpectedly.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>TypeScript official documentation (typescriptlang.org/docs)</li>
+                    <li>TypeScript Playground (typescriptlang.org/play)</li>
+                    <li>Matt Pocock's free TypeScript content (totaltypescript.com)</li>
+                    <li>freeCodeCamp — TypeScript section</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35–38 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 4-->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — React Fundamentals (The Foundation of React Native)</h2>
+                <p>Understand core React concepts — components, props, state, and hooks — deeply enough that React Native is immediately intuitive in Week 5.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>React mental model</strong> — UI-as-a-function-of-state; components as functions returning UI; virtual DOM (note: React Native does NOT use the DOM).</li>
+                    <li><strong>Components and JSX/TSX</strong> — Functional components; JSX syntax rules; component composition.</li>
+                    <li><strong>Props</strong> — Passing data parent → child; typing props with TS interfaces; <code>children</code> prop.</li>
+                    <li><strong>State with <code>useState</code></strong> — Reading and updating state; re-render triggers; lifting state up.</li>
+                    <li><strong><code>useEffect</code> hook</strong> — Side effects, dependency array, cleanup functions.</li>
+                    <li><strong>Conditional rendering</strong> — <code>&amp;&amp;</code>, ternary, early returns.</li>
+                    <li><strong>Lists</strong> — <code>.map()</code> to render lists; the <code>key</code> prop and why it's required.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> React Native <em>is</em> React — just with different component primitives (<code>View</code> instead of <code>&lt;div&gt;</code>, <code>Text</code> instead of <code>&lt;p&gt;</code>). Mastering React patterns now means Week 5's React Native intro feels like a small extension.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>React mental model + functional components + JSX syntax; build 3 simple display components.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Props — passing data + TypeScript prop interfaces; build a <code>UserCard</code> with typed props.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>useState</code> — counters, toggles, form inputs; build 3 interactive mini examples.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Conditional rendering — show/hide UI, toggle styles, empty state messages; 5 examples.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Lists with <code>.map()</code> + <code>key</code> prop; render contacts, products, todos.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td><code>useEffect</code> — fetch on mount, run on state change, cleanup; 3 examples.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build a <code>Counter</code> component with increment/decrement/reset buttons.</li>
+                    <li>Build a <code>SearchableProductList</code> that filters items as the user types.</li>
+                    <li>Build a component that fetches and displays 5 users from <code>jsonplaceholder.typicode.com/users</code>.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"GitHub Profile Viewer"</strong> React component (web sandbox) — takes a GitHub username as a prop, fetches user data from the GitHub API on mount with <code>useEffect</code>, displays avatar/name/bio/repo count, shows a loading spinner, handles errors gracefully, and uses TypeScript interfaces for the API response shape — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Mutating state directly (e.g., <code>myArray.push(item)</code>) instead of using setState.</li>
+                        <li>Forgetting the <code>key</code> prop on list items.</li>
+                        <li>Missing dependencies in <code>useEffect</code>'s dependency array (stale closures).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Never mutate state. Always spread: <code>setItems(prev =&gt; [...prev, newItem])</code>.</li>
+                        <li><code>key</code> prop is non-negotiable on list items.</li>
+                        <li>For dependency arrays: "what variables from outside this effect are used inside?" — every one belongs.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>react.dev — "Learn React" section (official, modern)</li>
+                    <li>freeCodeCamp — Front End Development Libraries</li>
+                    <li>StackBlitz / CodeSandbox — free browser-based React sandboxes</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 5-->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — React Native Core: Components, Styling &amp; Flexbox</h2>
+                <p>Translate your React knowledge into React Native, master core components, and build correctly-styled mobile UIs using Flexbox.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>React Native vs React (web)</strong> — No DOM, no HTML; <code>View</code>, <code>Text</code>, <code>Image</code>, <code>ScrollView</code>, <code>TextInput</code>, <code>TouchableOpacity</code>, <code>Pressable</code>; no CSS files (StyleSheet.create); platform differences iOS vs Android.</li>
+                    <li><strong>Core RN components</strong> — <code>View</code>, <code>Text</code>, <code>Image</code> (local + network), <code>TextInput</code>, <code>ScrollView</code>, <code>TouchableOpacity</code>/<code>Pressable</code>, <code>StatusBar</code>.</li>
+                    <li><strong>StyleSheet &amp; styling</strong> — <code>StyleSheet.create()</code>; styling differences from CSS (no <code>px</code>, camelCase, numbers); <code>Platform.OS</code> and <code>Platform.select()</code>.</li>
+                    <li><strong>Flexbox for mobile</strong> — <code>flexDirection</code> (<code>column</code> default in RN!), <code>justifyContent</code>, <code>alignItems</code>, <code>flex</code>, <code>flexWrap</code>.</li>
+                    <li><strong>Safe Area and screen dimensions</strong> — <code>SafeAreaView</code> (notches/status bars); <code>Dimensions.get('window')</code>; <code>useWindowDimensions</code> hook.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> This is the moment JavaScript knowledge becomes a real mobile app. Getting Flexbox solid now means you stop fighting layouts for the rest of the roadmap — poor layout knowledge is the single most common source of confusion in React Native beginners.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td><code>View</code> and <code>Text</code> — build 5 text-based layouts with <code>StyleSheet</code>; understand "all text must be in Text" rule.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Flexbox — <code>flexDirection</code>, <code>justifyContent</code>, <code>alignItems</code>; build header, centered content, footer.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>flex</code> property + <code>flexWrap</code> + a two-column card grid layout.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>Image</code> (local + network) + <code>TextInput</code> (controlled input) + <code>TouchableOpacity</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td><code>ScrollView</code> + <code>SafeAreaView</code> + <code>Dimensions</code>/<code>useWindowDimensions</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td><code>Platform</code> API — write one component that renders differently on iOS vs Android.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit + push to Expo Go on phone.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Rebuild 3 real app screen layouts from screenshots (Instagram post card, news article card, settings list item).</li>
+                    <li>Build a controlled <code>TextInput</code> with character limit counter and clear button.</li>
+                    <li>Build a 2-column responsive card grid using <code>flexWrap</code>.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Social Media Profile Screen"</strong> — a static mobile screen showing profile photo, username, follower/following counts, short bio, a grid of post thumbnail placeholders, and a styled follow button — fully responsive using Flexbox, using <code>SafeAreaView</code> correctly, looks good on both Android and iOS — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Forgetting <code>flexDirection: 'column'</code> is the default in RN (opposite of CSS).</li>
+                        <li>Wrapping plain strings in <code>View</code> without <code>Text</code> ("Text strings must be rendered within a &lt;Text&gt;").</li>
+                        <li>Using <code>height: '100%'</code> when <code>flex: 1</code> is correct.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>In RN, default to thinking "column layout" unless deliberately building a row.</li>
+                        <li>Every piece of visible text must be inside <code>&lt;Text&gt;</code> — non-negotiable rule.</li>
+                        <li>Replace all percentage-based height attempts with <code>flex: 1</code>.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>reactnative.dev — "Core Components and APIs" documentation</li>
+                    <li>Expo documentation — "Components" section</li>
+                    <li>freeCodeCamp — React Native Flexbox guide</li>
+                    <li>Snack (snack.expo.dev) — browser-based Expo sandbox</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–42 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 6-->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Navigation with React Navigation</h2>
+                <p>Implement multi-screen navigation — the single most important practical skill for building real mobile apps.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Why navigation libraries exist</strong> — How mobile navigation differs from web routing; React Navigation as the standard.</li>
+                    <li><strong>Stack Navigator</strong> — <code>@react-navigation/native</code> + <code>@react-navigation/native-stack</code>; <code>navigation.navigate()</code>, <code>navigation.push()</code>, <code>navigation.goBack()</code>; passing params; header customization.</li>
+                    <li><strong>Bottom Tab Navigator</strong> — <code>@react-navigation/bottom-tabs</code>; tab icons (<code>@expo/vector-icons</code>); customizing tab bar.</li>
+                    <li><strong>Drawer Navigator</strong> — <code>@react-navigation/drawer</code> slide-out menu.</li>
+                    <li><strong>Nested navigators</strong> — Stack inside Tab (very common pattern); nested navigation prop.</li>
+                    <li><strong>TypeScript with React Navigation</strong> — <code>RootStackParamList</code>; <code>NativeStackNavigationProp</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A single-screen app is a demo, not an app. Navigation is required for virtually every real app. Nested navigation (tabs + stack) is the most common layout pattern in production apps (Instagram, WhatsApp, etc.).</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Install React Navigation + dependencies; build a Stack Navigator with 2 screens.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Pass params to a detail screen; build a "list → detail" navigation pattern.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Header customization — title, buttons, color; custom header button.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Bottom Tab Navigator + icons using <code>@expo/vector-icons</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Nest Stack inside Tabs; build 3-tab app with one tab having a sub-stack.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Drawer Navigator + TypeScript param typing with <code>RootStackParamList</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build a "Recipes App" navigation: Home tab (list → detail stack), Favorites tab, Profile tab.</li>
+                    <li>Add typed navigation params to all screens.</li>
+                    <li>Customize the tab bar with icons and active color.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Country Explorer"</strong> multi-screen app — Home screen with countries (from <code>restcountries.com</code>), tap to see detail screen (flag/population/capital), Favorites tab for saved countries, bottom tab bar with icons — TypeScript typed navigation, pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Forgetting peer dependencies for React Navigation (cryptic errors).</li>
+                        <li>Defining screens inside another component's render function.</li>
+                        <li>Not understanding each Tab has its own independent stack.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Copy install command from React Navigation docs for your current Expo SDK version.</li>
+                        <li>Always define Navigator and Screen at top level of a file, never inside another component.</li>
+                        <li>When debugging, draw a tree of your navigator structure before looking at code.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>React Navigation official documentation (reactnavigation.org)</li>
+                    <li><code>@expo/vector-icons</code> documentation</li>
+                    <li>freeCodeCamp — React Native navigation tutorials</li>
+                    <li>React Native School (YouTube)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–42 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 7 -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — State Management: Hooks, Context API &amp; Local State Patterns</h2>
+                <p>Master the full set of React hooks used in React Native and implement app-wide state sharing with Context API.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>useReducer</code></strong> — Alternative to <code>useState</code> for complex state; actions and reducers pattern.</li>
+                    <li><strong><code>useCallback</code> and <code>useMemo</code></strong> — Memoizing functions/values to avoid re-renders; avoid premature optimization.</li>
+                    <li><strong><code>useRef</code></strong> — Referencing elements (focus TextInput programmatically); persisting mutable values across renders.</li>
+                    <li><strong>Custom hooks</strong> — Extracting reusable stateful logic; examples: <code>useFetch</code>, <code>useToggle</code>, <code>useDebounce</code>.</li>
+                    <li><strong>Context API</strong> — <code>createContext</code>, Provider, <code>useContext</code>; real use case: ThemeContext, AuthContext.</li>
+                    <li><strong>When NOT to use Context</strong> — Re-render behavior; intro to why global state libraries exist (sets up Week 13).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>useRef</code>, <code>useCallback</code>, <code>useMemo</code>, custom hooks, and Context API are all used constantly in production. Custom hooks transform repeated stateful logic from copy-paste spaghetti into clean reusable code. Context handles "prop drilling" without needing a global state library yet.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td><code>useReducer</code> — build a Todo manager with add/complete/delete actions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td><code>useRef</code> — focus a TextInput on mount; persist a timer value without re-rendering.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Custom hooks — build <code>useFetch</code>, <code>useToggle</code>, and <code>useLocalStorage</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>useCallback</code>/<code>useMemo</code> — one clear example each; use sparingly.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Context API — set up a <code>ThemeContext</code> (light/dark mode across all screens).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td><code>AuthContext</code> — tracks login state; conditionally shows different navigation stacks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Extract Week 4's fetch logic into a reusable <code>useFetch&lt;T&gt;(url: string)</code> custom hook.</li>
+                    <li>Build a <code>ThemeContext</code> with a toggle, connect to at least 3 screens.</li>
+                    <li>Build an <code>AuthContext</code> that conditionally renders Auth stack vs Main app stack.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Theme-Aware Notes App"</strong> — multi-screen notes app using <code>useReducer</code> for note state (add/delete/edit), <code>ThemeContext</code> for light/dark mode accessible from any screen, custom <code>useNotes</code> hook abstracting reducer logic, and <code>AuthContext</code> showing a simple login screen before the main app — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using Context for every state, even local component state (causes unnecessary re-renders).</li>
+                        <li>Building custom hooks that aren't actually reusable.</li>
+                        <li>Not providing a Context before consuming it (<code>null</code>/<code>undefined</code> errors).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Context = truly global state only (theme, auth, language). Per-screen state = component state.</li>
+                        <li>A custom hook earns its existence when 2+ components need the same logic.</li>
+                        <li>Always wrap all consuming components with the Provider, typically at app root.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>react.dev — "Adding Interactivity" and "Managing State" sections</li>
+                    <li>freeCodeCamp — React Hooks deep dive articles</li>
+                    <li>"Custom React Hooks" — React documentation section</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 8-->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Lists &amp; Forms: FlatList, SectionList &amp; User Input</h2>
+                <p>Build high-performance scrollable lists and robust, validated form UIs — the two most common real app UI patterns.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>FlatList</strong> — Why it outperforms <code>ScrollView</code> (virtualized); <code>data</code>, <code>renderItem</code>, <code>keyExtractor</code>; pull-to-refresh; pagination (<code>onEndReached</code>); list header/footer; performance props (<code>initialNumToRender</code>, <code>maxToRenderPerBatch</code>, <code>windowSize</code>).</li>
+                    <li><strong>SectionList</strong> — Grouped/sectioned lists (contacts by letter, settings by category).</li>
+                    <li><strong>Forms in React Native</strong> — Multiple <code>TextInput</code> fields; <code>KeyboardAvoidingView</code>; <code>returnKeyType</code>; manual validation logic.</li>
+                    <li><strong>Form library: react-hook-form + zod</strong> — Why form libraries exist; basic setup with RN; schema validation with Zod.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Almost every real app has a list of items and at least one form. Getting <code>FlatList</code> right (especially pagination + pull-to-refresh) and form validation robust is foundational to every app from here.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td><code>FlatList</code> basics with 50 items; style each <code>renderItem</code> as a card.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Pull-to-refresh + load-more pagination on a FlatList.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>SectionList</code> — contacts list grouped by first letter of name.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Multi-field form with <code>TextInput</code> + <code>KeyboardAvoidingView</code> + input chaining.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Manual form validation (required fields, email format, password length).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td><code>react-hook-form</code> + <code>zod</code> — refactor yesterday's form with typed schema validation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build a paginated <code>FlatList</code> that loads 10 items at a time from the JSONPlaceholder posts API.</li>
+                    <li>Build a full signup form (name/email/password/confirm) with react-hook-form + zod.</li>
+                    <li>Build a grouped <code>SectionList</code> of tasks organized by category.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Job Board"</strong> screen — fetches job listings, renders in paginated <code>FlatList</code> (10/page, load more), pull-to-refresh, sticky header with total count, and a search/filter form at top validated with <code>react-hook-form</code> — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>ScrollView</code> for long dynamic lists (slow app).</li>
+                        <li>Forgetting <code>keyExtractor</code> on <code>FlatList</code> (React key warnings).</li>
+                        <li>Not handling <code>KeyboardAvoidingView</code> platform differences (<code>'padding'</code> iOS, <code>'height'</code> Android).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Rule: list &gt; ~20 items → use <code>FlatList</code>, not <code>ScrollView</code>.</li>
+                        <li>Always provide <code>keyExtractor</code> returning a unique string per item.</li>
+                        <li>Use <code>Platform.OS</code> to set <code>KeyboardAvoidingView</code>'s <code>behavior</code> prop correctly.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>React Native <code>FlatList</code> documentation</li>
+                    <li>react-hook-form documentation (react-hook-form.com)</li>
+                    <li>Zod documentation (zod.dev)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–42 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 9 -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Networking: REST APIs, Axios &amp; Data Fetching Patterns</h2>
+                <p>Confidently fetch, send, and manage data from real REST APIs including loading states, error handling, and caching.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>HTTP in React Native</strong> — <code>fetch</code> API (built-in); Axios (more capable, interceptors, JSON parsing).</li>
+                    <li><strong>Full CRUD via API</strong> — GET (lists/items), POST (create), PUT/PATCH (update), DELETE; headers (Authorization, Content-Type).</li>
+                    <li><strong>Loading, error, empty states</strong> — Standard pattern: loading spinner → data OR error; <code>ActivityIndicator</code>; <code>ListEmptyComponent</code>.</li>
+                    <li><strong>Custom <code>useFetch</code>/<code>useApi</code> hooks</strong> — Robust custom hook for loading/error/data state.</li>
+                    <li><strong>React Query (TanStack Query)</strong> — <code>useQuery</code> for GET; <code>useMutation</code> for POST/PUT/DELETE; automatic caching and background refetching.</li>
+                    <li><strong>Environment variables in Expo</strong> — <code>expo-constants</code> or <code>react-native-dotenv</code>; never hardcode API keys.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Almost every real app talks to a backend API. Understanding full CRUD, loading/error states, and React Query transforms apps from static demos to real data-driven applications.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td><code>fetch</code> + Axios setup; fetch from public API with loading/error/data states.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>POST data from a form to <code>jsonplaceholder.typicode.com</code>; handle responses.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>PUT and DELETE operations; build a full CRUD mini UI.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Build robust <code>useApi&lt;T&gt;(url)</code> custom hook with loading/error/data state.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>React Query (<code>useQuery</code>) — replace <code>useEffect</code> fetching in one screen.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>React Query (<code>useMutation</code>) for POST/PUT/DELETE; env variables for API base URL.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build complete CRUD UI against JSONPlaceholder API (list/view/create/delete posts).</li>
+                    <li>Convert a manual <code>useEffect</code>-based fetch to <code>useQuery</code>.</li>
+                    <li>Add proper loading skeletons (shimmer placeholders) while data fetches.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"News Reader"</strong> app — fetches headlines from a free news API (e.g., NewsAPI.org), displays in <code>FlatList</code> with images, tapping opens detail screen with full description, pull-to-refresh works, errors show retry button, all network logic with React Query — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Hardcoding API keys in source code and pushing to public GitHub.</li>
+                        <li>Not handling loading state (blank screen until data arrives).</li>
+                        <li>Treating all errors the same (404, 401, 500 need different handling).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>All API keys → <code>.env</code> files, and <code>.env</code> → <code>.gitignore</code>. Non-negotiable.</li>
+                        <li>Always initialize state with a loading indicator showing from first render.</li>
+                        <li>Check <code>error.response?.status</code> (Axios) or <code>response.ok</code> (fetch) and give meaningful feedback.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Axios documentation (axios-http.com)</li>
+                    <li>TanStack Query (React Query) documentation (tanstack.com/query)</li>
+                    <li>NewsAPI.org — free developer tier</li>
+                    <li>JSONPlaceholder (jsonplaceholder.typicode.com)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–42 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 10 -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Local Data Persistence (AsyncStorage, SQLite &amp; SecureStore)</h2>
+                <p>Persist data on the user's device so app state survives app restarts — critical for any real app.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Why local persistence?</strong> — Offline-first UX, user preferences, caching, auth tokens.</li>
+                    <li><strong>AsyncStorage</strong> — <code>@react-native-async-storage/async-storage</code> key-value storage; <code>getItem</code>, <code>setItem</code>, <code>removeItem</code>; limitations (string-only, not secure).</li>
+                    <li><strong>SecureStore (Expo)</strong> — <code>expo-secure-store</code> encrypted key-value for sensitive data; auth tokens go HERE, not AsyncStorage.</li>
+                    <li><strong>MMKV (intro)</strong> — High-performance alternative; faster synchronous reads.</li>
+                    <li><strong>SQLite (Expo SQLite)</strong> — <code>expo-sqlite</code> local relational database; CREATE/INSERT/SELECT/UPDATE/DELETE; when to use vs AsyncStorage.</li>
+                    <li><strong>Persisting Redux/Zustand state</strong> — <code>redux-persist</code> with AsyncStorage; Zustand's <code>persist</code> middleware.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Without persistence, every app restart clears user data — immediately frustrating. Proper persistence (auth tokens → SecureStore, preferences → AsyncStorage, structured data → SQLite) is the difference between a real app and a demo.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>AsyncStorage — save/retrieve user preferences (theme, language); persist on restart.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>SecureStore — save a JWT-style auth token; retrieve on launch to decide which stack.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>SQLite — create a <code>tasks</code> table; implement full CRUD via SQL.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>More SQLite — add filtering, ordering, search queries to tasks DB.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Zustand's <code>persist</code> middleware — persist cart/favorites state with AsyncStorage.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Integrate persistence into Week 7 Notes app — notes survive app restarts.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build settings screen persisting 3 preferences (theme, font size, notifications) with AsyncStorage.</li>
+                    <li>Store a mock auth token in SecureStore and write app-startup check (Login vs Home).</li>
+                    <li>Build a SQLite-backed expense tracker with add/view/delete.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Habit Tracker"</strong> app — users add habits (daily goals), check off each day; all data in SQLite (habit names, completion dates); preferences (theme, start day of week) in AsyncStorage; mock auth token in SecureStore with startup check — all data persists across restarts — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Storing sensitive tokens in AsyncStorage (not encrypted).</li>
+                        <li>Not awaiting AsyncStorage calls (always async — forgetting <code>await</code> causes stale reads).</li>
+                        <li>Using SQLite for simple key-value preferences when AsyncStorage suffices.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Rule: auth tokens/passwords → SecureStore. Preferences → AsyncStorage. Structured/relational → SQLite.</li>
+                        <li>AsyncStorage is always async — always <code>await</code> or <code>.then()</code>.</li>
+                        <li>If you'd query it with WHERE → SQLite; if it's simple key-value → AsyncStorage.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li><code>@react-native-async-storage/async-storage</code> documentation</li>
+                    <li><code>expo-secure-store</code> documentation (expo.dev)</li>
+                    <li><code>expo-sqlite</code> documentation (expo.dev)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–40 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 11-->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Animations &amp; Gestures</h2>
+                <p>Build fluid, polished mobile animations using React Native's Animated API and Reanimated, and handle complex touch gestures.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Why animations matter</strong> — Communicates state change, guides attention, makes apps feel native.</li>
+                    <li><strong>Built-in <code>Animated</code> API</strong> — <code>Animated.Value</code>, <code>Animated.timing</code>, <code>Animated.spring</code>, <code>Animated.decay</code>; <code>parallel</code>/<code>sequence</code>/<code>stagger</code>; interpolation.</li>
+                    <li><strong><code>LayoutAnimation</code></strong> — Automatic animation on layout change (easiest built-in tool).</li>
+                    <li><strong>React Native Reanimated 2/3</strong> — Runs on UI thread (smoother); <code>useSharedValue</code>, <code>useAnimatedStyle</code>; <code>withTiming</code>, <code>withSpring</code>, <code>withDelay</code>, <code>withSequence</code>.</li>
+                    <li><strong>React Native Gesture Handler</strong> — Swipe to delete, pan, pinch-to-zoom; <code>GestureDetector</code> API (v2).</li>
+                    <li><strong>Common patterns</strong> — Fade in on mount, slide-in card, animated button press, skeleton/shimmer loading.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Animations separate "real app" from "prototype." React Native apps without animation feel cheap compared to native. Reanimated is industry-standard and a regular interview topic for senior RN roles.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td><code>Animated.Value</code> + <code>Animated.timing</code> — fade in on mount; slide in from right.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td><code>Animated.spring</code> + <code>parallel</code>/<code>sequence</code> — animated welcome splash screen.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Interpolation — map scroll position to header opacity/size; build collapsing header.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>LayoutAnimation</code> — animate list item insertion and removal.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Reanimated — <code>useSharedValue</code>/<code>useAnimatedStyle</code> + <code>withTiming</code>/<code>withSpring</code>; rebuild Day 1's examples.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Gesture Handler — swipe-to-delete gesture on a list item.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build "swipe to delete" list using Gesture Handler.</li>
+                    <li>Build collapsing header using interpolation on scroll position.</li>
+                    <li>Build animated "like button" that bounces and changes color on tap.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Workout Timer"</strong> app screen — animated circular progress indicator (Reanimated + <code>withTiming</code>), animated start/pause/reset buttons (scale + color), swipe-to-dismiss completed workout card (Gesture Handler), skeleton loader while data loads — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Forgetting <code>useNativeDriver: true</code> on <code>Animated.timing</code> (janky animations).</li>
+                        <li>Running complex animations on JS thread (use Reanimated for gestures/continuous values).</li>
+                        <li>Over-animating — adding animations everywhere, making app feel slow.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always add <code>useNativeDriver: true</code> to <code>Animated.timing</code>/<code>spring</code> where supported.</li>
+                        <li>Move to Reanimated as default for any animation responding to gestures or running at high frequency.</li>
+                        <li>Animate with purpose — each animation should communicate something.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>React Native Reanimated documentation (docs.swmansion.com/react-native-reanimated)</li>
+                    <li>React Native Gesture Handler documentation</li>
+                    <li>William Candillon's YouTube channel ("Can it be done in React Native?")</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–42 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 12 -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Device APIs: Camera, Location, Notifications &amp; Media</h2>
+                <p>Access real device hardware and OS features — camera, location, push notifications, and media — using Expo's pre-built modules.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Permissions in RN</strong> — iOS/Android permission systems; using individual module permission methods; requesting gracefully.</li>
+                    <li><strong>Camera (<code>expo-camera</code>/<code>expo-image-picker</code>)</strong> — Taking photos/videos; picking from gallery; displaying captured images.</li>
+                    <li><strong>Location (<code>expo-location</code>)</strong> — <code>getCurrentPositionAsync</code>; watching updates; <code>react-native-maps</code>.</li>
+                    <li><strong>Push notifications (<code>expo-notifications</code>)</strong> — Local notifications; Expo's push service vs FCM/APNs; handling press events.</li>
+                    <li><strong>Media: Audio/Video</strong> — <code>expo-av</code> audio; <code>expo-video</code> (SDK 50+) or <code>expo-av</code>.</li>
+                    <li><strong>Sharing &amp; Clipboard</strong> — <code>expo-sharing</code>; <code>expo-clipboard</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Device features are what make a mobile app different from a web app — camera, GPS, push notifications are unique to mobile. Apps using these produce the most impressive portfolio pieces.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Image picker — pick from gallery; display in profile circle; request permissions gracefully.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Camera — capture a photo, display, let user retake or confirm.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Location — get coordinates; display; show on <code>react-native-maps</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Local push notifications — schedule 10s after button press; handle press.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Audio playback with <code>expo-av</code> — simple media player with play/pause/progress.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td><code>expo-sharing</code> + <code>expo-clipboard</code> — share image and copy text.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build "photo journal" — tap to take photo, add caption, see list of entries.</li>
+                    <li>Build "Nearby Me" screen using location + maps showing user's pin.</li>
+                    <li>Schedule push notification 1 hour in future from a date/time picker form.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Pet Tracker"</strong> app — users add pets (photo from camera, name, breed), can tap to view on map (mock coordinates), set feeding reminder notifications, share pet profile as text — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Not requesting permissions before calling device APIs (silent failure/crash).</li>
+                        <li>Requesting all permissions at startup (users deny everything — request contextually).</li>
+                        <li>Testing notifications only with app in foreground.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always check permission status with <code>check*PermissionsAsync()</code> before using hardware.</li>
+                        <li>Request at moment of use: camera permission when user taps "Open Camera," not on launch.</li>
+                        <li>Test push notifications on real device with app in background AND killed state.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Expo documentation — Camera, Notifications, Location, AV sections</li>
+                    <li><code>react-native-maps</code> documentation</li>
+                    <li>Expo Push Notification tool (expo.dev/notifications)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–42 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 13-->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Global State Management: Redux Toolkit &amp; Zustand</h2>
+                <p>Implement scalable global state management for complex multi-screen apps using Redux Toolkit, and understand Zustand as a lighter alternative.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Why global state matters</strong> — Prop drilling, Context re-renders at scale; when Context is enough vs library needed.</li>
+                    <li><strong>Redux Toolkit (RTK)</strong> — <code>createSlice</code>, <code>configureStore</code>, <code>useSelector</code>, <code>useDispatch</code>, <code>createAsyncThunk</code>; RTK Query (intro).</li>
+                    <li><strong>Redux Persist</strong> — Persisting Redux state to AsyncStorage across restarts.</li>
+                    <li><strong>Zustand</strong> — Minimal flexible alternative; <code>create</code>; state + actions in components; middleware (<code>persist</code>, <code>devtools</code>).</li>
+                    <li><strong>Choosing the right tool</strong> — RTK: larger teams, complex state, structure. Zustand: simpler apps, less boilerplate, more flexibility.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Production apps use a global state solution — you'll encounter Redux or Zustand in virtually every professional RN codebase. RTK is the modern recommended Redux approach; Zustand has surged in popularity. Understanding both makes you versatile and interview-ready.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>RTK — <code>createSlice</code> + <code>configureStore</code> + <code>Provider</code>; build counter slice.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td><code>useSelector</code>/<code>useDispatch</code> in multi-screen app; connect cart slice to 3 screens.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>createAsyncThunk</code> — fetch products from API, store in Redux.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>redux-persist</code> — persist cart state across restarts.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Zustand — build same cart in Zustand; compare code length/structure.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Zustand <code>persist</code> + devtools; add async actions to Zustand.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build shopping cart (add/remove/quantity) using RTK slices.</li>
+                    <li>Persist cart to AsyncStorage using <code>redux-persist</code>.</li>
+                    <li>Rebuild cart in Zustand; write short personal comparison.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>An <strong>"E-Commerce Browse"</strong> app — product listing (with <code>createAsyncThunk</code>), product detail screen, add-to-cart (RTK slice), cart screen with total, persisted cart (survives restart), favorites slice (also persisted) — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Learning "old" Redux (manual action types, switch/case reducers) from outdated tutorials.</li>
+                        <li>Putting ALL state in Redux/Zustand, including local UI state.</li>
+                        <li>Not setting up Redux DevTools (makes debugging much harder).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Only use Redux Toolkit tutorials — not classic Redux tutorials.</li>
+                        <li>Global state: auth, cart, theme, app-wide data. Local state (modal open?): <code>useState</code>.</li>
+                        <li>Set up Redux DevTools + Flipper/RN Debugger from Day 1 of this week.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Redux Toolkit official documentation (redux-toolkit.js.org)</li>
+                    <li>Zustand documentation (zustand-demo.pmnd.rs)</li>
+                    <li>Redux DevTools browser extension</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–44 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 14 -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Testing React Native Apps</h2>
+                <p>Write unit tests, component tests, and integration tests using Jest and React Native Testing Library.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Testing fundamentals</strong> — Why testing matters; types: unit, component/integration, E2E; TDD concept.</li>
+                    <li><strong>Jest</strong> — Built-in with RN/Expo; <code>describe</code>, <code>test</code>/<code>it</code>, <code>expect</code>, matchers; mocking (<code>jest.mock</code>, <code>jest.fn()</code>); async testing.</li>
+                    <li><strong>React Native Testing Library (RNTL)</strong> — <code>render</code>, <code>screen</code>, <code>fireEvent</code>, <code>waitFor</code>; queries (<code>getByText</code>, <code>getByTestId</code>, <code>findByText</code>).</li>
+                    <li><strong>Testing navigation</strong> — Mocking React Navigation in tests.</li>
+                    <li><strong>Testing with mocked API calls</strong> — <code>jest.mock</code> for Axios; <code>msw</code> (Mock Service Worker).</li>
+                    <li><strong>E2E testing (intro)</strong> — Detox; Maestro (simpler alternative).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Testing is consistently cited as a skill gap in junior developers. Writing tests makes code maintainable, catches regressions, and demonstrates professional engineering habits in portfolios/interviews.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Jest setup in Expo; write 5 unit tests for pure utility functions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Async Jest — test async functions with mock API responses.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>RNTL — <code>render</code>/<code>screen</code>/<code>getByText</code>; test 3 display components.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>fireEvent</code> — test button presses, text input changes, state updates.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Mock API calls in RNTL — test a component that fetches data.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Mock React Navigation in tests; test component calling <code>navigation.navigate</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write full test suite (10+ tests) for Week 8 Job Board screen.</li>
+                    <li>Write unit tests for all utility/helper functions across your projects.</li>
+                    <li>Test a component reading from AsyncStorage (mock AsyncStorage).</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>test suite for the Week 13 E-Commerce app</strong> — unit tests for all Redux/Zustand state logic (reducers, selectors), RNTL component tests for product list/card/cart screens (with mocked API), integration tests for add-to-cart flow — achieving 70%+ test coverage — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Only testing happy path — tests covering "it works" catch almost nothing.</li>
+                        <li>Tests too tightly coupled to implementation (testing state variables instead of what user sees).</li>
+                        <li>Writing tests after the fact for entire large project — makes testing feel like a chore.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>For every test: also write one "what if this fails?" test.</li>
+                        <li>Test what the user sees and experiences, not internal component structure.</li>
+                        <li>From Week 15 onward: write minimal tests for every new feature as you build it.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Jest official documentation (jestjs.io)</li>
+                    <li>React Native Testing Library documentation</li>
+                    <li>Callstack's "Testing React Native Apps" guide (free)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–40 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 15 -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Performance Optimization</h2>
+                <p>Identify and resolve the most common React Native performance problems, making your apps smooth, fast, and efficient on real devices.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Why performance matters in mobile</strong> — Limited CPU/memory vs desktop; 60fps target; JS thread vs UI thread.</li>
+                    <li><strong>Identifying problems</strong> — RN Perf Monitor; Flipper's profiler; <code>why-did-you-render</code> library.</li>
+                    <li><strong>Re-render optimization</strong> — <code>React.memo</code>; <code>useCallback</code>/<code>useMemo</code> (when they help); referential equality.</li>
+                    <li><strong>List performance</strong> — <code>FlatList</code> performance props; memoizing <code>renderItem</code> with <code>useCallback</code>; <code>getItemLayout</code>.</li>
+                    <li><strong>Image optimization</strong> — <code>expo-image</code> (caching alternative to <code>Image</code>); correct sizing; progressive loading.</li>
+                    <li><strong>Bundle size</strong> — Lazy loading screens in React Navigation; removing unused dependencies.</li>
+                    <li><strong>Hermes JavaScript engine</strong> — Default RN engine; startup time and memory improvements.</li>
+                    <li><strong>Avoiding the JS thread</strong> — Reanimated/Gesture Handler on UI thread; <code>InteractionManager.runAfterInteractions</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Performance bugs are common rejection reasons for real mobile apps. Performance optimization is frequent senior-level interview topic. This week builds habits/tools applied to every project including capstone.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Install profiling tools (Flipper, <code>why-did-you-render</code>); profile Week 13 app; identify 3 unnecessary re-renders.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Apply <code>React.memo</code> and <code>useCallback</code> to fix identified re-renders; measure improvement.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>FlatList performance — apply performance props to largest list; measure scroll smoothness.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Image optimization — switch to <code>expo-image</code>; add blur placeholder; correctly size images.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Bundle analysis + lazy loading screens in React Navigation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td><code>InteractionManager.runAfterInteractions</code> — defer heavy computation until after nav animation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + apply optimizations to 2 prior projects + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Audit 3 prior projects for unnecessary re-renders; fix with <code>React.memo</code>/<code>useCallback</code>.</li>
+                    <li>Optimize Week 8 job board FlatList to render 1000 items smoothly.</li>
+                    <li>Replace all <code>&lt;Image&gt;</code> components in prior projects with <code>expo-image</code>.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Performance Audit Report"</strong> — take Week 13 E-Commerce app, document 5 specific performance issues found via profiling, apply fixes, measure before/after with Perf Monitor screenshots, write README section explaining each issue and fix — pushed to GitHub alongside improved code.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Adding <code>React.memo</code>/<code>useMemo</code>/<code>useCallback</code> everywhere "just in case" (hurts performance).</li>
+                        <li>Optimizing before measuring — fixing things that aren't actual bottlenecks.</li>
+                        <li>Ignoring JS thread vs UI thread distinction when debugging animation jank.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Profile first, always. Never optimize without measuring the current problem.</li>
+                        <li>Apply <code>React.memo</code> + memoization only where profiling shows genuine re-render problem.</li>
+                        <li>Animation jank stops when Reanimated is used → JS thread problem; investigate.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>React Native performance docs (reactnative.dev/docs/performance)</li>
+                    <li>Flipper (flipperapp.dev)</li>
+                    <li><code>expo-image</code> documentation</li>
+                    <li><code>why-did-you-render</code> (GitHub)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36–40 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 16-->
+
+        <div class="rm-card" id="week16">
+            <div class="rm-card-header">
+                <h2>Week 16 — App Signing, Configuration &amp; Publishing to App Stores</h2>
+                <p>Understand the full app release process — code signing, build generation, and submitting a real app to the Google Play Store and Apple App Store.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>App fundamentals for publishing</strong> — Icons, splash screens, <code>app.json</code> config; app name, version, bundle ID (iOS) / package name (Android); deep links.</li>
+                    <li><strong>EAS Build (Expo)</strong> — <code>eas.json</code> profiles (development/preview/production); building APK/AAB Android, IPA iOS.</li>
+                    <li><strong>Code signing</strong> — Android keystore (never lose it!); iOS signing certificates and provisioning profiles.</li>
+                    <li><strong>Google Play Store submission</strong> — Developer account (one-time $25 USD fee — verify current); app listing; uploading AAB; releases.</li>
+                    <li><strong>Apple App Store submission</strong> — Apple Developer Program (~$99/year fee — verify current); App Store Connect; submitting for review.</li>
+                    <li><strong>OTA updates with EAS Update</strong> — Pushing JS-only updates without full app store review.</li>
+                </ol>
+
+                <div class="rm-info">
+                    <h3>💡 Important Cost Notes</h3>
+                    <ul>
+                        <li><strong>Google Play:</strong> ~$25 USD one-time developer fee (verify at play.google.com/console).</li>
+                        <li><strong>Apple Developer Program:</strong> ~$99 USD annual fee (verify at developer.apple.com).</li>
+                        <li>For a college project, building a test APK and sharing via internal testing (free) or EAS share link is a practical cost-free alternative.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Knowing how to build and ship an app is a critical real-world skill many bootcamp graduates lack. Even for a college project, understanding the publishing process and having an installable build as deliverable is a significant differentiator.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Configure app icons, splash, name, bundle ID in <code>app.json</code>; install <code>expo-app-loading</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>EAS CLI setup + <code>eas.json</code> config; build a development APK.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Build preview AAB for Android; install on real device via sideloading.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Android code signing — generate and store keystore; back it up.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Google Play internal testing track — upload AAB, share with test users.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Study App Store Connect + iOS submission; read App Store Review Guidelines.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>EAS Update — push OTA JS update to previously built app; review + commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build installable APK of Week 13 E-Commerce app.</li>
+                    <li>Share APK with classmate or on real device for testing feedback.</li>
+                    <li>Configure complete <code>app.json</code> for capstone app.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A full <strong>"Release Build Package"</strong> for a previous project — properly configured icon/splash, signed APK/AAB built via EAS Build, internal test track listing on Google Play (or EAS share link as alternative), "How to Install and Test This App" README — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Losing the Android keystore file — you can never update the app on Play Store again.</li>
+                        <li>Submitting to App Store without reading review guidelines, then being surprised by rejection.</li>
+                        <li>Not testing production build on real device before submission.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Treat Android keystore as critical — back it up securely in multiple locations.</li>
+                        <li>Read full App Store Review Guidelines at least once before first submission.</li>
+                        <li>Always build and test "preview"/"production" build on real device before submission.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>EAS Build official documentation (docs.expo.dev/build/introduction)</li>
+                    <li>EAS Update documentation</li>
+                    <li>Google Play Console Help Center</li>
+                    <li>Apple Developer Documentation — App Store Connect guide</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36–38 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 17-->
+
+        <div class="rm-card" id="week17">
+            <div class="rm-card-header">
+                <h2>Week 17 — Accessibility, Internationalisation &amp; App Store Optimization</h2>
+                <p>Build apps that are inclusive, multi-language ready, and discoverable — three real-world requirements beginners almost always skip.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Accessibility in RN</strong> — Why it matters (legal/ethical); <code>accessible</code>, <code>accessibilityLabel</code>, <code>accessibilityHint</code>, <code>accessibilityRole</code>; VoiceOver (iOS) / TalkBack (Android) testing; color contrast; font scaling.</li>
+                    <li><strong>Internationalization (i18n)</strong> — <code>i18next</code> + <code>react-i18next</code>; language detection, runtime switching; formatting dates/numbers/currencies per locale.</li>
+                    <li><strong>RTL support</strong> — <code>I18nManager.forceRTL</code> for Arabic/Hebrew layouts.</li>
+                    <li><strong>App Store Optimization (ASO)</strong> — Keyword strategy; screenshot design; ratings/reviews; A/B testing listings.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Accessibility is increasingly a legal requirement and apps stores favor accessible apps. i18n is required for global apps. ASO knowledge determines whether your published app gets found — technical perfection with bad ASO gets zero downloads.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Accessibility audit Week 13 app; add <code>accessibilityLabel</code>, <code>accessibilityRole</code>, <code>accessibilityHint</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Screen reader test — navigate app using TalkBack/VoiceOver; fix 3+ issues found.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>i18next</code> setup; externalize all text strings into language JSON files (English first).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Add second language (French/Spanish); implement language toggle in settings.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Date/number/currency locale formatting; RTL layout support.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>ASO — research keywords, write App Store description, plan 5 effective screenshots.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Audit accessibility of 2 prior projects; fix all issues found.</li>
+                    <li>Add 2-language support to Week 10 Habit Tracker.</li>
+                    <li>Write full App Store listing for capstone app idea.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>An <strong>"Accessibility &amp; i18n Audit"</strong> — take Week 13 E-Commerce app and add: full accessibility annotations on all interactive elements, verified screen reader compatibility, English + Spanish support via <code>i18next</code>, App Store listing document — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Adding <code>accessible={true}</code> to every element (non-interactive containers make screen readers worse).</li>
+                        <li>Hard-coding text strings, making i18n massive refactor later.</li>
+                        <li>Writing App Store description describing features instead of user benefits.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Only mark interactive elements (buttons, links, inputs) as <code>accessible</code>.</li>
+                        <li>From Week 18 onward (capstone): start with all text in i18n files — never hard-code user-facing strings.</li>
+                        <li>App Store copy: lead with "what the user achieves," not "this app has X feature."</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>React Native Accessibility documentation (reactnative.dev/docs/accessibility)</li>
+                    <li><code>react-i18next</code> documentation (react.i18next.com)</li>
+                    <li>Google Play's App Store Optimization guide (Play Console help)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35–38 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 18 -->
+
+        <div class="rm-card" id="week18">
+            <div class="rm-card-header">
+                <h2>Week 18 — Backend Integration with Firebase</h2>
+                <p>Connect a real Firebase backend to a React Native app — authentication, real-time database, and file storage.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Firebase project setup</strong> — Creating project in console; Firebase JS SDK (Expo managed workflow) vs <code>@react-native-firebase</code> (bare); connecting the app.</li>
+                    <li><strong>Firebase Authentication</strong> — Email/password signup and signin; Google Sign-In; <code>onAuthStateChanged</code> listener; sign out.</li>
+                    <li><strong>Cloud Firestore</strong> — Document/collection model; reads (<code>getDocs</code>, <code>getDoc</code>); writes (<code>setDoc</code>, <code>addDoc</code>); updates/deletes; real-time <code>onSnapshot</code>; querying with <code>where</code>, <code>orderBy</code>, <code>limit</code>.</li>
+                    <li><strong>Firebase Storage</strong> — Uploading files (images from camera/gallery); download URLs; displaying images.</li>
+                    <li><strong>Firebase Security Rules</strong> — Basic Firestore rules — allow only authenticated users to read/write their own data; never deploy with "open" rules.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Firebase provides auth, real-time database, and file storage in one platform — turning a local app into a real multi-user cloud-connected application. Firebase is widely used in startups and a frequent interview topic. Combining it with Phases 1–4 makes the capstone genuinely impressive.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Firebase setup — project, <code>google-services.json</code>/<code>GoogleService-Info.plist</code>, JS SDK install.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Firebase Auth — signup/signin screens; <code>onAuthStateChanged</code> integration with <code>AuthContext</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Firestore — write and read a user profile document on signup.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Firestore collections — read list of documents; add/update/delete documents.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Real-time <code>onSnapshot</code> — build live chat or live task list that updates without refresh.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Firebase Storage — upload profile photo; display from download URL.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Security rules + review + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build complete auth flow (signup, login, persist, logout) with Firebase Auth + <code>AuthContext</code>.</li>
+                    <li>Build "personal notes" collection in Firestore tied to authenticated user's UID.</li>
+                    <li>Upload profile image to Firebase Storage and display on profile screen.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A <strong>"Real-Time Shared To-Do List"</strong> — users signup/login with Firebase Auth, add/complete/delete tasks stored in Firestore, all tasks update real-time across devices via <code>onSnapshot</code>, each user can attach photo to task (Firebase Storage), only authenticated users can access data (security rules in place) — pushed to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Leaving Firebase security rules as <code>allow read, write: if true</code> in a deployed app — anyone can read/delete your database.</li>
+                        <li>Not handling Firebase Auth loading state — visible screen flash before <code>onAuthStateChanged</code> resolves.</li>
+                        <li>Calling Firestore operations without authenticated user (permission-denied errors).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Before deploying: set Firestore rules to <code>allow read, write: if request.auth != null &amp;&amp; request.auth.uid == resource.data.userId</code> as minimum.</li>
+                        <li>Add loading state while <code>onAuthStateChanged</code> resolves (show splash, not nav choice).</li>
+                        <li>Always check <code>auth.currentUser</code> before any Firestore operation.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Firebase official documentation (firebase.google.com/docs) — JavaScript SDK</li>
+                    <li>Firebase Emulator Suite documentation (run locally, free)</li>
+                    <li>Fireship.io — free YouTube Firebase tutorials</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–44 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 19-->
+
+        <div class="rm-card" id="week19">
+            <div class="rm-card-header">
+                <h2>Week 19 — Capstone App Build: "TaskMate"</h2>
+                <p>Build the complete capstone — a full-featured, cloud-connected cross-platform productivity app — combining all skills from Weeks 1–18.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics Revisited &amp; Combined</h3>
+                <ul>
+                    <li>Navigation (nested tabs + stack)</li>
+                    <li>Firebase Auth + Firestore + Storage</li>
+                    <li>Redux Toolkit (or Zustand) for global state</li>
+                    <li>React Query for non-Firebase API calls</li>
+                    <li>Animations (Reanimated)</li>
+                    <li>Camera + image picker</li>
+                    <li>Push notifications</li>
+                    <li>FlatList with pagination</li>
+                    <li>TypeScript throughout</li>
+                    <li>Accessibility and i18n (two languages)</li>
+                    <li>EAS Build (generating a real installable APK)</li>
+                    <li>Unit + component tests</li>
+                </ul>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The capstone is the tangible output of 18 weeks of learning — the portfolio piece, the talking point in interviews, and the demonstration of end-to-end mobile development competence.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Auth screens (signup, login, password reset) + <code>AuthContext</code> + navigation root.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Main tab structure + Task list screen (Firestore <code>onSnapshot</code> real-time).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Add/Edit task screens (form with react-hook-form + zod + Firebase write).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Task detail screen + push notification reminder + camera attachment.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>RTK for local filter/sort state + React Query for any external API integration.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Animations (transitions, swipe-to-complete, animated checkmark), accessibility, i18n.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Tests (auth flow, task CRUD), review, final commit, build signed APK.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-info">
+                    <p>📌 <strong>Full Capstone Description:</strong> See the dedicated Capstone section below for the complete specification, features list, tech stack, and deliverables.</p>
+                </div>
+
+                <p><strong>Estimated Study Hours:</strong> 45–50 hours (the heaviest build week)</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 20-->
+
+        <div class="rm-card" id="week20">
+            <div class="rm-card-header">
+                <h2>Week 20 — Polish, Portfolio, Documentation &amp; Interview/Viva Prep</h2>
+                <p>Bring the capstone to a professional, presentation-ready standard; assemble a complete portfolio; and prepare thoroughly for interviews and college viva.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics</h3>
+                <ol>
+                    <li><strong>Capstone polish</strong> — Edge case handling, loading states everywhere, empty states, error boundaries.</li>
+                    <li><strong>Documentation</strong> — GitHub README with screenshots, feature list, architecture overview, setup instructions, live APK download link.</li>
+                    <li><strong>Portfolio assembly</strong> — Portfolio GitHub profile README listing all 14+ projects with descriptions and links.</li>
+                    <li><strong>Video demo</strong> — Record 2–3 minute screen recording of capstone in action.</li>
+                    <li><strong>Interview/viva prep</strong> — Concept review across all 20 weeks; practice explaining your project in under 3 minutes.</li>
+                    <li><strong>App Store listing draft</strong> — Prepare full App Store/Play Store listing for capstone (even if not submitted).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Polish, portfolio, and prep are what convert 19 weeks of building into actual job/internship/viva success. The technical skill is in place; this week makes sure it's visible and presentable.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Capstone polish — fix edge cases, add loading states to every async operation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Full README — screenshots, architecture diagram (Excalidraw), setup steps, APK download.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Portfolio GitHub profile README — list all projects with 1-line descriptions and links.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Record 2–3 minute app demo video (screen recording + voiceover or subtitles).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Interview prep — review question bank; write short answers to all 30 questions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Viva practice — explain capstone in under 5 minutes, then under 2 minutes; practice both.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Final commits, final APK build, share with classmates for real testing, reflection + rest.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Walk through every feature on capstone checklist and mark complete or note missing.</li>
+                    <li>Do full demo run-through, timing yourself.</li>
+                    <li>Answer at least 15 of the interview/viva questions out loud, unscripted.</li>
+                </ul>
+
+                <div class="rm-tip">
+                    <h3>Key Tips for This Week</h3>
+                    <ul>
+                        <li>Test the live deployed APK on a real device, not just locally — this catches last-minute bugs.</li>
+                        <li>Get one friend/classmate to install and use your app — fresh-eyes feedback is invaluable.</li>
+                        <li>Practice the viva pitch until it feels natural, not memorized.</li>
+                    </ul>
+                </div>
+
+                <p><strong>Estimated Study Hours:</strong> 35–38 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-card" id="capstone">
+            <div class="rm-card-header">
+                <h2>🏆 Final Capstone Project</h2>
+                <p>The complete cross-platform productivity app that ties together every concept from all 20 weeks.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <div class="rm-project">
+                    <h4>📱 TaskMate — Cross-Platform Productivity App</h4>
+                    <p>TaskMate is a full-featured, cloud-synced task and productivity manager for iOS and Android — the kind of app you'd find on the App Store as a real product. Built incrementally across Phases 1–5 and finalized in Weeks 19–20.</p>
+
+                    <h4>Authentication &amp; User Profiles</h4>
+                    <ul>
+                        <li>Email/password signup and login (Firebase Auth).</li>
+                        <li>Google Sign-In option.</li>
+                        <li>Profile screen with editable name and avatar (camera/gallery → Firebase Storage).</li>
+                    </ul>
+
+                    <h4>Task Management (Core)</h4>
+                    <ul>
+                        <li>Create tasks with: title, description, due date/time, priority (high/medium/low), category (work/personal/health), optional photo attachment.</li>
+                        <li>Mark tasks as complete (animated checkmark — Reanimated).</li>
+                        <li>Swipe to delete (Gesture Handler).</li>
+                        <li>Filter by status, priority, category, due date.</li>
+                        <li>Sort by due date, priority, creation date.</li>
+                        <li>All tasks synced to Firestore, updating real-time across devices.</li>
+                    </ul>
+
+                    <h4>Reminders</h4>
+                    <ul>
+                        <li>Set push notification reminder for any task's due date/time.</li>
+                    </ul>
+
+                    <h4>Offline Support</h4>
+                    <ul>
+                        <li>Firestore's built-in offline persistence — tasks accessible without internet.</li>
+                    </ul>
+
+                    <h4>UI &amp; UX</h4>
+                    <ul>
+                        <li>Light/dark mode (ThemeContext).</li>
+                        <li>Animated screen transitions (Reanimated).</li>
+                        <li>Skeleton loading placeholders.</li>
+                        <li>Full accessibility annotations.</li>
+                        <li>English and Spanish language support (i18next).</li>
+                    </ul>
+
+                    <h4>Technical Architecture</h4>
+                    <p><strong>Navigation:</strong> nested Bottom Tabs (Tasks, Calendar, Profile) + Stack navigators per tab.</p>
+                    <p><strong>Global state:</strong> Redux Toolkit for filter/sort preferences; Zustand for theme state (demonstrating both).</p>
+                    <p><strong>Firebase:</strong> Auth + Firestore + Storage.</p>
+                    <p><strong>TypeScript throughout</strong> — no <code>any</code>.</p>
+                    <p><strong>Test suite:</strong> unit tests for reducers + RNTL component tests for task list and add-task form.</p>
+
+                    <h4>Tech Stack Summary</h4>
+                    <p>React Native + TypeScript · Expo · React Navigation · Redux Toolkit + Zustand · React Query · Firebase (Auth + Firestore + Storage) · React Native Reanimated · React Native Gesture Handler · <code>react-hook-form</code> + Zod · <code>i18next</code> · Jest + React Native Testing Library · EAS Build</p>
+
+                    <h4>Deliverables</h4>
+                    <ul>
+                        <li>iOS &amp; Android compatible (Expo managed workflow)</li>
+                        <li>Signed APK available via EAS Build (or Expo share link)</li>
+                        <li>Complete GitHub repository with README (screenshots, feature list, architecture overview, setup instructions)</li>
+                        <li>2–3 minute screen recording demo video</li>
+                        <li>Full App Store + Play Store listing document (portfolio artifact)</li>
+                    </ul>
+                </div>
+
+                <div class="rm-highlight">
+                    <p><strong>Important:</strong> The capstone is <em>not</em> built only in Week 19 — it is the consolidation of skills built throughout Weeks 1–18. Week 19 is the focused build week; Week 20 is polish, documentation, and presentation prep.</p>
+                </div>
+
+                <h3>Total Roadmap At a Glance</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Weeks</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Foundations</strong></td>
+                            <td>1–3</td>
+                            <td>JavaScript ES6+, TypeScript, mobile app concepts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. React &amp; RN Core</strong></td>
+                            <td>4–7</td>
+                            <td>React, RN components, navigation, state/hooks</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Intermediate</strong></td>
+                            <td>8–12</td>
+                            <td>Lists/forms, APIs, persistence, animations, device hardware</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4. Advanced</strong></td>
+                            <td>13–17</td>
+                            <td>Redux/Zustand, testing, performance, publishing, accessibility</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5. Capstone</strong></td>
+                            <td>18–20</td>
+                            <td>Firebase, full capstone build, portfolio, interview prep</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Total estimated study hours:</strong> ~770–820 hours over 20 weeks (~38–41 hrs/week average)</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+                <div class="logo1">
+                    <h3>CodePath</h3>
+                    <p>Learn. Practice. Master</p>
+                </div>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+
+</body>
+</html>

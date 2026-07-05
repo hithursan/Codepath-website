@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: Beginner to Master — 14 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>CSS: Beginner to Master</h1>
+        <p>Complete 14-Week Curriculum — From Selectors & Box Model to Architecture, Animations & Production Component Libraries</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>14-week, phase-based CSS curriculum</strong> designed to take a complete beginner to a professional-level CSS developer. The roadmap moves from <strong>syntax, selectors, the cascade, and the box model</strong> through <strong>Flexbox, Grid, responsive design, and typography</strong>, into <strong>animations, transforms, Sass/SCSS, and CSS frameworks</strong>, all the way to <strong>CSS architecture, performance, accessibility, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics including syntax and core visual properties, <strong>Phase 2</strong> covers layout systems and responsive design, <strong>Phase 3</strong> covers intermediate and advanced topics like animations, preprocessors, and component systems, and <strong>Phase 4</strong> covers master-level architecture, performance, accessibility, and creative techniques.</p>
+            <p>By Week 14, you will have built three complete, portfolio-ready projects and be confident architecting scalable, accessible, and performant CSS for any size application.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 14 weeks &nbsp;|&nbsp; <strong>Stack:</strong> CSS3, Sass/SCSS, Tailwind CSS &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic HTML knowledge</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–3:</strong> Fundamentals, syntax, and core visual properties.</p>
+        </div>
+
+        <!--  WEEK 1  -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Introduction to CSS &amp; Core Syntax</h2>
+                <p>Understand what CSS is, how it connects to HTML, and write your very first style rules.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding what CSS is, how it connects to HTML, and writing your very first style rules.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What is CSS &amp; How It Works</strong> — CSS (Cascading Style Sheets) is the language used to describe the visual presentation of HTML documents. It separates content (HTML) from design, making web pages easier to maintain and style consistently.</li>
+                    <li><strong>CSS Syntax: Rules, Properties &amp; Values</strong> — A CSS rule consists of a selector (what to style) and a declaration block (how to style it). Each declaration is a property-value pair separated by a colon and ended with a semicolon.</li>
+                    <li><strong>Three Ways to Add CSS (Inline, Internal, External)</strong> — CSS can be written directly on an element (inline), inside a <code>&lt;style&gt;</code> tag (internal), or in a separate <code>.css</code> file (external). External stylesheets are the professional standard because they keep concerns separated.</li>
+                    <li><strong>CSS Colors (Named, Hex, RGB, HSL)</strong> — CSS supports multiple color formats: named colors (<code>red</code>), hex codes (<code>#ff0000</code>), RGB (<code>rgb(255,0,0)</code>), and HSL (<code>hsl(0,100%,50%)</code>). All four can represent the same color — choose the format that fits your workflow.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> CSS is how every website gets its visual identity. Understanding the selector-declaration pattern and the three ways to apply CSS from Day 1 prevents the most common beginner mistake — mixing concerns between HTML structure and visual presentation.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>/* CSS is linked to HTML via a link tag in the head */
+/* This rule makes ALL paragraph text blue and 18px large */
+p {
+  color: blue;         /* text color */
+  font-size: 18px;     /* text size in pixels */
+}
+
+/* selector { property: value; } — the core pattern of CSS */
+h1 {
+  color: #333333;      /* dark gray text */
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Four ways to write the same red color */
+.box-named  { color: red; }
+.box-hex    { color: #ff0000; }
+.box-rgb    { color: rgb(255, 0, 0); }
+.box-hsl    { color: hsl(0, 100%, 50%); }</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create an <code>index.html</code> file linked to an external <code>styles.css</code>. Style the page title (<code>h1</code>), a paragraph (<code>p</code>), and the body background using at least <strong>three different color formats</strong>. Add comments to every rule explaining what it does.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--   WEEK 2 -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Selectors &amp; The Cascade</h2>
+                <p>Learn how CSS selectors target elements and understand specificity and cascade rules.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Learning how CSS selectors target elements and understanding specificity and cascade rules.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Basic Selectors (Element, Class, ID)</strong> — Element selectors target all tags of that type; class selectors (<code>.classname</code>) target reusable groups; ID selectors (<code>#idname</code>) target a single unique element. Classes are preferred in professional development for their reusability.</li>
+                    <li><strong>Combinator Selectors (Descendant, Child, Sibling)</strong> — Combinator selectors let you target elements based on their relationship in the HTML tree. Descendant (space), direct child (<code>&gt;</code>), adjacent sibling (<code>+</code>), and general sibling (<code>~</code>) give you precise control.</li>
+                    <li><strong>Pseudo-Classes &amp; Pseudo-Elements</strong> — Pseudo-classes (<code>:hover</code>, <code>:focus</code>, <code>:nth-child</code>) style elements based on state or position. Pseudo-elements (<code>::before</code>, <code>::after</code>, <code>::first-line</code>) style specific parts of an element's content.</li>
+                    <li><strong>Specificity &amp; The Cascade</strong> — When multiple rules target the same element, the cascade resolves conflicts using specificity scores: IDs (100) &gt; classes (10) &gt; elements (1). The <code>!important</code> flag overrides all — use it sparingly.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Specificity wars are the most common source of CSS frustration — rules that "don't work" almost always lose to a more specific rule. Understanding the cascade calculation makes you able to predict exactly which rule wins without trial and error.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>p      { color: gray; }          /* element — all p tags */
+.intro { color: navy; }          /* class — any element with class="intro" */
+#hero  { font-size: 48px; }      /* ID — the single element with id="hero" */
+
+nav a        { color: white; }        /* descendant: a inside nav */
+ul > li      { list-style: none; }    /* child: direct li of ul */
+h2 + p       { color: gray; }         /* adjacent sibling: first p after h2 */
+
+a:hover          { color: orange; }        /* style link on mouse hover */
+input:focus      { border-color: blue; }   /* style focused form field */
+p::first-line    { font-weight: bold; }    /* bold only the first line */
+
+p            { color: gray; }    /* specificity: 001 */
+.intro       { color: navy; }    /* specificity: 010 — wins over p */
+#hero        { color: black; }   /* specificity: 100 — wins over .intro */</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>navigation bar</strong> in HTML. Use descendant, child, and pseudo-class selectors to style links, hover states, and active states. Test specificity conflicts by overriding element styles with classes and IDs.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--   WEEK 3    -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — The Box Model &amp; Display</h2>
+                <p>Understand how every HTML element is a box and how spacing, borders, and sizing work.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding how every HTML element is a box and how spacing, borders, and sizing work.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>The Box Model (Content, Padding, Border, Margin)</strong> — Every HTML element is rendered as a rectangular box with four layers: content, padding (inner space), border, and margin (outer space). Mastering the box model is essential for controlling layout and spacing.</li>
+                    <li><strong><code>box-sizing: border-box</code></strong> — By default (<code>content-box</code>), padding and border are added on top of the declared width. Setting <code>box-sizing: border-box</code> makes the declared width include padding and border — far more intuitive for layout.</li>
+                    <li><strong>Display Property (block, inline, inline-block, none)</strong> — The <code>display</code> property controls how an element participates in layout. Block elements stack vertically; inline elements flow horizontally; <code>inline-block</code> allows width/height on inline elements; <code>none</code> hides the element.</li>
+                    <li><strong>Width, Height, Overflow &amp; Units (px, %, em, rem)</strong> — CSS offers multiple units: <code>px</code> (fixed), <code>%</code> (relative to parent), <code>em</code> (relative to parent font-size), and <code>rem</code> (relative to root font-size). Choosing the right unit makes designs flexible and accessible.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The box model is the single most fundamental concept in CSS layout. Every layout problem — unwanted gaps, elements overflowing, sizes not matching expectations — traces back to a misunderstanding of how content, padding, border, and margin interact. <code>border-box</code> is the first line of every professional stylesheet.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>/* Apply border-box sizing globally — industry standard reset */
+*, *::before, *::after {
+  box-sizing: border-box; /* width now includes padding + border */
+}
+
+.card {
+  width: 300px;            /* content width */
+  padding: 20px;           /* inner spacing around content */
+  border: 2px solid #ccc;  /* visible border around padding */
+  margin: 16px;            /* outer spacing from other elements */
+}
+
+span   { display: inline-block; width: 100px; } /* inline but accepts dimensions */
+div    { display: block; }                        /* takes full row */
+.hide  { display: none; }                         /* hidden from page and layout */
+
+.container {
+  width: 90%;              /* 90% of parent width */
+  max-width: 1200px;       /* never wider than 1200px */
+  font-size: 1rem;         /* relative to root (default 16px) */
+  overflow: hidden;        /* clip content that exceeds bounds */
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a <strong>profile card</strong> component using the full box model. Set explicit widths, paddings, borders, and margins. Switch between <code>content-box</code> and <code>border-box</code> and observe how total size changes. Use <code>rem</code> for all typography sizing.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Layout</h2>
+            <p><strong>Weeks 4–6:</strong> Flexbox, Grid, responsive design, and visual styling.</p>
+        </div>
+
+
+        <!-- WEEK 4    -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Typography &amp; Visual Styling</h2>
+                <p>Master font, text, and background properties to produce professional-looking designs.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering font, text, and background properties to produce professional-looking designs.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Web Fonts &amp; <code>font-family</code></strong> — The <code>font-family</code> property sets the typeface. Always provide a font stack (preferred → fallback → generic) so the browser has options if a font isn't available. Google Fonts can be imported via a <code>&lt;link&gt;</code> tag.</li>
+                    <li><strong>Text Properties (size, weight, line-height, letter-spacing)</strong> — Fine-tuning typography makes content more readable and visually balanced. <code>line-height</code> controls vertical space between lines; <code>letter-spacing</code> adjusts horizontal character spacing — both are critical for readability.</li>
+                    <li><strong>Background Properties (color, image, gradient, size, position)</strong> — CSS backgrounds support solid colors, image URLs, and generated gradients. Control placement with <code>background-position</code>, scale with <code>background-size: cover</code>, and layer multiple backgrounds using comma syntax.</li>
+                    <li><strong>CSS Custom Properties (Variables)</strong> — CSS variables (declared with <code>--</code>) let you define reusable values in one place and reference them anywhere with <code>var()</code>. Changing the variable updates every usage — ideal for theming and design tokens.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> CSS custom properties are the foundation of every modern design system. Defining all colors, spacing, and font sizes as variables at the root level means you can retheme an entire application by changing a handful of values — the pattern used by every major design system including Material and Carbon.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+p {
+  font-size: 1rem;         /* base size */
+  font-weight: 400;        /* normal weight */
+  line-height: 1.6;        /* 1.6x the font-size — ideal for body text */
+  letter-spacing: 0.02em;  /* subtle character spacing */
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  background-size: cover;
+  background-position: center;
+}
+
+:root {
+  --color-primary: #4f46e5;
+  --font-size-base: 1rem;
+}
+h1 { color: var(--color-primary); font-size: calc(var(--font-size-base) * 2); }</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Design a styled <strong>blog article page</strong>. Import a Google Font, apply a full typographic scale (<code>h1</code>–<code>h6</code>, <code>p</code>), add a hero section with a CSS gradient background, and define all colors and font sizes as <strong>CSS custom properties</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 5  -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Flexbox Layout</h2>
+                <p>Master Flexbox — the most important one-dimensional layout system in modern CSS.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering Flexbox — the most important one-dimensional layout system in modern CSS.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Flex Container Properties (<code>display:flex</code>, <code>flex-direction</code>, <code>flex-wrap</code>)</strong> — Setting <code>display: flex</code> on a parent activates Flexbox for its direct children. <code>flex-direction</code> sets the main axis (row or column); <code>flex-wrap</code> allows children to wrap to the next line instead of overflowing.</li>
+                    <li><strong>Alignment (<code>justify-content</code>, <code>align-items</code>, <code>align-content</code>)</strong> — <code>justify-content</code> distributes children along the main axis; <code>align-items</code> aligns them on the cross axis. Together, they enable centering — one of the most common CSS tasks — in just two lines.</li>
+                    <li><strong>Flex Item Properties (<code>flex-grow</code>, <code>flex-shrink</code>, <code>flex-basis</code>)</strong> — These three properties control how individual flex children grow or shrink relative to available space. The shorthand <code>flex: 1</code> means grow equally, shrink equally, and start at <code>0</code> basis — perfect for equal columns.</li>
+                    <li><strong>Flexbox Patterns (Navbar, Card Row, Holy Grail)</strong> — Flexbox excels at common UI patterns: navbars, card rows, and the classic "holy grail" layout. Understanding these patterns gives you reusable mental templates for virtually any one-dimensional layout challenge.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Flexbox replaced floats and replaced table-based layouts entirely. It is the go-to tool for navbars, card rows, and any linear arrangement. The two-line centering trick (<code>justify-content: center</code> + <code>align-items: center</code>) alone will save you hours of frustration that plagued web developers before 2015.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>.navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar { flex: 0 0 280px; }  /* fixed 280px, never grow or shrink */
+.main    { flex: 1; }          /* take all remaining space */
+.aside   { flex: 0 0 200px; }  /* fixed 200px right column */
+
+/* Perfect vertical + horizontal centering */
+.modal-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>responsive navigation bar</strong> using Flexbox (logo left, links right). Then create a row of three feature cards that stack on mobile using <code>flex-wrap</code>. Finally, center a <strong>modal dialog</strong> perfectly on screen using Flexbox.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--   WEEK 6   -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — CSS Grid &amp; Responsive Design</h2>
+                <p>Master CSS Grid for two-dimensional layouts and learn responsive design with media queries.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering CSS Grid for two-dimensional layouts and learning responsive design with media queries.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Grid Container Basics (<code>grid-template-columns</code>, rows, gap)</strong> — CSS Grid defines a two-dimensional layout using rows and columns. <code>grid-template-columns</code> sets column sizes; <code>gap</code> adds gutters between cells. The <code>fr</code> unit distributes space fractionally.</li>
+                    <li><strong>Grid Placement (<code>grid-column</code>, <code>grid-row</code>, <code>grid-area</code>)</strong> — Items can span multiple columns or rows using <code>grid-column: 1 / 3</code>. Named areas via <code>grid-template-areas</code> provide a visual map of your layout structure directly in CSS.</li>
+                    <li><strong>Responsive Design &amp; Media Queries</strong> — Media queries apply styles only when certain conditions are met — most commonly viewport width. Use a mobile-first approach: write base styles for small screens, then add <code>min-width</code> breakpoints for larger screens.</li>
+                    <li><strong><code>auto-fill</code>, <code>auto-fit</code> &amp; <code>minmax()</code></strong> — <code>auto-fill</code> and <code>auto-fit</code> with <code>minmax()</code> create self-adapting grid columns without any media queries. Items automatically reflow based on available space — perfect for image galleries and card grids.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> CSS Grid is the most powerful layout system ever added to CSS. The <code>repeat(auto-fit, minmax(280px, 1fr))</code> pattern creates a fully responsive card grid with zero media queries — a single line of CSS that would have required dozens of lines and JavaScript in the past.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>.layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* three columns: 25% / 50% / 25% */
+  gap: 24px;
+}
+
+.header  { grid-column: 1 / -1; }  /* span ALL columns */
+.sidebar { grid-column: 1 / 2; }
+.main    { grid-column: 2 / 4; }
+.footer  { grid-column: 1 / -1; }
+
+/* Mobile first responsive */
+.card-grid { grid-template-columns: 1fr; }
+@media (min-width: 768px)  { .card-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .card-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* Responsive without media queries */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>full-page portfolio layout</strong> using CSS Grid: a fixed header, sidebar navigation, main content area, and footer. Make it fully responsive using media queries and a mobile-first strategy. Add a responsive image gallery using <code>auto-fit</code> + <code>minmax</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 7–10:</strong> Animations, preprocessors, frameworks, and component systems.</p>
+        </div>
+
+        <!--  WEEK 7   -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Transforms, Transitions &amp; Animations</h2>
+                <p>Bring your UI to life with smooth CSS transforms, transitions, and keyframe animations.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Bringing your UI to life with smooth CSS transforms, transitions, and keyframe animations.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>CSS Transforms (translate, scale, rotate, skew)</strong> — The <code>transform</code> property moves, scales, rotates, or skews elements without affecting page flow. Transforms are GPU-accelerated and do not trigger layout reflow — making them the go-to for performant visual effects.</li>
+                    <li><strong>CSS Transitions</strong> — Transitions animate property changes smoothly over a specified duration. Define what to transition, how long it takes, and the easing function. Use <code>transition: all</code> sparingly — it's better to specify individual properties.</li>
+                    <li><strong>CSS Keyframe Animations (<code>@keyframes</code>)</strong> — <code>@keyframes</code> defines multi-step animations. Assign them with <code>animation-name</code>, <code>animation-duration</code>, and <code>animation-iteration-count</code>. Combine with <code>animation-fill-mode: forwards</code> to keep the final state.</li>
+                    <li><strong>Performance: <code>will-change</code> &amp; Animation Best Practices</strong> — Only animate <code>transform</code> and <code>opacity</code> for smooth 60fps performance — they don't trigger layout or paint. Use <code>will-change: transform</code> to hint the browser to pre-optimize, but use it sparingly to avoid memory overhead.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The difference between a hobbyist and a professional CSS developer is understanding which properties are safe to animate. Animating <code>width</code>, <code>height</code>, or <code>top</code> causes layout reflow on every frame — your animation drops to single-digit fps. Animating only <code>transform</code> and <code>opacity</code> keeps it at a silky 60fps.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>.card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.button {
+  background-color: #4f46e5;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.button:hover { background-color: #4338ca; transform: scale(1.05); }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-text { animation: fadeInUp 0.6s ease-out forwards; }
+
+.animated-element {
+  will-change: transform, opacity;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create an <strong>interactive product card</strong>: on hover, it lifts with <code>translateY</code>, scales up, and its image zooms. Add a "fade in up" entrance animation triggered by a CSS class toggle. Build a <strong>loading spinner</strong> using <code>@keyframes</code> with infinite rotation.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--   WEEK 8   -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Pseudo-Elements, Clipping &amp; Advanced Selectors</h2>
+                <p>Use advanced CSS techniques to craft complex visual effects without extra HTML.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Using advanced CSS techniques to craft complex visual effects without extra HTML.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Advanced Pseudo-Elements (<code>::before</code>, <code>::after</code>)</strong> — <code>::before</code> and <code>::after</code> insert generated content before/after an element's content. They require <code>content: ""</code> to render and are treated as inline children — useful for decorative elements, badges, and tooltips.</li>
+                    <li><strong><code>clip-path</code> &amp; Shape Clipping</strong> — <code>clip-path</code> clips an element to a geometric shape, revealing only the clipped area. Combine with <code>transition</code> for animated shape reveals. Tools like Clippy help generate polygon values visually.</li>
+                    <li><strong>CSS Counters</strong> — CSS counters allow automatic numbering without JavaScript. Define a counter with <code>counter-reset</code>, increment it with <code>counter-increment</code>, and display it using <code>content: counter()</code> in a pseudo-element.</li>
+                    <li><strong><code>:is()</code>, <code>:where()</code>, <code>:has()</code> — Modern Selectors</strong> — <code>:is()</code> and <code>:where()</code> simplify complex selector lists. <code>:has()</code> — a "parent selector" — lets you style a parent based on its children's state, enabling patterns previously only possible with JavaScript.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>:has()</code> is arguably the most powerful selector ever added to CSS. Being able to style a parent based on what it contains — without JavaScript — unlocks an entirely new class of CSS-only UI patterns. <code>::before</code> and <code>::after</code> effectively give every element two free extra child elements for decoration.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #4f46e5;
+  margin-top: 8px;
+}
+
+.hero-image {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  transition: clip-path 0.4s ease;
+}
+
+ol.steps { counter-reset: step-counter; }
+ol.steps li { counter-increment: step-counter; }
+ol.steps li::before {
+  content: "Step " counter(step-counter);
+  font-weight: bold;
+}
+
+/* :is() — simplify repeated selectors */
+:is(h1, h2, h3) { font-family: 'Georgia', serif; }
+
+/* :has() — style a card differently if it contains an image */
+.card:has(img)  { padding: 0; overflow: hidden; }</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a styled <strong>numbered steps component</strong> using CSS counters and <code>::before</code>. Create a <strong>"ribbon" badge</strong> on a card using <code>::before</code> and <code>::after</code> absolutely positioned. Apply <code>clip-path</code> to a hero section image for a <strong>diagonal crop effect</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 9 -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Sass/SCSS Preprocessor</h2>
+                <p>Write more maintainable, modular, and powerful CSS with variables, nesting, and mixins.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Learning Sass to write more maintainable, modular, and powerful CSS with variables, nesting, and mixins.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Sass Variables &amp; Nesting</strong> — Sass variables (prefixed with <code>$</code>) store reusable values. Nesting mirrors HTML structure in your styles, reducing repetition — but avoid nesting more than 3 levels deep to keep specificity manageable.</li>
+                    <li><strong>Sass Mixins &amp; <code>@include</code></strong> — Mixins are reusable blocks of CSS declarations, optionally accepting arguments. Use <code>@mixin</code> to define and <code>@include</code> to use. They're ideal for vendor-prefixed properties, media query shortcuts, or component patterns.</li>
+                    <li><strong>Sass <code>@extend</code> &amp; Placeholder Selectors</strong> — <code>@extend</code> lets one selector inherit styles from another. <code>%placeholder</code> selectors define extendable rules without outputting CSS on their own — useful for base patterns shared across multiple components.</li>
+                    <li><strong>Sass Partials, <code>@use</code> &amp; File Architecture (7-1 Pattern)</strong> — Split SCSS into partials (files prefixed with <code>_</code>) and import them with <code>@use</code>. The 7-1 pattern organizes partials into seven folders (abstracts, base, components, layout, pages, themes, vendors) and one main file.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Even though native CSS now has variables and nesting, Sass remains the industry standard for large codebases. The 7-1 architecture pattern is used in production at companies worldwide. Understanding Sass mixins and the <code>@use</code> module system makes working on any professional CSS codebase immediately approachable.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>/* SCSS syntax — compiled to standard CSS */
+$color-primary: #4f46e5;
+$spacing-lg: 2rem;
+
+.navbar {
+  background: $color-primary;
+  a { color: white; &:hover { opacity: 0.8; } }
+}
+
+@mixin flex-center($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+.hero { @include flex-center(column); }
+
+%button-base {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-primary { @extend %button-base; background: #4f46e5; }
+
+/* main.scss — imports all partials */
+@use 'abstracts/variables';
+@use 'base/reset';
+@use 'components/button';
+@use 'layout/grid';</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Refactor a plain CSS project into SCSS using the <strong>7-1 pattern</strong>. Create mixins for <code>flex-center</code>, responsive breakpoints, and a button generator. Define all design tokens as Sass variables and <strong>replace all magic numbers</strong> in your CSS.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 10   -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — CSS Frameworks &amp; Component Systems</h2>
+                <p>Learn to use Tailwind CSS and understand utility-first design, then explore building a component design system.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Learning to use Tailwind CSS and understanding utility-first design, then exploring building a component design system.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Utility-First CSS with Tailwind CSS</strong> — Tailwind provides low-level utility classes (<code>flex</code>, <code>pt-4</code>, <code>text-center</code>) that compose directly in HTML. This removes the need to write custom CSS for most styling tasks and eliminates the cognitive overhead of naming classes.</li>
+                    <li><strong>Tailwind Configuration &amp; Custom Design Tokens</strong> — Tailwind's <code>tailwind.config.js</code> lets you extend or replace the default design system with your brand tokens. Custom colors, fonts, spacing, and breakpoints integrate seamlessly with all utility classes.</li>
+                    <li><strong>CSS Modules &amp; Scoped Styles</strong> — CSS Modules scope class names locally to the component file, preventing global style collisions. They're native to React, Vue, and Next.js. Class names are transformed into unique hashes at build time.</li>
+                    <li><strong>Building a Component Design System</strong> — A design system defines reusable components (buttons, cards, inputs) built on shared design tokens. It ensures visual consistency across a product and is the standard at companies like Google (Material), IBM (Carbon), and Airbnb.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Tailwind CSS is now the most popular CSS framework in the world, used by companies from startups to Fortune 500s. Understanding utility-first CSS and how to configure a design token system is a required skill for most modern frontend job descriptions.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>/* Traditional CSS */
+.card { display: flex; padding: 1rem; border-radius: 8px; background: white; }
+
+/* Tailwind equivalent in HTML: */
+/* &lt;div class="flex p-4 rounded-lg bg-white shadow-md"&gt; */
+
+/* CSS Modules — Button.module.css */
+.button {
+  background: #4f46e5;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+}
+.button:hover { background: #4338ca; }
+
+/* Design token layer */
+:root {
+  --color-action: #4f46e5;
+  --radius-md: 6px;
+  --space-md: 1rem;
+}
+/* Component layer — consumes tokens */
+.btn {
+  background: var(--color-action);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Rebuild your Week 6 portfolio layout using <strong>Tailwind CSS</strong>. Then, create a small component library in plain CSS using design tokens: buttons (primary, secondary, danger), an input field, and a card — all driven by <code>:root</code> CSS variables.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 11–14:</strong> CSS architecture, performance, accessibility, creative techniques, and three complete projects.</p>
+        </div>
+
+        <!-- WEEK 11  -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — CSS Architecture &amp; Methodology</h2>
+                <p>Learn industry-standard CSS architecture patterns to write scalable, maintainable stylesheets.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Learning industry-standard CSS architecture patterns to write scalable, maintainable stylesheets.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>BEM (Block, Element, Modifier) Naming Convention</strong> — BEM is a naming methodology that organizes CSS into Blocks (standalone components), Elements (children, using <code>__</code>), and Modifiers (variants, using <code>--</code>). It prevents naming collisions and makes components self-documenting.</li>
+                    <li><strong>ITCSS (Inverted Triangle CSS)</strong> — ITCSS organizes CSS from most-global to most-specific: Settings → Tools → Generic → Elements → Objects → Components → Utilities. This controls the cascade deliberately and prevents specificity wars at scale.</li>
+                    <li><strong>CSS Logical Properties</strong> — Logical properties (<code>margin-inline-start</code>, <code>padding-block-end</code>) replace directional properties (<code>margin-left</code>, <code>padding-bottom</code>). They adapt automatically to writing direction (<code>ltr</code>/<code>rtl</code>), making internationalisation trivial.</li>
+                    <li><strong>CSS Layers (<code>@layer</code>)</strong> — <code>@layer</code> lets you explicitly control the cascade order of style groups. Styles in a lower layer lose to higher layers regardless of specificity — solving specificity wars between resets, frameworks, and custom code.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every CSS codebase without architecture eventually becomes unmaintainable. BEM and ITCSS are the two most adopted methodologies in the industry. <code>@layer</code> is the biggest improvement to the CSS cascade since specificity was introduced — it lets you integrate third-party CSS and utilities without specificity battles.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>/* BEM pattern: .block__element--modifier */
+.card { }
+.card__title { }
+.card__image { }
+.card--featured { border: 2px solid gold; }
+
+/* ITCSS Generic layer */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ITCSS Components layer */
+.c-card { /* scoped component styles with c- namespace */ }
+
+/* Logical properties */
+.card { margin-inline-start: 1rem; }    /* works in LTR and RTL */
+.button { padding-block: 0.75rem; padding-inline: 1.5rem; }
+
+/* @layer cascade control */
+@layer reset, base, components, utilities;
+@layer reset     { * { box-sizing: border-box; } }
+@layer components { .btn { background: blue; } }
+@layer utilities  { .bg-red { background: red; } }</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Refactor a complex multi-component CSS codebase using <strong>BEM naming</strong> and <strong>ITCSS file structure</strong>. Add <code>@layer</code> declarations to control the cascade between a third-party reset, your base styles, and utility overrides. Convert all directional properties to <strong>logical properties</strong>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--   WEEK 12  -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Accessibility, Performance &amp; Modern CSS</h2>
+                <p>Write CSS that is accessible, performant, and uses the latest CSS features.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing CSS that is accessible, performant, and uses the very latest CSS features available in modern browsers.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>CSS Accessibility (Focus Styles, Reduced Motion, High Contrast)</strong> — Accessible CSS ensures keyboard users see clear focus indicators and respects user system preferences. Never use <code>outline: none</code> without a custom replacement; always support <code>prefers-reduced-motion</code> for users sensitive to animation.</li>
+                    <li><strong>CSS Performance Optimization</strong> — Expensive CSS properties (<code>box-shadow</code>, <code>filter</code>, <code>border-radius</code> on large elements) can cause paint performance issues. Use browser DevTools Performance panel to identify paint bottlenecks; prefer <code>transform</code>/<code>opacity</code> for animations.</li>
+                    <li><strong>CSS Container Queries</strong> — Container queries allow components to respond to their container's size rather than the viewport. This enables truly portable components that adapt no matter where they're placed — a landmark upgrade over media queries.</li>
+                    <li><strong>CSS Native Nesting &amp; <code>@scope</code></strong> — CSS Nesting (now in all modern browsers) brings Sass-like nesting to native CSS without a build tool. <code>@scope</code> lets you limit styles to a DOM subtree. Together with <code>@layer</code>, these form the new architecture of modern CSS.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Container queries are the most requested CSS feature for over a decade — they finally make components truly independent of their context. <code>prefers-reduced-motion</code> support is now an accessibility requirement, not an optional nicety. Native CSS nesting means you can write clean, structured CSS without any build tools.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>:focus-visible { outline: 3px solid #4f46e5; outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; }
+}
+
+/* Prefer GPU-composited properties */
+.element { transition: transform 0.3s ease, opacity 0.3s ease; }
+.element:hover { transform: scale(1.1); }
+
+/* Container queries */
+.card-wrapper { container-type: inline-size; }
+@container (min-width: 400px) {
+  .card { display: flex; flex-direction: row; }
+}
+
+/* Native CSS nesting */
+.card {
+  padding: 1rem;
+  & .card__title { font-size: 1.25rem; }
+  &:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+  @media (min-width: 768px) { padding: 2rem; }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Audit an existing CSS project for <strong>accessibility issues</strong> (focus styles, color contrast, motion). Replace all viewport-based media queries in a card component with <strong>container queries</strong>. Migrate Sass nesting to <strong>native CSS nesting</strong> and test browser compatibility.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 13    -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — CSS Art, Creative Techniques &amp; Debugging</h2>
+                <p>Push CSS to its creative limits and develop expert-level debugging skills.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Pushing CSS to its creative limits and developing expert-level debugging skills using DevTools.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>CSS Gradients (Conic, Radial, Mesh &amp; Advanced)</strong> — Beyond linear gradients, CSS supports radial (circular) and conic (angle-based) gradients. Layering gradients with <code>background</code> and using <code>mask-image</code> unlocks complex visual effects without any images or JavaScript.</li>
+                    <li><strong>CSS Filters &amp; Blend Modes</strong> — <code>filter</code> applies visual effects (blur, brightness, grayscale, drop-shadow) to elements. <code>mix-blend-mode</code> controls how an element blends with its background — enabling Photoshop-like compositing effects purely in CSS.</li>
+                    <li><strong>CSS Grid Subgrid</strong> — <code>subgrid</code> allows a grid item's own children to align with the outer grid's tracks — solving the longstanding problem of nested content alignment. It's now supported in all major browsers.</li>
+                    <li><strong>CSS Debugging Techniques</strong> — Use Chrome/Firefox DevTools to inspect computed styles, visualise the box model, and audit accessibility. The <code>outline</code> trick and CSS Grid/Flexbox overlays are invaluable for debugging layout issues without editing source files.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Conic gradients and <code>mix-blend-mode</code> enable visual designs previously only achievable in Photoshop — without a single image file. Subgrid solves one of the oldest layout problems in CSS. Expert-level DevTools usage can cut debugging time from hours to minutes.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>/* Conic gradient — perfect for pie charts */
+.pie-chart {
+  background: conic-gradient(
+    #4f46e5 0% 60%,
+    #e5e7eb 60% 100%
+  );
+  border-radius: 50%;
+}
+
+.hero-image {
+  filter: brightness(0.8) saturate(1.2);
+}
+.overlay-text {
+  mix-blend-mode: overlay;
+  color: white;
+}
+
+/* Subgrid */
+.outer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.card {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+}
+
+/* Debug trick — visualise all elements */
+* { outline: 1px solid rgba(255, 0, 0, 0.3); }</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a <strong>CSS-only donut chart</strong> using conic gradients. Build a <strong>"duotone" image effect</strong> using <code>mix-blend-mode</code>. Reproduce a multi-column magazine-style layout using <code>subgrid</code>. Debug a provided broken layout using <strong>only DevTools</strong> — no code editor hints.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 14-->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Capstone Week: Three Master Projects</h2>
+                <p>Apply everything learned across the entire curriculum in three complete, production-quality projects.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Synthesising everything learned into three complete, production-quality CSS projects spanning beginner, intermediate, and advanced techniques.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — Personal Portfolio Website (Beginner → Intermediate)</h3>
+                <p>A fully responsive, accessible personal portfolio website built from scratch using CSS Grid, Flexbox, custom properties, and BEM — deployed and live with a Lighthouse accessibility score of 95 or above.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>CSS Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Full design token system</td>
+                            <td>CSS custom properties for all colors, spacing, typography</td>
+                        </tr>
+                        <tr>
+                            <td>Responsive layout throughout</td>
+                            <td>Mobile-first CSS Grid and Flexbox</td>
+                        </tr>
+                        <tr>
+                            <td>Consistent naming throughout</td>
+                            <td>BEM naming convention on all components</td>
+                        </tr>
+                        <tr>
+                            <td>Hover and interaction feedback</td>
+                            <td>CSS transitions on all interactive elements</td>
+                        </tr>
+                        <tr>
+                            <td>Page load entrance animations</td>
+                            <td><code>@keyframes</code> fadeInUp on hero and cards</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>/* Design token system for the portfolio */
+:root {
+  --clr-bg: #0f172a;
+  --clr-accent: #818cf8;
+  --clr-text: #e2e8f0;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A deployed portfolio (via GitHub Pages or Netlify) with: hero section, skills grid, projects showcase, and a contact section. <strong>Lighthouse accessibility score ≥ 95.</strong></p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — SaaS Dashboard UI (Intermediate → Advanced)</h3>
+                <p>A complex responsive SaaS dashboard with a sidebar, data cards, chart placeholders, and a data table — with full light/dark mode support and container-query-based card components.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>CSS Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Full-page layout structure</td>
+                            <td>CSS Grid with named <code>grid-template-areas</code></td>
+                        </tr>
+                        <tr>
+                            <td>Portable card components</td>
+                            <td>Container queries on each card</td>
+                        </tr>
+                        <tr>
+                            <td>Maintainable stylesheet</td>
+                            <td>SCSS with 7-1 architecture and mixins</td>
+                        </tr>
+                        <tr>
+                            <td>Light and dark mode</td>
+                            <td>CSS custom property theming via <code>prefers-color-scheme</code></td>
+                        </tr>
+                        <tr>
+                            <td>Content loading states</td>
+                            <td>Animated skeleton loading via <code>@keyframes</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>.dashboard {
+  display: grid;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main"
+    "sidebar footer";
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: 64px 1fr auto;
+  min-height: 100vh;
+}
+.sidebar { grid-area: sidebar; }
+.main    { grid-area: main; }</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A pixel-perfect, responsive dashboard UI supporting <strong>light and dark mode</strong>. All cards use container queries. Sidebar collapses to an icon rail on mobile.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — CSS-First Component Library (Advanced → Master)</h3>
+                <p>A production-ready, fully documented component library with zero JavaScript dependencies for styling — built with <code>@layer</code>, native nesting, logical properties, and comprehensive accessibility media query support.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>CSS Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cascade management</td>
+                            <td><code>@layer</code> (reset → base → components → utilities)</td>
+                        </tr>
+                        <tr>
+                            <td>Clean component code</td>
+                            <td>Native CSS nesting throughout</td>
+                        </tr>
+                        <tr>
+                            <td>RTL/LTR support</td>
+                            <td>CSS logical properties on all components</td>
+                        </tr>
+                        <tr>
+                            <td>Consumer-overrideable API</td>
+                            <td>CSS custom property token API per component</td>
+                        </tr>
+                        <tr>
+                            <td>Full accessibility support</td>
+                            <td><code>prefers-reduced-motion</code>, <code>prefers-contrast</code>, <code>forced-colors</code></td>
+                        </tr>
+                        <tr>
+                            <td>Complex nested card layouts</td>
+                            <td>Subgrid for inner content alignment</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>.btn {
+  --btn-bg: var(--color-action, #4f46e5);
+  --btn-color: white;
+  --btn-radius: var(--radius-md, 6px);
+  --btn-padding-inline: 1.5rem;
+  --btn-padding-block: 0.75rem;
+
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  border-radius: var(--btn-radius);
+  padding: var(--btn-padding-block) var(--btn-padding-inline);
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A documented component library containing: <strong>Buttons, Badges, Cards, Input fields, Toggle, Tooltip, Modal, and Accordion</strong> — all with zero JavaScript, full accessibility, and a live documentation page. This is the capstone that demonstrates mastery of the entire CSS curriculum.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–3</td>
+                        <td>Absolute Basics</td>
+                        <td>Write well-structured CSS rules using selectors, the cascade, and the complete box model</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>4–6</td>
+                        <td>Control Flow &amp; Layout</td>
+                        <td>Build any layout using Flexbox and CSS Grid with full responsive design using media queries</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>7–10</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Animate elements, use Sass with 7-1 architecture, implement Tailwind, and build a design token system</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>11–14</td>
+                        <td>Master Level Concepts</td>
+                        <td>Architect scalable CSS with BEM, ITCSS, and <code>@layer</code>; write accessible, performant, modern CSS; and complete three production projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool / Resource</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MDN Web Docs (developer.mozilla.org)</td>
+                        <td>Every CSS property explained with examples</td>
+                    </tr>
+                    <tr>
+                        <td>CSS-Tricks (css-tricks.com)</td>
+                        <td>Complete Flexbox and Grid visual guides</td>
+                    </tr>
+                    <tr>
+                        <td>Every Layout (every-layout.dev)</td>
+                        <td>CSS layout thinking and composable primitives</td>
+                    </tr>
+                    <tr>
+                        <td>Kevin Powell (YouTube)</td>
+                        <td>In-depth CSS video tutorials</td>
+                    </tr>
+                    <tr>
+                        <td>Smashing Magazine (smashingmagazine.com)</td>
+                        <td>Advanced CSS techniques and case studies</td>
+                    </tr>
+                    <tr>
+                        <td>web.dev/learn/css</td>
+                        <td>Google's official structured CSS curriculum</td>
+                    </tr>
+                    <tr>
+                        <td>Tailwind CSS Docs (tailwindcss.com)</td>
+                        <td>Utility-first framework reference</td>
+                    </tr>
+                    <tr>
+                        <td>Clippy (bennettfeely.com/clippy)</td>
+                        <td>Visual generator for clip-path values</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Complete each week's task before moving on — building real components reinforces concepts far more than reading alone.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — your commit history shows consistent progress and your deployed projects are a live portfolio.</li>
+                    <li>Use <strong>browser DevTools</strong> from Week 1 — inspect box models, toggle classes, and experiment with computed styles directly in the browser.</li>
+                    <li>By Week 14, you should have three complete, deployed projects and the confidence to architect and write CSS for any size application from scratch.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <!--  FOOTER  -->
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

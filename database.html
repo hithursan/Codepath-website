@@ -1,0 +1,1873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Design & SQL - 15 Week Roadmap</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>Relational Database Design &amp; SQL</h1>
+        <p>Complete 15-Week Beginner-to-Advanced Roadmap — MySQL · ERD · Normalization · Stored Procedures · Query Optimization</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#capstone">Capstone</a>
+    </nav>
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Roadmap</h2>
+            <p>Databases are the backbone of every software system ever built. Every app you use — banking systems, college portals, e-commerce sites, hospital records, social media platforms — stores its data in a relational database and queries it using SQL.</p>
+            <p>This roadmap takes you from understanding what a database even is, all the way to designing normalized schemas, writing complex multi-table queries, building stored procedures, and managing transactions — the skills that make you genuinely useful in any software or data role.</p>
+            <p>The path runs: <strong>Database Foundations → Basic SQL → Aggregates &amp; JOINs → Subqueries &amp; DML → ERD &amp; Normalization → Schema Implementation → Views &amp; Procedures → Transactions → Window Functions &amp; CTEs → EduBase Capstone.</strong></p>
+
+            <h3>At a Glance</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Duration</strong></td>
+                        <td>15 weeks · Full-time (~35 hrs/week)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Primary Tool</strong></td>
+                        <td>MySQL 8.x with MySQL Workbench</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Language</strong></td>
+                        <td>SQL (Structured Query Language) + MySQL-specific extensions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Practice Platforms</strong></td>
+                        <td>SQLZoo · LeetCode · HackerRank · DB Fiddle</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hands-On</strong></td>
+                        <td>14 weekly mini-projects + 1 complete multi-table database capstone</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cost</strong></td>
+                        <td>100% free tools and resources</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Level</strong></td>
+                        <td>Complete Beginner — no prior database or programming experience required</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Five Phases</h3>
+            <ul>
+                <li><strong>Phase 1 (Weeks 1–3):</strong> Database Foundations &amp; Basic SQL</li>
+                <li><strong>Phase 2 (Weeks 4–7):</strong> Core SQL — Aggregates, JOINs, Subqueries, DML</li>
+                <li><strong>Phase 3 (Weeks 8–10):</strong> Database Design — ERD, Normalization, Keys &amp; Constraints</li>
+                <li><strong>Phase 4 (Weeks 11–13):</strong> Advanced SQL — Views, Procedures, Transactions, Window Functions</li>
+                <li><strong>Phase 5 (Weeks 14–15):</strong> EduBase Capstone Build &amp; Presentation</li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Database Foundations &amp; Basic SQL</h2>
+            <p>Weeks 1 through 3 take you from understanding what a database is to mastering the complete SELECT statement with filtering, sorting, string functions, and date functions. By the end of Phase 1 you will confidently create tables, insert data, and retrieve exactly what you need from a single table.</p>
+        </div>
+
+
+
+        <!--  WEEK 1 -->
+
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — What Is a Database? Setting Up MySQL &amp; First Queries</h2>
+                <p>Understand what databases are and why they exist, install MySQL Workbench, create your first database and table, and run your first SQL queries.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What is a database and why it exists</strong> — databases vs spreadsheets; relational vs non-relational (conceptual); RDBMS examples (MySQL, PostgreSQL, SQLite, Oracle, SQL Server).</li>
+                    <li><strong>MySQL installation and Workbench navigation</strong> — connecting to localhost, root user, interface overview.</li>
+                    <li><strong>Creating a database</strong> — <code>CREATE DATABASE</code>, <code>USE</code>, <code>SHOW DATABASES</code>, <code>DROP DATABASE</code>.</li>
+                    <li><strong>Creating a table</strong> — <code>CREATE TABLE</code> with column names, data types (<code>INT</code>, <code>VARCHAR(n)</code>, <code>DATE</code>), <code>DROP TABLE</code>.</li>
+                    <li><strong>Inserting data</strong> — <code>INSERT INTO table (col1, col2) VALUES (val1, val2)</code>; single row and multi-row inserts.</li>
+                    <li><strong>Retrieving data</strong> — <code>SELECT * FROM table</code>; result grid in Workbench.</li>
+                    <li><strong>MySQL comment syntax</strong> — <code>-- single line</code>, <code>/* multi-line */</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> This week establishes what you are working with and why. Every SQL command you write for the rest of the roadmap requires a database and tables to operate on. Without this foundation, no other week makes sense. Databases exist because spreadsheets have size limits, no concurrency, no referential integrity, and no access control — a database handles millions of rows, simultaneous users, relationships between data, and permissions natively.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Install MySQL and Workbench. Run through setup. Explore the Workbench interface. Read about relational databases conceptually.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td><code>CREATE DATABASE</code>, <code>USE</code>, <code>SHOW DATABASES</code>, <code>SHOW TABLES</code>, <code>DROP DATABASE</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>CREATE TABLE</code> with 4–5 columns. Data types intro: <code>INT</code>, <code>VARCHAR</code>, <code>DATE</code>. Drop and recreate the same table 3 times.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>INSERT INTO</code> — single row inserts, then multi-row inserts. Check data with <code>SELECT *</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Explore the official MySQL sample database — download and import the <code>world</code> database. Run <code>SHOW TABLES</code> and <code>SELECT * FROM country LIMIT 10</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Build a <code>library</code> database with a <code>books</code> table from scratch. Insert 10 books.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review all commands from memory. Complete mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Create a database named <code>practice</code>. Inside it, create a <code>students</code> table with columns: <code>student_id INT</code>, <code>name VARCHAR(100)</code>, <code>age INT</code>, <code>email VARCHAR(100)</code>, <code>enroll_date DATE</code>. Insert 5 students. Select all of them.</li>
+                    <li>Drop and recreate the <code>students</code> table 3 times to build confidence with <code>DROP TABLE</code> + <code>CREATE TABLE</code>.</li>
+                    <li>Import the MySQL <code>world</code> sample database and run <code>SELECT * FROM country LIMIT 5</code>.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Create a <code>library</code> database. Inside it, create a <code>books</code> table with columns: <code>book_id INT</code>, <code>title VARCHAR(200)</code>, <code>author VARCHAR(100)</code>, <code>genre VARCHAR(50)</code>, <code>year_published INT</code>, <code>price DECIMAL(8,2)</code>. Insert 10 different books across 3 genres. Export your complete SQL script (CREATE TABLE + all INSERTs) as <code>week01_library.sql</code> and push to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Forgetting the semicolon <code>;</code> at the end of SQL statements — MySQL usually gives an error or waits for more input.</li>
+                        <li>Forgetting to run <code>USE dbname;</code> before creating tables — tables get created in the wrong database.</li>
+                        <li>Using spaces in table or column names — use underscores: <code>student_id</code>, not <code>student id</code>.</li>
+                        <li>Running <code>DROP DATABASE</code> without being certain — irreversible in most configurations.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>End every SQL statement with a semicolon — make it a reflex.</li>
+                        <li>Always start every SQL script with <code>USE dbname;</code> as the first line.</li>
+                        <li>Use <code>snake_case</code> for all identifiers (table names, column names).</li>
+                        <li>Before running any DROP command, verify which database is active with <code>SELECT DATABASE();</code></li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MySQL Official Tutorial — Getting Started (dev.mysql.com/doc/refman/8.0/en/tutorial.html)</li>
+                    <li>Khan Academy — SQL Basics (khanacademy.org/computing/computer-programming/sql)</li>
+                    <li>MySQL Sample Databases (dev.mysql.com/doc/index-other.html)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 28 hours</p>
+            </div>
+        </div>
+
+
+     
+        <!--  WEEK 2   -->
+ 
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Data Types, Constraints &amp; Table Design Basics</h2>
+                <p>Understand MySQL's data types in depth, learn all standard table constraints, and design tables that prevent bad data from being inserted.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>MySQL data types</strong> — numeric (<code>TINYINT</code>, <code>INT</code>, <code>BIGINT</code>, <code>DECIMAL(p,s)</code>, <code>FLOAT</code>); string (<code>CHAR(n)</code>, <code>VARCHAR(n)</code>, <code>TEXT</code>, <code>ENUM</code>); date/time (<code>DATE</code>, <code>DATETIME</code>, <code>TIMESTAMP</code>, <code>YEAR</code>).</li>
+                    <li><strong>NULL and NOT NULL</strong> — NULL means "no value known"; never use <code>= NULL</code>; use <code>IS NULL</code> and <code>IS NOT NULL</code>.</li>
+                    <li><strong>PRIMARY KEY</strong> — uniquely identifies each row; cannot be NULL; typically <code>INT AUTO_INCREMENT</code>.</li>
+                    <li><strong>AUTO_INCREMENT</strong> — MySQL automatically assigns the next integer value on INSERT.</li>
+                    <li><strong>UNIQUE constraint</strong> — prevents duplicate values in a column (e.g., email must be unique per user).</li>
+                    <li><strong>DEFAULT values</strong> — value used if a column is not provided in an INSERT.</li>
+                    <li><strong>CHECK constraint</strong> — MySQL 8.0.16+ enforces a condition on column values.</li>
+                    <li><strong>ENUM and SET types</strong> — ENUM stores one value from a predefined list.</li>
+                    <li><strong><code>DESCRIBE</code> / <code>DESC</code></strong> — shows the structure of a table.</li>
+                    <li><strong><code>ALTER TABLE</code></strong> — <code>ADD COLUMN</code>, <code>DROP COLUMN</code>, <code>MODIFY COLUMN</code>, <code>RENAME COLUMN</code>, <code>ADD CONSTRAINT</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Poor data type and constraint choices are one of the most common sources of data quality bugs in real systems. Choosing VARCHAR(5) for a field that needs 200 characters causes truncation. Not using NOT NULL allows unexpected NULL values that break query logic. This week teaches you to design tables defensively.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Numeric data types — try INT, DECIMAL, FLOAT. Insert money values and observe rounding with FLOAT vs. DECIMAL.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>String types — CHAR vs VARCHAR performance concept; ENUM with gender/status examples.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Date/time types — DATE, DATETIME, TIMESTAMP. Insert with <code>NOW()</code>, <code>CURDATE()</code>, date literals.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>NULL behavior — try <code>WHERE column = NULL</code> (wrong), then <code>WHERE column IS NULL</code> (correct). NOT NULL constraint.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>PRIMARY KEY + AUTO_INCREMENT. Insert without specifying the PK column; verify auto-assignment.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>UNIQUE, DEFAULT, CHECK constraints. ALTER TABLE — add, modify, drop columns.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review all types and constraints. Design a <code>products</code> table using all learned concepts. Mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Create a <code>products</code> table with appropriate data types for: <code>product_id</code> (auto PK), <code>name</code> (required), <code>price</code> (exact 2 decimal places), <code>stock_quantity</code> (non-negative), <code>category</code> (from a fixed list of 5 categories), <code>created_at</code> (auto-timestamp), <code>description</code> (long text, optional).</li>
+                    <li>Try inserting a row with <code>price = -5</code> — observe the CHECK constraint reject it.</li>
+                    <li>Use <code>ALTER TABLE</code> to add a <code>discount_percent DECIMAL(5,2) DEFAULT 0.00</code> column to the products table.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Redesign the <code>books</code> table from Week 1 with proper data types and all appropriate constraints: PK with AUTO_INCREMENT, NOT NULL on title and author, CHECK on price (&gt;= 0) and year_published (&gt;= 1000 AND &lt;= 2100), DEFAULT on a <code>date_added</code> column, ENUM for genre (Fiction, Non-Fiction, Science, History, Other). Document the choice of each data type in a comment. Push the updated <code>week02_books.sql</code> to GitHub.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>VARCHAR(255)</code> for everything regardless of actual content length.</li>
+                        <li>Using <code>FLOAT</code> for monetary values — causes precision errors; always use <code>DECIMAL(10,2)</code> for money.</li>
+                        <li>Forgetting <code>AUTO_INCREMENT</code> on the primary key column and manually managing IDs.</li>
+                        <li>Using <code>=</code> to check for NULL values instead of <code>IS NULL</code>.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Match data type to actual data: names → <code>VARCHAR(100)</code>, descriptions → <code>TEXT</code>, money → <code>DECIMAL(10,2)</code>, status → <code>ENUM</code>.</li>
+                        <li>Never use FLOAT or DOUBLE for financial calculations.</li>
+                        <li>Always pair <code>INT AUTO_INCREMENT PRIMARY KEY</code> for surrogate primary keys.</li>
+                        <li>Use <code>IS NULL</code> and <code>IS NOT NULL</code> exclusively for NULL comparisons.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MySQL Data Types Reference (dev.mysql.com/doc/refman/8.0/en/data-types.html)</li>
+                    <li>MySQL Tutorial — Constraints (mysqltutorial.org/mysql-basics/mysql-check-constraint)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 32 hours</p>
+            </div>
+        </div>
+
+
+        <!--     WEEK 3   -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — SELECT in Depth: Filtering, Sorting &amp; String Functions</h2>
+                <p>Master the complete SELECT statement — every clause, operator, and built-in function needed to retrieve exactly the data you want from a single table.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>SELECT with specific columns</strong> — never use <code>SELECT *</code> in production; always name columns.</li>
+                    <li><strong>WHERE clause and operators</strong> — <code>=</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>; <code>AND</code>, <code>OR</code>, <code>NOT</code>.</li>
+                    <li><strong>Special operators</strong> — <code>BETWEEN a AND b</code> (inclusive); <code>IN (val1, val2)</code>; <code>LIKE</code> with <code>%</code> and <code>_</code>; <code>IS NULL</code>, <code>IS NOT NULL</code>.</li>
+                    <li><strong>ORDER BY</strong> — ASC/DESC; multiple column sorting.</li>
+                    <li><strong>LIMIT and OFFSET</strong> — return n rows starting from position m; pagination concept.</li>
+                    <li><strong>DISTINCT</strong> — return only unique combinations of selected columns.</li>
+                    <li><strong>Column aliases (<code>AS</code>)</strong> — rename a column or expression in the result set.</li>
+                    <li><strong>String functions</strong> — <code>UPPER</code>, <code>LOWER</code>, <code>LENGTH</code>, <code>SUBSTRING</code>, <code>CONCAT</code>, <code>TRIM</code>, <code>REPLACE</code>.</li>
+                    <li><strong>Numeric functions</strong> — <code>ROUND</code>, <code>CEIL</code>, <code>FLOOR</code>, <code>ABS</code>, <code>MOD</code>.</li>
+                    <li><strong>Date functions</strong> — <code>NOW()</code>, <code>CURDATE()</code>, <code>YEAR()</code>, <code>MONTH()</code>, <code>DAY()</code>, <code>DATEDIFF()</code>, <code>DATE_ADD()</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The WHERE clause is used in SELECT, UPDATE, and DELETE. Mastering it this week means it will be automatic for the rest of the roadmap. Most SQL problems — including all interview questions — require precise filtering, sorting, and column computation. This is the most used week's content in real SQL work.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>SELECT specific columns, column aliases (AS). Write 10 queries on <code>world.country</code> selecting different column subsets.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>WHERE clause — all comparison operators. AND/OR/NOT combinations. Write 10 filtering queries.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>BETWEEN, IN, LIKE, IS NULL/IS NOT NULL. Write 8 queries using each.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>ORDER BY (single and multiple columns), LIMIT, OFFSET. Pagination concept.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>DISTINCT. String functions (UPPER, LOWER, CONCAT, LENGTH, TRIM, SUBSTRING).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Numeric functions (ROUND, ABS, MOD). Date functions (YEAR, MONTH, DATEDIFF, DATE_ADD).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Write 25 mixed queries on the world database. Complete mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write a query to find all countries in Asia with a population over 100 million, sorted by population descending.</li>
+                    <li>Write a query to find all country names starting with 'S' or ending with 'a'.</li>
+                    <li>Write a query to display country names in uppercase with their surface area rounded to the nearest whole number.</li>
+                    <li>Write a query to find all cities in the <code>world.city</code> table that have NULL in their district.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>25-query practice set on the <code>world</code> sample database. Requirements: at least 3 queries using LIKE, 3 using IN, 3 using BETWEEN, 2 using IS NULL/IS NOT NULL, 3 using ORDER BY with LIMIT, 3 using string functions, 3 using date functions on the <code>CountryLanguage</code> table. Save all 25 queries in a well-commented <code>.sql</code> file. Push to GitHub as <code>week03_select_practice.sql</code>.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Writing <code>WHERE name = NULL</code> instead of <code>WHERE name IS NULL</code>.</li>
+                        <li>Using <code>ORDER BY</code> with a column number (<code>ORDER BY 3</code>) instead of the column name — unclear and error-prone.</li>
+                        <li>Confusing <code>%</code> (zero or more characters) and <code>_</code> (exactly one character) in LIKE.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always use <code>IS NULL</code> / <code>IS NOT NULL</code> for NULL checks — never <code>=</code> or <code>!=</code> with NULL.</li>
+                        <li>Always use column names in ORDER BY, not positional numbers.</li>
+                        <li>Test LIKE patterns on a small dataset before using them on large tables.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>SQLZoo — SELECT Basics (sqlzoo.net/wiki/SELECT_basics)</li>
+                    <li>SQLZoo — SELECT from World (sqlzoo.net/wiki/SELECT_from_WORLD_Tutorial)</li>
+                    <li>MySQL String Functions Reference (dev.mysql.com/doc/refman/8.0/en/string-functions.html)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Core SQL: Aggregates, JOINs, Subqueries &amp; DML</h2>
+            <p>Weeks 4 through 7 cover the core SQL skills used in every real-world database application: summarizing data with GROUP BY, combining tables with JOINs, writing nested queries, and safely modifying data. By the end of Phase 2 you will be able to answer real interview questions and write production-quality SQL.</p>
+        </div>
+
+
+        <!-- WEEK 4 -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Aggregate Functions, GROUP BY &amp; HAVING</h2>
+                <p>Learn to summarize and analyze data using aggregate functions, group results by categories, and filter grouped results.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Aggregate functions</strong> — <code>COUNT</code>, <code>SUM</code>, <code>AVG</code>, <code>MIN</code>, <code>MAX</code>; operate on a set of rows and return a single value.</li>
+                    <li><strong><code>COUNT(*)</code> vs <code>COUNT(column)</code></strong> — <code>COUNT(*)</code> counts all rows including NULLs; <code>COUNT(col)</code> counts only non-NULL values.</li>
+                    <li><strong><code>GROUP BY</code> clause</strong> — divides rows into groups based on unique values; every column in SELECT must be in GROUP BY or wrapped in an aggregate function.</li>
+                    <li><strong><code>HAVING</code> clause</strong> — filters groups after aggregation; WHERE filters rows before grouping.</li>
+                    <li><strong>Multiple column GROUP BY</strong> — one group per unique combination of columns.</li>
+                    <li><strong><code>WITH ROLLUP</code></strong> — adds a grand total row at the end of GROUP BY results.</li>
+                    <li><strong>ROUND with aggregates</strong> — <code>ROUND(AVG(price), 2)</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Aggregate queries are the core of data analysis. Every report, dashboard, or analytical query in the real world uses GROUP BY + aggregates. "How many students are in each department?", "What is the average salary by role?", "Which product category has the highest revenue?" — all answered with what you learn this week.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>COUNT(*), COUNT(col), COUNT(DISTINCT col). Apply on <code>world.country</code> and <code>world.city</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>SUM, AVG, MIN, MAX. Apply on <code>world.country</code> (population, surface area).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>GROUP BY — single column. Write 8 queries grouping by different attributes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>GROUP BY rule practice — deliberately violate it; observe the error/behavior in MySQL.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>HAVING clause. Write queries distinguishing WHERE vs. HAVING.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Multi-column GROUP BY. WITH ROLLUP. Round aggregate outputs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write a query to find the number of countries in each continent, sorted by count descending.</li>
+                    <li>Write a query to find the average, minimum, and maximum population per continent, but only for continents with more than 10 countries.</li>
+                    <li>Write a query to find the total population of each continent and include a grand total row using WITH ROLLUP.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Create a <code>sales</code> database with a <code>transactions</code> table (transaction_id PK, product_name VARCHAR, category VARCHAR, amount DECIMAL(10,2), sale_date DATE, region VARCHAR(50)). Insert 30+ realistic rows across 4 categories and 3 regions. Write 10 aggregate queries: total revenue by category, average sale by region, top 3 categories by total sales, months with revenue above a threshold, etc. Push to GitHub as <code>week04_aggregates.sql</code>.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Writing <code>WHERE COUNT(*) &gt; 5</code> instead of <code>HAVING COUNT(*) &gt; 5</code> — WHERE cannot reference aggregate functions.</li>
+                        <li>Selecting a non-aggregated column not in the GROUP BY clause — MySQL may return a random value for it.</li>
+                        <li>Confusing <code>COUNT(col)</code> (ignores NULLs) with <code>COUNT(*)</code> (counts all rows).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Rule: if the filter condition uses an aggregate function, use HAVING; otherwise, use WHERE.</li>
+                        <li>Set <code>SET SESSION sql_mode = 'ONLY_FULL_GROUP_BY';</code> in MySQL Workbench to enforce the GROUP BY rule and catch mistakes.</li>
+                        <li>Use <code>COUNT(col)</code> when you want to count non-NULL values specifically; otherwise default to <code>COUNT(*)</code>.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>SQLZoo — SUM and COUNT (sqlzoo.net/wiki/SUM_and_COUNT)</li>
+                    <li>MySQL Tutorial — GROUP BY (mysqltutorial.org/mysql-basics/mysql-group-by)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 33 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 5  -->
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — JOINs: Combining Data from Multiple Tables</h2>
+                <p>Master all types of JOINs — the most important SQL skill after basic SELECT — to combine data from related tables.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Why JOINs exist</strong> — normalized databases split data across multiple tables; JOIN reunites them for queries.</li>
+                    <li><strong>INNER JOIN</strong> — returns only rows where the join condition is satisfied in BOTH tables; unmatched rows are excluded.</li>
+                    <li><strong>LEFT JOIN</strong> — returns ALL rows from the left table, matched rows from the right; NULLs fill unmatched right columns.</li>
+                    <li><strong>RIGHT JOIN</strong> — mirror of LEFT JOIN; rarely needed (rewrite as LEFT JOIN with tables swapped).</li>
+                    <li><strong>FULL OUTER JOIN</strong> — MySQL: simulate with <code>LEFT JOIN UNION RIGHT JOIN</code>.</li>
+                    <li><strong>CROSS JOIN</strong> — Cartesian product; every combination of rows from both tables.</li>
+                    <li><strong>SELF JOIN</strong> — joining a table with itself; requires table aliases; use case: employee-manager relationships.</li>
+                    <li><strong>Multi-table JOIN</strong> — chain multiple JOINs: <code>FROM orders o JOIN customers c ON ... JOIN products p ON ...</code></li>
+                    <li><strong>Anti-join pattern</strong> — <code>LEFT JOIN ... WHERE right_table.pk IS NULL</code> finds all rows in left table with no match in right table.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> JOINs are the most tested SQL concept in every technical interview for every role. Almost every real query involves at least one JOIN. The LEFT JOIN + WHERE IS NULL anti-join pattern appears in dozens of interview problems. This is the most important week in the roadmap.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Import the <code>sakila</code> sample database. Explore its schema. Draw relationships between 4–5 tables on paper.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>INNER JOIN — 5 queries on sakila (e.g., film title + language name, actor + films).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>LEFT JOIN — 5 queries finding "customers who have never rented", "actors with no films", etc.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>RIGHT JOIN. FULL OUTER JOIN simulation (LEFT JOIN UNION RIGHT JOIN). Compare outputs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Multi-table JOIN — 3+ tables. Write queries requiring 3 JOINs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>SELF JOIN (find all actors who share a last name). CROSS JOIN (generate all category-store combinations).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>10-query JOIN challenge on sakila. Mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write a query to list all films with their language name (not the language_id) — requires INNER JOIN.</li>
+                    <li>Write a query to find all customers who have NEVER made a payment — LEFT JOIN + WHERE IS NULL on the <code>payment</code> table.</li>
+                    <li>Write a query to list every film with its category name and the number of times it has been rented — requires 3+ JOINs + GROUP BY.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>10 JOIN queries on the <code>sakila</code> database covering: INNER JOIN (3 queries), LEFT JOIN including the anti-join pattern (3 queries), multi-table JOIN with 3+ tables (2 queries), SELF JOIN (1 query), aggregate + JOIN (1 query). Every query must include a comment explaining in plain English what it retrieves. Push as <code>week05_joins.sql</code>.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Forgetting the <code>ON</code> condition in a JOIN — accidentally creates a Cartesian product.</li>
+                        <li>Joining on the wrong columns — mismatched semantics produce wrong results.</li>
+                        <li>Using <code>RIGHT JOIN</code> everywhere — almost always rewritable as a clearer LEFT JOIN with tables swapped.</li>
+                        <li>Not checking result row counts — unexpectedly many rows usually indicates a missing or wrong join condition.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always write the ON clause immediately after the JOIN keyword.</li>
+                        <li>Before writing a JOIN: "What column in table A corresponds to what column in table B?" — join on those.</li>
+                        <li>Prefer LEFT JOIN (put the "all rows" table on the left) for readability.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>SQLZoo — Joins (sqlzoo.net/wiki/The_JOIN_operation)</li>
+                    <li>Visual JOIN explanation (joins.spathon.com) — the best visual tool for understanding JOIN types</li>
+                    <li>MySQL Tutorial — JOINs (mysqltutorial.org/mysql-basics/mysql-join)</li>
+                    <li>sakila sample database documentation (dev.mysql.com/doc/sakila/en)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 6  -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Subqueries: Queries Within Queries</h2>
+                <p>Write nested SQL queries to solve problems that cannot be solved with a single-level query, and understand when subqueries are appropriate vs JOINs.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What is a subquery</strong> — a complete SELECT statement nested inside another SQL statement; the inner query runs first.</li>
+                    <li><strong>Subquery in WHERE clause</strong> — scalar result: <code>WHERE salary &gt; (SELECT AVG(salary) FROM employees)</code>.</li>
+                    <li><strong><code>IN</code> with subquery</strong> — outer column must match any value returned by the inner query.</li>
+                    <li><strong><code>NOT IN</code> with subquery</strong> — critical caveat: if the subquery returns ANY NULL value, <code>NOT IN</code> returns no rows at all; prefer <code>NOT EXISTS</code>.</li>
+                    <li><strong><code>EXISTS</code> and <code>NOT EXISTS</code></strong> — returns TRUE if the subquery returns at least one row; safer than NOT IN when NULLs are possible.</li>
+                    <li><strong>Scalar subqueries</strong> — a subquery returning exactly one row and one column; can appear anywhere a single value is expected.</li>
+                    <li><strong>Correlated subqueries</strong> — inner query references a column from the outer query; executes once per outer row — use JOINs instead when performance matters.</li>
+                    <li><strong>Derived table (subquery in FROM)</strong> — <code>FROM (SELECT ...) AS alias</code> — treats the inner query's result as a virtual table; useful for two-level aggregation.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Many SQL problems — particularly interview problems — are most naturally expressed with subqueries. "Find students who scored above the class average" requires either a correlated subquery or a derived table. Understanding subqueries also prepares you for CTEs in Week 13, which are a cleaner syntax for the same concept.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Non-correlated subquery returning one value: find countries with population above the world average.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Subquery with IN: find customers who rented films in a specific category (without JOIN).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>NOT IN and the NULL problem — experiment with this deliberately.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>EXISTS and NOT EXISTS — rewrite the Week 5 "never rented" query using NOT EXISTS.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Correlated subquery — find films where the rental rate is above the average for their category.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Derived table — find the average count of films per actor, using a subquery in FROM.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>10-subquery challenge. Mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>10-subquery challenge using the <code>world</code> and <code>sakila</code> databases. Must include: 2 non-correlated subqueries in WHERE, 2 IN/NOT IN examples, 2 EXISTS/NOT EXISTS, 2 correlated subqueries, 2 derived tables in FROM. For 3 of the queries, also write the equivalent JOIN-based version and comment on which is clearer or more efficient. Push as <code>week06_subqueries.sql</code>.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>NOT IN</code> on a column that can contain NULLs — this silently returns zero rows and appears to "work" while giving wrong results.</li>
+                        <li>Writing deeply nested subqueries (4+ levels) when a JOIN or CTE would be cleaner.</li>
+                        <li>Assuming the outer query logic based on the wrong understanding of what the inner query returns.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Use <code>NOT EXISTS</code> instead of <code>NOT IN</code> when the subquery column could contain NULL values.</li>
+                        <li>Limit nesting to 2 levels; use CTEs (Week 13) for anything deeper.</li>
+                        <li>When debugging a subquery: run the inner query alone first; verify its output; then wrap it in the outer query.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>SQLZoo — Nested SELECT (sqlzoo.net/wiki/Nested_SELECT_Quiz)</li>
+                    <li>MySQL Tutorial — Subqueries (mysqltutorial.org/mysql-basics/mysql-subquery)</li>
+                    <li>Mode — Advanced SQL: Subqueries (mode.com/sql-tutorial/sql-subqueries)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 7 -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — DML: INSERT, UPDATE, DELETE &amp; Safe Data Modification</h2>
+                <p>Master all data modification statements — including safe patterns for UPDATE and DELETE — and understand how to work with data that references other tables.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>INSERT INTO ... SELECT ...</code></strong> — copies data from one query result into another table; used for backups and staging tables.</li>
+                    <li><strong><code>UPDATE</code> with WHERE</strong> — always include a WHERE clause; without it, EVERY row is updated.</li>
+                    <li><strong><code>UPDATE</code> with JOIN</strong> — update rows in one table based on matching rows in another.</li>
+                    <li><strong><code>DELETE</code> with WHERE</strong> — always include WHERE; without it, EVERY row is deleted (but the table structure remains).</li>
+                    <li><strong><code>TRUNCATE TABLE</code></strong> — faster than DELETE with no WHERE; resets AUTO_INCREMENT; cannot be rolled back in MySQL.</li>
+                    <li><strong>Safe DELETE/UPDATE practices</strong> — before running a DELETE, run the equivalent SELECT first to verify what will be deleted.</li>
+                    <li><strong>Foreign key constraint behavior</strong> — <code>RESTRICT</code> (default), <code>CASCADE</code>, <code>SET NULL</code>, <code>NO ACTION</code>.</li>
+                    <li><strong><code>INSERT ... ON DUPLICATE KEY UPDATE</code></strong> — upsert: inserts if the row doesn't exist, updates if a UNIQUE/PK constraint would be violated.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> UPDATE and DELETE without WHERE are among the most dangerous SQL mistakes possible — they affect every row in the table. This week teaches you the professional discipline to prevent data disasters. Foreign key behavior is also critical for understanding what happens when you delete parent records in a normalized database.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td><code>INSERT INTO ... SELECT</code> — copy filtered rows from one table to another.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td><code>UPDATE</code> with WHERE — 10 targeted updates. Use <code>SELECT</code> first to verify what will be changed.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>UPDATE</code> with JOIN. <code>UPDATE</code> without WHERE — inside a TRANSACTION so you can ROLLBACK.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>DELETE</code> with WHERE — safe patterns. "SELECT first, DELETE second" discipline.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>TRUNCATE vs. DELETE — observe AUTO_INCREMENT difference. DELETE without WHERE inside a TRANSACTION.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Foreign key cascade behaviors — set up parent/child tables with each FK action; test deleting parent rows.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td><code>INSERT ON DUPLICATE KEY UPDATE</code> — upsert pattern. Mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Data maintenance script on the Week 4 <code>sales</code> database: (1) UPDATE all sales in a specific region with a 10% price increase; (2) INSERT new data using INSERT...SELECT to copy last month's sales into a <code>sales_archive</code> table; (3) DELETE transactions below $10 using the "SELECT first" pattern; (4) demonstrate a CASCADE scenario where deleting a category deletes its products; (5) demonstrate a RESTRICT scenario where a delete is blocked by a child row. Push as <code>week07_dml.sql</code>.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Running <code>UPDATE table SET col = val;</code> without a WHERE clause — updates every single row.</li>
+                        <li>Running <code>DELETE FROM table;</code> without a WHERE clause — deletes all rows.</li>
+                        <li>Not testing DELETE/UPDATE with a SELECT equivalent first.</li>
+                        <li>Confusing TRUNCATE (cannot rollback, resets AUTO_INCREMENT) with DELETE (can rollback, keeps AUTO_INCREMENT).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Enable "Safe Updates" mode in MySQL Workbench: Edit → Preferences → SQL Editor → check "Safe Updates".</li>
+                        <li>Before any UPDATE or DELETE, run the equivalent SELECT and verify the row count and content.</li>
+                        <li>Wrap any risky UPDATE/DELETE in <code>START TRANSACTION; ... ROLLBACK;</code> during development; only change to COMMIT when verified.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MySQL Tutorial — UPDATE (mysqltutorial.org/mysql-basics/mysql-update)</li>
+                    <li>MySQL Tutorial — DELETE (mysqltutorial.org/mysql-basics/mysql-delete)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 33 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Database Design: ERD, Normalization, Keys &amp; Constraints</h2>
+            <p>Weeks 8 through 10 shift from writing queries to designing databases professionally. You will draw Entity-Relationship Diagrams before writing any SQL, systematically normalize schemas to eliminate redundancy, and implement a complete production-quality MySQL schema with all constraint types and performance indexes.</p>
+        </div>
+
+
+        <!--WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Entity-Relationship Diagrams (ERD) &amp; Conceptual Design</h2>
+                <p>Design the conceptual structure of a database using Entity-Relationship Diagrams before writing any SQL — the professional database design methodology.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Entities and attributes</strong> — entity: a distinct real-world object (becomes a table); attribute: a property (becomes a column); primary key attribute: uniquely identifies each entity instance.</li>
+                    <li><strong>Relationships</strong> — an association between two entities; named (e.g., Student "enrolls in" Course).</li>
+                    <li><strong>Cardinality</strong> — ONE-TO-ONE (one person has one passport), ONE-TO-MANY (one department has many students), MANY-TO-MANY (students enroll in many courses; courses have many students).</li>
+                    <li><strong>Crow's Foot notation</strong> — the most common ERD style; symbols at the ends of relationship lines indicate mandatory/optional and one/many.</li>
+                    <li><strong>Junction table (many-to-many implementation)</strong> — e.g., <code>enrollments(student_id FK, course_id FK)</code>; attributes describing the relationship belong in the junction table.</li>
+                    <li><strong>Weak entities</strong> — cannot be uniquely identified without their relationship to another entity; PK includes the FK of the owner entity.</li>
+                    <li><strong>Mapping ERD to relational schema</strong> — one-to-one → add FK to either table; one-to-many → FK on the "many" side; many-to-many → junction table.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A poorly designed schema — discovered after the database is in production with real data — is extremely costly to fix. ERD design is what professional database architects and data engineers do before writing a single line of SQL. This week is where you learn to think like a database designer, not just a SQL writer.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Entities, attributes, PKs. Read about the ER model. Draw an ERD for a simple 2-entity library system.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Relationships and cardinality. Determine one-to-one, one-to-many, many-to-many for 10 real-world examples.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Many-to-many — implement with a junction table. Draw the enrollments junction table.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Crow's Foot notation. Redraw all ERDs from Days 1–3 using proper Crow's Foot notation in drawio.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Weak entities. Identifying vs. non-identifying relationships.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Design a complete ERD for a hospital management system (8+ entities). Use drawio.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Map the hospital ERD to a relational schema (table definitions). Mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Design a complete ERD for the EduBase university database. Include all entities: departments, faculty, students, courses, enrollments, exams, marks, attendance, fees, rooms, timetable. Draw using Crow's Foot notation in drawio.net. Export as a PNG. For each relationship, write one sentence justifying the cardinality choice. Push the ERD image and written justification as <code>week08_erd/</code>.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Creating a direct many-to-many relationship in the database without a junction table — relational databases cannot represent M:N without one.</li>
+                        <li>Forgetting to add the FK attributes to junction tables (not just the relationship arrows in the diagram).</li>
+                        <li>Making everything a one-to-one relationship out of uncertainty — most real-world relationships are one-to-many or many-to-many.</li>
+                        <li>Treating attributes of a junction table (like enrollment date, grade) as belonging to the parent entities.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Any time two entities have a many-to-many relationship, immediately plan a junction table with two FK columns.</li>
+                        <li>Attributes that describe the relationship (not either entity alone) belong in the junction table.</li>
+                        <li>When uncertain about cardinality: ask both directions — "Can one A have many B?" AND "Can one B have many A?"</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Lucidchart — Database Design Tutorial (lucidchart.com/pages/database-diagram/database-design)</li>
+                    <li>diagrams.net — free ERD tool (app.diagrams.net)</li>
+                    <li>StudyTonight — ER Model (studytonight.com/dbms/entity-relationship-model.php)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <!--   WEEK 9  -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Normalization: 1NF, 2NF, 3NF &amp; BCNF</h2>
+                <p>Learn normalization theory and practice — systematically eliminate data redundancy and anomalies from database designs.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Data anomalies</strong> — Update anomaly (one fact requires updating many rows), Insert anomaly (cannot insert valid data because unrelated required data is missing), Delete anomaly (deleting data accidentally destroys other valid data).</li>
+                    <li><strong>Functional dependencies</strong> — "A → B" means A uniquely determines B; e.g., <code>student_id → student_name</code>.</li>
+                    <li><strong>First Normal Form (1NF)</strong> — each column must contain only atomic (indivisible) values; no repeating groups or arrays in a cell; each row uniquely identifiable.</li>
+                    <li><strong>Second Normal Form (2NF)</strong> — must be in 1NF AND every non-key attribute must be fully functionally dependent on the ENTIRE primary key; partial dependencies removed; only relevant when the PK is composite.</li>
+                    <li><strong>Third Normal Form (3NF)</strong> — must be in 2NF AND no non-key attribute should transitively depend on the PK through another non-key attribute.</li>
+                    <li><strong>Boyce-Codd Normal Form (BCNF)</strong> — stricter version of 3NF; every determinant must be a superkey; handles rare anomalies 3NF misses.</li>
+                    <li><strong>Denormalization</strong> — deliberately introducing redundancy for performance in read-heavy systems; common in data warehouses.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Normalization is the theoretical core of database design. Interview questions on normalization are extremely common in DBMS courses and technical interviews. More practically: a normalized schema prevents entire categories of bugs from ever existing. This week gives you both the theory (to pass exams) and the practical skill (to apply it in EduBase).</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Data anomalies — study one concrete example of all three anomaly types on the same table.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Functional dependencies — practice writing FD sets for 3 given relations.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>1NF — find and fix violations in 5 example tables.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>2NF — partial dependency analysis; decomposition steps.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>3NF — transitive dependency analysis; decomposition steps.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>BCNF — edge case analysis. Begin normalizing a "Student_Subject_Teacher_Room" mega-table.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Complete the normalization to 3NF/BCNF. Mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Given the following single denormalized table:</p>
+                    <pre class="rm-code">StudentCourseGrade(student_id, student_name, student_email,
+dept_id, dept_name, course_id, course_name, credits,
+faculty_id, faculty_name, semester, grade)</pre>
+                    <p>Step by step: (1) Identify all functional dependencies; (2) Show why it violates 1NF, 2NF, and 3NF with specific anomaly examples; (3) Decompose to 1NF; (4) Decompose to 2NF; (5) Decompose to 3NF; (6) Verify each resulting table is in 3NF. Push as <code>week09_normalization.md</code> with SQL CREATE TABLE statements for the final normalized tables.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Memorizing the normal form definitions without understanding what problem each solves.</li>
+                        <li>Confusing partial dependency (2NF issue) with transitive dependency (3NF issue).</li>
+                        <li>Forgetting that 2NF is only relevant when the primary key is composite.</li>
+                        <li>Over-normalizing — creating too many small tables when the joined query is rarely needed.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>For each normal form, always start by asking: "What problem does this form solve?"</li>
+                        <li>Draw the FD diagram; partial dependency means an FD arrow starts from only PART of the composite PK; transitive dependency means a non-key column points to another non-key column.</li>
+                        <li>Normalization to 3NF is the standard for OLTP systems; going further should be justified by specific anomaly scenarios.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Guru99 — Database Normalization (guru99.com/database-normalization.html)</li>
+                    <li>StudyTonight — Normalization (studytonight.com/dbms/database-normalization.php)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 10 -->
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Implementing Schemas: Keys, Constraints, Indexes &amp; Referential Integrity</h2>
+                <p>Translate a normalized ERD into a complete, production-quality MySQL schema with proper keys, all constraint types, foreign key relationships, and performance indexes.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Translating ERD to DDL</strong> — start with tables that have no FKs, then add tables with FKs in dependency order.</li>
+                    <li><strong>Composite primary keys</strong> — <code>PRIMARY KEY (col1, col2)</code>; common in junction tables.</li>
+                    <li><strong>Foreign key creation syntax</strong> — <code>FOREIGN KEY (col) REFERENCES other_table(other_col)</code>; always name FK constraints explicitly: <code>CONSTRAINT fk_name FOREIGN KEY ...</code></li>
+                    <li><strong>Referential integrity actions</strong> — <code>RESTRICT</code> (default), <code>CASCADE</code>, <code>SET NULL</code>, <code>NO ACTION</code>.</li>
+                    <li><strong>Composite UNIQUE constraints</strong> — <code>UNIQUE KEY uq_enrollment (student_id, course_id, semester)</code> — the COMBINATION must be unique.</li>
+                    <li><strong>Indexes: <code>CREATE INDEX</code>, <code>SHOW INDEX</code></strong> — B-Tree index (default); UNIQUE index; index all FK columns manually (MySQL does NOT auto-index FK columns).</li>
+                    <li><strong>When to add an index</strong> — columns frequently in WHERE, JOIN ON, and ORDER BY; FK columns; email columns. Index trade-off: speeds up reads, slows writes.</li>
+                    <li><strong><code>EXPLAIN SELECT ...</code></strong> — shows query execution plan; key fields: <code>type</code> (ALL = full table scan = slow), <code>key</code> (which index was used), <code>rows</code> (estimated rows examined).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> This week bridges design and implementation. A perfectly normalized ERD that is poorly implemented in SQL — missing indexes on FK columns, no referential integrity constraints, wrong cascade behaviors — will cause performance problems and data integrity issues in production.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Translate the Week 8 ERD to CREATE TABLE statements. Start with tables that have no FKs, then add FK tables in dependency order.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Add all foreign key constraints. Test referential integrity by trying to insert a row with an invalid FK value.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Add composite UNIQUE constraints. Test violation behavior.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Add CHECK constraints. Index all FK columns manually.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>EXPLAIN basics — run EXPLAIN on 5 queries; identify table scans.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Add indexes to frequently queried columns. Re-run EXPLAIN; observe the change.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Load sample data into all tables. Test all constraints with valid and invalid data. Mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Implement the fully normalized EduBase schema from Weeks 8–9 in MySQL. Requirements: all tables with correct data types, all PKs (including composite where appropriate), all FK constraints named explicitly, composite UNIQUE constraints where needed, CHECK constraints on age/grade/year columns, indexes on all FK columns plus email columns, <code>EXPLAIN</code> output documented for 2 queries. Push all DDL as <code>week10_schema/create_schema.sql</code>.</p>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MySQL Tutorial — Foreign Keys (mysqltutorial.org/mysql-basics/mysql-foreign-key)</li>
+                    <li>Use The Index, Luke (use-the-index-luke.com) — best free resource on database indexing</li>
+                    <li>MySQL EXPLAIN documentation (dev.mysql.com/doc/refman/8.0/en/explain.html)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Advanced SQL: Views, Procedures, Transactions &amp; Window Functions</h2>
+            <p>Weeks 11 through 13 add the professional database programming layer: reusable views and stored procedures, ACID-compliant transactions, and SQL's most powerful analytical features — window functions and Common Table Expressions. These are the skills tested in senior SQL interviews and used daily by database engineers.</p>
+        </div>
+
+
+        <!-- WEEK 11 -->
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Views &amp; Stored Procedures</h2>
+                <p>Create reusable database objects — views for simplified querying and stored procedures for encapsulated, reusable database logic.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Views</strong> — a saved SELECT query stored as a named database object; behaves like a virtual table; simplifies complex joins, hides sensitive columns, provides a stable interface while the underlying schema can change.</li>
+                    <li><strong><code>CREATE VIEW</code>, <code>ALTER VIEW</code>, <code>DROP VIEW</code></strong> — query a view with <code>SELECT * FROM view_name</code>.</li>
+                    <li><strong>Updatable vs non-updatable views</strong> — updatable views require a single base table with no aggregates, DISTINCT, GROUP BY, or joins.</li>
+                    <li><strong>Stored procedures</strong> — encapsulated, reusable database logic; <code>DELIMITER $$</code> required before <code>CREATE PROCEDURE</code>.</li>
+                    <li><strong>Parameters: <code>IN</code>, <code>OUT</code>, <code>INOUT</code></strong> — IN: value passed into procedure; OUT: return value to caller; INOUT: read and update.</li>
+                    <li><strong>Variables in procedures</strong> — <code>DECLARE v_count INT DEFAULT 0;</code> inside the procedure body.</li>
+                    <li><strong>Conditional logic</strong> — <code>IF condition THEN ... ELSEIF ... ELSE ... END IF;</code></li>
+                    <li><strong>Loops</strong> — <code>WHILE</code>, <code>LOOP</code>.</li>
+                    <li><strong>User-defined functions (basic)</strong> — similar to a procedure but must return a value with <code>RETURN</code>; can be used inline in SQL expressions.</li>
+                    <li><strong>Error handling</strong> — <code>DECLARE EXIT HANDLER FOR SQLEXCEPTION ROLLBACK;</code></li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Views and stored procedures are the building blocks of a database application layer. In production systems, applications often interact with the database exclusively through views and stored procedures — not direct table access. This enforces security, business rules, and a stable API even as the underlying schema evolves.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Views — create 3 views on sakila/EduBase databases. Query them. Observe that they reflect updated underlying data.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Views — create a view that hides sensitive columns. Test updatable view.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>DELIMITER. First stored procedure: <code>CALL sp_hello();</code> — prints "Hello World" via SELECT.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>IN parameter — <code>CALL sp_get_student(101)</code> returns that student's data. OUT parameter.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Conditional logic (IF/CASE) in procedures. Write a procedure that categorizes student grades.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>WHILE loop procedure. User-defined function.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Create 5 views and 3 procedures for EduBase. Mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Create the 4 EduBase views (<code>v_student_report</code>, <code>v_course_summary</code>, <code>v_faculty_workload</code>, <code>v_fee_defaulters</code>) and the 4 stored procedures (<code>sp_enroll_student</code>, <code>sp_record_mark</code>, <code>sp_calculate_gpa</code>, <code>sp_generate_report</code>). Document each with a comment block explaining parameters and return values. Push as <code>week11_views_procedures.sql</code>.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Forgetting <code>DELIMITER $$</code> before <code>CREATE PROCEDURE</code> — causes syntax errors from the semicolons inside the body.</li>
+                        <li>Confusing views (a saved SELECT — virtual) with materialized views (a physical snapshot — MySQL does not support natively).</li>
+                        <li>Passing an OUT parameter variable without the <code>@</code> prefix in the CALL statement.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Template for every stored procedure: <code>DELIMITER $$ CREATE PROCEDURE name(...) BEGIN ... END $$ DELIMITER ;</code></li>
+                        <li>MySQL views are always virtual (computed at query time); for a physical snapshot, manually INSERT INTO a separate table.</li>
+                        <li>Call syntax for OUT: <code>CALL sp_calc_gpa(101, @result); SELECT @result;</code></li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MySQL Tutorial — Views (mysqltutorial.org/mysql-views)</li>
+                    <li>MySQL Tutorial — Stored Procedures (mysqltutorial.org/mysql-stored-procedure)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 12 -->
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Transactions, ACID Properties &amp; Concurrency</h2>
+                <p>Understand and implement database transactions — ensuring that multi-step operations either fully succeed or fully fail, preventing partial data corruption.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What is a transaction</strong> — a sequence of SQL statements treated as a single unit; either ALL succeed (COMMIT) or ALL are undone (ROLLBACK); example: bank transfer = debit account A AND credit account B — both must succeed or neither should.</li>
+                    <li><strong>ACID properties</strong> — Atomicity (all or nothing), Consistency (valid state to valid state), Isolation (concurrent transactions behave as if serial), Durability (committed data survives crashes).</li>
+                    <li><strong><code>START TRANSACTION</code>, <code>COMMIT</code>, <code>ROLLBACK</code></strong> — manual transaction control.</li>
+                    <li><strong>SAVEPOINT and partial rollback</strong> — <code>SAVEPOINT name</code>; <code>ROLLBACK TO SAVEPOINT name</code> undoes back to that point without rolling back the entire transaction.</li>
+                    <li><strong>Auto-commit mode</strong> — MySQL default is autocommit=1; every statement is automatically committed; use <code>START TRANSACTION</code> to manage manually.</li>
+                    <li><strong>Concurrency problems</strong> — dirty read, non-repeatable read, phantom read.</li>
+                    <li><strong>Isolation levels</strong> — READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ (MySQL InnoDB default), SERIALIZABLE.</li>
+                    <li><strong>Deadlocks</strong> — two transactions each hold a lock the other needs; MySQL InnoDB detects and automatically rolls back the "lighter" transaction.</li>
+                    <li><strong>Transactions in stored procedures</strong> — <code>DECLARE EXIT HANDLER FOR SQLEXCEPTION ROLLBACK;</code></li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Transactions are what make databases safe for financial and business-critical operations. Without proper transaction handling, a network failure during a bank transfer could debit one account without crediting the other — losing money permanently. Understanding ACID and isolation levels is also a standard interview topic for any backend or data engineering role.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Transaction concept. Simulate a bank transfer: START TRANSACTION, debit one account, credit another, COMMIT. Verify.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>ROLLBACK — simulate a failed transfer; verify both accounts remain unchanged.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>SAVEPOINT. Partial rollback simulation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Auto-commit behavior — toggle and observe the difference.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Isolation levels — read about all four; set different levels and observe behavior with concurrent connections.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Deadlock simulation — open two Workbench connections, create a deadlock, observe MySQL's automatic resolution.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Transactions in stored procedures — add error handling with DECLARE HANDLER. Mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Bank transfer simulation: create an <code>accounts</code> table. Write a stored procedure <code>sp_transfer(from_id, to_id, amount)</code> that: (1) checks the from_account has sufficient balance, (2) debits the from_account, (3) credits the to_account, (4) logs the transfer to a <code>transfer_log</code> table — all inside a single transaction with proper ROLLBACK on failure. Demonstrate COMMIT (success) and ROLLBACK (insufficient funds) scenarios. Push as <code>week12_transactions.sql</code>.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Thinking that because MySQL has autocommit, all operations are safe — autocommit means each individual statement is a micro-transaction; multi-step operations still need explicit transactions.</li>
+                        <li>Not handling transaction errors in stored procedures — if the procedure throws an error mid-transaction, the transaction may remain open.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Any operation involving multiple related updates (especially financial) must be wrapped in <code>START TRANSACTION ... COMMIT</code> explicitly.</li>
+                        <li>Use <code>DECLARE EXIT HANDLER FOR SQLEXCEPTION ROLLBACK;</code> in stored procedures to auto-rollback on any error.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MySQL Tutorial — Transactions (mysqltutorial.org/mysql-basics/mysql-transaction)</li>
+                    <li>MySQL Reference — InnoDB Isolation Levels (dev.mysql.com/doc/refman/8.0/en/innodb-transaction-isolation-levels.html)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 34 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 13 -->
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Window Functions, CTEs &amp; Advanced Analytics</h2>
+                <p>Learn SQL's most powerful analytical features — window functions and Common Table Expressions — to write elegant, high-performance analytical queries.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Common Table Expressions (CTEs) with <code>WITH</code></strong> — a named temporary result set visible only for the duration of the query; makes complex queries readable by breaking them into named steps.</li>
+                    <li><strong>Recursive CTEs</strong> — a CTE that references itself; used for hierarchical data (org charts, category trees); requires an anchor member and a recursive member joined with UNION ALL.</li>
+                    <li><strong>Window functions: <code>OVER()</code> clause</strong> — unlike GROUP BY which collapses rows, a window function computes an aggregate OVER a set of related rows while retaining all individual rows.</li>
+                    <li><strong><code>PARTITION BY</code></strong> — divides rows into groups for the window function; similar to GROUP BY but doesn't collapse rows.</li>
+                    <li><strong>Ranking functions</strong> — <code>ROW_NUMBER()</code> (unique sequential numbers), <code>RANK()</code> (ties get same rank, next rank skipped: 1,2,2,4), <code>DENSE_RANK()</code> (ties don't skip: 1,2,2,3), <code>NTILE(n)</code> (divide into n buckets).</li>
+                    <li><strong>Aggregate window functions</strong> — <code>SUM() OVER()</code>, <code>AVG() OVER()</code>, <code>COUNT() OVER()</code> — running totals, moving averages.</li>
+                    <li><strong>Offset functions</strong> — <code>LAG(col, n)</code> returns value from n rows before; <code>LEAD(col, n)</code> returns value from n rows after; used for "compared to previous period" calculations.</li>
+                    <li><strong>Frame specifications</strong> — <code>ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW</code> — cumulative sum up to each row.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Window functions and CTEs are SQL's most powerful analytical tools. "Rank students by GPA within each department", "show each course's enrollment alongside the department total", "running total of fees collected per month" — these require window functions. CTEs make deeply nested subqueries readable and maintainable. These are the features that separate intermediate SQL from advanced SQL.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>CTEs — rewrite 3 subquery-heavy queries from Week 6 as CTEs. Compare readability.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Chained CTEs (multiple WITH clauses). Build a query step-by-step with 3 CTEs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Recursive CTE — organizational hierarchy example. Trace the recursion by hand for 3 levels.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Window functions — ROW_NUMBER, RANK, DENSE_RANK. Rank students by GPA within each department.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Aggregate window functions — running totals, moving averages. SUM OVER PARTITION BY.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>LAG and LEAD — "revenue compared to last month", "next exam date".</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>10-query analytical challenge. Mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>10 advanced analytical queries on EduBase or the <code>employees</code> sample database: (1) Rank students by GPA per department using DENSE_RANK; (2) Running total of fees collected per month; (3) Show each course's enrollment count alongside the department's total enrollment; (4) Show each student's mark alongside the class average for that exam; (5) Find month-over-month enrollment change using LAG; (6) Top 3 students per department using CTEs + ROW_NUMBER; (7) Department hierarchy using recursive CTE; (8–10): 3 more of your design. Push as <code>week13_advanced_queries.sql</code>.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Confusing RANK() and DENSE_RANK() — forgetting that RANK skips numbers after ties.</li>
+                        <li>Using GROUP BY when window functions are needed — GROUP BY collapses rows; window functions preserve them.</li>
+                        <li>Recursive CTEs without a termination condition — causes infinite recursion; always add a <code>WHERE depth &lt; n</code> or similar limit.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Rule: if you need per-row calculations that reference other rows in the same group → use window functions; if you need one result per group → use GROUP BY.</li>
+                        <li>Always test recursive CTEs with a LIMIT clause first to observe the first few levels before removing the limit.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Mode SQL — Window Functions Tutorial (mode.com/sql-tutorial/sql-window-functions)</li>
+                    <li>PostgreSQL Window Functions Docs (postgresql.org/docs/current/tutorial-window.html) — excellent explanation; syntax same in MySQL 8+</li>
+                    <li>SQLZoo — Window Functions (sqlzoo.net/wiki/Window_functions)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-section-box">
+            <h2>Phase 5 — EduBase Capstone Build &amp; Presentation</h2>
+            <p>Weeks 14 and 15 bring everything together. Week 14 implements the complete EduBase database with all tables, sample data, views, and stored procedures. Week 15 optimizes performance, writes the data dictionary, and prepares a polished presentation and viva.</p>
+        </div>
+
+
+        <!--  WEEK 14 -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — EduBase Full Implementation</h2>
+                <p>Implement the complete EduBase database system — all tables, all constraints, 100+ students, 30+ courses, 300+ enrollments, all views, procedures, and the complete query library.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Finalize schema. Run the complete DDL script (<code>create_schema.sql</code>) fresh on a new database. Verify all tables and constraints.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Load sample data — departments, faculty, rooms first; then students, courses; then enrollments, marks, attendance, fees.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Verify data integrity — foreign key relationships hold; constraints catch bad data.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Run all views — confirm correct output. Debug any view issues.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Run all stored procedures — test with valid and invalid inputs. Confirm error handling.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Run the complete query library (25+ queries). Verify all return expected results.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Run EXPLAIN on 5 complex queries. Add any missing indexes. Document EXPLAIN output.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> All 13 previous weeks converge here. Running the full schema fresh on a new database — with no prior state — is the real test of whether your SQL scripts are complete, correct, and self-contained. Bugs that were hidden by accumulated state become visible immediately.</p>
+                </div>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 15 -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Query Optimization, Documentation &amp; Final Presentation</h2>
+                <p>Optimize EduBase for performance, finalize all documentation, and prepare a polished presentation and viva readiness.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Index strategy review</strong> — run EXPLAIN on all 25+ queries; identify any full table scans; add missing indexes.</li>
+                    <li><strong><code>EXPLAIN</code> and <code>EXPLAIN ANALYZE</code></strong> (MySQL 8.0.18+) — detailed execution plan analysis.</li>
+                    <li><strong>Query rewriting for performance</strong> — rewrite the 3 slowest queries using CTEs or index-friendly patterns; re-run EXPLAIN to confirm improvement.</li>
+                    <li><strong>Data dictionary</strong> — one table per entity, one row per column, describing type, constraint, and purpose.</li>
+                    <li><strong>GitHub repository organization</strong> — organize all .sql files; export ERD; write README with setup instructions and query descriptions.</li>
+                    <li><strong>Demo preparation</strong> — 5-minute demo: connect → show ERD → show sample queries → run a stored procedure → show output table.</li>
+                </ol>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Run EXPLAIN on all 25+ queries in the query library. Identify any full table scans. Add missing indexes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Rewrite the 3 slowest queries. Re-run EXPLAIN to confirm improvement.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Write the complete data dictionary: one table per entity, one row per column, describing type, constraint, and purpose.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Finalize GitHub: organize all .sql files, export ERD, write README with setup instructions and query descriptions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Update project website with screenshots, query examples, and the ERD.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Prepare the 5-minute demo: connect → show ERD → show sample queries → run a stored procedure → show output table.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Rehearse demo ×3. Practice answering all viva questions. Final commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Demoing with test/garbage data instead of realistic sample data — "AAAA BBBBB" as a student name in a demo is unprofessional.</li>
+                        <li>Not testing the GitHub README's "how to run" instructions on a fresh machine before the demo.</li>
+                        <li>Skipping EXPLAIN entirely and not being able to answer "how would this query perform on a million rows?"</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Use realistic, plausible sample data — generate some using mockaroo.com if needed.</li>
+                        <li>Ask a friend to follow your README from scratch and report any gaps.</li>
+                        <li>Run EXPLAIN on at least 3 queries and be ready to discuss the output during viva.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Use The Index, Luke (use-the-index-luke.com)</li>
+                    <li>MySQL EXPLAIN documentation (dev.mysql.com/doc/refman/8.0/en/explain.html)</li>
+                    <li>Make a README (makeareadme.com)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-card" id="capstone">
+            <div class="rm-card-header">
+                <h2>🏆 Final Capstone — EduBase: University Database Management System</h2>
+                <p>A complete, fully normalized, multi-table university database with ERD, advanced queries, views, stored procedures, transactions, and a reporting layer — ready to demo and present.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <div class="rm-highlight">
+                    <p><strong>Why EduBase?</strong> It uses every major skill from the 15-week roadmap — from basic table creation to window functions and stored procedures with transaction handling. It produces a physically real database with thousands of rows of realistic data that evaluators can query and verify. The complexity of a university system (students, courses, faculty, marks, attendance, fees) naturally exercises every SQL feature covered in the roadmap.</p>
+                </div>
+
+                <h3>EduBase Entities</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Entity</th>
+                            <th>Key Columns</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>departments</strong></td>
+                            <td>dept_id PK, dept_name, head_faculty_id FK</td>
+                            <td>Core entity; all other entities reference this</td>
+                        </tr>
+                        <tr>
+                            <td><strong>faculty</strong></td>
+                            <td>faculty_id PK, name, dept_id FK, email, designation</td>
+                            <td>One-to-many with departments</td>
+                        </tr>
+                        <tr>
+                            <td><strong>students</strong></td>
+                            <td>student_id PK, name, email, dept_id FK, enroll_year, status ENUM</td>
+                            <td>100+ rows of sample data</td>
+                        </tr>
+                        <tr>
+                            <td><strong>courses</strong></td>
+                            <td>course_id PK, course_name, credits, dept_id FK, faculty_id FK</td>
+                            <td>30+ courses across all departments</td>
+                        </tr>
+                        <tr>
+                            <td><strong>enrollments</strong></td>
+                            <td>enrollment_id PK, student_id FK, course_id FK, semester, enroll_date</td>
+                            <td>Junction table — M:N students to courses; UNIQUE on (student_id, course_id, semester)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>exams</strong></td>
+                            <td>exam_id PK, course_id FK, exam_type ENUM, exam_date, max_marks</td>
+                            <td>Multiple exams per course</td>
+                        </tr>
+                        <tr>
+                            <td><strong>marks</strong></td>
+                            <td>mark_id PK, enrollment_id FK, exam_id FK, marks_obtained, grade</td>
+                            <td>300+ rows; CHECK marks_obtained &lt;= max_marks</td>
+                        </tr>
+                        <tr>
+                            <td><strong>attendance</strong></td>
+                            <td>attendance_id PK, enrollment_id FK, date, status ENUM</td>
+                            <td>Tracks per-student per-course daily attendance</td>
+                        </tr>
+                        <tr>
+                            <td><strong>fees</strong></td>
+                            <td>fee_id PK, student_id FK, semester, amount, paid_amount, due_date, status ENUM</td>
+                            <td>Fee payment tracking</td>
+                        </tr>
+                        <tr>
+                            <td><strong>rooms</strong></td>
+                            <td>room_id PK, building, room_number, capacity, type ENUM</td>
+                            <td>Physical infrastructure</td>
+                        </tr>
+                        <tr>
+                            <td><strong>timetable</strong></td>
+                            <td>slot_id PK, course_id FK, room_id FK, day_of_week, start_time, end_time</td>
+                            <td>UNIQUE on (room_id, day_of_week, start_time) prevents double-booking</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Required Views</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>View Name</th>
+                            <th>What It Shows</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>v_student_report</code></td>
+                            <td>Student name, department, all enrolled courses, marks, GPA, attendance percentage</td>
+                        </tr>
+                        <tr>
+                            <td><code>v_course_summary</code></td>
+                            <td>Course name, faculty name, enrollment count, average mark, pass rate</td>
+                        </tr>
+                        <tr>
+                            <td><code>v_faculty_workload</code></td>
+                            <td>Faculty name, department, number of courses assigned, total enrolled students</td>
+                        </tr>
+                        <tr>
+                            <td><code>v_fee_defaulters</code></td>
+                            <td>Students with outstanding fees — name, semester, amount due, days overdue</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Required Stored Procedures</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Procedure Name</th>
+                            <th>What It Does</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>sp_enroll_student(student_id, course_id, semester)</code></td>
+                            <td>Enrolls a student — checks prerequisites, checks if already enrolled, inserts enrollment record, initializes fee record; wrapped in a transaction</td>
+                        </tr>
+                        <tr>
+                            <td><code>sp_record_mark(enrollment_id, exam_id, marks)</code></td>
+                            <td>Records a mark — validates marks &lt;= max_marks, calculates grade, inserts/updates marks table</td>
+                        </tr>
+                        <tr>
+                            <td><code>sp_calculate_gpa(student_id OUT gpa)</code></td>
+                            <td>Calculates and returns a student's cumulative GPA using weighted credit-hour average</td>
+                        </tr>
+                        <tr>
+                            <td><code>sp_generate_report(dept_id, semester)</code></td>
+                            <td>Generates a department semester report — enrollment counts, average marks, pass rates, fee collection status</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Capstone Feature Checklist</h3>
+                <ul>
+                    <li>All 11 tables created with correct data types, PKs, FKs named explicitly, UNIQUE and CHECK constraints</li>
+                    <li>ERD in Crow's Foot notation (drawio.net) — exported as PNG, matches actual schema</li>
+                    <li>Sample data: 100+ students, 10+ faculty, 5+ departments, 30+ courses, 300+ enrollments, 500+ marks</li>
+                    <li>All FK columns indexed manually</li>
+                    <li>4 views created and tested — all return correct output</li>
+                    <li>4 stored procedures created — tested with valid and invalid inputs; error handling confirmed</li>
+                    <li>25+ query library covering: basic SELECT, aggregates, JOINs, subqueries, window functions, CTEs</li>
+                    <li>EXPLAIN run on at least 5 complex queries — results documented</li>
+                    <li>Data dictionary written — all columns documented</li>
+                    <li>GitHub repo organized with all .sql files, ERD PNG, and README with setup instructions</li>
+                    <li>Realistic sample data (not placeholder text)</li>
+                    <li>5-minute demo rehearsed ×3 — all viva questions practiced</li>
+                </ul>
+
+                <h3>GitHub Repository Structure</h3>
+                <pre class="rm-code">edubase/
+├── schema/
+│   ├── 01_create_schema.sql       -- All CREATE TABLE statements
+│   ├── 02_insert_data.sql         -- All sample data INSERTs
+│   ├── 03_views.sql               -- All 4 view definitions
+│   ├── 04_procedures.sql          -- All 4 stored procedures
+│   └── 05_indexes.sql             -- Additional index creation
+├── queries/
+│   ├── basic_select.sql           -- Weeks 1-3 queries
+│   ├── aggregates.sql             -- Week 4 queries
+│   ├── joins.sql                  -- Week 5 queries
+│   ├── subqueries.sql             -- Week 6 queries
+│   └── advanced_analytics.sql     -- Week 13 window functions + CTEs
+├── docs/
+│   ├── erd.png                    -- Entity-Relationship Diagram
+│   ├── data_dictionary.md         -- All tables and columns documented
+│   └── explain_results.md         -- EXPLAIN output for 5 queries
+└── README.md                      -- Setup instructions + query guide</pre>
+
+                <h3>Viva Readiness Checklist</h3>
+                <ul>
+                    <li>Explain what a relational database is and why it's preferable to a spreadsheet</li>
+                    <li>Explain the difference between PRIMARY KEY and UNIQUE constraints</li>
+                    <li>Explain what a JOIN is and describe all JOIN types with examples</li>
+                    <li>Explain the difference between WHERE and HAVING</li>
+                    <li>Explain normalization — define 1NF, 2NF, 3NF with examples from EduBase</li>
+                    <li>Explain ACID properties and give a real-world example of why each matters</li>
+                    <li>Explain what an index is, when to add one, and what the trade-off is</li>
+                    <li>Explain the difference between a view and a stored procedure</li>
+                    <li>Run a stored procedure live and explain what it does line by line</li>
+                    <li>Run EXPLAIN on a query and interpret the output</li>
+                    <li>Explain the difference between RANK() and DENSE_RANK() with an example</li>
+                    <li>Explain what a CTE is and when to use it instead of a subquery</li>
+                </ul>
+
+                <h3>Roadmap at a Glance</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Weeks</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1. Database Foundations</td>
+                            <td>1–3</td>
+                            <td>MySQL setup, data types, constraints, complete SELECT</td>
+                        </tr>
+                        <tr>
+                            <td>2. Core SQL</td>
+                            <td>4–7</td>
+                            <td>Aggregates, JOINs, subqueries, safe DML</td>
+                        </tr>
+                        <tr>
+                            <td>3. Database Design</td>
+                            <td>8–10</td>
+                            <td>ERD, normalization, schema implementation, indexes</td>
+                        </tr>
+                        <tr>
+                            <td>4. Advanced SQL</td>
+                            <td>11–13</td>
+                            <td>Views, stored procedures, transactions, window functions, CTEs</td>
+                        </tr>
+                        <tr>
+                            <td>5. Capstone</td>
+                            <td>14–15</td>
+                            <td>EduBase full implementation, optimization, documentation, presentation</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!--  FOOTER -->
+    <footer>
+        <div class="stpart">
+                <div class="logo1">
+                    <h3>CodePath</h3>
+                    <p>Learn. Practice. Master</p>
+                </div>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+
+</body>
+</html>

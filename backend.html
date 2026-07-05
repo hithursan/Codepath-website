@@ -1,0 +1,2271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Development - 20 Week Roadmap</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+
+    <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+
+    <header class="rm-header">
+        <h1>Web Backend Development</h1>
+        <p>Complete 20-Week Learning Roadmap — Node.js, Express.js, PostgreSQL &amp; Prisma</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#week16">W16</a>
+        <a href="#week17">W17</a>
+        <a href="#week18">W18</a>
+        <a href="#week19">W19</a>
+        <a href="#week20">W20</a>
+        <a href="#capstone">Capstone</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Roadmap</h2>
+            <p>This roadmap presents a complete, structured, <strong>beginner-to-advanced learning path</strong> for <strong>Web Backend Development</strong> using <strong>Node.js, Express.js, and PostgreSQL</strong> — built and documented as a college project.</p>
+            <p>The roadmap takes a complete beginner with no prior backend or database experience and progresses step by step through internet fundamentals, JavaScript, Node.js core, Express, databases, authentication, security, testing, real-time features, deployment, and a complete capstone project.</p>
+            <p><strong>Duration:</strong> 20 weeks &nbsp;|&nbsp; <strong>Pace:</strong> Full-time (~35 hrs/week) &nbsp;|&nbsp; <strong>Stack:</strong> Node.js · Express.js · PostgreSQL · Prisma · JWT · Docker</p>
+            <p><strong>Hands-On:</strong> 19 mini-projects + 1 full capstone project (Library Management System API) &nbsp;|&nbsp; <strong>Cost:</strong> 100% free tools and resources</p>
+
+            <h3>5 Phases Overview</h3>
+            <ul>
+                <li><strong>Phase 1 (Weeks 1–4):</strong> Foundations — Web, JavaScript, and Node.js</li>
+                <li><strong>Phase 2 (Weeks 5–8):</strong> Backend Basics — Express and Databases</li>
+                <li><strong>Phase 3 (Weeks 9–12):</strong> Core Backend Skills — Auth, Validation, Testing</li>
+                <li><strong>Phase 4 (Weeks 13–16):</strong> Advanced Concepts — Databases, Security, Performance</li>
+                <li><strong>Phase 5 (Weeks 17–20):</strong> Production Readiness &amp; Capstone</li>
+            </ul>
+        </div>
+
+
+        <!--  WEEK 1 -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — How the Web Works &amp; Developer Environment Setup</h2>
+                <p>Build a correct mental model of how the internet and web work, and set up a fully working development environment.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Client-server model</strong> — what a client is, what a server is, how they communicate.</li>
+                    <li><strong>DNS</strong> — how domain names resolve to IP addresses.</li>
+                    <li><strong>HTTP/HTTPS</strong> — request line, headers, body, common methods (GET, POST, PUT, DELETE).</li>
+                    <li><strong>Ports</strong> — what a port is, common ports (80, 443, 3000).</li>
+                    <li><strong>Frontend vs. backend</strong> — roles and responsibilities.</li>
+                    <li><strong>Developer environment setup</strong> — Node.js, npm, VS Code.</li>
+                    <li><strong>Git basics</strong> — <code>init</code>, <code>add</code>, <code>commit</code>, <code>status</code>, <code>log</code>, branches, <code>.gitignore</code>.</li>
+                    <li><strong>GitHub basics</strong> — creating a repo, push, pull, remote.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Every concept in this roadmap (APIs, requests, status codes) builds on a correct understanding of HTTP and the client-server model. Skipping this leads to memorizing code without understanding <em>why</em> it works.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>How the internet works (client-server, IP, DNS) — read + notes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>HTTP deep dive (methods, headers, status codes).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Install Node.js, npm, VS Code; explore terminal basics (cd, ls/dir, mkdir).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Git basics — init, add, commit, log, branches.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>GitHub — create account, create repo, push/pull, .gitignore.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Practice tasks + write Week 1 notes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review all concepts; complete mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Run <code>node -v</code> and <code>npm -v</code> to confirm installation.</li>
+                    <li>Create a GitHub repository named <code>backend-roadmap-journal</code>.</li>
+                    <li>Make at least 5 separate commits practicing add/commit/push.</li>
+                    <li>List 10 common HTTP status codes and what they mean, from memory.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Create the <code>backend-roadmap-journal</code> GitHub repository. Add a <code>week-01.md</code> file containing: (a) a hand-drawn-style diagram of the HTTP request/response cycle, and (b) a written explanation, in your own words, of the difference between frontend and backend.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Jumping straight into coding tutorials without understanding HTTP basics.</li>
+                        <li>Ignoring Git until "later" — leads to messy, hard-to-recover project history.</li>
+                        <li>Confusing a domain name with a server.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Spend real time on Day 1–2 conceptual learning before touching any code.</li>
+                        <li>Commit to GitHub from Day 1, even for small notes.</li>
+                        <li>Use simple analogies (e.g., DNS is like a phone book) to lock in concepts.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MDN — How the Web Works</li>
+                    <li>Node.js Official Docs (nodejs.org/en/docs)</li>
+                    <li>Git Official Documentation (git-scm.com/doc)</li>
+                    <li>GitHub Skills (skills.github.com)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 2  -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — JavaScript Fundamentals (ES6+)</h2>
+                <p>Become confident writing modern JavaScript — the language that powers your entire backend.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Variables</strong> — <code>let</code>, <code>const</code>, hoisting (conceptual), primitive vs. reference types.</li>
+                    <li><strong>Operators &amp; control flow</strong> — if/else, switch.</li>
+                    <li><strong>Functions</strong> — parameters, default values, return values, arrow function syntax.</li>
+                    <li><strong>Arrays</strong> — <code>map</code>, <code>filter</code>, <code>reduce</code>, <code>forEach</code>, <code>find</code>, <code>includes</code>.</li>
+                    <li><strong>Objects</strong> — property access, shorthand syntax, destructuring, nested objects.</li>
+                    <li><strong>Spread/Rest</strong> — copying arrays/objects, combining, function rest parameters.</li>
+                    <li><strong>Template literals</strong> — string interpolation.</li>
+                    <li><strong>Scope &amp; closures</strong> — global vs. function vs. block scope; closures (conceptual introduction).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Node.js and Express are JavaScript. Weak JavaScript fundamentals are the single biggest cause of beginners getting stuck later when learning Express and async code.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Variables, data types, operators, control flow (if/else, switch).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Functions — declarations, expressions, arrow functions, default parameters.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Arrays and array methods (map, filter, reduce, forEach).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Objects, destructuring, nested data.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Template literals, spread/rest operators.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Scope and closures + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write 10 small functions using arrow function syntax.</li>
+                    <li>Given an array of objects (e.g., students with grades), use <code>filter</code> and <code>map</code> to extract specific data.</li>
+                    <li>Practice destructuring 5 different objects/arrays.</li>
+                    <li>Use the spread operator to merge two objects and two arrays.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Build a Node.js CLI script (<code>taskManager.js</code>, run via <code>node taskManager.js</code>) that manages a list of tasks stored in an array of objects. It should support adding a task, removing a task by ID, marking a task complete, and listing all tasks — all using functions and array methods (no Express yet).</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Confusing <code>var</code>/<code>let</code>/<code>const</code> scoping rules.</li>
+                        <li>Avoiding array methods and using manual <code>for</code> loops everywhere instead.</li>
+                        <li>Misunderstanding <code>this</code> (light awareness is enough at this stage).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Default to <code>const</code>, use <code>let</code> only when reassignment is needed, avoid <code>var</code> entirely.</li>
+                        <li>Deliberately practice <code>map</code>/<code>filter</code>/<code>reduce</code> even when a <code>for</code> loop feels easier.</li>
+                        <li>Revisit <code>this</code> later once you reach Express middleware in Week 5.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>javascript.info</li>
+                    <li>MDN JavaScript Guide</li>
+                    <li>freeCodeCamp JavaScript Curriculum</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 3  -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Asynchronous JavaScript &amp; the Node.js Event Loop</h2>
+                <p>Understand and confidently write asynchronous JavaScript — the foundation of how Node.js handles requests, files, and databases.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Callbacks</strong> — passing functions as arguments, callback hell example and why it's a problem.</li>
+                    <li><strong>Promises</strong> — <code>.then()</code>, <code>.catch()</code>, <code>.finally()</code>, Promise states (pending/fulfilled/rejected).</li>
+                    <li><strong>async/await</strong> — syntax, how it relates to Promises, sequential vs. parallel async calls (<code>Promise.all</code>).</li>
+                    <li><strong>Error handling</strong> — try/catch with async/await, unhandled promise rejections.</li>
+                    <li><strong>Event loop</strong> — why Node.js is "non-blocking," call stack vs. callback queue (conceptual overview).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Almost everything in backend development is asynchronous — reading files, querying databases, calling external APIs. Misunderstanding async code is the #1 source of bugs for backend beginners.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Sync vs async, introduction to callbacks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Callback hell example + Promises introduction.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Promises deep dive (<code>.then</code>, <code>.catch</code>, chaining).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>async/await syntax and rewriting Promise code.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Error handling with try/catch, <code>Promise.all</code> for parallel calls.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Event loop concept + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Rewrite a callback-based function using Promises, then again using async/await.</li>
+                    <li>Write a function using <code>setTimeout</code> wrapped in a Promise to simulate an API delay.</li>
+                    <li>Use <code>Promise.all</code> to run 3 simulated async calls in parallel and combine results.</li>
+                    <li>Deliberately remove a <code>try/catch</code> and observe the unhandled rejection error.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Build a Node.js script that simulates fetching data from 3 different "fake APIs" (each implemented as a function returning a Promise via <code>setTimeout</code>). Use <code>async/await</code> with proper <code>try/catch</code> to fetch all 3, combine their results into one object, and log it. Include at least one deliberately failing call handled gracefully.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Forgetting the <code>await</code> keyword, causing a Promise object to be logged instead of the resolved value.</li>
+                        <li>Not handling rejected Promises, causing silent failures or crashes.</li>
+                        <li>Writing nested <code>.then()</code> chains instead of using async/await for readability.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always pair <code>async/await</code> with <code>try/catch</code>.</li>
+                        <li>Test what happens when an async function fails — don't only test the success path.</li>
+                        <li>Prefer async/await over <code>.then()</code> chains for anything beyond a single step.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>javascript.info — Promises, async/await</li>
+                    <li>Node.js Event Loop Docs</li>
+                    <li>MDN — Using Promises</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 4    -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Node.js Core Concepts</h2>
+                <p>Understand Node.js itself — outside of any framework — including its module system, built-in modules, and package management.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Modules</strong> — CommonJS (<code>require</code>/<code>module.exports</code>) and ES modules (<code>import</code>/<code>export</code>).</li>
+                    <li><strong>fs module</strong> — reading/writing files, sync vs async file methods.</li>
+                    <li><strong>path module</strong> — joining/resolving file paths cross-platform.</li>
+                    <li><strong>http module</strong> — creating a server, handling requests manually, sending responses.</li>
+                    <li><strong>npm &amp; package.json</strong> — <code>npm init</code>, installing packages, dependencies vs devDependencies.</li>
+                    <li><strong>Environment variables</strong> — using a <code>.env</code> file with the <code>dotenv</code> package.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Express is built on top of Node's <code>http</code> module. Understanding Node's core mechanics first prevents Express from feeling like "magic" and makes debugging much easier later.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>What is Node.js + CommonJS modules (require/exports).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td><code>fs</code> module — reading and writing files.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>path</code> and <code>os</code> modules.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Raw <code>http</code> module — build a basic server.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Manual routing with the <code>http</code> module (if/else on <code>req.url</code>).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>npm, package.json, dotenv + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write a script that reads a local JSON file and logs its parsed content.</li>
+                    <li>Build a server using only the <code>http</code> module that responds differently to <code>/</code>, <code>/about</code>, and any other path (404).</li>
+                    <li>Create a <code>.env</code> file with a <code>PORT</code> variable and use it in your server instead of hardcoding the port.</li>
+                    <li>Run <code>npm init -y</code> and manually inspect the generated <code>package.json</code>.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Build a raw Node.js HTTP server (no Express) with simple manual routing: <code>GET /</code> returns a welcome message, <code>GET /about</code> returns project info, <code>GET /books</code> reads and returns the contents of a local <code>books.json</code> file, and any other route returns a 404 JSON response. Use a <code>.env</code> file to configure the port.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Mixing <code>require</code> and <code>import</code> syntax without configuring <code>"type": "module"</code> in package.json.</li>
+                        <li>Committing the <code>node_modules</code> folder to GitHub.</li>
+                        <li>Hardcoding the port number or secrets directly in code.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Stick to CommonJS (<code>require</code>) throughout this roadmap for consistency.</li>
+                        <li>Always create a <code>.gitignore</code> file with <code>node_modules</code> and <code>.env</code> listed.</li>
+                        <li>Use <code>dotenv</code> and commit a <code>.env.example</code> showing variable names only.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Node.js Official Docs — Modules</li>
+                    <li>Node.js Official Docs — fs</li>
+                    <li>npm Documentation</li>
+                    <li>dotenv npm package docs</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 5    -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Introduction to Express.js</h2>
+                <p>Learn Express.js — the framework you'll use for the rest of the roadmap — and understand routing and middleware.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Setup</strong> — <code>npm install express</code>, creating an <code>app</code>, <code>app.listen()</code>.</li>
+                    <li><strong>Routing</strong> — <code>app.get()</code>, <code>app.post()</code>, route parameters (<code>/users/:id</code>) vs query strings (<code>?search=term</code>).</li>
+                    <li><strong>Request/Response objects</strong> — <code>req.params</code>, <code>req.query</code>, <code>req.body</code>, <code>res.json()</code>, <code>res.status()</code>.</li>
+                    <li><strong>Middleware</strong> — <code>app.use()</code>, built-in middleware (<code>express.json()</code>), the order middleware runs in.</li>
+                    <li><strong>Dev tools</strong> — using <code>nodemon</code> for auto-restart during development.</li>
+                    <li><strong>Project structure</strong> — separating routes into their own files.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Express is the industry-standard Node.js framework. Nearly every concept for the rest of the roadmap (auth, validation, error handling) is implemented as Express middleware or routes.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Install Express, build a minimal "Hello World" server, set up nodemon.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Basic routing — GET, POST, PUT, DELETE routes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Route parameters and query strings.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Request and response object deep dive.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Middleware concept, <code>express.json()</code>, custom middleware example.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Organizing routes into separate files + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build 5+ routes: home, about, a dynamic route with a parameter, a route using query strings, and a POST route.</li>
+                    <li>Write a simple custom middleware function that logs the request method and URL for every request.</li>
+                    <li>Test all routes using Postman or Thunder Client.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Build an Express server with at least 5 routes: <code>GET /</code> (welcome message), <code>GET /about</code>, <code>GET /users/:id</code> (returns the ID), <code>GET /search?term=...</code> (returns the query value), and <code>POST /echo</code> (returns the JSON body sent). Add a custom logging middleware that prints every incoming request.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Forgetting <code>express.json()</code>, so <code>req.body</code> is <code>undefined</code> on POST requests.</li>
+                        <li>Writing all routes and logic in a single massive file.</li>
+                        <li>Not restarting the server after changes (forgetting nodemon).</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always add <code>app.use(express.json())</code> near the top of your app setup.</li>
+                        <li>Start separating routes into files from this week, even if the project is small.</li>
+                        <li>Use <code>nodemon</code> from Day 1 instead of manually restarting.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Express.js Official Docs (expressjs.com)</li>
+                    <li>Express Routing Guide</li>
+                    <li>freeCodeCamp Express tutorials</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 6  -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — REST API Design &amp; CRUD (In-Memory)</h2>
+                <p>Learn REST API design principles and build a complete CRUD API using in-memory data.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>REST principles</strong> — statelessness, resource-based URLs, uniform interface.</li>
+                    <li><strong>CRUD mapping</strong> — POST=Create, GET=Read, PUT/PATCH=Update, DELETE=Delete.</li>
+                    <li><strong>Status codes</strong> — 200, 201, 204, 400, 401, 403, 404, 500 — when to use each.</li>
+                    <li><strong>URL design</strong> — <code>/books</code> vs <code>/books/:id</code>, avoiding verbs in URLs.</li>
+                    <li><strong>Postman</strong> — creating requests, collections, environments.</li>
+                    <li><strong>Project structure</strong> — separating routes from controller logic.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> REST API design is the single most important practical skill in backend development — it's how almost every web and mobile app communicates with its server, and it's heavily tested in interviews.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>REST principles + CRUD mapping + status codes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Design the Books API URL structure on paper; set up Postman.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Implement GET all and GET one (by ID) routes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Implement POST (create) and PUT (update) routes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Implement DELETE route; handle "not found" cases properly.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Refactor into routes/controllers structure + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + export Postman collection.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write down the correct status code for 8 different scenarios.</li>
+                    <li>Build all 5 CRUD endpoints for a "Books" resource using an in-memory array.</li>
+                    <li>Test every endpoint in Postman, including error cases.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Build a complete in-memory CRUD REST API for "Library Books" with routes: <code>GET /books</code>, <code>GET /books/:id</code>, <code>POST /books</code>, <code>PUT /books/:id</code>, <code>DELETE /books/:id</code>. Organize the code into <code>routes/</code> and <code>controllers/</code> folders. Export a Postman collection covering all endpoints.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Returning <code>200 OK</code> for every response, even errors.</li>
+                        <li>Using verbs in URLs (e.g., <code>/getAllBooks</code> instead of <code>GET /books</code>).</li>
+                        <li>Putting all logic directly inside route handlers instead of controllers.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Memorize and consistently apply the core status codes (200, 201, 400, 404, 500).</li>
+                        <li>Always design URLs around resources (nouns), with HTTP verbs indicating the action.</li>
+                        <li>Practice the routes/controllers separation now — it scales much better later.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MDN — HTTP Response Status Codes</li>
+                    <li>REST API Tutorial (restfulapi.net)</li>
+                    <li>Postman Learning Center</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 7 -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — SQL &amp; PostgreSQL Fundamentals</h2>
+                <p>Learn relational database concepts and SQL well enough to design and query a real database confidently.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Setup</strong> — installing PostgreSQL, using <code>psql</code> or pgAdmin.</li>
+                    <li><strong>DDL</strong> — <code>CREATE TABLE</code>, data types (<code>SERIAL</code>, <code>VARCHAR</code>, <code>INTEGER</code>, <code>BOOLEAN</code>, <code>TIMESTAMP</code>).</li>
+                    <li><strong>DML</strong> — <code>INSERT INTO</code>, <code>SELECT</code>, <code>UPDATE</code>, <code>DELETE</code>.</li>
+                    <li><strong>Filtering/Sorting</strong> — <code>WHERE</code>, <code>ORDER BY</code>, <code>LIMIT</code>.</li>
+                    <li><strong>Keys</strong> — primary key concept, foreign key concept, referential integrity.</li>
+                    <li><strong>Joins</strong> — <code>INNER JOIN</code> (focus here), brief mention of <code>LEFT JOIN</code>.</li>
+                    <li><strong>Constraints</strong> — <code>NOT NULL</code>, <code>UNIQUE</code>, <code>DEFAULT</code>.</li>
+                    <li><strong>Normalization</strong> — conceptual overview of 1NF–3NF.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> SQL is a universal skill required across nearly all backend roles, regardless of programming language. Poor schema design is one of the most common causes of bugs and performance problems in real applications.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Install PostgreSQL + pgAdmin; relational database concepts.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td><code>CREATE TABLE</code>, data types, constraints.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>INSERT</code>, <code>SELECT</code>, <code>UPDATE</code>, <code>DELETE</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td><code>WHERE</code>, <code>ORDER BY</code>, <code>LIMIT</code>, filtering practice.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Primary keys, foreign keys, relationships.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td><code>INNER JOIN</code> + normalization concepts + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Create 3 related tables by hand using <code>CREATE TABLE</code>.</li>
+                    <li>Write and run at least 15 different SQL queries covering CRUD and filtering.</li>
+                    <li>Write 3 <code>INNER JOIN</code> queries combining data from 2 tables.</li>
+                    <li>Practice designing a schema on paper before creating it in SQL.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Design and create a PostgreSQL database for a "Library Management System" with at least 3 related tables: <code>books</code>, <code>members</code>, and <code>borrow_records</code> (with proper foreign keys). Write and execute 15+ SQL queries demonstrating CRUD operations, filtering, sorting, and at least 3 joins.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Creating tables without planning relationships first.</li>
+                        <li>Forgetting primary keys or using the wrong data types.</li>
+                        <li>Writing overly complex queries before mastering basic <code>SELECT</code>/<code>WHERE</code>.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always sketch an ER (entity-relationship) diagram before creating tables.</li>
+                        <li>Use <code>SERIAL</code>/auto-incrementing IDs as primary keys by default for beginners.</li>
+                        <li>Master basic queries thoroughly before attempting joins or subqueries.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>PostgreSQL Official Tutorial</li>
+                    <li>SQLBolt — Interactive SQL Lessons (sqlbolt.com)</li>
+                    <li>Mode SQL Tutorial</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Connecting Express to PostgreSQL with Prisma ORM</h2>
+                <p>Connect your Express application to a real PostgreSQL database using Prisma, replacing in-memory data with persistent storage.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>ORM concept</strong> — mapping database tables to code objects, why ORMs reduce raw SQL writing.</li>
+                    <li><strong>Prisma setup</strong> — <code>npm install prisma</code>, <code>npx prisma init</code>, configuring <code>DATABASE_URL</code> in <code>.env</code>.</li>
+                    <li><strong>Schema</strong> — defining models, field types, relations (<code>@relation</code>).</li>
+                    <li><strong>Migrations</strong> — <code>npx prisma migrate dev</code>, keeping schema and database in sync.</li>
+                    <li><strong>Prisma Client</strong> — <code>create</code>, <code>findMany</code>, <code>findUnique</code>, <code>update</code>, <code>delete</code>.</li>
+                    <li><strong>Integration</strong> — using Prisma Client inside Express controllers.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> This week bridges your SQL knowledge (Week 7) with practical, modern application development. Prisma is widely used in real Node.js projects because it combines safety, speed, and developer productivity.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>ORM concept + Prisma installation and <code>.env</code> setup.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Define <code>Book</code> and <code>Author</code> models with a relation in <code>schema.prisma</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Run migrations; inspect the resulting tables in pgAdmin.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Practice Prisma Client CRUD operations in a standalone script.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Rebuild the Week 6 Books API routes/controllers using Prisma instead of an array.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Test all rebuilt endpoints in Postman + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Define at least 2 related models (e.g., <code>Book</code> belongs to <code>Author</code>) in <code>schema.prisma</code>.</li>
+                    <li>Run <code>npx prisma migrate dev</code> and confirm the tables exist in pgAdmin.</li>
+                    <li>Write a standalone script using Prisma Client to create, read, update, and delete records.</li>
+                    <li>Use <code>npx prisma studio</code> to visually browse your database.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Rebuild the "Library Books" API from Week 6 so it's fully backed by PostgreSQL via Prisma. Implement a <code>Book</code>-<code>Author</code> relationship (one author has many books). All 5 CRUD endpoints should now read/write real database records instead of an in-memory array.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Editing <code>schema.prisma</code> but forgetting to run a migration afterward.</li>
+                        <li>Hardcoding database credentials instead of using <code>.env</code>.</li>
+                        <li>Not understanding that the Prisma schema and the live database are kept in sync only through migrations.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Make "edit schema → migrate → test" a strict habit, every time.</li>
+                        <li>Always use <code>process.env.DATABASE_URL</code> via <code>.env</code>, never commit <code>.env</code> to GitHub.</li>
+                        <li>Use <code>npx prisma studio</code> regularly to visually confirm your database matches expectations.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Prisma Official Documentation</li>
+                    <li>Prisma Quickstart Guide</li>
+                    <li>PostgreSQL Official Docs</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 9  -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Authentication &amp; Authorization</h2>
+                <p>Implement secure user registration, login, and route protection using industry-standard practices.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Authentication</strong> — registration flow, login flow, verifying credentials.</li>
+                    <li><strong>bcrypt</strong> — hashing passwords before storage, comparing hashed passwords on login.</li>
+                    <li><strong>JWT</strong> — structure (header.payload.signature), signing and verifying tokens, setting expiration.</li>
+                    <li><strong>Middleware</strong> — writing an <code>authenticate</code> middleware that checks for a valid token.</li>
+                    <li><strong>RBAC</strong> — storing a <code>role</code> field (e.g., member/admin), writing an <code>authorize(role)</code> middleware.</li>
+                    <li><strong>Sessions vs. tokens</strong> — brief conceptual comparison, why this roadmap uses JWT.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Nearly every real backend application needs user accounts and protected resources. Authentication is also one of the most frequently tested topics in technical interviews.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Authentication vs authorization concepts; install bcrypt.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Build the registration endpoint with password hashing.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Learn JWT structure; install and configure <code>jsonwebtoken</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Build the login endpoint that verifies password and issues a JWT.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Write authentication middleware to protect routes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Write role-based authorization middleware (admin vs member) + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Hash a password with bcrypt and verify it correctly compares on login.</li>
+                    <li>Decode a sample JWT manually at jwt.io and identify its 3 parts.</li>
+                    <li>Build middleware that rejects requests without a valid token (401 response).</li>
+                    <li>Build middleware that rejects non-admin users from an admin-only route (403 response).</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Add full authentication to your Library API: a <code>User</code> model with a <code>role</code> field, <code>POST /auth/register</code>, <code>POST /auth/login</code> (returns a JWT), authentication middleware protecting all write routes, and authorization middleware restricting book creation/deletion to admins only. Ensure password hashes are never returned in any API response.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Storing plain-text passwords.</li>
+                        <li>Returning the password hash field in API responses.</li>
+                        <li>Using a weak, guessable JWT secret.</li>
+                        <li>Not checking token expiration.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always hash passwords with bcrypt before saving — never store raw passwords.</li>
+                        <li>Explicitly exclude sensitive fields (like password hashes) from API responses.</li>
+                        <li>Use a long, random JWT secret stored in <code>.env</code>, never hardcoded.</li>
+                        <li>Set a reasonable token expiration (e.g., 1 day) and test expired-token behavior.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>jwt.io — JWT Debugger &amp; Introduction</li>
+                    <li>OWASP Authentication Cheat Sheet</li>
+                    <li>bcrypt npm package docs</li>
+                    <li>jsonwebtoken npm package docs</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 10  -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Validation, Error Handling &amp; Middleware Patterns</h2>
+                <p>Make your API production-quality by validating input properly and handling errors gracefully and consistently.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Validation</strong> — using <code>express-validator</code> or <code>zod</code> to validate request bodies.</li>
+                    <li><strong>Error handling</strong> — Express's error-handling middleware signature <code>(err, req, res, next)</code>.</li>
+                    <li><strong>Custom errors</strong> — creating an <code>AppError</code> class with a status code and message.</li>
+                    <li><strong>Async error handling</strong> — wrapping async route handlers to catch errors automatically.</li>
+                    <li><strong>Logging</strong> — using <code>morgan</code> for request logging.</li>
+                    <li><strong>Structure</strong> — organizing into <code>routes/</code>, <code>controllers/</code>, <code>services/</code>, <code>middleware/</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> This is the week where your code starts looking like a professional, production-grade application. Consistent error handling and validation are major signals of code quality in interviews and code reviews.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Install and learn <code>express-validator</code>/<code>zod</code>; validate the "create book" route.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Apply validation to all remaining write routes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Build a custom <code>AppError</code> class and centralized error-handling middleware.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Wrap async route handlers to catch and forward errors properly.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Add <code>morgan</code> logging; test various error scenarios.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Refactor folder structure (routes/controllers/services/middleware) + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Add validation rules (required fields, correct types, length limits) to every write endpoint.</li>
+                    <li>Trigger 5 different error scenarios and confirm each returns a consistent JSON error shape.</li>
+                    <li>Add <code>morgan</code> and observe the log output for different requests.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Refactor your Library API to add: input validation on every POST/PUT route, a centralized error-handling middleware returning a consistent <code>{ success: false, message, statusCode }</code> format, async error wrapping so no unhandled promise rejections crash the server, and <code>morgan</code> request logging.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Validating data only on the frontend and trusting backend input blindly.</li>
+                        <li>Not catching errors in async route handlers, causing the server to crash.</li>
+                        <li>Returning differently-shaped error responses from different routes.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always validate on the backend — never trust client-sent data.</li>
+                        <li>Wrap every async controller function so errors are passed to <code>next(err)</code>.</li>
+                        <li>Standardize one single error response shape used everywhere in the API.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Express Error Handling Guide</li>
+                    <li>express-validator Documentation</li>
+                    <li>Zod Documentation (zod.dev)</li>
+                    <li>Morgan npm package docs</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36 hours</p>
+            </div>
+        </div>
+
+
+        <!--WEEK 11  -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — File Uploads, Third-Party APIs &amp; Emails</h2>
+                <p>Learn to handle file uploads, integrate with external APIs, and send emails — common real-world backend requirements.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Multer</strong> — handling <code>multipart/form-data</code>, storage configuration, file size/type limits.</li>
+                    <li><strong>Cloud storage</strong> — brief overview of services like Cloudinary or AWS S3 (conceptual).</li>
+                    <li><strong>External APIs</strong> — making requests with <code>axios</code> or <code>fetch</code>, handling responses and errors.</li>
+                    <li><strong>Nodemailer</strong> — configuring a transporter, sending an email, using Ethereal/Mailtrap for testing.</li>
+                    <li><strong>Secrets management</strong> — storing API keys in <code>.env</code>, never committing them.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Real backend systems constantly integrate with other services — payment gateways, image storage, email providers, weather/maps APIs. This week builds the pattern for working with any external service safely.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Multer setup; build a file upload endpoint.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Add file size/type validation to the upload endpoint.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Learn <code>axios</code>; call a public API from your backend.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Build a small feature using the external API's data.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Configure Nodemailer with Ethereal/Mailtrap.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Send a "welcome email" automatically on registration + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build an upload endpoint that accepts only image files under 2MB.</li>
+                    <li>Call a public API and log the response data in your terminal.</li>
+                    <li>Send a test email using Nodemailer and view it in Ethereal/Mailtrap's inbox.</li>
+                    <li>Handle a failed external API call gracefully (try/catch with a fallback response).</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Add a profile picture upload feature to user accounts using Multer (with file type/size validation), and send an automated "Welcome to LibraTrack" email via Nodemailer whenever a new user registers (using Ethereal or Mailtrap for safe testing).</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Allowing unlimited file size/type uploads (security and storage risk).</li>
+                        <li>Hardcoding API keys directly in code.</li>
+                        <li>Not handling failures when an external API is slow or down.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always set file size and MIME-type restrictions in Multer.</li>
+                        <li>Store all API keys and email credentials in <code>.env</code>.</li>
+                        <li>Wrap all third-party API calls in try/catch with sensible fallback behavior.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Multer GitHub/npm Documentation</li>
+                    <li>Nodemailer Documentation</li>
+                    <li>Ethereal Email (fake SMTP for testing)</li>
+                    <li>Axios Documentation</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 12  -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Testing Backend Applications</h2>
+                <p>Learn to write automated tests for your backend using Jest and Supertest.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Jest</strong> — <code>test()</code>/<code>it()</code>, <code>describe()</code>, <code>expect()</code> matchers.</li>
+                    <li><strong>Unit tests</strong> — testing pure functions in isolation.</li>
+                    <li><strong>Integration tests</strong> — testing full route behavior with Supertest (<code>request(app).get(...)</code>).</li>
+                    <li><strong>Mocking</strong> — replacing real dependencies (e.g., email sending) with fake versions during tests.</li>
+                    <li><strong>Test database</strong> — using a separate test database or resetting data between tests.</li>
+                    <li><strong>Coverage</strong> — running <code>--coverage</code> and interpreting the report.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Automated testing is a hallmark of professional backend development and a strong differentiator in interviews — it proves you can write reliable, maintainable code, not just code that "works once."</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Install Jest; write unit tests for a few pure utility functions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Install Supertest; write integration tests for <code>GET /books</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Write tests for <code>POST</code>, <code>PUT</code>, <code>DELETE</code> book routes (success cases).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Write failure-case tests (invalid input, non-existent ID).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Write tests for authentication-protected and admin-only routes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Run test coverage; review and fill gaps + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write 5 unit tests for standalone utility functions.</li>
+                    <li>Write integration tests covering all 5 CRUD endpoints (success cases).</li>
+                    <li>Write at least 5 failure-case tests (invalid input, unauthorized, not found).</li>
+                    <li>Run <code>npx jest --coverage</code> and review the report.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Write a complete Jest + Supertest test suite for your Library API covering at least 10 test cases: CRUD success cases, validation failure cases, and authentication/authorization failure cases (e.g., a member trying to delete a book should return 403).</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Only testing the "happy path" and never testing failures.</li>
+                        <li>Tests that depend on each other's execution order.</li>
+                        <li>Not resetting test data between test runs, causing flaky tests.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>For every endpoint, write at least one success test and one failure test.</li>
+                        <li>Write each test so it can run independently, in any order.</li>
+                        <li>Use a dedicated test database (or reset/seed data in <code>beforeEach</code>/<code>beforeAll</code> hooks).</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Jest Official Documentation</li>
+                    <li>Supertest GitHub Documentation</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+
+        <!--   WEEK 13  -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Advanced Database Concepts</h2>
+                <p>Deepen your database skills with relationships, transactions, and performance basics needed for real-world applications.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Relationships</strong> — one-to-one, one-to-many, many-to-many (with a junction table), implementing in Prisma.</li>
+                    <li><strong>Transactions</strong> — ACID properties, <code>BEGIN</code>/<code>COMMIT</code>/<code>ROLLBACK</code>, Prisma's <code>$transaction</code> API.</li>
+                    <li><strong>Indexing</strong> — what an index is, when to add one, trade-offs.</li>
+                    <li><strong>Migrations</strong> — keeping migrations clean and reversible as the schema evolves.</li>
+                    <li><strong>Seeding</strong> — writing a seed script to populate test data.</li>
+                    <li><strong>N+1 problem</strong> — what it is, how ORMs solve it with eager loading (<code>include</code> in Prisma).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> This is where backend systems often break at scale — incorrect relationships, missing transactions, or unindexed queries cause real production bugs and slowdowns. Understanding these well separates a "tutorial-level" backend from a genuinely solid one.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Relationship types review; design Books-Tags (many-to-many) on paper.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Implement the many-to-many relation in Prisma schema + migrate.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Transactions concept; implement the "borrow book" transactional operation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Indexing basics; add indexes to frequently-queried fields.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Write a database seed script with sample data.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>N+1 query problem; identify and fix one in your project + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Implement a many-to-many relationship with a junction table.</li>
+                    <li>Write a transactional operation that updates two related tables atomically.</li>
+                    <li>Add at least one database index and explain why you chose that column.</li>
+                    <li>Write a seed script that creates 10+ sample records.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Extend your Library API: add a many-to-many relationship between <code>Book</code> and <code>Tag</code>. Implement a transactional "borrow book" operation that decrements book stock and creates a borrow record together — if either step fails, both should roll back. Add an index on a frequently-searched column (e.g., book title).</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Performing multi-step updates without transactions, risking inconsistent data.</li>
+                        <li>Ignoring the N+1 query problem, causing slow API responses as data grows.</li>
+                        <li>Adding indexes to every column "just in case," without understanding write-performance trade-offs.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Use transactions for any operation that updates more than one table together.</li>
+                        <li>Use Prisma's <code>include</code> to eager-load related data instead of querying in a loop.</li>
+                        <li>Add indexes deliberately, only on columns used often in <code>WHERE</code>/<code>ORDER BY</code> clauses.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>PostgreSQL Docs — Transactions</li>
+                    <li>PostgreSQL Docs — Indexes</li>
+                    <li>Prisma Docs — Relations</li>
+                    <li>Prisma Docs — Transactions</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 14-->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — API Security Best Practices</h2>
+                <p>Harden your API against common, real-world security threats.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>OWASP Top 10</strong> — a high-level walk-through of the most common web vulnerabilities.</li>
+                    <li><strong>SQL injection</strong> — how unsanitized input can manipulate queries; why ORMs prevent it.</li>
+                    <li><strong>XSS</strong> — what it is conceptually, and why APIs returning raw user input should be cautious.</li>
+                    <li><strong>CORS</strong> — configuring allowed origins in Express with the <code>cors</code> package.</li>
+                    <li><strong>Helmet</strong> — setting secure HTTP headers with one line of middleware.</li>
+                    <li><strong>Rate limiting</strong> — using <code>express-rate-limit</code> to prevent brute-force attacks.</li>
+                    <li><strong>npm audit</strong> — scanning and fixing known vulnerabilities in dependencies.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Security is non-negotiable in any real backend system and a very common topic in technical interviews and academic viva examinations.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>OWASP Top 10 overview (conceptual reading).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>SQL injection deep dive; confirm Prisma's protection.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Install Helmet; review the headers it sets.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Configure CORS properly (restrict origins appropriately).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Add <code>express-rate-limit</code> to login/register routes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Run <code>npm audit</code>, fix vulnerabilities + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Read through the OWASP Top 10 list and summarize each item in one sentence.</li>
+                    <li>Add Helmet and CORS to your Express app.</li>
+                    <li>Add rate limiting (e.g., max 5 login attempts per 15 minutes) to the login route.</li>
+                    <li>Run <code>npm audit</code> and resolve any high-severity issues.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Harden your Library API: add Helmet, configure CORS to only allow specific origins, add rate limiting on auth routes, run and resolve <code>npm audit</code> issues, and write a short <code>SECURITY.md</code> file documenting every protection you implemented and why.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Leaving CORS open to all origins (<code>*</code>) in a real deployment.</li>
+                        <li>Not rate-limiting login routes, leaving them vulnerable to brute-force attacks.</li>
+                        <li>Ignoring <code>npm audit</code> warnings as "not important."</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Restrict CORS to known, specific origins once you have a real frontend/client.</li>
+                        <li>Always rate-limit authentication endpoints specifically.</li>
+                        <li>Treat <code>npm audit</code> warnings seriously, especially "high" and "critical" severity ones.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>OWASP Top 10 (Official)</li>
+                    <li>Helmet.js Documentation</li>
+                    <li>express-rate-limit Documentation</li>
+                    <li>cors npm package docs</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36 hours</p>
+            </div>
+        </div>
+
+
+        <!--   WEEK 15     -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Caching &amp; Performance Optimization</h2>
+                <p>Learn to make your API faster and more efficient using caching and pagination.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Caching concept</strong> — avoiding repeated, expensive work by storing results temporarily.</li>
+                    <li><strong>Redis</strong> — installing via Docker, basic commands (<code>SET</code>, <code>GET</code>, <code>EXPIRE</code>), connecting from Node.js.</li>
+                    <li><strong>Cache-aside strategy</strong> — check cache first, fall back to database, then populate the cache.</li>
+                    <li><strong>Pagination</strong> — limit/offset pagination (and cursor-based for very large datasets).</li>
+                    <li><strong>Compression</strong> — using the <code>compression</code> middleware to reduce response size.</li>
+                    <li><strong>Measuring performance</strong> — simple before/after response time comparison.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Performance separates a "demo-ready" backend from a production-ready one. Caching and pagination are extremely common topics in both interviews and real-world scaling discussions.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Caching concept; install Redis via Docker.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Connect Node.js to Redis; practice basic commands.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Implement cache-aside caching on the book listing endpoint.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Implement limit/offset pagination on the same endpoint.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Add <code>compression</code> middleware; review response sizes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Measure and document before/after performance + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Install Redis via Docker and confirm connectivity from Node.js.</li>
+                    <li>Implement caching on one endpoint with a defined expiration time.</li>
+                    <li>Implement pagination with <code>page</code> and <code>limit</code> query parameters.</li>
+                    <li>Document the response time difference with and without caching.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Add pagination (<code>?page=1&amp;limit=10</code>) to the "get all books" endpoint, implement Redis caching on the same endpoint (cache invalidated on any book create/update/delete), and write a short performance note comparing response times before and after caching.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Caching data that changes frequently without an invalidation strategy, leading to stale data.</li>
+                        <li>Not paginating large datasets, causing slow responses and high memory usage.</li>
+                        <li>Optimizing/caching before actually measuring whether something is slow.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always invalidate (clear) the relevant cache entry whenever the underlying data changes.</li>
+                        <li>Paginate any endpoint that could return a large or growing list.</li>
+                        <li>Measure first, optimize second — avoid premature optimization.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Redis Official Documentation</li>
+                    <li>Redis Quickstart</li>
+                    <li>Express compression middleware docs</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 36 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 16   -->
+
+        <div class="rm-card" id="week16">
+            <div class="rm-card-header">
+                <h2>Week 16 — Real-Time Communication &amp; Background Jobs</h2>
+                <p>Add real-time features and scheduled background tasks to your backend.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>WebSockets</strong> — how they differ from regular HTTP requests (persistent, two-way connection).</li>
+                    <li><strong>Socket.io</strong> — server setup, emitting and listening for events, connecting a simple client.</li>
+                    <li><strong>Use cases</strong> — live notifications, chat, live dashboards.</li>
+                    <li><strong>Background jobs</strong> — why long-running tasks shouldn't block requests; overview of job queues (e.g., BullMQ).</li>
+                    <li><strong>Cron jobs</strong> — scheduling recurring tasks with <code>node-cron</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Many modern applications (chat apps, notification systems, live dashboards) require real-time updates, and scheduled background tasks are common for things like sending reminders or generating reports.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>WebSockets concept; install Socket.io.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Build a minimal Socket.io server + test client connection.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Emit a custom event from the server and receive it on the client.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Integrate Socket.io into a real feature (admin notification on borrow).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Learn <code>node-cron</code> syntax and scheduling patterns.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Build a scheduled job (e.g., daily stats log) + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Set up a basic Socket.io server and confirm a client can connect.</li>
+                    <li>Emit and receive at least 2 custom events.</li>
+                    <li>Write a <code>node-cron</code> job that runs every minute and logs a message, then adjust to a realistic daily schedule.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Add a real-time notification feature using Socket.io: when a member borrows a book, emit a <code>book-borrowed</code> event that any connected admin client receives instantly. Add a <code>node-cron</code> job that runs once daily and logs basic statistics (e.g., total books borrowed that day).</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using WebSockets for features that don't need real-time updates (overengineering).</li>
+                        <li>Writing blocking, heavy logic inside a scheduled job that freezes the server.</li>
+                        <li>Not handling client disconnections in Socket.io.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Reserve WebSockets for genuinely real-time needs; use regular REST endpoints otherwise.</li>
+                        <li>Keep scheduled jobs lightweight, or run heavy work asynchronously.</li>
+                        <li>Always handle the <code>disconnect</code> event and clean up appropriately.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Socket.io Official Documentation</li>
+                    <li>node-cron npm package docs</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 17   -->
+
+        <div class="rm-card" id="week17">
+            <div class="rm-card-header">
+                <h2>Week 17 — API Documentation &amp; Versioning</h2>
+                <p>Make your API professionally documented and ready for other developers (or evaluators) to understand and use.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Swagger/OpenAPI</strong> — the specification format, describing endpoints, parameters, request/response bodies.</li>
+                    <li><strong>swagger-jsdoc + swagger-ui-express</strong> — generating an interactive <code>/api-docs</code> page directly from code comments.</li>
+                    <li><strong>Postman collections</strong> — exporting a complete collection with example requests/responses.</li>
+                    <li><strong>Versioning</strong> — URI-based versioning (e.g., <code>/api/v1/books</code>), why it matters when an API evolves.</li>
+                    <li><strong>README</strong> — structuring a clear README (overview, tech stack, setup instructions, API summary, screenshots).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> An undocumented API is unusable by anyone but its original author. For a college project, strong documentation is often what separates an "average" submission from an "excellent" one in evaluator perception.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>OpenAPI/Swagger concepts; install swagger-jsdoc and swagger-ui-express.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Document the Books endpoints fully (with examples).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Document the Auth and Users endpoints fully.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Document the Borrow endpoints fully; review the <code>/api-docs</code> page end to end.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Implement URI-based versioning (<code>/api/v1/...</code>).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Export and organize a complete Postman collection + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + write the project README.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Fully document at least 5 endpoints in Swagger with example request/response bodies.</li>
+                    <li>Export a Postman collection and verify every request runs successfully from a fresh import.</li>
+                    <li>Restructure all routes under <code>/api/v1/</code>.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Add complete, interactive Swagger documentation (<code>/api-docs</code>) covering every endpoint in your Library API, export a full Postman collection with examples, and write a professional README including setup instructions, tech stack, and an architecture overview.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Documentation that goes out of date as soon as the code changes.</li>
+                        <li>Missing example request/response bodies, making the docs hard to actually use.</li>
+                        <li>Never versioning the API, risking breaking changes for any future consumers.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Treat documentation updates as part of finishing any feature, not an afterthought.</li>
+                        <li>Always include at least one realistic example for every documented endpoint.</li>
+                        <li>Adopt <code>/api/v1/</code> from this week onward as a permanent habit.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>OpenAPI Specification (Official)</li>
+                    <li>swagger-jsdoc npm package docs</li>
+                    <li>swagger-ui-express npm package docs</li>
+                    <li>Postman Learning Center — Collections</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 18      -->
+
+        <div class="rm-card" id="week18">
+            <div class="rm-card-header">
+                <h2>Week 18 — Deployment &amp; DevOps Basics</h2>
+                <p>Deploy your backend and database so it's live and accessible on the internet, with basic CI in place.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Environments</strong> — separating dev/prod config using environment variables.</li>
+                    <li><strong>Docker</strong> — writing a <code>Dockerfile</code>, building and running a container, <code>docker-compose</code> for app + PostgreSQL.</li>
+                    <li><strong>Cloud deployment</strong> — deploying a Node.js + PostgreSQL app to a free-tier host (Render or Railway).</li>
+                    <li><strong>Production env vars</strong> — setting <code>DATABASE_URL</code>, <code>JWT_SECRET</code>, etc. securely on the hosting platform.</li>
+                    <li><strong>CI basics</strong> — a GitHub Actions workflow that automatically runs your test suite on every push.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A backend isn't truly complete until it's deployed and usable by real people. This is also the week that turns your project from "code on my laptop" into a live, demonstrable product for your college submission.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Docker basics; write and test a <code>Dockerfile</code> for your app.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Set up <code>docker-compose</code> with app + PostgreSQL; run locally end to end.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Create accounts on a hosting platform; review their Node.js deployment docs.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Deploy the application and connect a hosted PostgreSQL database.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Configure production environment variables; test the live API.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Set up GitHub Actions to run tests on every push + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + finalize deployment.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build and run your application in a Docker container locally.</li>
+                    <li>Successfully run the full stack (app + database) with <code>docker-compose up</code>.</li>
+                    <li>Deploy the app to a live URL and test it with Postman from outside your machine.</li>
+                    <li>Confirm GitHub Actions runs your test suite automatically on a new push.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Containerize your Library API with Docker, deploy it along with a PostgreSQL database to a free-tier cloud host, and set up a GitHub Actions workflow that automatically runs your Jest test suite on every push to the main branch.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Committing <code>.env</code> files (with real secrets) to GitHub.</li>
+                        <li>Not setting environment variables correctly on the hosting platform, causing the deployed app to crash.</li>
+                        <li>Deploying without testing the Docker build locally first.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Keep <code>.env</code> in <code>.gitignore</code>; commit only a <code>.env.example</code> with variable names.</li>
+                        <li>Double-check every required environment variable is set in the hosting platform's dashboard before deploying.</li>
+                        <li>Always verify <code>docker-compose up</code> works locally before attempting cloud deployment.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Docker — Get Started Guide</li>
+                    <li>GitHub Actions Documentation</li>
+                    <li>Render / Railway official deployment docs</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 19  -->
+        
+        <div class="rm-card" id="week19">
+            <div class="rm-card-header">
+                <h2>Week 19 — System Design Basics for Backend Developers</h2>
+                <p>Build a foundational understanding of system design concepts to support scalability discussions and interview/viva readiness.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Monolith vs. microservices</strong> — trade-offs of each approach (conceptual, beginner level).</li>
+                    <li><strong>Scaling</strong> — vertical scaling (bigger server) vs. horizontal scaling (more servers).</li>
+                    <li><strong>Load balancing</strong> — what a load balancer does, conceptually.</li>
+                    <li><strong>Reverse proxy</strong> — the role of tools like Nginx in routing traffic.</li>
+                    <li><strong>Scalability principles</strong> — statelessness, caching, and database scaling (e.g., read replicas).</li>
+                    <li><strong>Design patterns</strong> — MVC review + Repository pattern (conceptual introduction).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> System design is a standard topic in technical interviews, even for junior roles, and gives you the vocabulary to explain and justify the architecture of your capstone project during your viva.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Monolith vs. microservices; read the System Design Primer's introduction.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Vertical vs. horizontal scaling concepts.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Load balancing and reverse proxy concepts.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Scalability principles — statelessness, caching, database scaling.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Backend design patterns — MVC review + Repository pattern.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Apply concepts to your capstone's architecture + practice tasks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + write the system design document (mini project).</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Write a one-paragraph explanation each of monolith vs. microservices, vertical vs. horizontal scaling, and load balancing.</li>
+                    <li>Diagram your capstone project's current architecture.</li>
+                    <li>Identify one part of your project that would need to change to support 10x more users.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Write a 2–3 page system design document for your capstone project, including an architecture diagram, a description of how the system would scale under heavy load, and the trade-offs of decisions you made (e.g., why PostgreSQL, why JWT, why this folder structure).</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using complex system design jargon without understanding what it actually means.</li>
+                        <li>Copying generic system design templates without relating them to your own project.</li>
+                        <li>Treating system design as purely theoretical, disconnected from the code already written.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always explain concepts in your own words, using your own project as the example.</li>
+                        <li>Customize every diagram and trade-off discussion specifically to your capstone.</li>
+                        <li>Revisit your actual codebase while studying each concept to ground the theory in practice.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>System Design Primer (GitHub)</li>
+                    <li>roadmap.sh — Backend Roadmap</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 20-->
+
+        <div class="rm-card" id="week20">
+            <div class="rm-card-header">
+                <h2>Week 20 — Capstone Project Development &amp; Final Review</h2>
+                <p>Finish, polish, document, and present your complete capstone project.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Finalization</strong> — reviewing every feature checklist item, fixing any remaining bugs.</li>
+                    <li><strong>Code review</strong> — reviewing your own code for consistency, removing unused code, naming conventions.</li>
+                    <li><strong>README</strong> — finalizing setup instructions, tech stack, architecture diagram, live demo link.</li>
+                    <li><strong>Presentation</strong> — preparing a short live demo flow (register → login → browse books → borrow → admin notification).</li>
+                    <li><strong>Review</strong> — revisiting the FAQ/Interview &amp; Viva Preparation questions.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> This is where 19 weeks of incremental learning converge into one complete, polished, presentable product — the centerpiece of your college submission.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Review feature checklist; list remaining gaps.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Fix bugs / complete missing features (auth, CRUD, relations).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Fix bugs / complete missing features (security, caching, real-time).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Run full test suite; finalize Swagger docs and Postman collection.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Finalize README; re-test the live deployed version end to end.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Prepare and rehearse your demo walkthrough.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Final review of viva/interview questions; submit project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Walk through every feature on the checklist and mark it complete or note what's missing.</li>
+                    <li>Re-run the entire test suite and confirm 0 failures.</li>
+                    <li>Do a full demo run-through, timing yourself.</li>
+                    <li>Answer at least 15 of the interview/viva questions out loud, unscripted.</li>
+                </ul>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Starting serious capstone planning only in Week 20 instead of treating Weeks 6–19 as incremental capstone building.</li>
+                        <li>Rushing and skipping documentation/testing in the final days.</li>
+                        <li>Not testing the live, deployed version before presenting — only testing locally.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Follow this roadmap's structure, where each week already builds toward the final project — Week 20 is finishing, not starting.</li>
+                        <li>Block dedicated time for documentation and testing, not just new features.</li>
+                        <li>Always do your final pre-presentation testing directly against the deployed live URL.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Your own compiled notes from Weeks 1–19</li>
+                    <li>Make a README (makeareadme.com) — best practices guide</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40 hours</p>
+            </div>
+        </div>
+
+
+        <div class="rm-card" id="capstone">
+            <div class="rm-card-header">
+                <h2>🏆 Final Capstone Project</h2>
+                <p>The complete project that ties together every concept from all 20 weeks of the roadmap.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <div class="rm-project">
+                    <h4>📚 LibraTrack — A Complete Library Management System API</h4>
+                    <p>A fully-featured, production-ready backend REST API for managing a library system — built incrementally across the entire 20-week roadmap, applying every skill learned along the way.</p>
+
+                    <h4>Core Features</h4>
+                    <ol>
+                        <li><strong>User Management &amp; Authentication</strong> — Register, login (JWT-based), role-based access (member/admin), password hashing with bcrypt, profile picture upload.</li>
+                        <li><strong>Books CRUD</strong> — Create, read, update, delete books (admin-only writes); Book-Author one-to-many relationship; Book-Tag many-to-many relationship.</li>
+                        <li><strong>Borrow System</strong> — Transactional borrow/return operations that update book stock and create borrow records atomically.</li>
+                        <li><strong>Search, Filter &amp; Pagination</strong> — Paginated book listing with search and category filters.</li>
+                        <li><strong>Real-Time Notifications</strong> — Socket.io-based admin notifications when a book is borrowed.</li>
+                        <li><strong>Scheduled Jobs</strong> — Daily cron job logging library statistics.</li>
+                        <li><strong>Emails</strong> — Welcome email on registration (Nodemailer + Ethereal/Mailtrap).</li>
+                        <li><strong>Security</strong> — Helmet, CORS, rate limiting on auth routes, input validation, npm audit clean.</li>
+                        <li><strong>Performance</strong> — Redis caching with proper invalidation, response compression.</li>
+                        <li><strong>Testing</strong> — Jest + Supertest test suite covering success and failure cases (auth, CRUD, validation).</li>
+                        <li><strong>Documentation</strong> — Interactive Swagger docs at <code>/api-docs</code>, Postman collection with examples.</li>
+                        <li><strong>Deployment</strong> — Dockerized app + PostgreSQL via <code>docker-compose</code>, deployed to Render/Railway with GitHub Actions CI.</li>
+                    </ol>
+
+                    <h4>Tech Stack</h4>
+                    <p><strong>Runtime:</strong> Node.js &nbsp;|&nbsp; <strong>Framework:</strong> Express.js &nbsp;|&nbsp; <strong>Database:</strong> PostgreSQL &nbsp;|&nbsp; <strong>ORM:</strong> Prisma &nbsp;|&nbsp; <strong>Auth:</strong> JWT + bcrypt &nbsp;|&nbsp; <strong>Cache:</strong> Redis &nbsp;|&nbsp; <strong>Real-Time:</strong> Socket.io &nbsp;|&nbsp; <strong>Testing:</strong> Jest + Supertest &nbsp;|&nbsp; <strong>Docs:</strong> Swagger / OpenAPI &nbsp;|&nbsp; <strong>Deployment:</strong> Docker + Render/Railway &nbsp;|&nbsp; <strong>CI:</strong> GitHub Actions</p>
+
+                    <h4>Deliverables</h4>
+                    <ul>
+                        <li>Live deployed API URL (publicly accessible)</li>
+                        <li>Public GitHub repository with clean commit history</li>
+                        <li>Professional README (overview, tech stack, setup, architecture)</li>
+                        <li>Interactive Swagger documentation at <code>/api-docs</code></li>
+                        <li>Exported Postman collection with example requests/responses</li>
+                        <li>System Design Document (2–3 pages with architecture diagram)</li>
+                        <li>Security documentation (<code>SECURITY.md</code>)</li>
+                        <li>Passing test suite (Jest + Supertest, 10+ test cases)</li>
+                    </ul>
+                </div>
+
+                <div class="rm-highlight">
+                    <p><strong>Important:</strong> The capstone is <em>not</em> built only in Week 20 — it is built incrementally from Week 6 onwards. Each week's mini project directly extends the same Library API. Week 20 is for finalization, polish, and presentation.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+                <div class="logo1">
+                    <h3>CodePath</h3>
+                    <p>Learn. Practice. Master</p>
+                </div>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+
+</body>
+</html>

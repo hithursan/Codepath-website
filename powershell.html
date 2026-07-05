@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerShell: Beginner to Master — 12 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#projects">Projects</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <li><a href="./index.html#contact">Contact</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>PowerShell: Beginner to Master</h1>
+        <p>Complete 12-Week Curriculum — From Cmdlets &amp; the Pipeline to Parallel Automation, REST APIs &amp; Production Scripts</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>12-week, project-driven PowerShell curriculum</strong> designed to take a complete beginner to a professional-level automation engineer. The roadmap moves from <strong>cmdlets, the pipeline, variables, and primitive types</strong> through <strong>control flow, functions, modules, and PowerShell classes</strong>, into <strong>inheritance, error handling, file system operations, REST APIs, and remoting</strong>, all the way to <strong>parallel concurrency with ForEach-Object -Parallel, functional patterns, and three complete capstone automation projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics and the PowerShell object model, <strong>Phase 2</strong> covers control flow, functions, modules, and OOP, <strong>Phase 3</strong> covers intermediate and advanced core topics including inheritance, error handling, and API integration, and <strong>Phase 4</strong> covers master-level concurrency, functional patterns, and full automation system projects.</p>
+            <p>By Week 12, you will have built three complete, production-ready automation scripts and be confident designing enterprise-grade PowerShell solutions from scratch.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 12 weeks &nbsp;|&nbsp; <strong>Stack:</strong> PowerShell 7+, VS Code, Windows/Linux/macOS &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic command-line familiarity (no PowerShell experience needed)</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–3:</strong> Syntax, types, the pipeline, and collections.</p>
+        </div>
+
+        <!-- WEEK 1-->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — PowerShell Environment, Syntax &amp; Primitive Types</h2>
+                <p>Set up your shell environment and learn PowerShell's basic syntax and core data types.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Setting up your shell environment and learning PowerShell's basic syntax and core data types.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>PowerShell vs PowerShell 7+ &amp; the Console/ISE/VS Code</strong> — Windows PowerShell (5.1) ships with Windows, while PowerShell 7+ is the modern, cross-platform, open-source edition you should use going forward. VS Code with the PowerShell extension is the recommended editor for writing, running, and debugging scripts on any operating system.</li>
+                    <li><strong>Cmdlets &amp; the Verb-Noun Naming Convention</strong> — A cmdlet is a lightweight PowerShell command following a strict <code>Verb-Noun</code> pattern, like <code>Get-Process</code> or <code>Stop-Service</code>. This consistent naming makes commands predictable and easy to discover using <code>Get-Command</code> — you can often guess a command before looking it up.</li>
+                    <li><strong>Variables (<code>$variable</code>)</strong> — Variables in PowerShell are always prefixed with a <code>$</code> sign and are dynamically typed, automatically inferring their type from the assigned value. PowerShell variables can hold anything from simple numbers to entire complex objects returned by cmdlets.</li>
+                    <li><strong>Primitive Types (<code>Int</code>, <code>Double</code>, <code>String</code>, <code>Bool</code>)</strong> — PowerShell supports standard .NET primitive types under the hood, including integers, decimals, strings, and booleans. Because PowerShell is built on .NET, every value is actually a full .NET object with its own properties and methods accessible via dot notation.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The Verb-Noun naming convention is what makes PowerShell self-documenting — once you know the pattern, you can discover commands without memorizing them. Understanding that every PowerShell value is a .NET object (not plain text like bash) is the single most important mental shift for becoming an effective PowerShell user.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># Declaring variables — $ prefix always required
+$name       = "PowerShell Learner"   # String (System.String)
+$age        = 28                     # Int32
+$pi         = 3.14159                # Double
+$isLearning = $true                  # Boolean ($true/$false — lowercase in PS)
+
+# String interpolation with double quotes
+Write-Host "$name is $age years old. Learning: $isLearning"
+
+# Every variable is a .NET object — properties and methods available
+Write-Host $name.Length              # 18
+Write-Host $name.ToUpper()          # POWERSHELL LEARNER
+Write-Host $age.GetType().Name      # Int32
+
+# Discover cmdlets
+Get-Command Get-*                    # All cmdlets starting with Get-
+Get-Help Get-Process -Examples      # Usage examples for Get-Process</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Install PowerShell 7+ and VS Code with the PowerShell extension. Run <code>Get-Command Get-*</code> to explore available cmdlets and count how many there are. Declare variables for your name, favorite number, and a boolean for "isAdmin". Print them in one formatted string using <code>Write-Host</code>. Call <code>.GetType()</code> on each variable to confirm their inferred types, and call one string method (<code>.ToUpper()</code> or <code>.Replace()</code>) to prove they are full .NET objects.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 2-->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Operators, the Pipeline &amp; Type Conversion</h2>
+                <p>Master PowerShell's operators and its single most powerful feature: the object pipeline.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering PowerShell's operators and its single most powerful feature: the pipeline.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Arithmetic &amp; Comparison Operators</strong> — PowerShell supports <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code> for arithmetic, but uses letter-based comparison operators like <code>-eq</code>, <code>-ne</code>, <code>-lt</code>, <code>-gt</code> instead of symbols. This avoids ambiguity with PowerShell's redirection operators and is consistent across all comparison scenarios.</li>
+                    <li><strong>The Pipeline (<code>|</code>)</strong> — The pipeline passes the full output object from one cmdlet directly as input to the next, chaining commands together fluently. Unlike traditional shells that pipe plain text, PowerShell pipes rich, structured .NET objects — preserving all their properties and methods throughout the chain.</li>
+                    <li><strong>Type Conversion &amp; Casting</strong> — PowerShell can convert between types explicitly using cast syntax like <code>[int]$value</code>, or implicitly in many common operations. Understanding casting prevents unexpected errors when mixing strings and numbers, and is essential for processing user input safely.</li>
+                    <li><strong><code>Get-Help</code> &amp; Discoverability</strong> — <code>Get-Help &lt;cmdlet&gt; -Examples</code> instantly shows usage examples for any cmdlet, making PowerShell remarkably self-documenting. Running <code>Update-Help</code> periodically ensures your local help files stay current with the latest documentation.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The PowerShell pipeline is what separates it from every other shell — passing structured objects (not text) means you never write regex parsers to extract fields from command output. The letter-based comparison operators (<code>-eq</code>, <code>-gt</code>) are used in every conditional and filter in the language, so getting them instinctive from Week 2 is essential.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># Letter-based comparison operators — not < > symbols
+$x = 10; $y = 20
+$x -lt $y          # True  (-lt = less than)
+$x -eq 10          # True  (-eq = equal)
+$x -ne $y          # True  (-ne = not equal)
+
+# The pipeline: objects flow through, not text
+Get-Process |
+    Where-Object { $_.CPU -gt 10 } |      # $_ = current pipeline object
+    Sort-Object CPU -Descending |
+    Select-Object Name, CPU -First 5       # Top 5 by CPU
+
+# Type casting — explicit and implicit
+$value  = "42"
+$number = [int]$value + 8    # Cast string → int, then add
+Write-Host $number            # 50
+
+# Size literals — PS understands KB, MB, GB
+$ram = 50MB
+Get-Process | Where-Object { $_.WorkingSet -gt $ram } | Select-Object Name, WorkingSet
+
+# Self-documentation
+Get-Help Where-Object -Examples
+Update-Help                   # Refresh local help database</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Run <code>Get-Process</code>, pipe it through <code>Where-Object</code> to filter processes using more than 50MB of memory (<code>$_.WorkingSet -gt 50MB</code>), then pipe the result to <code>Sort-Object</code> descending by WorkingSet, and finally to <code>Select-Object</code> to display the top 5 with Name and WorkingSet columns. Cast the string <code>"100"</code> to an integer, subtract 37, and print the result. Run <code>Get-Help Sort-Object -Examples</code> and describe one example in a comment.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 3 -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Collections: Arrays, Hashtables &amp; Objects</h2>
+                <p>Learn PowerShell's core data structures used to organize and manipulate data.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Learning PowerShell's core data structures used to organize and manipulate data.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Arrays (<code>@()</code>)</strong> — An array stores an ordered collection of items, declared using <code>@()</code> syntax or comma-separated values. Arrays support indexing, slicing, and built-in methods for adding or filtering elements — and like everything in PowerShell, they are full .NET objects.</li>
+                    <li><strong>Hashtables (<code>@{}</code>)</strong> — A hashtable stores unordered key-value pairs, ideal for representing configuration settings, lookup tables, or labeled data. Keys are accessed using either dot notation or bracket syntax, similar to dictionaries in Python or objects in JavaScript.</li>
+                    <li><strong>Custom Objects (<code>[PSCustomObject]</code>)</strong> — <code>[PSCustomObject]</code> lets you create structured objects with named properties on the fly, similar to a lightweight struct or record. This is the idiomatic PowerShell way to build clean, readable, table-friendly output from your scripts.</li>
+                    <li><strong>Object Properties &amp; Methods (<code>Get-Member</code>)</strong> — Every value in PowerShell is a .NET object with its own properties (data) and methods (actions), discoverable using <code>Get-Member</code>. Understanding this object model is fundamental to knowing what you can do with any value returned by a cmdlet.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>[PSCustomObject]</code> is the professional standard for structured output in PowerShell — it produces clean table output with <code>Format-Table</code>, serializes correctly to JSON and CSV, and integrates seamlessly with the pipeline. Every real-world script that produces reports or structured data uses it.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># Array: ordered, indexed collection
+$fruits = @("Apple", "Banana", "Mango")
+$fruits[0]                          # "Apple" — 0-based indexing
+$fruits[-1]                         # "Mango" — last element
+$fruits.Count                       # 3
+$fruits += "Orange"                 # Add element (creates new array)
+
+# Hashtable: key-value pairs
+$prices = @{
+    Apple  = 1.50
+    Banana = 0.50
+    Mango  = 2.00
+}
+$prices["Apple"]                    # 1.50 — bracket access
+$prices.Banana                      # 0.50 — dot access
+
+# PSCustomObject: structured, table-friendly output
+$item = [PSCustomObject]@{
+    Name     = "Apple"
+    Price    = 1.50
+    InStock  = $true
+}
+$item.Name                          # "Apple"
+$item | Format-Table                # Displays as a clean table row
+
+# Get-Member: discover properties and methods
+$item | Get-Member                  # Lists all properties and methods
+"Hello" | Get-Member                # String's available methods</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a small "inventory" script: create an array of 5 product names and a hashtable mapping each product to a price. Then create an array of <code>[PSCustomObject]</code> items combining name, price, and a calculated "discounted" price (10% off). Display it as a formatted table using <code>Format-Table</code>. Use <code>Get-Member</code> on one of your custom objects to discover its available properties, and pipe the array through <code>Where-Object</code> to filter only items with a discounted price below $2.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 4–6:</strong> Conditionals, loops, functions, modules, and PowerShell classes.</p>
+        </div>
+
+        <!--WEEK 4-->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Control Flow: Conditionals &amp; Loops</h2>
+                <p>Direct script execution using PowerShell's conditional and looping constructs.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Directing script execution using PowerShell's conditional and looping constructs.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>if</code> / <code>elseif</code> / <code>else</code> Statements</strong> — Conditional statements let scripts branch logic based on Boolean expressions, using the letter-based comparison operators covered in Week 2. PowerShell's <code>if</code> blocks use curly braces similar to C-family languages, and conditions can include compound logic with <code>-and</code>, <code>-or</code>, and <code>-not</code>.</li>
+                    <li><strong><code>switch</code> Statements</strong> — PowerShell's <code>switch</code> statement evaluates a value against multiple conditions and even supports wildcard (<code>-Wildcard</code>) and regex (<code>-Regex</code>) matching directly in each case. It is a clean, powerful alternative to long <code>if-elseif</code> chains for discrete-value branching.</li>
+                    <li><strong><code>foreach</code> &amp; <code>ForEach-Object</code></strong> — The <code>foreach</code> keyword loops over a collection in script blocks efficiently, while <code>ForEach-Object</code> is the pipeline-friendly cmdlet version used after a <code>|</code>. Both iterate through items but are chosen based on context: script or pipeline.</li>
+                    <li><strong><code>for</code> &amp; <code>while</code> Loops</strong> — A <code>for</code> loop repeats a fixed number of times using a counter variable, while a <code>while</code> loop repeats as long as a condition remains true. Both are essential for retry logic, polling, countdown timers, and counted iterations in automation scripts.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> PowerShell's <code>switch</code> statement with <code>-Wildcard</code> and <code>-Regex</code> support is uniquely powerful — it can match file extensions, log patterns, and error codes in a single clean block. The distinction between <code>foreach</code> (in-memory collection) and <code>ForEach-Object</code> (pipeline-streaming) affects both memory usage and performance at scale.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># if/elseif/else with compound conditions
+$score = 85
+if ($score -ge 90) {
+    Write-Host "Grade: A"
+} elseif ($score -ge 80 -and $score -lt 90) {
+    Write-Host "Grade: B"     # This branch executes
+} else {
+    Write-Host "Grade: C or below"
+}
+
+# switch with script block conditions
+$numbers = 1..10
+foreach ($n in $numbers) {
+    switch ($n) {
+        { $_ % 15 -eq 0 } { Write-Host "FizzBuzz"; break }
+        { $_ % 3  -eq 0 } { Write-Host "Fizz";     break }
+        { $_ % 5  -eq 0 } { Write-Host "Buzz";     break }
+        default            { Write-Host $_ }
+    }
+}
+
+# ForEach-Object in pipeline (streaming — memory efficient)
+1..5 | ForEach-Object { "Item: $_" }
+
+# while loop: retry pattern
+$attempts = 0
+while ($attempts -lt 3) {
+    $attempts++
+    Write-Host "Attempt $attempts"
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a FizzBuzz script that loops through numbers 1–20 using <code>foreach</code>, and uses a <code>switch</code> statement to print "Fizz" for multiples of 3, "Buzz" for multiples of 5, "FizzBuzz" for multiples of both, and the number otherwise. Then rewrite the same loop using <code>ForEach-Object</code> in a pipeline. Add a <code>while</code> loop that counts down from 10 to 1 and prints "Liftoff!" at the end.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 5-->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Functions, Parameters &amp; Modules</h2>
+                <p>Structure scripts into reusable, parameterized functions and organize them into importable modules.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Structuring scripts into reusable, parameterized functions and organizing them into importable modules.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Function Declaration (<code>function</code>)</strong> — Functions are declared with the <code>function</code> keyword followed by a <code>Verb-Noun</code> name and a script block. Following the cmdlet naming convention makes your custom functions feel like native PowerShell commands and work predictably with <code>Get-Command</code>.</li>
+                    <li><strong>Parameters &amp; <code>param()</code> Blocks</strong> — The <code>param()</code> block defines a function's expected inputs, including type constraints, default values, and validation attributes. PowerShell supports advanced parameter attributes like <code>[Parameter(Mandatory=$true)]</code> for automatic input validation with user prompts.</li>
+                    <li><strong>Pipeline Input (<code>ValueFromPipeline</code>)</strong> — A function can accept input directly from the pipeline by marking a parameter with <code>[Parameter(ValueFromPipeline=$true)]</code> and using a <code>process</code> block to handle each piped object. This lets your custom functions integrate seamlessly into pipeline chains exactly like built-in cmdlets.</li>
+                    <li><strong>Modules (<code>.psm1</code>) &amp; <code>Import-Module</code></strong> — A module is a <code>.psm1</code> file (or folder with a manifest) bundling related functions together for reuse across scripts and sessions. <code>Import-Module</code> loads a module's exported functions into your current session, similar to importing a library in any other language.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Pipeline-aware functions with <code>ValueFromPipeline</code> are what make custom functions feel native — they compose with other cmdlets exactly like <code>Where-Object</code> or <code>Sort-Object</code>. Modules with <code>Export-ModuleMember</code> are the professional standard for distributing PowerShell tooling — every enterprise script library uses this pattern.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># Function with param block, type constraints, and default values
+function Get-Square {
+    param(
+        [Parameter(Mandatory=$true)]
+        [int]$Number,
+        [bool]$Verbose = $false
+    )
+    if ($Verbose) { Write-Host "Computing square of $Number..." }
+    return $Number * $Number
+}
+Get-Square -Number 6           # 36
+Get-Square -Number 8 -Verbose $true
+
+# Pipeline-aware function using process block
+function ConvertTo-Celsius {
+    param(
+        [Parameter(ValueFromPipeline=$true)]
+        [double]$Fahrenheit
+    )
+    process {
+        [PSCustomObject]@{
+            Fahrenheit = $Fahrenheit
+            Celsius    = [math]::Round(($Fahrenheit - 32) * 5/9, 2)
+        }
+    }
+}
+# Works as pipeline: 32, 212, 98.6 passed as pipeline objects
+32, 212, 98.6 | ConvertTo-Celsius | Format-Table</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a function <code>Get-FullName</code> that accepts <code>-FirstName</code> and <code>-LastName</code> parameters (both mandatory, both typed as <code>[string]</code>) and returns a <code>[PSCustomObject]</code> with <code>FullName</code> and <code>Initials</code> properties. Save it in a module file <code>NameUtils.psm1</code>, add <code>Export-ModuleMember -Function Get-FullName</code>, import it with <code>Import-Module</code>, and call it from a separate script. Make it pipeline-aware so names can be piped in as objects.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 6-->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Custom Objects, Classes &amp; Advanced Data Structures</h2>
+                <p>Model structured data and introduce true object-oriented programming with PowerShell classes.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Modeling structured data and introducing true object-oriented programming with PowerShell classes.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>PowerShell Classes (<code>class</code> keyword)</strong> — PowerShell 5+ supports defining true <code>class</code> types with properties and methods, similar to C# or Java. Classes provide stronger structure and type safety compared to <code>[PSCustomObject]</code> for more complex, reusable applications and larger script projects.</li>
+                    <li><strong>Constructors &amp; Properties</strong> — A class constructor (a method with the same name as the class) initializes a new object's properties when it is created, ensuring every instance starts in a valid state. Properties define the typed data each instance of the class will hold throughout its lifetime.</li>
+                    <li><strong>Methods on Classes</strong> — Methods define behavior that belongs to a class, letting objects perform actions using their own internal data via <code>$this</code>. This encapsulates logic directly with the data it operates on — a core OOP principle that makes code more organized and testable.</li>
+                    <li><strong>Sorting, Filtering &amp; Grouping Data</strong> — <code>Sort-Object</code>, <code>Where-Object</code>, and <code>Group-Object</code> are essential cmdlets for reshaping collections of data based on property values. These cmdlets work seamlessly with both built-in .NET objects and your own custom class instances.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> PowerShell classes integrate directly with the .NET type system — instances work as first-class pipeline objects, display correctly in <code>Format-Table</code>, and serialize properly to JSON and CSV without any special handling. Understanding <code>$this</code> and typed properties prevents the class of bugs that <code>[PSCustomObject]</code>'s dynamic nature can silently introduce.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># PowerShell class with constructor and methods
+class Rectangle {
+    [double]$Width
+    [double]$Height
+
+    # Constructor
+    Rectangle([double]$w, [double]$h) {
+        $this.Width  = $w
+        $this.Height = $h
+    }
+
+    # Methods using $this to access instance data
+    [double] Area()      { return $this.Width * $this.Height }
+    [double] Perimeter() { return 2 * ($this.Width + $this.Height) }
+
+    [string] ToString() {
+        return "Rectangle(${$this.Width} x ${$this.Height})"
+    }
+}
+
+# Instantiate using ::new()
+$r1 = [Rectangle]::new(4, 5)
+$r2 = [Rectangle]::new(10, 3)
+$r3 = [Rectangle]::new(6, 6)
+
+Write-Host "Area: $($r1.Area())"   # 20
+
+# Works seamlessly with pipeline cmdlets
+$r1, $r2, $r3 |
+    Where-Object { $_.Area() -gt 20 } |
+    Sort-Object { $_.Area() } |
+    Format-Table Width, Height, @{N="Area"; E={$_.Area()}}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a <code>Rectangle</code> class with <code>Width</code>/<code>Height</code> typed properties and <code>Area()</code>/<code>Perimeter()</code> methods. Instantiate 5 rectangles with different dimensions into an array. Use <code>Sort-Object</code> to order them by area (use a calculated property), <code>Where-Object</code> to filter only those with an area greater than 20, and <code>Group-Object</code> to group them by whether their width equals their height (squares vs rectangles). Display the result with <code>Format-Table</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 7–9:</strong> Inheritance, OOP, error handling, file operations, REST APIs, and remoting.</p>
+        </div>
+
+        <!--WEEK 7-->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Inheritance, Interfaces &amp; Advanced OOP</h2>
+                <p>Extend PowerShell's class system with inheritance and shared behavior contracts.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Extending PowerShell's class system with inheritance and shared behavior contracts.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Class Inheritance</strong> — A PowerShell class can inherit from a parent class using a colon (<code>class Child : Parent</code>), automatically gaining all its properties and methods. This avoids duplicating shared logic across related classes and models "is-a" relationships like a <code>Circle</code> is-a <code>Shape</code>.</li>
+                    <li><strong>Method Overriding</strong> — A subclass can redefine a parent's method to provide specialized behavior while keeping the same method signature. This allows different object types to share a common interface but return different results when the same method name is called, enabling polymorphic code.</li>
+                    <li><strong>Hidden &amp; Static Members</strong> — The <code>hidden</code> keyword prevents a property or method from appearing in default <code>Format-Table</code> output or <code>Get-Member</code> results, useful for internal implementation details. The <code>static</code> keyword defines members that belong to the class type itself rather than any individual instance.</li>
+                    <li><strong>Polymorphism in Practice</strong> — Polymorphism allows objects of different subclasses to be treated uniformly through their shared parent type, simplifying code that works with collections of mixed but related object types. This is especially powerful when processing arrays containing different shape, sensor, or report types.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Polymorphism is what enables truly reusable automation — a function that accepts a base <code>Shape</code> type works automatically with any current or future subclass. Static members like counters or factory methods are used throughout enterprise PowerShell tooling to track instances and enforce creation patterns.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># Base class with virtual method
+class Shape {
+    hidden [string]$_type = "Unknown"   # hidden from default output
+    static [int]$Count = 0              # shared across ALL instances
+
+    Shape() { [Shape]::Count++ }        # increment on every instantiation
+
+    [double] Area() { return 0 }        # base — intended to be overridden
+    [string] Describe() { return "Shape with area $($this.Area())" }
+}
+
+# Subclass: inherits Shape, overrides Area()
+class Circle : Shape {
+    [double]$Radius
+    Circle([double]$r) { $this.Radius = $r }
+    [double] Area() { return [math]::Round([math]::Pi * $this.Radius * $this.Radius, 2) }
+}
+
+class Square : Shape {
+    [double]$Side
+    Square([double]$s) { $this.Side = $s }
+    [double] Area() { return $this.Side * $this.Side }
+}
+
+# Polymorphism: same call, different behavior
+$shapes = @([Circle]::new(3), [Square]::new(5), [Circle]::new(7))
+$shapes | ForEach-Object { $_.Describe() }
+Write-Host "Total shapes created: $([Shape]::Count)"</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a base class <code>Shape</code> with a static <code>Count</code> property (incremented in the constructor) and a virtual <code>Area()</code> method returning 0. Create <code>Circle</code> and <code>Square</code> subclasses that override <code>Area()</code> correctly. Build an array containing instances of both types and loop through it calling <code>Area()</code> and <code>Describe()</code> polymorphically. Print the static <code>Count</code> at the end to confirm how many shapes were created.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 8-->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Error Handling &amp; File System Operations</h2>
+                <p>Write robust scripts that handle failures gracefully and manipulate the file system confidently.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing robust scripts that handle failures gracefully and manipulate files confidently.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>try</code> / <code>catch</code> / <code>finally</code></strong> — A <code>try</code> block lets you attempt risky code, <code>catch</code> handles any resulting terminating error (with <code>$_</code> holding the error record), and <code>finally</code> runs cleanup code regardless of whether an error occurred. This is PowerShell's primary structured error-handling mechanism.</li>
+                    <li><strong><code>$ErrorActionPreference</code> &amp; <code>-ErrorAction</code></strong> — By default, many cmdlet errors in PowerShell are non-terminating and will not trigger a <code>catch</code> block unless explicitly configured. Setting <code>-ErrorAction Stop</code> on a cmdlet (or <code>$ErrorActionPreference = 'Stop'</code> globally) forces all errors to be catchable terminating errors.</li>
+                    <li><strong>Custom Exceptions &amp; <code>throw</code></strong> — The <code>throw</code> keyword raises a terminating error, optionally with a custom message or exception object, which can then be caught by a <code>try/catch</code> block. This lets you signal specific failure conditions in your own functions with descriptive, debuggable error messages.</li>
+                    <li><strong>File &amp; Folder Operations (<code>Get-ChildItem</code>, <code>Get-Content</code>, <code>Set-Content</code>)</strong> — <code>Get-ChildItem</code> lists files and folders (with <code>-Recurse</code> and <code>-Filter</code> support), while <code>Get-Content</code> and <code>Set-Content</code> read and write file contents. Combined with <code>Test-Path</code> and <code>New-Item</code>, these cmdlets form the foundation of all PowerShell file system automation.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The <code>-ErrorAction Stop</code> requirement is one of PowerShell's most common gotchas — newcomers write <code>try/catch</code> blocks that silently do nothing because the error was non-terminating. Production scripts always combine <code>-ErrorAction Stop</code> with <code>try/catch/finally</code> to ensure every failure is handled, logged, and cleaned up reliably.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># Error handling with -ErrorAction Stop to make errors catchable
+function Read-SafeFile {
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$Path
+    )
+    if (-not (Test-Path $Path)) {
+        throw [System.IO.FileNotFoundException]"File not found: $Path"
+    }
+    try {
+        $content = Get-Content -Path $Path -ErrorAction Stop
+        return $content
+    } catch [System.IO.IOException] {
+        Write-Warning "IO Error: $($_.Exception.Message)"
+        return $null
+    } catch {
+        Write-Error "Unexpected error: $($_.Exception.Message)"
+        throw   # Re-throw unhandled errors
+    } finally {
+        Write-Verbose "Read attempt for '$Path' complete."
+    }
+}
+
+# File system operations
+Get-ChildItem -Path "C:\Logs" -Filter "*.log" -Recurse |
+    Where-Object { $_.LastWriteTime -lt (Get-Date).AddDays(-30) } |
+    Select-Object Name, LastWriteTime
+
+# Write summary to file
+"Line count: $(Get-Content 'input.txt' | Measure-Object -Line | Select-Object -Expand Lines)" |
+    Set-Content -Path "summary.txt"</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a script that reads a text file's content using <code>try</code>/<code>catch</code> with <code>-ErrorAction Stop</code>, counts the number of lines and words using <code>Measure-Object</code>, and writes a summary to a new file using <code>Set-Content</code> — gracefully handling the case where the input file does not exist by throwing a custom <code>FileNotFoundException</code>. Use <code>Get-ChildItem</code> to list all <code>.txt</code> files in a folder and print their names and sizes.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 9-->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Modules, Remoting &amp; Working with APIs</h2>
+                <p>Leverage PowerShell's ecosystem and connect to remote systems and web services.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Leveraging PowerShell's ecosystem and connecting to remote systems and web services.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>The PowerShell Gallery &amp; <code>Install-Module</code></strong> — The PowerShell Gallery is a public repository of community and Microsoft-published modules, installable via <code>Install-Module</code>. This vastly extends PowerShell's built-in capabilities for managing cloud services, Active Directory, databases, and virtually any enterprise system.</li>
+                    <li><strong>PowerShell Remoting (<code>Invoke-Command</code>, <code>Enter-PSSession</code>)</strong> — PowerShell Remoting lets you run commands on remote machines over WinRM or SSH, either interactively (<code>Enter-PSSession</code>) or as a scripted one-off command (<code>Invoke-Command</code>). This is central to managing fleets of servers at scale without physical or RDP access.</li>
+                    <li><strong>Working with REST APIs (<code>Invoke-RestMethod</code>)</strong> — <code>Invoke-RestMethod</code> sends HTTP requests and automatically parses JSON or XML responses into PowerShell objects with no manual parsing required. This makes consuming web APIs remarkably simple — the response is immediately ready for pipeline processing.</li>
+                    <li><strong>JSON &amp; CSV Handling (<code>ConvertTo-Json</code>, <code>Import-Csv</code>)</strong> — <code>ConvertTo-Json</code>/<code>ConvertFrom-Json</code> convert between PowerShell objects and JSON text, while <code>Import-Csv</code>/<code>Export-Csv</code> handle tabular CSV data effortlessly. These cmdlets make PowerShell excellent for data interchange, reporting tasks, and building lightweight ETL pipelines.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>Invoke-RestMethod</code> automatically deserializes JSON into PowerShell objects — a response from the GitHub API becomes a proper PowerShell object you can pipe to <code>Where-Object</code> immediately. Combined with <code>Export-Csv</code> and <code>ConvertTo-Json</code>, this makes PowerShell one of the fastest languages for building lightweight API integration and data reporting tools.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># PowerShell Gallery: install a community module
+Install-Module -Name PSReadLine -Force -Scope CurrentUser
+
+# REST API: automatic JSON → object deserialization
+$response = Invoke-RestMethod -Uri "https://api.github.com/users/octocat" -Method GET
+Write-Host "$($response.name) has $($response.public_repos) public repos"
+Write-Host "Account created: $($response.created_at)"
+
+# Save response as JSON file
+$response | ConvertTo-Json -Depth 5 | Set-Content -Path "user.json"
+
+# Read it back and process
+$user = Get-Content "user.json" | ConvertFrom-Json
+Write-Host "Loaded: $($user.login)"
+
+# CSV: import tabular data and process with pipeline
+Import-Csv -Path "employees.csv" |
+    Where-Object { [int]$_.Salary -gt 50000 } |
+    Sort-Object Salary -Descending |
+    Export-Csv -Path "high_earners.csv" -NoTypeInformation</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Use <code>Invoke-RestMethod</code> to fetch data from a public JSON API (e.g., <code>https://jsonplaceholder.typicode.com/users</code>), save the result to a file using <code>ConvertTo-Json</code>/<code>Set-Content</code>. Then write a separate script that reads that JSON back with <code>Get-Content</code>/<code>ConvertFrom-Json</code>, filters users whose name starts with a specific letter using <code>Where-Object</code>, and exports the filtered list as a CSV using <code>Export-Csv</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 10–12:</strong> Parallel concurrency, functional patterns, script blocks, and three complete capstone automation projects.</p>
+        </div>
+
+        <!-- WEEK 10 -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Concurrency: Jobs, Runspaces &amp; <code>ForEach-Object -Parallel</code></h2>
+                <p>Run multiple operations simultaneously to dramatically speed up automation tasks.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Running multiple operations simultaneously to dramatically speed up automation tasks.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Background Jobs (<code>Start-Job</code>)</strong> — <code>Start-Job</code> runs a script block in a separate background process, freeing up your current session to continue working while the job runs. Results are retrieved later using <code>Receive-Job</code> once the job completes, and jobs can be waited on with <code>Wait-Job</code>.</li>
+                    <li><strong><code>ForEach-Object -Parallel</code> (PowerShell 7+)</strong> — PowerShell 7 introduced <code>-Parallel</code> on <code>ForEach-Object</code>, allowing pipeline iterations to run concurrently across multiple threads with minimal syntax overhead. This is the simplest, most modern way to parallelize repetitive independent tasks like health checks or file processing.</li>
+                    <li><strong>Runspaces &amp; Runspace Pools</strong> — A runspace is a lightweight execution environment for PowerShell code, and a runspace pool manages many of them for true, high-performance parallel execution. This is the most advanced and efficient concurrency technique, used for demanding automation workloads that process thousands of items.</li>
+                    <li><strong>Thread Safety &amp; Synchronized Collections</strong> — When multiple threads access shared data simultaneously, race conditions can corrupt results unless synchronization is used. PowerShell supports thread-safe collections like <code>[System.Collections.Concurrent.ConcurrentBag[object]]</code> for safely aggregating parallel results without data corruption.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Checking 100 servers sequentially takes 100× the time of checking 1 — <code>ForEach-Object -Parallel</code> with a <code>-ThrottleLimit</code> can reduce that to roughly 100/ThrottleLimit × time. This single technique can transform an overnight batch job into a 5-minute script, which is why parallel execution is the skill that most dramatically increases automation productivity at scale.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># Background job: fire and forget
+$job = Start-Job { Start-Sleep 3; "Job done!" }
+Write-Host "Main thread continues..."
+$result = $job | Wait-Job | Receive-Job
+Write-Host $result
+
+# ForEach-Object -Parallel: concurrent processing (PS 7+)
+$servers = "Server01", "Server02", "Server03", "Server04", "Server05"
+$results = $servers | ForEach-Object -Parallel {
+    $ping = Test-Connection $_ -Count 1 -Quiet
+    [PSCustomObject]@{
+        Server = $_
+        Online = $ping
+    }
+} -ThrottleLimit 3      # Max 3 threads running simultaneously
+$results | Format-Table
+
+# Thread-safe collection for parallel result aggregation
+$bag = [System.Collections.Concurrent.ConcurrentBag[object]]::new()
+1..10 | ForEach-Object -Parallel {
+    $localBag = $using:bag        # $using: accesses outer scope variables
+    $localBag.Add("Result $_")
+} -ThrottleLimit 4
+$bag | Sort-Object | Format-List</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a script using <code>ForEach-Object -Parallel</code> to simulate "pinging" 10 servers concurrently (use <code>Start-Sleep -Milliseconds (Get-Random -Max 2000)</code> to simulate variable response times) with a <code>-ThrottleLimit</code> of 4. Collect results into a thread-safe <code>ConcurrentBag</code>, including server name and simulated response time. After all complete, print a final summary table sorted by response time. Measure total wall-clock time with <code>Measure-Command</code> and compare to an equivalent sequential version.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 11-->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Generators, Decorators &amp; Functional Patterns</h2>
+                <p>Apply advanced functional patterns to write cleaner, more powerful PowerShell automation.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Applying advanced functional patterns to write cleaner, more powerful PowerShell automation.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>"Generators" via <code>IEnumerable</code> &amp; Pipeline Streaming</strong> — PowerShell does not have a native <code>yield</code> keyword, but functions that write objects one at a time to the output stream via the <code>process</code> block achieve the same lazy, memory-efficient behavior as generators. This lets large datasets be processed item-by-item instead of loading everything into memory at once.</li>
+                    <li><strong>"Decorators" via Function Wrapping &amp; Proxy Functions</strong> — Since PowerShell lacks built-in decorator syntax, the same effect is achieved by wrapping a function (or creating a proxy command) that adds behavior like logging, timing, or retry logic before and after calling the original. This pattern is commonly used to add cross-cutting functionality without modifying existing cmdlets.</li>
+                    <li><strong>Script Blocks as First-Class Values</strong> — A <code>[scriptblock]</code> is a chunk of PowerShell code stored in a variable, passable as a parameter and invoked later with <code>&amp;</code> or <code>.Invoke()</code>. This enables powerful functional patterns like custom filters, callbacks, strategy patterns, and dynamically composed logic.</li>
+                    <li><strong><code>Measure-Command</code> &amp; Performance Profiling</strong> — <code>Measure-Command</code> wraps any script block and reports precisely how long it took to execute, making it the essential tool for identifying performance bottlenecks. This is commonly combined with decorator-style wrapper functions for automatic performance logging across an entire script library.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Script blocks as first-class values unlock PowerShell's full power as a functional language — you can pass behavior as data, compose functions dynamically, and build strategy patterns without inheritance. The decorator/wrapper pattern is how enterprise PowerShell tools add logging, auditing, and retry logic to every function call without touching the original function code.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># Script block as first-class value — passed as parameter
+function Invoke-WithLogging {
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$Name,
+        [Parameter(Mandatory=$true)]
+        [scriptblock]$Action
+    )
+    Write-Host "[LOG] Starting: $Name"
+    $result = & $Action             # Invoke the script block with &
+    Write-Host "[LOG] Completed: $Name"
+    return $result
+}
+
+Invoke-WithLogging -Name "GetDate" -Action { Get-Date }
+
+# Decorator: wraps ANY function with timing
+function Invoke-Timed {
+    param([scriptblock]$Action)
+    $elapsed = Measure-Command { $script:result = & $Action }
+    Write-Host "Elapsed: $($elapsed.TotalMilliseconds)ms"
+    return $script:result
+}
+Invoke-Timed { 1..1000 | ForEach-Object { $_ * 2 } | Measure-Object -Sum }
+
+# Pipeline streaming: lazy, memory-efficient "generator" pattern
+function Get-NumberStream {
+    param([int]$From, [int]$To)
+    process {                        # process block streams one at a time
+        $From..$To | ForEach-Object { $_ * $_ }
+    }
+}
+1 | Get-NumberStream -From 1 -To 1000000 | Select-Object -First 5</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a function <code>Invoke-Timed</code> that wraps any <code>[scriptblock]</code> parameter using <code>Measure-Command</code> to print how long it took to run before returning its result. Apply it to at least 3 different script blocks and compare timings. Write a pipeline-streaming function that lazily generates one transformed <code>[PSCustomObject]</code> per input item (using the <code>process</code> block), and pipe 10,000 numbers through it to demonstrate memory-efficient streaming.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 12 -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Capstone Week: Three Mini Projects (Beginner → Master)</h2>
+                <p>Consolidate everything learned into three progressively advanced, production-ready automation projects.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Consolidating everything learned into three progressively complex, portfolio-ready PowerShell automation projects.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — System Health Report Script (Beginner–Intermediate)</h3>
+                <p>A script that gathers CPU, memory, and disk usage using built-in cmdlets, formats it as a readable report, and exports it to a text and CSV file. Reinforces variables, the pipeline, functions, basic file output, and error handling from Phases 1 and 2.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>PowerShell Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CPU &amp; memory stats</td>
+                            <td><code>Get-Process</code> + <code>Measure-Object</code></td>
+                        </tr>
+                        <tr>
+                            <td>Disk usage per drive</td>
+                            <td><code>Get-PSDrive</code> + calculated properties</td>
+                        </tr>
+                        <tr>
+                            <td>Top 5 processes by memory</td>
+                            <td><code>Sort-Object</code> + <code>Select-Object -First 5</code></td>
+                        </tr>
+                        <tr>
+                            <td>Export report to CSV</td>
+                            <td><code>Export-Csv -NoTypeInformation</code></td>
+                        </tr>
+                        <tr>
+                            <td>Reusable report function</td>
+                            <td><code>function Get-SystemReport</code> with <code>param()</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A fully working system health report script that gathers CPU, memory, and disk metrics, displays them in formatted tables, and exports a timestamped CSV report — all wrapped in a reusable <code>Get-SystemReport</code> function with <code>-OutputPath</code> parameter. Push to GitHub with a sample output CSV in the repository.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — Automated File Organizer with Logging (Intermediate–Advanced)</h3>
+                <p>A script that scans a folder, sorts files into subfolders by extension using classes and custom objects, and logs every action with full <code>try</code>/<code>catch</code> error handling. Reinforces OOP, file handling, and structured error management from Phases 2 and 3.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>PowerShell Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Scan folder for files by extension</td>
+                            <td><code>Get-ChildItem -Recurse -Filter</code></td>
+                        </tr>
+                        <tr>
+                            <td>File categorization logic</td>
+                            <td>PowerShell <code>class</code> with <code>Categorize()</code> method</td>
+                        </tr>
+                        <tr>
+                            <td>Move files to subfolders</td>
+                            <td><code>Move-Item</code> + <code>New-Item -ItemType Directory</code></td>
+                        </tr>
+                        <tr>
+                            <td>Log every action</td>
+                            <td><code>[PSCustomObject]</code> log entries + <code>Export-Csv</code></td>
+                        </tr>
+                        <tr>
+                            <td>Handle locked/inaccessible files</td>
+                            <td><code>try</code>/<code>catch</code> + <code>-ErrorAction Stop</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A complete file organizer that scans a target folder, moves files into extension-based subfolders (e.g., <code>Images/</code>, <code>Documents/</code>, <code>Archives/</code>), writes a timestamped action log as CSV, and handles errors for locked or inaccessible files gracefully. All categorization logic encapsulated in a PowerShell class. Push to GitHub with a demo folder structure and sample log output.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Parallel Server/API Health Monitor (Advanced–Master)</h3>
+                <p>A tool that concurrently checks the status of multiple servers or REST API endpoints using <code>ForEach-Object -Parallel</code>, aggregates results into a thread-safe collection, and exports a final dashboard report. Ties together concurrency, REST APIs, JSON, error handling, and modular script design.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>PowerShell Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Concurrent endpoint checks</td>
+                            <td><code>ForEach-Object -Parallel</code> + <code>-ThrottleLimit</code></td>
+                        </tr>
+                        <tr>
+                            <td>HTTP status &amp; response time</td>
+                            <td><code>Invoke-WebRequest</code> + <code>Measure-Command</code></td>
+                        </tr>
+                        <tr>
+                            <td>Thread-safe result aggregation</td>
+                            <td><code>ConcurrentBag</code> + <code>$using:</code> scope</td>
+                        </tr>
+                        <tr>
+                            <td>Graceful error handling</td>
+                            <td><code>try</code>/<code>catch</code> per parallel thread</td>
+                        </tr>
+                        <tr>
+                            <td>Dashboard report export</td>
+                            <td><code>Export-Csv</code> + <code>ConvertTo-Html</code></td>
+                        </tr>
+                        <tr>
+                            <td>Decorator timing wrapper</td>
+                            <td><code>Invoke-Timed</code> script block pattern</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Code Example</h3>
+                <pre><code># Project 3: Parallel API/Server Health Monitor
+$endpoints = @(
+    "https://api.github.com",
+    "https://www.microsoft.com",
+    "https://jsonplaceholder.typicode.com/posts/1",
+    "https://httpbin.org/get"
+)
+
+$bag = [System.Collections.Concurrent.ConcurrentBag[object]]::new()
+
+$totalTime = Measure-Command {
+    $endpoints | ForEach-Object -Parallel {
+        $url    = $_
+        $localBag = $using:bag
+        try {
+            $elapsed = Measure-Command {
+                $r = Invoke-WebRequest -Uri $url -ErrorAction Stop
+            }
+            $localBag.Add([PSCustomObject]@{
+                Url          = $url
+                Status       = $r.StatusCode
+                ResponseMs   = [math]::Round($elapsed.TotalMilliseconds, 1)
+                Healthy      = $true
+            })
+        } catch {
+            $localBag.Add([PSCustomObject]@{
+                Url        = $url
+                Status     = "Error"
+                ResponseMs = -1
+                Healthy    = $false
+            })
+        }
+    } -ThrottleLimit 5
+}
+
+$bag | Sort-Object ResponseMs | Format-Table -AutoSize
+Write-Host "Total wall-clock time: $($totalTime.TotalSeconds)s"
+$bag | Export-Csv "health_report.csv" -NoTypeInformation</code></pre>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A production-grade parallel health monitoring tool that concurrently checks 5–10 API endpoints, measures response times with <code>Measure-Command</code>, aggregates results thread-safely into a <code>ConcurrentBag</code>, handles individual endpoint failures gracefully per thread, and exports both a CSV and an HTML dashboard report with <code>ConvertTo-Html</code>. Compare total wall-clock time against a sequential version. Push all three projects to a single public GitHub repository with individual READMEs and sample output files.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–3</td>
+                        <td>Absolute Basics</td>
+                        <td>Use cmdlets, the object pipeline, variables, and collections (arrays, hashtables, PSCustomObject) to query and organize system data</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>4–6</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Write conditional and looping logic, build modular parameterized functions with pipeline support, and model data with PowerShell classes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>7–9</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Apply OOP inheritance and polymorphism, handle errors robustly with try/catch, manipulate the file system, install modules, call REST APIs, and process JSON/CSV data</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>10–12</td>
+                        <td>Master Level Concepts</td>
+                        <td>Run parallel automation with ForEach-Object -Parallel and thread-safe collections, apply functional patterns with script blocks and decorators, and complete three production-grade automation projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool / Resource</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PowerShell 7+ (github.com/PowerShell/PowerShell)</td>
+                        <td>Modern cross-platform PowerShell — install this, not Windows PS 5.1</td>
+                    </tr>
+                    <tr>
+                        <td>VS Code + PowerShell Extension</td>
+                        <td>Primary IDE with IntelliSense, debugging, and integrated terminal</td>
+                    </tr>
+                    <tr>
+                        <td>PowerShell Docs (learn.microsoft.com/powershell)</td>
+                        <td>Official reference for all cmdlets, language features, and modules</td>
+                    </tr>
+                    <tr>
+                        <td>PowerShell Gallery (powershellgallery.com)</td>
+                        <td>Community module repository — install any module with Install-Module</td>
+                    </tr>
+                    <tr>
+                        <td>Pester (pester.dev)</td>
+                        <td>PowerShell testing framework for unit and integration tests</td>
+                    </tr>
+                    <tr>
+                        <td>PSScriptAnalyzer</td>
+                        <td>Static code analysis — enforces best practices automatically</td>
+                    </tr>
+                    <tr>
+                        <td>"The PowerShell Scripting Guide" (leanpub)</td>
+                        <td>Comprehensive reference book for intermediate to advanced topics</td>
+                    </tr>
+                    <tr>
+                        <td>PowerShell GitHub (github.com/PowerShell)</td>
+                        <td>Source code, issue tracker, and release notes for PS 7+</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Complete each week's task before moving on — writing and running PowerShell code every day beats reading alone by a wide margin, especially for pipeline composition and error handling.</li>
+                    <li>Use <strong><code>Get-Help</code> and <code>Get-Member</code></strong> constantly — they are your built-in documentation system. Every object and every cmdlet is discoverable without leaving the shell, and fluency with these two commands is the mark of an experienced PowerShell engineer.</li>
+                    <li>Always use <strong>PowerShell 7+</strong>, not Windows PowerShell 5.1 — <code>ForEach-Object -Parallel</code>, improved error handling, and cross-platform support are only available in PS 7+.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — PowerShell automation scripts are highly valued portfolio pieces for sysadmin, DevOps, and cloud engineering roles.</li>
+                    <li>By Week 12, you should have three complete, tested, and documented automation scripts and the confidence to build any PowerShell solution from health monitoring to file management to API integration from scratch.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

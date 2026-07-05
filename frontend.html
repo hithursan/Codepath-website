@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Development - 12 Week Roadmap</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="binary-bg" id="binaryBg"></div>
+
+    <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+
+    <header class="rm-header">
+        <h1>Web Frontend Development</h1>
+        <p>Complete 12-Week Beginner-to-Job-Ready Roadmap — HTML, CSS, JavaScript &amp; React</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Roadmap</h2>
+            <p>This roadmap takes a complete beginner to a job-ready, portfolio-equipped frontend developer in 12 weeks of full-time study. The path runs: <strong>HTML → CSS → Responsive Design → Git/GitHub → JavaScript → DOM &amp; Browser APIs → Modern JavaScript (ES6+) → React → React Ecosystem → Deployment, Performance &amp; Accessibility → Capstone Project.</strong></p>
+            <p>Every week builds directly on the previous one. By Week 12 you will have <strong>1 capstone project</strong> and <strong>8–10 smaller projects</strong> to show in a portfolio, plus the conceptual depth to answer technical interview questions confidently.</p>
+            <p><strong>Level:</strong> Beginner &nbsp;|&nbsp; <strong>Duration:</strong> 12 weeks &nbsp;|&nbsp; <strong>Study mode:</strong> Full-time (~35–40 hrs/week) &nbsp;|&nbsp; <strong>Framework:</strong> React</p>
+        </div>
+
+
+        <!--  WEEK 1 -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — HTML Foundations</h2>
+                <p>Understand how webpages are structured and build a complete static multi-section page using only semantic HTML.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>How the web works</strong> — client/server, browsers, HTTP basics (conceptual).</li>
+                    <li><strong>HTML document structure</strong> — <code>&lt;!DOCTYPE&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, metadata tags.</li>
+                    <li><strong>Text elements</strong> — headings (<code>h1</code>–<code>h6</code>), paragraphs, <code>span</code>, <code>div</code>, line breaks, horizontal rules.</li>
+                    <li><strong>Lists</strong> — ordered, unordered, description lists.</li>
+                    <li><strong>Links &amp; navigation</strong> — <code>&lt;a&gt;</code>, relative vs absolute paths, anchor links.</li>
+                    <li><strong>Images &amp; media</strong> — <code>&lt;img&gt;</code>, alt text, <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>.</li>
+                    <li><strong>Tables</strong> — <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>.</li>
+                    <li><strong>Forms</strong> — <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code> types, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;label&gt;</code>.</li>
+                    <li><strong>Semantic HTML5</strong> — <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> HTML is the skeleton of every website. Every CSS rule and every JavaScript interaction targets an HTML element. Skipping or rushing semantic structure now creates messy, hard-to-style, inaccessible pages later.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>How the web works (conceptual) + document structure + text elements. Build a "My Bio" page.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Lists + links + navigation. Add a nav menu and list of hobbies to your bio page.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Images, video, audio embedding. Add a profile picture and a sample video.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Tables — build a sample timetable/marksheet table.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Forms — build a contact form with text, email, dropdown, radio, checkbox, textarea, submit.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Semantic HTML5 tags — restructure all previous pages using header/nav/main/section/footer.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + push first code to GitHub.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Recreate the structure (not styling) of a simple Wikipedia article page using only HTML.</li>
+                    <li>Build a multi-page "personal portfolio skeleton" (Home, About, Contact — linked via <code>&lt;a&gt;</code> tags).</li>
+                    <li>Build a recipe page with an image, ingredient list (ul), and steps (ol).</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A 3-page unstyled personal portfolio (Home, About, Contact) with semantic structure, a navigation bar linking all 3 pages, an image, and a working contact form (no backend needed yet).</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> for everything instead of semantic tags.</li>
+                        <li>Forgetting <code>alt</code> attributes on images.</li>
+                        <li>Nesting block elements inside inline elements incorrectly.</li>
+                        <li>Not closing tags properly.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always ask "is there a more meaningful tag for this?" before reaching for <code>&lt;div&gt;</code>.</li>
+                        <li>Make <code>alt</code> text a non-negotiable habit from day one.</li>
+                        <li>Use VS Code's auto-formatting (Prettier) to catch unclosed/misnested tags.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MDN Web Docs — HTML Basics (developer.mozilla.org)</li>
+                    <li>freeCodeCamp — "Responsive Web Design" HTML section</li>
+                    <li>W3Schools HTML Tutorial (for quick syntax lookup)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35–38 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 2 -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — CSS Foundations</h2>
+                <p>Style any HTML page confidently — colors, fonts, spacing, borders, and basic layout.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>CSS syntax &amp; ways to add CSS</strong> — inline, internal, external stylesheets.</li>
+                    <li><strong>Selectors</strong> — element, class, ID, grouping, descendant, pseudo-classes (<code>:hover</code>, <code>:first-child</code>), pseudo-elements (<code>::before</code>).</li>
+                    <li><strong>The Box Model</strong> — content, padding, border, margin; <code>box-sizing: border-box</code>.</li>
+                    <li><strong>Colors &amp; backgrounds</strong> — HEX, RGB, RGBA, HSL; <code>background-color</code>, <code>background-image</code>, gradients.</li>
+                    <li><strong>Typography</strong> — <code>font-family</code>, <code>font-size</code>, <code>font-weight</code>, <code>line-height</code>, Google Fonts.</li>
+                    <li><strong>Display &amp; positioning basics</strong> — <code>display: block/inline/inline-block/none</code>, <code>position: static/relative/absolute/fixed/sticky</code>.</li>
+                    <li><strong>CSS specificity &amp; the cascade</strong> — how conflicting rules are resolved.</li>
+                    <li><strong>Units</strong> — px, %, em, rem, vh, vw.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> CSS turns a plain document into a designed website. The Box Model and specificity are the two concepts beginners misunderstand most — mastering them now prevents weeks of frustration.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>CSS syntax, selectors, linking stylesheets. Style your bio page's text and headings.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Box Model deep-dive (padding/border/margin/box-sizing). Style spacing on your nav and sections.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Colors, backgrounds, gradients. Add a color theme to your portfolio.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Typography — fonts, sizes, line-height. Import a Google Font and apply a type scale.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Display property + position property (all 5 values practiced individually).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Specificity &amp; cascade rules + units (px vs rem vs %). Refactor CSS to use rem for fonts.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + commit/push to GitHub.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build a styled pricing card (image, title, price, feature list, button) using only Box Model + positioning.</li>
+                    <li>Recreate a simple navbar with a logo on the left and 3 links on the right using <code>display</code> properties.</li>
+                    <li>Style a quote/testimonial block with a colored left border and background tint.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Take your Week 1 portfolio and fully style it: consistent color palette, custom typography, styled navigation bar, styled buttons, and styled form — using only Box Model + <code>display</code> + <code>position</code>.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Forgetting <code>box-sizing: border-box</code>, causing unexpected element widths.</li>
+                        <li>Overusing <code>position: absolute</code> to "force" layouts.</li>
+                        <li>Relying only on px units, making the page un-scalable.</li>
+                        <li>Writing overly specific selectors that become hard to override.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Add <code>* { box-sizing: border-box; }</code> as a habitual reset at the top of every stylesheet.</li>
+                        <li>Treat <code>position: absolute/fixed</code> as a last resort, not a default tool.</li>
+                        <li>Use rem for font sizes and % or rem for spacing where it makes sense.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MDN Web Docs — CSS Basics &amp; Box Model</li>
+                    <li>CSS-Tricks — "The Box Model" article</li>
+                    <li>freeCodeCamp — CSS section of Responsive Web Design</li>
+                    <li>Josh W Comeau's free blog post "An Interactive Guide to CSS"</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35–38 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 3   -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Flexbox &amp; Layout Mastery</h2>
+                <p>Build any modern one-dimensional layout confidently using Flexbox.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Flex container properties</strong> — <code>display: flex</code>, <code>flex-direction</code>, <code>flex-wrap</code>, <code>justify-content</code>, <code>align-items</code>, <code>align-content</code>, <code>gap</code>.</li>
+                    <li><strong>Flex item properties</strong> — <code>flex-grow</code>, <code>flex-shrink</code>, <code>flex-basis</code>, <code>flex</code> shorthand, <code>align-self</code>, <code>order</code>.</li>
+                    <li><strong>Common Flexbox patterns</strong> — centering content, equal-height columns, sticky footer, navbar layouts, card grids.</li>
+                    <li><strong>CSS variables (custom properties)</strong> — <code>:root</code>, <code>var()</code>, theming.</li>
+                    <li><strong>Transitions &amp; simple animations</strong> — <code>transition</code>, <code>transform</code>, <code>:hover</code> effects.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Flexbox is the single most-used layout tool in real-world frontend work. Nearly every navbar, card layout, and button group in production websites uses Flexbox.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Flex container properties — <code>flex-direction</code>, <code>justify-content</code>, <code>align-items</code>. Play Flexbox Froggy.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Flex-wrap, gap, align-content. Build a responsive card grid.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Flex item properties — grow/shrink/basis. Build a 3-column equal-height layout.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Common patterns — navbar (logo left, links right), sticky footer.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>CSS variables — define a color/spacing theme using <code>:root</code> and <code>var()</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Transitions &amp; hover effects — animate buttons, cards, links.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Practice Tasks</h3>
+                <ul>
+                    <li>Build a pricing page with 3 equal-height pricing cards using Flexbox.</li>
+                    <li>Build a navbar with a logo, center links, and a right-aligned button.</li>
+                    <li>Build an image gallery that wraps responsively using <code>flex-wrap</code>.</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A fully responsive "Restaurant Landing Page" with a Flexbox navbar, hero section, 3-column feature section, hover animations, and CSS-variable-based color theme.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Confusing <code>justify-content</code> (main axis) with <code>align-items</code> (cross axis).</li>
+                        <li>Forgetting that <code>flex-direction: column</code> flips which axis is "main."</li>
+                        <li>Overusing <code>flex-grow</code> without understanding <code>flex-basis</code>.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Flexbox Froggy (flexboxfroggy.com) — free interactive game</li>
+                    <li>CSS-Tricks — "A Complete Guide to Flexbox"</li>
+                    <li>MDN Web Docs — Flexbox guide</li>
+                    <li>Kevin Powell (YouTube) — Flexbox tutorials</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35–38 hours</p>
+            </div>
+        </div>
+
+
+        <!--   WEEK 4  -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — CSS Grid &amp; Responsive Design</h2>
+                <p>Build complex two-dimensional layouts and make any page fully responsive.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>CSS Grid container properties</strong> — <code>display: grid</code>, <code>grid-template-columns/rows</code>, <code>gap</code>, <code>grid-template-areas</code>.</li>
+                    <li><strong>CSS Grid item properties</strong> — <code>grid-column</code>, <code>grid-row</code>, spanning cells.</li>
+                    <li><strong>Grid vs Flexbox</strong> — when to use which.</li>
+                    <li><strong>Responsive design principles</strong> — mobile-first vs desktop-first.</li>
+                    <li><strong>Media queries</strong> — <code>@media</code>, common breakpoints.</li>
+                    <li><strong>Responsive units &amp; images</strong> — <code>max-width: 100%</code>, fluid typography with <code>clamp()</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A site that isn't responsive is considered broken by modern standards. Grid is standard for any non-trivial page layout.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Grid container basics — <code>grid-template-columns/rows</code>, <code>gap</code>. Build a 3x3 grid.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Grid item placement — spanning rows/columns. Build a magazine-style gallery.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>grid-template-areas</code> — build a full page layout using named areas.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Media queries — breakpoints for mobile/tablet/desktop. Convert Week 3 page to responsive.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Mobile-first refactor of an earlier project.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Responsive images and fluid typography with <code>clamp()</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A fully responsive personal blog homepage with CSS Grid layout (header, sidebar, main article grid, footer), at least 3 breakpoints, and fluid typography.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Designing desktop-first and "squeezing" down for mobile.</li>
+                        <li>Using too many arbitrary breakpoints.</li>
+                        <li>Forgetting <code>max-width: 100%</code> on images.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>CSS Grid Garden (cssgridgarden.com)</li>
+                    <li>CSS-Tricks — "A Complete Guide to Grid"</li>
+                    <li>MDN Web Docs — Responsive Design &amp; Media Queries</li>
+                    <li>web.dev — "Learn Responsive Design" (Google)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–40 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 5 -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Git, GitHub, Tailwind CSS &amp; Deployment</h2>
+                <p>Track code with Git, collaborate on GitHub, style with Tailwind, and deploy live.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Git fundamentals</strong> — <code>init</code>, <code>add</code>, <code>commit</code>, <code>status</code>, <code>log</code>, <code>.gitignore</code>.</li>
+                    <li><strong>GitHub basics</strong> — creating repos, <code>push</code>/<code>pull</code>, README files, GitHub Pages.</li>
+                    <li><strong>Branching basics</strong> — <code>branch</code>, <code>checkout</code>/<code>switch</code>, <code>merge</code>.</li>
+                    <li><strong>Tailwind CSS fundamentals</strong> — setup, utility classes, responsive prefixes.</li>
+                    <li><strong>Deployment</strong> — GitHub Pages, Netlify, or Vercel.</li>
+                    <li><strong>Browser DevTools deep-dive</strong> — Elements, Console, Network tabs.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Git/GitHub is non-negotiable for every employer. Deployment turns projects into shareable live links. Tailwind is among the most in-demand styling approaches.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Git fundamentals — init, add, commit, status, log, .gitignore.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>GitHub — create repos, push projects, write README files.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Branching — create a branch, make changes, merge back.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Tailwind CSS setup + utility classes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Rebuild Week 3 restaurant page using Tailwind CSS only.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Deployment — deploy 2–3 projects via GitHub Pages and Netlify/Vercel.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>DevTools deep-dive + review + final commits/push.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Deploy a personal portfolio "v1" live on Netlify or GitHub Pages, with code on GitHub, a clean README, and a working live link.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Committing huge unrelated changes in one commit.</li>
+                        <li>Never writing README files.</li>
+                        <li>Forgetting to push after committing.</li>
+                        <li>Avoiding branches due to merge conflict fear.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Git &amp; GitHub for Beginners (freeCodeCamp YouTube)</li>
+                    <li>GitHub Docs — "Hello World" guide</li>
+                    <li>Tailwind CSS official docs (tailwindcss.com/docs)</li>
+                    <li>Netlify Docs / Vercel Docs</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 35–38 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 6 -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — JavaScript Fundamentals</h2>
+                <p>Understand core programming logic — variables, data types, operators, conditionals, loops, and functions.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Variables &amp; data types</strong> — <code>let</code>, <code>const</code>, <code>var</code>; string, number, boolean, null, undefined.</li>
+                    <li><strong>Operators</strong> — arithmetic, comparison (<code>==</code> vs <code>===</code>), logical, ternary.</li>
+                    <li><strong>Conditionals</strong> — <code>if/else</code>, <code>else if</code>, <code>switch</code>.</li>
+                    <li><strong>Loops</strong> — <code>for</code>, <code>while</code>, <code>do...while</code>, <code>break</code>/<code>continue</code>.</li>
+                    <li><strong>Functions</strong> — declarations, expressions, arrow functions, scope.</li>
+                    <li><strong>Arrays basics</strong> — creating, indexing, <code>push</code>, <code>pop</code>, iteration.</li>
+                    <li><strong>Objects basics</strong> — key-value pairs, dot vs bracket notation.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> This is the single most important transition — from "describing/styling pages" to "programming logic." Rushing this week is the #1 cause of beginners feeling lost in React later.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Variables, data types, <code>typeof</code>. Declare and log 10 different variable types.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Operators. Solve 10 small operator-based problems.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Conditionals. Solve: grade calculator, even/odd checker, leap year checker.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Loops. Solve: multiplication table, sum 1–100, FizzBuzz.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Functions. Refactor Day 3–4 solutions into reusable functions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Arrays basics. Solve: find max/min, count vowels, reverse array.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Objects basics + review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A console-based "Number Guessing Game" — random number, prompts for guesses, "too high/too low" feedback, attempt tracking.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>var</code> instead of <code>let</code>/<code>const</code>.</li>
+                        <li>Confusing <code>=</code> with <code>==</code>/<code>===</code>.</li>
+                        <li>Infinite loops from forgetting to update loop variable.</li>
+                        <li>Not understanding function scope.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Default to <code>const</code>; use <code>let</code> only when needed; avoid <code>var</code>.</li>
+                        <li>Always use <code>===</code> (strict equality).</li>
+                        <li>Double-check loop increment logic before running.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>freeCodeCamp — JavaScript Algorithms and Data Structures</li>
+                    <li>MDN Web Docs — JavaScript First Steps</li>
+                    <li>javascript.info — free JS tutorial</li>
+                    <li>The Odin Project — JavaScript Foundations</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–42 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 7  -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — DOM Manipulation, Events &amp; Arrays/Objects Deep Dive</h2>
+                <p>Make any static page interactive — clicks, dynamic content, form validation using JavaScript.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Selecting DOM elements</strong> — <code>getElementById</code>, <code>querySelector</code>, <code>querySelectorAll</code>.</li>
+                    <li><strong>Manipulating the DOM</strong> — <code>textContent</code>, <code>innerHTML</code>, <code>classList</code>, creating/appending elements.</li>
+                    <li><strong>Events</strong> — <code>addEventListener</code>, click, submit, keydown, input, event object.</li>
+                    <li><strong>Event bubbling &amp; delegation</strong>.</li>
+                    <li><strong>Form handling &amp; validation</strong> — <code>preventDefault()</code>, reading values, validation logic.</li>
+                    <li><strong>Array methods deep dive</strong> — <code>map</code>, <code>filter</code>, <code>reduce</code>, <code>forEach</code>, <code>find</code>, <code>includes</code>.</li>
+                    <li><strong>Object methods &amp; destructuring</strong>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> This is where JavaScript visibly transforms pages. <code>map</code>/<code>filter</code>/<code>reduce</code> are used constantly in React, so mastering them now makes React dramatically easier.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>DOM selection methods. Select and log elements from your portfolio page.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>DOM manipulation. Build a dark/light mode toggle button.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Events — click, input, keydown. Build a basic image slider.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Forms — preventDefault, validation. Add validation to your contact form.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Array methods — map, filter, reduce, forEach. Solve 8–10 problems.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Object methods + destructuring. Refactor earlier code.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A "To-Do List App" (HTML/CSS/JS) with: add task, delete task, mark complete, filter (all/active/completed), task count — deployed live.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Using <code>innerHTML</code> carelessly, risking security issues.</li>
+                        <li>Forgetting <code>event.preventDefault()</code> on forms.</li>
+                        <li>Mutating arrays directly instead of using <code>map</code>/<code>filter</code>.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>MDN Web Docs — DOM manipulation &amp; Events</li>
+                    <li>javascript.info — "Document," "Events" chapters</li>
+                    <li>freeCodeCamp — DOM manipulation projects</li>
+                    <li>JS Array Methods cheat sheet (MDN)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–42 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Modern JavaScript (ES6+), Async JS &amp; Intro to React</h2>
+                <p>Master modern syntax, fetch real API data, and take the first steps into React.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>ES6+ syntax</strong> — template literals, spread/rest, default parameters, modules.</li>
+                    <li><strong>Asynchronous JavaScript</strong> — Promises, <code>async</code>/<code>await</code>.</li>
+                    <li><strong>Fetch API</strong> — <code>fetch()</code>, responses, <code>try/catch</code>.</li>
+                    <li><strong>JSON</strong> — <code>JSON.parse</code>/<code>JSON.stringify</code>, API data.</li>
+                    <li><strong>Why frameworks exist</strong> — limitations of vanilla DOM at scale.</li>
+                    <li><strong>React introduction</strong> — Virtual DOM, components, JSX basics.</li>
+                    <li><strong>Setting up React</strong> — Vite, folder structure.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Async JS and Fetch are how real websites get real data. Understanding <em>why</em> React exists makes it feel natural rather than arbitrary.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>ES6+ syntax — template literals, spread/rest, modules.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Promises + <code>.then()</code>/<code>.catch()</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td><code>async</code>/<code>await</code> + <code>try/catch</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Fetch API + JSON — fetch from a public API and display data.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Build a small API project (joke/quote generator).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>React intro — Virtual DOM, JSX. Set up first Vite + React project.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>An API-powered mini app (Quote Generator / Joke Generator / Random Dog Image Viewer) with <code>fetch</code>/<code>async</code>/<code>await</code>, a "New" button, loading state, and error handling — deployed live.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Forgetting <code>await</code> and using Promise object as data.</li>
+                        <li>Not handling fetch errors at all.</li>
+                        <li>Confusing JSX with HTML (<code>className</code> vs <code>class</code>).</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>javascript.info — "Promises, async/await"</li>
+                    <li>MDN Web Docs — Using Fetch</li>
+                    <li>React official docs — "Quick Start" (react.dev)</li>
+                    <li>JSONPlaceholder / free public API directory</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 40–42 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 9 -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — React Fundamentals</h2>
+                <p>Build a multi-component React application using JSX, props, and state.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Components</strong> — function components, naming, composition.</li>
+                    <li><strong>JSX in depth</strong> — expressions, conditional rendering, lists with <code>.map()</code> + <code>key</code>.</li>
+                    <li><strong>Props</strong> — passing data, defaults, children prop.</li>
+                    <li><strong>State</strong> — <code>useState</code>, immutability, state vs props.</li>
+                    <li><strong>Event handling</strong> — <code>onClick</code>, <code>onChange</code>, <code>onSubmit</code>, passing functions as props.</li>
+                    <li><strong>Conditional rendering</strong> — ternary, <code>&amp;&amp;</code>, early returns.</li>
+                    <li><strong>Lifting state up</strong> — sharing state via common parent.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Components, props, and state are the conceptual core of React. Once these "click," everything else becomes much easier. Most beginner confusion traces back to a shaky grasp of these three.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Components + composition. Build Header, Card, Footer components.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>JSX — expressions, lists with <code>.map()</code> + <code>key</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Props — passing data, defaults, children.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>State — <code>useState</code>. Build counter + favorite toggle.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Event handling + conditional rendering. Build show/hide toggle, tab switcher.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Lifting state up — parent managing shared state for siblings.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A React "Movie/Book Search &amp; Favorites" app — item list, search/filter input, mark favorites, state via <code>useState</code> — deployed live.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Mutating state directly instead of using setter function.</li>
+                        <li>Missing or misusing <code>key</code> prop in lists.</li>
+                        <li>Confusing props vs state.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>Always use <code>setX(newValue)</code>, never mutate directly.</li>
+                        <li>Use stable unique IDs as <code>key</code>, not array index.</li>
+                        <li>"Does this component own or receive it?" — owns = state, receives = props.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>React official docs — "Learn React" (react.dev/learn)</li>
+                    <li>freeCodeCamp — React section</li>
+                    <li>Scrimba — Learn React (free modules)</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 42–45 hours</p>
+            </div>
+        </div>
+
+
+        <!-- WEEK 10 -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — React Hooks, Routing &amp; Real API Integration</h2>
+                <p>Build a realistic multi-page React app that fetches live data and manages side effects.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>useEffect</code></strong> — side effects, dependency array, cleanup.</li>
+                    <li><strong>Fetching API data in React</strong> — <code>useState</code> + <code>useEffect</code> + fetch, loading/error states.</li>
+                    <li><strong>React Router</strong> — <code>BrowserRouter</code>, <code>Routes</code>, <code>Route</code>, <code>Link</code>, dynamic routes, <code>useParams</code>.</li>
+                    <li><strong>Forms in React</strong> — controlled components, multi-field forms, validation.</li>
+                    <li><strong>Custom hooks (intro)</strong> — extracting reusable logic.</li>
+                    <li><strong>Component organization</strong> — folder structure.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>useEffect</code> and routing turn a single component into a real multi-page application with live data. These are the exact skills tested in entry-level React interviews.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td><code>useEffect</code> — dependency array, cleanup. 3 isolated examples.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Fetching API data with loading/error states. Build "User List" component.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>React Router — multi-page nav with <code>Link</code>/<code>NavLink</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Dynamic routes with <code>useParams</code> — details page (<code>/item/:id</code>).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Forms — controlled inputs, multi-field form with validation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Custom hooks — extract <code>useFetch</code> and reuse it.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Review + mini project + GitHub commit.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>A "Recipe/Product Explorer" React app — API list, search bar, detail pages via <code>/item/:id</code>, loading/error states, clean navigation — deployed on Vercel/Netlify.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Wrong <code>useEffect</code> dependency array causing infinite loops.</li>
+                        <li>Not handling loading/error states.</li>
+                        <li>Forgetting <code>BrowserRouter</code> wrapper at top level.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>React official docs — useEffect, Custom Hooks (react.dev)</li>
+                    <li>React Router docs (reactrouter.com)</li>
+                    <li>freeCodeCamp — React Router tutorials</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 42–45 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 11 -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Deployment, Performance, Accessibility &amp; Testing</h2>
+                <p>Ship a production-quality, accessible, performant app with basic automated tests.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Production deployment</strong> — <code>npm run build</code>, Vercel/Netlify, environment variables.</li>
+                    <li><strong>Web performance</strong> — image optimization, lazy loading, Lighthouse audits.</li>
+                    <li><strong>Accessibility (a11y)</strong> — ARIA, keyboard nav, color contrast, alt text.</li>
+                    <li><strong>Basic SEO</strong> — meta tags, title tags, Open Graph.</li>
+                    <li><strong>Intro to testing</strong> — concepts + a first test with React Testing Library / Vitest.</li>
+                    <li><strong>Browser compatibility</strong> — caniuse.com, polyfills (conceptual).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> A project that only works on your laptop isn't finished. This week professionalizes everything and separates "tutorial-level" work from a presentable portfolio.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Production build &amp; deployment for React. Deploy Week 10 project.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Performance — Lighthouse audit, fix 2–3 issues.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Accessibility — ARIA, keyboard nav testing, fix issues.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Color contrast + alt text audit across all projects.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>SEO — meta tags, titles, Open Graph tags.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Testing — Vitest/RTL setup, write 2–3 simple tests.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Apply fixes across all projects + final commits.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Mini Project</h4>
+                    <p>Polished "v2" of Week 10 app: improved Lighthouse score, accessibility fixes, SEO meta tags, 2+ automated tests — redeployed live.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Treating deployment as "done" without auditing.</li>
+                        <li>Adding <code>alt=""</code> everywhere lazily.</li>
+                        <li>Ignoring keyboard navigation.</li>
+                        <li>Skipping testing entirely.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>web.dev — Performance, Accessibility, SEO (Google)</li>
+                    <li>WebAIM — Accessibility checklist &amp; contrast checker</li>
+                    <li>React Testing Library docs</li>
+                    <li>Vitest docs</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 38–40 hours</p>
+            </div>
+        </div>
+
+
+        <!--  WEEK 12 -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Capstone Project, Portfolio &amp; Interview Prep</h2>
+                <p>Build, polish, and ship a capstone; assemble a portfolio; prepare for interviews/viva.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Project planning</strong> — scope, wireframing, component breakdown.</li>
+                    <li><strong>Capstone build</strong> — applying Weeks 1–11 in one project.</li>
+                    <li><strong>Portfolio website</strong> — listing all projects with live links.</li>
+                    <li><strong>GitHub profile polish</strong> — pinned repos, strong READMEs.</li>
+                    <li><strong>Interview/viva prep</strong> — concept review, mock Q&amp;A.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> This converts 11 weeks of learning into tangible proof of skill. A finished capstone and polished portfolio are what evaluators and recruiters actually look at.</p>
+                </div>
+
+                <h3>Daily Study Plan</h3>
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Day 1</strong></td>
+                            <td>Plan capstone — features, wireframe, list APIs needed.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 2</strong></td>
+                            <td>Build core structure and React component skeleton.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 3</strong></td>
+                            <td>Implement state, interactivity, API integration.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 4</strong></td>
+                            <td>Implement routing and remaining features.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 5</strong></td>
+                            <td>Polish — responsive, accessibility, Lighthouse, SEO.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 6</strong></td>
+                            <td>Deploy capstone; build/update portfolio site.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Day 7</strong></td>
+                            <td>Interview prep — explain projects out loud, review concepts.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>Final Capstone: "EventHub" — Event Discovery &amp; Booking Interface</h4>
+                    <p>A complete frontend app demonstrating every roadmap skill:</p>
+                    <ol>
+                        <li><strong>Home/Browse</strong> — event list from API/JSON in responsive Grid/Flexbox cards.</li>
+                        <li><strong>Search &amp; Filter</strong> — by name/category with controlled inputs.</li>
+                        <li><strong>Event Details</strong> — dynamic route (<code>/event/:id</code>).</li>
+                        <li><strong>"My Saved Events"</strong> — save/unsave with <code>useState</code>/<code>useEffect</code>.</li>
+                        <li><strong>Responsive, accessible, performant</strong> — passes Lighthouse, semantic HTML.</li>
+                    </ol>
+                    <p><strong>Tech:</strong> HTML5, CSS3, Tailwind (optional), JavaScript ES6+, React, React Router, Fetch API, Git/GitHub, Vercel/Netlify.</p>
+                    <p><strong>Deliverables:</strong> Live link, GitHub repo with README, project report.</p>
+                </div>
+
+                <div class="rm-warning">
+                    <h3>Common Mistakes</h3>
+                    <ul>
+                        <li>Over-scoping the capstone (too many features).</li>
+                        <li>Skipping wireframing and coding immediately.</li>
+                        <li>Neglecting the portfolio site itself.</li>
+                    </ul>
+                </div>
+
+                <div class="rm-tip">
+                    <h3>How to Avoid Them</h3>
+                    <ul>
+                        <li>3–5 core features maximum, fully polished.</li>
+                        <li>Always wireframe before coding.</li>
+                        <li>Portfolio site is equally important — it's seen first.</li>
+                    </ul>
+                </div>
+
+                <h3>Free Resources</h3>
+                <ul class="rm-resources">
+                    <li>Excalidraw / Figma (free) — wireframing</li>
+                    <li>Pramp / interviewing.io — mock interviews</li>
+                    <li>web.dev — project checklists</li>
+                </ul>
+
+                <p><strong>Estimated Study Hours:</strong> 42–45 hours</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+                <div class="logo1">
+                    <h3>CodePath</h3>
+                    <p>Learn. Practice. Master</p>
+                </div>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+<script src="./Style.js"></script>
+</body>
+</html>

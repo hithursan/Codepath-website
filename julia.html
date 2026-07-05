@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia: Beginner to Master — 15 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>Julia: Beginner to Master</h1>
+        <p>Complete 15-Week Curriculum — From Types & Multiple Dispatch to Metaprogramming, Parallelism & Scientific Computing</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>15-week, phase-based Julia curriculum</strong> designed to take a complete beginner to a professional-level scientific computing and data engineering developer. The roadmap moves from <strong>syntax, numeric types, arrays, and broadcasting</strong> through <strong>control flow, multiple dispatch, collections, modules, and custom structs</strong>, into <strong>abstract types, file I/O, error handling, and the package ecosystem</strong>, all the way to <strong>metaprogramming, parallelism, performance engineering, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics including Julia's unique numeric type hierarchy and 1-based arrays, <strong>Phase 2</strong> covers control flow, Julia's defining multiple dispatch paradigm, and modules, <strong>Phase 3</strong> covers intermediate and advanced core topics like the type system, file I/O, and the data science package ecosystem, and <strong>Phase 4</strong> covers master-level metaprogramming, parallelism, performance engineering, and production projects.</p>
+            <p>By Week 15, you will have built three complete, portfolio-ready applications and be confident building production-grade Julia programs across scientific computing, data engineering, and high-performance simulation domains.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 15 weeks &nbsp;|&nbsp; <strong>Stack:</strong> Julia 1.10+, Pkg.jl, DataFrames.jl &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic programming logic</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–3:</strong> Setup, core types, variables, and operators.</p>
+        </div>
+
+        <!--WEEK 1 -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Introduction to Julia &amp; Environment Setup</h2>
+                <p>Understand what Julia is, why it was created, and write your first working code.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding what Julia is, why it was created, and writing your first working Julia scripts.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What is Julia &amp; Why Use It?</strong> — Julia is a high-level, high-performance language designed for numerical and scientific computing, combining the ease of Python with speed approaching C. It achieves this through Just-In-Time (JIT) compilation via LLVM, making it the language of choice for data science, machine learning research, and computational simulations.</li>
+                    <li><strong>Installing Julia &amp; juliaup</strong> — <code>juliaup</code> is Julia's official version manager, installed from julialang.org, that handles downloading, updating, and switching between Julia versions effortlessly. Once installed, the <code>julia</code> command launches the interactive REPL directly from your terminal.</li>
+                    <li><strong>The Julia REPL &amp; Package Manager Mode</strong> — The REPL has several special modes accessed by typing a character: <code>]</code> enters Pkg mode for installing packages, <code>;</code> enters shell mode for OS commands, and <code>?</code> enters help mode for documentation lookup — each exited with backspace.</li>
+                    <li><strong>Variables, Naming Conventions &amp; Unicode Support</strong> — Julia variables require no type declaration and use dynamic typing by default. Uniquely, Julia supports Unicode characters in identifiers (typed via LaTeX-style tab completion, e.g., <code>\alpha&lt;TAB&gt;</code> becomes <code>α</code>) — embracing mathematical notation directly in code.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Julia was created to solve the "two-language problem" — writing prototypes in Python and rewriting for performance in C/Fortran. Understanding this design philosophy from Week 1 explains every subsequent design decision: why types matter, why multiple dispatch exists, and why Julia's performance model is fundamentally different from scripting languages.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># Julia's classic "Hello World" — no semicolons required
+println("Hello, Julia!")
+println("Julia version: ", VERSION)
+
+# In the REPL (interactive modes):
+# ]  → Pkg mode:    pkg> add DataFrames
+# ;  → Shell mode:  shell> ls
+# ?  → Help mode:   help?> println
+
+name = "Alice"            # dynamically typed — no declaration needed
+age = 30
+α = 0.05                  # Unicode identifier — type \alpha then Tab
+π_approx = 3.14159
+println("$name is $age years old (α = $α)")</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Install Julia via <code>juliaup</code> and confirm it runs with <code>julia --version</code>. Open the REPL, enter Pkg mode with <code>]</code>, and run <code>status</code> to see installed packages. Write a script that declares your name and a Unicode Greek-letter variable (e.g., <code>θ</code>), and prints a formatted sentence using string interpolation. Run it with <code>julia myscript.jl</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 2-->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Data Types, Operators &amp; String Interpolation</h2>
+                <p>Learn Julia's numeric type hierarchy, perform calculations with operators, and format output with strings.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Learning Julia's rich numeric type hierarchy, performing calculations with operators including chained comparisons, and formatting output with string interpolation.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Numeric Types (Int64, Float64, Rational, Complex)</strong> — Julia has a rich numeric type hierarchy: <code>Int64</code> and <code>Float64</code> are the defaults on most systems, <code>Rational</code> represents exact fractions (<code>3//4</code>), and <code>Complex</code> numbers are first-class citizens written with the <code>im</code> suffix. All numeric types support seamless arithmetic interop.</li>
+                    <li><strong>Arithmetic, Comparison &amp; Operators</strong> — Julia supports standard arithmetic (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>÷</code> for integer division, <code>%</code> for modulo, <code>^</code> for power) plus chained comparisons (<code>1 &lt; x &lt; 10</code>) that read naturally like mathematical notation — a feature most languages lack.</li>
+                    <li><strong>String Interpolation &amp; Concatenation</strong> — Strings use double quotes; interpolation embeds expressions with <code>$variable</code> or <code>$(expression)</code>. Concatenation uses the <code>*</code> operator (not <code>+</code>), reflecting Julia's view of strings as a mathematical "product" of sequences.</li>
+                    <li><strong>Type Conversion, Promotion &amp; <code>typeof</code></strong> — <code>convert(Type, value)</code> performs explicit conversion; Julia's type promotion system automatically widens mixed-type arithmetic (e.g., <code>Int + Float64</code> → <code>Float64</code>) to avoid precision loss. <code>typeof()</code> inspects any value's concrete runtime type.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Julia's <code>Rational</code> type — representing exact fractions like <code>1//3</code> without any rounding error — is not available in Python or JavaScript. Chained comparisons (<code>1 &lt; x &lt; 10</code>) eliminate an entire class of logic bugs from numerical code. These features exist because Julia was designed by mathematicians, for mathematicians.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>x = 42                    # Int64 by default
+y = 3.14                  # Float64 by default
+r = 3//4                  # Rational{Int64} — exact fraction
+c = 2 + 3im               # Complex{Int64}
+println(typeof(x), " ", typeof(r))
+
+a, b = 17, 5
+println(a / b)       # 3.4   — always returns Float64
+println(a ÷ b)        # 3     — integer division
+println(a % b)        # 2     — remainder
+println(1 < a < 100)  # true  — chained comparison
+
+name = "Bob"; score = 88
+println("User $name scored $(score)%")
+greeting = "Hello, " * name * "!"    # * for concatenation
+println(greeting)
+
+x = 42
+y = convert(Float64, x)    # explicit conversion → 42.0
+println(typeof(y))           # Float64
+z = 1 + 2.5                  # automatic promotion
+println(typeof(z))            # Float64</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a script that calculates the area of a circle using both an <code>Int</code> radius and <code>π</code> (Julia's built-in constant, type <code>\pi&lt;Tab&gt;</code>). Demonstrate type promotion by printing <code>typeof()</code> of the result. Use a <code>Rational</code> to represent 1/3 exactly, and compare it against the <code>Float64</code> approximation to show the precision difference.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 3  -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Tuples, Arrays Basics &amp; Booleans</h2>
+                <p>Learn Julia's foundational collection types and understand 1-based indexing and column-major arrays.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Learning Julia's foundational collection types and understanding the critical design decisions around 1-based indexing and column-major array storage.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Tuples &amp; Named Tuples</strong> — Tuples (<code>(1, 2, 3)</code>) are fixed-size, immutable, ordered collections — extremely fast since their size is known at compile time. Named tuples (<code>(x=1, y=2)</code>) add field-name access, commonly used for lightweight structured data without defining a full type.</li>
+                    <li><strong>Arrays — Creation &amp; 1-Based Indexing</strong> — Julia arrays are mutable, dynamically resizable, and use 1-based indexing — a deliberate choice aligning with mathematical and scientific notation conventions. Functions ending in <code>!</code> signal in-place mutation, like <code>push!</code>.</li>
+                    <li><strong>Multi-Dimensional Arrays &amp; Column-Major Order</strong> — Julia arrays support N dimensions natively (<code>zeros(3, 4)</code> creates a 3×4 matrix). Internally, arrays are stored in column-major order (unlike C/Python's row-major), meaning iterating column-by-column is significantly faster — a key performance consideration.</li>
+                    <li><strong>Booleans &amp; Comparison Operators</strong> — Julia's <code>Bool</code> type has exactly two values, <code>true</code> and <code>false</code>, and unlike many dynamic languages, no other value is implicitly "truthy" — conditions must explicitly evaluate to a <code>Bool</code>, catching a common class of bugs at the type level.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Julia's column-major array storage is not an accident — it matches Fortran and MATLAB conventions, the languages that dominated scientific computing before Julia. Iterating over columns instead of rows can be 10x faster on large matrices due to CPU cache behavior. Understanding this layout now prevents the most common Julia performance mistake.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>point = (3, 4)                      # plain tuple
+println(point[1])                    # 3 — 1-based indexing!
+
+named = (x=3, y=4, label="origin")  # named tuple
+println(named.x, " ", named.label)   # 3 origin
+
+arr = [10, 20, 30, 40]
+println(arr[1])              # 10 — first element
+println(arr[end])             # 40 — last element
+push!(arr, 50)                # mutate in place — ! signals mutation
+println(arr)                  # [10, 20, 30, 40, 50]
+
+matrix = [1 2 3; 4 5 6]             # 2×3 matrix
+println(matrix[2, 3])                # 6 — row 2, column 3
+println(size(matrix))                # (2, 3)
+println(matrix[:, 1])                # [1, 4] — entire first column (fast, contiguous)
+
+flag = true
+println(typeof(flag))           # Bool
+result = 5 > 3                   # comparison returns Bool
+println(result && flag)          # true</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a 3×3 matrix representing a tic-tac-toe board using <code>0</code> for empty cells. Write code that accesses and prints an entire row and an entire column using slicing syntax. Create a named tuple representing a 2D point and write a script computing the Euclidean distance between two such points using basic arithmetic.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 4–7:</strong> Functions, collections, multiple dispatch, and modules.</p>
+        </div>
+
+        <!--WEEK 4 -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Control Flow &amp; Functions</h2>
+                <p>Direct program logic with Julia's control structures and define functions — Julia's most central language feature.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Directing program logic with Julia's expressive control structures and defining functions with multiple return values, optional arguments, and keyword parameters.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Conditionals — <code>if</code>, <code>elseif</code>, <code>else</code></strong> — Julia's <code>if</code> blocks are terminated with <code>end</code> (no braces). Like many expression-oriented languages, <code>if</code>/<code>else</code> can also be used as an expression that returns a value, assignable directly to a variable.</li>
+                    <li><strong>Loops — <code>for</code> and <code>while</code></strong> — <code>for</code> loops iterate over ranges (<code>1:10</code>), arrays, or any iterable; <code>while</code> loops run while a condition holds. Julia's range syntax (<code>start:stop</code> or <code>start:step:stop</code>) is concise and used pervasively throughout the language.</li>
+                    <li><strong>Function Definitions — Standard &amp; One-Liner Syntax</strong> — Functions are declared with <code>function name(args) ... end</code>, or as compact one-liners using <code>name(args) = expression</code> for simple cases. Julia functions can return multiple values as a tuple, automatically destructured at the call site.</li>
+                    <li><strong>Optional &amp; Keyword Arguments</strong> — Julia distinguishes positional arguments from keyword arguments (separated by <code>;</code> in the signature). Both support default values, making function signatures flexible without needing overloads.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Julia's <code>if</code> as an expression — returning a value directly to a variable — eliminates the need for a ternary operator and produces cleaner code. Multiple return values via automatic tuple packing and destructuring is a pattern used constantly in Julia's standard library, making it essential to master before progressing to multiple dispatch.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>score = 82
+grade = if score >= 90
+    "A"
+elseif score >= 80
+    "B"
+else
+    "F"
+end
+println(grade)   # B — if used as an expression
+
+for i in 1:2:10          # start:step:stop — odd numbers 1 to 9
+    print(i, " ")
+end
+
+function divmod_julia(a, b)
+    return a ÷ b, a % b              # multiple return values
+end
+quotient, remainder = divmod_julia(17, 5)
+println(quotient, " ", remainder)     # 3 2
+
+square(x) = x^2                       # one-liner function syntax
+println(square(7))                    # 49
+
+function greet(name, greeting="Hello"; punctuation="!")
+    return "$greeting, $name$punctuation"
+end
+println(greet("Alice"))                          # Hello, Alice!
+println(greet("Bob", "Hi"; punctuation="?"))      # Hi, Bob?</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a FizzBuzz program for 1–30 using a <code>for</code> loop and <code>if</code>/<code>elseif</code>. Then write a function <code>stats(numbers)</code> that uses a <code>for</code> loop to compute and return the minimum, maximum, and average as <strong>three separate return values</strong>, called with destructuring assignment (<code>mn, mx, avg = stats(data)</code>).</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 5 -->
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Collections: Arrays, Dicts, Sets &amp; Comprehensions</h2>
+                <p>Master Julia's core collection types and write elegant, vectorised code using comprehensions and broadcasting.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering Julia's core collection types and writing elegant, vectorised code using comprehensions and the dot broadcasting syntax.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Array Manipulation — <code>push!</code>, <code>pop!</code>, <code>filter</code>, <code>map</code></strong> — Functions ending in <code>!</code> (a Julia naming convention) indicate the function mutates its argument in place. <code>map</code> and <code>filter</code> are higher-order functions central to idiomatic Julia, often combined with anonymous functions using the <code>-&gt;</code> syntax.</li>
+                    <li><strong>Dictionaries (<code>Dict</code>)</strong> — <code>Dict{KeyType, ValueType}</code> stores key-value pairs with O(1) average lookup, created with <code>Dict("key" =&gt; value, ...)</code> syntax. Iterate with <code>for (k, v) in dict</code>, and check membership with <code>haskey</code>.</li>
+                    <li><strong>Sets &amp; Set Operations</strong> — <code>Set</code> stores unique, unordered elements with fast membership testing, and supports mathematical set operations directly: <code>union</code>, <code>intersect</code>, <code>setdiff</code> — reflecting Julia's mathematical design philosophy.</li>
+                    <li><strong>Array Comprehensions &amp; Broadcasting (the <code>.</code> Syntax)</strong> — Comprehensions (<code>[expr for x in collection]</code>) build arrays concisely. Broadcasting with the dot syntax (<code>.+</code>, <code>sin.()</code>, <code>f.()</code>) applies any function element-wise across arrays — one of Julia's most powerful and distinctive features.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Broadcasting — the dot syntax — is Julia's answer to NumPy's vectorization. <code>sqrt.(arr)</code> applies <code>sqrt</code> to every element with no overhead, no loops in your code, and no Python-style object dispatch per element. Combined with comprehensions, this is how Julia achieves C-like performance with Python-like conciseness in numerical code.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>nums = [5, 3, 8, 1, 9]
+push!(nums, 12)
+filtered = filter(x -> x > 4, nums)
+doubled = map(x -> x * 2, filtered)
+println(filtered, " → ", doubled)
+
+scores = Dict("Alice" => 95, "Bob" => 87)
+scores["Carol"] = 100
+println(scores["Alice"])                     # 95
+println(haskey(scores, "Dave"))              # false
+for (name, score) in scores
+    println("$name: $score")
+end
+
+a = Set([1, 2, 3, 4])
+b = Set([3, 4, 5, 6])
+println(union(a, b))        # Set([1,2,3,4,5,6])
+println(intersect(a, b))     # Set([3,4])
+
+squares = [x^2 for x in 1:10 if x % 2 == 0]   # comprehension with filter
+println(squares)                                 # [4, 16, 36, 64, 100]
+
+arr1 = [1, 2, 3]; arr2 = [10, 20, 30]
+println(arr1 .+ arr2)                            # [11, 22, 33]
+println(sqrt.(arr1))                              # element-wise sqrt</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <strong>word-frequency counter</strong> using a <code>Dict{String, Int}</code> from a hardcoded sentence split into words. Use a <code>Set</code> to find unique words appearing in two different sentences (intersection and difference). Write an array comprehension generating the first 20 Fibonacci-adjacent squares, and use broadcasting to compute the square root of every value in an array in one line.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 6 -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Multiple Dispatch &amp; Functions in Depth</h2>
+                <p>Master Julia's defining paradigm — multiple dispatch — and write flexible, generic, reusable functions.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering Julia's defining paradigm — multiple dispatch — and writing flexible, generic, and reusable functions with variadic arguments and do-block syntax.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Multiple Dispatch — Julia's Core Paradigm</strong> — Unlike single-dispatch OOP languages (where a method belongs to one class), Julia selects which method to run based on the types of all arguments. This allows you to define multiple specialised versions of the same function name for different combinations of input types.</li>
+                    <li><strong>Method Specificity &amp; Ambiguity Resolution</strong> — When multiple methods could match a call, Julia selects the most specific applicable method based on the argument types. Understanding specificity rules prevents "method ambiguity" errors, which Julia raises explicitly rather than silently guessing.</li>
+                    <li><strong>Variadic Functions &amp; Splatting</strong> — Functions can accept a variable number of arguments using <code>args...</code> (the "slurp" pattern). The same <code>...</code> syntax "splats" a collection into individual arguments when calling a function — the inverse operation.</li>
+                    <li><strong>Anonymous Functions &amp; Do-Block Syntax</strong> — Anonymous functions use <code>x -&gt; expression</code> syntax for short expressions. For multi-line function arguments (common with <code>map</code>, <code>open</code>, <code>reduce</code>), Julia's <code>do</code> block syntax provides a readable alternative that avoids deeply nested closures.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Multiple dispatch is the single feature that makes Julia unique among mainstream languages — and it is the reason Julia can be both generic and fast simultaneously. When you define <code>area(s::Circle)</code> and <code>area(s::Rectangle)</code>, the compiler generates separate, optimised machine code for each. No virtual dispatch overhead, no runtime type checking — full specialisation at compile time.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>describe(x::Int) = println("$x is an integer")
+describe(x::Float64) = println("$x is a float")
+describe(x::String) = println("\"$x\" is a string")
+
+describe(42)        # 42 is an integer
+describe(3.14)       # 3.14 is a float
+describe("hello")    # "hello" is a string
+
+process(x::Number) = println("Generic number: $x")
+process(x::Int) = println("Specific integer: $x")   # more specific — wins for Ints
+
+process(5)     # Specific integer: 5
+process(5.0)    # Generic number: 5.0
+
+function mysum(args...)
+    total = 0
+    for x in args; total += x; end
+    return total
+end
+println(mysum(1, 2, 3, 4))    # 10
+nums = [1, 2, 3, 4]
+println(mysum(nums...))         # 10 — splat
+
+result = map(1:5) do x         # do-block syntax
+    y = x^2
+    y + 1
+end
+println(result)                 # [2, 5, 10, 17, 26]</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Define a generic <code>area(shape)</code> function with multiple dispatch methods for <code>area(radius::Float64)</code> (circle) and <code>area(width::Float64, height::Float64)</code> (rectangle). Write a variadic <code>combine(args...)</code> function that concatenates strings or sums numbers. Use a <code>do</code> block with <code>open()</code> to read a file.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 7 -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Modules, Scope &amp; Custom Structs</h2>
+                <p>Organise code into modules, understand Julia's scoping rules, and define your own composite types.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Organizing code into modules, understanding Julia's scoping rules (including the global scope gotcha), and defining custom composite types with structs.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Modules — <code>module</code>, <code>export</code>, and <code>using</code></strong> — A <code>module</code> groups related functions, types, and constants under a namespace, preventing naming collisions across large codebases. <code>export</code> marks names as part of the module's public API, made available via <code>using ModuleName</code>.</li>
+                    <li><strong>Scope Rules — Global vs Local</strong> — Julia distinguishes global scope (module-level) from local scope (functions, loops, blocks). Inside functions, variables are local by default; at the top level of a script, loops require the <code>global</code> keyword to modify outer variables — a common beginner gotcha.</li>
+                    <li><strong>Structs — Custom Composite Types</strong> — <code>struct</code> defines a new immutable composite type with named, typed fields — Julia's primary building block for custom data structures. Fields are accessed with dot notation; instances are created by calling the struct name like a function.</li>
+                    <li><strong>Mutable Structs &amp; Constructors</strong> — <code>mutable struct</code> allows field reassignment after creation, at a small performance cost compared to immutable structs. Custom inner constructors (defined inside the struct body) enable validation logic to run whenever an instance is created.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Julia's global scope gotcha — where a <code>for</code> loop at the top level of a script cannot modify outer variables without the <code>global</code> keyword — surprises virtually every Julia beginner. Understanding it now prevents hours of debugging. Immutable structs are the default because they enable compiler optimisations that can make code orders of magnitude faster than mutable alternatives.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>module MathUtils
+export square, cube
+square(x) = x^2
+cube(x) = x^3
+end
+# using .MathUtils; println(square(5))   # 25
+
+total = 0
+function addToTotal(x)
+    total = total + x    # creates a NEW local `total`!
+    return total
+end
+println(addToTotal(5))   # 5 — local result
+println(total)            # 0 — outer total is UNCHANGED
+
+struct Point
+    x::Float64
+    y::Float64
+end
+p = Point(3.0, 4.0)
+println(p.x, ", ", p.y)    # 3.0, 4.0
+distance(p::Point) = sqrt(p.x^2 + p.y^2)
+println(distance(p))         # 5.0
+
+mutable struct Account
+    balance::Float64
+    function Account(balance)
+        balance < 0 && error("Initial balance cannot be negative")
+        new(balance)
+    end
+end
+acc = Account(100.0)
+acc.balance += 50.0
+println(acc.balance)   # 150.0</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a module <code>Geometry</code> exporting a <code>struct Circle</code> and <code>struct Rectangle</code>, each with an <code>area()</code> method using multiple dispatch. Write a <code>mutable struct BankAccount</code> with an inner constructor validating a non-negative starting balance, plus <code>deposit!</code> and <code>withdraw!</code> functions. Demonstrate the <strong>global/local scope gotcha</strong> with a small example and its <code>global</code> keyword fix.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 8–11:</strong> Type system/OOP, file I/O, error handling, and packages.</p>
+        </div>
+
+        <!--WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Julia's Type System &amp; Abstract Types</h2>
+                <p>Master Julia's type hierarchy to write generic, extensible, and well-organised code.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering Julia's type hierarchy to write generic, extensible, and well-organised code — Julia's alternative to classical object-oriented programming.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Abstract Types &amp; the Type Hierarchy</strong> — <code>abstract type</code> defines a node in Julia's type tree with no fields or instances of its own — purely an organisational concept for dispatch. Every concrete type has exactly one supertype, forming a strict tree traversable with <code>supertype()</code> and <code>subtypes()</code>.</li>
+                    <li><strong>Building Polymorphic Behavior with Dispatch</strong> — Instead of virtual methods and inheritance, Julia achieves polymorphism by defining functions that dispatch on the abstract type for shared logic, and on concrete types for specialised behavior — composition over inheritance, enforced at the language level.</li>
+                    <li><strong>Parametric Types</strong> — Types can be parameterised over other types (<code>struct Box{T}</code>), enabling generic, type-stable containers similar to generics in other languages. The compiler specialises code for each concrete parameterisation, achieving both flexibility and performance.</li>
+                    <li><strong>Interfaces via Duck Typing &amp; Method Conventions</strong> — Julia has no formal <code>interface</code> keyword; instead, "interfaces" are informal conventions — a type "implements" an interface by defining the expected methods (e.g., <code>Base.length</code>, <code>Base.iterate</code> for iterables).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Julia's type system is the reason it achieves C-level performance without C's manual memory management. When you write <code>struct Box{T}</code>, the compiler generates a completely separate, fully optimised version of <code>Box</code> for every concrete type <code>T</code> it's used with — zero overhead, zero boxing. This is the technical foundation of Julia's "walk like Python, run like C" promise.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>abstract type Shape end
+
+struct Circle &lt;: Shape     # &lt;: means "is a subtype of"
+    radius::Float64
+end
+struct Square &lt;: Shape
+    side::Float64
+end
+println(Circle &lt;: Shape)           # true
+println(supertype(Circle))          # Shape
+
+area(s::Circle) = π * s.radius^2
+area(s::Square) = s.side^2
+describe(s::Shape) = println("Area: $(round(area(s), digits=2))")
+
+describe(Circle(5.0))      # Area: 78.54
+describe(Square(4.0))      # Area: 16.0
+
+struct Box{T}
+    value::T
+end
+intBox = Box{Int}(42)
+strBox = Box{String}("hello")
+println(typeof(intBox))            # Box{Int64}
+
+struct Countdown; from::Int; end
+Base.iterate(c::Countdown, state=c.from) = state &lt; 0 ? nothing : (state, state - 1)
+for n in Countdown(3); println(n); end   # 3, 2, 1, 0</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build an abstract type <code>Animal</code> with concrete subtypes <code>Dog</code>, <code>Cat</code>, and <code>Bird</code>, each with a dispatched <code>sound(animal)</code> function. Create a parametric <code>struct Pair{T}</code> holding two values of the same type with a <code>swap(p::Pair)</code> function. Implement Julia's informal iteration interface (<code>Base.iterate</code>) for a custom <code>Range3</code> struct that steps by 3.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 9-->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — File I/O &amp; String Processing</h2>
+                <p>Read and write files, and master Julia's string manipulation and regular expression capabilities.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Reading and writing files with automatic resource management, and mastering Julia's string manipulation and regular expression capabilities.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>File I/O — Reading &amp; Writing</strong> — <code>open(filename, mode)</code> opens a file, returning a handle best used with <code>do</code>-block syntax to guarantee automatic closing. <code>readlines()</code>, <code>read(file, String)</code>, and <code>write()</code> cover the most common file operations.</li>
+                    <li><strong>Delimited Files &amp; CSV with DelimitedFiles / CSV.jl</strong> — Julia's standard library <code>DelimitedFiles</code> module reads simple delimited data into arrays with <code>readdlm</code>. For real-world tabular data, the <code>CSV.jl</code> package paired with <code>DataFrames.jl</code> provides robust, fast, type-inferring CSV parsing.</li>
+                    <li><strong>Regular Expressions</strong> — Julia uses PCRE-compatible regular expressions written with the <code>r"pattern"</code> string macro. <code>match</code>, <code>occursin</code>, and <code>eachmatch</code> provide standard regex operations, with capture groups accessible via indexing on the match result.</li>
+                    <li><strong>String Manipulation Functions</strong> — Julia's string library provides <code>split</code>, <code>join</code>, <code>strip</code>, <code>uppercase</code>/<code>lowercase</code>, <code>replace</code>, and <code>startswith</code>/<code>endswith</code> — combined with the fact that strings are iterable and indexable.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Julia's <code>do</code>-block syntax for file handling — <code>open("file.txt", "r") do f ... end</code> — guarantees the file is closed even if an exception is thrown inside the block. This is the same resource-management guarantee that Python's <code>with</code> statement provides, and it's essential for writing production-quality I/O code that doesn't leak file handles.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>open("data.txt", "w") do file
+    write(file, "Line 1\n")
+    write(file, "Line 2\n")
+end
+
+lines = readlines("data.txt")
+for line in lines
+    println(line)
+end
+
+using DelimitedFiles
+data = readdlm("scores.csv", ',', header=true)
+matrix, header = data
+println(header)
+println(matrix[1, :])
+
+text = "Order #4521 placed on 2026-06-30"
+m = match(r"#(\d+)", text)
+println(m.captures[1])                      # "4521"
+println(occursin(r"\d{4}-\d{2}-\d{2}", text)) # true
+
+csv_row = "  alice, 30, engineer  "
+fields = split(strip(csv_row), ",")
+cleaned = [strip(f) for f in fields]
+println(join(cleaned, " | "))               # "alice | 30 | engineer"</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a script that reads a CSV-like text file of <code>name,age,department</code> rows using <code>split</code> and string processing (or <code>DelimitedFiles</code>), parses each into a <code>NamedTuple</code>, and writes a filtered summary (e.g., only Engineering department) to a new output file. Use a regex to validate that each age field contains only digits before parsing.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 10 -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Error Handling &amp; The Package Ecosystem</h2>
+                <p>Handle errors idiomatically and learn to navigate Julia's package manager and core data science libraries.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Handling errors idiomatically with custom exception types and navigating Julia's package manager and core data science libraries.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Exception Handling — <code>try</code>/<code>catch</code>/<code>finally</code></strong> — Julia's <code>try</code>/<code>catch</code>/<code>finally</code> works similarly to other languages: code in <code>try</code> runs, <code>catch e</code> captures any thrown exception as <code>e</code>, and <code>finally</code> always executes for cleanup regardless of whether an error occurred.</li>
+                    <li><strong>Custom Exceptions</strong> — Custom exception types are defined as structs inheriting from <code>Exception</code>, with a <code>Base.showerror</code> method to control how they're displayed. Throw them with <code>throw()</code>, providing structured, domain-specific error context.</li>
+                    <li><strong>Pkg.jl — Julia's Package Manager</strong> — <code>Pkg</code> handles installing, updating, and managing project-specific dependencies via <code>Project.toml</code> and <code>Manifest.toml</code> files, ensuring fully reproducible environments — a major strength over many other ecosystems.</li>
+                    <li><strong>Core Data Science Packages — DataFrames.jl &amp; Statistics</strong> — <code>DataFrames.jl</code> is Julia's primary tabular data library (analogous to pandas), providing powerful, fast data manipulation. The standard library <code>Statistics</code> module provides <code>mean</code>, <code>std</code>, <code>median</code>, and <code>cor</code> for fundamental statistical analysis.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Julia's <code>Project.toml</code> + <code>Manifest.toml</code> reproducibility model — where <code>Pkg.instantiate()</code> recreates an exact environment from a manifest — is more robust than Python's <code>requirements.txt</code> because it locks transitive dependency versions too. This is why Julia is used in production scientific computing where reproducibility is non-negotiable.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>function safeDivide(a, b)
+    try
+        return a / b
+    catch e
+        println("Error caught: $e")
+        return NaN
+    finally
+        println("Division attempt complete")
+    end
+end
+println(safeDivide(10, 0))    # Inf (Julia float division by zero — not an error!)
+
+struct InsufficientFundsError &lt;: Exception
+    requested::Float64
+    available::Float64
+end
+Base.showerror(io::IO, e::InsufficientFundsError) =
+    print(io, "Requested \$$(e.requested) but only \$$(e.available) available")
+
+# In Pkg mode (press ] in REPL):
+# pkg> activate .
+# pkg> add DataFrames CSV
+# pkg> instantiate
+
+using DataFrames, Statistics
+df = DataFrame(name=["Alice","Bob","Carol"], score=[95,87,100])
+println(mean(df.score))                       # 94.0
+filtered = filter(row -> row.score > 90, df)
+println(filtered)</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a new Julia project with <code>Pkg.activate(".")</code>, add <code>DataFrames</code> and <code>CSV</code> as dependencies. Load a CSV file into a <code>DataFrame</code>, compute summary statistics (mean, std) for a numeric column using the <code>Statistics</code> module, and filter rows based on a condition. Define and throw a custom exception when a required column is missing from the loaded data.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 11-->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Working with Real-World Julia (Plotting, JSON, HTTP)</h2>
+                <p>Apply Julia in real-world scenarios — data visualisation, structured data interchange, and web requests.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Applying Julia in real-world scenarios — data visualisation with Plots.jl, JSON data interchange, HTTP requests, and Python interop.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Data Visualisation with Plots.jl</strong> — <code>Plots.jl</code> is Julia's flexible plotting front-end, supporting multiple backends (GR, Plotly, PythonPlot) through one unified API. Common plot types — line, scatter, bar, histogram — are created with concise, composable function calls.</li>
+                    <li><strong>JSON Parsing with JSON3.jl</strong> — <code>JSON3.jl</code> provides fast, type-stable JSON encoding and decoding, commonly used for config files, API responses, and data interchange between systems. <code>JSON3.read</code> parses into Julia-native types automatically.</li>
+                    <li><strong>HTTP Requests with HTTP.jl</strong> — <code>HTTP.jl</code> provides a full-featured client and server library for making web requests and building APIs. <code>HTTP.get</code> fetches a URL, returning a response object with <code>.status</code> and <code>.body</code> fields ready for further processing.</li>
+                    <li><strong>Interfacing with Python via PyCall.jl</strong> — <code>PyCall.jl</code> allows calling Python libraries directly from Julia, useful for leveraging mature Python ecosystems (e.g., specific ML libraries) while writing primarily in Julia. Python objects and Julia objects convert automatically for common types.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>PyCall.jl</code> — the ability to call Python libraries directly from Julia — is the practical bridge that makes Julia adoption feasible in real organizations. You can migrate critical performance bottlenecks from Python to Julia incrementally, calling existing Python libraries for everything else. This interop story is unique among compiled languages.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>using Plots
+x = 1:0.1:10
+y = sin.(x)                          # broadcasted sine
+plot(x, y, label="sin(x)", title="Sine Wave", xlabel="x", ylabel="y")
+savefig("sine_wave.png")
+
+using JSON3
+data = Dict("name" => "Alice", "age" => 30, "tags" => ["admin", "active"])
+jsonString = JSON3.write(data)
+parsed = JSON3.read(jsonString)
+println(parsed.name)    # "Alice"
+
+using HTTP, JSON3
+response = HTTP.get("https://api.github.com/repos/JuliaLang/julia")
+data = JSON3.read(String(response.body))
+println("Stars: ", data.stargazers_count)
+println("Status: ", response.status)
+
+using PyCall
+np = pyimport("numpy")
+arr = np.array([1, 2, 3, 4, 5])
+println(np.mean(arr))    # 3.0</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Fetch live JSON data from a public API using <code>HTTP.jl</code> and <code>JSON3.jl</code> (e.g., a weather or GitHub API), parse the response, and load relevant fields into a <code>DataFrame</code>. Generate a <code>Plots.jl</code> bar chart visualising the data and save it as a PNG. Optionally, use <code>PyCall.jl</code> to compute the same statistic using NumPy and compare against Julia's native <code>Statistics</code> module.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 12–15:</strong> Metaprogramming, parallelism, performance engineering, and three complete capstone projects.</p>
+        </div>
+
+        <!--  WEEK 12-->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Metaprogramming &amp; Macros</h2>
+                <p>Use Julia's powerful metaprogramming system to write code that generates and transforms other code.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Using Julia's powerful metaprogramming system to write code that generates and transforms other code at parse time.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Symbols &amp; Expressions (<code>Expr</code>)</strong> — In Julia, code itself is data: a <code>Symbol</code> represents an identifier (<code>:x</code>), and <code>Expr</code> represents a parsed expression tree. The <code>:()</code> quoting syntax or <code>quote...end</code> blocks capture code without evaluating it — the foundation of all metaprogramming.</li>
+                    <li><strong><code>eval</code> &amp; Dynamic Code Generation</strong> — <code>eval(expr)</code> evaluates an <code>Expr</code> in a given module's scope, executing it as if it were written directly in the source. This is powerful but should be used sparingly — most legitimate metaprogramming needs are better served by macros.</li>
+                    <li><strong>Macros — <code>macro</code>, <code>@</code>, and Code Transformation</strong> — A macro takes Julia code (as unevaluated <code>Expr</code> syntax) as input and returns transformed code, which is then compiled and run — macros operate at parse time, before execution, unlike regular functions. Invoke macros with the <code>@</code> prefix.</li>
+                    <li><strong>Built-in Macros (<code>@time</code>, <code>@show</code>, <code>@assert</code>)</strong> — Julia's standard library uses macros extensively for developer ergonomics: <code>@time</code> measures execution time and allocations, <code>@show</code> prints both an expression and its value, and <code>@assert</code> validates conditions with a clear error on failure.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Julia's metaprogramming is the reason packages like <code>Plots.jl</code>, <code>DataFrames.jl</code>, and <code>Flux.jl</code> can provide such expressive, domain-specific APIs without any language modifications — they extend Julia's syntax through macros. The <code>@distributed</code>, <code>@threads</code>, and <code>@simd</code> macros that unlock parallelism (Week 13) are all macros under the hood.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>sym = :x
+expr = :(x + y * 2)
+println(typeof(expr))   # Expr
+println(expr.args)        # [:+, :x, :(y * 2)]
+
+expr2 = :(2 + 3 * 4)
+result = eval(expr2)
+println(result)            # 14
+
+macro sayhi(name)
+    return :(println("Hello, ", $name, "!"))
+end
+@sayhi "Julia"           # prints: Hello, Julia!
+
+@show 2 + 2                  # prints: 2 + 2 = 4
+@assert 1 + 1 == 2 "Math is broken!"
+
+@time begin
+    sum(1:1_000_000)
+end</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a custom macro <code>@timeit</code> that wraps an expression, measures its execution time using <code>time_ns()</code>, and prints a formatted message. Write a second macro <code>@retry n expr</code> that retries evaluating <code>expr</code> up to <code>n</code> times if it throws an exception, using <code>try</code>/<code>catch</code> inside the generated code.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 13 -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Parallelism, Multithreading &amp; Distributed Computing</h2>
+                <p>Leverage Julia's first-class support for parallel and concurrent execution — a core strength of the language.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Leveraging Julia's first-class support for parallel and concurrent execution — from async tasks through multithreading to distributed computing across processes.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Tasks &amp; Asynchronous Programming (<code>@async</code>, <code>@sync</code>)</strong> — A <code>Task</code> (also called a "green thread" or coroutine) represents a unit of work that can be suspended and resumed cooperatively. <code>@async</code> schedules a task to run concurrently; <code>@sync</code> blocks until all enclosed <code>@async</code> tasks complete.</li>
+                    <li><strong>Multithreading with <code>Threads.@threads</code></strong> — Julia supports true OS-level multithreading (started with <code>julia -t N</code> or <code>JULIA_NUM_THREADS=N</code>). <code>Threads.@threads</code> parallelises a <code>for</code> loop across available threads — ideal for CPU-bound, data-parallel workloads like numerical array processing.</li>
+                    <li><strong>Distributed Computing with <code>Distributed.jl</code></strong> — For workloads too large for a single machine's threads, <code>Distributed.jl</code> spawns separate Julia processes (workers) locally or across a cluster, communicating via message passing. <code>@distributed</code> parallelises loops across worker processes.</li>
+                    <li><strong>Thread-Safety &amp; Race Conditions</strong> — When multiple threads mutate shared state simultaneously, race conditions can corrupt data. Julia provides <code>Threads.Atomic{T}</code> for lock-free atomic operations and <code>ReentrantLock</code> for explicit mutual exclusion, both essential for safe concurrent code.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Julia's parallelism story is unique among scientific computing languages: <code>@threads</code> for shared-memory CPU parallelism, <code>@distributed</code> for multi-process cluster computing, and <code>@async</code>/<code>@sync</code> for I/O concurrency — all with a consistent, composable design. This is why Julia is chosen for large-scale climate models, financial simulations, and drug discovery workflows.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>function slowTask(id)
+    sleep(1)
+    println("Task $id done")
+end
+@sync begin
+    for i in 1:3
+        @async slowTask(i)
+    end
+end
+println("All tasks complete")
+
+using Base.Threads
+results = zeros(10)
+Threads.@threads for i in 1:10
+    results[i] = i^2
+end
+println(results)
+println("Running on $(nthreads()) threads")
+
+using Distributed
+addprocs(4)
+result = @distributed (+) for i in 1:1000
+    i^2
+end
+println(result)
+
+counter = Atomic{Int}(0)
+Threads.@threads for i in 1:1000
+    atomic_add!(counter, 1)
+end
+println(counter[])   # reliably 1000</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a CPU-bound function that checks primality for a large range of numbers and parallelise it using <code>Threads.@threads</code>. Benchmark single-threaded vs multithreaded execution using <code>@time</code>. Build a small example using <code>Atomic{Int}</code> to safely count results across threads, demonstrating the <strong>race condition</strong> that would occur with a plain shared counter.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 14-->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Performance Engineering &amp; Type Stability</h2>
+                <p>Write genuinely fast Julia code by understanding type stability, the compiler, and benchmarking tools.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing genuinely fast Julia code by understanding type stability, the compiler's inference system, and professional benchmarking tools.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Type Stability — Julia's Performance Cornerstone</strong> — A function is "type-stable" if its return type can be inferred purely from its input argument types, without depending on runtime values. Type-unstable code forces the compiler to use slow, generic dynamic dispatch instead of fast, specialised machine code.</li>
+                    <li><strong>Benchmarking with BenchmarkTools.jl</strong> — <code>@time</code> is useful for quick checks but includes compilation overhead and is noisy; <code>BenchmarkTools.jl</code>'s <code>@btime</code> and <code>@benchmark</code> run a function many times, discard outliers, and report statistically reliable minimum/median execution time and memory allocations.</li>
+                    <li><strong>Avoiding Allocations &amp; Pre-allocating Arrays</strong> — Each array allocation triggers garbage collector pressure; pre-allocating output arrays and using in-place functions (ending in <code>!</code>, like <code>sum!</code>, <code>map!</code>) avoids unnecessary allocation in hot loops, often yielding 10-100x speedups.</li>
+                    <li><strong><code>@code_warntype</code> &amp; Understanding Compiler Output</strong> — <code>@code_warntype</code> reveals Julia's type inference results for a function call, highlighting type instabilities in red/yellow — the primary diagnostic tool for hunting down performance bugs before they impact production code.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Type stability is the single most important concept for writing fast Julia code. A type-unstable function can be 10-100x slower than its type-stable equivalent — not because of algorithmic differences, but because the compiler cannot specialise it. <code>@code_warntype</code> makes invisible type instabilities visible in seconds, making performance engineering in Julia dramatically more tractable than in other dynamic languages.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code># BAD: type-unstable — return type depends on runtime value
+unstable(x) = x > 0 ? 1 : 1.0          # returns Int OR Float64!
+
+# GOOD: type-stable — always returns the same type
+stable(x) = x > 0 ? 1.0 : 0.0           # always Float64
+@code_warntype stable(5.0)               # inspect — no warnings
+
+using BenchmarkTools
+function sumLoop(n)
+    total = 0
+    for i in 1:n; total += i; end
+    return total
+end
+@btime sumLoop(1_000_000)    # reliable timing, e.g.: 0.521 ms (0 allocations)
+
+# Allocates new array every call — slower
+f_alloc(x) = x .* 2
+
+# Reuses pre-allocated output — much faster for repeated calls
+function f_inplace!(out, x)
+    out .= x .* 2    # in-place broadcast, zero allocation
+    return out
+end
+
+function processValue(x)
+    if x > 0
+        return x * 2      # type instability! mixes numeric and String
+    else
+        return "negative"
+    end
+end
+@code_warntype processValue(5)    # reveals Union{Int, String} return type</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a numerically intensive function (e.g., a <strong>Monte Carlo π estimator</strong>) with a type instability bug, diagnose it using <code>@code_warntype</code>, then fix it and confirm the fix with <code>@btime</code> showing reduced allocations and faster runtime. Write an in-place version of a vector normalisation function and benchmark it against the allocating version.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 15 -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Capstone Week: Three Master Projects</h2>
+                <p>Apply everything learned across the entire curriculum in three complete, production-quality projects.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Synthesising all four phases into three complete, production-quality Julia projects spanning data engineering, web APIs, and high-performance scientific simulation.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — CLI Data Analysis Tool (Beginner → Intermediate)</h3>
+                <p>A command-line tool that loads, cleans, analyses, and visualises a CSV dataset — demonstrating DataFrames, custom structs, multiple dispatch, and error handling.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Julia Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CSV loading and manipulation</td>
+                            <td><code>DataFrames.jl</code> for tabular data operations</td>
+                        </tr>
+                        <tr>
+                            <td>Result data model</td>
+                            <td>Custom <code>struct AnalysisResult</code> with typed fields</td>
+                        </tr>
+                        <tr>
+                            <td>Summary statistics</td>
+                            <td><code>Statistics</code> module — mean, median, std</td>
+                        </tr>
+                        <tr>
+                            <td>Column-type dispatch</td>
+                            <td>Multiple dispatch: <code>summarize(col::Vector{&lt;:Number})</code> vs string</td>
+                        </tr>
+                        <tr>
+                            <td>Visualisation</td>
+                            <td><code>Plots.jl</code> histogram per numeric column, saved as PNG</td>
+                        </tr>
+                        <tr>
+                            <td>Robust error handling</td>
+                            <td><code>try</code>/<code>catch</code> for malformed CSV rows</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>using DataFrames, Statistics
+
+struct AnalysisResult
+    column::String
+    mean_val::Float64
+    std_val::Float64
+end
+
+function analyzeColumn(df::DataFrame, col::Symbol)
+    values = skipmissing(df[!, col])
+    return AnalysisResult(string(col), mean(values), std(values))
+end</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A CLI script (<code>julia analyze.jl data.csv</code>) that loads a CSV, computes per-column statistics using multiple dispatch for numeric vs. text columns, prints a formatted summary table, and saves a histogram plot for each numeric column as a PNG. Build on <strong>Days 1–2</strong>.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — REST API Microservice (Intermediate → Advanced)</h3>
+                <p>A production-ready REST API for a task management system using Julia's web ecosystem with JSON serialisation, custom error types, and clean module organisation.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Julia Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTTP routing</td>
+                            <td><code>HTTP.jl</code> Router with method registration</td>
+                        </tr>
+                        <tr>
+                            <td>Request/response serialisation</td>
+                            <td><code>JSON3.jl</code> encoding and decoding</td>
+                        </tr>
+                        <tr>
+                            <td>Structured error responses</td>
+                            <td>Custom exception types with HTTP status codes</td>
+                        </tr>
+                        <tr>
+                            <td>In-memory data store</td>
+                            <td><code>Dict{Int, Task}</code> with atomic ID generation</td>
+                        </tr>
+                        <tr>
+                            <td>Module organisation</td>
+                            <td>Separate <code>routes.jl</code>, <code>models.jl</code>, <code>storage.jl</code></td>
+                        </tr>
+                        <tr>
+                            <td>Integration testing</td>
+                            <td><code>HTTP.jl</code> client verifying all endpoints</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>using HTTP, JSON3
+
+struct Task
+    id::Int
+    title::String
+    done::Bool
+end
+const TASKS = Dict{Int, Task}()
+
+function handleGetTasks(req::HTTP.Request)
+    return HTTP.Response(200, JSON3.write(collect(values(TASKS))))
+end
+
+router = HTTP.Router()
+HTTP.register!(router, "GET", "/tasks", handleGetTasks)</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A running HTTP API with CRUD endpoints for <code>Tasks</code> (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code> on <code>/tasks</code>), JSON request/response bodies, structured error responses for invalid input, and a simple integration test script using <code>HTTP.jl</code> as a client to verify all endpoints. Build on <strong>Days 3–4</strong>.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Parallel Monte Carlo Simulation Engine (Advanced → Master)</h3>
+                <p>A high-performance, multithreaded Monte Carlo simulation framework for financial or physical modelling — showcasing Julia's signature strength in scientific computing.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Julia Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Abstract model hierarchy</td>
+                            <td><code>abstract type SimulationModel end</code> with concrete subtypes</td>
+                        </tr>
+                        <tr>
+                            <td>Polymorphic step function</td>
+                            <td>Multiple dispatch: <code>step!(model::SimulationModel, ...)</code></td>
+                        </tr>
+                        <tr>
+                            <td>Parallel trial execution</td>
+                            <td><code>Threads.@threads</code> across 100,000+ simulation trials</td>
+                        </tr>
+                        <tr>
+                            <td>Thread-safe aggregation</td>
+                            <td><code>Atomic{Float64}</code> for concurrent result collection</td>
+                        </tr>
+                        <tr>
+                            <td>Performance verified</td>
+                            <td>Type-stable hot loops checked with <code>@code_warntype</code> + <code>@btime</code></td>
+                        </tr>
+                        <tr>
+                            <td>Results visualisation</td>
+                            <td><code>Plots.jl</code> histogram of simulation outcome distribution</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>abstract type SimulationModel end
+
+struct StockPriceModel &lt;: SimulationModel
+    drift::Float64
+    volatility::Float64
+end
+
+step!(m::StockPriceModel, price, dt) =
+    price * exp((m.drift - 0.5 * m.volatility^2) * dt +
+                m.volatility * sqrt(dt) * randn())
+
+function runTrials(model::SimulationModel, nTrials::Int, nSteps::Int, dt::Float64)
+    results = zeros(nTrials)
+    Threads.@threads for trial in 1:nTrials
+        price = 100.0
+        for _ in 1:nSteps
+            price = step!(model, price, dt)
+        end
+        results[trial] = price
+    end
+    return results
+end</code></pre>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A type-stable, multithreaded simulation engine supporting multiple model types via the abstract type + multiple dispatch pattern. Runs 100,000+ trials in parallel, aggregates results with thread-safe atomics, visualises the outcome distribution with <code>Plots.jl</code>, and includes a benchmark report comparing single-threaded vs. multithreaded performance using <code>BenchmarkTools.jl</code>. Build on <strong>Days 5–7</strong>. This is the capstone demonstrating mastery of the entire Julia curriculum.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–3</td>
+                        <td>Absolute Basics</td>
+                        <td>Write Julia programs using the numeric type hierarchy, 1-based arrays, broadcasting, and named tuples</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>4–7</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Structure programs with multiple dispatch, comprehensions, modules, custom structs, and mutable types</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>8–11</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Design abstract type hierarchies, handle errors with custom exceptions, work with file I/O, and use DataFrames, Plots, HTTP, and JSON packages</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>12–15</td>
+                        <td>Master Level Concepts</td>
+                        <td>Write metaprogramming macros, parallelise workloads with threads and distributed computing, engineer type-stable code, and complete three production projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool / Resource</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>docs.julialang.org</td>
+                        <td>Official comprehensive language reference</td>
+                    </tr>
+                    <tr>
+                        <td>Julia Academy (juliaacademy.com)</td>
+                        <td>Free structured video learning courses</td>
+                    </tr>
+                    <tr>
+                        <td>Think Julia (Ben Lauwens)</td>
+                        <td>Free beginner-friendly introduction book</td>
+                    </tr>
+                    <tr>
+                        <td>JuliaCon Talks (YouTube)</td>
+                        <td>Real-world use cases and deep-dive conference talks</td>
+                    </tr>
+                    <tr>
+                        <td>Julia Discourse (discourse.julialang.org)</td>
+                        <td>Active, helpful community forum</td>
+                    </tr>
+                    <tr>
+                        <td>Performance Tips (docs.julialang.org)</td>
+                        <td>Official guide to writing fast Julia code</td>
+                    </tr>
+                    <tr>
+                        <td>JuliaHub Package Registry</td>
+                        <td>Discovering and exploring the Julia package ecosystem</td>
+                    </tr>
+                    <tr>
+                        <td>BenchmarkTools.jl</td>
+                        <td>Reliable, statistically rigorous Julia benchmarking</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Complete each week's task before moving on — building real programs in Julia reinforces its unique patterns (1-based indexing, multiple dispatch, broadcasting) far more than reading alone.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — include a <code>Project.toml</code> so anyone can reproduce your environment with <code>Pkg.instantiate()</code>.</li>
+                    <li>Run <strong><code>@code_warntype</code></strong> on any function you care about from Week 8 onward — if you see red or yellow, fix it before moving on. Type stability is non-negotiable in production Julia.</li>
+                    <li>By Week 15, you should have three complete, deployed projects and the confidence to build any Julia application — from CLI data tools to REST APIs to large-scale parallel simulations.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

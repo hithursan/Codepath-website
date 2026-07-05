@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript: Beginner to Master — 15 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>TypeScript: Beginner to Master</h1>
+        <p>Complete 15-Week Curriculum — From Static Types to Production-Grade TypeScript Applications</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>15-week, phase-based TypeScript curriculum</strong> designed for JavaScript developers and absolute beginners who want to reach professional-level TypeScript mastery. The roadmap moves from <strong>TypeScript setup, core types, and type inference</strong> through <strong>functions, interfaces, generics, and modules</strong>, into <strong>OOP, error handling, utility types, and real-world libraries</strong>, all the way to <strong>decorators, advanced type patterns, concurrency, and three complete capstone projects</strong>.</p>
+            <p>The curriculum has four phases: <strong>Phase 1</strong> covers absolute basics and TypeScript's type system, <strong>Phase 2</strong> covers control flow, functions, interfaces, generics, and modules, <strong>Phase 3</strong> covers intermediate and advanced core skills, and <strong>Phase 4</strong> covers master-level patterns and three complete production projects.</p>
+            <p>By Week 15, you should be able to architect large TypeScript codebases, write advanced type utilities, integrate TypeScript with real libraries, and build production-quality applications with full type safety end to end.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 15 weeks &nbsp;|&nbsp; <strong>Study Time:</strong> ~3–5 hours/week &nbsp;|&nbsp; <strong>Audience:</strong> JavaScript developers and beginners</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–3:</strong> Setup, core types, type inference, and type narrowing.</p>
+        </div>
+
+        <!--WEEK 1 -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Introduction to TypeScript &amp; Environment Setup</h2>
+                <p>Understand what TypeScript is, why it exists, and get a working development environment running.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding what TypeScript is, why it exists, and getting a working development environment running.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What is TypeScript &amp; Why Use It?</strong> — TypeScript is a statically typed superset of JavaScript that compiles to plain JavaScript, catching errors at build time rather than runtime. It adds optional static types, interfaces, and modern language features that make large codebases dramatically safer and easier to maintain.</li>
+                    <li><strong>Installing TypeScript &amp; Configuring tsconfig.json</strong> — TypeScript is installed via npm and configured through <code>tsconfig.json</code>, which controls compiler behavior, target JavaScript version, and strictness. Running <code>tsc --init</code> generates a sensible default config.</li>
+                    <li><strong>Running TypeScript (tsc, ts-node, tsx)</strong> — <code>tsc</code> compiles <code>.ts</code> files to <code>.js</code>; <code>ts-node</code> runs TypeScript directly without a separate compile step; <code>tsx</code> is a faster modern alternative. For development, <code>ts-node</code> or <code>tsx</code> paired with <code>nodemon</code> provides a smooth watch-and-reload workflow.</li>
+                    <li><strong>Type Annotations vs Type Inference</strong> — TypeScript can infer types from assigned values, so you do not always need to annotate explicitly. Explicit annotations are best for function signatures, API boundaries, and anywhere the inferred type might be ambiguous.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> TypeScript's entire value proposition is catching errors before they reach production. Setting up with <code>strict: true</code> from the start establishes the discipline and safety that makes TypeScript worth using at all.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// TypeScript catches this at compile time — JavaScript would not
+function greet(name: string): string {
+    return `Hello, ${name}!`;
+}
+greet("Alice");  // valid
+// greet(42);   // Error: Argument of type 'number' is not assignable to 'string'
+
+// Type inference — no annotation needed
+let score = 100;        // inferred: number
+let username = "Alice"; // inferred: string
+
+// Explicit annotation — required when no initial value
+let result: number;</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Install TypeScript and create a new project with <code>tsconfig.json</code> set to <code>strict: true</code>. Write a <code>greetUser(name: string, age: number): string</code> function, run it with <code>ts-node</code>, intentionally pass wrong types, and observe the compiler errors.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 2 -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Primitive Types, Arrays &amp; Tuples</h2>
+                <p>Learn TypeScript's core built-in types and how to type collections of data.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Learning TypeScript's core built-in types and understanding how to type collections of data.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Primitive Types</strong> — TypeScript's fundamental value types: <code>string</code>, <code>number</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>, <code>symbol</code>, and <code>bigint</code>. With <code>strict: true</code>, <code>null</code> and <code>undefined</code> are not assignable to other types unless explicitly declared.</li>
+                    <li><strong>Arrays &amp; Readonly Arrays</strong> — Arrays are typed as <code>Type[]</code> or <code>Array&lt;Type&gt;</code>. Use <code>readonly</code> arrays when the array should never be mutated after creation — ideal for configuration data and function parameters.</li>
+                    <li><strong>Tuples</strong> — Tuples are fixed-length arrays where each position has a specific type. They are ideal for structured pairs or triples like coordinates, key-value pairs, or multi-value function returns.</li>
+                    <li><strong>The <code>any</code>, <code>unknown</code>, and <code>never</code> Types</strong> — <code>any</code> disables all type checking and should be avoided. <code>unknown</code> is the type-safe alternative requiring narrowing before use. <code>never</code> represents values that can never occur and is a powerful correctness tool.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>unknown</code> versus <code>any</code> is one of TypeScript's most important distinctions. Using <code>unknown</code> forces you to handle data safely, while <code>any</code> silently defeats the entire purpose of TypeScript.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>let name: string    = "Alice";
+let age: number     = 30;
+let active: boolean = true;
+let id: bigint      = 9007199254740993n;
+
+const scores: number[]        = [95, 87, 100];
+const tags: readonly string[] = ["ts", "types"];
+// tags.push("new"); // Error: readonly array
+
+const user: [string, number, boolean] = ["Alice", 30, true];
+const point: [x: number, y: number]   = [10, 20];
+
+function parseData(input: unknown): string {
+    if (typeof input === "string") return input.toUpperCase();
+    if (typeof input === "number") return input.toFixed(2);
+    throw new Error("Unsupported type");
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Model a simple CSV row as a tuple with named elements <code>[id: number, name: string, score: number]</code>. Write a function that accepts <code>unknown</code> data, narrows it, and extracts the row. Use <code>readonly</code> arrays to prevent mutation of loaded data.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 3 -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Union Types, Intersection Types &amp; Type Narrowing</h2>
+                <p>Combine types flexibly and learn how TypeScript narrows types through control flow.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Combining types flexibly with union and intersection, and learning how TypeScript narrows types at runtime.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Union Types (<code>|</code>)</strong> — A union type allows a value to be one of several types. They are common in API responses, form inputs, and situations where multiple types are genuinely valid. TypeScript forces you to handle each case.</li>
+                    <li><strong>Intersection Types (<code>&amp;</code>)</strong> — Intersection types combine multiple types into one — the result must satisfy all of them. Most useful for merging object shapes like composing a base type with role-specific properties.</li>
+                    <li><strong>Type Narrowing</strong> — TypeScript tracks type information through control flow. After a <code>typeof</code>, <code>instanceof</code>, or equality check, TypeScript knows the narrowed type inside that block and unlocks its specific methods.</li>
+                    <li><strong>Discriminated Unions &amp; Exhaustiveness Checking</strong> — A discriminated union is a union of object types sharing a literal tag property. Combined with <code>never</code> checks, TypeScript errors at compile time if you add a new union member but forget to handle it.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Discriminated unions with exhaustiveness checking are one of TypeScript's most powerful correctness guarantees. They make it impossible to add a new state or action without handling it everywhere — exactly what large codebases need.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>type ID = string | number;
+function formatId(id: ID): string {
+    if (typeof id === "number") return `#${id.toFixed(0).padStart(6, "0")}`;
+    return id.trim().toUpperCase();
+}
+
+type Timestamped = { createdAt: Date; updatedAt: Date };
+type Named = { name: string };
+type Entity = Named &amp; Timestamped;
+
+type Shape =
+    | { kind: "circle"; radius: number }
+    | { kind: "square"; side: number };
+
+function area(shape: Shape): number {
+    if (shape.kind === "circle") return Math.PI * shape.radius ** 2;
+    return shape.side ** 2;
+}
+
+type Result&lt;T&gt; =
+    | { status: "ok";    data: T }
+    | { status: "error"; message: string };</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Model an API response using a discriminated union with three states: <code>loading</code>, <code>success&lt;T&gt;</code>, and <code>error</code>. Write a <code>renderUI(state)</code> function that handles all three, and add an exhaustiveness check with <code>never</code> so TypeScript errors when you add a fourth state without updating the function.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 4–7:</strong> Functions, interfaces, generics, and modules.</p>
+        </div>
+
+        <!--WEEK 4 -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Functions &amp; Advanced Function Types</h2>
+                <p>Master TypeScript's rich function typing system — overloads, callbacks, and higher-order functions.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering TypeScript's rich function typing system including overloads, callbacks, and higher-order functions.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Typed Function Signatures</strong> — Every function parameter and return type should be explicitly annotated at API boundaries. <code>void</code> signals the return value should not be used; <code>never</code> signals the function never returns.</li>
+                    <li><strong>Optional &amp; Default Parameters, Rest Parameters</strong> — Optional parameters (suffix <code>?</code>) and default values make function APIs flexible without overloads. Rest parameters (<code>...args: T[]</code>) collect a variable number of arguments into a typed array.</li>
+                    <li><strong>Function Overloads</strong> — Overloads let you declare multiple call signatures for a single function with different input/output type combinations. The implementation signature must be compatible with all overloads but is not visible to callers.</li>
+                    <li><strong>Higher-Order Functions &amp; Function Type Aliases</strong> — Functions that accept or return other functions need proper typing. Use type aliases for callback shapes to keep signatures readable and reusable across the codebase.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Function overloads and typed higher-order functions are essential in any real TypeScript codebase. They let you write APIs that are both flexible for callers and completely type-safe internally.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>function divide(a: number, b: number): number {
+    if (b === 0) throw new Error("Division by zero");
+    return a / b;
+}
+
+function createUser(
+    name: string,
+    role: string = "viewer",
+    age?: number
+): string {
+    return `${name} (${role})${age ? `, age ${age}` : ""}`;
+}
+
+function parse(input: string): number;
+function parse(input: number): string;
+function parse(input: string | number): string | number {
+    return typeof input === "string" ? parseFloat(input) : String(input);
+}
+
+type Predicate&lt;T&gt;       = (value: T) =&gt; boolean;
+type Transformer&lt;T, U&gt; = (value: T) =&gt; U;
+
+function filter&lt;T&gt;(arr: T[], pred: Predicate&lt;T&gt;): T[] {
+    return arr.filter(pred);
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a typed <code>pipe(...fns)</code> utility that chains transformations so that <code>pipe(double, addOne, toString)(5)</code> produces <code>"11"</code>. Use function type aliases, rest parameters, and generics. Add overloads so <code>pipe</code> with 1, 2, and 3 functions returns correctly typed results.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 5-->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Interfaces &amp; Object Types</h2>
+                <p>Design structured object shapes with interfaces and type aliases, and understand when to use each.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Designing structured object shapes with interfaces and type aliases, and understanding when to use each.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Interfaces — Defining Object Shapes</strong> — Interfaces define the contract an object must fulfill. They support optional properties, readonly fields, and method signatures, and can be extended across multiple declarations via declaration merging.</li>
+                    <li><strong>Extending Interfaces &amp; Type Aliases</strong> — Interfaces extend other interfaces with <code>extends</code>, creating inheritance chains. Type aliases achieve composition with <code>&amp;</code> intersection. Use <code>extends</code> for classical hierarchies and <code>&amp;</code> for ad-hoc composition.</li>
+                    <li><strong>Index Signatures &amp; Record Types</strong> — Index signatures describe objects with dynamic keys of a consistent type. <code>Record&lt;K, V&gt;</code> is a cleaner shorthand for the same pattern and is preferred in modern TypeScript.</li>
+                    <li><strong>interface vs type — When to Use Each</strong> — <code>interface</code> is best for public API shapes, class contracts, and extensible object types. <code>type</code> is best for unions, intersections, mapped types, and conditional types that interfaces cannot express.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The <code>interface</code> vs <code>type</code> decision comes up constantly in TypeScript. Understanding their distinct capabilities helps you make the right structural choices from the start.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>interface User {
+    readonly id: number;
+    name:        string;
+    email?:      string;
+    greet():     string;
+}
+
+interface Animal { name: string; }
+interface Pet    extends Animal { owner: string; }
+interface Dog    extends Pet    { breed: string; }
+
+type Scores = Record&lt;string, number&gt;;
+const scores: Scores = { Alice: 95, Bob: 87 };
+
+type Status  = "active" | "inactive" | "pending";
+type Handler = (event: MouseEvent) =&gt; void;
+interface Repository&lt;T&gt; { findById(id: number): Promise&lt;T&gt;; }</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Design an interface hierarchy for a blogging platform: <code>Author</code> extends <code>User</code>, <code>Post</code> has an <code>Author</code> and an array of <code>Comment</code>. Add an index signature for <code>Post</code> metadata. Build a <code>PostRepository</code> interface with <code>findById</code>, <code>findAll</code>, and <code>save</code> methods.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 6-->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Generics</h2>
+                <p>Write reusable, type-safe code that works across many types using TypeScript's generics system.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing reusable, type-safe code that works across many types using TypeScript's generics system.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Generic Functions</strong> — Generics add a type parameter to a function so it can work with any type while preserving type information. The caller decides the type; the function body remains agnostic, giving safety without sacrificing flexibility.</li>
+                    <li><strong>Generic Interfaces &amp; Type Aliases</strong> — Generics applied to interfaces and type aliases create reusable data structure definitions. A single <code>ApiResponse&lt;T&gt;</code> interface describes every endpoint's response shape.</li>
+                    <li><strong>Generic Constraints (<code>extends</code>)</strong> — Constraints limit which types a generic can accept. <code>T extends SomeType</code> ensures the generic has at least the properties of <code>SomeType</code>, letting you safely access those properties in the function body.</li>
+                    <li><strong>Generic Defaults &amp; Multiple Type Parameters</strong> — Generic parameters can have default types (<code>&lt;T = string&gt;</code>) making them optional at call sites. Multiple type parameters model relationships between types such as key-value structures or transformation pairs.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Generics are what transform TypeScript from a "JavaScript with types" language into a truly powerful type-safe system. Every major library and framework you will use is built on generics.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>function identity&lt;T&gt;(value: T): T { return value; }
+function first&lt;T&gt;(arr: T[]): T | undefined { return arr[0]; }
+
+const name = first(["Alice", "Bob"]); // inferred: string | undefined
+
+interface ApiResponse&lt;T&gt; {
+    data:      T;
+    status:    number;
+    message:   string;
+    timestamp: Date;
+}
+
+interface HasId { id: number; }
+function findById&lt;T extends HasId&gt;(items: T[], id: number): T | undefined {
+    return items.find(item =&gt; item.id === id);
+}
+
+function mapObject&lt;K extends string, V, U&gt;(
+    obj: Record&lt;K, V&gt;,
+    transform: (value: V) =&gt; U
+): Record&lt;K, U&gt; {
+    return Object.fromEntries(
+        Object.entries(obj).map(([k, v]) =&gt; [k, transform(v as V)])
+    ) as Record&lt;K, U&gt;;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Build a generic <code>Stack&lt;T&gt;</code> class with <code>push</code>, <code>pop</code>, <code>peek</code>, and <code>isEmpty</code> methods. Then write a generic <code>groupBy&lt;T, K extends string&gt;(arr: T[], key: (item: T) =&gt; K): Record&lt;K, T[]&gt;</code> utility function using constraint types throughout.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 7 -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Modules, Namespaces &amp; Declaration Files</h2>
+                <p>Organise TypeScript code into modules, import third-party libraries safely, and understand <code>.d.ts</code> declaration files.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Organizing TypeScript code into modules, importing third-party libraries safely, and understanding declaration files.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>ES Modules in TypeScript</strong> — TypeScript uses ES module syntax natively. Named exports share multiple values; default exports share one primary value. Named exports are preferred for better refactoring support and tree-shaking in bundlers.</li>
+                    <li><strong>Re-exports &amp; Barrel Files (<code>index.ts</code>)</strong> — A barrel file re-exports from multiple modules through a single <code>index.ts</code>, creating a clean public API for a folder. Consumers import from the folder, not individual files, making internal refactoring invisible to callers.</li>
+                    <li><strong>Installing &amp; Using <code>@types</code> Packages</strong> — Many JavaScript libraries ship without TypeScript types. The <code>@types</code> scope on npm provides type declarations for thousands of packages. Install them as dev dependencies.</li>
+                    <li><strong>Writing <code>.d.ts</code> Declaration Files</strong> — When TypeScript cannot infer types for a plain JavaScript file or global library, you write a <code>.d.ts</code> declaration file describing its types. These are also what you produce when publishing a typed library.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Professional TypeScript projects are always multi-file, multi-module codebases. Barrel files, <code>@types</code> packages, and declaration files are what make large TypeScript projects maintainable and safe at scale.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// math.ts
+export function add(a: number, b: number): number { return a + b; }
+export const PI = 3.14159;
+
+// src/utils/index.ts — barrel file
+export { formatDate, parseDate } from "./date";
+export { formatCurrency }        from "./currency";
+export type { FormatOptions }    from "./types";
+
+// npm install --save-dev @types/lodash
+import _ from "lodash";
+const grouped = _.groupBy([1, 2, 3, 4], n =&gt; n % 2 === 0 ? "even" : "odd");
+
+// global.d.ts
+declare global {
+    interface Window { analytics: { track: (event: string) =&gt; void }; }
+}
+declare module "my-untyped-lib" {
+    export function compute(input: number): number;
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Refactor a single-file TypeScript project into a module structure with separate files for types, utilities, and feature modules unified by a barrel <code>index.ts</code>. Install <code>lodash</code> and <code>@types/lodash</code>, write a typed wrapper, and write a <code>.d.ts</code> for a hypothetical untyped legacy JS utility.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 8–11:</strong> OOP, error handling, utility types, and real-world libraries.</p>
+        </div>
+
+        <!--  WEEK 8  -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Object-Oriented TypeScript (Classes)</h2>
+                <p>Use TypeScript's class system including access modifiers, abstract classes, and interface contracts.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Using TypeScript's class system including access modifiers, abstract classes, and implementing interfaces.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Classes, Constructors &amp; Access Modifiers</strong> — TypeScript adds <code>public</code>, <code>private</code>, <code>protected</code>, and <code>readonly</code> modifiers to class members. Constructor parameter shorthand simultaneously declares and assigns properties in one step.</li>
+                    <li><strong>Inheritance &amp; Method Overriding</strong> — TypeScript classes support single inheritance via <code>extends</code>. Use <code>super()</code> for the parent constructor and <code>super.method()</code> for parent methods. The <code>override</code> keyword (TS 4.3+) makes overriding explicit and compiler-checked.</li>
+                    <li><strong>Abstract Classes &amp; Interfaces as Contracts</strong> — Abstract classes define a base with some implementation and some abstract methods subclasses must provide. When a class <code>implements</code> an interface, TypeScript verifies the full contract at compile time.</li>
+                    <li><strong>Static Members &amp; Private Class Fields</strong> — <code>static</code> members belong to the class itself, useful for factories, counters, and utilities. Private class fields (<code>#field</code>) using native JavaScript syntax are truly private at runtime.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> TypeScript's access modifiers and abstract classes enforce design contracts at compile time that JavaScript simply cannot. This is where TypeScript's OOP capabilities genuinely exceed JavaScript's.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>class BankAccount {
+    private balance: number;
+    constructor(public readonly owner: string, initial: number) {
+        this.balance = initial;
+    }
+    deposit(amount: number): void { this.balance += amount; }
+    getBalance(): number          { return this.balance; }
+}
+
+class SavingsAccount extends BankAccount {
+    constructor(owner: string, initial: number, private rate: number) {
+        super(owner, initial);
+    }
+    override deposit(amount: number): void {
+        super.deposit(amount * (1 + this.rate));
+    }
+}
+
+abstract class Shape {
+    abstract area(): number;
+    describe(): string { return `Area: ${this.area().toFixed(2)}`; }
+}
+
+class IdGenerator {
+    static #count = 0;
+    static next(): number  { return ++IdGenerator.#count; }
+    static reset(): void   { IdGenerator.#count = 0; }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Design a class hierarchy for a payment system: abstract <code>PaymentMethod</code> with abstract <code>charge(amount: number)</code> and <code>refund(amount: number)</code> methods, then concrete <code>CreditCard</code> and <code>Wallet</code> subclasses. Implement a <code>PaymentProcessor</code> interface and verify the contract at compile time.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 9 -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Error Handling &amp; Type-Safe Async Code</h2>
+                <p>Handle errors idiomatically in TypeScript, type async operations correctly, and model failures explicitly.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Handling errors idiomatically, typing async operations correctly, and modeling failures explicitly.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Typed Error Handling</strong> — In strict mode, <code>catch</code> blocks receive <code>unknown</code> typed errors, requiring narrowing before accessing properties. This prevents the common mistake of assuming every caught value is an <code>Error</code> instance.</li>
+                    <li><strong>Custom Error Classes</strong> — Create typed error subclasses to carry domain-specific context. <code>instanceof</code> checks on custom errors enable precise, typed error handling that distinguishes between <code>ValidationError</code>, <code>NetworkError</code>, and <code>NotFoundError</code>.</li>
+                    <li><strong>Promises &amp; Async/Await with Correct Types</strong> — <code>Promise&lt;T&gt;</code> is the return type for async operations resolving to <code>T</code>. <code>async</code> functions implicitly return <code>Promise&lt;T&gt;</code>. Typing async operations correctly ensures callers know what to expect.</li>
+                    <li><strong>Result Types — Explicit Error Modelling</strong> — Instead of throwing, model operations as <code>Result&lt;T, E&gt;</code> — a union of success and failure. This forces callers to acknowledge potential failures and eliminates invisible error paths.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> TypeScript's <code>unknown</code> error type in catch blocks and the Result pattern together represent a major advancement over runtime error handling. They make failure paths as type-safe as success paths.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>class AppError extends Error {
+    constructor(message: string, public readonly code: string) {
+        super(message);
+        this.name = "AppError";
+        Object.setPrototypeOf(this, new.target.prototype);
+    }
+}
+class NotFoundError extends AppError {
+    constructor(entity: string, id: number) {
+        super(`${entity} with id ${id} not found`, "NOT_FOUND");
+    }
+}
+
+async function fetchPost(id: number): Promise&lt;Post&gt; {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+    if (!res.ok) throw new NotFoundError("Post", id);
+    return res.json() as Promise&lt;Post&gt;;
+}
+
+type Ok&lt;T&gt;  = { success: true;  value: T };
+type Err&lt;E&gt; = { success: false; error: E };
+type Result&lt;T, E = Error&gt; = Ok&lt;T&gt; | Err&lt;E&gt;;
+
+function divide(a: number, b: number): Result&lt;number, string&gt; {
+    if (b === 0) return { success: false, error: "Division by zero" };
+    return { success: true, value: a / b };
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Build a <code>UserService</code> class that fetches users from a mock API. Define <code>NetworkError</code> and <code>ValidationError</code> custom error classes. Return <code>Result&lt;User, AppError&gt;</code> from all methods. Write an async <code>main</code> that calls the service and handles all failure cases with exhaustive checks.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 10 -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Utility Types &amp; Advanced Type Manipulation</h2>
+                <p>Use TypeScript's powerful built-in utility types and begin writing your own type-level transformations.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Using TypeScript's powerful built-in utility types and beginning to write custom type-level transformations.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Core Utility Types</strong> — TypeScript ships with utility types that transform existing types: <code>Partial&lt;T&gt;</code> makes all fields optional, <code>Required&lt;T&gt;</code> makes them all required, <code>Pick&lt;T, K&gt;</code> selects fields, and <code>Omit&lt;T, K&gt;</code> removes fields.</li>
+                    <li><strong>Conditional Types (<code>T extends U ? X : Y</code>)</strong> — Conditional types select between types based on a type-level condition. They are the foundation of many advanced utility types and enable powerful type inference patterns.</li>
+                    <li><strong>Mapped Types</strong> — Mapped types transform every property in an existing type by iterating over its keys. Combined with modifiers you can add or remove optionality and readonly constraints programmatically.</li>
+                    <li><strong>Template Literal Types &amp; <code>infer</code></strong> — Template literal types compose string types at the type level — useful for typed event names, CSS property strings, and API routes. <code>infer</code> extracts a type from within a conditional type for reuse.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Utility types and mapped types are what enable TypeScript to be genuinely expressive rather than just annotative. They allow you to derive types from other types, keeping your code DRY even at the type level.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>interface User { id: number; name: string; email: string; age?: number; }
+
+type CreateUserDTO = Omit&lt;User, "id"&gt;;
+type UserPreview   = Pick&lt;User, "id" | "name"&gt;;
+type PartialUser   = Partial&lt;User&gt;;
+
+type IsArray&lt;T&gt; = T extends any[] ? true : false;
+type Unwrap&lt;T&gt;  = T extends Array&lt;infer U&gt; ? U : T;
+
+type Nullable&lt;T&gt; = { [K in keyof T]: T[K] | null };
+type Mutable&lt;T&gt;  = { -readonly [K in keyof T]: T[K] };
+
+type EventName&lt;T extends string&gt; = `on${Capitalize&lt;T&gt;}`;
+type ReturnTypeOf&lt;T&gt; = T extends (...args: any[]) =&gt; infer R ? R : never;</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a <code>DeepPartial&lt;T&gt;</code> utility type that makes all nested object properties optional. Then write <code>DeepReadonly&lt;T&gt;</code>. Finally create a <code>TypedEventEmitter&lt;Events&gt;</code> where <code>Events</code> is a record mapping event names to payload types, using template literal and mapped types.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 11  -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Working with Real-World Libraries (Node.js, Zod, Prisma)</h2>
+                <p>Apply TypeScript in real-world scenarios with typed libraries for validation, database access, and server development.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Applying TypeScript in real-world scenarios with typed libraries for runtime validation, database access, and server development.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>TypeScript with Node.js &amp; Express</strong> — Use <code>@types/node</code> and <code>@types/express</code> for full type coverage in a Node.js server. Type <code>Request</code>, <code>Response</code>, and middleware signatures correctly to prevent runtime errors in route handlers.</li>
+                    <li><strong>Runtime Validation with Zod</strong> — TypeScript types are erased at runtime. Zod fills that gap with runtime-safe schema validation whose schemas also infer static TypeScript types. Define once, validate everywhere.</li>
+                    <li><strong>Type-Safe Database Access with Prisma</strong> — Prisma generates TypeScript types from your database schema, making every query fully typed. You get autocomplete on model fields, relationships, and filters — and TypeScript errors if a query does not match the schema.</li>
+                    <li><strong>Environment Variables with Type Safety (dotenv + Zod)</strong> — Environment variables are untyped strings by default. Validate and type them at startup using Zod so every reference to <code>process.env.DATABASE_URL</code> is guaranteed non-empty, failing fast with clear errors if misconfigured.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Zod and Prisma together with TypeScript create genuine end-to-end type safety — from the database schema through the API layer to the response. This is the architecture behind most modern production TypeScript applications.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import express, { Request, Response } from "express";
+const app = express();
+app.get("/users/:id", async (req: Request, res: Response): Promise&lt;void&gt; =&gt; {
+    const id = Number(req.params.id);
+    res.json({ id, name: "Alice" });
+});
+
+import { z } from "zod";
+const UserSchema = z.object({
+    name:  z.string().min(1).max(100),
+    email: z.string().email(),
+    age:   z.number().int().min(0).optional(),
+});
+type User = z.infer&lt;typeof UserSchema&gt;;
+const user = UserSchema.parse(req.body);
+
+const EnvSchema = z.object({
+    DATABASE_URL: z.string().url(),
+    PORT:         z.coerce.number().default(3000),
+    NODE_ENV:     z.enum(["development", "production", "test"]),
+});
+export const env = EnvSchema.parse(process.env);</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Build a minimal typed REST API with Express: a <code>POST /users</code> endpoint that validates the request body with Zod, stores users with Prisma or an in-memory store, and returns typed responses. Add a startup environment validation step using Zod and dotenv.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 12–15:</strong> Decorators, advanced type patterns, concurrency, and three complete production projects.</p>
+        </div>
+
+        <!--  WEEK 12 -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Decorators &amp; Metaprogramming</h2>
+                <p>Master TypeScript decorators to add cross-cutting concerns like logging, validation, and caching declaratively.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering TypeScript decorators to add cross-cutting concerns declaratively.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Class Decorators</strong> — A class decorator is a function applied to a class constructor, allowing modification or wrapping of the class. Used by frameworks like NestJS and Angular for dependency injection and metadata registration.</li>
+                    <li><strong>Method &amp; Property Decorators</strong> — Method decorators wrap a class method, enabling patterns like <code>@Log</code>, <code>@Cache</code>, <code>@Validate</code>, or <code>@Throttle</code> without modifying the method body. They receive the target, property key, and property descriptor.</li>
+                    <li><strong>Parameter Decorators &amp; Reflect Metadata</strong> — Parameter decorators mark constructor or method parameters with metadata. Combined with the <code>reflect-metadata</code> library, frameworks can inspect injected types at runtime for dependency injection containers.</li>
+                    <li><strong>Decorator Factories &amp; Composition</strong> — Decorator factories are functions that return a decorator, allowing configuration via parameters. Stacking multiple decorators composes their effects, applied bottom-up (innermost first).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Decorators are what enable the clean, declarative API of frameworks like NestJS, Angular, and TypeORM. Understanding how they work under the hood makes you a far more effective user of these frameworks.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>function Log(target: any, key: string, descriptor: PropertyDescriptor) {
+    const original = descriptor.value;
+    descriptor.value = function (...args: any[]) {
+        console.log(`Calling ${key}(${JSON.stringify(args)})`);
+        const result = original.apply(this, args);
+        console.log(`${key} returned ${JSON.stringify(result)}`);
+        return result;
+    };
+}
+
+function Throttle(ms: number) {
+    return function (target: any, key: string, desc: PropertyDescriptor) {
+        const original = desc.value;
+        let last = 0;
+        desc.value = function (...args: any[]) {
+            if (Date.now() - last &gt;= ms) {
+                last = Date.now();
+                return original.apply(this, args);
+            }
+        };
+    };
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Build a mini NestJS-style DI container using decorators: <code>@Injectable()</code> marks a class as injectable, <code>@Inject(token)</code> marks constructor parameters, and a <code>Container</code> class resolves the dependency graph. Test with a 3-layer service tree: <code>UserController → UserService → UserRepository</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 13 -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Advanced Type Patterns &amp; TypeScript Internals</h2>
+                <p>Write expert-level type utilities, understand variance, and learn patterns used in large TypeScript codebases.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing expert-level type utilities, understanding variance, and learning patterns used in large TypeScript codebases.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Recursive Types</strong> — TypeScript supports recursive type aliases, enabling deeply nested structures like trees, linked lists, and nested JSON. Use the interface form or type with lazy evaluation to model unlimited depth.</li>
+                    <li><strong>Variance (Covariance &amp; Contravariance)</strong> — TypeScript uses structural typing, but function parameter types are contravariant and return types are covariant. Understanding this prevents subtle type bugs in callbacks and generic containers.</li>
+                    <li><strong>The <code>satisfies</code> Operator (TS 4.9+)</strong> — <code>satisfies</code> validates that a value conforms to a type without widening the inferred type. This keeps literal type information while still catching structural mismatches.</li>
+                    <li><strong>Advanced <code>infer</code> Patterns &amp; Distributive Conditional Types</strong> — Distributive conditional types apply over union members individually when <code>T</code> is a bare type parameter. Combining this with <code>infer</code> allows extracting deeply nested types — the technique behind <code>ReturnType</code>, <code>Parameters</code>, <code>Awaited</code>, and more.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> This is the week that separates TypeScript users from TypeScript experts. Recursive types, variance, and the <code>satisfies</code> operator are the tools used in TypeScript's own standard library and in top-tier open source projects.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>type Json =
+    | string | number | boolean | null
+    | Json[]
+    | { [key: string]: Json };
+
+type TreeNode&lt;T&gt; = { value: T; children: TreeNode&lt;T&gt;[] };
+
+type DeepAwaited&lt;T&gt; = T extends PromiseLike&lt;infer U&gt; ? DeepAwaited&lt;U&gt; : T;
+type NonNullableT&lt;T&gt; = T extends null | undefined ? never : T;
+
+const palette = {
+    red:   [255, 0, 0],
+    green: "#00ff00",
+    blue:  [0, 0, 255],
+} satisfies Record&lt;"red" | "green" | "blue", [number, number, number] | string&gt;;
+
+interface Box&lt;out T&gt;  { get(): T; }
+interface Sink&lt;in T&gt;  { put(val: T): void; }</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write the following from scratch using only the TypeScript type system: <code>DeepPartial&lt;T&gt;</code>, <code>DeepReadonly&lt;T&gt;</code>, <code>FlattenObject&lt;T&gt;</code> (flattens nested object keys into dot-notation strings), and <code>PickByValue&lt;T, V&gt;</code> (picks keys whose values match type <code>V</code>). Add JSDoc and type-level tests.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 14  -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Concurrency, Streams &amp; Performance Patterns</h2>
+                <p>Master async patterns — concurrent requests, AbortController, async iterators, and typed worker communication.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering async patterns including concurrent requests, AbortController, async iterators, and typed worker communication.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Concurrent Async Patterns</strong> — TypeScript preserves tuple types through <code>Promise.all</code>, giving typed destructuring of concurrent results. Understanding when to use <code>allSettled</code>, <code>all</code>, <code>race</code>, and <code>any</code> is critical for robust async code.</li>
+                    <li><strong>Async Iterators &amp; <code>for await...of</code></strong> — Async iterators process streams of data lazily without loading everything into memory. TypeScript types the yielded values through <code>AsyncIterable&lt;T&gt;</code> and <code>AsyncGenerator&lt;T&gt;</code>.</li>
+                    <li><strong>AbortController &amp; Cancellable Operations</strong> — <code>AbortController</code> provides a standard way to cancel async operations. TypeScript types the <code>signal</code> parameter and <code>abort()</code> call, making cancellation intent explicit in function signatures.</li>
+                    <li><strong>Worker Threads with Typed Message Passing</strong> — Node.js <code>worker_threads</code> run CPU-intensive work off the main thread. Use discriminated unions to type messages between threads, ensuring both ends of the <code>postMessage</code> channel agree on the protocol.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Typed async iterators and typed worker thread messages are genuinely advanced TypeScript skills that very few developers master. They are the difference between a codebase that handles concurrency correctly and one that silently drops errors or corrupts state.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>async function fetchAll(ids: number[]): Promise&lt;[User[], Post[]]&gt; {
+    const [users, posts] = await Promise.all([fetchUsers(ids), fetchPosts(ids)]);
+    return [users, posts];
+}
+
+async function* paginate&lt;T&gt;(
+    fetchPage: (page: number) =&gt; Promise&lt;T[]&gt;
+): AsyncGenerator&lt;T&gt; {
+    let page = 0;
+    while (true) {
+        const results = await fetchPage(page++);
+        if (results.length === 0) break;
+        for (const item of results) yield item;
+    }
+}
+
+async function fetchWithTimeout&lt;T&gt;(url: string, ms: number): Promise&lt;T&gt; {
+    const controller = new AbortController();
+    const timeout = setTimeout(() =&gt; controller.abort(), ms);
+    try {
+        const res = await fetch(url, { signal: controller.signal });
+        return res.json() as Promise&lt;T&gt;;
+    } finally {
+        clearTimeout(timeout);
+    }
+}
+
+type WorkerMessage =
+    | { type: "compute"; payload: number[] }
+    | { type: "result";  value: number }
+    | { type: "error";   message: string };</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Build a typed job queue that processes items concurrently with a configurable concurrency limit (max 5 at a time). Use async generators to yield results as jobs complete. Add <code>AbortController</code> support so the queue can be cancelled. Type all internal messages and state transitions with discriminated unions.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 15  -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Master Projects</h2>
+                <p>Synthesize all phases into three complete, production-quality TypeScript projects.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Synthesizing all phases into three complete, production-quality TypeScript applications.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — Typed CLI Todo App (Beginner → Intermediate)</h3>
+                <p><strong>Goal:</strong> Build a fully typed, file-persisted command-line todo application.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>TypeScript Concept</th>
+                            <th>Applied As</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Discriminated union</td>
+                            <td><code>TodoStatus</code>: pending | in-progress | done</td>
+                        </tr>
+                        <tr>
+                            <td>Generic Result type</td>
+                            <td><code>Result&lt;T, E&gt;</code> return type for all operations</td>
+                        </tr>
+                        <tr>
+                            <td>Zod validation</td>
+                            <td>Validating user input and persisted JSON</td>
+                        </tr>
+                        <tr>
+                            <td>Module structure</td>
+                            <td>Barrel exports across types, storage, and CLI layers</td>
+                        </tr>
+                        <tr>
+                            <td>Custom error classes</td>
+                            <td><code>TodoNotFoundError</code>, <code>StorageError</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A CLI app (<code>npx ts-node src/cli.ts add "Buy groceries" --tags personal,errands</code>) with commands for add, list, update, delete, and filter. All data persisted to JSON and validated with Zod on read.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — Type-Safe REST API (Intermediate → Advanced)</h3>
+                <p><strong>Goal:</strong> Build a production-ready REST API for a task management system with full type safety end to end.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>TypeScript Concept</th>
+                            <th>Applied As</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Typed Express routes</td>
+                            <td>Fully typed request, response, and middleware signatures</td>
+                        </tr>
+                        <tr>
+                            <td>Zod validation</td>
+                            <td>Request body, query params, and path param validation</td>
+                        </tr>
+                        <tr>
+                            <td>Prisma queries</td>
+                            <td>Typed queries, relations, and transactions</td>
+                        </tr>
+                        <tr>
+                            <td>Repository pattern</td>
+                            <td>Generic <code>BaseRepository&lt;T&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>Typed middleware</td>
+                            <td><code>AuthRequest extends Request</code></td>
+                        </tr>
+                        <tr>
+                            <td>Generic response wrapper</td>
+                            <td><code>ApiResponse&lt;T&gt;</code> and <code>PaginatedResponse&lt;T&gt;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A fully typed Express API with authentication middleware, CRUD endpoints for Tasks and Projects, paginated list endpoints typed with <code>PaginatedResponse&lt;T&gt;</code>, and a global error handler mapping custom errors to HTTP status codes.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Real-Time Typed WebSocket Server (Advanced → Master)</h3>
+                <p><strong>Goal:</strong> Build a type-safe real-time collaboration server where multiple clients can edit a shared document with every message fully typed end to end.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>TypeScript Concept</th>
+                            <th>Applied As</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Discriminated union protocol</td>
+                            <td>Shared types between server and client</td>
+                        </tr>
+                        <tr>
+                            <td>Generic EventEmitter</td>
+                            <td>Mapped type API for typed event subscriptions</td>
+                        </tr>
+                        <tr>
+                            <td>Async generators</td>
+                            <td>Streaming document history to connected clients</td>
+                        </tr>
+                        <tr>
+                            <td>Decorator-based handlers</td>
+                            <td><code>@OnMessage("join")</code> message handler registration</td>
+                        </tr>
+                        <tr>
+                            <td>Deep recursive types</td>
+                            <td><code>JsonDocument</code> for document state</td>
+                        </tr>
+                        <tr>
+                            <td><code>satisfies</code> operator</td>
+                            <td>Message schema validation without type widening</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Code Example</h3>
+                <pre><code>type ClientToServer =
+    | { type: "join";   roomId: string; userId: string }
+    | { type: "edit";   delta: Delta;   version: number }
+    | { type: "cursor"; position: { line: number; col: number } };
+
+type ServerToClient =
+    | { type: "joined";   members: string[];    version: number }
+    | { type: "patch";    delta: Delta;         userId: string }
+    | { type: "conflict"; serverVersion: number }
+    | { type: "presence"; userId: string; position: CursorPosition };
+
+type MessageHandler&lt;T extends ClientToServer&gt; =
+    (client: ConnectedClient, message: T) =&gt; Promise&lt;void&gt;;</code></pre>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A WebSocket server using the <code>ws</code> library supporting: room creation and joining, operational transform conflict resolution, cursor presence broadcasting, and document history streaming via async generators. A simple HTML client uses the same shared protocol types via a <code>shared/</code> directory.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–3</td>
+                        <td>Absolute Basics</td>
+                        <td>Set up TypeScript with strict config, use all primitive and structural types, and narrow types through control flow</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>4–7</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Write fully typed generic functions, interfaces, and modular codebases with typed third-party libraries</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>8–11</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Design OOP systems, handle errors with Result types, use all utility types, and integrate Zod, Prisma, and Express</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>12–15</td>
+                        <td>Master Level Concepts</td>
+                        <td>Write decorators, recursive/mapped/conditional types, typed concurrent async code, and three production-grade projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Learning Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Resource</th>
+                        <th>Type</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>typescriptlang.org/docs</td>
+                        <td>Official Docs</td>
+                        <td>Every language feature</td>
+                    </tr>
+                    <tr>
+                        <td>Total TypeScript (Matt Pocock)</td>
+                        <td>Course</td>
+                        <td>Advanced type patterns</td>
+                    </tr>
+                    <tr>
+                        <td>Type Challenges (github.com/type-challenges)</td>
+                        <td>Practice</td>
+                        <td>Type system mastery</td>
+                    </tr>
+                    <tr>
+                        <td>Effective TypeScript (Dan Vanderkam)</td>
+                        <td>Book</td>
+                        <td>Idiomatic TS patterns</td>
+                    </tr>
+                    <tr>
+                        <td>TypeScript Deep Dive (Basarat)</td>
+                        <td>Free Book</td>
+                        <td>Comprehensive reference</td>
+                    </tr>
+                    <tr>
+                        <td>Zod Documentation</td>
+                        <td>Library Docs</td>
+                        <td>Runtime validation</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Spend approximately <strong>3–5 hours per week</strong> reading, typing examples by hand, and completing the practical task before moving on.</li>
+                    <li>Always start new projects with <strong><code>strict: true</code></strong> in your tsconfig — never disable strictness to make errors go away.</li>
+                    <li>Push every weekly exercise to a personal <strong>GitHub repository</strong> to build a visible TypeScript portfolio by Week 15.</li>
+                    <li>Practice type-level challenges at <strong>github.com/type-challenges</strong> alongside the curriculum from Week 10 onward.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+                <div class="logo1">
+                    <h3>CodePath</h3>
+                    <p>Learn. Practice. Master</p>
+                </div>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+
+</body>
+</html>

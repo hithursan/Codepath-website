@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust: Beginner to Master — 16 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>Rust: Beginner to Master</h1>
+        <p>Complete 16-Week Curriculum — From Ownership & Borrowing to Concurrency, Async/Await & Production Systems</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#week16">W16</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>16-week, structured Rust curriculum</strong> designed to take a complete beginner to a professional-level systems programmer. The roadmap moves from <strong>toolchain setup, syntax, types, and ownership</strong> through <strong>control flow, functions, structs, enums, and pattern matching</strong>, into <strong>traits, generics, error handling, and crates</strong>, all the way to <strong>lifetimes, macros, custom iterators, concurrency, async/await, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics including Rust's signature ownership and borrowing system, <strong>Phase 2</strong> covers control flow, functions, modules, and custom data structures, <strong>Phase 3</strong> covers intermediate and advanced core topics like traits, generics, error handling, and crates, and <strong>Phase 4</strong> covers master-level lifetimes, macros, concurrency, and production Rust applications.</p>
+            <p>By Week 16, you will have built three complete, portfolio-ready applications and be confident building production-grade Rust programs across systems, web, and concurrent domains.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 16 weeks &nbsp;|&nbsp; <strong>Stack:</strong> Rust (stable), Cargo, Tokio &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic programming logic</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–4:</strong> Fundamentals, data types, ownership, and collections intro.</p>
+        </div>
+
+        <!-- WEEK 1-->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Setting Up &amp; First Steps</h2>
+                <p>Toolchain setup, project structure, and basic syntax.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Setting up the Rust toolchain, understanding project structure with Cargo, and writing your first Rust programs.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Installing Rust &amp; Cargo</strong> — Rust is installed via <code>rustup</code>, which also bundles Cargo, Rust's build tool and package manager. Cargo handles compiling, dependency management, and project scaffolding from day one — there is no separate setup required.</li>
+                    <li><strong>Variables &amp; Mutability</strong> — Variables in Rust are immutable by default, meaning their value cannot change after assignment. Adding the <code>mut</code> keyword explicitly allows a variable to be reassigned — this design pushes you toward safer code by default.</li>
+                    <li><strong>Comments &amp; <code>println!</code> Formatting</strong> — Comments use <code>//</code> for single lines or <code>/* */</code> for blocks, and are ignored by the compiler. The <code>println!</code> macro supports placeholders (<code>{}</code>) for formatted, readable output.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Cargo is one of the best build tools in any language — it handles compilation, dependency resolution, testing, and documentation from a single command. Understanding that variables are immutable by default from Week 1 introduces the Rust philosophy: make the safe choice the easy choice.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// src/main.rs - the entry point of every Rust binary
+fn main() {
+    println!("Hello, Rust World!"); // macro that prints to console
+}
+
+fn main() {
+    let name = "Alice";       // immutable by default
+    let mut age = 25;         // mutable variable
+    age += 1;
+    println!("{} is {}", name, age);
+}
+
+fn main() {
+    // Single-line comment
+    /* Multi-line
+       comment block */
+    println!("{} + {} = {}", 2, 3, 2 + 3); // formatted output
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Install Rust via <code>rustup</code>, create a new project with <code>cargo new hello_rust</code>, and write a program that prints your <strong>name</strong>, <strong>age</strong>, and <strong>favorite language</strong> using <code>println!</code> formatting with <code>{}</code> placeholders.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 2  -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Data Types &amp; the Type System</h2>
+                <p>Rust's strict, static type system and scalar types.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding Rust's strict, static type system and working with all scalar types.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Integers &amp; Floats</strong> — Rust offers explicit-width integer types like <code>i32</code> and <code>u64</code>, plus floating-point types <code>f32</code> and <code>f64</code>. This precision avoids ambiguity and helps the compiler catch overflow and type errors at compile time rather than at runtime.</li>
+                    <li><strong>Booleans &amp; Characters</strong> — The <code>bool</code> type holds only <code>true</code> or <code>false</code>, used extensively in conditions and pattern matching. The <code>char</code> type represents a single Unicode scalar value — always exactly 4 bytes in memory, unlike C's single-byte char.</li>
+                    <li><strong>Type Inference &amp; Annotations</strong> — Rust's compiler can infer types automatically in most cases, reducing boilerplate while staying fully statically typed. Explicit type annotations are required when the compiler cannot determine the type unambiguously from context.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Rust's integer overflow behavior — panic in debug mode, wrapping in release — is fundamentally different from C's silent undefined behavior. Understanding the explicit integer width types (<code>i32</code>, <code>u64</code>, etc.) and when to use each is the foundation for writing correct, portable numeric code in Rust.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>fn main() {
+    let whole: i32 = 42;
+    let decimal: f64 = 3.14;
+    println!("{}", whole as f64 + decimal); // explicit cast with 'as'
+}
+
+fn main() {
+    let is_active: bool = true;
+    let grade: char = 'A';
+    println!("Active: {}, Grade: {}", is_active, grade);
+}
+
+fn main() {
+    let inferred = 10;            // inferred as i32
+    let explicit: u8 = 255;       // explicitly typed
+    println!("{} {}", inferred, explicit);
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a program declaring one variable of each type (<code>i32</code>, <code>f64</code>, <code>bool</code>, <code>char</code>) and print a single <strong>formatted sentence</strong> combining all four values using <code>println!</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 3-->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Operators &amp; Strings</h2>
+                <p>Expressions, operators, and Rust's two string types.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Working with operators and understanding Rust's two string types — one of the most important distinctions in the language.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Arithmetic &amp; Comparison Operators</strong> — Arithmetic operators (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>) perform calculations, while comparison operators (<code>==</code>, <code>&lt;</code>, <code>&gt;=</code>) evaluate relationships and return booleans. Rust enforces matching types on both sides of these operations — no silent coercion.</li>
+                    <li><strong><code>String</code> vs <code>&amp;str</code></strong> — <code>String</code> is a growable, heap-allocated, owned text type, while <code>&amp;str</code> is an immutable borrowed string slice. Understanding this distinction is essential to grasping Rust's ownership model and is referenced in virtually every Rust function signature.</li>
+                    <li><strong>String Concatenation &amp; Formatting</strong> — Strings can be joined using the <code>+</code> operator, <code>push_str</code>, or the <code>format!</code> macro for cleaner composition. <code>format!</code> builds a new <code>String</code> without printing — useful for constructing reusable text values.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The <code>String</code> vs <code>&amp;str</code> distinction is the single most confusing topic for Rust beginners — and for good reason. It is the first concrete manifestation of the ownership system: one is owned data on the heap, the other is a borrowed view into existing data. Getting comfortable with this distinction here makes everything in Phase 3 dramatically clearer.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>fn main() {
+    let (a, b) = (17, 5);
+    println!("{} {} {}", a / b, a % b, a > b); // 3 2 true
+}
+
+fn main() {
+    let owned: String = String::from("Hello");
+    let borrowed: &str = &owned;  // borrowing a slice of owned
+    println!("{} / {}", owned, borrowed);
+}
+
+fn main() {
+    let first = String::from("Rust");
+    let combined = format!("{} is fun!", first); // builds a String
+    println!("{}", combined);
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a simple <strong>BMI Calculator</strong> using arithmetic operators on <code>f64</code> values, then use <code>format!</code> to build a descriptive result string before printing it. The result string should include the BMI value and a category label.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 4-->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Ownership &amp; Collections Intro</h2>
+                <p>Rust's signature ownership system and basic collections.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering Rust's signature ownership system and working with the primary dynamic collection type — <code>Vec&lt;T&gt;</code>.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Ownership &amp; Move Semantics</strong> — Every value in Rust has a single owner, and when that owner goes out of scope, the value is dropped automatically — no garbage collector needed. Assigning a non-<code>Copy</code> value to another variable "moves" ownership, invalidating the original binding.</li>
+                    <li><strong>Borrowing &amp; References (<code>&amp;</code>)</strong> — Borrowing lets you access a value without taking ownership, using <code>&amp;</code> for immutable references and <code>&amp;mut</code> for mutable ones. The borrow checker enforces that you cannot have a mutable and immutable reference to the same data at the same time.</li>
+                    <li><strong>Vectors (<code>Vec&lt;T&gt;</code>)</strong> — A <code>Vec&lt;T&gt;</code> is a growable, heap-allocated list of elements of the same type — Rust's primary dynamic array structure. Vectors support indexing, iteration, and methods like <code>push</code> and <code>pop</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Ownership is the feature that makes Rust unique among all mainstream languages — it provides memory safety without a garbage collector and data-race freedom without a runtime. Every concept in the next 12 weeks — traits, generics, lifetimes, concurrency — builds directly on ownership. There is no shortcut through this week.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>fn main() {
+    let s1 = String::from("hello");
+    let s2 = s1;               // s1 is MOVED into s2
+    println!("{}", s2);        // s1 can no longer be used here
+}
+
+fn print_length(s: &String) {  // borrows — does not own
+    println!("Length: {}", s.len());
+}
+fn main() {
+    let s = String::from("Rustacean");
+    print_length(&s);          // pass a reference
+    println!("{}", s);         // s is still valid here
+}
+
+fn main() {
+    let mut numbers: Vec&lt;i32&gt; = vec![1, 2, 3];
+    numbers.push(4);
+    println!("{:?}", numbers); // [1, 2, 3, 4]
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a function that takes a borrowed <code>&amp;Vec&lt;i32&gt;</code>, calculates and returns the <strong>sum</strong> of all elements, then call it from <code>main()</code> without transferring ownership of the vector. Print the vector again after the function call to prove ownership was preserved.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 5–8:</strong> Functions, modules, and custom data structures.</p>
+        </div>
+
+        <!--WEEK 5-->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Conditional Logic</h2>
+                <p>Decision-making constructs in Rust.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Making decisions in Rust using if expressions, exhaustive match, and the concise <code>if let</code> shortcut.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>if</code> / <code>else if</code> / <code>else</code></strong> — Conditional expressions in Rust evaluate boolean conditions to choose which code block executes and do not require parentheses around the condition. Since <code>if</code> is an expression, it can directly return a value — enabling clean conditional assignments.</li>
+                    <li><strong><code>match</code> Expressions</strong> — <code>match</code> compares a value against a series of patterns and executes the matching branch, similar to a powerful <code>switch</code>. It is exhaustive — the compiler forces you to handle every possible case, eliminating an entire class of logic bugs.</li>
+                    <li><strong><code>if let</code> &amp; Pattern Matching Shortcuts</strong> — <code>if let</code> provides a concise way to match a single pattern, commonly used with <code>Option</code> or <code>Result</code> types. It avoids the verbosity of a full <code>match</code> when only one case actually matters.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Rust's <code>match</code> is exhaustive — the compiler will refuse to compile your program if you forget to handle a case. This single property eliminates the most common class of logic bugs: forgetting an edge case. Combined with <code>Option&lt;T&gt;</code> in Week 8, exhaustive <code>match</code> is the replacement for null pointer bugs in Rust.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>fn main() {
+    let score = 75;
+    let grade = if score >= 90 { "A" }
+                else if score >= 70 { "B" }
+                else { "C" };
+    println!("Grade: {}", grade);
+}
+
+fn main() {
+    let day = 3;
+    match day {
+        1 => println!("Monday"),
+        2..=5 => println!("Midweek"),  // inclusive range pattern
+        _ => println!("Weekend"),       // catch-all — required
+    }
+}
+
+fn main() {
+    let value: Option&lt;i32&gt; = Some(7);
+    if let Some(n) = value {
+        println!("Got value: {}", n);   // unwraps safely
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a grading program using <code>if-else</code> to assign a letter grade from a numeric score, then rewrite the same logic using a <code>match</code> expression on numeric ranges. Compare the exhaustiveness guarantee each provides.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 6-->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Loops &amp; Iteration</h2>
+                <p>Repetition constructs and iterator basics.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Repeating actions using Rust's three loop types and composing lazy transformations with iterators.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>loop</code>, <code>while</code>, and <code>for</code></strong> — <code>loop</code> repeats indefinitely until explicitly broken, <code>while</code> repeats while a condition holds, and <code>for</code> iterates over a range or collection. Rust's <code>for</code> loop is the idiomatic choice for iterating — avoiding manual index management and bounds errors.</li>
+                    <li><strong>Breaking with Values (<code>loop</code> as Expression)</strong> — Unlike most languages, Rust's <code>loop</code> can return a value via <code>break value;</code>, making it usable as an expression. This is useful for retry logic where you need to return the eventual successful result from the loop itself.</li>
+                    <li><strong>Iterators &amp; <code>iter()</code></strong> — Iterators provide a lazy, composable way to process sequences of values using methods like <code>map</code> and <code>filter</code>. Calling <code>.iter()</code> on a collection produces an iterator without consuming the original collection.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Rust's iterator combinators — <code>map</code>, <code>filter</code>, <code>fold</code>, <code>collect</code> — are zero-cost abstractions. They compile to the same machine code as hand-written loops but express intent far more clearly. Idiomatic Rust code uses iterator chains constantly — getting comfortable with them now pays dividends every remaining week.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>fn main() {
+    for i in 1..=5 {        // inclusive range
+        println!("Count: {}", i);
+    }
+}
+
+fn main() {
+    let mut counter = 0;
+    let result = loop {
+        counter += 1;
+        if counter == 5 { break counter * 2; } // loop returns 10
+    };
+    println!("{}", result);
+}
+
+fn main() {
+    let nums = vec![1, 2, 3, 4];
+    let doubled: Vec&lt;i32&gt; = nums.iter().map(|x| x * 2).collect();
+    println!("{:?}", doubled); // [2, 4, 6, 8]
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a program that prints the <strong>multiplication table (1–10)</strong> for a given number using a <code>for</code> loop over an inclusive range. Then rewrite the same output using an iterator chain with <code>map</code> and <code>for_each</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 7-->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Functions &amp; Modules</h2>
+                <p>Code organization through functions and modules.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Organizing code into reusable functions, anonymous closures, and structured modules with controlled visibility.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Function Definitions &amp; Return Types</strong> — Functions are declared with <code>fn</code>, and the return type is specified after <code>-&gt;</code>. The final expression in a function body is implicitly returned without needing the <code>return</code> keyword — a common source of confusion for newcomers.</li>
+                    <li><strong>Closures</strong> — Closures are anonymous functions that can capture variables from their enclosing scope, similar to lambdas. They are commonly passed as arguments to iterator methods like <code>map</code> and <code>filter</code>, and their types are inferred by the compiler.</li>
+                    <li><strong>Modules (<code>mod</code>) &amp; Visibility</strong> — The <code>mod</code> keyword groups related code into namespaces, helping organize larger codebases. The <code>pub</code> keyword controls visibility, exposing items to code outside the module — everything is private by default.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Rust's implicit return (the last expression without a semicolon) is a common trip-up point — adding a semicolon to the last line changes its type from the return value to a unit <code>()</code> and causes a compile error. Understanding this distinction makes reading and writing Rust functions natural rather than confusing.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>fn add(a: i32, b: i32) -> i32 {
+    a + b  // implicit return — NO semicolon
+}
+fn main() {
+    println!("{}", add(3, 4));
+}
+
+fn main() {
+    let factor = 3;
+    let multiply = |x: i32| x * factor; // closure captures 'factor'
+    println!("{}", multiply(5));          // 15
+}
+
+mod math_utils {
+    pub fn square(x: i32) -> i32 { x * x } // pub = visible outside
+}
+fn main() {
+    println!("{}", math_utils::square(6));
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a module <code>discounts</code> containing a function <code>calculate_discount(price: f64, percent: f64) -&gt; f64</code>, then call it from <code>main()</code> with two different percentage values. Use implicit return in the function body.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 8-->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Structs, Enums &amp; Pattern Matching</h2>
+                <p>Custom data structures and exhaustive pattern handling.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Modeling domain data with structs and enums, and handling all possible cases exhaustively with pattern matching.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Structs</strong> — A <code>struct</code> groups related named fields into a single custom type, similar to a class without inherited behavior. Methods can be attached to structs using <code>impl</code> blocks — keeping data and behavior together in an organized way.</li>
+                    <li><strong>Enums &amp; <code>Option&lt;T&gt;</code></strong> — Enums define a type as one of several distinct variants, optionally carrying data per variant. <code>Option&lt;T&gt;</code> is a built-in enum (<code>Some(T)</code> or <code>None</code>) that eliminates null-pointer bugs entirely from the language.</li>
+                    <li><strong>Destructuring &amp; Match Guards</strong> — Destructuring extracts fields from structs or enums directly into variables, making code more readable and concise. Match guards add extra <code>if</code> conditions onto match arms for finer-grained control over which arm executes.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>Option&lt;T&gt;</code> is Rust's answer to null — and it is one of the greatest improvements to software reliability in modern language design. You cannot accidentally dereference <code>None</code> without explicitly handling it. Combined with exhaustive <code>match</code>, this makes "null pointer exception" a compile-time error rather than a production crash.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>struct Point { x: f64, y: f64 }
+impl Point {
+    fn distance_from_origin(&self) -> f64 {
+        (self.x.powi(2) + self.y.powi(2)).sqrt()
+    }
+}
+
+fn find_even(nums: &[i32]) -> Option&lt;i32&gt; {
+    for &n in nums {
+        if n % 2 == 0 { return Some(n); } // wrap result
+    }
+    None  // no even number found
+}
+
+fn main() {
+    let pair = (5, -5);
+    match pair {
+        (x, y) if x + y == 0 => println!("Opposites!"), // match guard
+        _ => println!("Not opposites"),
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Define a <code>Shape</code> enum with variants <code>Circle(f64)</code> and <code>Rectangle(f64, f64)</code>, then write a function using <code>match</code> to compute and return the area for any variant. Add a <code>Point</code> struct with a method to compute its distance from the origin.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 9–12:</strong> Traits, generics, error handling, and crates.</p>
+        </div>
+
+        <!--WEEK 9-->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Structs &amp; Traits I</h2>
+                <p>Behavior sharing through traits — Rust's interfaces.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Sharing behavior across unrelated types using traits — Rust's powerful and flexible alternative to inheritance.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Defining &amp; Implementing Traits</strong> — A trait defines a set of method signatures that types can implement, similar to interfaces in other languages. This allows different types to share common behavior while remaining structurally distinct — no class hierarchy required.</li>
+                    <li><strong>Default Trait Methods</strong> — Traits can provide default method implementations that types automatically inherit unless explicitly overridden. This reduces duplication when most implementers share the same base behavior while allowing customization where needed.</li>
+                    <li><strong>Trait Objects (<code>dyn Trait</code>)</strong> — Trait objects allow you to store different types implementing the same trait behind a single pointer type like <code>Box&lt;dyn Trait&gt;</code>. This enables runtime polymorphism when concrete types aren't known until execution.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Traits are the backbone of Rust's entire standard library — <code>Iterator</code>, <code>Display</code>, <code>From</code>, <code>Into</code>, <code>Clone</code>, <code>Send</code>, <code>Sync</code> are all traits. Understanding how to define, implement, and use traits with both static dispatch (generics) and dynamic dispatch (<code>dyn Trait</code>) is essential for writing idiomatic, reusable Rust code.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>trait Speak {
+    fn speak(&self) -> String; // method signature only — must implement
+}
+struct Dog;
+impl Speak for Dog {
+    fn speak(&self) -> String { String::from("Woof!") }
+}
+
+trait Greet {
+    fn greet(&self) -> String { String::from("Hello!") } // default impl
+}
+struct Robot;
+impl Greet for Robot {} // uses the default — no override needed
+
+trait Shape { fn area(&self) -> f64; }
+fn print_area(shape: &dyn Shape) { // accepts ANY Shape implementer
+    println!("Area: {}", shape.area());
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Define a trait <code>Employee</code> with a method <code>calculate_salary(&amp;self) -&gt; f64</code>, then implement it for two structs (<code>Manager</code>, <code>Developer</code>) with different salary logic. Write a function that accepts <code>&amp;dyn Employee</code> and prints the salary for any employee type.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 10-->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Generics &amp; Advanced Traits</h2>
+                <p>Writing flexible, reusable, type-safe code.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing flexible, reusable, type-safe abstractions using generics, trait bounds, and operator overloading.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Generic Functions &amp; Structs</strong> — Generics allow functions and structs to operate over multiple types using a placeholder like <code>&lt;T&gt;</code>, while the compiler still enforces full type safety at compile time. This avoids duplicating logic for each concrete type — Rust's generics are monomorphized, so there is zero runtime cost.</li>
+                    <li><strong>Trait Bounds</strong> — Trait bounds restrict generic types to those implementing specific traits, ensuring required operations (like comparison or formatting) are available inside the generic body. Written using <code>&lt;T: TraitName&gt;</code> or the cleaner <code>where</code> clause syntax.</li>
+                    <li><strong>Operator Overloading</strong> — Rust allows custom types to support operators like <code>+</code> by implementing traits such as <code>std::ops::Add</code>. This lets domain types like vectors or money amounts behave naturally with familiar operator syntax.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Rust's generics are zero-cost — the compiler monomorphizes them into concrete type-specific code at compile time, with no runtime overhead. This is the key difference from Java's type-erased generics and Python's duck typing. Writing generic code in Rust gives you both flexibility and maximum performance simultaneously.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>struct Wrapper&lt;T&gt; { value: T }  // generic struct
+
+fn largest&lt;T: PartialOrd&gt;(a: T, b: T) -> T {
+    if a > b { a } else { b }
+}
+
+fn print_all&lt;T: std::fmt::Debug&gt;(items: &[T]) {
+    for item in items { println!("{:?}", item); }
+}
+
+use std::ops::Add;
+#[derive(Debug, Clone, Copy)]
+struct Point { x: i32, y: i32 }
+impl Add for Point {
+    type Output = Point;
+    fn add(self, other: Point) -> Point {
+        Point { x: self.x + other.x, y: self.y + other.y }
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a generic <code>Stack&lt;T&gt;</code> struct with <code>push</code>, <code>pop</code>, and <code>peek</code> methods, then test it using both <code>i32</code> and <code>String</code> instances. Add a trait bound so <code>peek</code> can only be called when <code>T: std::fmt::Debug</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 11-->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Error Handling &amp; File I/O</h2>
+                <p>Robust failure handling without exceptions.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Handling errors explicitly and robustly using <code>Result&lt;T, E&gt;</code>, custom error types, and the filesystem.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>Result&lt;T, E&gt;</code> &amp; the <code>?</code> Operator</strong> — <code>Result</code> represents either success (<code>Ok(T)</code>) or failure (<code>Err(E)</code>), forcing explicit handling of fallible operations. The <code>?</code> operator propagates errors upward automatically, reducing boilerplate while keeping error paths explicit.</li>
+                    <li><strong>Custom Error Types</strong> — Defining custom error enums lets you represent domain-specific failure modes clearly, often implementing the <code>std::error::Error</code> trait. This improves error messages and allows pattern matching on specific failure causes.</li>
+                    <li><strong>File Reading &amp; Writing (<code>std::fs</code>)</strong> — The <code>std::fs</code> module provides functions like <code>read_to_string</code> and <code>write</code> for interacting with the filesystem. Combined with <code>Result</code>, file operations force you to explicitly handle missing files or permission errors.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Rust has no exceptions — all errors are values. The <code>?</code> operator is the elegance that makes this approach practical: it propagates errors with no boilerplate while keeping the success path clean and readable. This approach means that in Rust, you literally cannot silently ignore an error — the compiler won't let you.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>fn divide(a: f64, b: f64) -> Result&lt;f64, String&gt; {
+    if b == 0.0 { return Err(String::from("Division by zero")); }
+    Ok(a / b)
+}
+
+#[derive(Debug)]
+enum AppError { InsufficientFunds }
+fn withdraw(balance: f64, amount: f64) -> Result&lt;f64, AppError&gt; {
+    if amount > balance { return Err(AppError::InsufficientFunds); }
+    Ok(balance - amount)
+}
+
+use std::fs;
+fn main() -> std::io::Result&lt;()&gt; {
+    fs::write("notes.txt", "Hello, file!")?; // ? propagates errors
+    let contents = fs::read_to_string("notes.txt")?;
+    println!("{}", contents);
+    Ok(())
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a function <code>withdraw_money</code> returning a custom <code>Result</code> error type for insufficient funds, then call it and handle both <code>Ok</code> and <code>Err</code> cases using a <code>match</code> expression. Add file persistence: save the transaction log to a file using <code>std::fs::write</code> with <code>?</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 12 -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Crates, Modules &amp; Smart Pointers</h2>
+                <p>Dependency management and advanced memory tools.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Leveraging the crates.io ecosystem, organizing multi-file projects, and using smart pointers for scenarios basic ownership cannot handle.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Cargo &amp; External Crates</strong> — Crates are Rust's term for packages, declared as dependencies inside <code>Cargo.toml</code> and downloaded from crates.io. Running <code>cargo build</code> automatically resolves, downloads, and compiles all dependencies — the smoothest dependency management in any systems language.</li>
+                    <li><strong>Organizing Multi-File Projects</strong> — Larger projects split code across multiple files using <code>mod</code> declarations that map to filenames, keeping each module's logic isolated. The <code>use</code> keyword brings items from other modules into scope concisely.</li>
+                    <li><strong>Smart Pointers (<code>Box</code>, <code>Rc</code>, <code>RefCell</code>)</strong> — <code>Box&lt;T&gt;</code> allocates a value on the heap with single ownership, <code>Rc&lt;T&gt;</code> enables multiple shared owners via reference counting, and <code>RefCell&lt;T&gt;</code> allows mutable borrows checked at runtime. These tools handle scenarios the basic ownership model cannot express directly.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The crates.io ecosystem is one of Rust's greatest strengths — <code>serde</code>, <code>tokio</code>, <code>reqwest</code>, <code>axum</code> are all external crates that transform what Rust can do. Smart pointers like <code>Rc&lt;T&gt;</code> and <code>RefCell&lt;T&gt;</code> handle real-world data structures like graph nodes and trees that the simple ownership model cannot express.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// Cargo.toml:
+// [dependencies]
+// serde = { version = "1.0", features = ["derive"] }
+
+// Multi-file: src/utils.rs
+pub fn greet() -> String { String::from("Hi from utils!") }
+
+// src/main.rs
+// mod utils;
+// fn main() { println!("{}", utils::greet()); }
+
+use std::rc::Rc;
+fn main() {
+    let shared = Rc::new(String::from("shared data"));
+    let clone_a = Rc::clone(&shared);  // increments reference count
+    println!("{} (count: {})", clone_a, Rc::strong_count(&shared));
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a small two-module project where one module defines a <code>Contact</code> struct and the other contains functions to manage a <code>Vec&lt;Contact&gt;</code>, then wire them together in <code>main.rs</code>. Add the <code>serde_json</code> crate as a dependency and serialize one contact to a JSON string.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 13–16:</strong> Lifetimes, macros, concurrency, async/await, and three complete capstone projects.</p>
+        </div>
+
+        <!--WEEK 13-->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Lifetimes &amp; Advanced Generics</h2>
+                <p>Memory safety guarantees beyond basic ownership.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Using lifetime annotations to guarantee reference validity and writing complex generic functions with <code>where</code> clauses.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Lifetime Annotations (<code>'a</code>)</strong> — Lifetimes describe how long references remain valid, allowing the compiler to prevent dangling references at compile time. Annotations like <code>'a</code> are needed when a function returns a reference derived from its inputs — telling the compiler which input the output borrows from.</li>
+                    <li><strong>Lifetimes in Structs</strong> — Structs holding references must declare lifetime parameters to ensure the struct cannot outlive the data it borrows. This guarantees compile-time safety for any struct that stores a reference alongside other fields.</li>
+                    <li><strong>Advanced Trait Bounds (<code>where</code> clauses)</strong> — <code>where</code> clauses provide a cleaner syntax for specifying complex trait bounds on generic functions, especially with multiple constraints. They improve readability compared to cramming all bounds into angle brackets on one line.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Lifetimes are the feature that allows Rust to guarantee memory safety without a garbage collector. They feel intimidating at first but represent a profound insight: the compiler can verify at compile time that no reference outlives the data it points to. Once you understand this, the concept of a dangling pointer becomes a compile error, not a runtime crash.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>fn longest&lt;'a&gt;(x: &'a str, y: &'a str) -> &'a str {
+    if x.len() > y.len() { x } else { y } // lifetime tied to inputs
+}
+
+struct Excerpt&lt;'a&gt; { part: &'a str } // struct borrowing a string slice
+fn main() {
+    let novel = String::from("Call me Ishmael.");
+    let excerpt = Excerpt { part: &novel[0..8] };
+    println!("{}", excerpt.part);
+}
+
+fn summarize&lt;T&gt;(items: &[T]) -> usize
+where
+    T: std::fmt::Debug,  // where clause — cleaner for multiple bounds
+{
+    items.len()
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a function that takes two string slices and returns the longer one using <strong>explicit lifetime annotations</strong>, then test it with strings of different lifetimes and scopes. Add a struct that holds a borrowed string slice and demonstrate that the compiler prevents it from outliving the source string.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 14-->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Macros &amp; Iterators Deep Dive</h2>
+                <p>Metaprogramming and lazy, composable sequences.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing code-generating macros and building custom iterators that integrate seamlessly with Rust's iterator ecosystem.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Declarative Macros (<code>macro_rules!</code>)</strong> — Declarative macros let you write code that generates other code at compile time, reducing repetition for patterns the type system cannot express. They are invoked with a <code>!</code>, like <code>println!</code> or custom macros you define yourself.</li>
+                    <li><strong>Derive Macros (<code>#[derive(...)]</code>)</strong> — Derive macros automatically implement common traits like <code>Debug</code>, <code>Clone</code>, or <code>PartialEq</code> for structs and enums with a single annotation. This eliminates boilerplate while keeping generated implementations consistent and correct.</li>
+                    <li><strong>Custom Iterators (<code>impl Iterator</code>)</strong> — Implementing the <code>Iterator</code> trait for your own type lets it work seamlessly with <code>for</code> loops and all iterator methods like <code>map</code> and <code>collect</code>. Only the <code>next()</code> method needs to be defined — all other methods come from the trait's default implementations.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Custom iterators are Rust's answer to generators in other languages. Implementing <code>Iterator</code> on your own type gives it access to the entire iterator adaptor ecosystem — <code>map</code>, <code>filter</code>, <code>take</code>, <code>zip</code>, <code>chain</code> — for free. This is zero-cost lazy evaluation that rivals Python's generators in expressiveness while matching C in performance.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>macro_rules! square {
+    ($x:expr) => { $x * $x }; // pattern-based code generation
+}
+fn main() { println!("{}", square!(5)); } // 25
+
+#[derive(Debug, Clone, PartialEq)] // auto-implements three traits
+struct User { name: String }
+fn main() { println!("{:?}", User { name: "Sam".into() }); }
+
+struct Counter { count: u32 }
+impl Iterator for Counter {
+    type Item = u32;
+    fn next(&mut self) -> Option&lt;u32&gt; {
+        self.count += 1;
+        if self.count &lt;= 5 { Some(self.count) } else { None }
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Implement a custom <code>Fibonacci</code> iterator struct that lazily yields Fibonacci numbers one at a time, then use <code>.take(10).collect::&lt;Vec&lt;_&gt;&gt;()</code> to print the first 10 as a vector. Write a <code>macro_rules!</code> macro that generates a simple greeting string from a name.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 15-->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Concurrency: Threads, Channels &amp; Async</h2>
+                <p>Safe parallelism and asynchronous programming.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Achieving safe parallelism with threads and channels, and writing non-blocking async code with Tokio.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Threads (<code>std::thread</code>)</strong> — Rust's standard library allows spawning OS threads with <code>thread::spawn</code>, and the ownership system statically prevents common data races at compile time — without a mutex. <code>.join()</code> waits for a spawned thread to finish before continuing.</li>
+                    <li><strong>Channels (<code>mpsc</code>) for Message Passing</strong> — Channels allow safe communication between threads by sending owned data instead of sharing mutable memory. The <code>mpsc</code> module provides multi-producer, single-consumer channels — the Rust idiomatic alternative to shared mutable state.</li>
+                    <li><strong>Async/Await with Tokio</strong> — <code>async</code>/<code>await</code> lets you write non-blocking code that reads sequentially, ideal for I/O-bound tasks like network requests. The <code>tokio</code> crate provides the runtime needed to actually execute async functions concurrently.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Rust's ownership system makes it the only language where data races are a compile error — not a runtime bug. The compiler statically verifies that data sent between threads is <code>Send</code> and that shared data is <code>Sync</code>. Combined with Tokio's async runtime, Rust can handle hundreds of thousands of concurrent connections with safety guarantees no other language provides.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>use std::thread;
+fn main() {
+    let handle = thread::spawn(|| println!("Hello from a thread!"));
+    handle.join().unwrap(); // wait for thread to finish
+}
+
+use std::sync::mpsc;
+use std::thread;
+fn main() {
+    let (tx, rx) = mpsc::channel();
+    thread::spawn(move || tx.send("data from thread").unwrap());
+    println!("{}", rx.recv().unwrap()); // blocks until received
+}
+
+// Cargo.toml: tokio = { version = "1", features = ["full"] }
+#[tokio::main]
+async fn main() {
+    let result = async { "data loaded" }.await;
+    println!("{}", result);
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a program that spawns <strong>three threads</strong>, each computing the square of a different number, and uses an <code>mpsc</code> channel to collect and print all three results in <code>main()</code>. Then convert one computation to an <code>async</code> task using <code>tokio::spawn</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 16-->
+
+        <div class="rm-card" id="week16">
+            <div class="rm-card-header">
+                <h2>Week 16 — Capstone Week: Three Mini Projects (Beginner → Master)</h2>
+                <p>Apply everything learned across the entire curriculum in three complete, real-world projects.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Consolidating all concepts from all 16 weeks into three progressively complex, portfolio-ready Rust projects.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — Console To-Do List (Beginner)</h3>
+                <p>A terminal task manager using vectors, loops, and functions to manage an in-memory task list. Reinforces ownership basics, core syntax, and idiomatic Rust without any external dependencies.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Rust Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Add and list tasks</td>
+                            <td><code>Vec&lt;String&gt;</code> with <code>push</code> and <code>iter()</code></td>
+                        </tr>
+                        <tr>
+                            <td>Remove completed tasks</td>
+                            <td><code>retain()</code> closure — filter in place</td>
+                        </tr>
+                        <tr>
+                            <td>Interactive menu loop</td>
+                            <td><code>loop</code> + <code>match</code> on user input</td>
+                        </tr>
+                        <tr>
+                            <td>Input reading</td>
+                            <td><code>std::io::stdin().read_line()</code></td>
+                        </tr>
+                        <tr>
+                            <td>Borrow safety</td>
+                            <td>Iterate with <code>&amp;todos</code> — no ownership transfer</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>fn main() {
+    let mut todos: Vec&lt;String&gt; = Vec::new();
+    todos.push(String::from("Learn Rust"));
+    for task in &todos { println!("{}", task); } // borrow — don't move
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A fully functional CLI To-Do app with add, list, complete, and delete operations. Build with <code>cargo build --release</code>. Push to GitHub with a <code>README.md</code>. Build on <strong>Days 1–2</strong>.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — File-Based Contact Manager (Intermediate)</h3>
+                <p>A contact manager using structs, traits, file I/O, and error handling to persist data to disk using the <code>serde_json</code> crate — introducing serialization and structured error recovery.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Rust Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Contact data model</td>
+                            <td><code>struct Contact</code> with <code>#[derive(Serialize, Deserialize)]</code></td>
+                        </tr>
+                        <tr>
+                            <td>JSON persistence</td>
+                            <td><code>serde_json</code> crate + <code>std::fs::write</code></td>
+                        </tr>
+                        <tr>
+                            <td>Error handling</td>
+                            <td>Custom <code>ContactError</code> enum + <code>Result&lt;T, E&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>Search contacts</td>
+                            <td><code>iter().find()</code> with closure predicate</td>
+                        </tr>
+                        <tr>
+                            <td>Display formatting</td>
+                            <td><code>impl std::fmt::Display for Contact</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>use serde::{Serialize, Deserialize};
+
+#[derive(Serialize, Deserialize, Debug)]
+struct Contact { name: String, phone: String }
+
+fn save(contacts: &Vec&lt;Contact&gt;) -> std::io::Result&lt;()&gt; {
+    std::fs::write("contacts.json", serde_json::to_string(contacts).unwrap())
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A working Contact Manager with add, search, update, and delete operations persisted to a JSON file using <code>serde_json</code>. Full <code>Result</code>-based error handling throughout. Build on <strong>Days 3–4</strong>.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Concurrent Weather Dashboard (Master)</h3>
+                <p>A capstone project combining generics, async/await, channels, and the <code>reqwest</code> crate to fetch and continuously refresh weather data from multiple sources concurrently — demonstrating real-world architecture with services, error propagation, and concurrent task coordination.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Rust Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Concurrent API fetching</td>
+                            <td><code>tokio::spawn</code> + <code>reqwest</code> crate</td>
+                        </tr>
+                        <tr>
+                            <td>JSON response decoding</td>
+                            <td>Generic <code>serde::Deserialize</code> on response structs</td>
+                        </tr>
+                        <tr>
+                            <td>Multi-source coordination</td>
+                            <td><code>mpsc</code> channel for result collection</td>
+                        </tr>
+                        <tr>
+                            <td>Error propagation</td>
+                            <td>Custom <code>WeatherError</code> + <code>?</code> operator throughout</td>
+                        </tr>
+                        <tr>
+                            <td>Lifetime-safe data sharing</td>
+                            <td><code>Arc&lt;T&gt;</code> for shared config across async tasks</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>#[tokio::main]
+async fn main() {
+    let task = tokio::spawn(async {
+        // Replace with real reqwest::get(...).await call
+        "Fetched latest weather data..."
+    });
+    println!("{}", task.await.unwrap());
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A concurrent weather dashboard that fetches data from multiple API endpoints simultaneously using <code>tokio::spawn</code>, deserializes JSON responses with <code>serde</code>, coordinates results via <code>mpsc</code> channels, and propagates errors cleanly with custom error types. Build on <strong>Days 5–7</strong>. This is the capstone demonstrating mastery of the entire Rust curriculum.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–4</td>
+                        <td>Absolute Basics</td>
+                        <td>Write Rust programs using types, ownership, borrowing, and Vec — understanding why Rust's safety guarantees exist</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>5–8</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Structure programs with exhaustive match, iterators, closures, functions, modules, structs, and enums</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>9–12</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Share behavior with traits, write zero-cost generic code, handle errors with Result, and leverage the crates.io ecosystem</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>13–16</td>
+                        <td>Master Level Concepts</td>
+                        <td>Guarantee reference safety with lifetimes, write macros and custom iterators, build concurrent and async programs, and complete three production projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool / Resource</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>rustup (rustup.rs)</td>
+                        <td>Toolchain installer — manages Rust versions and targets</td>
+                    </tr>
+                    <tr>
+                        <td>The Rust Book (doc.rust-lang.org/book)</td>
+                        <td>Official free comprehensive Rust textbook</td>
+                    </tr>
+                    <tr>
+                        <td>Rustlings (github.com/rust-lang/rustlings)</td>
+                        <td>Interactive exercises for hands-on syntax practice</td>
+                    </tr>
+                    <tr>
+                        <td>crates.io</td>
+                        <td>Official Rust package registry</td>
+                    </tr>
+                    <tr>
+                        <td>Tokio Documentation (tokio.rs)</td>
+                        <td>Async runtime for network and I/O applications</td>
+                    </tr>
+                    <tr>
+                        <td>Rust by Example (doc.rust-lang.org/rust-by-example)</td>
+                        <td>Learn Rust through annotated, runnable code examples</td>
+                    </tr>
+                    <tr>
+                        <td>Clippy (<code>cargo clippy</code>)</td>
+                        <td>Linter for idiomatic Rust — catches non-idiomatic patterns</td>
+                    </tr>
+                    <tr>
+                        <td>Rust Playground (play.rust-lang.org)</td>
+                        <td>Browser-based Rust compiler — zero setup required</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Always run <strong><code>cargo clippy</code></strong> on your code — Clippy catches non-idiomatic patterns and teaches you better Rust as you write it.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — your commit history shows consistent progress and your projects demonstrate real Rust competence.</li>
+                    <li>When the borrow checker rejects your code, <strong>read the error message carefully</strong> — Rust's compiler errors are the best in any language and almost always explain exactly what went wrong and why.</li>
+                    <li>After Week 16, explore async web frameworks like <strong>Axum</strong> or <strong>Actix</strong>, systems programming with <code>unsafe</code> Rust, or embedded development to apply these skills in real-world production domains.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

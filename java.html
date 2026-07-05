@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java: Beginner to Master — 24 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <header class="rm-header">
+        <h1>Java: Beginner to Master</h1>
+        <p>Complete 24-Week Curriculum — From Core Syntax to Concurrent, Production-Grade Java Systems</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#week16">W16</a>
+        <a href="#week17">W17</a>
+        <a href="#week18">W18</a>
+        <a href="#week19">W19</a>
+        <a href="#week20">W20</a>
+        <a href="#week21">W21</a>
+        <a href="#week22">W22</a>
+        <a href="#week23">W23</a>
+        <a href="#week24">W24</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>24-week, phase-based Java curriculum</strong> designed to take a complete beginner to a professional-level Java developer. The roadmap moves from <strong>core syntax, memory, and types</strong> through <strong>control flow, OOP, file handling, error handling, and functional-style programming</strong>, all the way to <strong>concurrency, JVM internals, design patterns, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics and the Java type system, <strong>Phase 2</strong> covers control flow, methods, and core data structures, <strong>Phase 3</strong> covers object-oriented design, file I/O, generics, and lambdas, and <strong>Phase 4</strong> takes you into concurrency, JVM internals, design patterns, and production-level projects.</p>
+            <p>By Week 24, you will have written complete, working Java applications, understood how the JVM runs your code, and built three portfolio-ready projects from beginner to master level.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 24 weeks &nbsp;|&nbsp; <strong>Study Time:</strong> ~5–8 hours/week &nbsp;|&nbsp; <strong>Main Focus:</strong> Java Programming</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–5:</strong> Build a rock-solid foundation in Java syntax, memory, and types.</p>
+        </div>
+
+        <!--  WEEK 1   -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Java Setup &amp; Your First Program</h2>
+                <p>Environment setup, the JVM, and writing and running your first Java program.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Environment setup, understanding the JVM, and writing and running your first Java program.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>JDK, JRE, and JVM</strong> — The JDK is the developer toolkit, the JRE runs Java apps, and the JVM executes compiled bytecode. Understanding this trio explains why Java is "write once, run anywhere."</li>
+                    <li><strong>Compiling &amp; Running Java</strong> — Java source files (<code>.java</code>) are compiled to bytecode (<code>.class</code>) by <code>javac</code>, then executed by <code>java</code>. This two-step process is core to how Java differs from purely interpreted languages.</li>
+                    <li><strong>The <code>main</code> Method</strong> — Every standalone Java app starts from <code>public static void main(String[] args)</code>. Its exact signature is mandatory and tells the JVM where to begin execution.</li>
+                    <li><strong>Comments &amp; Code Structure</strong> — Comments (<code>//</code>, <code>/* */</code>, <code>/** */</code>) document code without affecting execution. Java code is organized into classes, which live in files matching the public class name.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Before writing any logic, you need to understand how Java programs are created, compiled, and executed. The JVM model is what makes Java unique, and the <code>main</code> method is the starting point for every program you will ever write.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>// HelloWorld.java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, Java World!");
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Install the JDK, write a <code>HelloWorld.java</code> program that prints your name and today's date as plain text, then compile and run it from the terminal using <code>javac</code> and <code>java</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 2 -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Variables &amp; Primitive Data Types</h2>
+                <p>Store data in memory using Java's strict, compile-time type system.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Storing data in memory using Java's strict type system.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Primitive Types</strong> — Java has 8 primitives: <code>int</code>, <code>double</code>, <code>boolean</code>, <code>char</code>, <code>byte</code>, <code>short</code>, <code>long</code>, <code>float</code>. Each has a fixed memory size and value range.</li>
+                    <li><strong>Variable Declaration &amp; Initialization</strong> — Variables must be declared with an explicit type before use. Java enforces this at compile time to catch type errors early.</li>
+                    <li><strong>Type Casting</strong> — Widening casts happen automatically, while narrowing casts require explicit syntax to prevent silent data loss.</li>
+                    <li><strong>Constants with <code>final</code></strong> — The <code>final</code> keyword locks a variable's value after assignment, defining unchangeable constants.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Java's strict type system catches many bugs at compile time. Understanding primitives and how Java stores different kinds of data is the foundation for all logic you will write going forward.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>public class Variables {
+    public static void main(String[] args) {
+        int age = 25;
+        double price = 19.99;
+        char grade = 'A';
+        boolean isActive = true;
+        final double PI = 3.14159;
+        System.out.println(age + " " + price + " " + grade);
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Create a program that declares variables for a product (name, price, quantity, inStock) and prints a formatted summary line using all four values.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 3 -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Operators &amp; Type Conversion</h2>
+                <p>Manipulate data using Java's full set of operator families.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Manipulating data using Java's operator families.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Arithmetic Operators</strong> — <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>. Integer division truncates decimals — understanding this prevents common beginner bugs.</li>
+                    <li><strong>Relational &amp; Logical Operators</strong> — Relational operators compare values and return booleans, while logical operators (<code>&amp;&amp;</code>, <code>||</code>, <code>!</code>) combine boolean expressions.</li>
+                    <li><strong>Assignment &amp; Compound Operators</strong> — Shortcuts like <code>+=</code>, <code>-=</code>, <code>++</code>, <code>--</code> update variables concisely, reducing repetitive code.</li>
+                    <li><strong>String Concatenation vs Numeric Addition</strong> — The <code>+</code> operator concatenates strings but adds numbers. Mixing types follows left-to-right evaluation and is a classic source of confusion.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Operators are the building blocks of all computation and decision-making. Without a solid understanding of how Java evaluates and converts types, many programs will produce unexpected results.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>public class Operators {
+    public static void main(String[] args) {
+        int a = 10, b = 3;
+        System.out.println(a / b);            // 3 (integer division)
+        System.out.println(a % b);            // 1 (remainder)
+        boolean result = (a > b) && (b > 0); // true
+        a += 5;
+        System.out.println("Sum: " + a);
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a simple unit converter that takes a temperature in Celsius and prints the equivalent value in Fahrenheit using arithmetic operators and type casting.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 4 -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Strings &amp; the <code>String</code> Class</h2>
+                <p>Work with text as immutable objects and learn the most important String methods.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Working with text as immutable objects in Java.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>String Immutability</strong> — Once created, a String object's content cannot change. Methods like <code>concat()</code> return new strings rather than modifying the original.</li>
+                    <li><strong>Common String Methods</strong> — Methods like <code>length()</code>, <code>substring()</code>, <code>toUpperCase()</code>, and <code>equals()</code> are essential for nearly all real-world programs.</li>
+                    <li><strong>String Comparison: <code>==</code> vs <code>.equals()</code></strong> — <code>==</code> compares references while <code>.equals()</code> compares actual content. This distinction is one of Java's most important early lessons.</li>
+                    <li><strong><code>StringBuilder</code> Basics</strong> — <code>StringBuilder</code> is a mutable alternative for building strings efficiently in loops without creating new String objects each time.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> String manipulation is one of the most common tasks in any Java program. Knowing when to use String vs StringBuilder and how to compare strings correctly prevents serious bugs.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>public class Strings {
+    public static void main(String[] args) {
+        String name = "java";
+        String upper = name.toUpperCase();
+        System.out.println(name.equals("java")); // true
+        StringBuilder sb = new StringBuilder();
+        sb.append("Hello").append(", ").append("World!");
+        System.out.println(sb.toString());
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a program that takes a sentence as input and prints: the word count, the reversed sentence, and the sentence in all uppercase — using String methods only.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 5 -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Arrays &amp; Basic Input</h2>
+                <p>Store ordered collections of data and read user input from the console.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Storing collections of data and reading user input.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Array Declaration &amp; Initialization</strong> — Arrays hold a fixed-size ordered collection of same-typed elements, indexed from zero. They are objects in Java, even when holding primitives.</li>
+                    <li><strong>Iterating Arrays</strong> — Standard <code>for</code> loops and the enhanced <code>for-each</code> loop traverse arrays, with <code>for-each</code> being simpler when indices are not needed.</li>
+                    <li><strong>Multi-Dimensional Arrays</strong> — Java supports arrays of arrays like <code>int[][]</code> for grids or matrices, where each row can have a different length.</li>
+                    <li><strong>Reading Input with <code>Scanner</code></strong> — The <code>Scanner</code> class reads user input from the console for various types and is the standard beginner tool for interactive programs.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Arrays are the foundation of data storage in Java. Understanding them prepares you for Java's full Collections Framework in the next phase.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import java.util.Scanner;
+public class ArraysAndInput {
+    public static void main(String[] args) {
+        int[] scores = {90, 85, 77};
+        for (int score : scores) {
+            System.out.println(score);
+        }
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your name: ");
+        String name = sc.nextLine();
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Build a console program that reads 5 numbers from the user into an array and prints their sum and average.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 6–10:</strong> Learn to direct program execution, write reusable methods, and work with Java's powerful built-in data structures.</p>
+        </div>
+
+        <!--  WEEK 6 -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Conditional Statements</h2>
+                <p>Make decisions in code using Java's conditional constructs.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Making decisions in code using conditional statements.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>if</code>, <code>else if</code>, <code>else</code></strong> — These statements branch execution based on boolean conditions evaluated top to bottom. Only the first true branch executes.</li>
+                    <li><strong><code>switch</code> Statements &amp; Expressions</strong> — <code>switch</code> compares a single value against multiple cases. Modern Java supports arrow-style switch expressions that return values directly.</li>
+                    <li><strong>Ternary Operator</strong> — The <code>condition ? valueIfTrue : valueIfFalse</code> syntax compresses simple if-else logic into one readable line.</li>
+                    <li><strong>Nested Conditionals</strong> — Conditionals can be nested for multi-layered logic, though overuse hurts readability and should be avoided.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Decision-making is the foundation of all program logic. Without conditionals, every program runs the same way regardless of input or state.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>public class Conditionals {
+    public static void main(String[] args) {
+        int age = 20;
+        if (age >= 18) {
+            System.out.println("Adult");
+        } else {
+            System.out.println("Minor");
+        }
+        String status = (age >= 18) ? "Eligible" : "Not Eligible";
+        System.out.println(status);
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a grading program that converts a numeric score (0–100) into a letter grade (A–F) using <code>if-else</code>, then rewrite it using <code>switch</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 7 -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Loops &amp; Iteration</h2>
+                <p>Repeat actions efficiently using Java's loop constructs.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Repeating actions efficiently using Java's loop constructs.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>for</code> Loop</strong> — The classic <code>for</code> loop combines initialization, condition, and increment in one line. It is ideal for a known number of iterations.</li>
+                    <li><strong><code>while</code> and <code>do-while</code> Loops</strong> — <code>while</code> checks the condition before each iteration, while <code>do-while</code> guarantees at least one execution. Choose based on whether the first run should be unconditional.</li>
+                    <li><strong><code>break</code> and <code>continue</code></strong> — <code>break</code> exits a loop entirely, while <code>continue</code> skips to the next iteration, giving finer control over loop flow.</li>
+                    <li><strong>Nested Loops</strong> — Loops inside loops process grids, matrices, and combinations, but must be used carefully to avoid performance issues.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Loops are how programs do real work at scale. Almost every meaningful application involves repeating operations, and understanding all three loop types makes you flexible and precise.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>public class Loops {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            if (i == 3) continue;
+            System.out.println(i);
+        }
+        int n = 0;
+        while (n < 3) {
+            System.out.println("n=" + n);
+            n++;
+        }
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a program that prints a multiplication table (1–10) for a number entered by the user, and then generate a full 10x10 grid using nested loops.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 8 -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — Methods (Functions)</h2>
+                <p>Write reusable, organized blocks of logic using Java methods.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing reusable, organized blocks of logic.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Method Declaration &amp; Return Types</strong> — Methods bundle code under a name, accept parameters, and return a typed value or <code>void</code>. This is the primary unit of code reuse in Java.</li>
+                    <li><strong>Parameters &amp; Arguments</strong> — Parameters define what a method expects, while arguments are the actual values passed at call time. Java requires matching types.</li>
+                    <li><strong>Method Overloading</strong> — Multiple methods can share a name if their parameter lists differ in type or count, letting one logical operation handle multiple input variations.</li>
+                    <li><strong>Pass-by-Value Semantics</strong> — Java always passes copies of primitive values and copies of object references. Understanding this prevents confusion about whether a method can change a caller's variable.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Methods are the most important unit of organization in Java. Once you write methods well, your code becomes reusable, testable, and much easier to understand.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>public class Methods {
+    static int add(int a, int b) {
+        return a + b;
+    }
+    static double add(double a, double b) {
+        return a + b;
+    }
+    public static void main(String[] args) {
+        System.out.println(add(2, 3));     // 5
+        System.out.println(add(2.5, 3.5)); // 6.0
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a <code>Calculator</code> class with overloaded <code>calculate</code> methods supporting add, subtract, multiply, and divide, all called from <code>main</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 9 -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Core Data Structures: <code>ArrayList</code> &amp; <code>HashMap</code></h2>
+                <p>Move beyond fixed arrays to Java's flexible, dynamic collections.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Moving beyond fixed-size arrays to flexible collections from the Java Collections Framework.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>ArrayList</code> Basics</strong> — <code>ArrayList</code> is a resizable array that grows automatically as elements are added. It is the default choice for ordered, dynamic lists.</li>
+                    <li><strong>Common <code>ArrayList</code> Operations</strong> — Methods like <code>add()</code>, <code>get()</code>, <code>remove()</code>, and <code>size()</code> manage list contents, with for-each and streams for iteration.</li>
+                    <li><strong><code>HashMap</code> Basics</strong> — <code>HashMap</code> stores key-value pairs for fast lookups by key, ideal when data must be retrieved by a meaningful identifier.</li>
+                    <li><strong>Generics Introduction (<code>&lt;T&gt;</code>)</strong> — Generics let collections specify the exact type they hold, like <code>ArrayList&lt;String&gt;</code>, providing compile-time type safety.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Most real Java programs use ArrayList and HashMap far more than raw arrays. These two data structures cover the majority of everyday data storage and retrieval needs.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import java.util.*;
+public class DataStructures {
+    public static void main(String[] args) {
+        List&lt;String&gt; names = new ArrayList&lt;&gt;();
+        names.add("Alice");
+        names.add("Bob");
+        Map&lt;String, Integer&gt; ages = new HashMap&lt;&gt;();
+        ages.put("Alice", 30);
+        System.out.println(names.get(0) + " is " + ages.get("Alice"));
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Build a simple contact book using a <code>HashMap&lt;String, String&gt;</code> mapping names to phone numbers, with operations to add, look up, and remove contacts.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 10  -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Sets, Queues &amp; Sorting</h2>
+                <p>Use specialized collections and learn to order data correctly.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Specialized collections and ordering data using Java's Collections utilities.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>HashSet</code> &amp; Uniqueness</strong> — <code>HashSet</code> stores unordered, duplicate-free elements and is ideal for membership checks and deduplication tasks.</li>
+                    <li><strong><code>Queue</code> &amp; <code>Deque</code></strong> — <code>Queue</code> models FIFO processing, while <code>Deque</code> supports insertion and removal from both ends — foundational for scheduling and buffering.</li>
+                    <li><strong><code>Collections.sort()</code> &amp; <code>Comparator</code></strong> — <code>Collections.sort()</code> orders lists naturally, while a custom <code>Comparator</code> defines alternate ordering logic, separating what to sort from how to compare.</li>
+                    <li><strong>Iterating with <code>Iterator</code></strong> — The <code>Iterator</code> interface provides a safe, explicit way to traverse and remove elements from a collection during iteration.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Different problems require different data structures. Sets, queues, and sorting round out your Collections knowledge and give you the right tool for every situation.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import java.util.*;
+public class MoreCollections {
+    public static void main(String[] args) {
+        Set&lt;Integer&gt; uniqueNums = new HashSet&lt;&gt;(List.of(1, 2, 2, 3));
+        List&lt;String&gt; names = new ArrayList&lt;&gt;(List.of("Zoe", "Amy", "Bo"));
+        Collections.sort(names);
+        Queue&lt;String&gt; tasks = new LinkedList&lt;&gt;();
+        tasks.add("Task1");
+        System.out.println(names + " " + uniqueNums);
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Given a list of student names with duplicate entries, use a <code>HashSet</code> to remove duplicates, then sort and print the final unique list alphabetically.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ========== PHASE 3 ========== -->
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 11–17:</strong> Master object-oriented design, robust error handling, file I/O, and Java's functional programming tools.</p>
+        </div>
+
+        <!--  WEEK 11-->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Classes &amp; Objects</h2>
+                <p>Model real-world entities with Java's object-oriented programming model.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Modeling real-world entities with object-oriented programming.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Defining Classes &amp; Fields</strong> — A class is a blueprint defining fields (state) and methods (behavior) for objects. Each object maintains its own copy of instance fields.</li>
+                    <li><strong>Constructors</strong> — Constructors initialize new objects, sharing the class name and having no return type. Java provides a default no-arg constructor if none is defined.</li>
+                    <li><strong><code>this</code> Keyword</strong> — <code>this</code> refers to the current object instance, used to disambiguate fields from parameters of the same name.</li>
+                    <li><strong>Instantiating Objects with <code>new</code></strong> — The <code>new</code> keyword allocates memory and invokes a constructor to produce a usable object reference.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Classes and objects are the fundamental unit of Java design. Once you understand how to define and instantiate objects, you can model any real-world system in code.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>public class Car {
+    String model;
+    int year;
+    Car(String model, int year) {
+        this.model = model;
+        this.year = year;
+    }
+    public static void main(String[] args) {
+        Car myCar = new Car("Tesla", 2024);
+        System.out.println(myCar.model + " " + myCar.year);
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Create a <code>Book</code> class with fields for title, author, and price, a constructor, and a <code>displayInfo()</code> method, then instantiate two book objects and print their details.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 12 -->
+        
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Encapsulation &amp; Access Modifiers</h2>
+                <p>Protect and control access to object data using Java's encapsulation features.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Protecting and controlling access to object data.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Access Modifiers (<code>private</code>, <code>public</code>, <code>protected</code>)</strong> — These control visibility of fields and methods across classes and packages. Restricting access is central to safe, maintainable design.</li>
+                    <li><strong>Getters &amp; Setters</strong> — Instead of exposing fields directly, classes provide controlled access via getter and setter methods, allowing validation when data is read or modified.</li>
+                    <li><strong>Encapsulation Principle</strong> — Bundling data with the methods that operate on it while hiding internal details reduces unintended interference between unrelated parts of a program.</li>
+                    <li><strong>Static Fields &amp; Methods</strong> — <code>static</code> members belong to the class itself rather than any instance and are shared across all objects. They are useful for counters, constants, and utility methods.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Encapsulation is one of the four pillars of OOP. Without it, any code can freely change any data, leading to unpredictable bugs. Good encapsulation makes systems predictable and safe.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>public class BankAccount {
+    private double balance;
+    public double getBalance() { return balance; }
+    public void deposit(double amt) {
+        if (amt > 0) balance += amt;
+    }
+    public static void main(String[] args) {
+        BankAccount acc = new BankAccount();
+        acc.deposit(100);
+        System.out.println(acc.getBalance());
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Refactor your <code>Book</code> class from Week 11 to make all fields <code>private</code>, add getters, and add a setter for price that rejects negative values with an appropriate message.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 13 -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Inheritance &amp; Polymorphism</h2>
+                <p>Build class hierarchies and write flexible, reusable behavior across related types.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Building class hierarchies and flexible, reusable behavior.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>extends</code> &amp; Superclasses</strong> — A subclass inherits fields and methods from its superclass using <code>extends</code>, promoting code reuse. Java supports single inheritance only.</li>
+                    <li><strong>Method Overriding &amp; <code>@Override</code></strong> — A subclass can redefine a parent method with the same signature, marked with <code>@Override</code> for clarity and compile-time verification.</li>
+                    <li><strong>Polymorphism</strong> — A parent-type reference can point to any child-type object, and the correct overridden method runs at runtime. This allows code to work across a whole family of related types.</li>
+                    <li><strong><code>super</code> Keyword</strong> — <code>super</code> accesses the parent class constructor or overridden methods, essential when a subclass needs to extend rather than fully replace parent behavior.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Inheritance and polymorphism are the reason OOP is so powerful. They let you write flexible code that works across many types without having to know the exact type in advance.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>class Animal {
+    void speak() { System.out.println("Some sound"); }
+}
+class Dog extends Animal {
+    @Override
+    void speak() { System.out.println("Woof!"); }
+}
+public class InheritanceDemo {
+    public static void main(String[] args) {
+        Animal a = new Dog();
+        a.speak(); // prints "Woof!"
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Create a <code>Shape</code> superclass with an <code>area()</code> method, then build <code>Circle</code> and <code>Rectangle</code> subclasses that override it. Loop through an array of shapes printing each area.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 14 -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Abstraction: Abstract Classes &amp; Interfaces</h2>
+                <p>Design contracts and partial implementations using Java's abstraction tools.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Designing contracts and partial implementations.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Abstract Classes</strong> — An <code>abstract</code> class cannot be instantiated directly and may contain both abstract and concrete methods. It is used when subclasses share some logic but must implement certain parts differently.</li>
+                    <li><strong>Interfaces</strong> — An interface defines a pure contract of method signatures that implementing classes must fulfill, enabling unrelated classes to share behavior without inheritance.</li>
+                    <li><strong><code>implements</code> vs <code>extends</code></strong> — Classes use <code>implements</code> for interfaces and <code>extends</code> for classes, and a class can implement multiple interfaces simultaneously.</li>
+                    <li><strong>Default &amp; Static Interface Methods</strong> — Modern Java interfaces can include <code>default</code> methods with a body, allowing evolution of APIs without breaking existing implementations.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Interfaces are the foundation of loosely coupled Java design. Every major Java framework and library is built on interfaces, and understanding them is non-negotiable for professional Java development.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>interface Drivable {
+    void drive();
+    default void honk() {
+        System.out.println("Beep!");
+    }
+}
+class Car implements Drivable {
+    public void drive() { System.out.println("Driving..."); }
+}
+public class AbstractionDemo {
+    public static void main(String[] args) {
+        new Car().drive();
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Define a <code>Payable</code> interface with a <code>calculatePayment()</code> method, then implement it in <code>Employee</code> and <code>Contractor</code> classes with different payment logic.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--   WEEK 15  -->
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Exception Handling</h2>
+                <p>Write resilient code that handles errors gracefully instead of crashing.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing resilient code that handles errors gracefully.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>try-catch-finally</code></strong> — Code that might fail goes in <code>try</code>, errors are caught in <code>catch</code>, and <code>finally</code> always runs. This isolates risky operations from crashing the whole program.</li>
+                    <li><strong>Checked vs Unchecked Exceptions</strong> — Checked exceptions must be declared or caught at compile time, while unchecked ones are not enforced. This distinction shapes how Java APIs signal recoverable vs programming errors.</li>
+                    <li><strong>Custom Exceptions</strong> — You can create domain-specific exception classes by extending <code>Exception</code> or <code>RuntimeException</code>, making error handling more meaningful.</li>
+                    <li><strong><code>throw</code> &amp; <code>throws</code></strong> — <code>throw</code> raises an exception instance, while <code>throws</code> in a method signature declares that callers must handle it.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Production Java code must handle failure gracefully. If exceptions crash the program, users lose data and trust. Proper exception handling makes software reliable.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>class InvalidAgeException extends RuntimeException {
+    InvalidAgeException(String msg) { super(msg); }
+}
+public class ExceptionDemo {
+    static void checkAge(int age) {
+        if (age &lt; 0) throw new InvalidAgeException("Age can't be negative");
+    }
+    public static void main(String[] args) {
+        try { checkAge(-5); }
+        catch (InvalidAgeException e) { System.out.println(e.getMessage()); }
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a <code>BankAccount</code> withdraw method that throws a custom <code>InsufficientFundsException</code> when the withdrawal exceeds the balance, and handle it in <code>main</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 16 -->
+
+        <div class="rm-card" id="week16">
+            <div class="rm-card-header">
+                <h2>Week 16 — File I/O &amp; Serialization</h2>
+                <p>Persist and read data beyond program runtime using Java's file APIs.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Persisting and reading data beyond program runtime.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Reading Files with <code>BufferedReader</code>/<code>Files</code></strong> — Java provides multiple text file reading APIs, from classic streams to the modern <code>Files.readAllLines()</code>. Choosing depends on file size and required control.</li>
+                    <li><strong>Writing Files with <code>FileWriter</code>/<code>Files</code></strong> — Writing data to disk uses similarly paired APIs, with try-with-resources ensuring streams close properly.</li>
+                    <li><strong>Try-With-Resources</strong> — This syntax automatically closes resources like file streams when a block finishes, even if an exception occurs, eliminating manual <code>finally</code> cleanup.</li>
+                    <li><strong>Object Serialization</strong> — Implementing <code>Serializable</code> allows whole Java objects to be written to and read from files in binary form, useful for saving complex application state.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Nearly every real application needs to read and write files — logs, configuration, user data, exports. File I/O connects your program to the outside world permanently.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import java.io.*;
+import java.nio.file.*;
+public class FileDemo {
+    public static void main(String[] args) throws IOException {
+        Files.writeString(Path.of("notes.txt"), "Hello File!");
+        String content = Files.readString(Path.of("notes.txt"));
+        System.out.println(content);
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a program that reads a list of names from a <code>.txt</code> file (one per line) and writes a new file containing only the names sorted alphabetically.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 17 -->
+
+        <div class="rm-card" id="week17">
+            <div class="rm-card-header">
+                <h2>Week 17 — Generics, Lambdas &amp; the Stream API</h2>
+                <p>Write concise, type-safe, functional-style Java code using modern language features.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing concise, type-safe, functional-style Java code.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Generic Classes &amp; Methods</strong> — You can define classes and methods parameterized by type, like <code>Box&lt;T&gt;</code>, for reusable type-safe components beyond just collections.</li>
+                    <li><strong>Lambda Expressions</strong> — Lambdas provide concise syntax for implementing functional interfaces inline, eliminating boilerplate anonymous class syntax for simple behaviors.</li>
+                    <li><strong>Functional Interfaces</strong> — Interfaces with a single abstract method like <code>Runnable</code> or <code>Comparator</code> can be implemented via lambdas. Java also provides built-ins like <code>Function</code>, <code>Predicate</code>, and <code>Consumer</code>.</li>
+                    <li><strong>Stream API Basics</strong> — Streams process collections declaratively using chains like <code>filter()</code>, <code>map()</code>, and <code>collect()</code>, shifting from manual loops to pipeline-style data transformations.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Modern Java development relies heavily on lambdas and streams. They reduce boilerplate, improve readability, and make data processing far more expressive than equivalent loop-based code.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import java.util.*;
+import java.util.stream.*;
+public class StreamsDemo {
+    public static void main(String[] args) {
+        List&lt;Integer&gt; nums = List.of(1, 2, 3, 4, 5, 6);
+        List&lt;Integer&gt; evenSquares = nums.stream()
+            .filter(n -&gt; n % 2 == 0)
+            .map(n -&gt; n * n)
+            .collect(Collectors.toList());
+        System.out.println(evenSquares); // [4, 16, 36]
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Given a <code>List&lt;String&gt;</code> of employee names, use streams to filter names longer than 4 characters, convert them to uppercase, and collect them sorted alphabetically.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 18–24:</strong> Tackle concurrency, JVM internals, design patterns, and build three complete production-grade projects.</p>
+        </div>
+
+        <!-- WEEK 18 -->
+
+        <div class="rm-card" id="week18">
+            <div class="rm-card-header">
+                <h2>Week 18 — Multithreading &amp; Concurrency Basics</h2>
+                <p>Run code in parallel safely using Java's threading and executor models.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Running code in parallel safely.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>Thread</code> &amp; <code>Runnable</code></strong> — A <code>Thread</code> represents an independent execution path, while <code>Runnable</code> defines its task. Implementing <code>Runnable</code> is generally preferred over extending <code>Thread</code>.</li>
+                    <li><strong>Thread Lifecycle</strong> — Threads move through states like New, Runnable, Blocked, and Terminated, managed by the JVM scheduler. Understanding this helps diagnose hangs and deadlocks.</li>
+                    <li><strong>Synchronization (<code>synchronized</code>)</strong> — The <code>synchronized</code> keyword ensures only one thread accesses a critical section at a time, preventing race conditions on shared mutable state.</li>
+                    <li><strong><code>ExecutorService</code></strong> — <code>ExecutorService</code> manages a pool of reusable threads instead of manually creating new ones for every task — the modern, recommended concurrency approach.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Multi-core CPUs are standard. Any serious Java application — servers, tools, simulations — needs concurrency. Understanding threading basics is essential before moving to more advanced async patterns.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import java.util.concurrent.*;
+public class ThreadsDemo {
+    public static void main(String[] args) throws InterruptedException {
+        ExecutorService pool = Executors.newFixedThreadPool(2);
+        pool.submit(() -&gt; System.out.println("Task A running"));
+        pool.submit(() -&gt; System.out.println("Task B running"));
+        pool.shutdown();
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a program that uses an <code>ExecutorService</code> to run 5 simulated download tasks concurrently, each printing its start and completion message with its thread name.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 19  -->
+
+        <div class="rm-card" id="week19">
+            <div class="rm-card-header">
+                <h2>Week 19 — Advanced Concurrency: Locks, Atomics &amp; Concurrent Collections</h2>
+                <p>Fine-grained control over thread safety and performance using modern concurrency tools.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Fine-grained control over thread safety and performance.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>ReentrantLock</code></strong> — Offers more flexible locking than <code>synchronized</code>, including try-locking and explicit unlock control for complex concurrency scenarios.</li>
+                    <li><strong>Atomic Variables (<code>AtomicInteger</code>, etc.)</strong> — Atomic classes perform thread-safe operations without explicit locking, using low-level CPU instructions. Far more efficient than synchronized blocks for simple counters.</li>
+                    <li><strong><code>ConcurrentHashMap</code></strong> — This thread-safe map allows concurrent reads and writes without locking the entire structure — the standard replacement for synchronized HashMap.</li>
+                    <li><strong><code>CompletableFuture</code></strong> — Represents an asynchronous computation that can be chained, combined, and composed without blocking threads, central to modern non-blocking Java code.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Basic synchronization with locks is often too coarse for high-performance systems. Atomics and concurrent collections reduce contention dramatically and are used throughout Java frameworks.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import java.util.concurrent.atomic.*;
+import java.util.concurrent.*;
+public class AdvancedConcurrency {
+    public static void main(String[] args) {
+        AtomicInteger counter = new AtomicInteger(0);
+        counter.incrementAndGet();
+        CompletableFuture.supplyAsync(() -&gt; "Done")
+            .thenAccept(System.out::println);
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Simulate 100 concurrent threads incrementing a shared counter using <code>AtomicInteger</code> and print the final guaranteed-correct count. Compare with a non-atomic version to observe race conditions.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 20 -->
+
+        <div class="rm-card" id="week20">
+            <div class="rm-card-header">
+                <h2>Week 20 — Design Patterns &amp; Best Practices</h2>
+                <p>Write maintainable, idiomatic Java at a professional level using proven design patterns.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing maintainable, idiomatic Java at a professional level.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Singleton Pattern</strong> — Ensures a class has exactly one globally accessible instance. Thread-safe implementation requires careful handling in concurrent contexts.</li>
+                    <li><strong>Factory Pattern</strong> — Centralizes object creation logic behind a method, decoupling client code from concrete class instantiation and making systems easier to extend.</li>
+                    <li><strong>Builder Pattern</strong> — Builds complex objects step-by-step via chained method calls, avoiding unwieldy constructors with many parameters. Especially popular for immutable objects with optional fields.</li>
+                    <li><strong>SOLID Principles Overview</strong> — SOLID (Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion) guides maintainable OOP design at a professional level.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Design patterns are proven solutions to recurring software design problems. Knowing them means you can communicate solutions clearly with other developers and write code that is far easier to maintain.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>public class User {
+    private final String name;
+    private final int age;
+    private User(Builder b) { this.name = b.name; this.age = b.age; }
+    static class Builder {
+        String name; int age;
+        Builder setName(String n) { this.name = n; return this; }
+        Builder setAge(int a) { this.age = a; return this; }
+        User build() { return new User(this); }
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Implement a thread-safe <code>Singleton</code> configuration class and a <code>Builder</code> for a <code>Pizza</code> class with optional toppings, size, and crust type.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 21  -->
+
+        <div class="rm-card" id="week21">
+            <div class="rm-card-header">
+                <h2>Week 21 — JVM Internals &amp; Performance Tuning</h2>
+                <p>Understand what happens under the hood for optimized, efficient Java code.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding what happens under the hood for optimized code.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Garbage Collection Basics</strong> — The JVM automatically reclaims memory from unreferenced objects using algorithms like G1 or ZGC. Understanding GC helps diagnose memory leaks and pause-time issues.</li>
+                    <li><strong>Heap vs Stack Memory</strong> — The stack stores method calls and local variables, while the heap stores objects managed by the garbage collector. Misunderstanding this causes <code>StackOverflowError</code> or <code>OutOfMemoryError</code>.</li>
+                    <li><strong>JIT Compilation</strong> — The Just-In-Time compiler converts frequently-run bytecode into optimized native machine code at runtime. This is why long-running Java applications often get faster over time.</li>
+                    <li><strong>Profiling Tools (JFR, VisualVM)</strong> — Tools like Java Flight Recorder and VisualVM inspect CPU, memory, and thread behavior of a running JVM. Profiling before optimizing is essential to avoid guessing at bottlenecks.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Senior Java developers understand why their code is fast or slow, not just how to write it. JVM knowledge separates engineers who can truly debug and optimize production systems from those who cannot.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>public class MemoryDemo {
+    public static void main(String[] args) {
+        Runtime rt = Runtime.getRuntime();
+        System.out.println("Max Heap: " + rt.maxMemory() / 1_000_000 + "MB");
+        System.out.println("Free Memory: " + rt.freeMemory() / 1_000_000 + "MB");
+        // Try running with -Xmx flags to see this change
+    }
+}</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Practical Task</h4>
+                    <p>Write a program that allocates a large list of objects in a loop, then use a profiling tool or <code>Runtime</code> stats to observe memory usage before and after garbage collection.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 22  -->
+
+        <div class="rm-card" id="week22">
+            <div class="rm-card-header">
+                <h2>Week 22 — Mini Project 1: Console-Based Task Manager</h2>
+                <p>Apply OOP, collections, and file I/O skills in a complete CLI application.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Project Overview</h3>
+                <p>A full console-based task manager applying everything from Phases 1–3.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Project Architecture</strong></td>
+                            <td>A <code>Task</code> class, a <code>TaskManager</code> service class, and a <code>Main</code> entry point separate data, logic, and interface cleanly — mirroring real-world layered design.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CRUD on Collections</strong></td>
+                            <td>Implementing add, view, update, and delete on an <code>ArrayList&lt;Task&gt;</code> exercises core collection skills and forms the backbone of data-driven applications.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Persisting State to a File</strong></td>
+                            <td>Saving and loading the task list ensures data survives between runs, applying file I/O skills in a real scenario.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Input Validation &amp; Exception Handling</strong></td>
+                            <td>Validating user menu choices and catching invalid input exceptions makes the CLI robust against bad input.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Skills Applied</h3>
+                <ul>
+                    <li>Variables, arrays, operators (Phase 1)</li>
+                    <li>Loops, conditionals, methods, collections (Phase 2)</li>
+                    <li>OOP design, file I/O, exception handling (Phase 3)</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Project Deliverable</h4>
+                    <p>Build the full Task Manager: a menu-driven CLI to add, complete, delete, list, and save/load tasks to a file, using everything from Phases 1–3. Include proper input validation and no raw tracebacks shown to users.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 23 -->
+
+        <div class="rm-card" id="week23">
+            <div class="rm-card-header">
+                <h2>Week 23 — Mini Project 2: Multithreaded Library Management System</h2>
+                <p>Combine OOP design, concurrency, and concurrent collections in a simulated multi-user system.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Project Overview</h3>
+                <p>A multi-user library simulation that applies inheritance, concurrency, streams, and custom exceptions together.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Domain Modeling with Inheritance</strong></td>
+                            <td>Designing <code>Book</code>, <code>Member</code>, and <code>Library</code> classes with optional <code>DigitalBook</code>/<code>PhysicalBook</code> subclasses practices inheritance in a realistic domain.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Thread-Safe Borrowing System</strong></td>
+                            <td>Multiple simulated user threads competing for the same book require <code>ConcurrentHashMap</code> or locks to avoid double-lending, applying Weeks 18–19 concurrency skills.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Custom Exceptions for Business Rules</strong></td>
+                            <td>Throwing <code>BookNotAvailableException</code> or <code>MemberLimitExceededException</code> enforces business logic robustly, modeling how real enterprise systems signal domain failures.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Reporting with Streams</strong></td>
+                            <td>Using the Stream API to generate usage reports (most borrowed books, overdue members) demonstrates functional-style data analysis on runtime data.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Skills Applied</h3>
+                <ul>
+                    <li>Inheritance and polymorphism (Phase 3 — Weeks 13–14)</li>
+                    <li>Custom exceptions (Phase 3 — Week 15)</li>
+                    <li>Concurrency and concurrent collections (Phase 4 — Weeks 18–19)</li>
+                    <li>Stream API for reporting (Phase 3 — Week 17)</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🛠 Project Deliverable</h4>
+                    <p>Build the full Library System with thread-safe borrowing and returning operations. Simulate 10 concurrent member threads competing for limited book copies, and print a final stream-based usage report showing borrowing statistics.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 24 -->
+
+        <div class="rm-card" id="week24">
+            <div class="rm-card-header">
+                <h2>Week 24 — Mini Project 3: REST-Style API Simulation Engine</h2>
+                <p>Capstone project integrating design patterns, concurrency, generics, and architecture into a job-processing engine.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Project Overview</h3>
+                <p>A production-style simulation engine that brings together every concept from all 24 weeks.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Generic Request/Response Modeling</strong></td>
+                            <td>A generic <code>ApiRequest&lt;T&gt;</code>/<code>ApiResponse&lt;T&gt;</code> pair allows the engine to process arbitrary payload types safely, applying generics at an architectural level.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Builder &amp; Factory Patterns for Requests</strong></td>
+                            <td>Using a Builder to construct complex requests and a Factory to instantiate the right handler for each type demonstrates professional pattern usage together.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Async Job Processing with <code>CompletableFuture</code></strong></td>
+                            <td>Incoming requests are processed asynchronously via a thread pool, simulating how real backend servers handle concurrent client requests.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Centralized Error Handling &amp; Logging</strong></td>
+                            <td>A unified exception-handling layer catches and logs all processing errors consistently, reinforcing production-level exception management at system scale.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Skills Applied</h3>
+                <ul>
+                    <li>Generics at architecture level (Phase 3 — Week 17)</li>
+                    <li>Builder and Factory design patterns (Phase 4 — Week 20)</li>
+                    <li>CompletableFuture and async concurrency (Phase 4 — Weeks 18–19)</li>
+                    <li>Custom exceptions and system-wide error handling (Phase 3 — Week 15)</li>
+                    <li>All OOP principles from Phases 2–3</li>
+                </ul>
+
+                <div class="rm-project">
+                    <h4>🏆 Final Capstone Deliverable</h4>
+                    <p>Build the full simulation engine: accept simulated requests with generic payloads, route them through a factory to async handlers, log all outcomes using a centralized error layer, and print a final summary report of successes and failures — synthesizing all 24 weeks of skills into one production-grade project.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>import java.util.concurrent.*;
+class ApiEngine {
+    private final ExecutorService pool = Executors.newFixedThreadPool(4);
+    CompletableFuture&lt;String&gt; handleRequest(String payload) {
+        return CompletableFuture.supplyAsync(
+            () -&gt; "Processed: " + payload, pool)
+            .exceptionally(ex -&gt; "Error: " + ex.getMessage());
+    }
+}</code></pre>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–5</td>
+                        <td>Absolute Basics</td>
+                        <td>Write Java programs using all core types, operators, strings, arrays, and console I/O</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>6–10</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Build programs with conditionals, loops, methods, and Java's full Collections Framework</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>11–17</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Design OOP systems, handle files and errors, and use generics, lambdas, and the Stream API</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>18–24</td>
+                        <td>Master Level Concepts</td>
+                        <td>Write concurrent, production-grade Java using design patterns, JVM knowledge, and three complete projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Spend approximately <strong>5–8 hours per week</strong>: read explanations, type out every code example by hand, and complete the practical task before moving on.</li>
+                    <li>Revisit Phase 1–2 weeks briefly before starting Phase 3 — OOP concepts build directly on fundamentals.</li>
+                    <li>Push every weekly exercise to a personal <strong>GitHub repository</strong> to build a visible portfolio by Week 24.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+                <div class="logo1">
+                    <h3>CodePath</h3>
+                    <p>Learn. Practice. Master</p>
+                </div>
+                <div class="nav1">
+                    <ul>
+                        <li><a href="./index.html#home">Home</a></li>
+                        <li><a href="./index.html#category">Category</a></li>
+                        <li><a href="./index.html#languages">Languages</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bash: Beginner to Master — 15 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>Bash: Beginner to Master</h1>
+        <p>Complete 15-Week Curriculum — From Shell Basics & Variables to Process Substitution, Concurrency & Production Deployment Tools</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>15-week, phase-based Bash curriculum</strong> designed to take a complete beginner to a professional-level DevOps and systems engineer. The roadmap moves from <strong>shell setup, variables, quoting, and basic I/O</strong> through <strong>control flow, functions, arrays, and modular scripting</strong>, into <strong>file handling, error handling, text processing with grep/sed/awk, and process management</strong>, all the way to <strong>heredocs, process substitution, concurrency, professional CLI patterns, and three complete capstone projects</strong>.</p>
+            <p>The curriculum is organized into four phases: <strong>Phase 1</strong> covers absolute basics including the shell environment and variable system, <strong>Phase 2</strong> covers control flow, functions, arrays, and reusable script modules, <strong>Phase 3</strong> covers intermediate and advanced core topics like file operations, strict mode error handling, and the text-processing trinity, and <strong>Phase 4</strong> covers master-level I/O, concurrency, professional tooling patterns, and production projects.</p>
+            <p>By Week 15, you will have built three complete, portfolio-ready automation tools and be confident writing production-grade Bash scripts for monitoring, log analysis, and deployment orchestration.</p>
+            <p><strong>Level:</strong> Beginner → Master &nbsp;|&nbsp; <strong>Duration:</strong> 15 weeks &nbsp;|&nbsp; <strong>Stack:</strong> Bash 5+, GNU coreutils, bats-core &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic computer literacy</p>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Absolute Basics</h2>
+            <p><strong>Weeks 1–3:</strong> Shell setup, variables, and core data concepts.</p>
+        </div>
+
+        <!-- WEEK 1   -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Introduction to Bash &amp; the Shell Environment</h2>
+                <p>Understand what Bash is, how the shell works, and run your first commands and scripts.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding what Bash is, how the shell works, and running your first commands and scripts.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What is Bash &amp; the Role of the Shell?</strong> — Bash (Bourne Again SHell) is a command-line interpreter and scripting language that acts as the interface between you and the operating system kernel. It's the default shell on most Linux distributions and macOS (pre-Catalina), making it essential for automation, system administration, and DevOps work.</li>
+                    <li><strong>The Shebang, Script Permissions &amp; Execution</strong> — The shebang (<code>#!/bin/bash</code>) on a script's first line tells the OS which interpreter to use when executed directly. Scripts must be marked executable with <code>chmod +x</code> before running with <code>./script.sh</code>, or alternatively run explicitly via <code>bash script.sh</code>.</li>
+                    <li><strong>Navigating the Filesystem (<code>pwd</code>, <code>cd</code>, <code>ls</code>)</strong> — <code>pwd</code> prints the current working directory; <code>cd</code> changes it (<code>cd ..</code> for parent, <code>cd ~</code> for home); <code>ls</code> lists directory contents, with <code>-la</code> showing hidden files and detailed permissions. These three commands are the foundation of all shell navigation.</li>
+                    <li><strong>Command History &amp; Basic Keyboard Shortcuts</strong> — Bash remembers previously executed commands in history, navigable with Up/Down arrow keys and searchable with <code>Ctrl+R</code>. Essential shortcuts like <code>Ctrl+C</code> (interrupt), <code>Ctrl+D</code> (EOF/logout), and <code>Ctrl+L</code> (clear screen) dramatically speed up terminal work.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Bash is the universal language of Unix/Linux automation — running on every server, container, and CI/CD pipeline in the world. The shebang, <code>chmod +x</code>, and the distinction between running a script directly vs. sourcing it are concepts referenced in every professional script you will ever read or write.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#!/bin/bash
+# This is a comment — Bash ignores everything after #
+echo "Hello, Bash!"            # echo prints to standard output
+echo "Shell: $SHELL"            # $SHELL is an environment variable
+
+pwd                  # print current working directory
+cd /tmp               # change to /tmp
+ls -la                # list all files with details
+cd -                  # return to the PREVIOUS directory
+cd ~                  # go to home directory
+
+history               # show command history
+history | grep ls     # search history
+!42                    # re-run command #42
+!!                     # re-run the previous command</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Create a script <code>intro.sh</code> with a proper shebang that prints your username (<code>$USER</code>), current directory (<code>$PWD</code>), and the date. Make it executable with <code>chmod +x</code> and run it. Practice navigating to three different directories using <code>cd</code>, then return to your home directory using <code>cd ~</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 2 -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Variables &amp; Basic Data Handling</h2>
+                <p>Learn how Bash stores and uses data through variables and perform basic string and arithmetic operations.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Learning how Bash stores and uses data through variables and performing basic string and arithmetic operations.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Declaring &amp; Using Variables</strong> — Bash variables are untyped by default and store everything as strings internally. Assignment uses <code>name=value</code> with <strong>no spaces</strong> around the <code>=</code>; access uses <code>$name</code> or <code>${name}</code> (braces recommended for clarity and safety inside strings).</li>
+                    <li><strong>Environment Variables &amp; <code>export</code></strong> — Environment variables (like <code>$HOME</code>, <code>$PATH</code>, <code>$USER</code>) are set by the system and inherited by child processes. The <code>export</code> keyword promotes a local shell variable to an environment variable, making it visible to any scripts or programs the shell launches.</li>
+                    <li><strong>String Operations &amp; Quoting Rules</strong> — Double quotes (<code>"$var"</code>) allow variable expansion; single quotes (<code>'$var'</code>) treat everything literally with no expansion at all. Understanding this distinction is critical, as unquoted variables are a leading cause of Bash scripting bugs especially with filenames containing spaces.</li>
+                    <li><strong>Arithmetic Operations</strong> — Bash arithmetic is performed inside <code>$(( expression ))</code> or with the <code>let</code> builtin. Integer-only by default; floating point requires external tools like <code>bc</code> or <code>awk</code>.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The "no spaces around =" rule for variable assignment is Bash's most violated syntax rule — adding a space before or after = means Bash interprets it as a command, not an assignment. The double-quote vs single-quote distinction is the most important quoting rule in shell scripting and the root cause of the majority of real-world Bash bugs.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>name="Alice"              # no spaces around = !
+age=30
+echo "Name: $name"
+echo "Age: ${age}"          # braces — recommended in strings
+readonly PI=3.14159          # cannot be reassigned
+
+echo "$HOME"                    # built-in environment variable
+MY_VAR="custom value"
+export MY_VAR                     # now visible to child processes
+
+name="World"
+echo "Hello, $name!"        # Hello, World! — double quotes expand
+echo 'Hello, $name!'         # Hello, $name! — single quotes are literal
+echo "Length: ${#name}"       # Length: 5 — string length
+echo "${name^^}"               # WORLD — uppercase expansion
+
+a=17; b=5
+echo $((a + b))           # 22
+echo $((a / b))            # 3  — integer division
+echo $((a % b))             # 2  — modulo
+result=$(echo "$a / $b" | bc -l)   # 3.40000... — float via bc
+echo "$result"</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a script that declares your name and birth year as variables, calculates your age using arithmetic expansion, and prints a formatted sentence. Demonstrate the difference between single and double quotes by printing the same variable both ways. Export a custom environment variable and verify it's visible in a sub-shell (<code>bash -c 'echo $MY_VAR'</code>).</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 3 -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Input/Output, Quoting &amp; Special Variables</h2>
+                <p>Read user input, redirect output, and master Bash's special parameter variables.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Reading user input, redirecting output streams, and mastering Bash's special parameter variables for argument handling.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Reading User Input with <code>read</code></strong> — The <code>read</code> builtin captures user input from standard input into a variable. Flags like <code>-p</code> (prompt), <code>-s</code> (silent, for passwords), and <code>-a</code> (read into an array) make it flexible for interactive scripts.</li>
+                    <li><strong>Output Redirection (<code>&gt;</code>, <code>&gt;&gt;</code>, <code>2&gt;</code>)</strong> — <code>&gt;</code> redirects standard output to a file (overwriting); <code>&gt;&gt;</code> appends instead. <code>2&gt;</code> redirects standard error separately from standard output — essential for separating normal output from error logs in automation scripts.</li>
+                    <li><strong>Pipes (<code>|</code>) &amp; Command Chaining</strong> — The pipe operator (<code>|</code>) sends one command's standard output directly into the next command's standard input, enabling powerful command composition. <code>&amp;&amp;</code> runs the next command only on success; <code>||</code> runs it only on failure.</li>
+                    <li><strong>Special Variables (<code>$0</code>, <code>$1</code>, <code>$#</code>, <code>$@</code>, <code>$?</code>)</strong> — Bash provides special variables for script arguments: <code>$0</code> is the script name, <code>$1</code>-<code>$9</code> are positional arguments, <code>$#</code> is the argument count, <code>$@</code> expands to all arguments, and <code>$?</code> holds the exit status of the last executed command.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>$?</code> — the exit status of the last command — is the fundamental communication mechanism between commands and scripts in Unix. Every CI/CD pipeline decision, every <code>&amp;&amp;</code> and <code>||</code> chain, and every <code>if</code> statement in Bash is ultimately checking exit codes. Understanding this model is the prerequisite for all professional shell scripting.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>read -p "Enter your name: " name
+echo "Hello, $name!"
+
+read -sp "Enter password: " password
+echo
+echo "Password length: ${#password}"
+
+echo "Log entry 1" > log.txt        # overwrite
+echo "Log entry 2" >> log.txt        # append
+ls /nonexistent 2> errors.txt         # stderr only
+ls /nonexistent &> all_output.txt     # stdout + stderr
+
+ls -la | grep ".txt"
+echo "Compiling..." && echo "Done!"    # && runs 2nd only on success
+mkdir newdir || echo "mkdir failed!"    # || runs 2nd only on failure
+
+#!/bin/bash
+echo "Script name: $0"
+echo "First arg: $1"
+echo "Argument count: $#"
+echo "All arguments: $@"
+ls /tmp > /dev/null
+echo "Exit status of ls: $?"     # 0 = success</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a script that accepts a name as <code>$1</code>, prompts for a password with <code>read -sp</code>, and writes a confirmation message to a log file using <code>&gt;&gt;</code>. Check <code>$#</code> — if no argument is provided, print a usage message and exit. Chain two commands with <code>&amp;&amp;</code> and demonstrate <code>||</code> with a deliberately failing command.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — Control Flow &amp; Logic</h2>
+            <p><strong>Weeks 4–7:</strong> Functions, arrays, and scripts as reusable modules.</p>
+        </div>
+
+        <!-- WEEK 4   -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — Conditionals &amp; Control Flow</h2>
+                <p>Direct script execution using Bash's conditional structures and comparison tests.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Directing script execution using Bash's conditional structures, comparison operators, file tests, and case statements.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>if</code>/<code>elif</code>/<code>else</code> &amp; Test Conditions</strong> — Bash conditionals use <code>if [[ condition ]]; then ... fi</code> syntax. The double-bracket <code>[[ ]]</code> is the modern, recommended test syntax (over the older single-bracket <code>[ ]</code>), supporting safer string handling and pattern matching.</li>
+                    <li><strong>Comparison Operators (String vs. Numeric)</strong> — Bash uses different operators for string comparison (<code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code> inside <code>[[ ]]</code>) versus numeric comparison (<code>-eq</code>, <code>-ne</code>, <code>-lt</code>, <code>-gt</code>, <code>-le</code>, <code>-ge</code>) — confusing these is one of the most common Bash scripting mistakes.</li>
+                    <li><strong>File Test Operators</strong> — Bash includes built-in operators for testing file properties: <code>-e</code> (exists), <code>-f</code> (regular file), <code>-d</code> (directory), <code>-r</code>/<code>-w</code>/<code>-x</code> (readable/writable/executable), and <code>-s</code> (non-empty) — essential for safe, defensive scripting before file operations.</li>
+                    <li><strong><code>case</code> Statements</strong> — The <code>case</code> statement provides clean, readable pattern matching against a single value — Bash's equivalent of <code>switch</code>, supporting wildcard patterns (<code>*</code>) and multiple matches per branch (<code>pattern1|pattern2</code>).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The string vs. numeric operator distinction — using <code>==</code> for strings and <code>-eq</code> for numbers — is the most common source of subtle logic bugs in Bash. Using <code>==</code> to compare numbers performs a lexicographic string comparison, so <code>[[ 10 == 9 ]]</code> is false but <code>[[ "10" == "9" ]]</code> is also false for the wrong reason. This distinction must be internalized before writing any real conditional logic.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>score=82
+if [[ $score -ge 90 ]]; then
+    echo "Grade: A"
+elif [[ $score -ge 80 ]]; then
+    echo "Grade: B"
+else
+    echo "Grade: F"
+fi
+
+str1="apple"; str2="banana"
+[[ "$str1" == "$str2" ]] && echo "Equal" || echo "Not equal"
+
+num1=10; num2=20
+[[ $num1 -lt $num2 ]] && echo "$num1 is less than $num2"
+(( num1 < num2 )) && echo "Also valid: arithmetic context"
+
+file="data.txt"
+if [[ -e "$file" ]]; then echo "$file exists"; fi
+if [[ -d "/tmp" ]]; then echo "/tmp is a directory"; fi
+[[ -s "$file" ]] && echo "$file is non-empty"
+
+read -p "Enter a fruit: " fruit
+case "$fruit" in
+    apple|pear)   echo "Pome fruit" ;;
+    banana)       echo "Tropical fruit" ;;
+    *)            echo "Unknown fruit" ;;
+esac</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a script that validates a directory path passed as <code>$1</code>: checks it exists, is a directory, and is readable/writable, printing specific messages for each failure case. Build a simple <strong>menu-driven script</strong> using <code>case</code> that responds differently to user choices <code>1</code>, <code>2</code>, <code>3</code>, or any other input (default case).</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 5 -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — Loops &amp; Iteration</h2>
+                <p>Automate repetitive tasks using Bash's loop constructs and loop control statements.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Automating repetitive tasks using Bash's full range of loop constructs and safe file-reading patterns.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong><code>for</code> Loops — Lists, Ranges &amp; Files</strong> — <code>for</code> loops iterate over explicit word lists, numeric ranges (<code>{1..10}</code>), command output, or glob-matched filenames — making them extremely versatile for batch file processing, a common Bash use case.</li>
+                    <li><strong>C-Style <code>for</code> Loops</strong> — Bash also supports a C-style <code>for (( init; condition; increment ))</code> loop, familiar to programmers from other languages, useful when explicit index control or non-1 step sizes are needed.</li>
+                    <li><strong><code>while</code> and <code>until</code> Loops</strong> — <code>while</code> loops run while a condition is true; <code>until</code> loops run until a condition becomes true (the inverse of <code>while</code>) — useful for polling patterns, like waiting for a file or service to become available.</li>
+                    <li><strong>Loop Control — <code>break</code>, <code>continue</code> &amp; Reading Files Line-by-Line</strong> — <code>break</code> exits a loop immediately; <code>continue</code> skips to the next iteration. The idiomatic, safe pattern for reading a file line-by-line is <code>while IFS= read -r line; do ... done &lt; file</code>, which correctly handles spaces and backslashes.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The <code>while IFS= read -r line; do ... done &lt; file</code> pattern is one of the most important idioms in professional Bash — the naive alternative (<code>for line in $(cat file)</code>) silently word-splits on spaces, breaking any filename or log line containing spaces. Getting this right from the start prevents the most common batch-processing bug in shell scripts.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>for fruit in apple banana cherry; do
+    echo "Fruit: $fruit"
+done
+
+for i in {1..5}; do echo "Number: $i"; done
+
+for file in *.txt; do echo "Found: $file"; done    # glob-matched files
+
+for (( i=0; i<10; i+=2 )); do
+    echo "Even number: $i"
+done
+
+count=1
+while [[ $count -le 3 ]]; do
+    echo "While: $count"
+    ((count++))
+done
+
+count=1
+until [[ $count -gt 3 ]]; do echo "Until: $count"; ((count++)); done
+
+while IFS= read -r line; do          # safe line-by-line file reading
+    [[ "$line" == "STOP" ]] && break   # exit on sentinel
+    [[ -z "$line" ]] && continue        # skip empty lines
+    echo "Processing: $line"
+done < "input.txt"</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a script that uses a <code>for</code> loop with glob matching to rename all <code>.txt</code> files in a directory by prefixing them with <code>backup_</code>. Write a <code>while</code> loop that reads a file line-by-line, counts the number of lines containing the word "error" (case-insensitive), and prints the total. Use <code>break</code> to stop processing after finding 5 matches.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 6-->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Functions &amp; Script Arguments</h2>
+                <p>Encapsulate reusable logic in functions and build scripts that accept flexible command-line arguments.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Encapsulating reusable logic in functions with proper local scoping, and building scripts that accept flexible command-line arguments with <code>getopts</code>.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Defining &amp; Calling Functions</strong> — Bash functions are declared with <code>function name() { ... }</code> or simply <code>name() { ... }</code> (both equivalent), and called just like any other command — by name, without parentheses. They must be defined before they're called in the script.</li>
+                    <li><strong>Function Parameters &amp; Return Values</strong> — Inside a function, <code>$1</code>, <code>$2</code>, etc. refer to the function's arguments (not the script's). Bash functions don't "return" values like other languages — <code>return</code> sets a numeric exit status (0–255); use <code>echo</code> and command substitution to get actual data back.</li>
+                    <li><strong><code>local</code> Variables &amp; Scope</strong> — By default, variables in Bash are global, even inside functions — a major gotcha for newcomers. The <code>local</code> keyword scopes a variable to the function it's declared in, preventing accidental overwrites of global state.</li>
+                    <li><strong>Parsing Script Arguments with <code>getopts</code></strong> — <code>getopts</code> is Bash's built-in utility for parsing command-line flags (<code>-v</code>, <code>-f filename</code>) in a standardised, POSIX-compliant way — far more robust than manually checking <code>$1</code>, <code>$2</code> for scripts accepting multiple optional flags.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Global variables inside Bash functions are one of the most common sources of subtle bugs in longer scripts — a function modifying a variable called <code>file</code> or <code>count</code> accidentally overwrites the caller's variable of the same name. The <code>local</code> keyword is the mandatory fix, and making it a habit from this week forward is what separates professional shell scripts from fragile ones.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>greet() {
+    echo "Hello, $1!"
+}
+greet "Alice"
+greet "Bob"
+
+add() {
+    local result=$(( $1 + $2 ))    # local — scoped to this function
+    echo "$result"                    # "return" data via echo
+}
+sum=$(add 5 3)
+echo "Sum: $sum"                       # Sum: 8
+
+counter=100
+incrementLocal() {
+    local counter=0                # shadows global — scoped here
+    ((counter++))
+    echo "Inside function: $counter"
+}
+incrementLocal                      # Inside function: 1
+echo "Global unchanged: $counter"     # Global unchanged: 100
+
+#!/bin/bash
+while getopts "n:v" opt; do
+    case $opt in
+        n) name="$OPTARG" ;;
+        v) verbose=true ;;
+        *) echo "Usage: $0 -n name [-v]"; exit 1 ;;
+    esac
+done
+echo "Name: $name, Verbose: $verbose"</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a function library script <code>mathlib.sh</code> with functions <code>add</code>, <code>subtract</code>, <code>multiply</code>, and <code>divide</code> (handling division by zero), each using <code>local</code> variables and returning results via <code>echo</code>. Build a CLI tool using <code>getopts</code> that accepts <code>-f &lt;file&gt;</code> and <code>-v</code> (verbose) flags.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 7-->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Arrays, String Manipulation &amp; Sourcing Scripts</h2>
+                <p>Work with indexed and associative arrays, master advanced string operations, and structure multi-file Bash projects.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Working with indexed and associative arrays, mastering advanced string operations, and structuring multi-file Bash projects with sourcing.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Indexed Arrays</strong> — Bash arrays are declared with <code>name=(value1 value2 value3)</code>, indexed from 0. Access individual elements with <code>${array[index]}</code>, all elements with <code>${array[@]}</code>, and the count with <code>${#array[@]}</code>.</li>
+                    <li><strong>Associative Arrays (Bash 4+)</strong> — Associative arrays (declared with <code>declare -A</code>) work like dictionaries/hash maps, using string keys instead of numeric indices — essential for structured configuration data and lookup tables in scripts.</li>
+                    <li><strong>Advanced Parameter Expansion &amp; String Manipulation</strong> — Bash's parameter expansion syntax (<code>${var#pattern}</code>, <code>${var%pattern}</code>, <code>${var//search/replace}</code>) performs substring removal and replacement without spawning external processes like <code>sed</code>, making scripts faster and more portable.</li>
+                    <li><strong>Sourcing Scripts (<code>source</code> / <code>.</code>) for Code Reuse</strong> — The <code>source</code> command (or its shorthand <code>.</code>) executes another script's content within the current shell rather than spawning a subshell — meaning variables and functions defined in the sourced file become available in the calling script, the basis for Bash "libraries."</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Parameter expansion for string manipulation — <code>${filename%.gz}</code> to strip an extension, <code>${path##*/}</code> to get the basename — runs entirely within the shell with zero process overhead. Replacing <code>sed</code> or <code>awk</code> calls with parameter expansion in hot loops can make scripts dramatically faster, and it's the idiomatic Bash approach that ShellCheck recommends.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>fruits=("apple" "banana" "cherry")
+echo "${fruits[0]}"             # apple — 0-indexed
+echo "${fruits[@]}"               # apple banana cherry — all elements
+echo "${#fruits[@]}"                # 3 — array length
+fruits+=("date")                     # append element
+
+declare -A colors
+colors["apple"]="red"
+colors["banana"]="yellow"
+echo "${colors[apple]}"                # red
+for fruit in "${!colors[@]}"; do echo "$fruit: ${colors[$fruit]}"; done
+
+filename="document.tar.gz"
+echo "${filename%.gz}"             # document.tar — remove shortest suffix
+echo "${filename%%.*}"              # document — remove longest suffix
+echo "${filename/tar/zip}"           # document.zip.gz — replace first match
+path="/usr/local/bin"
+echo "${path##*/}"                    # bin — basename via longest prefix removal
+
+# File: mathlib.sh
+add() { echo $(( $1 + $2 )); }
+
+# File: main.sh
+source ./mathlib.sh
+result=$(add 5 3)
+echo "Result: $result"                 # Result: 8</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a <code>config.sh</code> file using an associative array to store key-value settings (e.g., <code>["env"]="production"</code>), sourced by a <code>deploy.sh</code> script that reads those settings. Write a function that takes a filename and uses <strong>parameter expansion</strong> (not <code>sed</code>/<code>awk</code>) to extract the extension and base name separately.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Intermediate &amp; Advanced Core</h2>
+            <p><strong>Weeks 8–11:</strong> File handling, error handling, and text processing.</p>
+        </div>
+
+        <!-- WEEK 8  -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — File Handling &amp; Filesystem Operations</h2>
+                <p>Master file and directory manipulation, permissions, and filesystem-aware scripting patterns.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering file and directory manipulation, Unix permissions, finding files with <code>find</code>, and inspecting disk usage.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Creating, Copying, Moving &amp; Deleting Files/Directories</strong> — <code>mkdir -p</code> creates nested directories without error if they exist; <code>cp -r</code> copies directories recursively; <code>mv</code> renames or moves; <code>rm -rf</code> deletes recursively and forcefully — the most destructive command in Bash, requiring extreme caution.</li>
+                    <li><strong>File Permissions (<code>chmod</code>, <code>chown</code>) &amp; the Permission Model</strong> — Unix permissions are represented as three triads (owner/group/other) each with read(4)/write(2)/execute(1) bits, summed into octal notation (e.g., <code>755</code>). <code>chmod</code> changes permissions; <code>chown</code> changes ownership.</li>
+                    <li><strong>Finding Files with <code>find</code></strong> — <code>find</code> recursively searches directories matching criteria — name patterns, file type, size, modification time — and can execute commands on each match via <code>-exec</code>, making it one of the most powerful tools in the Bash toolkit.</li>
+                    <li><strong>Disk Usage &amp; Filesystem Inspection (<code>du</code>, <code>df</code>, <code>stat</code>)</strong> — <code>du -sh</code> summarises directory size in human-readable form; <code>df -h</code> shows filesystem-level disk space usage; <code>stat</code> reveals detailed metadata (permissions, timestamps, inode) about a specific file.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>rm -rf</code> with a variable expansion bug — like <code>rm -rf "$dir/"</code> where <code>$dir</code> is empty — has deleted production servers. File test operators (<code>-e</code>, <code>-d</code>) and safe <code>find</code> usage with <code>-exec</code> are the professional patterns that prevent catastrophic data loss. This week's defensive habits protect both test environments and production systems.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>mkdir -p project/src/utils        # -p creates parents, no error if exists
+cp -r project backup_project        # recursive copy
+mv backup_project archived          # rename/move
+rm -rf archived/temp                 # ⚠️ recursive force delete — use with CAUTION
+
+chmod 755 script.sh           # rwxr-xr-x
+chmod +x script.sh             # symbolic: add execute for all
+chmod u+w,g-w file.txt          # add write for user, remove for group
+ls -l script.sh                  # verify permissions
+
+find . -name "*.log"                          # all .log files recursively
+find . -type d -name "node_modules"            # directories named node_modules
+find /tmp -mtime +7 -type f                      # files older than 7 days
+find . -name "*.tmp" -exec rm {} \;                # delete each match
+
+du -sh /var/log                  # summary, human-readable
+df -h                              # disk free on all filesystems
+stat file.txt                       # detailed metadata
+du -ah . | sort -rh | head -5         # top 5 largest items</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a script <code>cleanup.sh</code> that uses <code>find</code> to locate all files older than 30 days with a <code>.tmp</code> extension in a given directory (<code>$1</code>), <strong>lists them first for confirmation</strong>, then deletes them only after explicit user confirmation (<code>read -p</code>). Add a disk usage report at the end using <code>du -sh</code> on the target directory.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 9  -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Error Handling &amp; Defensive Scripting</h2>
+                <p>Write robust, fail-safe Bash scripts using exit codes, strict mode, and proper error trapping.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing robust, fail-safe Bash scripts using exit codes, strict mode, signal trapping, and defensive guard clauses.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Exit Codes &amp; <code>exit</code></strong> — Every command returns an exit code: <code>0</code> for success, any non-zero value (1–255) for failure, accessible via <code>$?</code>. Scripts can explicitly <code>exit N</code> to signal success/failure to whatever called them — critical for CI/CD pipelines and automation.</li>
+                    <li><strong>Strict Mode — <code>set -e</code>, <code>set -u</code>, <code>set -o pipefail</code></strong> — <code>set -e</code> exits immediately if any command fails; <code>set -u</code> errors on undefined variable usage (catching typos); <code>set -o pipefail</code> makes a pipeline fail if any command in it fails (not just the last). Together these form "Bash strict mode" — a professional best practice for every script.</li>
+                    <li><strong>Trapping Signals &amp; Cleanup with <code>trap</code></strong> — <code>trap</code> registers a command or function to run when the script receives a signal (like <code>EXIT</code>, <code>INT</code> for Ctrl+C, or <code>ERR</code>) — the idiomatic way to guarantee cleanup (temp files, locks) happens even if the script is interrupted or crashes.</li>
+                    <li><strong>Validating Input &amp; Defensive Guard Clauses</strong> — Defensive Bash scripts validate arguments, check command availability (<code>command -v</code>), and verify preconditions before proceeding — failing fast with clear error messages rather than producing confusing downstream errors.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> <code>set -euo pipefail</code> — the three-option strict mode — is the single most important line in any production Bash script. Without <code>set -e</code>, a script happily continues after a command silently fails. Without <code>set -u</code>, a typo in a variable name runs silently with an empty string. Without <code>pipefail</code>, a failing command in a pipeline is invisible. All three are required for production-quality scripts.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#!/bin/bash
+ls /nonexistent_dir
+echo "Exit code: $?"
+
+if [[ ! -f "required_file.txt" ]]; then
+    echo "Error: required file missing" >&2     # >&2 sends to stderr
+    exit 1
+fi
+
+#!/bin/bash
+set -euo pipefail            # strict mode — fail fast
+
+#!/bin/bash
+tempfile=$(mktemp)
+cleanup() { rm -f "$tempfile"; echo "Cleaned up $tempfile"; }
+trap cleanup EXIT              # runs on ANY script exit — even crashes
+
+#!/bin/bash
+set -euo pipefail
+if [[ $# -lt 1 ]]; then
+    echo "Usage: $0 <filename>" >&2; exit 1
+fi
+if ! command -v jq &> /dev/null; then
+    echo "Error: 'jq' is required but not installed" >&2; exit 1
+fi
+echo "All preconditions met — proceeding"</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Refactor one of your Week 6–8 scripts to use strict mode (<code>set -euo pipefail</code>). Add a <code>trap</code> that cleans up any temporary files on exit, including on Ctrl+C interruption. Add guard clauses validating that required arguments are provided and required external commands (like <code>curl</code> or <code>jq</code>) are installed, exiting with clear error messages and proper exit codes.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 10  -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Text Processing with grep, sed &amp; awk</h2>
+                <p>Master the three pillars of Unix text processing — searching, transforming, and extracting structured data.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering the three pillars of Unix text processing — searching with grep, transforming with sed, and extracting structured data with awk.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Pattern Searching with <code>grep</code></strong> — <code>grep</code> searches text for lines matching a pattern (literal or regex). Common flags: <code>-i</code> (case-insensitive), <code>-v</code> (invert match), <code>-r</code> (recursive directory search), <code>-n</code> (show line numbers), <code>-E</code> (extended regex).</li>
+                    <li><strong>Stream Editing with <code>sed</code></strong> — <code>sed</code> (stream editor) transforms text line-by-line using commands, most commonly substitution (<code>s/pattern/replacement/</code>). The <code>g</code> flag replaces all matches per line (not just the first); <code>-i</code> edits files in place.</li>
+                    <li><strong>Field Processing with <code>awk</code></strong> — <code>awk</code> is a full text-processing language built for column/field-based data, automatically splitting each line into fields (<code>$1</code>, <code>$2</code>, ...) by whitespace (or a custom delimiter via <code>-F</code>). It's the go-to tool for extracting and computing on structured/tabular text.</li>
+                    <li><strong>Combining Tools with Pipelines</strong> — Real-world Bash text processing chains <code>grep</code>, <code>sed</code>, <code>awk</code>, <code>sort</code>, <code>uniq</code>, and <code>cut</code> together via pipes — each tool doing one job well, composed into a powerful data-processing pipeline.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> grep + sed + awk is the trinity of Unix text processing — used in every DevOps pipeline, every log analysis script, and every data extraction task on Linux systems worldwide. Knowing all three and when to use each (grep for filtering, sed for substitution, awk for column extraction and aggregation) is the defining competency of a professional shell scripter.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>grep "error" app.log                     # find lines containing "error"
+grep -i "ERROR" app.log                    # case-insensitive
+grep -v "debug" app.log                     # invert: lines NOT containing debug
+grep -rn "TODO" ./src                        # recursive, with line numbers
+grep -E "^(WARN|ERROR)" app.log               # extended regex
+
+echo "hello world" | sed 's/world/Bash/'       # hello Bash
+echo "aaa bbb aaa" | sed 's/aaa/xxx/g'           # xxx bbb xxx — all matches
+sed -i 's/foo/bar/g' config.txt                    # edit file in place
+sed -n '2,4p' file.txt                               # print only lines 2-4
+
+echo "Alice 30 Engineer" | awk '{print $1, $3}'    # Alice Engineer
+awk -F',' '{print $2}' data.csv                      # comma-delimited
+awk '{sum += $2} END {print "Total:", sum}' sales.txt  # aggregate
+awk '$3 > 25 {print $1}' people.txt                    # conditional filter
+
+# Real-world pipeline: top 5 IPs by request frequency
+cat access.log | awk '{print $1}' | sort | uniq -c | sort -rn | head -5</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Given a sample web server log file, write a pipeline that extracts the <strong>top 5 most frequently requested URLs</strong> using <code>awk</code>, <code>sort</code>, and <code>uniq -c</code>. Use <code>sed</code> to anonymise IP addresses in the log (replace the last octet with <code>xxx</code>). Write a <code>grep</code> command finding all lines with HTTP status codes <code>4xx</code> or <code>5xx</code> using extended regex (<code>-E</code>).</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 11  -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Process Management, Environment &amp; Networking Basics</h2>
+                <p>Monitor and control running processes, manage shell environments, and perform basic network diagnostics from Bash.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Monitoring and controlling running processes, managing shell environments, and performing basic network diagnostics and HTTP requests from Bash.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Process Inspection (<code>ps</code>, <code>top</code>, <code>htop</code>) &amp; Job Control</strong> — <code>ps aux</code> lists all running processes with resource usage; <code>top</code>/<code>htop</code> provide a live, interactive view. Job control (<code>&amp;</code> to background, <code>jobs</code>, <code>fg</code>, <code>bg</code>, <code>Ctrl+Z</code>) lets you manage multiple processes within a single terminal session.</li>
+                    <li><strong>Killing Processes &amp; Signals</strong> — <code>kill</code> sends signals to processes by PID; <code>SIGTERM</code> (15, default) requests graceful shutdown, <code>SIGKILL</code> (9) forces immediate termination, and <code>SIGHUP</code> (1) often triggers config reload. <code>pkill</code>/<code>killall</code> target processes by name instead of PID.</li>
+                    <li><strong>Environment &amp; Shell Configuration Files</strong> — <code>.bashrc</code> runs for every interactive non-login shell; <code>.bash_profile</code>/<code>.profile</code> runs for login shells. <code>alias</code> creates command shortcuts; <code>PATH</code> modifications here make custom scripts globally executable.</li>
+                    <li><strong>Basic Networking from the Shell (<code>curl</code>, <code>wget</code>, <code>ping</code>)</strong> — <code>curl</code> and <code>wget</code> fetch data from URLs; <code>curl</code> is more flexible for APIs (supports custom headers, methods, JSON bodies), while <code>wget</code> excels at simple recursive downloads. <code>ping</code> and <code>nc</code> (netcat) test basic connectivity.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Process management from the shell — checking if a service is running, sending SIGTERM for graceful shutdown, using SIGHUP to reload config — is how DevOps and SRE professionals manage production systems without rebooting. The <code>curl -sf URL; echo $?</code> pattern for health checking is the foundation of every monitoring script and deployment health check in the industry.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>ps aux | grep nginx              # find processes matching "nginx"
+sleep 100 &                        # run in background
+jobs                                 # list background jobs
+fg %1                                 # bring job 1 to foreground
+kill %1                                # terminate job 1
+
+ps aux | grep myapp
+kill 12345                            # SIGTERM — graceful
+kill -9 12345                          # SIGKILL — forceful, last resort
+pkill -f "python script.py"             # kill by command name
+
+# Add to ~/.bashrc:
+alias ll='ls -la'
+export PATH="$HOME/scripts:$PATH"
+export EDITOR="vim"
+source ~/.bashrc                           # reload without restarting
+
+curl -s https://api.github.com/users/octocat | head -5
+curl -X POST -H "Content-Type: application/json" \
+     -d '{"key":"value"}' https://api.example.com/data
+wget https://example.com/file.zip
+ping -c 3 google.com</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a script that monitors a given process name (<code>$1</code>), checking every 5 seconds with <code>pgrep</code> whether it's still running, and prints an alert if it stops. Write a second script using <code>curl</code> to check if a website is up (HTTP status 200), looping with a configurable retry count and delay, exiting with an appropriate status code.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Master Level Concepts</h2>
+            <p><strong>Weeks 12–15:</strong> Process substitution, concurrency, advanced patterns, and three complete capstone projects.</p>
+        </div>
+
+        <!-- WEEK 12-->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Advanced I/O: Process Substitution, Heredocs &amp; File Descriptors</h2>
+                <p>Master Bash's most advanced I/O redirection features for sophisticated data pipelines and templating.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering Bash's most advanced I/O redirection features — heredocs, process substitution, custom file descriptors, and tee — for sophisticated data pipelines and templating.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Here Documents (Heredocs) &amp; Here Strings</strong> — A heredoc (<code>&lt;&lt;EOF ... EOF</code>) feeds multi-line text as input to a command, ideal for generating config files or multi-line prompts inline in a script. A here string (<code>&lt;&lt;&lt;</code>) feeds a single string as input without needing a pipe.</li>
+                    <li><strong>Process Substitution (<code>&lt;(...)</code> and <code>&gt;(...)</code>)</strong> — Process substitution lets you treat a command's output as if it were a file, passed via a temporary file descriptor — enabling powerful patterns like comparing the output of two commands directly with <code>diff</code>, without manual temp files.</li>
+                    <li><strong>File Descriptors &amp; Custom Redirection</strong> — Beyond standard stdin(0)/stdout(1)/stderr(2), Bash supports custom file descriptors (3-9) for advanced redirection scenarios — such as temporarily swapping stdout and stderr, or holding a file descriptor open across multiple commands.</li>
+                    <li><strong><code>tee</code> — Splitting Output to Multiple Destinations</strong> — <code>tee</code> reads from standard input and writes simultaneously to standard output and one or more files — essential for logging command output to a file while still seeing it live in the terminal.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Process substitution — <code>diff &lt;(ls dir1) &lt;(ls dir2)</code> — eliminates the need for temporary files in hundreds of common scripting patterns. It's the feature that makes complex Bash pipelines possible without polluting the filesystem with intermediate files. Combined with heredocs for config templating, these are the tools that make professional Bash scripting genuinely elegant.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>cat <<EOF > config.txt
+server_name=myapp
+port=8080
+environment=production
+EOF
+echo "Config file generated"
+
+grep "pattern" <<< "search this single string for pattern"
+
+diff <(ls dir1) <(ls dir2)                     # compare directory listings
+diff <(sort file1.txt) <(sort file2.txt)         # compare sorted versions
+
+while read -r line; do echo "Got: $line"; done < <(curl -s https://example.com/data)
+
+exec 3> custom_log.txt              # open FD 3 for writing
+echo "Custom log entry" >&3            # write to FD 3
+exec 3>&-                                # close FD 3
+
+echo "Build started" | tee build.log                # prints AND writes
+long_running_command | tee -a build.log                # -a appends
+some_command 2>&1 | tee full_output.log                  # stdout + stderr
+ls -la | tee listing.txt | grep ".sh"                       # tee mid-pipeline</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a script that uses a <strong>heredoc to generate a templated <code>nginx.conf</code>-style file</strong> with variables interpolated. Use process substitution with <code>diff</code> to compare the sorted contents of two arrays/files without creating temp files manually. Build a deployment script that uses <code>tee -a</code> to simultaneously display and log every step's output to a timestamped log file.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 13-->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Concurrency, Background Jobs &amp; Parallel Execution</h2>
+                <p>Run multiple tasks concurrently in Bash to dramatically speed up batch processing and automation workflows.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Running multiple tasks concurrently using background jobs, wait, GNU parallel, file locking, and named pipes for inter-process communication.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Background Processes &amp; <code>wait</code></strong> — Appending <code>&amp;</code> runs a command in the background, returning control immediately; <code>$!</code> captures the PID of the last backgrounded process. <code>wait</code> (with no args) blocks until all background jobs complete — the foundation of simple Bash parallelism.</li>
+                    <li><strong>Parallel Execution with GNU <code>parallel</code> and <code>xargs -P</code></strong> — <code>xargs -P N</code> runs up to N commands concurrently from a list of inputs; GNU <code>parallel</code> is a more feature-rich dedicated tool for parallelising shell commands across multiple cores, with built-in progress tracking and job control.</li>
+                    <li><strong>Race Conditions &amp; File Locking with <code>flock</code></strong> — When multiple background processes write to the same shared file or resource concurrently, race conditions can corrupt data. <code>flock</code> provides advisory file locking, ensuring only one process accesses a critical section at a time.</li>
+                    <li><strong>Named Pipes (FIFOs) for Inter-Process Communication</strong> — A named pipe (created with <code>mkfifo</code>) acts as a special file that connects two processes — one writes, another reads — enabling simple inter-process communication patterns without network sockets.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Processing 100 files sequentially takes 100x longer than processing them in parallel — and Bash's background job pattern with <code>wait</code> makes parallelisation a 3-line change to any sequential loop. <code>flock</code> for preventing concurrent deployments from corrupting shared state is used in production deployment systems worldwide — it's the shell-level equivalent of a database transaction lock.</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>process_file() { sleep 2; echo "Processed: $1"; }
+
+process_file "file1.txt" &        # background
+process_file "file2.txt" &        # background
+process_file "file3.txt" &        # background
+wait                                 # block until ALL background jobs finish
+echo "All files processed"
+
+# xargs -P: process files in parallel, 4 at a time
+find . -name "*.jpg" | xargs -P 4 -I {} convert {} {}.png
+
+# GNU parallel:
+ls *.csv | parallel -j 4 'process_csv.sh {}'
+
+(
+    flock -x 200                          # acquire exclusive lock
+    echo "Critical section: $(date)" >> shared.log
+    sleep 1
+) 200>/tmp/my.lock                          # lock file for FD 200
+
+mkfifo /tmp/mypipe
+echo "Hello via FIFO" > /tmp/mypipe &
+cat < /tmp/mypipe                           # reads: "Hello via FIFO"
+rm /tmp/mypipe                                # cleanup</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Write a script that processes 10 simulated "files" (using <code>sleep</code>) sequentially, timing it with <code>time</code>. Rewrite it to process them in <strong>parallel using background jobs and <code>wait</code></strong>, comparing the execution time. Add <code>flock</code> to safely log results from all parallel jobs to a single shared file without interleaved/corrupted writes.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 14 -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Advanced Scripting Patterns &amp; Tool Building</h2>
+                <p>Apply professional patterns for building robust, distributable command-line tools in Bash.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Applying professional patterns for building robust, distributable command-line tools — proper CLI design, logging frameworks, layered configuration, and testable Bash with bats-core.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Building a Proper CLI Tool — Argument Parsing &amp; Help Text</strong> — Professional Bash CLI tools combine <code>getopts</code> with a structured <code>usage()</code> function, supporting <code>--help</code>, validating required vs. optional flags, and providing clear error messages — turning a script into a genuinely usable tool.</li>
+                    <li><strong>Logging Frameworks &amp; Verbosity Levels</strong> — A reusable logging function with severity levels (DEBUG, INFO, WARN, ERROR) — controllable via a verbosity flag — is a hallmark of professional Bash tooling, replacing scattered <code>echo</code> statements with consistent, filterable output.</li>
+                    <li><strong>Configuration via Files &amp; Environment Variable Precedence</strong> — Professional scripts support layered configuration: hardcoded defaults, overridable by a config file, overridable by environment variables, overridable by CLI flags — giving users maximum flexibility while keeping sensible defaults.</li>
+                    <li><strong>Writing Testable Bash with <code>bats-core</code></strong> — <code>bats-core</code> (Bash Automated Testing System) is the standard framework for unit-testing Bash scripts and functions, using a syntax similar to other testing frameworks (<code>@test</code>, assertions) — bringing real test coverage to shell scripting.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The layered configuration pattern — defaults &lt; config file &lt; environment variables &lt; CLI flags — is the standard design of every professional Unix tool (from <code>git</code> to <code>docker</code> to <code>kubectl</code>). Building your own tools with this pattern makes them usable by others without modification. <code>bats-core</code> tests are what separate "scripts that work on my machine" from "scripts that ship to production."</p>
+                </div>
+
+                <h3>Code Example</h3>
+                <pre><code>#!/bin/bash
+usage() {
+    cat <<EOF
+Usage: $0 [-v] [-o OUTPUT] INPUT_FILE
+  -v          Verbose output
+  -o OUTPUT   Specify output file (default: out.txt)
+  -h          Show this help message
+EOF
+    exit "${1:-0}"
+}
+[[ "$1" == "-h" || "$1" == "--help" ]] && usage 0
+
+LOG_LEVEL="${LOG_LEVEL:-INFO}"
+log() {
+    local level=$1; shift
+    local levels=(DEBUG INFO WARN ERROR)
+    [[ " ${levels[*]} " == *" $level "* ]] || return
+    echo "[$(date +%T)] [$level] $*" >&2
+}
+log INFO "Starting process"
+log ERROR "Something failed"
+
+PORT_DEFAULT=8080
+[[ -f "./app.conf" ]] && source ./app.conf
+PORT="${PORT:-$PORT_DEFAULT}"
+while getopts "p:" opt; do [[ $opt == "p" ]] && PORT="$OPTARG"; done
+echo "Using port: $PORT"
+
+# File: mathlib.bats
+#!/usr/bin/env bats
+load 'mathlib.sh'
+@test "add returns correct sum" {
+    result=$(add 2 3)
+    [ "$result" -eq 5 ]
+}
+# Run with: bats mathlib.bats</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Task</h4>
+                    <p>Build a complete CLI tool <code>backup-tool.sh</code> with <code>--help</code>, a layered logging function (DEBUG/INFO/WARN/ERROR), and configuration loaded from a <code>.backuprc</code> file overridable by CLI flags. Write at least <strong>5 bats-core tests</strong> covering your earlier <code>mathlib.sh</code> functions, including edge cases like division by zero.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 15  -->
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Capstone Week: Three Master Projects</h2>
+                <p>Apply everything learned across the entire curriculum in three complete, production-quality projects.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Synthesising all four phases into three complete, production-quality Bash automation projects spanning monitoring, log analysis, and deployment orchestration.</p>
+
+                <!-- PROJECT 1 -->
+                <h3>Mini Project 1 — Automated System Health Report (Beginner → Intermediate)</h3>
+                <p>A script that generates a comprehensive system health report and logs it on a schedule — fully cron-compatible with no interactive prompts.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Bash Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Disk space checks</td>
+                            <td>File test operators + <code>df</code>/<code>du</code> commands</td>
+                        </tr>
+                        <tr>
+                            <td>CPU and memory summaries</td>
+                            <td><code>ps</code>/<code>free</code> command output parsing</td>
+                        </tr>
+                        <tr>
+                            <td>Modular report sections</td>
+                            <td>Functions with <code>local</code> variables for each section</td>
+                        </tr>
+                        <tr>
+                            <td>Formatted report generation</td>
+                            <td>Heredocs with variable interpolation</td>
+                        </tr>
+                        <tr>
+                            <td>Safe execution</td>
+                            <td><code>set -euo pipefail</code> strict mode + <code>trap</code> cleanup</td>
+                        </tr>
+                        <tr>
+                            <td>Threshold alerting</td>
+                            <td>Arithmetic comparison triggering a WARNING section</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>#!/bin/bash
+set -euo pipefail
+
+generate_report() {
+    cat <<EOF
+=== System Health Report — $(date) ===
+Disk Usage:
+$(df -h / /var /tmp)
+
+Memory:
+$(free -h)
+
+Top 5 CPU Processes:
+$(ps aux --sort=-%cpu | head -6)
+EOF
+}
+generate_report > "/var/log/health_report_$(date +%Y%m%d).log"</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 1 Deliverable</h4>
+                    <p>A script runnable via <code>cron</code> (no user interaction) producing a dated log file with disk, memory, CPU, and top-process summaries. Includes a threshold check (e.g., disk usage &gt; 90%) that triggers a distinct WARNING section in the report. Build on <strong>Days 1–2</strong>.</p>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <h3>Mini Project 2 — Multi-Source Log Aggregator &amp; Analyzer (Intermediate → Advanced)</h3>
+                <p>A tool that aggregates, filters, and summarises logs from multiple sources into actionable statistics with a proper CLI interface.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Bash Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Log file discovery</td>
+                            <td><code>find</code> across multiple directories</td>
+                        </tr>
+                        <tr>
+                            <td>Log parsing and filtering</td>
+                            <td><code>grep</code>/<code>sed</code>/<code>awk</code> pipelines</td>
+                        </tr>
+                        <tr>
+                            <td>Category counting</td>
+                            <td>Associative arrays for occurrence counts</td>
+                        </tr>
+                        <tr>
+                            <td>CLI interface</td>
+                            <td><code>getopts</code> with <code>--since</code>, <code>--level</code>, <code>--source</code> flags</td>
+                        </tr>
+                        <tr>
+                            <td>Period comparison</td>
+                            <td>Process substitution for diff against saved baseline</td>
+                        </tr>
+                        <tr>
+                            <td>Quality assurance</td>
+                            <td>Proper logging framework + <code>bats-core</code> test coverage</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>#!/bin/bash
+set -euo pipefail
+declare -A error_counts
+
+while IFS= read -r logfile; do
+    while IFS= read -r line; do
+        level=$(echo "$line" | grep -oE "ERROR|WARN|INFO" || true)
+        [[ -n "$level" ]] && ((error_counts["$level"]++))
+    done < "$logfile"
+done < <(find /var/log/myapp -name "*.log")
+
+for level in "${!error_counts[@]}"; do
+    echo "$level: ${error_counts[$level]}"
+done</code></pre>
+
+                <div class="rm-project">
+                    <h4>🛠 Project 2 Deliverable</h4>
+                    <p>A CLI tool (<code>log-aggregator.sh --since 24h --level ERROR</code>) that scans multiple log directories, filters by severity and time window, outputs a summary table of counts by category, and can diff current results against a saved baseline using process substitution. Build on <strong>Days 3–4</strong>.</p>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <h3>Mini Project 3 — Parallel Deployment &amp; Rollback Orchestrator (Advanced → Master)</h3>
+                <p>A production-grade deployment orchestration script that deploys to multiple servers in parallel, with health checks, locking, and automatic rollback on failure.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Bash Concept Applied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Parallel deployment</td>
+                            <td>Background jobs + <code>wait</code> across multiple servers</td>
+                        </tr>
+                        <tr>
+                            <td>Concurrent run prevention</td>
+                            <td><code>flock</code> to prevent colliding deployments</td>
+                        </tr>
+                        <tr>
+                            <td>Guaranteed rollback</td>
+                            <td><code>trap</code> for rollback-on-failure and cleanup</td>
+                        </tr>
+                        <tr>
+                            <td>Layered configuration</td>
+                            <td>Config file + env vars + CLI flags precedence</td>
+                        </tr>
+                        <tr>
+                            <td>Full deployment logging</td>
+                            <td>Structured logging via <code>tee</code> to console and timestamped log file</td>
+                        </tr>
+                        <tr>
+                            <td>Post-deployment validation</td>
+                            <td><code>curl</code>-based health checks with retry logic</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <pre><code>#!/bin/bash
+set -euo pipefail
+LOCKFILE="/tmp/deploy.lock"
+
+deploy_to_server() {
+    local server=$1
+    log INFO "Deploying to $server..."
+    ssh "$server" "bash /opt/deploy/update.sh" || {
+        log ERROR "$server failed"; return 1
+    }
+    curl -sf "https://$server/health" || {
+        log ERROR "$server health check failed"; return 1
+    }
+}
+
+(
+    flock -n 200 || { log ERROR "Deployment already in progress"; exit 1; }
+    for server in "${SERVERS[@]}"; do deploy_to_server "$server" & done
+    wait
+) 200>"$LOCKFILE"</code></pre>
+
+                <div class="rm-project">
+                    <h4>🏆 Project 3 Deliverable</h4>
+                    <p>A complete deployment orchestrator (<code>deploy.sh --env production --servers servers.conf</code>) that: locks to prevent concurrent runs, deploys to all configured servers in parallel, performs <code>curl</code>-based health checks with retries, automatically triggers a rollback function via <code>trap</code> if any server fails, and produces a full timestamped deployment log via <code>tee</code>. Includes a <code>bats-core</code> test suite for the configuration loading and rollback decision logic. Build on <strong>Days 5–7</strong>. This is the capstone demonstrating mastery of the entire Bash curriculum.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–3</td>
+                        <td>Absolute Basics</td>
+                        <td>Write properly structured scripts with shebangs, variables, quoting, I/O redirection, and special parameters</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>4–7</td>
+                        <td>Control Flow &amp; Logic</td>
+                        <td>Write all forms of conditionals, loops, and case statements; build reusable functions with getopts, local scoping, and sourced libraries</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>8–11</td>
+                        <td>Intermediate &amp; Advanced Core</td>
+                        <td>Perform safe filesystem operations, apply strict mode error handling with trap, master grep/sed/awk text processing, and manage processes and HTTP requests</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>12–15</td>
+                        <td>Master Level Concepts</td>
+                        <td>Use heredocs, process substitution, and custom file descriptors; write parallel and concurrent scripts safely with flock; build professional CLI tools with logging and bats-core tests; ship three production automation projects</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool / Resource</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>gnu.org/software/bash/manual</td>
+                        <td>Official authoritative Bash reference manual</td>
+                    </tr>
+                    <tr>
+                        <td>ShellCheck (shellcheck.net)</td>
+                        <td>Linter that catches bugs and anti-patterns automatically — run on every script</td>
+                    </tr>
+                    <tr>
+                        <td>Bash Pitfalls (mywiki.wooledge.org/BashPitfalls)</td>
+                        <td>Comprehensive list of common Bash mistakes and their fixes</td>
+                    </tr>
+                    <tr>
+                        <td>Advanced Bash-Scripting Guide (TLDP)</td>
+                        <td>Free, comprehensive deep-reference for all Bash features</td>
+                    </tr>
+                    <tr>
+                        <td>Greg's Wiki (mywiki.wooledge.org)</td>
+                        <td>Best practices, idioms, and FAQ for shell scripting</td>
+                    </tr>
+                    <tr>
+                        <td>explainshell.com</td>
+                        <td>Interactive tool for breaking down complex command syntax</td>
+                    </tr>
+                    <tr>
+                        <td>bats-core GitHub</td>
+                        <td>Bash Automated Testing System — unit testing for shell scripts</td>
+                    </tr>
+                    <tr>
+                        <td>GNU parallel (gnu.org/software/parallel)</td>
+                        <td>Feature-rich parallel job execution from shell commands</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Run <strong>ShellCheck</strong> on every script you write from Week 1 onward — it catches quoting bugs, uninitialized variable references, and deprecated syntax before they cause real problems.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — include a <code>README.md</code> with usage examples and a sample run so others (and future employers) can see your work clearly.</li>
+                    <li>Add <strong><code>set -euo pipefail</code></strong> to the top of every script from Week 9 onward — if a script doesn't pass ShellCheck and doesn't use strict mode, it's not production-ready.</li>
+                    <li>By Week 15, you should have three complete, documented automation tools and the confidence to write, test, and deploy production-grade Bash scripts for any DevOps, SRE, or systems engineering context.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>

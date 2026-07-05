@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Intelligence: Beginner to Master — 15 Week Curriculum</title>
+    <link rel="stylesheet" href="./Category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="binary-bg" id="binaryBg"></div>
+    <header id="home">
+        <div class="navbar">
+            <h2 class="logo">CodePath</h2>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#projects">Projects</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <li><a href="./index.html#contact">Contact</a></li>
+                    <button id="toggle-btn" class="toggle-btn" onclick="toggleTheme()">🌑</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="rm-header">
+        <h1>Business Intelligence: Beginner to Master</h1>
+        <p>Complete 15-Week Curriculum — From Data Fundamentals & SQL to Power BI, Tableau, Data Warehousing & BI Strategy</p>
+    </header>
+
+    <nav class="rm-nav">
+        <a href="#intro">Intro</a>
+        <a href="#week1">W1</a>
+        <a href="#week2">W2</a>
+        <a href="#week3">W3</a>
+        <a href="#week4">W4</a>
+        <a href="#week5">W5</a>
+        <a href="#week6">W6</a>
+        <a href="#week7">W7</a>
+        <a href="#week8">W8</a>
+        <a href="#week9">W9</a>
+        <a href="#week10">W10</a>
+        <a href="#week11">W11</a>
+        <a href="#week12">W12</a>
+        <a href="#week13">W13</a>
+        <a href="#week14">W14</a>
+        <a href="#week15">W15</a>
+        <a href="#summary">Summary</a>
+    </nav>
+
+    <main class="rm-container">
+
+        <div class="rm-section-box" id="intro">
+            <h2>About This Curriculum</h2>
+            <p>This is a <strong>15-week, project-driven Business Intelligence curriculum</strong> designed to take a complete beginner to a job-ready, portfolio-equipped BI professional. The roadmap covers the complete BI stack: <strong>data fundamentals, Excel, SQL, Power BI, DAX, Tableau, data warehousing, ETL pipelines, KPIs, storytelling, Python for BI, and BI strategy</strong>.</p>
+            <p>The curriculum is organized into five phases: <strong>Phase 1</strong> covers BI foundations including data concepts, Excel, and database modeling, <strong>Phase 2</strong> covers SQL from fundamentals through advanced window functions, <strong>Phase 3</strong> covers Power BI including DAX and dashboard design, <strong>Phase 4</strong> covers Tableau, data warehousing, ETL, and BI strategy, and <strong>Phase 5</strong> covers Python for BI, portfolio building, and the capstone project.</p>
+            <p>By Week 15, you will have built <strong>12+ mini-projects</strong> and one comprehensive capstone BI solution covering the full stack from raw data to executive dashboards — ready for a BI Analyst, Data Analyst, or BI Developer role.</p>
+            <p><strong>Level:</strong> Beginner → Professional &nbsp;|&nbsp; <strong>Duration:</strong> 15 weeks (~38–42 hrs/week) &nbsp;|&nbsp; <strong>Stack:</strong> SQL, Excel, Power BI, Tableau, Python &nbsp;|&nbsp; <strong>Prerequisites:</strong> Basic computer literacy</p>
+
+            <h3>Tools Required</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Tool</th>
+                        <th>Purpose</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Microsoft Excel / Google Sheets</td>
+                        <td>Data analysis, pivot tables, starter BI</td>
+                        <td>Free (Sheets) / Microsoft 365</td>
+                    </tr>
+                    <tr>
+                        <td>Power BI Desktop</td>
+                        <td>Microsoft's BI and visualization platform</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td>Tableau Public</td>
+                        <td>Data visualization and dashboard tool</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td>MySQL / PostgreSQL + Workbench</td>
+                        <td>Relational database for SQL practice</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td>Python 3 + VS Code</td>
+                        <td>Data analysis and automation (Weeks 13–14)</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td>Google Looker Studio</td>
+                        <td>Free cloud-based BI visualization tool</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td>Kaggle</td>
+                        <td>Free datasets and data science notebooks</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td>GitHub</td>
+                        <td>Portfolio hosting and version control</td>
+                        <td>Free</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 1 — Foundations</h2>
+            <p><strong>Weeks 1–3:</strong> BI concepts, Excel for analysis, database and data modeling fundamentals.</p>
+        </div>
+
+        <!-- WEEK 1 -->
+
+        <div class="rm-card" id="week1">
+            <div class="rm-card-header">
+                <h2>Week 1 — Introduction to Business Intelligence &amp; Data Fundamentals</h2>
+                <p>Build a solid conceptual foundation of what BI is, why it matters, and how to think like a BI professional.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Building a solid conceptual foundation of what BI is, how data flows through organizations, and how to think like a BI professional before touching any tool.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>What Business Intelligence Really Is</strong> — BI vs data science vs data analytics; the BI value chain (data → information → insight → decision → value); historical evolution from static reports to self-service analytics; real-world BI use cases across industries.</li>
+                    <li><strong>The BI Ecosystem</strong> — Data sources (transactional databases, CRMs, ERPs, flat files, APIs); data integration tools (ETL and ELT concepts); data storage (databases, data warehouses, data lakes); analytical tools (SQL, Excel, Power BI, Tableau, Python); consumers (dashboards, reports, embedded analytics).</li>
+                    <li><strong>Data Fundamentals</strong> — Structured vs unstructured vs semi-structured data; quantitative vs qualitative data; primary vs secondary data; data types (text, number, date/time, boolean, currency); data quality dimensions: accuracy, completeness, consistency, timeliness, validity, uniqueness.</li>
+                    <li><strong>Organizational Context of BI</strong> — How BI teams are structured in organizations; stakeholders (executives, managers, analysts, IT); the difference between operational reporting and strategic analytics; BI requirements gathering — asking the right business questions.</li>
+                    <li><strong>Key BI Metrics Concepts</strong> — What a KPI is and how to define a good one; SMART KPIs (Specific, Measurable, Achievable, Relevant, Time-bound); leading vs lagging indicators; common KPI categories (financial, operational, customer, HR).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> BI is not just about tools — it is about thinking about data in the context of business decisions. Without this conceptual foundation, you will use tools without understanding why, build dashboards that look good but mean nothing, and miss the business purpose behind the analysis. Every tool skill you learn in subsequent weeks only has value when anchored to this business context.</p>
+                </div>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Mini Project</h4>
+                    <p>A <strong>"BI Opportunity Analysis"</strong> — choose any organization you are familiar with (your university, a local business, a fictional company). Write a two-page document covering: what business questions the organization needs to answer, what data they likely have, what data is missing, what KPIs would measure their success, and what BI tools might help them. Present this as a formal document with headings and a professional structure.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 2   -->
+
+        <div class="rm-card" id="week2">
+            <div class="rm-card-header">
+                <h2>Week 2 — Data in Spreadsheets: Excel &amp; Google Sheets for BI</h2>
+                <p>Master Excel and Google Sheets as BI starter tools — for data cleaning, analysis, pivot tables, and basic visualization.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering Excel and Google Sheets as BI starter tools — for data cleaning, analysis, pivot tables, and basic interactive visualization.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Spreadsheet Fundamentals for BI</strong> — Rows vs columns, cells, ranges, named ranges; data formatting (date, number, text); freeze panes, sorting, filtering; Excel Tables (Ctrl+T) — why they are better than plain ranges for BI work.</li>
+                    <li><strong>Essential Excel Functions for Data Analysis</strong> — Text functions (TRIM, CLEAN, LEFT, RIGHT, MID, CONCATENATE, LEN); lookup functions (VLOOKUP, HLOOKUP, INDEX-MATCH, XLOOKUP); logical functions (IF, IFS, AND, OR, IFERROR); statistical functions (SUM, AVERAGE, MEDIAN, COUNTIF, COUNTIFS, SUMIF, SUMIFS, AVERAGEIF); date functions (TODAY, YEAR, MONTH, DATEDIF, NETWORKDAYS).</li>
+                    <li><strong>Data Cleaning in Excel</strong> — Removing duplicates; find and replace; text to columns; flash fill; handling blank cells and error values; converting data types.</li>
+                    <li><strong>Pivot Tables — The Most Powerful BI Feature in Excel</strong> — Creating pivot tables from a data range; rows, columns, values, and filters; summarizing by sum/count/average/percentage; calculated fields; pivot table formatting; slicers and timelines for interactive filtering; grouping dates by year/quarter/month.</li>
+                    <li><strong>Pivot Charts &amp; Basic Excel Dashboard</strong> — Creating charts from pivot tables; chart types (bar, column, line, pie, scatter, combo); formatting charts professionally; arranging pivot charts and slicers on a dashboard sheet; protecting and sharing an Excel dashboard.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Despite the rise of dedicated BI tools like Power BI and Tableau, Excel remains the most widely used business analysis tool in the world. Almost every BI job requires Excel proficiency. Pivot tables are conceptually the same as GROUP BY aggregations in SQL and visual aggregations in Power BI — learning them in Excel builds intuition that transfers everywhere.</p>
+                </div>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Mini Project</h4>
+                    <p>A <strong>"Sales Performance Excel Dashboard"</strong> — download the Superstore Sales dataset from Kaggle. Build a professional Excel dashboard with: total sales, total profit, and profit margin KPI cards; a monthly sales trend line chart; a bar chart of sales by category; a top 10 customers by revenue pivot table; and interactive region and year slicers. Format it professionally and save it to your portfolio.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 3   -->
+
+        <div class="rm-card" id="week3">
+            <div class="rm-card-header">
+                <h2>Week 3 — Data Modeling &amp; Database Fundamentals</h2>
+                <p>Understand how data is structured in relational databases — tables, relationships, keys, and schemas.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding how data is structured in relational databases — tables, relationships, keys, and schemas — the foundation on which all BI query work and reporting is built.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Relational Database Concepts</strong> — Tables, rows (records), columns (fields/attributes); primary keys (uniquely identifying each row); foreign keys (linking related tables); relationships (one-to-one, one-to-many, many-to-many); referential integrity.</li>
+                    <li><strong>Data Normalization</strong> — First Normal Form (1NF): no repeating groups; Second Normal Form (2NF): no partial dependencies; Third Normal Form (3NF): no transitive dependencies; why normalization matters for OLTP; why BI sometimes denormalizes for OLAP performance.</li>
+                    <li><strong>Entity-Relationship (ER) Diagrams</strong> — Entities and attributes; reading and drawing ER diagrams; crow's foot notation; converting an ER diagram to a physical table design; tools: draw.io (free, browser-based).</li>
+                    <li><strong>Data Warehousing Concepts</strong> — OLTP vs OLAP; what a data warehouse is and why it exists separately from transaction databases; dimensions and facts (the two key concepts in data warehouse modeling); the Star Schema (one fact table surrounded by dimension tables); the Snowflake Schema; data marts.</li>
+                    <li><strong>Introduction to MySQL</strong> — Installing MySQL and MySQL Workbench; creating a database and tables; inserting sample data; running a basic SELECT query.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Data modeling is the architecture that everything else in BI is built on. A BI professional who does not understand database relationships, primary and foreign keys, or the star schema cannot design a proper data warehouse, write correct multi-table SQL queries, or build accurate Power BI or Tableau reports. This week's concepts underpin every tool and technique in the roadmap.</p>
+                </div>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Mini Project</h4>
+                    <p>A <strong>"Retail Data Model"</strong> — design the complete data architecture for a fictional retail company. Deliverables: an ER diagram of the transactional database (in draw.io), a star schema diagram for the data warehouse, a list of dimensions and facts with descriptions, SQL CREATE TABLE statements for all tables, and 20 rows of sample data inserted into each table. Document your design decisions.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 2 — SQL for Business Intelligence</h2>
+            <p><strong>Weeks 4–6:</strong> SQL querying, aggregations, joins, and advanced window functions.</p>
+        </div>
+
+        <!--    WEEK 4   -->
+
+        <div class="rm-card" id="week4">
+            <div class="rm-card-header">
+                <h2>Week 4 — SQL Fundamentals for BI: Querying &amp; Filtering</h2>
+                <p>Write SQL queries to retrieve, filter, sort, and examine data — the foundational BI skill used every single day.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing SQL queries to retrieve, filter, sort, and examine data — the foundational BI skill that every analyst uses every single day.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>SELECT Statement Structure</strong> — SELECT, FROM, WHERE, ORDER BY, LIMIT; selecting specific columns vs SELECT *; column aliases; DISTINCT; NULL values (IS NULL, IS NOT NULL, COALESCE, IFNULL).</li>
+                    <li><strong>Filtering with WHERE</strong> — Comparison operators (=, !=, &gt;, &lt;, &gt;=, &lt;=); logical operators (AND, OR, NOT); BETWEEN (inclusive range filtering); IN (filtering against a list); LIKE and wildcards (% and _); operator precedence with parentheses.</li>
+                    <li><strong>Sorting and Limiting Results</strong> — ORDER BY (ASC and DESC); ORDER BY multiple columns; LIMIT and OFFSET for pagination; TOP (SQL Server) vs LIMIT (MySQL/PostgreSQL).</li>
+                    <li><strong>String Functions</strong> — UPPER, LOWER, TRIM, LTRIM, RTRIM; SUBSTRING/SUBSTR; CONCAT; LENGTH/LEN; REPLACE.</li>
+                    <li><strong>Date and Time Functions</strong> — NOW(), CURDATE(), CURRENT_DATE; YEAR(), MONTH(), DAY(); DATEDIFF(), DATE_ADD(), DATE_SUB(); DATE_FORMAT().</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> SELECT queries are how BI professionals extract data from databases. Before you can aggregate, join, or transform data, you must be able to retrieve and filter it precisely. Every BI tool — Power BI, Tableau, Looker — generates SQL under the hood, and understanding SQL means you can debug and optimize what your tools produce.</p>
+                </div>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Mini Project</h4>
+                    <p>A <strong>"SQL Data Extraction Report"</strong> — using the retail database built in Week 3 (or a provided sample database), write at least 15 SQL queries that answer specific business questions. Questions should include: finding high-value customers, identifying top-selling products, filtering orders by date range, finding incomplete records (NULLs), and cleaning text data with string functions. Document each query with the business question it answers and sample output.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 5 -->
+
+        <div class="rm-card" id="week5">
+            <div class="rm-card-header">
+                <h2>Week 5 — SQL for Analysis: Aggregations, Grouping &amp; Joins</h2>
+                <p>Write analytical SQL queries that summarize, group, and combine data across multiple tables.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Writing analytical SQL queries that summarize, group, and combine data across multiple tables — the queries that actually generate business insights.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Aggregate Functions</strong> — COUNT(*), COUNT(column); SUM(), AVG(), MIN(), MAX(); ROUND(), CEIL(), FLOOR(); DISTINCT within aggregates (COUNT(DISTINCT customer_id)).</li>
+                    <li><strong>GROUP BY &amp; HAVING</strong> — Grouping results by one or more columns; how GROUP BY and aggregate functions work together; every non-aggregated column in SELECT must appear in GROUP BY; HAVING filters aggregated results (WHERE filters rows BEFORE aggregation; HAVING filters AFTER).</li>
+                    <li><strong>SQL Joins</strong> — INNER JOIN (returns only rows with matching keys in both tables); LEFT JOIN (all rows from left, matched from right); RIGHT JOIN; FULL OUTER JOIN; Self-join (joining a table to itself for hierarchies); joining on multiple conditions.</li>
+                    <li><strong>Subqueries</strong> — Subquery in WHERE; subquery in FROM (inline view/derived table); correlated subqueries; when to use a subquery vs a join.</li>
+                    <li><strong>CTEs (Common Table Expressions)</strong> — WITH clause for naming temporary result sets; multiple CTEs in one query; why CTEs improve readability over nested subqueries; recursive CTEs intro concept.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> GROUP BY with aggregates is the most-used SQL pattern in BI — it answers questions like "Total sales by region" or "Average order value by customer segment." JOINs are what make relational databases powerful — without them, you are limited to one table at a time. Understanding JOINs deeply is what allows you to correctly combine sales data with customer data with product data across a real warehouse.</p>
+                </div>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Mini Project</h4>
+                    <p>A <strong>"SQL Analytics Dashboard Data Preparation"</strong> — write 10 SQL queries that would power a real business dashboard. Each query should answer a specific business question using GROUP BY, JOINs, and optionally subqueries or CTEs. Questions: total revenue by quarter (with year-over-year comparison), top 5 products by profit margin, sales by region with percentage of total, customer retention rate, average order processing time by warehouse. Save the script to GitHub with documentation.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 6  -->
+
+        <div class="rm-card" id="week6">
+            <div class="rm-card-header">
+                <h2>Week 6 — Advanced SQL for BI: Window Functions &amp; Query Optimization</h2>
+                <p>Master advanced SQL techniques used specifically in BI work — window functions, period comparisons, and query optimization.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Mastering advanced SQL techniques used specifically in BI work — window functions for running totals, rankings, and period comparisons, plus query optimization for production environments.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Window Functions</strong> — OVER clause (what it does and why it exists); PARTITION BY (dividing data into groups without collapsing rows); ORDER BY inside OVER; ROW_NUMBER() (unique sequential number); RANK() and DENSE_RANK() (ranking with and without gaps); LAG() and LEAD() (previous and next row values); SUM() OVER() (running total); AVG() OVER() (rolling average); NTILE(n) (quartiles, deciles).</li>
+                    <li><strong>Advanced Date Analytics</strong> — Year-over-year comparison; Month-to-date (MTD), Quarter-to-date (QTD), Year-to-date (YTD); cohort analysis (grouping customers by first purchase month); days since last activity (recency analysis).</li>
+                    <li><strong>Advanced CTEs and Recursive Queries</strong> — Multiple sequential CTEs (each building on the previous); recursive CTEs for organizational hierarchies; generating a date dimension table using a recursive CTE.</li>
+                    <li><strong>Query Optimization</strong> — What query execution plans are (EXPLAIN in MySQL); index concepts (what an index is, how it speeds up reads, trade-offs); creating indexes on frequently filtered columns; avoiding functions on indexed columns in WHERE; efficient JOIN order.</li>
+                    <li><strong>SQL Views &amp; Stored Procedures (Intro)</strong> — Creating views for frequently used complex queries; using views to simplify reporting; creating simple stored procedures with parameters for automated ETL steps.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Window functions are the single feature that separates a basic SQL user from a BI-capable SQL user. Running totals, rankings, period-over-period comparisons, and cohort analysis all use window functions — and these are among the most common BI requirements from business stakeholders. Query optimization ensures your BI queries run in seconds on large production databases instead of timing out.</p>
+                </div>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Mini Project</h4>
+                    <p>An <strong>"Advanced SQL Analytics Package"</strong> — using a retail or financial dataset, write a complete analytical SQL script (minimum 15 queries using window functions, CTEs, and advanced date logic) producing: a ranked leaderboard of customers by lifetime value, a month-over-month and year-over-year revenue comparison table, a running total of cumulative sales for the current year, a cohort retention analysis (customers by first purchase month), and a product performance ranking within each category. Save the script to GitHub.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 3 — Data Visualization with Power BI</h2>
+            <p><strong>Weeks 7–9:</strong> Power BI from fundamentals through DAX, dashboard design, security, and publishing.</p>
+        </div>
+
+        <!--  WEEK 7  -->
+
+        <div class="rm-card" id="week7">
+            <div class="rm-card-header">
+                <h2>Week 7 — Power BI Fundamentals: Connecting Data &amp; Building First Reports</h2>
+                <p>Get fully productive in Power BI — connect to multiple data sources, build your first reports, and share them.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Getting fully productive in Power BI — connecting to multiple data sources, understanding the Power BI interface, building first reports, and sharing them through Power BI Service.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Power BI Ecosystem &amp; Architecture</strong> — Power BI Desktop vs Power BI Service vs Power BI Mobile; the three views in Power BI Desktop (Report, Data, Model); how Power BI fits into a BI workflow.</li>
+                    <li><strong>Connecting to Data Sources</strong> — Getting data from Excel, CSV files, SQL databases (MySQL/SQL Server), web pages, SharePoint, and OneDrive; blank queries and entering data manually.</li>
+                    <li><strong>Power Query Editor</strong> — Removing unnecessary columns; renaming columns; changing data types; filtering rows; replacing values; splitting columns; adding custom columns; merging queries (Power Query equivalent of SQL JOIN); appending queries (equivalent of UNION); applied steps; the M language (intro).</li>
+                    <li><strong>Power BI Data Model</strong> — The Model view; creating relationships between tables; relationship cardinality (one-to-many, many-to-one, one-to-one); cross-filter direction (single vs bidirectional); why the star schema model is ideal in Power BI.</li>
+                    <li><strong>Basic Visualizations &amp; Report Design</strong> — Bar/column charts, line charts, pie/donut charts, cards and multi-row cards (KPIs), tables and matrices, maps, slicers; formatting visuals (colors, fonts, titles, borders); page layout, themes, text boxes; multiple pages; drill-down; tooltips.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Power BI Desktop is the most widely used BI tool globally in the Microsoft ecosystem, which dominates most enterprise environments. The Power Query transformation step is what separates a professional BI developer from someone who just drags data into a chart. The data model is the engine of Power BI — without correct relationships, your numbers will be silently wrong and no one will know until a business decision is made on bad data.</p>
+                </div>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Mini Project</h4>
+                    <p>A <strong>"Sales Overview Power BI Report"</strong> — using the Superstore or Contoso dataset, build a three-page Power BI report: Page 1 (Executive Summary) with total sales, profit, profit margin, and units sold as KPI cards plus a quarterly trend line chart; Page 2 (Sales Detail) with category-level bar charts and a regional map; Page 3 (Customer Analysis) with top 20 customers by revenue and customer-by-segment breakdown. Add slicers for year and region on every page. Export as PDF and publish to Power BI Service.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 8  -->
+
+        <div class="rm-card" id="week8">
+            <div class="rm-card-header">
+                <h2>Week 8 — DAX: Data Analysis Expressions in Power BI</h2>
+                <p>Learn DAX — Power BI's formula language — to create calculated columns, measures, and time intelligence functions.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Learning DAX — Power BI's formula language — to create calculated columns, measures, and time intelligence functions that go beyond simple aggregations.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>DAX Fundamentals</strong> — What DAX is and how it differs from Excel formulas; calculated columns vs measures (when to use each); the evaluation context (row context vs filter context); how measures are dynamically calculated based on filters applied in the report.</li>
+                    <li><strong>Essential DAX Functions</strong> — Basic aggregations: SUM(), AVERAGE(), COUNT(), COUNTROWS(), DISTINCTCOUNT(), MAX(), MIN(); conditional: IF(), SWITCH(), IFERROR(); mathematical: ROUND(), ABS(), DIVIDE() (safer than division operator); date: YEAR(), MONTH(), DAY(), TODAY(), DATE(), DATEDIFF().</li>
+                    <li><strong>CALCULATE — The Most Important DAX Function</strong> — What CALCULATE does (modifies the filter context); syntax and usage; adding filters; removing filters with ALL(); overriding filters with FILTER(); using CALCULATE with ALLEXCEPT().</li>
+                    <li><strong>Time Intelligence Functions</strong> — TOTALYTD(), TOTALQTD(), TOTALMTD() (year/quarter/month-to-date totals); SAMEPERIODLASTYEAR() (same period in the previous year); DATEADD() (offset by days/months/quarters/years); PREVIOUSYEAR(), PREVIOUSMONTH(); year-over-year growth with DIVIDE.</li>
+                    <li><strong>Advanced DAX Patterns</strong> — RELATED() and RELATEDTABLE(); RANKX() for ranking items within a context; SUMX(), AVERAGEX(), COUNTX() (iterator functions); VAR and RETURN keywords for variables that improve readability and performance.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> DAX is what makes Power BI capable of enterprise-level analytics. Without DAX, you are limited to simple aggregations of your existing data. With DAX, you can calculate profit margins, year-over-year growth, customer lifetime value, market share percentages, and complex business metrics dynamically in response to any filter a user applies. DAX is assessed in the PL-300 Power BI certification exam.</p>
+                </div>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Mini Project</h4>
+                    <p>A <strong>"DAX Measures Library"</strong> — in your Week 7 Power BI file, add at least 15 properly organized and commented DAX measures covering: all basic KPIs (revenue, profit, margin, units), all time intelligence variants (YTD, QTD, MTD, prior year, growth rate), customer metrics (distinct customers, new customers, average order value), and ranking measures. Build a dedicated <strong>"Financial Scorecard"</strong> report page using all these measures.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 9  -->
+
+        <div class="rm-card" id="week9">
+            <div class="rm-card-header">
+                <h2>Week 9 — Power BI Advanced: Dashboard Design, Row-Level Security &amp; Publishing</h2>
+                <p>Build production-quality Power BI dashboards following design best practices, implement security, and understand the full publishing workflow.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Building production-quality Power BI dashboards following design best practices, implementing Row-Level Security, and understanding the full publishing and governance workflow.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Dashboard Design Principles</strong> — The difference between a Power BI Report and a Dashboard in Power BI Service; F-pattern and Z-pattern reading (how users scan dashboards); visual hierarchy (size, position, color, contrast); choosing the right visual for each data type; color theory for data visualization (sequential, diverging, categorical palettes); accessibility (color blindness, alt text, contrast ratios); whitespace and clutter reduction.</li>
+                    <li><strong>Advanced Power BI Visuals</strong> — Decomposition Tree (exploring data hierarchically); Smart Narrative (AI-generated text summaries); Key Influencers (AI visual showing what factors drive a metric); waterfall charts; bullet charts; custom visuals from AppSource; custom tooltip pages.</li>
+                    <li><strong>Bookmarks and Buttons</strong> — Creating bookmarks to save visual states; buttons that switch between views (toggle between charts); navigation buttons between report pages; selection pane for showing/hiding visuals with bookmarks.</li>
+                    <li><strong>Row-Level Security (RLS)</strong> — What RLS is (restricting which data rows a user can see); static RLS (hardcoded rules); dynamic RLS using USERNAME() or USERPRINCIPALNAME(); creating and testing roles in Power BI Desktop; managing role membership in Power BI Service.</li>
+                    <li><strong>Publishing, Sharing &amp; Performance</strong> — Publishing to Power BI Service; workspaces; sharing reports (by link, workspace access, app); embedding reports in websites and SharePoint; scheduled automatic data refresh; using the Performance Analyzer to identify slow visuals; pre-aggregating data before loading into Power BI.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Building a technically correct report is only half the job. A report that stakeholders cannot navigate, understand, or trust is useless. Dashboard design skills determine whether your work is actually used. Row-Level Security is required in almost every enterprise deployment — you must understand it for any professional BI role. These skills are the difference between a report that gets used and one that gets ignored.</p>
+                </div>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Mini Project</h4>
+                    <p>A <strong>"Professional BI Dashboard with Security"</strong> — build a complete, production-quality Power BI report for the Superstore dataset. Requirements: consistent design theme, 3 pages with navigation buttons, at least 2 advanced visuals (decomposition tree or Key Influencers), Row-Level Security for three regional roles, bookmarks for view switching, published to Power BI Service with a share link, and a companion document explaining design decisions, security rules, and how to use the report.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 4 — Advanced BI: Tableau, Data Warehousing &amp; ETL</h2>
+            <p><strong>Weeks 10–12:</strong> Tableau, data warehousing, ETL pipelines, KPIs, storytelling, and BI strategy.</p>
+        </div>
+
+        <!--  WEEK 10 -->
+
+        <div class="rm-card" id="week10">
+            <div class="rm-card-header">
+                <h2>Week 10 — Tableau for Data Visualization</h2>
+                <p>Learn Tableau Public — a leading visualization tool — building on your BI and Power BI knowledge.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Learning Tableau Public — a leading visualization tool — building on BI and Power BI knowledge to create interactive, polished visualizations for a broader audience.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Tableau Interface &amp; Concepts</strong> — Tableau Desktop vs Tableau Public vs Tableau Online/Server; connecting to data (Excel, CSV, database); Data Source page; Worksheet, Dashboard, and Story views; Dimensions vs Measures in Tableau; continuous vs discrete fields (the blue vs green pill concept).</li>
+                    <li><strong>Building Views in Tableau</strong> — The Rows and Columns shelf; Marks card (Color, Size, Label, Detail, Tooltip); automatic chart type selection ("Show Me" panel); manual chart building; filters (dimension, measure, date); sets and groups for custom aggregations.</li>
+                    <li><strong>Chart Types in Tableau</strong> — Bar charts (horizontal/vertical); line charts and trend lines; scatter plots with color and size encoding; heat maps and highlight tables; Gantt charts; geographic maps (filled maps and symbol maps); tree maps; box plots.</li>
+                    <li><strong>Calculated Fields &amp; LOD Expressions</strong> — Basic calculations; IF/CASE statements; LOD (Level of Detail) expressions: FIXED (non-visual-level aggregation), INCLUDE, EXCLUDE — Tableau's powerful equivalent of window functions; table calculations (running total, percent of total, year-over-year difference).</li>
+                    <li><strong>Tableau Dashboards, Stories &amp; Publishing</strong> — Combining worksheets into a dashboard; layout containers (horizontal, vertical, tiled vs floating); filter actions (clicking one chart filters others); highlight actions; URL actions; Device Designer for mobile optimization; Tableau Stories for data narratives; publishing to Tableau Public with embed code.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Tableau remains a market leader in analytics — especially for public-sector organizations, consultancies, and US-based enterprises. The LOD (Level of Detail) expression is uniquely powerful for complex analytical calculations. Having both Power BI and Tableau on your resume significantly increases job market flexibility. Tableau Public portfolios are a widely recognized way to demonstrate visualization skills to potential employers.</p>
+                </div>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Mini Project</h4>
+                    <p>A <strong>"Global Data Story"</strong> in Tableau — using a freely available public dataset (World Bank, OECD, UN data, or similar), build a Tableau Story with at least 4 views exploring a real-world topic of your choice (healthcare outcomes, education, economic inequality, climate change). Each story point should have a caption and tell a specific part of the narrative. Publish to Tableau Public and share the link for your portfolio.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- WEEK 11  -->
+
+        <div class="rm-card" id="week11">
+            <div class="rm-card-header">
+                <h2>Week 11 — Data Warehousing &amp; ETL Pipeline Design</h2>
+                <p>Understand the architecture, design, and implementation of a data warehouse and ETL processes — the infrastructure that powers enterprise BI.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Understanding the architecture, design, and implementation of a data warehouse and ETL processes — the infrastructure that powers enterprise BI.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Data Warehouse Architecture</strong> — Three-tier architecture (source systems → staging → data warehouse → data marts → BI tools); why a separate data warehouse is needed; Operational Data Store (ODS); data warehouse approaches: Bill Inmon (enterprise-wide, normalized) vs Ralph Kimball (dimensional, data mart-first).</li>
+                    <li><strong>Dimensional Modeling (Kimball Methodology)</strong> — Star schema and snowflake schema (deep review); Slowly Changing Dimensions (SCDs): Type 0 (fixed), Type 1 (overwrite), Type 2 (add new row with full history — most common), Type 3 (add new column); surrogate keys vs natural keys; degenerate dimensions; junk dimensions; fact table types (transaction, periodic snapshot, accumulating snapshot).</li>
+                    <li><strong>ETL Process Design</strong> — Extract (connecting to source systems; full vs incremental extract); Transform (data type conversion, cleansing, deduplication, business rule application, null handling); Load (truncate and reload vs incremental load — UPSERT; bulk loading); ETL vs ELT (load first, transform in the warehouse — modern cloud approach); data lineage.</li>
+                    <li><strong>ETL Tools Overview</strong> — Microsoft SSIS (Microsoft ETL standard); Pentaho Data Integration (free, open-source); Apache NiFi; modern cloud ETL: Fivetran, dbt, AWS Glue (conceptual awareness); Python-based ETL using pandas (covered in Week 13).</li>
+                    <li><strong>Google Looker Studio &amp; Warehouse Implementation</strong> — Connecting Looker Studio to Google Sheets, BigQuery, MySQL; creating reports and dashboards; sharing and embedding; designing and implementing a small data warehouse in MySQL with staging tables, SQL-based ETL queries, and dimension/fact tables following the star schema.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Most BI tools sit on top of a data warehouse. Understanding how the warehouse is designed and populated is what separates a BI analyst who uses data from a BI developer or architect who builds the systems that make data available. Data warehousing is covered in BI certifications (PL-300, DP-900) and is a required skill for senior BI roles. SCD Type 2 is one of the most commonly asked interview questions for BI developer roles.</p>
+                </div>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Mini Project</h4>
+                    <p>A <strong>"Mini Data Warehouse Implementation"</strong> — design and build a complete small data warehouse in MySQL for a retail scenario. Deliverables: schema diagram (staging + dimensions + fact), SQL scripts for all CREATE TABLE statements, SQL ETL scripts loading staging → dimensions → fact, sample data demonstrating SCD Type 2 (a customer changes their city — show the history preserved), and a connected Looker Studio report pulling from the warehouse.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 12 -->
+
+        <div class="rm-card" id="week12">
+            <div class="rm-card-header">
+                <h2>Week 12 — Advanced Analytics: KPIs, Storytelling &amp; BI Strategy</h2>
+                <p>Move from building reports to thinking strategically about BI — defining KPIs, telling compelling data stories, and governing data quality.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Moving from building reports to thinking strategically about BI — how to define meaningful KPIs, tell compelling stories with data, design a BI roadmap, and govern data quality.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Advanced KPI Framework Design</strong> — OKRs (Objectives and Key Results) vs KPIs; Balanced Scorecard (four perspectives: Financial, Customer, Internal Process, Learning &amp; Growth); KPI hierarchies (organizational → departmental → individual); leading vs lagging indicators; diagnostic vs outcome metrics; North Star Metric; building a KPI catalog (definitions, formulas, data sources, owners, update frequency).</li>
+                    <li><strong>Storytelling with Data</strong> — Why humans remember stories better than data tables; the STAR framework for data stories (Situation, Task, Action, Result); building a data narrative (context → complication → resolution); the five data story components (data, narrative, visuals, annotation, context); annotation techniques; the "so what?" test (every finding needs a recommendation); presentation best practices (slides vs dashboards; one message per slide).</li>
+                    <li><strong>BI Requirements Gathering</strong> — Stakeholder interviews; BI requirements document structure; mock-up and wireframing (sketching dashboard layouts before building); iterative development (prototyping, feedback, refinement cycles).</li>
+                    <li><strong>BI Governance &amp; Data Management</strong> — Data governance framework components; data stewardship; business glossary (documenting agreed definitions of business terms); data catalog (documenting available data assets); Master Data Management (MDM); data lineage documentation.</li>
+                    <li><strong>Self-Service BI &amp; the Future of BI</strong> — What self-service BI means for organizations; centralized vs decentralized BI models; augmented analytics (AI and ML in modern BI tools); Natural Language Query (NLQ); embedded analytics; real-time and streaming analytics (introduction).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Technical skills build the BI solution; strategic skills make it valuable. Many technically skilled BI professionals fail to have impact because they build dashboards nobody uses, measure the wrong things, or cannot communicate findings to stakeholders. The ability to define the right KPIs, tell a compelling data story, and navigate organizational dynamics is what drives career advancement in BI from analyst to senior analyst to BI manager.</p>
+                </div>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Mini Project</h4>
+                    <p>A <strong>"BI Strategy Proposal"</strong> — create a professional document (8–10 pages) proposing a BI implementation for a fictional medium-sized company. Include: business context and current state analysis, KPI framework (Balanced Scorecard with 20 KPIs), proposed data architecture (sources, warehouse, reporting tools), data governance plan (ownership, quality rules, business glossary), a dashboard wireframe for the executive view, implementation roadmap (12-month plan), and expected business outcomes.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box">
+            <h2>Phase 5 — Real-World BI &amp; Career Readiness</h2>
+            <p><strong>Weeks 13–15:</strong> Python for BI, portfolio projects, capstone, and career preparation.</p>
+        </div>
+
+        <!--   WEEK 13 -->
+
+        <div class="rm-card" id="week13">
+            <div class="rm-card-header">
+                <h2>Week 13 — Python for Business Intelligence</h2>
+                <p>Use Python as a complement to SQL and Power BI for data analysis, automation, and advanced analytics.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Using Python as a complement to SQL and Power BI for data analysis, automation, and more advanced analytics that go beyond what traditional BI tools offer.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>Why Python in BI</strong> — Python vs SQL (when to use each); Python vs Power BI/Tableau (what Python adds: statistical analysis, ML, automation); Python BI workflow (load → clean → analyze → visualize → report).</li>
+                    <li><strong>pandas for Data Analysis</strong> — DataFrames and Series; <code>pd.read_csv()</code>, <code>pd.read_excel()</code>, <code>pd.read_sql()</code>; exploring data (.info(), .describe(), .head(), .shape); filtering; GroupBy and aggregation; merging DataFrames (pd.merge() — equivalent of SQL JOIN); pivot tables in pandas; handling missing values; string operations; date handling.</li>
+                    <li><strong>Matplotlib and Seaborn for Visualization</strong> — Bar charts, line charts, scatter plots with Matplotlib; statistical visualizations with Seaborn (histogram, box plot, heatmap, pair plot); formatting charts (titles, labels, colors, figure size); saving charts as PNG for reports.</li>
+                    <li><strong>Automated Reporting with Python</strong> — Generating Excel reports automatically using openpyxl; sending email reports with smtplib (intro concept); scheduling Python scripts (Windows Task Scheduler or cron); Python as an ETL tool (reading from CSV, transforming, writing to database).</li>
+                    <li><strong>Connecting Python to Databases &amp; Statistical Analysis</strong> — SQLAlchemy for database connections; running SQL queries from Python and getting results as DataFrames; writing DataFrames to SQL tables; descriptive statistics; correlation analysis (df.corr()); simple linear regression; trend detection and forecasting basics.</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Python has become an essential BI skill as the line between BI and data science blurs. Python allows you to automate repetitive data tasks, perform statistical analysis beyond what SQL or Power BI offer, and connect to data sources that traditional BI tools cannot easily reach. Many modern BI job postings now list Python as a preferred or required skill — particularly for roles that involve data pipeline automation or advanced analytics.</p>
+                </div>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Mini Project</h4>
+                    <p>A <strong>"Python BI Automation Script"</strong> — write a Python script that: reads sales data from a CSV or MySQL database, cleans and transforms the data, calculates 5 KPIs (revenue, profit margin, order count, average order value, year-over-year growth), generates a professionally formatted Excel report with formatted cells, charts, and a summary table using openpyxl, and saves it to a file with today's date in the filename. This is a complete automated reporting pipeline.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--  WEEK 14  -->
+
+        <div class="rm-card" id="week14">
+            <div class="rm-card-header">
+                <h2>Week 14 — Real-World BI Projects &amp; Portfolio Building</h2>
+                <p>Work on realistic, end-to-end BI projects from real datasets and build a professional BI portfolio.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Working on realistic, end-to-end BI projects from real datasets, building a professional BI portfolio, and practicing communicating findings as a professional analyst.</p>
+
+                <h3>Topics &amp; Subtopics</h3>
+                <ol>
+                    <li><strong>End-to-End BI Project Methodology</strong> — Define the business problem and analysis questions; source and understand the data; clean and transform; model the data (star schema); build analytical measures and calculations; create visualizations and dashboards; derive and communicate insights; document everything.</li>
+                    <li><strong>Portfolio Project 1: Financial Analysis</strong> — Work with a financial dataset (company financials, stock data, or economic data); key metrics (revenue growth, profit margins, return on equity, cash flow trends); Power BI or Tableau dashboard with financial KPIs.</li>
+                    <li><strong>Portfolio Project 2: HR Analytics</strong> — Work with an HR dataset (employee data, attrition, performance); key metrics (employee turnover rate, headcount trend, time to hire, diversity metrics); identify predictors of employee attrition.</li>
+                    <li><strong>Portfolio Project 3: Marketing / Customer Analytics</strong> — Work with customer or marketing dataset; RFM Analysis (Recency, Frequency, Monetary — customer segmentation); Customer Lifetime Value calculation; funnel analysis (conversion through acquisition → activation → retention).</li>
+                    <li><strong>Building a BI Portfolio</strong> — GitHub repository for SQL scripts and Python notebooks; Power BI reports via Power BI Service public view; Tableau Public profile with published vizzes; portfolio website or PDF document; writing project case studies (problem → approach → findings → impact).</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> Employers evaluate BI candidates primarily on portfolio quality. Three completed, well-documented, real-world BI projects demonstrating SQL, Power BI, and data storytelling skills are far more compelling than any certification alone. This week is the most direct investment in your professional reputation and job search success.</p>
+                </div>
+
+                <div class="rm-project">
+                    <h4>🛠 Weekly Mini Project</h4>
+                    <p>A <strong>"BI Portfolio Package"</strong> — compile all 14 weeks of work into a professional portfolio. Create a portfolio document (PDF or website) that includes: three featured projects (financial, HR, marketing) with problem statements, methodology, dashboard screenshots, and key findings; your SQL analytics scripts on GitHub with README files; your Tableau Public profile with at least 3 published vizzes; and a one-page professional summary of your BI skills and tools.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!--WEEK 15 -->
+
+        <div class="rm-card" id="week15">
+            <div class="rm-card-header">
+                <h2>Week 15 — Capstone Project, Interview Preparation &amp; Certifications</h2>
+                <p>Complete the comprehensive capstone project, prepare for BI job interviews, and plan your certification and career path.</p>
+            </div>
+            <div class="rm-card-body">
+
+                <h3>Core Focus</h3>
+                <p>Completing the comprehensive capstone project, preparing for BI job interviews and certification exams, and planning the next phase of your learning journey.</p>
+
+                <h3>Capstone Project — Enterprise BI Solution (End-to-End)</h3>
+                <p>The capstone demonstrates mastery of the complete BI stack by designing, building, and presenting a real analytics solution across eight deliverables.</p>
+
+                <table class="rm-table">
+                    <thead>
+                        <tr>
+                            <th>Capstone Part</th>
+                            <th>Deliverable</th>
+                            <th>Key Skills Demonstrated</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Part 1 — Business Requirements</td>
+                            <td>Requirements document with stakeholder personas, KPI definitions, and dashboard wireframes</td>
+                            <td>BI strategy, requirements gathering, KPI framework</td>
+                        </tr>
+                        <tr>
+                            <td>Part 2 — Data Architecture</td>
+                            <td>ER diagram, star schema design, data dictionary; implemented in MySQL with SCD Type 2</td>
+                            <td>Dimensional modeling, data warehousing</td>
+                        </tr>
+                        <tr>
+                            <td>Part 3 — ETL Pipeline</td>
+                            <td>Python ETL script reading, cleaning, transforming, and loading data into MySQL warehouse</td>
+                            <td>Python, pandas, SQLAlchemy, data lineage</td>
+                        </tr>
+                        <tr>
+                            <td>Part 4 — SQL Analytics Layer</td>
+                            <td>20+ SQL queries covering filtering, joins, window functions, period comparisons</td>
+                            <td>Advanced SQL, window functions, CTEs</td>
+                        </tr>
+                        <tr>
+                            <td>Part 5 — Power BI Dashboard</td>
+                            <td>3–5 page Power BI report with DAX measures, RLS for two user roles, bookmarks, published to Service</td>
+                            <td>Power BI, DAX, dashboard design, RLS</td>
+                        </tr>
+                        <tr>
+                            <td>Part 6 — Tableau Story</td>
+                            <td>5-point Tableau data story with LOD expressions and geographic visualization, published to Tableau Public</td>
+                            <td>Tableau, LOD expressions, data storytelling</td>
+                        </tr>
+                        <tr>
+                            <td>Part 7 — Python Analysis</td>
+                            <td>Jupyter Notebook with EDA (10+ charts), statistical analysis, RFM segmentation, automated Excel report</td>
+                            <td>Python, pandas, matplotlib, seaborn, openpyxl</td>
+                        </tr>
+                        <tr>
+                            <td>Part 8 — Documentation</td>
+                            <td>Executive summary, technical architecture document with diagrams, data dictionary, 10-slide stakeholder presentation, portfolio write-up</td>
+                            <td>Communication, documentation, storytelling</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Interview Preparation — Key Questions</h3>
+                <ol>
+                    <li>What is the difference between Business Intelligence and Data Analytics?</li>
+                    <li>Explain the ETL process and why each stage is important.</li>
+                    <li>What is the difference between a data warehouse and a database?</li>
+                    <li>What is the star schema and why is it preferred for BI?</li>
+                    <li>Explain Slowly Changing Dimensions — describe Type 1, 2, and 3.</li>
+                    <li>What is the difference between WHERE and HAVING in SQL?</li>
+                    <li>Write a query using ROW_NUMBER() to rank products by sales within each category.</li>
+                    <li>How would you calculate year-over-year revenue growth in SQL?</li>
+                    <li>What is the difference between a calculated column and a measure in Power BI?</li>
+                    <li>Explain the filter context in DAX and how CALCULATE modifies it.</li>
+                    <li>What is Row-Level Security in Power BI and how do you implement it?</li>
+                    <li>What is an LOD expression in Tableau — give an example of when you would use FIXED.</li>
+                    <li>What is the grain of a fact table and why is it important to define it first?</li>
+                    <li>How would you approach a new BI project with a stakeholder who does not know what they need?</li>
+                    <li>A dashboard has been deployed but stakeholders are not using it. What might be the problem?</li>
+                </ol>
+
+                <div class="rm-highlight">
+                    <p><strong>Why This Week Matters:</strong> The capstone project is what you walk through in BI job interviews. It demonstrates that you can handle the complete BI value chain — from raw data to decision-ready insight — with technical skills in SQL, Power BI, Tableau, and Python, design skills in dashboard layout and data storytelling, and strategic skills in KPI definition and requirements analysis. This is your portfolio centerpiece.</p>
+                </div>
+
+                <div class="rm-project">
+                    <h4>🏆 Capstone Deliverable</h4>
+                    <p>A complete, documented <strong>Enterprise BI Solution</strong> covering all eight parts above. Push everything to GitHub with a comprehensive README. Publish Power BI reports to Power BI Service and Tableau stories to Tableau Public. Your capstone portfolio document should be shareable as a PDF or hosted on a personal portfolio website. This is the proof of mastery of the entire BI curriculum.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="rm-section-box" id="summary">
+            <h2>Curriculum Summary</h2>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Weeks</th>
+                        <th>Focus</th>
+                        <th>Key Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Phase 1</strong></td>
+                        <td>1–3</td>
+                        <td>Foundations</td>
+                        <td>Understand the BI ecosystem, build Excel dashboards with pivot tables, and design normalized relational data models with star schemas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 2</strong></td>
+                        <td>4–6</td>
+                        <td>SQL for BI</td>
+                        <td>Write SQL queries from basic filtering through GROUP BY/JOINs to advanced window functions, CTEs, and query optimization</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 3</strong></td>
+                        <td>7–9</td>
+                        <td>Power BI</td>
+                        <td>Build production-quality Power BI reports with Power Query, DAX measures (including time intelligence), Row-Level Security, and professional dashboard design</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 4</strong></td>
+                        <td>10–12</td>
+                        <td>Advanced BI</td>
+                        <td>Create Tableau data stories with LOD expressions, design and implement a data warehouse with SCD Type 2, build ETL pipelines, define KPI frameworks, and govern data strategically</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phase 5</strong></td>
+                        <td>13–15</td>
+                        <td>Real-World BI</td>
+                        <td>Automate reporting with Python and pandas, build three domain portfolio projects (financial, HR, marketing), complete an end-to-end capstone BI solution, and prepare for BI job interviews and certifications</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Certifications</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Certification</th>
+                        <th>Level</th>
+                        <th>Focus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Microsoft DP-900 (Azure Data Fundamentals)</td>
+                        <td>Beginner</td>
+                        <td>Cloud data concepts — good entry-level validation</td>
+                    </tr>
+                    <tr>
+                        <td>Google Data Analytics Professional Certificate</td>
+                        <td>Beginner</td>
+                        <td>SQL, spreadsheets, R, and Tableau basics — widely recognized</td>
+                    </tr>
+                    <tr>
+                        <td>Microsoft PL-300 (Power BI Data Analyst Associate)</td>
+                        <td>Intermediate ⭐ Recommended</td>
+                        <td>Primary Power BI certification — Power Query, DAX, data modeling, report design</td>
+                    </tr>
+                    <tr>
+                        <td>Tableau Desktop Specialist / Certified Associate</td>
+                        <td>Intermediate</td>
+                        <td>Validates basic to intermediate Tableau skills</td>
+                    </tr>
+                    <tr>
+                        <td>Microsoft DP-203 (Data Engineering on Azure)</td>
+                        <td>Advanced</td>
+                        <td>For BI professionals moving toward data engineering and cloud pipelines</td>
+                    </tr>
+                    <tr>
+                        <td>DAMA Certified Data Management Professional (CDMP)</td>
+                        <td>Advanced</td>
+                        <td>Data governance and management specialization</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Recommended Tools &amp; Resources</h3>
+            <table class="rm-table">
+                <thead>
+                    <tr>
+                        <th>Resource</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Microsoft Learn (learn.microsoft.com)</td>
+                        <td>Free, comprehensive Power BI and data fundamentals courses</td>
+                    </tr>
+                    <tr>
+                        <td>SQLZoo (sqlzoo.net)</td>
+                        <td>Interactive SQL exercises from beginner to advanced</td>
+                    </tr>
+                    <tr>
+                        <td>Mode SQL Tutorial (mode.com/sql-tutorial)</td>
+                        <td>Business-focused SQL with real datasets</td>
+                    </tr>
+                    <tr>
+                        <td>DAX Guide (dax.guide)</td>
+                        <td>Free reference for every DAX function</td>
+                    </tr>
+                    <tr>
+                        <td>SQLBI.com (sqlbi.com)</td>
+                        <td>The most authoritative resource on complex DAX patterns</td>
+                    </tr>
+                    <tr>
+                        <td>Tableau Public (public.tableau.com)</td>
+                        <td>Free Tableau tool + training resources + portfolio hosting</td>
+                    </tr>
+                    <tr>
+                        <td>Kaggle Datasets (kaggle.com/datasets)</td>
+                        <td>Free datasets across every industry for practice projects</td>
+                    </tr>
+                    <tr>
+                        <td>Storytelling with Data (storytellingwithdata.com)</td>
+                        <td>Free blog on visualization design and data communication</td>
+                    </tr>
+                    <tr>
+                        <td>Guy in a Cube (YouTube)</td>
+                        <td>Free Power BI tutorials — hundreds of videos</td>
+                    </tr>
+                    <tr>
+                        <td>Pandas documentation (pandas.pydata.org)</td>
+                        <td>Official reference for Python data analysis library</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="rm-tip">
+                <h3>How to Use This Curriculum</h3>
+                <ul>
+                    <li>Complete each week's mini project before moving on — building real deliverables reinforces concepts far more than reading or watching tutorials alone.</li>
+                    <li>Push every weekly project to a public <strong>GitHub repository</strong> — your commit history and project files are your most credible evidence of skills to potential employers.</li>
+                    <li>After Week 15, pursue the <strong>Microsoft PL-300</strong> (Power BI Data Analyst Associate) certification — it validates your Power BI skills for employers and is well-covered by Weeks 7–9 of this curriculum.</li>
+                    <li>Publish your <strong>Tableau Public profile</strong> and update your <strong>LinkedIn</strong> with your new skills, portfolio links, and the capstone project as a featured section — most BI hiring happens through LinkedIn.</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="stpart">
+            <div class="logo1">
+                <h3>CodePath</h3>
+                <p>Learn. Practice. Master</p>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="./index.html#home">Home</a></li>
+                    <li><a href="./index.html#category">Category</a></li>
+                    <li><a href="./index.html#languages">Languages</a></li>
+                    <li><a href="./index.html#projects">Projects</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hithurshan/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copy">&copy; 2026 CodePath. All rights reserved. | Built by Hithursan Navaretnarasa&hearts;.</p>
+    </footer>
+
+    <script src="./Style.js"></script>
+</body>
+</html>
